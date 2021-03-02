@@ -1,0 +1,55 @@
+diff -r result/APP_48/App_B_48/AndroidManifest.xml result/APP_48/App_M_48/AndroidManifest.xml
+78c78
+<         <meta-data android:name="BaiduMobAd_CHANNEL" android:value="appchinaMarket"/>
+---
+>         <meta-data android:name="BaiduMobAd_CHANNEL" android:value="anzhiMarket"/>
+diff -r result/APP_48/App_B_48/apktool.yml result/APP_48/App_M_48/apktool.yml
+2c2
+< apkFileName: Bapp48-733D4B44E103D8865CF6FEF37D98A184A5252E1142BAB81CC93B698E1F08C070.apk
+---
+> apkFileName: Mapp48-1F43FBB007383059EF236A5E6A5793FDD656130009F7A880A4E420F9EFA14AE7.apk
+diff -r result/APP_48/App_B_48/com/zqgame/mbm/util/Utils.java result/APP_48/App_M_48/com/zqgame/mbm/util/Utils.java
+223c223
+<       String str = MbmApplication.getInstance().getPackageManager().getPackageInfo(MbmApplication.getInstance().getPackageName(), 0).versionName + ".2.102";
+---
+>       String str = MbmApplication.getInstance().getPackageManager().getPackageInfo(MbmApplication.getInstance().getPackageName(), 0).versionName + ".2.104";
+Os arquivos binários result/APP_48/App_B_48/original/AndroidManifest.xml e result/APP_48/App_M_48/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_48/App_B_48/original/META-INF/CERT.RSA e result/APP_48/App_M_48/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_48/App_B_48/original/META-INF/CERT.SF result/APP_48/App_M_48/original/META-INF/CERT.SF
+3c3
+< SHA1-Digest-Manifest: 5GYpmDhiaDPF1iyDgeykqaToWPw=
+---
+> SHA1-Digest-Manifest: EHofaC0QUf57Zicby1e1XgvGJoQ=
+1566c1566
+< SHA1-Digest: Dvr18NJucdsA66iA4nEXdPssFSk=
+---
+> SHA1-Digest: hpfeQqxk+3W8bTm13NqpHYj1cl8=
+3907c3907
+< SHA1-Digest: cVBNBUt/8ul+5VPOQH/CIRYnEx8=
+---
+> SHA1-Digest: gxuHcxk1c2Alui1mvmPeeRlRAYs=
+diff -r result/APP_48/App_B_48/original/META-INF/MANIFEST.MF result/APP_48/App_M_48/original/META-INF/MANIFEST.MF
+1562c1562
+< SHA1-Digest: ugUGae4uEkkM4aGUmeIIYKq/0Xw=
+---
+> SHA1-Digest: KQz/4V0STZNG+km1QECwawREfRo=
+3906c3906
+< SHA1-Digest: xYoETzy0AaRMYPMn3ndnGA4cYIs=
+---
+> SHA1-Digest: Q97U7G1DhAUdfuWUGZwQepo6XKE=
+diff -r result/APP_48/App_B_48/smali/com/zqgame/mbm/util/AnimHelper.smali result/APP_48/App_M_48/smali/com/zqgame/mbm/util/AnimHelper.smali
+13,14c13
+<     .line 12
+<     .line 13
+---
+>     .line 1
+diff -r result/APP_48/App_B_48/smali/com/zqgame/mbm/util/LogUtil.smali result/APP_48/App_M_48/smali/com/zqgame/mbm/util/LogUtil.smali
+158d157
+<     .line 58
+162a162
+>     .line 58
+diff -r result/APP_48/App_B_48/smali/com/zqgame/mbm/util/Utils.smali result/APP_48/App_M_48/smali/com/zqgame/mbm/util/Utils.smali
+861c861
+<     const-string v4, ".2.102"
+---
+>     const-string v4, ".2.104"

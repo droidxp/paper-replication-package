@@ -1,0 +1,97 @@
+diff -r result/APP_22/App_B_22/apktool.yml result/APP_22/App_M_22/apktool.yml
+2c2
+< apkFileName: Bapp22-27B7B15409FDEFC728AE43C444EA0647A61AA3352B5999FA7DC9D98C18F96827.apk
+---
+> apkFileName: Mapp22-BF2CEE975F95856A79757A54788DBA887B373C94046BE81EC338BCD34B830836.apk
+Somente em result/APP_22/App_M_22/original/META-INF: CERT.RSA
+Somente em result/APP_22/App_M_22/original/META-INF: CERT.SF
+diff -r result/APP_22/App_B_22/original/META-INF/MANIFEST.MF result/APP_22/App_M_22/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_24 (Sun Microsystems Inc.)
+---
+> Created-By: 1.0 (Android)
+71c71
+< SHA1-Digest: e1rGJiOeJ9CmF6gc0HJCzHJdKbY=
+---
+> SHA1-Digest: FeUedKy9nG6lIhAGmgCggsZhsb8=
+Somente em result/APP_22/App_B_22/original/META-INF: SURVIVE.RSA
+Somente em result/APP_22/App_B_22/original/META-INF: SURVIVE.SF
+diff -r result/APP_22/App_B_22/smali/teq/qDial/AppData.smali result/APP_22/App_M_22/smali/teq/qDial/AppData.smali
+1105,1108d1104
+<     const/4 v0, 0x1
+< 
+<     return v0
+< 
+diff -r result/APP_22/App_B_22/teq/qDial/AppData.java result/APP_22/App_M_22/teq/qDial/AppData.java
+4a5,6
+> import android.content.Intent;
+> import android.content.pm.PackageManager;
+14a17
+> import java.io.OutputStream;
+15a19,20
+> import java.util.Date;
+> import java.util.List;
+307c312,372
+<     return true;
+---
+>     File localFile;
+>     if (this.isFullVersion == null)
+>     {
+>       this.isFullVersion = Boolean.valueOf(false);
+>       localFile = GetContext().getFileStreamPath("License");
+>       if (localFile.exists())
+>       {
+>         Lib.Log("Found license.");
+>         if (localFile.length() == 0L) {
+>           Lib.Log("License empty. Upgrade.");
+>         }
+>       }
+>     }
+>     try
+>     {
+>       Object localObject1 = this.context.openFileOutput("License", 0);
+>       Object localObject2 = new DataOutputStream((OutputStream)localObject1);
+>       ((DataOutputStream)localObject2).writeLong(new Date().getTime() - 172800000L);
+>       ((DataOutputStream)localObject2).writeInt(0);
+>       ((DataOutputStream)localObject2).close();
+>       ((FileOutputStream)localObject1).close();
+>       try
+>       {
+>         localObject1 = GetContext().openFileInput("License");
+>         localObject2 = new DataInputStream((InputStream)localObject1);
+>         long l = ((DataInputStream)localObject2).readLong();
+>         ((DataInputStream)localObject2).readInt();
+>         ((DataInputStream)localObject2).close();
+>         ((FileInputStream)localObject1).close();
+>         if (l + 129600000L < new Date().getTime())
+>         {
+>           this.isFullVersion = Boolean.valueOf(true);
+>           Lib.Log("License OK.");
+>         }
+>         for (;;)
+>         {
+>           return this.isFullVersion.booleanValue();
+>           if (this.context.getPackageManager().queryBroadcastReceivers(new Intent("teq.qDial.GETQDIALLICENSEKEY"), 65536).size() <= 0) {
+>             break;
+>           }
+>           bool = true;
+>           this.isFullVersion = Boolean.valueOf(bool);
+>           Lib.Log("License invalid.");
+>           if (!this.isFullVersion.booleanValue()) {
+>             localFile.delete();
+>           }
+>         }
+>       }
+>       catch (Exception localException1)
+>       {
+>         for (;;)
+>         {
+>           continue;
+>           boolean bool = false;
+>         }
+>       }
+>     }
+>     catch (Exception localException2)
+>     {
+>       for (;;) {}
+>     }

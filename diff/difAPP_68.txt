@@ -1,0 +1,298 @@
+diff -r result/APP_68/App_B_68/apktool.yml result/APP_68/App_M_68/apktool.yml
+2c2
+< apkFileName: Bapp68-9660CDF9073CB9F55E55BA0A95EAF94424431EF89A7F7251F422C010EF53A017.apk
+---
+> apkFileName: Mapp68-45A5E64CCC381527CD5306FFB8E0B1BF9E99F3C27051F3D57EE5B0AA5322C0E5.apk
+5c5
+< - resources.arsc
+---
+> - gif
+8d7
+< - gif
+diff -r result/APP_68/App_B_68/com/barbaricsaint/weathersaint/WeatherSaintActivity.java result/APP_68/App_M_68/com/barbaricsaint/weathersaint/WeatherSaintActivity.java
+259,260c259,260
+<           WeatherSaintActivity.this.currentTextView.setText("Current Condition: " + this.currentConditionElement.getText());
+<           WeatherSaintActivity.this.currentLowHighTextView.setText("Low: " + this.currentLowElement.getText() + '°' + " High: " + this.currentHighElement.getText() + '°');
+---
+>           WeatherSaintActivity.this.currentTextView.setText("现在天气情况: " + this.currentConditionElement.getText());
+>           WeatherSaintActivity.this.currentLowHighTextView.setText("低: " + this.currentLowElement.getText() + '°' + " 高: " + this.currentHighElement.getText() + '°');
+264,265c264,265
+<           WeatherSaintActivity.this.dayOneLowTextView.setText("Low: " + this.dayOneLowElement.getText() + '°' + "F");
+<           WeatherSaintActivity.this.dayOneHighTextView.setText("High: " + this.dayOneHighElement.getText() + '°' + "F");
+---
+>           WeatherSaintActivity.this.dayOneLowTextView.setText("低: " + this.dayOneLowElement.getText() + '°' + "F");
+>           WeatherSaintActivity.this.dayOneHighTextView.setText("高: " + this.dayOneHighElement.getText() + '°' + "F");
+269,270c269,270
+<           WeatherSaintActivity.this.dayTwoLowTextView.setText("Low: " + this.dayTwoLowElement.getText() + '°' + "F");
+<           WeatherSaintActivity.this.dayTwoHighTextView.setText("High: " + this.dayTwoHighElement.getText() + '°' + "F");
+---
+>           WeatherSaintActivity.this.dayTwoLowTextView.setText("低: " + this.dayTwoLowElement.getText() + '°' + "F");
+>           WeatherSaintActivity.this.dayTwoHighTextView.setText("高: " + this.dayTwoHighElement.getText() + '°' + "F");
+274,275c274,275
+<           WeatherSaintActivity.this.dayThreeLowTextView.setText("Low: " + this.dayThreeLowElement.getText() + '°' + "F");
+<           WeatherSaintActivity.this.dayThreeHighTextView.setText("High: " + this.dayThreeHighElement.getText() + '°' + "F");
+---
+>           WeatherSaintActivity.this.dayThreeLowTextView.setText("低: " + this.dayThreeLowElement.getText() + '°' + "F");
+>           WeatherSaintActivity.this.dayThreeHighTextView.setText("高: " + this.dayThreeHighElement.getText() + '°' + "F");
+285c285
+<           WeatherSaintActivity.this.cityNameView.setText("Invalid - Enter New Location");
+---
+>           WeatherSaintActivity.this.cityNameView.setText("无效 - 输入你的位置");
+294c294
+<           WeatherSaintActivity.this.cityNameView.setText("No Connection");
+---
+>           WeatherSaintActivity.this.cityNameView.setText("无连接");
+Os arquivos binários result/APP_68/App_B_68/original/AndroidManifest.xml e result/APP_68/App_M_68/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_68/App_B_68/original/META-INF/CERT.RSA e result/APP_68/App_M_68/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_68/App_B_68/original/META-INF/CERT.SF result/APP_68/App_M_68/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: a7kvCdJpZU6BvTHgVDQkkFG8mlM=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: gRO9hk4/m6rzcT4yLt+sCJxNIII=
+6c6
+< SHA1-Digest: WMYLl1URiitmFE8yNqiY3yB67AA=
+---
+> SHA1-Digest: 9KHpGDfHEj7z4xcGRgS813OuCEU=
+9,12c9
+< SHA1-Digest: 6uFqsdvJ1O7gaqn1Jl2uhPWg5Gk=
+< 
+< Name: res/menu/optionsmenu.xml
+< SHA1-Digest: inEODt8GF9l0qAqDqC8NNkCUcW0=
+---
+> SHA1-Digest: 2XbkcFFcWrY2D8d/f+PgmQlKpaI=
+16a14,16
+> Name: res/menu/optionsmenu.xml
+> SHA1-Digest: S8fVIR0rUtGYNFdhjTsCILO/a5U=
+> 
+18c18
+< SHA1-Digest: sVkpYxSGTQ5KQedqifbAqYfWJRc=
+---
+> SHA1-Digest: RW91pvXsI/d+E/ReingqpQZprhc=
+21,24c21
+< SHA1-Digest: SYqTd3MS4OWCc3z6F3vom42umKI=
+< 
+< Name: res/layout/main.xml
+< SHA1-Digest: YRi8+eN/yxE7D8PUaB8TMI6MhPQ=
+---
+> SHA1-Digest: Q8IwzfWFeNhpzYkN4JOpW5v/iGU=
+29,30c26,27
+< Name: AndroidManifest.xml
+< SHA1-Digest: dqhLR71FQo1sDYDUfYgHHVOg0B0=
+---
+> Name: res/layout/main.xml
+> SHA1-Digest: sJVGTt1CpYtoVoCWvglSKMNRY9M=
+34a32,34
+> Name: AndroidManifest.xml
+> SHA1-Digest: eEp8Db2T67M5A8Pw6V5L1bTr77E=
+> 
+39c39
+< SHA1-Digest: jV73zW6Xo1DL1vzdGZlo57IpH38=
+---
+> SHA1-Digest: OJRuBkDchHufh6gF8iPu19FVOhk=
+diff -r result/APP_68/App_B_68/original/META-INF/MANIFEST.MF result/APP_68/App_M_68/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+5c5
+< SHA1-Digest: Kj8SGTMBfwkdS0hGqbvAbMlw0RE=
+---
+> SHA1-Digest: eHPioe0oIxSWAm/jmNkBfJpHOtc=
+8,11c8
+< SHA1-Digest: 6HgXiTegyguL1wYrdYLBj/V4Z9Y=
+< 
+< Name: res/menu/optionsmenu.xml
+< SHA1-Digest: DPtzVHSQiG0pINI4FviV7p7r+JI=
+---
+> SHA1-Digest: mtMjRKtyB0KA2y0aA9JkqiEtZqU=
+15a13,15
+> Name: res/menu/optionsmenu.xml
+> SHA1-Digest: GwjTGX+zINEdOsPlahW2LZCiOMs=
+> 
+17c17
+< SHA1-Digest: rX6GaB2Sd2tWxQmkcVYFs4NQsNQ=
+---
+> SHA1-Digest: auUe/wZfgwpavkU6+6AB/Kwtme4=
+20,23c20
+< SHA1-Digest: /RDGmt8A6kMs3Q1Uajx+son3JY4=
+< 
+< Name: res/layout/main.xml
+< SHA1-Digest: nOnfPqXdgR+PoBerT5hc4WWy2vs=
+---
+> SHA1-Digest: qTNZ83rywu53Ixwm0RmCPt/IZoY=
+28,29c25,26
+< Name: AndroidManifest.xml
+< SHA1-Digest: RB945kyYVeFgT/jEY3OEoxr/Ox0=
+---
+> Name: res/layout/main.xml
+> SHA1-Digest: s8vMWJ4uMfMeHkDm8SCyrw9CL30=
+33a31,33
+> Name: AndroidManifest.xml
+> SHA1-Digest: vXiQno8gVGLfoA9lIyKrtSbd364=
+> 
+38c38
+< SHA1-Digest: QWVY84Q3SayNPJNm8WFCtP7leCk=
+---
+> SHA1-Digest: s8vMWJ4uMfMeHkDm8SCyrw9CL30=
+diff -r result/APP_68/App_B_68/res/layout/changelocation.xml result/APP_68/App_M_68/res/layout/changelocation.xml
+6c6
+<         <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/TextView01" android:paddingBottom="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enter city and state or zip code" />
+---
+>         <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/TextView01" android:paddingBottom="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="输入你的城市和解锁密码" />
+12c12
+<         <Button android:id="@id/cancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:width="110.0sp" android:layout_weight="1.0" />
+---
+>         <Button android:id="@id/cancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" android:width="110.0sp" android:layout_weight="1.0" />
+diff -r result/APP_68/App_B_68/res/layout/main.xml result/APP_68/App_M_68/res/layout/main.xml
+8c8
+<     <TextView _:textSize="26.0sp" _:textColor="#ffffffff" _:gravity="center" _:id="@id/cityNameTextView" _:layout_width="fill_parent" _:layout_height="wrap_content" _:text="Weather is loading" _:maxLines="2" _:minLines="2" />
+---
+>     <TextView _:textSize="26.0sp" _:textColor="#ffffffff" _:gravity="center" _:id="@id/cityNameTextView" _:layout_width="fill_parent" _:layout_height="wrap_content" _:text="正在加载天气" _:maxLines="2" _:minLines="2" />
+12,13c12,13
+<             <TextView _:textSize="30.0sp" _:textStyle="bold" _:textColor="#ffffffff" _:layout_gravity="bottom|center|left" _:id="@id/currentTempView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Temp" _:layout_weight="1.0" />
+<             <TextView _:textSize="14.0sp" _:textColor="#ffffffff" _:id="@id/currentLowHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:text="Low: High:" />
+---
+>             <TextView _:textSize="30.0sp" _:textStyle="bold" _:textColor="#ffffffff" _:layout_gravity="bottom|center|left" _:id="@id/currentTempView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="温度" _:layout_weight="1.0" />
+>             <TextView _:textSize="14.0sp" _:textColor="#ffffffff" _:id="@id/currentLowHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:text="低: 高:" />
+21,23c21,23
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="Condition" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="High:" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Low:" />
+---
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="环境" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="高:" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="低:" />
+28,30c28,30
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="Condition" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="High:" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Low:" />
+---
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="环境" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="高:" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="低:" />
+35,37c35,37
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="Condition" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="High:" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Low:" />
+---
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="环境" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="高:" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="低:" />
+42c42
+<             <TextView _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/changeLocationTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Change Location" />
+---
+>             <TextView _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/changeLocationTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="更改位置" />
+44c44
+<                 <Button _:id="@id/enterCityButton" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Enter City/Zip" _:width="110.0sp" _:layout_weight="1.0" />
+---
+>                 <Button _:id="@id/enterCityButton" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="输入城市/加密" _:width="110.0sp" _:layout_weight="1.0" />
+diff -r result/APP_68/App_B_68/res/layout-small-v4/main.xml result/APP_68/App_M_68/res/layout-small-v4/main.xml
+7c7,8
+<     <TextView _:textSize="25.0sp" _:textColor="#ffffffff" _:gravity="center" _:id="@id/cityNameTextView" _:layout_width="fill_parent" _:layout_height="wrap_content" _:layout_marginBottom="4.0sp" _:text="Loading Weather" />
+---
+>     <TextView _:textSize="20.0sp" _:textStyle="bold" _:textColor="#ffffffff" _:layout_gravity="center" _:id="@id/appNameTextView" _:paddingBottom="1.0sp" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="@string/app_name" />
+>     <TextView _:textSize="26.0sp" _:textColor="#ffffffff" _:gravity="center" _:id="@id/cityNameTextView" _:layout_width="fill_parent" _:layout_height="wrap_content" _:text="正在加载天气" _:maxLines="2" _:minLines="2" />
+11,12c12,13
+<             <TextView _:textSize="26.0sp" _:textStyle="bold" _:textColor="#ffffffff" _:layout_gravity="bottom|center|left" _:id="@id/currentTempView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Temp" _:layout_weight="1.0" />
+<             <TextView _:textSize="14.0sp" _:textColor="#ffffffff" _:id="@id/currentLowHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:text="Low: High:" />
+---
+>             <TextView _:textSize="30.0sp" _:textStyle="bold" _:textColor="#ffffffff" _:layout_gravity="bottom|center|left" _:id="@id/currentTempView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="温度" _:layout_weight="1.0" />
+>             <TextView _:textSize="14.0sp" _:textColor="#ffffffff" _:id="@id/currentLowHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:text="低: 高:" />
+14c15
+<         <ImageView _:layout_gravity="center|right" _:id="@id/currentImageView" _:layout_width="35.0sp" _:layout_height="35.0sp" _:layout_marginRight="10.0sp" _:src="@drawable/sunny" _:scaleType="fitXY" _:maxWidth="35.0sp" _:maxHeight="35.0sp" _:minWidth="35.0sp" _:minHeight="35.0sp" />
+---
+>         <ImageView _:layout_gravity="center|right" _:id="@id/currentImageView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginRight="10.0sp" _:src="@drawable/sunny" _:scaleType="fitXY" _:minWidth="40.0sp" _:minHeight="40.0sp" />
+16c17
+<     <LinearLayout _:orientation="horizontal" _:id="@id/forecastLayout" _:layout_width="fill_parent" _:layout_height="wrap_content" _:layout_weight="1.5">
+---
+>     <LinearLayout _:orientation="horizontal" _:id="@id/forecastLayout" _:layout_width="fill_parent" _:layout_height="wrap_content" _:layout_weight="5.0">
+19,22c20,23
+<             <ImageView _:layout_gravity="center" _:id="@id/dayOneImageView" _:layout_width="30.0sp" _:layout_height="30.0sp" _:src="@drawable/sunny" _:scaleType="fitXY" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="Condition" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="High:" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Low:" />
+---
+>             <ImageView _:layout_gravity="center" _:id="@id/dayOneImageView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:src="@drawable/sunny" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="环境" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="高:" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayOneLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="低:" />
+26,29c27,30
+<             <ImageView _:layout_gravity="center" _:id="@id/dayTwoImageView" _:layout_width="30.0sp" _:layout_height="30.0sp" _:src="@drawable/sunny" _:scaleType="fitXY" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="Condition" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="High:" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Low:" />
+---
+>             <ImageView _:layout_gravity="center" _:id="@id/dayTwoImageView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:src="@drawable/sunny" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="环境" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="高:" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayTwoLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="低:" />
+33,36c34,37
+<             <ImageView _:layout_gravity="center" _:id="@id/dayThreeImageView" _:layout_width="30.0sp" _:layout_height="30.0sp" _:src="@drawable/sunny" _:scaleType="fitXY" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="Condition" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="High:" />
+<             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Low:" />
+---
+>             <ImageView _:layout_gravity="center" _:id="@id/dayThreeImageView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:src="@drawable/sunny" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeConditionTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:layout_marginTop="5.0sp" _:layout_marginBottom="3.0sp" _:text="环境" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeHighTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="高:" />
+>             <TextView _:textSize="12.0sp" _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/dayThreeLowTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="低:" />
+41c42
+<             <TextView _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/changeLocationTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Change Location" />
+---
+>             <TextView _:textColor="#ffffffff" _:layout_gravity="center_horizontal" _:id="@id/changeLocationTextView" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="更改位置" />
+43c44
+<                 <Button _:layout_gravity="bottom" _:id="@id/enterCityButton" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="Enter City/Zip" _:width="110.0sp" _:layout_weight="3.0" />
+---
+>                 <Button _:id="@id/enterCityButton" _:layout_width="wrap_content" _:layout_height="wrap_content" _:text="输入城市/加密" _:width="110.0sp" _:layout_weight="1.0" />
+diff -r result/APP_68/App_B_68/res/values/strings.xml result/APP_68/App_M_68/res/values/strings.xml
+4c4
+<     <string name="app_name">Weather Saint</string>
+---
+>     <string name="app_name">十字天气</string>
+diff -r result/APP_68/App_B_68/smali/com/barbaricsaint/weathersaint/WeatherSaintActivity$UpdateViewAsyncTask.smali result/APP_68/App_M_68/smali/com/barbaricsaint/weathersaint/WeatherSaintActivity$UpdateViewAsyncTask.smali
+630c630
+<     const-string v3, "Current Condition: "
+---
+>     const-string v3, "\u73b0\u5728\u5929\u6c14\u60c5\u51b5: "
+661c661
+<     const-string v3, "Low: "
+---
+>     const-string v3, "\u4f4e: "
+683c683
+<     const-string v3, " High: "
+---
+>     const-string v3, " \u9ad8: "
+765c765
+<     const-string v3, "Low: "
+---
+>     const-string v3, "\u4f4e: "
+809c809
+<     const-string v3, "High: "
+---
+>     const-string v3, "\u9ad8: "
+895c895
+<     const-string v3, "Low: "
+---
+>     const-string v3, "\u4f4e: "
+939c939
+<     const-string v3, "High: "
+---
+>     const-string v3, "\u9ad8: "
+1025c1025
+<     const-string v3, "Low: "
+---
+>     const-string v3, "\u4f4e: "
+1069c1069
+<     const-string v3, "High: "
+---
+>     const-string v3, "\u9ad8: "
+1142c1142
+<     const-string v2, "Invalid - Enter New Location"
+---
+>     const-string v2, "\u65e0\u6548 - \u8f93\u5165\u4f60\u7684\u4f4d\u7f6e"
+1180c1180
+<     const-string v2, "No Connection"
+---
+>     const-string v2, "\u65e0\u8fde\u63a5"

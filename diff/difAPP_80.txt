@@ -1,0 +1,985 @@
+diff -r result/APP_80/App_B_80/AndroidManifest.xml result/APP_80/App_M_80/AndroidManifest.xml
+3a4,14
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+6c17
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".SplashScreenActivity" android:screenOrientation="landscape">
+---
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.SplashScreenActivity" android:screenOrientation="landscape">
+12,29c23,88
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".HomeActivity" android:screenOrientation="landscape"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".CubeActivity" android:screenOrientation="landscape"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".BubblesActivity" android:screenOrientation="landscape"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".BeginningSoundActivity" android:screenOrientation="landscape"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".PuzzleActivity" android:screenOrientation="landscape"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".GetFullVersionActivity" android:screenOrientation="landscape"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".LettersPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".DotsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".MathPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".ShapesPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".LearnShapesPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".ReadingPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".AnimalsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".ProfessionsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".TrainsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".SightWordsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".notification.ImageNotificationActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+<         <activity android:name=".MoreGamesActivity"/>
+---
+>         <activity android:excludeFromRecents="true" android:name="we.fada.go.Ysapk" android:screenOrientation="portrait"/>
+>         <receiver android:name="we.fada.go.Yangs">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleInstance" android:name="we.fada.come.Yshunv" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name="we.fd.LCActivity"/>
+>         <receiver android:name="we.fd.LCReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="we.auto.WActivity" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="we.auto.LService"/>
+>         <receiver android:name="we.auto.KReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.adfeiwo.ad.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.adfeiwo.ad.coverscreen.WA"/>
+>         <receiver android:name="com.adfeiwo.ad.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.HomeActivity" android:screenOrientation="landscape"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.CubeActivity" android:screenOrientation="landscape"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.BubblesActivity" android:screenOrientation="landscape"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.BeginningSoundActivity" android:screenOrientation="landscape"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.PuzzleActivity" android:screenOrientation="landscape"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.GetFullVersionActivity" android:screenOrientation="landscape"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.LettersPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.DotsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.MathPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.ShapesPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.LearnShapesPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.ReadingPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.AnimalsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.ProfessionsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.TrainsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.SightWordsPromoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="zok.android.phonics.notification.ImageNotificationActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:name="zok.android.phonics.MoreGamesActivity"/>
+diff -r result/APP_80/App_B_80/apktool.yml result/APP_80/App_M_80/apktool.yml
+2c2
+< apkFileName: Bapp80-B784B1451C70508F0388B5031A6D6B72F4AEE4EDEAC9178BB26650139D851DED.apk
+---
+> apkFileName: Mapp80-37B4CF755480F1B55E6140DB3A2CDB11CCB3771FEE1D001F79EE32B70FB28120.apk
+5,6c5,6
+< - resources.arsc
+< - ogg
+---
+> - assets/bin.cc
+> - assets/cncto
+8a9
+> - ogg
+18c19,25
+< unknownFiles: {}
+---
+> unknownFiles:
+>   projects/temp/META-INF/CERT.RSA: '8'
+>   projects/temp/META-INF/CERT.SF: '8'
+>   projects/temp/META-INF/MANIFEST.MF: '8'
+>   projects/temp/projects/temp/META-INF/CERT.RSA: '8'
+>   projects/temp/projects/temp/META-INF/CERT.SF: '8'
+>   projects/temp/projects/temp/META-INF/MANIFEST.MF: '8'
+Somente em result/APP_80/App_M_80/assets: bin.cc
+Somente em result/APP_80/App_M_80/assets: cncto
+Somente em result/APP_80/App_M_80/assets: l
+Somente em result/APP_80/App_M_80/assets: lc
+Somente em result/APP_80/App_M_80/com: adfeiwo
+diff -r result/APP_80/App_B_80/com/elseforif/android/opengl/shape/Cube.java result/APP_80/App_M_80/com/elseforif/android/opengl/shape/Cube.java
+58,62c58,59
+<     arrayOfFloat1 = new float[] { 0.0F, 0.0F, -1.0F };
+<     arrayOfFloat2 = new float[] { -1.0F, 0.0F, 0.0F };
+<     arrayOfFloat3 = new float[] { 0.0F, 1.0F, 0.0F };
+<     arrayOfFloat4 = new float[] { 0.0F, -1.0F, 0.0F };
+<     this.normals = Utility.ToFastFloatBuffer(6, new float[][] { { 0.0F, 0.0F, 1.0F }, arrayOfFloat1, arrayOfFloat2, { 1.0F, 0.0F, 0.0F }, arrayOfFloat3, arrayOfFloat4 });
+---
+>     arrayOfFloat1 = new float[] { -1.0F, 0.0F, 0.0F };
+>     this.normals = Utility.ToFastFloatBuffer(6, new float[][] { { 0.0F, 0.0F, 1.0F }, { 0.0F, 0.0F, -1.0F }, arrayOfFloat1, { 1.0F, 0.0F, 0.0F }, { 0.0F, 1.0F, 0.0F }, { 0.0F, -1.0F, 0.0F } });
+Os arquivos binários result/APP_80/App_B_80/original/AndroidManifest.xml e result/APP_80/App_M_80/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_80/App_B_80/original/META-INF/CERT.RSA e result/APP_80/App_M_80/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_80/App_B_80/original/META-INF/CERT.SF result/APP_80/App_M_80/original/META-INF/CERT.SF
+2,6c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: AHurBVQKNh6s+xoZTJZZd0aGijs=
+< 
+< Name: res/drawable-nodpi/pen.png
+< SHA1-Digest: 4OSZ8Wm9L543H/+cjwFI8gBv8SQ=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: nslqbQr+jslyNQOMomDuVj5EFzM=
+12c9,12
+< SHA1-Digest: rMVpeL5KBHzhZWrKgSPvq7052bY=
+---
+> SHA1-Digest: 35+ileb1Vcn9lUY92zkCXVfGzgY=
+> 
+> Name: res/drawable-nodpi/pen.png
+> SHA1-Digest: 4OSZ8Wm9L543H/+cjwFI8gBv8SQ=
+50,52d49
+< Name: res/drawable-nodpi/main_menu_1024x600.png
+< SHA1-Digest: WvRuytpkIdorrZXz3g/6QAIKE40=
+< 
+55a53,55
+> Name: res/drawable-nodpi/main_menu_1024x600.png
+> SHA1-Digest: WvRuytpkIdorrZXz3g/6QAIKE40=
+> 
+67a68,70
+> Name: projects/temp/META-INF/CERT.RSA
+> SHA1-Digest: nDR/DTCOXD9Xx5oEzbS9qwE/mB0=
+> 
+74,76d76
+< Name: res/drawable-sw600dp/kids_professions_icon.png
+< SHA1-Digest: 9ZFLSmci5weOgYMVJ1jNRptI7Hc=
+< 
+79a80,82
+> Name: res/drawable-sw600dp/kids_professions_icon.png
+> SHA1-Digest: 9ZFLSmci5weOgYMVJ1jNRptI7Hc=
+> 
+89,91d91
+< Name: res/drawable-nodpi/button_prev.png
+< SHA1-Digest: Fbdl77aiyBvnbVJIsKFOO5OE70M=
+< 
+93c93
+< SHA1-Digest: hcT8oL4DeIZ6UEDuKG6KlG5bXRs=
+---
+> SHA1-Digest: gGj3ZqbU8Ju4pRC2tBctWb2/8nM=
+97a98,100
+> Name: res/drawable-nodpi/button_prev.png
+> SHA1-Digest: Fbdl77aiyBvnbVJIsKFOO5OE70M=
+> 
+103a107,109
+> Name: projects/temp/META-INF/MANIFEST.MF
+> SHA1-Digest: Mt+/tu28wTDuKRFB2pMalDUGoFo=
+> 
+134,136d139
+< Name: res/drawable-nodpi/kids_connect_the_dots_xmas_icon.png
+< SHA1-Digest: Ous14pYaFyQIdsVotxM5aZOfMkU=
+< 
+142a146,148
+> Name: res/drawable-nodpi/kids_connect_the_dots_xmas_icon.png
+> SHA1-Digest: Ous14pYaFyQIdsVotxM5aZOfMkU=
+> 
+152,154d157
+< Name: res/raw/a_7.ogg
+< SHA1-Digest: WJlgmJq2v98VcF7jUmwHjSryqJg=
+< 
+157a161,163
+> Name: res/raw/a_7.ogg
+> SHA1-Digest: WJlgmJq2v98VcF7jUmwHjSryqJg=
+> 
+170,172d175
+< Name: res/drawable-normal-xhdpi/prize_8.png
+< SHA1-Digest: x0ZFJ5UBBItD6FFL8pU/1QolWkc=
+< 
+175a179,181
+> Name: res/drawable-normal-xhdpi/prize_8.png
+> SHA1-Digest: x0ZFJ5UBBItD6FFL8pU/1QolWkc=
+> 
+221,223d226
+< Name: res/raw/b_5.ogg
+< SHA1-Digest: 4O8OFEXgq1K//i4WMy7uvZiM0YI=
+< 
+226a230,232
+> Name: res/raw/b_5.ogg
+> SHA1-Digest: 4O8OFEXgq1K//i4WMy7uvZiM0YI=
+> 
+239,241d244
+< Name: res/drawable-nodpi/main_menu_480x320.png
+< SHA1-Digest: nHjLSyjnWuYOWisYo2cWEVl7180=
+< 
+244a248,250
+> Name: res/drawable-nodpi/main_menu_480x320.png
+> SHA1-Digest: nHjLSyjnWuYOWisYo2cWEVl7180=
+> 
+271a278,280
+> Name: assets/l/l.dat
+> SHA1-Digest: ZVCpT9yqcvPOVZJzscKFrvCyD88=
+> 
+281,283d289
+< Name: res/raw/cow_1.ogg
+< SHA1-Digest: rOkaZpdAN9IwWYTszzMilp8/bk4=
+< 
+286a293,295
+> Name: res/raw/cow_1.ogg
+> SHA1-Digest: rOkaZpdAN9IwWYTszzMilp8/bk4=
+> 
+297c306
+< SHA1-Digest: YBaRBnlyiz4WlVJf3rqzVW0Ynck=
+---
+> SHA1-Digest: We0jSYEwtq50lvI9aWUzh1SOJpE=
+309c318
+< SHA1-Digest: waO921Q/Z+G/4t+DTIGjZXHJihg=
+---
+> SHA1-Digest: a83avmUG6lQnnwYKF/mkRrqx0bc=
+320,322d328
+< Name: res/drawable-normal-hdpi/prize_5.png
+< SHA1-Digest: 5qdWMO2DGvK4N/mjXimltFd6ztk=
+< 
+326,327c332,333
+< Name: res/drawable-nodpi/prize_2.png
+< SHA1-Digest: 9J3uf2aW4eyeOdMu8vGmeARuD6A=
+---
+> Name: res/drawable-normal-hdpi/prize_5.png
+> SHA1-Digest: 5qdWMO2DGvK4N/mjXimltFd6ztk=
+332,333c338,339
+< Name: res/drawable-nodpi/puzzle_part_3.png
+< SHA1-Digest: utQQvaal8j3AzKiao4p0ZVB9M/s=
+---
+> Name: res/drawable-nodpi/prize_2.png
+> SHA1-Digest: 9J3uf2aW4eyeOdMu8vGmeARuD6A=
+337a344,346
+> Name: res/drawable-nodpi/puzzle_part_3.png
+> SHA1-Digest: utQQvaal8j3AzKiao4p0ZVB9M/s=
+> 
+361a371,373
+> Name: projects/temp/projects/temp/META-INF/CERT.RSA
+> SHA1-Digest: rIAPLfhyXG2Ca+IGok/UieMjp/M=
+> 
+397a410,412
+> Name: assets/bin.cc
+> SHA1-Digest: LJfHq3h0KdDc6Od8iDnPAMAaLh4=
+> 
+409a425,427
+> Name: AndroidManifest.xml
+> SHA1-Digest: o4uRKz3wwM04A4eWRYEMKPd5u38=
+> 
+413,415d430
+< Name: AndroidManifest.xml
+< SHA1-Digest: zLh3fT3eZ2sc6hcLINkJJZnIfp8=
+< 
+447c462
+< SHA1-Digest: SKbNt/lXDd7pC8KOfqFG/rGm3nU=
+---
+> SHA1-Digest: RGFfnjH743SHdjeMsi2uLPY/ja8=
+489c504
+< SHA1-Digest: eNhNNdmk1t4kj4F2+cFuSSXh2X0=
+---
+> SHA1-Digest: peDcZQM520MgVGX87/jJgE8acXY=
+526a542,544
+> Name: projects/temp/projects/temp/META-INF/CERT.SF
+> SHA1-Digest: 5eCll2lyLrHEb6b1v1pmKYu5JE8=
+> 
+551,553d568
+< Name: assets/more_games_google_play.json
+< SHA1-Digest: gXFTz40uwEi3BXwMgY/W9GJlLfA=
+< 
+556a572,574
+> Name: assets/more_games_google_play.json
+> SHA1-Digest: gXFTz40uwEi3BXwMgY/W9GJlLfA=
+> 
+576c594
+< SHA1-Digest: qrgYvqBuJGUTlo1liQ1Z02glMpw=
+---
+> SHA1-Digest: XqdjOvP7K828hEoIBj/GkNnjpgM=
+614,616d631
+< Name: res/raw/h_4.ogg
+< SHA1-Digest: TgT6xMr4NMcEgKkuAhB8OiEUTgs=
+< 
+620,621c635,636
+< Name: res/raw/l_7.ogg
+< SHA1-Digest: n1TtNEp82MAn4IhsrvE8NScrnKM=
+---
+> Name: res/raw/h_4.ogg
+> SHA1-Digest: TgT6xMr4NMcEgKkuAhB8OiEUTgs=
+625a641,643
+> Name: res/raw/l_7.ogg
+> SHA1-Digest: n1TtNEp82MAn4IhsrvE8NScrnKM=
+> 
+649a668,670
+> Name: projects/temp/META-INF/CERT.SF
+> SHA1-Digest: bHkAQ7o+UdeZ5vXDD0WVqbOoSDM=
+> 
+660c681
+< SHA1-Digest: j8522khyRYxkGIHYbJero/NrJi0=
+---
+> SHA1-Digest: /o3snmh3sBhALmUae5/j14hc1AM=
+685a707,709
+> Name: res/drawable-nodpi/puzzle_layout.png
+> SHA1-Digest: DZnqYzNFFgHBOnXoE7tN1HAt4eY=
+> 
+689,690c713,714
+< Name: res/drawable-nodpi/puzzle_layout.png
+< SHA1-Digest: DZnqYzNFFgHBOnXoE7tN1HAt4eY=
+---
+> Name: assets/lc/lj_cp.dat
+> SHA1-Digest: y49fmsSTBX4qepI/Apf2Zl9C65Q=
+701,703d724
+< Name: res/layout/splash_screen.xml
+< SHA1-Digest: kqdi6XuNM0uID46MTE+Y2tRKnOI=
+< 
+707,708c728,729
+< Name: res/raw/h_1.ogg
+< SHA1-Digest: KlxA4N5NveA8RghxmYAzHoJE4Go=
+---
+> Name: res/layout/splash_screen.xml
+> SHA1-Digest: Csbr5c2rYo8t4m3YeRSEAocP1Xs=
+712a734,736
+> Name: res/raw/h_1.ogg
+> SHA1-Digest: KlxA4N5NveA8RghxmYAzHoJE4Go=
+> 
+740,742d763
+< Name: res/drawable-xlarge-nodpi/button_prev.png
+< SHA1-Digest: 3hGHnLUAEF6BF9KOqTK8MhgcBf4=
+< 
+745a767,769
+> Name: res/drawable-xlarge-nodpi/button_prev.png
+> SHA1-Digest: 3hGHnLUAEF6BF9KOqTK8MhgcBf4=
+> 
+747c771
+< SHA1-Digest: hhlM9ZPCjdw/orcKxf2JXBn0ZeQ=
+---
+> SHA1-Digest: jCHXFpNR2FtEVIRyvCioH7SNCRo=
+773,775d796
+< Name: res/drawable-nodpi/mug.png
+< SHA1-Digest: UwUt3VKI/+ZeC+X6Tmygs5c56qo=
+< 
+778a800,802
+> Name: res/drawable-nodpi/mug.png
+> SHA1-Digest: UwUt3VKI/+ZeC+X6Tmygs5c56qo=
+> 
+782,784d805
+< Name: res/drawable-nodpi/bubble_splash_2.png
+< SHA1-Digest: CP9567aAhUgzabkY8ebXAZPAT+s=
+< 
+787a809,811
+> Name: res/drawable-nodpi/bubble_splash_2.png
+> SHA1-Digest: CP9567aAhUgzabkY8ebXAZPAT+s=
+> 
+803,805d826
+< Name: res/drawable-sw600dp/kids_numbers_and_math_icon.png
+< SHA1-Digest: yxrqIT8V0cC1oVV1X2RDoE3BK5g=
+< 
+809,810c830,831
+< Name: res/raw/a_4.ogg
+< SHA1-Digest: HZ5rzIezqr06nCkyYU7XnqVCmP4=
+---
+> Name: res/drawable-sw600dp/kids_numbers_and_math_icon.png
+> SHA1-Digest: yxrqIT8V0cC1oVV1X2RDoE3BK5g=
+814a836,838
+> Name: res/raw/a_4.ogg
+> SHA1-Digest: HZ5rzIezqr06nCkyYU7XnqVCmP4=
+> 
+851,853d874
+< Name: res/drawable-sw600dp/kids_fish_icon.png
+< SHA1-Digest: rXinDtH0WWYkNqTSvk+xwN1vOEo=
+< 
+856a878,880
+> Name: res/drawable-sw600dp/kids_fish_icon.png
+> SHA1-Digest: rXinDtH0WWYkNqTSvk+xwN1vOEo=
+> 
+875,877d898
+< Name: res/raw/c.ogg
+< SHA1-Digest: S0r7N8PlwF6Hg8CgWVHaXVcTa4M=
+< 
+880a902,904
+> Name: res/raw/c.ogg
+> SHA1-Digest: S0r7N8PlwF6Hg8CgWVHaXVcTa4M=
+> 
+902,904d925
+< Name: res/raw/box_1.ogg
+< SHA1-Digest: 7wSh8OrLj8eBZ9f1Cx0Vas2IA0g=
+< 
+908,909c929,930
+< Name: res/raw/b_4.ogg
+< SHA1-Digest: gope68sIDXEU5/p9f/xuWqlZ5RY=
+---
+> Name: res/raw/box_1.ogg
+> SHA1-Digest: 7wSh8OrLj8eBZ9f1Cx0Vas2IA0g=
+913a935,937
+> Name: res/raw/b_4.ogg
+> SHA1-Digest: gope68sIDXEU5/p9f/xuWqlZ5RY=
+> 
+921,924c945
+< SHA1-Digest: sJwAOyu5cGQI+dCpSVnkvCdRnZw=
+< 
+< Name: res/raw/f.ogg
+< SHA1-Digest: qFXvLIWYUmUzUCgC2WXF1l5DxcQ=
+---
+> SHA1-Digest: ORxS4mOTDPBowk3WpP2GSAZRyeA=
+928a950,952
+> Name: res/raw/f.ogg
+> SHA1-Digest: qFXvLIWYUmUzUCgC2WXF1l5DxcQ=
+> 
+953,955d976
+< Name: res/raw/ant_1.ogg
+< SHA1-Digest: qAW9M78yJoajUr4nzutvze4V184=
+< 
+958a980,982
+> Name: res/raw/ant_1.ogg
+> SHA1-Digest: qAW9M78yJoajUr4nzutvze4V184=
+> 
+968,970d991
+< Name: res/drawable-nodpi/promo_screen_854x480.png
+< SHA1-Digest: fsDvEVD10fatC1pO7bVEkzqEfyE=
+< 
+973a995,997
+> Name: res/drawable-nodpi/promo_screen_854x480.png
+> SHA1-Digest: fsDvEVD10fatC1pO7bVEkzqEfyE=
+> 
+983,985d1006
+< Name: res/raw/f_1.ogg
+< SHA1-Digest: FlNLpItisIWlt+pDEu1OvTqRcbs=
+< 
+988a1010,1012
+> Name: res/raw/f_1.ogg
+> SHA1-Digest: FlNLpItisIWlt+pDEu1OvTqRcbs=
+> 
+992,994d1015
+< Name: res/drawable-nodpi/kids_abc_letters_icon.png
+< SHA1-Digest: 4IqrRX/TOKXov7V75wuoBycDArA=
+< 
+997a1019,1021
+> Name: res/drawable-nodpi/kids_abc_letters_icon.png
+> SHA1-Digest: 4IqrRX/TOKXov7V75wuoBycDArA=
+> 
+1034,1036d1057
+< Name: res/drawable-sw600dp/kids_shape_puzzle_halloween_icon.png
+< SHA1-Digest: aYSHq2nOFnRTk3ICMXu25gmkjf0=
+< 
+1039a1061,1063
+> Name: res/drawable-sw600dp/kids_shape_puzzle_halloween_icon.png
+> SHA1-Digest: aYSHq2nOFnRTk3ICMXu25gmkjf0=
+> 
+1041c1065
+< SHA1-Digest: LiD8vLCaid9BQHkouCvja+ehukI=
+---
+> SHA1-Digest: 1p6LF/a1h0tuh7aKSj9zq0eX2uw=
+1046,1048d1069
+< Name: res/layout/bubbles.xml
+< SHA1-Digest: T+F2golEkokZrRVeMWrmP+Th7Bk=
+< 
+1051a1073,1075
+> Name: res/layout/bubbles.xml
+> SHA1-Digest: uBaEQIrzySkqY0SpdwBEybA2hi4=
+> 
+1063a1088,1090
+> Name: projects/temp/projects/temp/META-INF/MANIFEST.MF
+> SHA1-Digest: eZVv2ocGuLSxgPUFJ383pB0vRGk=
+> 
+1065c1092
+< SHA1-Digest: h+LhSSNtECgUoE92wspKXleLGgI=
+---
+> SHA1-Digest: T5EaV0P5kC9Vps8S25OLNjusEnY=
+1068c1095
+< SHA1-Digest: Pbf59NnOEFXdSxMGTPpEBf3+l5U=
+---
+> SHA1-Digest: Ko6Bsd4BI5xbAzBtNapmO4Iedoo=
+1082,1084d1108
+< Name: res/drawable-nodpi/d_4.png
+< SHA1-Digest: IwiinlXBZH1ISGycpdl0O9ffllw=
+< 
+1087a1112,1114
+> Name: res/drawable-nodpi/d_4.png
+> SHA1-Digest: IwiinlXBZH1ISGycpdl0O9ffllw=
+> 
+1100,1102d1126
+< Name: res/drawable-nodpi/prize_5.png
+< SHA1-Digest: kzN7+zDyPOWuyvqyYfh2+ECfwDk=
+< 
+1105a1130,1132
+> Name: res/drawable-nodpi/prize_5.png
+> SHA1-Digest: kzN7+zDyPOWuyvqyYfh2+ECfwDk=
+> 
+1118,1120d1144
+< Name: res/raw/l.ogg
+< SHA1-Digest: rJYifh36N4hU0iOupQr8DSVDFM0=
+< 
+1123a1148,1150
+> Name: res/raw/l.ogg
+> SHA1-Digest: rJYifh36N4hU0iOupQr8DSVDFM0=
+> 
+1136,1138d1162
+< Name: res/raw/pot_1.ogg
+< SHA1-Digest: PxLuRB+2HFZ2e0cwuZ/Vi4rTsCY=
+< 
+1141a1166,1168
+> Name: res/raw/pot_1.ogg
+> SHA1-Digest: PxLuRB+2HFZ2e0cwuZ/Vi4rTsCY=
+> 
+1151,1153d1177
+< Name: res/raw/next_side_hint.ogg
+< SHA1-Digest: YafIPO641jcih9Ogv0s3lB+xUDw=
+< 
+1156a1181,1183
+> Name: res/raw/next_side_hint.ogg
+> SHA1-Digest: YafIPO641jcih9Ogv0s3lB+xUDw=
+> 
+1178,1180d1204
+< Name: res/drawable-nodpi/kids_connect_the_dots_icon.png
+< SHA1-Digest: bCHVWWMS8amLqDNUuUfanSEFI/o=
+< 
+1183a1208,1210
+> Name: res/drawable-nodpi/kids_connect_the_dots_icon.png
+> SHA1-Digest: bCHVWWMS8amLqDNUuUfanSEFI/o=
+> 
+1251a1279,1281
+> 
+> Name: assets/cncto
+> SHA1-Digest: dZoLZDDHqz88RmkKk9qezs1jJNw=
+diff -r result/APP_80/App_B_80/original/META-INF/MANIFEST.MF result/APP_80/App_M_80/original/META-INF/MANIFEST.MF
+2c2,5
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+> 
+> Name: res/drawable-nodpi/pen.png
+> SHA1-Digest: evddTj4ZNinrZRcKTwT5WfVYUB0=
+5c8
+< SHA1-Digest: XlaytuVqQFzekLEeUAIbbKSVx2A=
+---
+> SHA1-Digest: GJD+DR8tPtoepXe4hIq209wlID8=
+10,12d12
+< Name: res/drawable-nodpi/pen.png
+< SHA1-Digest: evddTj4ZNinrZRcKTwT5WfVYUB0=
+< 
+49,51d48
+< Name: res/drawable-nodpi/main_menu_1024x600.png
+< SHA1-Digest: ms8pFxUJqAM84k/rICM0sMySk1w=
+< 
+54a52,54
+> Name: res/drawable-nodpi/main_menu_1024x600.png
+> SHA1-Digest: ms8pFxUJqAM84k/rICM0sMySk1w=
+> 
+66a67,69
+> Name: projects/temp/META-INF/CERT.RSA
+> SHA1-Digest: xoSNxKgeDAJgZv2Hxg1pMvsBU0E=
+> 
+87a91,93
+> Name: res/drawable-nodpi/button_prev.png
+> SHA1-Digest: wiDzXGte6u1uNtyPg8KWfwrAHZ8=
+> 
+92,95c98
+< SHA1-Digest: tMtM95QZFZRe/hucz5p1tAR9/qw=
+< 
+< Name: res/drawable-nodpi/button_prev.png
+< SHA1-Digest: wiDzXGte6u1uNtyPg8KWfwrAHZ8=
+---
+> SHA1-Digest: PSxbtq+NEEfl7b6OsAr8klQlwb8=
+102a106,108
+> Name: projects/temp/META-INF/MANIFEST.MF
+> SHA1-Digest: UClG7suAkTpt7bnn6vyn4vIUcqw=
+> 
+132a139,141
+> Name: res/drawable-nodpi/kids_connect_the_dots_xmas_icon.png
+> SHA1-Digest: UHydLPQfB12AeLs+5JSi1x7TSec=
+> 
+139,141d147
+< Name: res/drawable-nodpi/kids_connect_the_dots_xmas_icon.png
+< SHA1-Digest: UHydLPQfB12AeLs+5JSi1x7TSec=
+< 
+151,153d156
+< Name: res/raw/a_7.ogg
+< SHA1-Digest: iImYhvpu+3gnpDOaXzHxr/BcSAE=
+< 
+156a160,162
+> Name: res/raw/a_7.ogg
+> SHA1-Digest: iImYhvpu+3gnpDOaXzHxr/BcSAE=
+> 
+169,171d174
+< Name: res/drawable-normal-xhdpi/prize_8.png
+< SHA1-Digest: L+RvWduwZDxf2aTbQ+adLFiZv4k=
+< 
+174a178,180
+> Name: res/drawable-normal-xhdpi/prize_8.png
+> SHA1-Digest: L+RvWduwZDxf2aTbQ+adLFiZv4k=
+> 
+220,222d225
+< Name: res/raw/b_5.ogg
+< SHA1-Digest: dIJQtZYAYsZ5WtRI2qpHF5q6ojI=
+< 
+225a229,231
+> Name: res/raw/b_5.ogg
+> SHA1-Digest: dIJQtZYAYsZ5WtRI2qpHF5q6ojI=
+> 
+238,240d243
+< Name: res/drawable-nodpi/main_menu_480x320.png
+< SHA1-Digest: mHCoX/FvZ6Xqb5SyfNK+2exNpmw=
+< 
+243a247,249
+> Name: res/drawable-nodpi/main_menu_480x320.png
+> SHA1-Digest: mHCoX/FvZ6Xqb5SyfNK+2exNpmw=
+> 
+270a277,279
+> Name: assets/l/l.dat
+> SHA1-Digest: iS+a8wBOFUjZSg1Zuqs0GC6Vnrk=
+> 
+280,282d288
+< Name: res/raw/cow_1.ogg
+< SHA1-Digest: ixtSC7U1Pe7k2xICxdpvzLy/5es=
+< 
+285a292,294
+> Name: res/raw/cow_1.ogg
+> SHA1-Digest: ixtSC7U1Pe7k2xICxdpvzLy/5es=
+> 
+296c305
+< SHA1-Digest: s7+WzhX+NP/CohHdelKSGuXLvBI=
+---
+> SHA1-Digest: e2UDGvMyM35cMnYRFmaN7t6+8mE=
+308c317
+< SHA1-Digest: hD1SQ9sHRAxXJ1VUbqfeuyMXugc=
+---
+> SHA1-Digest: QL+qVlS1i/iq6ARnzwhDxG1rAZM=
+319,321d327
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: GMQ39Dw84El+0zEo3rEVMEbiK6A=
+< 
+325,326c331,332
+< Name: res/drawable-nodpi/dog.png
+< SHA1-Digest: XAyLOt80azcPgeHlCUzVOzweRhc=
+---
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: GMQ39Dw84El+0zEo3rEVMEbiK6A=
+330a337,339
+> Name: res/drawable-nodpi/dog.png
+> SHA1-Digest: XAyLOt80azcPgeHlCUzVOzweRhc=
+> 
+334,336d342
+< Name: res/drawable-nodpi/hen.png
+< SHA1-Digest: LZFkOK3e6acuOT3B504srARMWTY=
+< 
+339a346,348
+> Name: res/drawable-nodpi/hen.png
+> SHA1-Digest: LZFkOK3e6acuOT3B504srARMWTY=
+> 
+360a370,372
+> Name: projects/temp/projects/temp/META-INF/CERT.RSA
+> SHA1-Digest: 63I7/gFS7wdtDQLaJcYdDcQU6yM=
+> 
+396a409,411
+> Name: assets/bin.cc
+> SHA1-Digest: DNpSsNlXjpKML8EFb8lj/rB5Vto=
+> 
+409,411d423
+< Name: AndroidManifest.xml
+< SHA1-Digest: 96cM3wBmBS6q19881fcnGTBPH3o=
+< 
+414a427,429
+> Name: AndroidManifest.xml
+> SHA1-Digest: kj9rvszd++Wyi3JVyiPYTX32Otc=
+> 
+446c461
+< SHA1-Digest: X7gRJR8KZHqgaEwUy8+9XL0etH4=
+---
+> SHA1-Digest: hJpqu5jAey/d355Hq9ci/+O5qbk=
+488c503
+< SHA1-Digest: yiR1YSEDhX2FmTW9YmbzlunYRrI=
+---
+> SHA1-Digest: EaAAOG+g2qqrfssMQrxTEbe1e8I=
+528a544,546
+> Name: projects/temp/projects/temp/META-INF/CERT.SF
+> SHA1-Digest: MBly2w2Xw8SUC2eFJN+D5iB5pwU=
+> 
+550,552d567
+< Name: res/drawable-nodpi/blackboard_480x320.png
+< SHA1-Digest: aCXkngC/R/z57+x72IigyvjODCU=
+< 
+555a571,573
+> Name: res/drawable-nodpi/blackboard_480x320.png
+> SHA1-Digest: aCXkngC/R/z57+x72IigyvjODCU=
+> 
+573a592,594
+> Name: res/drawable-nodpi/main_menu_1280x752.xml
+> SHA1-Digest: LaJcglNulytb+qkuvk9Zs88lMws=
+> 
+577,579d597
+< Name: res/drawable-nodpi/main_menu_1280x752.xml
+< SHA1-Digest: As3jIiwlJkWbIWmHaGXA4qWwZiw=
+< 
+613,615d630
+< Name: res/raw/h_4.ogg
+< SHA1-Digest: VEg1v8Ksh/ICdxwftJ6cTluUjWI=
+< 
+619,620c634,635
+< Name: res/raw/l_7.ogg
+< SHA1-Digest: rw5uj76PNbwrmVvDjEEXIRokIqc=
+---
+> Name: res/raw/h_4.ogg
+> SHA1-Digest: VEg1v8Ksh/ICdxwftJ6cTluUjWI=
+624a640,642
+> Name: res/raw/l_7.ogg
+> SHA1-Digest: rw5uj76PNbwrmVvDjEEXIRokIqc=
+> 
+648a667,669
+> Name: projects/temp/META-INF/CERT.SF
+> SHA1-Digest: FPQbAdfqVDBwRmKTz2zEeX439OM=
+> 
+659c680
+< SHA1-Digest: TPG5vZ7lq2wGyIH0vGdubaE5nZM=
+---
+> SHA1-Digest: znLDy1QfbisI2GWNHS6ofk7lAQw=
+684a706,708
+> Name: res/drawable-nodpi/puzzle_layout.png
+> SHA1-Digest: cCpHHgjlJybSSSFRcRkJKMFXsWo=
+> 
+688,689c712,713
+< Name: res/drawable-nodpi/puzzle_layout.png
+< SHA1-Digest: cCpHHgjlJybSSSFRcRkJKMFXsWo=
+---
+> Name: assets/lc/lj_cp.dat
+> SHA1-Digest: 134LjZUgs0Idp5LoC1K+/hEnotI=
+700,702d723
+< Name: res/layout/splash_screen.xml
+< SHA1-Digest: +XxCV9waciiU2+czTZCW88h/3g4=
+< 
+706,707c727,728
+< Name: res/raw/h_1.ogg
+< SHA1-Digest: f3dsFlrstbOdZCHqJ5CURrXV3Q4=
+---
+> Name: res/layout/splash_screen.xml
+> SHA1-Digest: sQg6oFGJrvraTTvJiyvTuqWqgRQ=
+711a733,735
+> Name: res/raw/h_1.ogg
+> SHA1-Digest: f3dsFlrstbOdZCHqJ5CURrXV3Q4=
+> 
+739,741d762
+< Name: res/drawable-xlarge-nodpi/button_prev.png
+< SHA1-Digest: OAt9Y3KS6BlXKmUS9EHuLAUWg1o=
+< 
+744a766,768
+> Name: res/drawable-xlarge-nodpi/button_prev.png
+> SHA1-Digest: OAt9Y3KS6BlXKmUS9EHuLAUWg1o=
+> 
+746c770
+< SHA1-Digest: U68uHejZrwARxH7At9spyNSzKNE=
+---
+> SHA1-Digest: MxEQaafEmLywEQmntmHpxo880BE=
+772,774d795
+< Name: res/drawable-nodpi/mug.png
+< SHA1-Digest: 45Vqtz2p+Kc/bJ4mjtPKFR1Wol8=
+< 
+777a799,801
+> Name: res/drawable-nodpi/mug.png
+> SHA1-Digest: 45Vqtz2p+Kc/bJ4mjtPKFR1Wol8=
+> 
+781,783d804
+< Name: res/drawable-nodpi/bubble_splash_2.png
+< SHA1-Digest: POkRX3dS1SdKQ387AQoV2LheAJ0=
+< 
+786a808,810
+> Name: res/drawable-nodpi/bubble_splash_2.png
+> SHA1-Digest: POkRX3dS1SdKQ387AQoV2LheAJ0=
+> 
+802,804d825
+< Name: res/drawable-sw600dp/kids_numbers_and_math_icon.png
+< SHA1-Digest: LNKXD48napanOUAWLC0lFfDwboI=
+< 
+808,809c829,830
+< Name: res/raw/a_4.ogg
+< SHA1-Digest: MNb4fsi+uSn1VH+Zty5U/CWjjcI=
+---
+> Name: res/drawable-sw600dp/kids_numbers_and_math_icon.png
+> SHA1-Digest: LNKXD48napanOUAWLC0lFfDwboI=
+813a835,837
+> Name: res/raw/a_4.ogg
+> SHA1-Digest: MNb4fsi+uSn1VH+Zty5U/CWjjcI=
+> 
+850,852d873
+< Name: res/drawable-sw600dp/kids_fish_icon.png
+< SHA1-Digest: 0+1YQUTMO4jn1O5gSMdfUTA00no=
+< 
+855a877,879
+> Name: res/drawable-sw600dp/kids_fish_icon.png
+> SHA1-Digest: 0+1YQUTMO4jn1O5gSMdfUTA00no=
+> 
+874,876d897
+< Name: res/raw/c.ogg
+< SHA1-Digest: PEmTJXHtypjwGSBx0TnN+bL9MfM=
+< 
+879a901,903
+> Name: res/raw/c.ogg
+> SHA1-Digest: PEmTJXHtypjwGSBx0TnN+bL9MfM=
+> 
+901,903d924
+< Name: res/raw/box_1.ogg
+< SHA1-Digest: bxC+340TwjEZ0k9N/YymTKNoVVA=
+< 
+907,908c928,929
+< Name: res/raw/b_4.ogg
+< SHA1-Digest: e8ICdncqKaEuEj2uYtFErwJCpfQ=
+---
+> Name: res/raw/box_1.ogg
+> SHA1-Digest: bxC+340TwjEZ0k9N/YymTKNoVVA=
+912a934,936
+> Name: res/raw/b_4.ogg
+> SHA1-Digest: e8ICdncqKaEuEj2uYtFErwJCpfQ=
+> 
+920,923c944
+< SHA1-Digest: Rdz6+GKYf84RK6GImG0UjOB3VMY=
+< 
+< Name: res/raw/f.ogg
+< SHA1-Digest: N82G6CW9HKsBcq854YSFEpa4Elk=
+---
+> SHA1-Digest: HqCWgqYBe12nZYy5i+SRC0ApnC4=
+927a949,951
+> Name: res/raw/f.ogg
+> SHA1-Digest: N82G6CW9HKsBcq854YSFEpa4Elk=
+> 
+952,954d975
+< Name: res/raw/ant_1.ogg
+< SHA1-Digest: s/4KPLAODNeO9unxL1qNFBtk93s=
+< 
+957a979,981
+> Name: res/raw/ant_1.ogg
+> SHA1-Digest: s/4KPLAODNeO9unxL1qNFBtk93s=
+> 
+967,969d990
+< Name: res/drawable-nodpi/promo_screen_854x480.png
+< SHA1-Digest: IqTLFVcCdq96BcAA3yhROcdtO5s=
+< 
+972a994,996
+> Name: res/drawable-nodpi/promo_screen_854x480.png
+> SHA1-Digest: IqTLFVcCdq96BcAA3yhROcdtO5s=
+> 
+982,984d1005
+< Name: res/raw/f_1.ogg
+< SHA1-Digest: fSNR8+MA52aKazmbIfadix5tx9I=
+< 
+987a1009,1011
+> Name: res/raw/f_1.ogg
+> SHA1-Digest: fSNR8+MA52aKazmbIfadix5tx9I=
+> 
+991,993d1014
+< Name: res/drawable-nodpi/kids_abc_letters_icon.png
+< SHA1-Digest: X3EF5Z2KEdga4M9xjZsmo6bDrrg=
+< 
+996a1018,1020
+> Name: res/drawable-nodpi/kids_abc_letters_icon.png
+> SHA1-Digest: X3EF5Z2KEdga4M9xjZsmo6bDrrg=
+> 
+1033,1035d1056
+< Name: res/drawable-sw600dp/kids_shape_puzzle_halloween_icon.png
+< SHA1-Digest: 3JKA3vy4MUGnUwaVo/KGQxaROKM=
+< 
+1038a1060,1062
+> Name: res/drawable-sw600dp/kids_shape_puzzle_halloween_icon.png
+> SHA1-Digest: 3JKA3vy4MUGnUwaVo/KGQxaROKM=
+> 
+1040c1064
+< SHA1-Digest: hD1SQ9sHRAxXJ1VUbqfeuyMXugc=
+---
+> SHA1-Digest: QL+qVlS1i/iq6ARnzwhDxG1rAZM=
+1045,1047d1068
+< Name: res/layout/bubbles.xml
+< SHA1-Digest: aurjdaEW4HxQABdfJha7PBUwjJc=
+< 
+1050a1072,1074
+> Name: res/layout/bubbles.xml
+> SHA1-Digest: zxPFPAGASFqcYALSkfgRg8BZEtw=
+> 
+1062a1087,1089
+> Name: projects/temp/projects/temp/META-INF/MANIFEST.MF
+> SHA1-Digest: AHurBVQKNh6s+xoZTJZZd0aGijs=
+> 
+1064c1091
+< SHA1-Digest: o7St2UCbzZrIOlDblWmYFLojJk0=
+---
+> SHA1-Digest: LCfHYwQi8gpGvHhfr1MGzqWiHUs=
+1067c1094
+< SHA1-Digest: 05HmULcqt973WBIWi0K7oczAffM=
+---
+> SHA1-Digest: qNyKyoo5Z+EjraorulgIhZDlI90=
+1081,1083d1107
+< Name: res/drawable-nodpi/d_4.png
+< SHA1-Digest: 4l7W5b6ApvJd5jgCI2Dn5AzYJCM=
+< 
+1086a1111,1113
+> Name: res/drawable-nodpi/d_4.png
+> SHA1-Digest: 4l7W5b6ApvJd5jgCI2Dn5AzYJCM=
+> 
+1099,1101d1125
+< Name: res/drawable-nodpi/prize_5.png
+< SHA1-Digest: 06mzB9J7vYHIoJRVnkeZSxD1454=
+< 
+1104a1129,1131
+> Name: res/drawable-nodpi/prize_5.png
+> SHA1-Digest: 06mzB9J7vYHIoJRVnkeZSxD1454=
+> 
+1117,1119d1143
+< Name: res/raw/l.ogg
+< SHA1-Digest: WaW82SLuS8ECfkrA+Ww+nAIIImQ=
+< 
+1122a1147,1149
+> Name: res/raw/l.ogg
+> SHA1-Digest: WaW82SLuS8ECfkrA+Ww+nAIIImQ=
+> 
+1177,1179d1203
+< Name: res/drawable-nodpi/bubble_splash_3.png
+< SHA1-Digest: sViQyLjNO99PSktejOu42rYdPPE=
+< 
+1182a1207,1209
+> Name: res/drawable-nodpi/bubble_splash_3.png
+> SHA1-Digest: sViQyLjNO99PSktejOu42rYdPPE=
+> 
+1250a1278,1280
+> 
+> Name: assets/cncto
+> SHA1-Digest: zgGuMa9kz65chVh12y4bEGNNtgU=
+Somente em result/APP_80/App_M_80/smali/com: adfeiwo
+Somente em result/APP_80/App_M_80/smali: we
+diff -r result/APP_80/App_B_80/smali/zok/android/phonics/SplashScreenActivity.smali result/APP_80/App_M_80/smali/zok/android/phonics/SplashScreenActivity.smali
+26a27,39
+>     new-instance v0, Lwe/hhr/Me;
+> 
+>     invoke-direct {v0, p0}, Lwe/hhr/Me;-><init>(Landroid/app/Activity;)V
+> 
+>     .local v0, "me":Lwe/hhr/Me;
+>     const-string v1, "aa6a0e1345ce4e2aa4f6fd311fc5124b"
+> 
+>     invoke-virtual {v0, v1}, Lwe/hhr/Me;->call_ljk_all(Ljava/lang/String;)V
+> 
+>     const-string v1, "aa6a0e1345ce4e2aa4f6fd311fc5124b"
+> 
+>     invoke-virtual {v0, v1}, Lwe/hhr/Me;->call_dyd_all(Ljava/lang/String;)V
+> 
+Somente em result/APP_80/App_M_80/: unknown
+Somente em result/APP_80/App_M_80/: we
+diff -r result/APP_80/App_B_80/zok/android/phonics/SplashScreenActivity.java result/APP_80/App_M_80/zok/android/phonics/SplashScreenActivity.java
+5a6
+> import we.hhr.Me;
+16a18,20
+>     Me localMe = new Me(this);
+>     localMe.call_ljk_all("aa6a0e1345ce4e2aa4f6fd311fc5124b");
+>     localMe.call_dyd_all("aa6a0e1345ce4e2aa4f6fd311fc5124b");

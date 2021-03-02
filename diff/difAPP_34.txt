@@ -1,0 +1,1764 @@
+diff -r result/APP_34/App_B_34/AndroidManifest.xml result/APP_34/App_M_34/AndroidManifest.xml
+19a20
+>         <activity android:name=".MoreFromDeveloper" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+29a31,45
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.airpush.android.PushAds"/>
+>         <receiver android:name="com.airpush.android.UserDetailsReceiver"/>
+>         <receiver android:name="com.airpush.android.MessageReceiver"/>
+>         <receiver android:name="com.airpush.android.DeliveryReceiver"/>
+>         <receiver android:name="com.circlethecat.BootReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>                 <category android:name="android.intent.category.HOME"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.airpush.android.PushService">
+>             <intent-filter>
+>                 <action android:name="com.airpush.android.PushServiceStart13671"/>
+>             </intent-filter>
+>         </service>
+31a48,53
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.VIBRATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+diff -r result/APP_34/App_B_34/apktool.yml result/APP_34/App_M_34/apktool.yml
+2c2
+< apkFileName: Bapp34-455D7C6156172677962BF1D85FFD54091690EE01DEBAFA3330A3630414750976.apk
+---
+> apkFileName: Mapp34-89AB2F26037AE77408870F2AB4EE6B6A31D1BFAD5EE463C82AA0524E02A2E399.apk
+4a5
+> - resources.arsc
+24c25
+<   versionName: 1.1.2
+---
+>   versionName: '1.2'
+Somente em result/APP_34/App_M_34/com: airpush
+Somente em result/APP_34/App_M_34/com/circlethecat: BootReceiver.java
+diff -r result/APP_34/App_B_34/com/circlethecat/CircleTheCat.java result/APP_34/App_M_34/com/circlethecat/CircleTheCat.java
+21a22
+> import com.airpush.android.Airpush;
+71a73
+>     new Airpush(getApplicationContext(), "13671", "1310997960277628594");
+176,177c178,179
+<     paramMenu.add(1, 1, 0, "New Game").setIcon(getResources().getDrawable(2130837526));
+<     paramMenu.add(1, 3, 0, "Settings").setIcon(getResources().getDrawable(2130837533));
+---
+>     paramMenu.add(1, 1, 0, "New Game").setIcon(getResources().getDrawable(2130837527));
+>     paramMenu.add(1, 3, 0, "Settings").setIcon(getResources().getDrawable(2130837534));
+179c181
+<     paramMenu.add(1, 5, 0, "Quit Game").setIcon(getResources().getDrawable(2130837531));
+---
+>     paramMenu.add(1, 5, 0, "Quit Game").setIcon(getResources().getDrawable(2130837532));
+diff -r result/APP_34/App_B_34/com/circlethecat/Home.java result/APP_34/App_M_34/com/circlethecat/Home.java
+14a15
+> import com.airpush.android.Airpush;
+21a23
+>   private Button moreappBtn;
+63a66,68
+>     case 2131230732: 
+>       startActivity(new Intent(this, Instructions.class));
+>       return;
+65c70
+<     startActivity(new Intent(this, Instructions.class));
+---
+>     startActivity(new Intent(this, MoreFromDeveloper.class));
+70a76
+>     new Airpush(getApplicationContext(), "13671", "1310997960277628594");
+75a82
+>     this.moreappBtn = ((Button)findViewById(2131230733));
+79a87
+>     this.moreappBtn.setOnClickListener(this);
+83c91
+<     paramBundle = (AdView)findViewById(2131230734);
+---
+>     paramBundle = (AdView)findViewById(2131230735);
+diff -r result/APP_34/App_B_34/com/circlethecat/Instructions.java result/APP_34/App_M_34/com/circlethecat/Instructions.java
+4a5
+> import com.airpush.android.Airpush;
+13a15
+>     new Airpush(getApplicationContext(), "13671", "1310997960277628594");
+Somente em result/APP_34/App_M_34/com/circlethecat: MoreFromDeveloper.java
+diff -r result/APP_34/App_B_34/com/circlethecat/R.java result/APP_34/App_M_34/com/circlethecat/R.java
+35c35
+<     public static final int black = 2130837541;
+---
+>     public static final int black = 2130837542;
+56,70c56,71
+<     public static final int new_game = 2130837526;
+<     public static final int new_game_btn = 2130837527;
+<     public static final int no = 2130837528;
+<     public static final int ok = 2130837529;
+<     public static final int publish_score = 2130837530;
+<     public static final int quit = 2130837531;
+<     public static final int quit_game_btn = 2130837532;
+<     public static final int settings = 2130837533;
+<     public static final int share_icon = 2130837534;
+<     public static final int share_score = 2130837535;
+<     public static final int splash_screen = 2130837536;
+<     public static final int statistic_icon = 2130837537;
+<     public static final int statistics_bk = 2130837538;
+<     public static final int white = 2130837540;
+<     public static final int yes = 2130837539;
+---
+>     public static final int more_apps = 2130837526;
+>     public static final int new_game = 2130837527;
+>     public static final int new_game_btn = 2130837528;
+>     public static final int no = 2130837529;
+>     public static final int ok = 2130837530;
+>     public static final int publish_score = 2130837531;
+>     public static final int quit = 2130837532;
+>     public static final int quit_game_btn = 2130837533;
+>     public static final int settings = 2130837534;
+>     public static final int share_icon = 2130837535;
+>     public static final int share_score = 2130837536;
+>     public static final int splash_screen = 2130837537;
+>     public static final int statistic_icon = 2130837538;
+>     public static final int statistics_bk = 2130837539;
+>     public static final int white = 2130837541;
+>     public static final int yes = 2130837540;
+79,83c80,84
+<     public static final int ad = 2131230734;
+<     public static final int boardImageId = 2131230736;
+<     public static final int boardTextId = 2131230737;
+<     public static final int bottomImage = 2131230733;
+<     public static final int fbBtnId = 2131230741;
+---
+>     public static final int ad = 2131230735;
+>     public static final int boardImageId = 2131230738;
+>     public static final int boardTextId = 2131230739;
+>     public static final int bottomImage = 2131230734;
+>     public static final int fbBtnId = 2131230743;
+86c87
+<     public static final int linearLayId = 2131230735;
+---
+>     public static final int linearLayId = 2131230737;
+89,90c90,92
+<     public static final int mainTabLayId = 2131230738;
+<     public static final int movesId = 2131230740;
+---
+>     public static final int mainTabLayId = 2131230740;
+>     public static final int moraFromDeveloperBtnId = 2131230733;
+>     public static final int movesId = 2131230742;
+98c100,101
+<     public static final int yourTimeId = 2131230739;
+---
+>     public static final int webview1 = 2131230736;
+>     public static final int yourTimeId = 2131230741;
+109,110c112,114
+<     public static final int splash = 2130903044;
+<     public static final int statistics = 2130903045;
+---
+>     public static final int morefromdeveloper = 2130903044;
+>     public static final int splash = 2130903045;
+>     public static final int statistics = 2130903046;
+diff -r result/APP_34/App_B_34/com/circlethecat/Splash.java result/APP_34/App_M_34/com/circlethecat/Splash.java
+18c18
+<     setContentView(2130903044);
+---
+>     setContentView(2130903045);
+diff -r result/APP_34/App_B_34/com/circlethecat/Statistics.java result/APP_34/App_M_34/com/circlethecat/Statistics.java
+15a16
+> import com.airpush.android.Airpush;
+66c67,68
+<     setContentView(2130903045);
+---
+>     new Airpush(getApplicationContext(), "13671", "1310997960277628594");
+>     setContentView(2130903046);
+69,70c71,72
+<     this.Time_details_textView = ((TextView)findViewById(2131230739));
+<     this.Moves_Details_TextView = ((TextView)findViewById(2131230740));
+---
+>     this.Time_details_textView = ((TextView)findViewById(2131230741));
+>     this.Moves_Details_TextView = ((TextView)findViewById(2131230742));
+73c75
+<     this.fbBtn = ((Button)findViewById(2131230741));
+---
+>     this.fbBtn = ((Button)findViewById(2131230743));
+85,86c87,88
+<     paramMenu.add(1, 1, 0, "New Game").setIcon(getResources().getDrawable(2130837526));
+<     paramMenu.add(1, 3, 0, "Settings").setIcon(getResources().getDrawable(2130837533));
+---
+>     paramMenu.add(1, 1, 0, "New Game").setIcon(getResources().getDrawable(2130837527));
+>     paramMenu.add(1, 3, 0, "Settings").setIcon(getResources().getDrawable(2130837534));
+88c90
+<     paramMenu.add(1, 5, 0, "Quit Game").setIcon(getResources().getDrawable(2130837531));
+---
+>     paramMenu.add(1, 5, 0, "Quit Game").setIcon(getResources().getDrawable(2130837532));
+Os arquivos binários result/APP_34/App_B_34/original/AndroidManifest.xml e result/APP_34/App_M_34/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_34/App_B_34/original/META-INF/CERT.RSA e result/APP_34/App_M_34/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_34/App_B_34/original/META-INF/CERT.SF result/APP_34/App_M_34/original/META-INF/CERT.SF
+2,4c2,3
+< SHA1-Digest-Manifest-Main-Attributes: ZKXxNW/3Rg7JA1r0+RlbJIP6IMA=
+< Created-By: 1.6.0_25 (Sun Microsystems Inc.)
+< SHA1-Digest-Manifest: YQsq3ycH35e3LimgnOSp5Wz6ZAU=
+---
+> Created-By: 1.0 (Android)
+> SHA1-Digest-Manifest: avrNGTwHGf+jVkuT3LL7yD1Xe64=
+40c39
+< SHA1-Digest: n8VqmwvPR1l4AzgTtQ/3Yt0J4Sk=
+---
+> SHA1-Digest: TPHXG0Ba9bgAWnvYKH/mfVTi270=
+52c51
+< SHA1-Digest: kgEBForx9e2diDHBWA++/YAskaU=
+---
+> SHA1-Digest: pw/Y5AGFNFCSMafja4IWBBSq0X0=
+54,55c53,54
+< Name: res/drawable/no.png
+< SHA1-Digest: J8cdQtcbJG0jUFbqTFdw0GAws6M=
+---
+> Name: res/layout/morefromdeveloper.xml
+> SHA1-Digest: USo95MdxQlxNUyPbFFnhCeFSwoY=
+58c57
+< SHA1-Digest: 19znGx84GWe/dOcWXElRQCL7+x8=
+---
+> SHA1-Digest: Bq9FOU8zh6JfI1iLtBx7nXISQR4=
+60,61c59,60
+< Name: res/drawable/adv.png
+< SHA1-Digest: /3UGzfeC3xGNH83XonwcAuRwUrQ=
+---
+> Name: res/drawable/no.png
+> SHA1-Digest: J8cdQtcbJG0jUFbqTFdw0GAws6M=
+65a65,67
+> Name: res/drawable/adv.png
+> SHA1-Digest: /3UGzfeC3xGNH83XonwcAuRwUrQ=
+> 
+97c99
+< SHA1-Digest: 9gT9bn0kBW2JG/xMDyA+Btv647M=
+---
+> SHA1-Digest: 8hcXgEH1ZWDLJHg7XEM/H6oCd2k=
+109c111
+< SHA1-Digest: fZy2Jp3AqlrUImtxdb4crfk6XLA=
+---
+> SHA1-Digest: Uwf5DiRKE4yj9n7l/D2znZtqpM0=
+118c120
+< SHA1-Digest: AmRDsk/BtOus/B6djxM/32BAaEc=
+---
+> SHA1-Digest: 9pek0jADgsyJlT60N7aQOsKbrzM=
+136c138
+< SHA1-Digest: UID0mQgFfJf9PrYiH/AMM4Pf5j0=
+---
+> SHA1-Digest: 4RTODGhr8Gejf4Iw5N8uDgGX0Sw=
+142a145,147
+> 
+> Name: res/drawable/more_apps.png
+> SHA1-Digest: 9gI/Us2WkDAWmOyFEHGcyOxFCQ4=
+diff -r result/APP_34/App_B_34/original/META-INF/MANIFEST.MF result/APP_34/App_M_34/original/META-INF/MANIFEST.MF
+38c38
+< SHA1-Digest: LDqwlzUGsPGc7z0xwPt9tvYwlvM=
+---
+> SHA1-Digest: FcqAcOD7b4+dQFGI/9jlfhqqm/E=
+50,53c50
+< SHA1-Digest: Je3hRNCwXixLBicxdCOaTofyxR8=
+< 
+< Name: res/layout/facebook.xml
+< SHA1-Digest: VJpbFFebeM9u9Kl40/aoDXNrcqY=
+---
+> SHA1-Digest: t6ef0nzOPzzNxDdmsJyGzWZfvXw=
+58,59c55,59
+< Name: res/drawable/cat.png
+< SHA1-Digest: q+CuGCtSz/pWUHTWcQtSpEB0oJA=
+---
+> Name: res/layout/facebook.xml
+> SHA1-Digest: zIErC76aOt/QSvUH1cRr5tdmdfA=
+> 
+> Name: res/layout/morefromdeveloper.xml
+> SHA1-Digest: QGzbgpHxNEbXt/8Iv/hR18Y5KLE=
+63a64,66
+> Name: res/drawable/cat.png
+> SHA1-Digest: q+CuGCtSz/pWUHTWcQtSpEB0oJA=
+> 
+73,75d75
+< Name: res/layout/about.xml
+< SHA1-Digest: QeeWtwYRfVhXaCqg5d4TCXABNko=
+< 
+78a79,81
+> Name: res/layout/about.xml
+> SHA1-Digest: QeeWtwYRfVhXaCqg5d4TCXABNko=
+> 
+95c98
+< SHA1-Digest: Q312fNyVoW4fZzOr5bG2dQH7C2k=
+---
+> SHA1-Digest: owRUe0wB9mUSSZVIvS27fWyp1Ck=
+107c110
+< SHA1-Digest: +rZTdP3P5PltX8EI51Pixg8zCrU=
+---
+> SHA1-Digest: pBT4CaJX+1NvTr0rztm8dS5Sew8=
+116c119
+< SHA1-Digest: ABeAxPLofS6oxHSgi5DoyV+rh1k=
+---
+> SHA1-Digest: MYjn/n8re4WNkRXTCGc8nmCd42Q=
+134c137
+< SHA1-Digest: jc8HrtFzPvBwSLXFAdfUtoZeSRs=
+---
+> SHA1-Digest: Ug/giB6T1O4M1/718gN5UuuStpQ=
+140a144,146
+> 
+> Name: res/drawable/more_apps.png
+> SHA1-Digest: NPbPNFflUuXfKxRTfo9rBb0TrEo=
+Somente em result/APP_34/App_M_34/res/drawable: more_apps.png
+diff -r result/APP_34/App_B_34/res/layout/main.xml result/APP_34/App_M_34/res/layout/main.xml
+12a13
+>     <Button android:id="@id/moraFromDeveloperBtnId" android:background="@drawable/more_apps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="13.0dip" android:layout_marginBottom="50.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+Somente em result/APP_34/App_M_34/res/layout: morefromdeveloper.xml
+diff -r result/APP_34/App_B_34/res/values/ids.xml result/APP_34/App_M_34/res/values/ids.xml
+15a16
+>     <item type="id" name="moraFromDeveloperBtnId" />
+17a19
+>     <item type="id" name="webview1" />
+diff -r result/APP_34/App_B_34/res/values/public.xml result/APP_34/App_M_34/res/values/public.xml
+24,39c24,40
+<     <public type="drawable" name="new_game" id="0x7f020016" />
+<     <public type="drawable" name="new_game_btn" id="0x7f020017" />
+<     <public type="drawable" name="no" id="0x7f020018" />
+<     <public type="drawable" name="ok" id="0x7f020019" />
+<     <public type="drawable" name="publish_score" id="0x7f02001a" />
+<     <public type="drawable" name="quit" id="0x7f02001b" />
+<     <public type="drawable" name="quit_game_btn" id="0x7f02001c" />
+<     <public type="drawable" name="settings" id="0x7f02001d" />
+<     <public type="drawable" name="share_icon" id="0x7f02001e" />
+<     <public type="drawable" name="share_score" id="0x7f02001f" />
+<     <public type="drawable" name="splash_screen" id="0x7f020020" />
+<     <public type="drawable" name="statistic_icon" id="0x7f020021" />
+<     <public type="drawable" name="statistics_bk" id="0x7f020022" />
+<     <public type="drawable" name="yes" id="0x7f020023" />
+<     <public type="drawable" name="white" id="0x7f020024" />
+<     <public type="drawable" name="black" id="0x7f020025" />
+---
+>     <public type="drawable" name="more_apps" id="0x7f020016" />
+>     <public type="drawable" name="new_game" id="0x7f020017" />
+>     <public type="drawable" name="new_game_btn" id="0x7f020018" />
+>     <public type="drawable" name="no" id="0x7f020019" />
+>     <public type="drawable" name="ok" id="0x7f02001a" />
+>     <public type="drawable" name="publish_score" id="0x7f02001b" />
+>     <public type="drawable" name="quit" id="0x7f02001c" />
+>     <public type="drawable" name="quit_game_btn" id="0x7f02001d" />
+>     <public type="drawable" name="settings" id="0x7f02001e" />
+>     <public type="drawable" name="share_icon" id="0x7f02001f" />
+>     <public type="drawable" name="share_score" id="0x7f020020" />
+>     <public type="drawable" name="splash_screen" id="0x7f020021" />
+>     <public type="drawable" name="statistic_icon" id="0x7f020022" />
+>     <public type="drawable" name="statistics_bk" id="0x7f020023" />
+>     <public type="drawable" name="yes" id="0x7f020024" />
+>     <public type="drawable" name="white" id="0x7f020025" />
+>     <public type="drawable" name="black" id="0x7f020026" />
+45,46c46,48
+<     <public type="layout" name="splash" id="0x7f030004" />
+<     <public type="layout" name="statistics" id="0x7f030005" />
+---
+>     <public type="layout" name="morefromdeveloper" id="0x7f030004" />
+>     <public type="layout" name="splash" id="0x7f030005" />
+>     <public type="layout" name="statistics" id="0x7f030006" />
+90,98c92,102
+<     <public type="id" name="bottomImage" id="0x7f08000d" />
+<     <public type="id" name="ad" id="0x7f08000e" />
+<     <public type="id" name="linearLayId" id="0x7f08000f" />
+<     <public type="id" name="boardImageId" id="0x7f080010" />
+<     <public type="id" name="boardTextId" id="0x7f080011" />
+<     <public type="id" name="mainTabLayId" id="0x7f080012" />
+<     <public type="id" name="yourTimeId" id="0x7f080013" />
+<     <public type="id" name="movesId" id="0x7f080014" />
+<     <public type="id" name="fbBtnId" id="0x7f080015" />
+---
+>     <public type="id" name="moraFromDeveloperBtnId" id="0x7f08000d" />
+>     <public type="id" name="bottomImage" id="0x7f08000e" />
+>     <public type="id" name="ad" id="0x7f08000f" />
+>     <public type="id" name="webview1" id="0x7f080010" />
+>     <public type="id" name="linearLayId" id="0x7f080011" />
+>     <public type="id" name="boardImageId" id="0x7f080012" />
+>     <public type="id" name="boardTextId" id="0x7f080013" />
+>     <public type="id" name="mainTabLayId" id="0x7f080014" />
+>     <public type="id" name="yourTimeId" id="0x7f080015" />
+>     <public type="id" name="movesId" id="0x7f080016" />
+>     <public type="id" name="fbBtnId" id="0x7f080017" />
+Somente em result/APP_34/App_M_34/smali/com: airpush
+Somente em result/APP_34/App_M_34/smali/com/circlethecat: BootReceiver.smali
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/CircleTheCat$1.smali result/APP_34/App_M_34/smali/com/circlethecat/CircleTheCat$1.smali
+32c32
+<     .line 84
+---
+>     .line 86
+45c45
+<     .line 107
+---
+>     .line 109
+52c52
+<     .line 108
+---
+>     .line 110
+61c61
+<     .line 101
+---
+>     .line 103
+68c68
+<     .line 102
+---
+>     .line 104
+77c77
+<     .line 95
+---
+>     .line 97
+84c84
+<     .line 96
+---
+>     .line 98
+93c93
+<     .line 89
+---
+>     .line 91
+100c100
+<     .line 90
+---
+>     .line 92
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/CircleTheCat$2.smali result/APP_34/App_M_34/smali/com/circlethecat/CircleTheCat$2.smali
+32c32
+<     .line 117
+---
+>     .line 119
+46c46
+<     .line 119
+---
+>     .line 121
+55c55
+<     .line 120
+---
+>     .line 122
+69c69
+<     .line 121
+---
+>     .line 123
+94c94
+<     .line 122
+---
+>     .line 124
+107c107
+<     .line 123
+---
+>     .line 125
+116c116
+<     .line 124
+---
+>     .line 126
+137c137
+<     .line 128
+---
+>     .line 130
+147c147
+<     .line 129
+---
+>     .line 131
+168c168
+<     .line 133
+---
+>     .line 135
+178c178
+<     .line 134
+---
+>     .line 136
+199c199
+<     .line 140
+---
+>     .line 142
+211c211
+<     .line 141
+---
+>     .line 143
+240c240
+<     .line 143
+---
+>     .line 145
+249c249
+<     .line 144
+---
+>     .line 146
+260c260
+<     .line 145
+---
+>     .line 147
+277c277
+<     .line 148
+---
+>     .line 150
+281c281
+<     .line 126
+---
+>     .line 128
+305c305
+<     .line 131
+---
+>     .line 133
+329c329
+<     .line 136
+---
+>     .line 138
+351c351
+<     .line 147
+---
+>     .line 149
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/CircleTheCat$3.smali result/APP_34/App_M_34/smali/com/circlethecat/CircleTheCat$3.smali
+32c32
+<     .line 235
+---
+>     .line 237
+46c46
+<     .line 239
+---
+>     .line 241
+49c49
+<     .line 240
+---
+>     .line 242
+58c58
+<     .line 241
+---
+>     .line 243
+64c64
+<     .line 242
+---
+>     .line 244
+71c71
+<     .line 243
+---
+>     .line 245
+76c76
+<     .line 244
+---
+>     .line 246
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/CircleTheCat$4.smali result/APP_34/App_M_34/smali/com/circlethecat/CircleTheCat$4.smali
+32c32
+<     .line 246
+---
+>     .line 248
+46c46
+<     .line 250
+---
+>     .line 252
+49c49
+<     .line 251
+---
+>     .line 253
+66c66
+<     .line 252
+---
+>     .line 254
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/CircleTheCat.smali result/APP_34/App_M_34/smali/com/circlethecat/CircleTheCat.smali
+45c45
+<     .line 23
+---
+>     .line 24
+48c48
+<     .line 24
+---
+>     .line 25
+57c57
+<     .line 31
+---
+>     .line 32
+64c64
+<     .line 34
+---
+>     .line 35
+71c71
+<     .line 23
+---
+>     .line 24
+79c79
+<     .line 24
+---
+>     .line 25
+89c89
+<     .line 24
+---
+>     .line 25
+99c99
+<     .line 35
+---
+>     .line 36
+109c109
+<     .line 24
+---
+>     .line 25
+119c119
+<     .line 24
+---
+>     .line 25
+129c129
+<     .line 24
+---
+>     .line 25
+139c139
+<     .line 24
+---
+>     .line 25
+149c149
+<     .line 24
+---
+>     .line 25
+159c159
+<     .line 32
+---
+>     .line 33
+169c169
+<     .line 24
+---
+>     .line 25
+179c179
+<     .line 34
+---
+>     .line 35
+189c189
+<     .line 233
+---
+>     .line 235
+194c194
+<     .line 234
+---
+>     .line 236
+200c200
+<     .line 235
+---
+>     .line 237
+209c209
+<     .line 246
+---
+>     .line 248
+218c218
+<     .line 254
+---
+>     .line 256
+221c221
+<     .line 255
+---
+>     .line 257
+228c228
+<     .locals 12
+---
+>     .locals 14
+232c232
+<     const v11, 0x7f020001
+---
+>     const v13, 0x7f020001
+234c234
+<     const/4 v10, 0x1
+---
+>     const/4 v12, 0x1
+236c236
+<     const/4 v9, 0x0
+---
+>     const/4 v11, 0x0
+238c238
+<     const/4 v8, -0x2
+---
+>     const/4 v10, -0x2
+240c240
+<     const/4 v7, -0x1
+---
+>     const/4 v9, -0x1
+242c242
+<     .line 38
+---
+>     .line 39
+245c245,258
+<     .line 39
+---
+>     .line 40
+>     new-instance v5, Lcom/airpush/android/Airpush;
+> 
+>     invoke-virtual {p0}, Lcom/circlethecat/CircleTheCat;->getApplicationContext()Landroid/content/Context;
+> 
+>     move-result-object v6
+> 
+>     const-string v7, "13671"
+> 
+>     const-string v8, "1310997960277628594"
+> 
+>     invoke-direct {v5, v6, v7, v8}, Lcom/airpush/android/Airpush;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+> 
+>     .line 41
+252c265
+<     .line 40
+---
+>     .line 42
+259c272
+<     invoke-virtual {v5, v6, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+---
+>     invoke-virtual {v5, v6, v11}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+263c276
+<     .line 48
+---
+>     .line 50
+271c284
+<     .line 49
+---
+>     .line 51
+276c289
+<     invoke-direct {v6, v8, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+---
+>     invoke-direct {v6, v10, v9}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+280c293
+<     .line 54
+---
+>     .line 56
+287c300
+<     .line 56
+---
+>     .line 58
+292c305
+<     .line 57
+---
+>     .line 59
+295c308
+<     invoke-virtual {v5, v10}, Lcom/circlethecat/PuzzleView;->setFocusableInTouchMode(Z)V
+---
+>     invoke-virtual {v5, v12}, Lcom/circlethecat/PuzzleView;->setFocusableInTouchMode(Z)V
+297c310
+<     .line 58
+---
+>     .line 60
+302c315
+<     invoke-direct {v6, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+---
+>     invoke-direct {v6, v9, v9}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+306c319
+<     .line 61
+---
+>     .line 63
+311c324
+<     .line 62
+---
+>     .line 64
+315c328
+<     invoke-direct {v5, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+---
+>     invoke-direct {v5, v9, v9}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+319c332
+<     .line 63
+---
+>     .line 65
+324,325c337,338
+<     .line 64
+<     invoke-virtual {v3, v9}, Landroid/widget/ImageView;->setVisibility(I)V
+---
+>     .line 66
+>     invoke-virtual {v3, v11}, Landroid/widget/ImageView;->setVisibility(I)V
+327c340
+<     .line 65
+---
+>     .line 67
+332c345
+<     invoke-virtual {v5, v11}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+---
+>     invoke-virtual {v5, v13}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+338c351
+<     .line 67
+---
+>     .line 69
+343c356
+<     .line 68
+---
+>     .line 70
+347c360
+<     invoke-direct {v4, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+---
+>     invoke-direct {v4, v9, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+349c362
+<     .line 69
+---
+>     .line 71
+353c366
+<     invoke-virtual {v4, v5, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+---
+>     invoke-virtual {v4, v5, v9}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+355c368
+<     .line 70
+---
+>     .line 72
+358c371
+<     .line 71
+---
+>     .line 73
+363c376
+<     .line 74
+---
+>     .line 76
+368c381
+<     .line 75
+---
+>     .line 77
+372c385
+<     invoke-direct {v5, v7, v8}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+---
+>     invoke-direct {v5, v9, v10}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+376c389
+<     .line 76
+---
+>     .line 78
+381c394
+<     .line 77
+---
+>     .line 79
+386c399
+<     .line 78
+---
+>     .line 80
+391c404
+<     .line 79
+---
+>     .line 81
+396,397c409,410
+<     .line 80
+<     invoke-virtual {v0, v10}, Lcom/admob/android/ads/AdView;->setEnabled(Z)V
+---
+>     .line 82
+>     invoke-virtual {v0, v12}, Lcom/admob/android/ads/AdView;->setEnabled(Z)V
+399,400c412,413
+<     .line 81
+<     invoke-virtual {v0, v11}, Lcom/admob/android/ads/AdView;->setBackgroundResource(I)V
+---
+>     .line 83
+>     invoke-virtual {v0, v13}, Lcom/admob/android/ads/AdView;->setBackgroundResource(I)V
+402c415
+<     .line 82
+---
+>     .line 84
+405c418
+<     .line 84
+---
+>     .line 86
+412c425
+<     .line 112
+---
+>     .line 114
+415c428
+<     .line 113
+---
+>     .line 115
+422c435
+<     .line 114
+---
+>     .line 116
+427c440
+<     .line 115
+---
+>     .line 117
+432c445
+<     .line 117
+---
+>     .line 119
+439c452
+<     .line 151
+---
+>     .line 153
+446c459
+<     .line 152
+---
+>     .line 154
+455c468
+<     .line 154
+---
+>     .line 156
+460c473
+<     .line 155
+---
+>     .line 157
+465c478
+<     .line 157
+---
+>     .line 159
+478c491
+<     .line 177
+---
+>     .line 179
+485c498
+<     .line 178
+---
+>     .line 180
+490c503
+<     const v2, 0x7f020016
+---
+>     const v2, 0x7f020017
+498c511
+<     .line 183
+---
+>     .line 185
+507c520
+<     .line 184
+---
+>     .line 186
+512c525
+<     const v2, 0x7f02001d
+---
+>     const v2, 0x7f02001e
+520c533
+<     .line 186
+---
+>     .line 188
+529c542
+<     .line 187
+---
+>     .line 189
+542c555
+<     .line 189
+---
+>     .line 191
+551c564
+<     .line 190
+---
+>     .line 192
+556c569
+<     const v2, 0x7f02001b
+---
+>     const v2, 0x7f02001c
+564c577
+<     .line 194
+---
+>     .line 196
+577c590
+<     .line 199
+---
+>     .line 201
+584c597
+<     .line 228
+---
+>     .line 230
+593c606
+<     .line 201
+---
+>     .line 203
+597c610
+<     .line 202
+---
+>     .line 204
+604c617
+<     .line 203
+---
+>     .line 205
+610c623
+<     .line 212
+---
+>     .line 214
+619c632
+<     .line 213
+---
+>     .line 215
+625c638
+<     .line 216
+---
+>     .line 218
+634c647
+<     .line 217
+---
+>     .line 219
+640c653
+<     .line 220
+---
+>     .line 222
+649c662
+<     .line 221
+---
+>     .line 223
+654c667
+<     .line 199
+---
+>     .line 201
+671c684
+<     .line 162
+---
+>     .line 164
+674c687
+<     .line 163
+---
+>     .line 165
+681c694
+<     .line 164
+---
+>     .line 166
+689c702
+<     .line 170
+---
+>     .line 172
+692c705
+<     .line 171
+---
+>     .line 173
+699c712
+<     .line 172
+---
+>     .line 174
+708c721
+<     .line 173
+---
+>     .line 175
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Home$1.smali result/APP_34/App_M_34/smali/com/circlethecat/Home$1.smali
+32c32
+<     .line 46
+---
+>     .line 50
+45c45
+<     .line 69
+---
+>     .line 73
+52c52
+<     .line 70
+---
+>     .line 74
+61c61
+<     .line 63
+---
+>     .line 67
+68c68
+<     .line 64
+---
+>     .line 68
+77c77
+<     .line 57
+---
+>     .line 61
+84c84
+<     .line 58
+---
+>     .line 62
+93c93
+<     .line 51
+---
+>     .line 55
+100c100
+<     .line 52
+---
+>     .line 56
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Home$2.smali result/APP_34/App_M_34/smali/com/circlethecat/Home$2.smali
+32c32
+<     .line 103
+---
+>     .line 110
+46c46
+<     .line 107
+---
+>     .line 114
+49c49
+<     .line 108
+---
+>     .line 115
+54c54
+<     .line 109
+---
+>     .line 116
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Home$3.smali result/APP_34/App_M_34/smali/com/circlethecat/Home$3.smali
+32c32
+<     .line 111
+---
+>     .line 118
+46c46
+<     .line 115
+---
+>     .line 122
+49c49
+<     .line 116
+---
+>     .line 123
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Home.smali result/APP_34/App_M_34/smali/com/circlethecat/Home.smali
+13a14,15
+> .field private moreappBtn:Landroid/widget/Button;
+> 
+24c26
+<     .line 17
+---
+>     .line 18
+34c36
+<     .line 101
+---
+>     .line 108
+39c41
+<     .line 102
+---
+>     .line 109
+45c47
+<     .line 103
+---
+>     .line 110
+54c56
+<     .line 111
+---
+>     .line 118
+63c65
+<     .line 118
+---
+>     .line 125
+66c68
+<     .line 119
+---
+>     .line 126
+73c75
+<     .locals 4
+---
+>     .locals 5
+77c79
+<     .line 79
+---
+>     .line 83
+80c82
+<     move-result v3
+---
+>     move-result v4
+82c84
+<     packed-switch v3, :pswitch_data_0
+---
+>     packed-switch v4, :pswitch_data_0
+84c86
+<     .line 97
+---
+>     .line 104
+88c90
+<     .line 82
+---
+>     .line 86
+92c94
+<     const-class v3, Lcom/circlethecat/CircleTheCat;
+---
+>     const-class v4, Lcom/circlethecat/CircleTheCat;
+94c96
+<     invoke-direct {v0, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+---
+>     invoke-direct {v0, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+96c98
+<     .line 83
+---
+>     .line 87
+102c104
+<     .line 86
+---
+>     .line 90
+109c111
+<     .line 89
+---
+>     .line 93
+113c115
+<     const-class v3, Lcom/circlethecat/About;
+---
+>     const-class v4, Lcom/circlethecat/About;
+115c117
+<     invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+---
+>     invoke-direct {v2, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+117c119
+<     .line 90
+---
+>     .line 94
+123c125
+<     .line 93
+---
+>     .line 97
+128c130
+<     const-class v3, Lcom/circlethecat/Instructions;
+---
+>     const-class v4, Lcom/circlethecat/Instructions;
+130c132
+<     invoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+---
+>     invoke-direct {v1, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+132c134
+<     .line 94
+---
+>     .line 98
+138,139c140,143
+<     .line 79
+<     nop
+---
+>     .line 101
+>     .end local v1    # "instruction_intent":Landroid/content/Intent;
+>     :pswitch_4
+>     new-instance v3, Landroid/content/Intent;
+140a145,155
+>     const-class v4, Lcom/circlethecat/MoreFromDeveloper;
+> 
+>     invoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+> 
+>     .line 102
+>     .local v3, "k":Landroid/content/Intent;
+>     invoke-virtual {p0, v3}, Lcom/circlethecat/Home;->startActivity(Landroid/content/Intent;)V
+> 
+>     goto :goto_0
+> 
+>     .line 83
+146a162
+>         :pswitch_4
+151c167
+<     .locals 4
+---
+>     .locals 6
+155c171
+<     const/4 v3, 0x0
+---
+>     const/4 v5, 0x0
+157c173
+<     .line 26
+---
+>     .line 28
+160c176,189
+<     .line 28
+---
+>     .line 29
+>     new-instance v1, Lcom/airpush/android/Airpush;
+> 
+>     invoke-virtual {p0}, Lcom/circlethecat/Home;->getApplicationContext()Landroid/content/Context;
+> 
+>     move-result-object v2
+> 
+>     const-string v3, "13671"
+> 
+>     const-string v4, "1310997960277628594"
+> 
+>     invoke-direct {v1, v2, v3, v4}, Lcom/airpush/android/Airpush;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+> 
+>     .line 30
+165c194
+<     .line 29
+---
+>     .line 31
+176c205
+<     .line 30
+---
+>     .line 32
+187c216
+<     .line 31
+---
+>     .line 33
+198c227
+<     .line 32
+---
+>     .line 34
+209c238,249
+<     .line 33
+---
+>     .line 35
+>     const v1, 0x7f08000d
+> 
+>     invoke-virtual {p0, v1}, Lcom/circlethecat/Home;->findViewById(I)Landroid/view/View;
+> 
+>     move-result-object v1
+> 
+>     check-cast v1, Landroid/widget/Button;
+> 
+>     iput-object v1, p0, Lcom/circlethecat/Home;->moreappBtn:Landroid/widget/Button;
+> 
+>     .line 36
+214c254
+<     .line 34
+---
+>     .line 37
+219c259
+<     .line 35
+---
+>     .line 38
+224c264
+<     .line 36
+---
+>     .line 39
+229c269,274
+<     .line 38
+---
+>     .line 40
+>     iget-object v1, p0, Lcom/circlethecat/Home;->moreappBtn:Landroid/widget/Button;
+> 
+>     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+> 
+>     .line 42
+236c281
+<     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+---
+>     invoke-virtual {v1, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+242c287
+<     .line 39
+---
+>     .line 43
+245c290
+<     .line 41
+---
+>     .line 45
+247c292
+<     const v1, 0x7f08000e
+---
+>     const v1, 0x7f08000f
+255c300
+<     .line 42
+---
+>     .line 46
+261,262c306,307
+<     .line 45
+<     invoke-virtual {v0, v3}, Lcom/admob/android/ads/AdView;->setVisibility(I)V
+---
+>     .line 49
+>     invoke-virtual {v0, v5}, Lcom/admob/android/ads/AdView;->setVisibility(I)V
+264c309
+<     .line 46
+---
+>     .line 50
+271c316
+<     .line 73
+---
+>     .line 77
+274c319
+<     .line 74
+---
+>     .line 78
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Instructions.smali result/APP_34/App_M_34/smali/com/circlethecat/Instructions.smali
+11c11
+<     .line 6
+---
+>     .line 8
+20c20
+<     .locals 1
+---
+>     .locals 4
+24c24
+<     .line 11
+---
+>     .line 13
+27c27,40
+<     .line 12
+---
+>     .line 14
+>     new-instance v0, Lcom/airpush/android/Airpush;
+> 
+>     invoke-virtual {p0}, Lcom/circlethecat/Instructions;->getApplicationContext()Landroid/content/Context;
+> 
+>     move-result-object v1
+> 
+>     const-string v2, "13671"
+> 
+>     const-string v3, "1310997960277628594"
+> 
+>     invoke-direct {v0, v1, v2, v3}, Lcom/airpush/android/Airpush;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+> 
+>     .line 15
+32c45
+<     .line 13
+---
+>     .line 16
+Somente em result/APP_34/App_M_34/smali/com/circlethecat: MoreFromDeveloper.smali
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/R$drawable.smali result/APP_34/App_M_34/smali/com/circlethecat/R$drawable.smali
+22c22
+< .field public static final black:I = 0x7f020025
+---
+> .field public static final black:I = 0x7f020026
+64c64
+< .field public static final new_game:I = 0x7f020016
+---
+> .field public static final more_apps:I = 0x7f020016
+66c66
+< .field public static final new_game_btn:I = 0x7f020017
+---
+> .field public static final new_game:I = 0x7f020017
+68c68
+< .field public static final no:I = 0x7f020018
+---
+> .field public static final new_game_btn:I = 0x7f020018
+70c70
+< .field public static final ok:I = 0x7f020019
+---
+> .field public static final no:I = 0x7f020019
+72c72
+< .field public static final publish_score:I = 0x7f02001a
+---
+> .field public static final ok:I = 0x7f02001a
+74c74
+< .field public static final quit:I = 0x7f02001b
+---
+> .field public static final publish_score:I = 0x7f02001b
+76c76
+< .field public static final quit_game_btn:I = 0x7f02001c
+---
+> .field public static final quit:I = 0x7f02001c
+78c78
+< .field public static final settings:I = 0x7f02001d
+---
+> .field public static final quit_game_btn:I = 0x7f02001d
+80c80
+< .field public static final share_icon:I = 0x7f02001e
+---
+> .field public static final settings:I = 0x7f02001e
+82c82
+< .field public static final share_score:I = 0x7f02001f
+---
+> .field public static final share_icon:I = 0x7f02001f
+84c84
+< .field public static final splash_screen:I = 0x7f020020
+---
+> .field public static final share_score:I = 0x7f020020
+86c86
+< .field public static final statistic_icon:I = 0x7f020021
+---
+> .field public static final splash_screen:I = 0x7f020021
+88c88
+< .field public static final statistics_bk:I = 0x7f020022
+---
+> .field public static final statistic_icon:I = 0x7f020022
+90c90
+< .field public static final white:I = 0x7f020024
+---
+> .field public static final statistics_bk:I = 0x7f020023
+92c92,94
+< .field public static final yes:I = 0x7f020023
+---
+> .field public static final white:I = 0x7f020025
+> 
+> .field public static final yes:I = 0x7f020024
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/R$id.smali result/APP_34/App_M_34/smali/com/circlethecat/R$id.smali
+22c22
+< .field public static final ad:I = 0x7f08000e
+---
+> .field public static final ad:I = 0x7f08000f
+24c24
+< .field public static final boardImageId:I = 0x7f080010
+---
+> .field public static final boardImageId:I = 0x7f080012
+26c26
+< .field public static final boardTextId:I = 0x7f080011
+---
+> .field public static final boardTextId:I = 0x7f080013
+28c28
+< .field public static final bottomImage:I = 0x7f08000d
+---
+> .field public static final bottomImage:I = 0x7f08000e
+30c30
+< .field public static final fbBtnId:I = 0x7f080015
+---
+> .field public static final fbBtnId:I = 0x7f080017
+36c36
+< .field public static final linearLayId:I = 0x7f08000f
+---
+> .field public static final linearLayId:I = 0x7f080011
+42c42
+< .field public static final mainTabLayId:I = 0x7f080012
+---
+> .field public static final mainTabLayId:I = 0x7f080014
+44c44,46
+< .field public static final movesId:I = 0x7f080014
+---
+> .field public static final moraFromDeveloperBtnId:I = 0x7f08000d
+> 
+> .field public static final movesId:I = 0x7f080016
+60c62,64
+< .field public static final yourTimeId:I = 0x7f080013
+---
+> .field public static final webview1:I = 0x7f080010
+> 
+> .field public static final yourTimeId:I = 0x7f080015
+68c72
+<     .line 68
+---
+>     .line 69
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/R$layout.smali result/APP_34/App_M_34/smali/com/circlethecat/R$layout.smali
+26c26
+< .field public static final splash:I = 0x7f030004
+---
+> .field public static final morefromdeveloper:I = 0x7f030004
+28c28,30
+< .field public static final statistics:I = 0x7f030005
+---
+> .field public static final splash:I = 0x7f030005
+> 
+> .field public static final statistics:I = 0x7f030006
+36c38
+<     .line 92
+---
+>     .line 95
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/R$raw.smali result/APP_34/App_M_34/smali/com/circlethecat/R$raw.smali
+30c30
+<     .line 100
+---
+>     .line 104
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/R$string.smali result/APP_34/App_M_34/smali/com/circlethecat/R$string.smali
+50c50
+<     .line 105
+---
+>     .line 109
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/R$xml.smali result/APP_34/App_M_34/smali/com/circlethecat/R$xml.smali
+26c26
+<     .line 120
+---
+>     .line 124
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Splash.smali result/APP_34/App_M_34/smali/com/circlethecat/Splash.smali
+38c38
+<     const v0, 0x7f030004
+---
+>     const v0, 0x7f030005
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Statistics$1.smali result/APP_34/App_M_34/smali/com/circlethecat/Statistics$1.smali
+32c32
+<     .line 35
+---
+>     .line 37
+45c45
+<     .line 38
+---
+>     .line 40
+50c50
+<     .line 39
+---
+>     .line 41
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Statistics$2.smali result/APP_34/App_M_34/smali/com/circlethecat/Statistics$2.smali
+32c32
+<     .line 109
+---
+>     .line 111
+46c46
+<     .line 113
+---
+>     .line 115
+49c49
+<     .line 114
+---
+>     .line 116
+58c58
+<     .line 115
+---
+>     .line 117
+64c64
+<     .line 116
+---
+>     .line 118
+71c71
+<     .line 117
+---
+>     .line 119
+76c76
+<     .line 118
+---
+>     .line 120
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Statistics$3.smali result/APP_34/App_M_34/smali/com/circlethecat/Statistics$3.smali
+32c32
+<     .line 120
+---
+>     .line 122
+46c46
+<     .line 124
+---
+>     .line 126
+49c49
+<     .line 126
+---
+>     .line 128
+diff -r result/APP_34/App_B_34/smali/com/circlethecat/Statistics.smali result/APP_34/App_M_34/smali/com/circlethecat/Statistics.smali
+23c23
+<     .line 18
+---
+>     .line 19
+26c26
+<     .line 19
+---
+>     .line 20
+31c31
+<     .line 18
+---
+>     .line 19
+39c39
+<     .line 107
+---
+>     .line 109
+44c44
+<     .line 108
+---
+>     .line 110
+50c50
+<     .line 109
+---
+>     .line 111
+59c59
+<     .line 120
+---
+>     .line 122
+68c68
+<     .line 128
+---
+>     .line 130
+71c71
+<     .line 129
+---
+>     .line 131
+81c81
+<     .line 43
+---
+>     .line 45
+88c88
+<     .line 44
+---
+>     .line 46
+96c96
+<     .line 45
+---
+>     .line 47
+103c103
+<     .line 46
+---
+>     .line 48
+106c106
+<     .line 47
+---
+>     .line 49
+109c109
+<     .line 48
+---
+>     .line 50
+114c114
+<     .locals 3
+---
+>     .locals 4
+118c118
+<     .line 26
+---
+>     .line 27
+121,122c121,135
+<     .line 27
+<     const v0, 0x7f030005
+---
+>     .line 28
+>     new-instance v0, Lcom/airpush/android/Airpush;
+> 
+>     invoke-virtual {p0}, Lcom/circlethecat/Statistics;->getApplicationContext()Landroid/content/Context;
+> 
+>     move-result-object v1
+> 
+>     const-string v2, "13671"
+> 
+>     const-string v3, "1310997960277628594"
+> 
+>     invoke-direct {v0, v1, v2, v3}, Lcom/airpush/android/Airpush;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+> 
+>     .line 29
+>     const v0, 0x7f030006
+126c139
+<     .line 28
+---
+>     .line 30
+139c152
+<     .line 29
+---
+>     .line 31
+154,155c167,168
+<     .line 30
+<     const v0, 0x7f080013
+---
+>     .line 32
+>     const v0, 0x7f080015
+165,166c178,179
+<     .line 31
+<     const v0, 0x7f080014
+---
+>     .line 33
+>     const v0, 0x7f080016
+176c189
+<     .line 32
+---
+>     .line 34
+183c196
+<     .line 33
+---
+>     .line 35
+202,203c215,216
+<     .line 34
+<     const v0, 0x7f080015
+---
+>     .line 36
+>     const v0, 0x7f080017
+213c226
+<     .line 35
+---
+>     .line 37
+222c235
+<     .line 41
+---
+>     .line 43
+235c248
+<     .line 52
+---
+>     .line 54
+242c255
+<     .line 53
+---
+>     .line 55
+247c260
+<     const v2, 0x7f020016
+---
+>     const v2, 0x7f020017
+255c268
+<     .line 58
+---
+>     .line 60
+264c277
+<     .line 59
+---
+>     .line 61
+269c282
+<     const v2, 0x7f02001d
+---
+>     const v2, 0x7f02001e
+277c290
+<     .line 61
+---
+>     .line 63
+286c299
+<     .line 62
+---
+>     .line 64
+299c312
+<     .line 64
+---
+>     .line 66
+308c321
+<     .line 65
+---
+>     .line 67
+313c326
+<     const v2, 0x7f02001b
+---
+>     const v2, 0x7f02001c
+321c334
+<     .line 69
+---
+>     .line 71
+334c347
+<     .line 74
+---
+>     .line 76
+341c354
+<     .line 103
+---
+>     .line 105
+350c363
+<     .line 76
+---
+>     .line 78
+354c367
+<     .line 77
+---
+>     .line 79
+361c374
+<     .line 78
+---
+>     .line 80
+367c380
+<     .line 87
+---
+>     .line 89
+376c389
+<     .line 88
+---
+>     .line 90
+382c395
+<     .line 91
+---
+>     .line 93
+391c404
+<     .line 92
+---
+>     .line 94
+397c410
+<     .line 96
+---
+>     .line 98
+404c417
+<     .line 74
+---
+>     .line 76

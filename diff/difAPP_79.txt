@@ -1,0 +1,1399 @@
+diff -r result/APP_79/App_B_79/apktool.yml result/APP_79/App_M_79/apktool.yml
+2c2
+< apkFileName: Bapp79-B33B42B13EC0C076D759FA9FCF015B34C0787E58E110F87406FC31CC5D99B96E.apk
+---
+> apkFileName: Mapp79-C542BBC89667062BDD8884E94F1BC43F47E5D4A6C3F382509A75E6B299BCCF94.apk
+4,7c4
+< doNotCompress:
+< - resources.arsc
+< - gif
+< - png
+---
+> doNotCompress: null
+diff -r result/APP_79/App_B_79/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity.java result/APP_79/App_M_79/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity.java
+50,57c50,57
+<   private static final String CANCEL = "Cancel";
+<   private static final String ENDTASK = "End Task";
+<   private static final String EXCLUDE = "Exclude";
+<   private static final String INCLUDE = "Remove Exclusion";
+<   private static final String SWITCHTO = "Switch To";
+<   private static final String UNINSTALL = "Uninstall";
+<   private String[] actions = { "Switch To", "End Task", "Exclude", "Uninstall", "Cancel" };
+<   private String[] actions2 = { "Switch To", "End Task", "Remove Exclusion", "Uninstall", "Cancel" };
+---
+>   private static final String CANCEL = "取消";
+>   private static final String ENDTASK = "结束任务";
+>   private static final String EXCLUDE = "添加到排除列表";
+>   private static final String INCLUDE = "在排除列表移除";
+>   private static final String SWITCHTO = "切换至";
+>   private static final String UNINSTALL = "卸载";
+>   private String[] actions = { "切换至", "结束任务", "添加到排除列表", "卸载", "取消" };
+>   private String[] actions2 = { "切换至", "结束任务", "在排除列表移除", "卸载", "取消" };
+469,473c469,473
+<     paramContextMenu.add(0, 1, 0, "Switch To");
+<     paramContextMenu.add(0, 2, 0, "End Task");
+<     paramContextMenu.add(0, 3, 0, "Exclude");
+<     paramContextMenu.add(0, 4, 0, "Remove Exclusion");
+<     paramContextMenu.add(0, 5, 0, "Uninstall");
+---
+>     paramContextMenu.add(0, 1, 0, "切换至");
+>     paramContextMenu.add(0, 2, 0, "结束任务");
+>     paramContextMenu.add(0, 3, 0, "添加到排除列表");
+>     paramContextMenu.add(0, 4, 0, "在排除列表移除");
+>     paramContextMenu.add(0, 5, 0, "卸载");
+597c597
+<     localBuilder.setTitle("Exclude List");
+---
+>     localBuilder.setTitle("排除列表");
+664c664
+<       if (ApplicationsActivity.this.actions[paramInt].equals("End Task"))
+---
+>       if (ApplicationsActivity.this.actions[paramInt].equals("结束任务"))
+669c669
+<       if (ApplicationsActivity.this.actions[paramInt].equals("Switch To"))
+---
+>       if (ApplicationsActivity.this.actions[paramInt].equals("切换至"))
+674c674
+<       if (ApplicationsActivity.this.actions[paramInt].equals("Exclude"))
+---
+>       if (ApplicationsActivity.this.actions[paramInt].equals("添加到排除列表"))
+679c679
+<       if (ApplicationsActivity.this.actions[paramInt].equals("Uninstall"))
+---
+>       if (ApplicationsActivity.this.actions[paramInt].equals("卸载"))
+703c703
+<       if (ApplicationsActivity.this.actions2[paramInt].equals("End Task"))
+---
+>       if (ApplicationsActivity.this.actions2[paramInt].equals("结束任务"))
+708c708
+<       if (ApplicationsActivity.this.actions2[paramInt].equals("Switch To"))
+---
+>       if (ApplicationsActivity.this.actions2[paramInt].equals("切换至"))
+713c713
+<       if (ApplicationsActivity.this.actions2[paramInt].equals("Remove Exclusion"))
+---
+>       if (ApplicationsActivity.this.actions2[paramInt].equals("在排除列表移除"))
+718c718
+<       if (ApplicationsActivity.this.actions[paramInt].equals("Uninstall"))
+---
+>       if (ApplicationsActivity.this.actions[paramInt].equals("卸载"))
+diff -r result/APP_79/App_B_79/com/arron/taskManager/taskManager2/ui/activities/ApplicationsTabActivity.java result/APP_79/App_M_79/com/arron/taskManager/taskManager2/ui/activities/ApplicationsTabActivity.java
+47c47
+<     this.tab2 = this.tabHost.newTabSpec("Uninstall");
+---
+>     this.tab2 = this.tabHost.newTabSpec("卸载");
+49c49
+<     this.tab2.setIndicator(buildIndicator("Uninstall"));
+---
+>     this.tab2.setIndicator(buildIndicator("卸载"));
+diff -r result/APP_79/App_B_79/com/arron/taskManager/taskManager2/ui/activities/SDCardActivity.java result/APP_79/App_M_79/com/arron/taskManager/taskManager2/ui/activities/SDCardActivity.java
+233c233
+<     this.progressBar.setMessage("Loading");
+---
+>     this.progressBar.setMessage("加载中");
+diff -r result/APP_79/App_B_79/com/arron/taskManager/taskManager2/ui/activities/UninstallActivity.java result/APP_79/App_M_79/com/arron/taskManager/taskManager2/ui/activities/UninstallActivity.java
+227c227
+<     this.progressBar.setMessage("Loading");
+---
+>     this.progressBar.setMessage("加载中");
+238c238
+<     paramContextMenu.add(0, 1, 0, "Uninstall");
+---
+>     paramContextMenu.add(0, 1, 0, "卸载");
+diff -r result/APP_79/App_B_79/com/arron/taskManager/ui/application/ApplicationListView.java result/APP_79/App_M_79/com/arron/taskManager/ui/application/ApplicationListView.java
+49,54c49,54
+<   private static final String CANCEL = "Cancel";
+<   private static final String ENDTASK = "End Task";
+<   private static final String EXCLUDE = "Exclude";
+<   private static final String INCLUDE = "Remove Exclusion";
+<   private static final String SWITCHTO = "Switch To";
+<   private static final String UNINSTALL = "Uninstall";
+---
+>   private static final String CANCEL = "取消";
+>   private static final String ENDTASK = "结束任务";
+>   private static final String EXCLUDE = "添加到排除列表";
+>   private static final String INCLUDE = "在排除列表移除";
+>   private static final String SWITCHTO = "切换至";
+>   private static final String UNINSTALL = "卸载";
+56,57c56,57
+<   private String[] actions = { "Switch To", "End Task", "Exclude", "Uninstall", "Cancel" };
+<   private String[] actions2 = { "Switch To", "End Task", "Remove Exclusion", "Uninstall", "Cancel" };
+---
+>   private String[] actions = { "切换至", "结束任务", "添加到排除列表", "卸载", "取消" };
+>   private String[] actions2 = { "切换至", "结束任务", "在排除列表移除", "卸载", "取消" };
+506,510c506,510
+<     paramContextMenu.add(0, 1, 0, "Switch To");
+<     paramContextMenu.add(0, 2, 0, "End Task");
+<     paramContextMenu.add(0, 3, 0, "Exclude");
+<     paramContextMenu.add(0, 4, 0, "Remove Exclusion");
+<     paramContextMenu.add(0, 5, 0, "Uninstall");
+---
+>     paramContextMenu.add(0, 1, 0, "切换至");
+>     paramContextMenu.add(0, 2, 0, "结束任务");
+>     paramContextMenu.add(0, 3, 0, "添加到排除列表");
+>     paramContextMenu.add(0, 4, 0, "在排除列表移除");
+>     paramContextMenu.add(0, 5, 0, "卸载");
+571c571
+<     localBuilder.setTitle("Exclude List");
+---
+>     localBuilder.setTitle("排除列表");
+645c645
+<       if (ApplicationListView.this.actions[paramInt].equals("End Task"))
+---
+>       if (ApplicationListView.this.actions[paramInt].equals("结束任务"))
+650c650
+<       if (ApplicationListView.this.actions[paramInt].equals("Switch To"))
+---
+>       if (ApplicationListView.this.actions[paramInt].equals("切换至"))
+655c655
+<       if (ApplicationListView.this.actions[paramInt].equals("Exclude"))
+---
+>       if (ApplicationListView.this.actions[paramInt].equals("添加到排除列表"))
+660c660
+<       if (ApplicationListView.this.actions[paramInt].equals("Uninstall"))
+---
+>       if (ApplicationListView.this.actions[paramInt].equals("卸载"))
+684c684
+<       if (ApplicationListView.this.actions2[paramInt].equals("End Task"))
+---
+>       if (ApplicationListView.this.actions2[paramInt].equals("结束任务"))
+689c689
+<       if (ApplicationListView.this.actions2[paramInt].equals("Switch To"))
+---
+>       if (ApplicationListView.this.actions2[paramInt].equals("切换至"))
+694c694
+<       if (ApplicationListView.this.actions2[paramInt].equals("Remove Exclusion"))
+---
+>       if (ApplicationListView.this.actions2[paramInt].equals("在排除列表移除"))
+699c699
+<       if (ApplicationListView.this.actions[paramInt].equals("Uninstall"))
+---
+>       if (ApplicationListView.this.actions[paramInt].equals("卸载"))
+diff -r result/APP_79/App_B_79/com/arron/taskManager/ui/application/preferences/PreferencesActivity.java result/APP_79/App_M_79/com/arron/taskManager/ui/application/preferences/PreferencesActivity.java
+23c23
+<   private static final String[] serviceUpdateFreqEntries = { "Never", "Every 30 mins", "Every hour", "Every 2 hours", "Every 3 hours", "Every 5 hours", "Every 12 hours", "Every day" };
+---
+>   private static final String[] serviceUpdateFreqEntries = { "从不", "每隔 30 分钟", "每隔 1 小时", "每隔 2 小时", "每隔 3 小时", "每隔 5 小时", "每隔 12 小时", "每一天" };
+diff -r result/APP_79/App_B_79/com/arron/taskManager/ui/IconifiedTextView.java result/APP_79/App_M_79/com/arron/taskManager/ui/IconifiedTextView.java
+26c26
+<   private static String TEXT_BACKGROUND = "BackG";
+---
+>   private static String TEXT_BACKGROUND = "后台";
+28c28
+<   private static String TEXT_IDLE = "Idle";
+---
+>   private static String TEXT_IDLE = "闲置";
+40,42c40,42
+<     TEXT_FOREGROUND = "ForeG";
+<     TEXT_ACTIVE = "Active";
+<     TEXT_SERVICE = "Service";
+---
+>     TEXT_FOREGROUND = "前台";
+>     TEXT_ACTIVE = "活动";
+>     TEXT_SERVICE = "服务";
+diff -r result/APP_79/App_B_79/com/arron/taskManager/ui/InformationViewActivity.java result/APP_79/App_M_79/com/arron/taskManager/ui/InformationViewActivity.java
+18,24c18,24
+<     Object localObject = new StringBuilder("Applications are programs installed on the phone which run on its own process.  The lifecycle of an application, in general, is maintained by Android.\n\nServices are long running processes that may run for an indefinite period of time.  They are the usual suspects bogging and slowing a phone down.\n\nBoth of these fundamentals are separated by the two equivalent tabs: 'Apps & Services.'  The 'All Apps' tab shows all the running applications while the 'Apps' tab show a safer and auto-condensed collection of running apps that users should preferably interact with.\n\n Services: To end services, simply press the end or use the end-all. To exclude services, single click on a service and choose 'Exclude.'\n\nEnding applications: To end applications, simply press end, use the end-all, or the widget.  Auto-end service is described below.  As a note, ending any applications will cause all services and notifications for that application to be stopped.  Exclude any applications to prevent this.  Examples include Email, Facebook, or Twitter. \n\n");
+<     ((StringBuilder)localObject).append("Excluding applications: Applications not related to the auto-end service can be excluded by single clicking or long pressing from the application list and choosing exclude.  Once excluded, the appplication will not be terminated from end-all or the widget.  The auto-end service operates differently and is explained below.\n\n");
+<     ((StringBuilder)localObject).append("Auto-End Apps Service: A service that runs briefly in the background and auto-ends applications by the frequency period specified.    The service does not run constantly.  It works regardless if the application is running and whether the phone is sitting idle.  It will awake itself up, terminate the required applications and sleep itself afterward immediately.  This can be enabled from the Preferences menu.\n\n");
+<     ((StringBuilder)localObject).append("1) Auto-End Frequency - Change the frequency of when the Auto-End Service will wake itself up.\n\n");
+<     ((StringBuilder)localObject).append("2) Auto-End Running Apps - Enable this to auto-end non-active running applications.\n\n");
+<     ((StringBuilder)localObject).append("3) Auto-End Excluded List - Exclude apps that should not be ended from the Auto-End Service.  *Recommendations include apps that provide notificaton such as Gmail, Email, Messaging, Calendar & etc.  If not, these notifications will be erased when the service runs.*\n\n");
+<     ((StringBuilder)localObject).append("4) Auto-End Apps List - Select apps to be explicitly auto-ended instead of ending running apps.  Only the specified apps in the list will be auto-ended when the service runs.This is overriden if Auto-End Running Apps is selected\n\n");
+---
+>     Object localObject = new StringBuilder("\nHiapk汉化组：WinerisMY汉化\n2010年10月19日更新\n版权归原作者所有\n不懈努力，只因兴趣！\n\n一般而言,在Android手机上安装的应用程序都以自己的进程在运行.\n\n进程长期在服务中运行会导致系统运行速度越来越慢.\n\n这些内容分开由两个标签：'程序'和'所有程序'显示所有正在运行的应用程序，而'程序'标签显示的内容比较安全,自动采集用户自己安装的应用程序.\n\n服务：要结束服务,只需按结束或者全部结束；要排除服务的,单击一下服务,然后选择'排除'.\n\n结束程序：要结束程序,只需按下面的结束或全部结束.自动结束服务介绍如下：结束所有应用程序将导致该列表的所有服务和通知被停止,排除一些程序可防止出错.例如：电子邮件,Facebook 或 Twitter.\n\n");
+>     ((StringBuilder)localObject).append("排除程序：自动结束服务可以通过点击或长按应用程序，然后选择排除，排除了就不会在全部结束时被结束.自动结束服务的用法不同，解释如下：\n\n");
+>     ((StringBuilder)localObject).append("自动结束程序服务：一个服务运行在后台和自动结束指定的频率周期中的运行，改服务不运行时也不结束，无论是否在运行和手机是否在闲置，它会自己唤醒。结束所需的应用程序后立刻唤醒，这些设置可以在菜单中启用.\n\n");
+>     ((StringBuilder)localObject).append("1) 自动结束频率 - 设定一个频率可以自动结束那些自动唤醒的进程.\n\n");
+>     ((StringBuilder)localObject).append("2) 自动结束运行的程序 - 启用后，自动结束非正常运行的应用程序.\n\n");
+>     ((StringBuilder)localObject).append("3) 自动结束排除列表 - 自动结束排除列表以外的程序. *建议包括：Gmail、邮件、短信和日历等通知。否则*这些程序将会在系统启动时被结束.\n\n");
+>     ((StringBuilder)localObject).append("4) 自动结束程序列表 - 选择必须明确要自动结束的应用而不是结束正在运行的程序,当服务运行时只有在列表中指定的程序将被自动结束.如果'自动结束正在运行的程序'已被选择此服务将被改写.\n\n");
+diff -r result/APP_79/App_B_79/com/arron/taskManager/ui/service/ServiceListView.java result/APP_79/App_M_79/com/arron/taskManager/ui/service/ServiceListView.java
+41,44c41,44
+<   private static final String CANCEL = "Cancel";
+<   private static final String ENDTASK = "End Task";
+<   private static final String EXCLUDE = "Exclude";
+<   private static final String INCLUDE = "Remove Exclusion";
+---
+>   private static final String CANCEL = "取消";
+>   private static final String ENDTASK = "结束任务";
+>   private static final String EXCLUDE = "添加到排除列表";
+>   private static final String INCLUDE = "在排除列表移除";
+47,48c47,48
+<   private String[] actions = { "End Task", "Exclude", "Cancel" };
+<   private String[] actions2 = { "End Task", "Remove Exclusion", "Cancel" };
+---
+>   private String[] actions = { "结束任务", "添加到排除列表", "取消" };
+>   private String[] actions2 = { "结束任务", "在排除列表移除", "取消" };
+307,309c307,309
+<       paramContextMenu.add(0, 1, 0, "End Task");
+<       paramContextMenu.add(0, 2, 0, "Exclude");
+<       paramContextMenu.add(0, 3, 0, "Remove Exclusion");
+---
+>       paramContextMenu.add(0, 1, 0, "结束任务");
+>       paramContextMenu.add(0, 2, 0, "添加到排除列表");
+>       paramContextMenu.add(0, 3, 0, "在排除列表移除");
+374c374
+<     localBuilder.setTitle("Exclude List");
+---
+>     localBuilder.setTitle("排除列表");
+450c450
+<       if (ServiceListView.this.actions[paramInt].equals("End Task"))
+---
+>       if (ServiceListView.this.actions[paramInt].equals("结束任务"))
+455c455
+<       if (ServiceListView.this.actions[paramInt].equals("Exclude"))
+---
+>       if (ServiceListView.this.actions[paramInt].equals("添加到排除列表"))
+479c479
+<       if (ServiceListView.this.actions2[paramInt].equals("End Task"))
+---
+>       if (ServiceListView.this.actions2[paramInt].equals("结束任务"))
+484c484
+<       if (ServiceListView.this.actions2[paramInt].equals("Remove Exclusion"))
+---
+>       if (ServiceListView.this.actions2[paramInt].equals("在排除列表移除"))
+diff -r result/APP_79/App_B_79/com/arron/taskManager/ui/uninstall/UninstallActivity.java result/APP_79/App_M_79/com/arron/taskManager/ui/uninstall/UninstallActivity.java
+155c155
+<       this.progressBar.setMessage("Loading");
+---
+>       this.progressBar.setMessage("加载中");
+diff -r result/APP_79/App_B_79/com/arron/taskManager/util/ChangeDialogText.java result/APP_79/App_M_79/com/arron/taskManager/util/ChangeDialogText.java
+12c12
+<       localStringBuilder.append("Version 5.1:\n");
+---
+>       localStringBuilder.append("\n[Hiapk汉化组]WinerisMY汉化\n\n版本 5.1:\n");
+14c14
+<       localStringBuilder.append("Version 5.0:\n");
+---
+>       localStringBuilder.append("版本 5.0:\n");
+16c16
+<       localStringBuilder.append("Version 4.1:\n");
+---
+>       localStringBuilder.append("版本 4.1:\n");
+21c21
+<       localStringBuilder.append("Version 4.0:\n");
+---
+>       localStringBuilder.append("版本 4.0:\n");
+27c27
+<       localStringBuilder.append("Version 3.9:\n");
+---
+>       localStringBuilder.append("版本 3.9:\n");
+31c31
+<       localStringBuilder.append("Version 3.8:\n");
+---
+>       localStringBuilder.append("版本 3.8:\n");
+36c36
+<       localStringBuilder.append("Version 3.7:\n");
+---
+>       localStringBuilder.append("版本 3.7:\n");
+39c39
+<       localStringBuilder.append("Version 3.5:\n");
+---
+>       localStringBuilder.append("版本 3.5:\n");
+44c44
+<       localStringBuilder.append("Version 3.4:\n");
+---
+>       localStringBuilder.append("版本 3.4:\n");
+48c48
+<       localStringBuilder.append("Version 3.3:\n");
+---
+>       localStringBuilder.append("版本 3.3:\n");
+51c51
+<       localStringBuilder.append("Version 3.2:\n");
+---
+>       localStringBuilder.append("版本 3.2:\n");
+56c56
+<       localStringBuilder.append("Version 3.1:\n");
+---
+>       localStringBuilder.append("版本 3.1:\n");
+61c61
+<       localStringBuilder.append("Version 2.8:\n");
+---
+>       localStringBuilder.append("版本 2.8:\n");
+66,71c66,71
+<       localStringBuilder.append("Version 5.1:\n");
+<       localStringBuilder.append("Various bug fixes including fixing the widget's size.");
+<       localStringBuilder.append("Version 5.0:\n");
+<       localStringBuilder.append("This update was for Android 2.2 and above mainly.  For other versions, a number of minor bugs have been fixed.  As a warning, the application's ability to end applications will be will greatly decreased after Android 2.2.\n\n");
+<       localStringBuilder.append("Note: Ending an application will cause it to lose notifications.  Exclude them to avoid this.\n\n");
+<       localStringBuilder.append("Version 4.1:\n");
+---
+>       localStringBuilder.append("\n[Hiapk汉化组]WinerisMY汉化\n\n版本 5.1:\n");
+>       localStringBuilder.append("修复各种BUG问题，包括固定小部件大小.");
+>       localStringBuilder.append("版本 5.0:\n");
+>       localStringBuilder.append("更新对 Android 2.2 以上系统的支持.  对于其它版本, 已经修复大量的小BUG问题.  作为一个警告, 这个应用程序的设置应用有可能影响 Android 2.2 以上系统的机型.\n\n");
+>       localStringBuilder.append("注意: 结束一个应用程序的进程将会使它的信息通知消失.  设置排除设定可以避免它.\n\n");
+>       localStringBuilder.append("版本 4.1:\n");
+Os arquivos binários result/APP_79/App_B_79/original/META-INF/CERT.RSA e result/APP_79/App_M_79/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_79/App_B_79/original/META-INF/CERT.SF result/APP_79/App_M_79/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: hxJ68nMjjE8ZLARQhkdwjGyBOGA=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: d4Aa/OdvhyPnsp8sObv/IzctJvc=
+26,28d25
+< Name: res/drawable-ldpi/darkgraybg.9.png
+< SHA1-Digest: L0+PpEmvTVrwsVWe+Avv7vjfNFQ=
+< 
+31a29,31
+> Name: res/drawable-ldpi/darkgraybg.9.png
+> SHA1-Digest: L0+PpEmvTVrwsVWe+Avv7vjfNFQ=
+> 
+101,103d100
+< Name: res/drawable-hdpi/ic_home_services_pressed.png
+< SHA1-Digest: D81M7SKWq7Xgln/XOcPb57nwjJc=
+< 
+106a104,106
+> Name: res/drawable-hdpi/ic_home_services_pressed.png
+> SHA1-Digest: D81M7SKWq7Xgln/XOcPb57nwjJc=
+> 
+112a113,115
+> Name: resources.arsc
+> SHA1-Digest: tMKODrujn22jxT7d7po+LL7ZaZI=
+> 
+116,118d118
+< Name: resources.arsc
+< SHA1-Digest: xZG5h2UWI0SVVrN//O9tbJfSN0U=
+< 
+170,171c170,171
+< Name: classes.dex
+< SHA1-Digest: NCQg74vOfVrnIlBczzleam1GoV4=
+---
+> Name: res/drawable-hdpi/ic_arrow_down.png
+> SHA1-Digest: Q/XWt15Tp6YWZ+S9/Gj98ruRe2Q=
+176,180c176,177
+< Name: res/drawable-hdpi/ic_arrow_down.png
+< SHA1-Digest: Q/XWt15Tp6YWZ+S9/Gj98ruRe2Q=
+< 
+< Name: res/drawable/ic_home_battery.xml
+< SHA1-Digest: VtpH+hDtfmr+iZ6xP54bMfyw4m8=
+---
+> Name: classes.dex
+> SHA1-Digest: 2W2bqzh5eavxRjrVhzwXph/3mTI=
+184a182,184
+> Name: res/drawable/ic_home_battery.xml
+> SHA1-Digest: VtpH+hDtfmr+iZ6xP54bMfyw4m8=
+> 
+203,205d202
+< Name: res/drawable-ldpi/widget_bg_selected.9.png
+< SHA1-Digest: x25ViK2ptyA2Rcd+o7DisOil6aA=
+< 
+208a206,208
+> Name: res/drawable-ldpi/widget_bg_selected.9.png
+> SHA1-Digest: x25ViK2ptyA2Rcd+o7DisOil6aA=
+> 
+213c213
+< SHA1-Digest: 57+V+ydhRqYBWdDFzp2zLtD7R1c=
+---
+> SHA1-Digest: DGkOrtRXJfy+0aZtkmAaUQmAVRU=
+233,235d232
+< Name: res/drawable-ldpi/pressed_application_background.9.png
+< SHA1-Digest: m7h0w/nduMZSYg7RLHzI2csm9AA=
+< 
+238a236,238
+> Name: res/drawable-ldpi/pressed_application_background.9.png
+> SHA1-Digest: m7h0w/nduMZSYg7RLHzI2csm9AA=
+> 
+275,277d274
+< Name: res/drawable/ic_title_refresh_light.xml
+< SHA1-Digest: scjI7z14cS/eYjhLYdnILeDZtdw=
+< 
+280a278,280
+> Name: res/drawable/ic_title_refresh_light.xml
+> SHA1-Digest: scjI7z14cS/eYjhLYdnILeDZtdw=
+> 
+287,289d286
+< Name: res/drawable/uncheck.gif
+< SHA1-Digest: IjIgVmRq+J4a/clP6c1oPzQm/fA=
+< 
+293,294c290,291
+< Name: res/layout/activity_application_tab.xml
+< SHA1-Digest: Y6zVYa9umoPFrdJTnzDSBVts74w=
+---
+> Name: res/drawable/uncheck.gif
+> SHA1-Digest: IjIgVmRq+J4a/clP6c1oPzQm/fA=
+298a296,298
+> Name: res/layout/activity_application_tab.xml
+> SHA1-Digest: Y6zVYa9umoPFrdJTnzDSBVts74w=
+> 
+329,331d328
+< Name: res/layout/service_listview.xml
+< SHA1-Digest: U5FCWDXFJF1/h5rVFSglOnvaOw8=
+< 
+335,336c332,333
+< Name: res/layout/activity_informationview.xml
+< SHA1-Digest: ZTQ4DffizIbHv4QwvneXBw4WLoU=
+---
+> Name: res/layout/service_listview.xml
+> SHA1-Digest: U5FCWDXFJF1/h5rVFSglOnvaOw8=
+340a338,340
+> Name: res/layout/activity_informationview.xml
+> SHA1-Digest: ZTQ4DffizIbHv4QwvneXBw4WLoU=
+> 
+342c342
+< SHA1-Digest: hOnf9RU1ur7w3UERZ2Ed3vHNQf0=
+---
+> SHA1-Digest: N77zM6YszKMlVvygMj9RrzN6iJQ=
+diff -r result/APP_79/App_B_79/original/META-INF/MANIFEST.MF result/APP_79/App_M_79/original/META-INF/MANIFEST.MF
+25,27d24
+< Name: res/drawable-mdpi/battery_discharging_040.png
+< SHA1-Digest: w8WcSOnkBhxP9Fsvn8yRoSVdoQo=
+< 
+30a28,30
+> Name: res/drawable-mdpi/battery_discharging_040.png
+> SHA1-Digest: w8WcSOnkBhxP9Fsvn8yRoSVdoQo=
+> 
+100,102d99
+< Name: res/drawable-ldpi/services_icon.png
+< SHA1-Digest: Dyza6HFkJ0ChcJ5KLyHk7d49v+k=
+< 
+105a103,105
+> Name: res/drawable-ldpi/services_icon.png
+> SHA1-Digest: Dyza6HFkJ0ChcJ5KLyHk7d49v+k=
+> 
+109,111d108
+< Name: resources.arsc
+< SHA1-Digest: eqN0fkf46gviRv65W0Kcx/w5/5c=
+< 
+114a112,114
+> Name: resources.arsc
+> SHA1-Digest: H3rJ0PkvAnIfAvDv7qi+SVooXxc=
+> 
+169,170c169,170
+< Name: classes.dex
+< SHA1-Digest: JnMXCJ5a2bAyfolyENFdnxFLZl0=
+---
+> Name: res/drawable-hdpi/ic_arrow_down.png
+> SHA1-Digest: MMQBQL8DCoigcDfVcC9cC716A7g=
+175,179c175,176
+< Name: res/drawable-hdpi/ic_arrow_down.png
+< SHA1-Digest: MMQBQL8DCoigcDfVcC9cC716A7g=
+< 
+< Name: res/drawable/ic_home_battery.xml
+< SHA1-Digest: F01dzx25ZQE3l/brOrZ8tAf3bhY=
+---
+> Name: classes.dex
+> SHA1-Digest: PaoipA5aESkbyXuE6iUYW8AbpOc=
+183a181,183
+> Name: res/drawable/ic_home_battery.xml
+> SHA1-Digest: F01dzx25ZQE3l/brOrZ8tAf3bhY=
+> 
+202,204d201
+< Name: res/drawable-ldpi/widget_bg_selected.9.png
+< SHA1-Digest: w/0NdJO5kFNPRovJ5QL0w6z8tdk=
+< 
+207a205,207
+> Name: res/drawable-ldpi/widget_bg_selected.9.png
+> SHA1-Digest: w/0NdJO5kFNPRovJ5QL0w6z8tdk=
+> 
+212c212
+< SHA1-Digest: V9W67gBS5hn1wR3rUgzKvxa8/Xo=
+---
+> SHA1-Digest: 3EqfTlz0LjJJk4pVHftnEDwZAaI=
+232,234d231
+< Name: res/drawable-ldpi/pressed_application_background.9.png
+< SHA1-Digest: P5Hle3ysRQb6zUXuVMcNgKieMdw=
+< 
+237a235,237
+> Name: res/drawable-ldpi/pressed_application_background.9.png
+> SHA1-Digest: P5Hle3ysRQb6zUXuVMcNgKieMdw=
+> 
+274,276d273
+< Name: res/drawable/ic_title_refresh_light.xml
+< SHA1-Digest: gWSOMG01sCNdzpiVoqwsrBqGEMo=
+< 
+279a277,279
+> Name: res/drawable/ic_title_refresh_light.xml
+> SHA1-Digest: gWSOMG01sCNdzpiVoqwsrBqGEMo=
+> 
+286,288d285
+< Name: res/drawable/uncheck.gif
+< SHA1-Digest: nJmZOmA4HytHFssZsJVKsyGO+GY=
+< 
+292,293c289,290
+< Name: res/drawable-hdpi/btn_bg_pressed.9.png
+< SHA1-Digest: 3locICaKQzhXbVXovfkUMcXwL7M=
+---
+> Name: res/drawable/uncheck.gif
+> SHA1-Digest: nJmZOmA4HytHFssZsJVKsyGO+GY=
+297a295,297
+> Name: res/drawable-hdpi/btn_bg_pressed.9.png
+> SHA1-Digest: 3locICaKQzhXbVXovfkUMcXwL7M=
+> 
+328,330d327
+< Name: res/drawable-ldpi/widget_bg.xml
+< SHA1-Digest: C/35qMcyfVTsDSmo40w6QthoHe4=
+< 
+334,335c331,332
+< Name: res/drawable-mdpi/battery_discharging_060.png
+< SHA1-Digest: qVeHjPAO7o/dwwqGeLg2ZdgwEXs=
+---
+> Name: res/drawable-ldpi/widget_bg.xml
+> SHA1-Digest: C/35qMcyfVTsDSmo40w6QthoHe4=
+339a337,339
+> Name: res/drawable-mdpi/battery_discharging_060.png
+> SHA1-Digest: qVeHjPAO7o/dwwqGeLg2ZdgwEXs=
+> 
+341c341
+< SHA1-Digest: pGU7uz4SJHTecc6mmRGC4XA7g6s=
+---
+> SHA1-Digest: bZv0+wlcubKVHyS5kKm6k8tpV2k=
+diff -r result/APP_79/App_B_79/res/values/strings.xml result/APP_79/App_M_79/res/values/strings.xml
+3,84c3,84
+<     <string name="actions">Actions</string>
+<     <string name="activesince">Active Since</string>
+<     <string name="add">Add</string>
+<     <string name="add_items">Add Items</string>
+<     <string name="app_name">Advanced Task Manager</string>
+<     <string name="app_name_running">{0} is running.</string>
+<     <string name="add_new_items">Add New Items</string>
+<     <string name="all_apps">All Apps</string>
+<     <string name="apps_to_be_auto_ended">Apps to be Auto-Ended</string>
+<     <string name="applications">Applications</string>
+<     <string name="apps">Apps</string>
+<     <string name="auto_end_applications">Auto-End Applications</string>
+<     <string name="auto_end_apps_list">Auto-End Apps List</string>
+<     <string name="auto_end_apps_list_summary">Select Apps to be explicitly auto-ended instead of running apps</string>
+<     <string name="auto_end_excluded_list">Auto-End Excluded List</string>
+<     <string name="auto_end_excluded_list_summary">Select Apps to be excluded from Auto-End Service</string>
+<     <string name="auto_end_frequency">Auto-End Frequency</string>
+<     <string name="auto_end_running_apps">Auto-End Running Apps</string>
+<     <string name="auto_end_running_apps_summary">Enable to auto-end non-active running applications.</string>
+<     <string name="auto_end_service">Auto-End Apps Service</string>
+<     <string name="automatic_startup">Automatic Startup</string>
+<     <string name="avail">Avail:</string>
+<     <string name="battery_bold"><b>Battery</b></string>
+<     <string name="cancel">Cancel</string>
+<     <string name="change_log">Change Log</string>
+<     <string name="close">Close</string>
+<     <string name="end">End</string>
+<     <string name="end_all">End All</string>
+<     <string name="ended_applications">{0} ended {1} application(s)</string>
+<     <string name="ended_running_applications">{0} ended {1} running application(s)</string>
+<     <string name="excluded_auto_end_list">Excluded Auto-End Applications</string>
+<     <string name="exclude_list">Exclude List</string>
+<     <string name="free_mem">Free MEM:</string>
+<     <string name="free_mem_bold"><b>Free MEM:</b></string>
+<     <string name="information">Information</string>
+<     <string name="loading">Loading</string>
+<     <string name="mem"><u>MEM</u></string>
+<     <string name="name"><u>Name</u></string>
+<     <string name="no_items">No Items</string>
+<     <string name="number_of_processes">Number of processes:</string>
+<     <string name="preferences">Preferences</string>
+<     <string name="press_to_end">Press to End</string>
+<     <string name="processes">All Apps</string>
+<     <string name="process_tab_text">Ending vital system applications will cause phone to hang temporarily as they try to auto-restart.</string>
+<     <string name="refresh">Refresh</string>
+<     <string name="remove">Remove</string>
+<     <string name="remove_items">Remove Items</string>
+<     <string name="services">Services</string>
+<     <string name="SDCard_bold"><b>SD Card</b></string>
+<     <string name="shake_end_all">Enable Shake-to-End-All. Requires restart of application.</string>
+<     <string name="shake_threshold">Shake Threshold</string>
+<     <string name="shake_threshold_summary">Requires restart of application. Shake Threshold:</string>
+<     <string name="shake_threshold_summary2">Specify Shake Threshold. Default is 900.</string>
+<     <string name="show_auto_end_notification">Show Auto-End notification</string>
+<     <string name="show_auto_end_notification_summary">Show notification when Auto-End Service ends apps.</string>
+<     <string name="show_notification_icon">Show Notification Icon</string>
+<     <string name="show_notification_icon_summary">Show icon on notification bar.</string>
+<     <string name="show_excluded_items">Show Excluded Items</string>
+<     <string name="show_excluded_items_summary">Show excluded items on the list of running applications.</string>
+<     <string name="show_mem_info">Show Memory Info</string>
+<     <string name="show_mem_info_summary">Show memory information. Disable if application hangs.</string>
+<     <string name="show_icon_after_reboot">Show notification icon automatically after a reboot.</string>
+<     <string name="show_allapps_tab">Show AllApps Tab</string>
+<     <string name="show_allapps_tab_summary">Show AllApps Tab. Requires restart of application.</string>
+<     <string name="show_system_tab">Show System Tab</string>
+<     <string name="show_system_tab_summary">Show System Tab. Requires restart of application.</string>
+<     <string name="show_text_on_widget">Show Text on Widget</string>
+<     <string name="show_text_on_widget_summary">Show text on Widget. Requires widget to be recreated.</string>
+<     <string name="show_uninstall_tab">Show Uninstall Tab</string>
+<     <string name="show_uninstall_tab_summary">Show Uninstall Tab. Requires restart of application.</string>
+<     <string name="show_info_tab">Show Info Tab</string>
+<     <string name="show_info_tab_summary">Show Info Tab. Requires restart of application.</string>
+<     <string name="size"><u>Size</u></string>
+<     <string name="state">State</string>
+<     <string name="system">System</string>
+<     <string name="system_memory_bold"><b>System Memory</b></string>
+<     <string name="total">Total:</string>
+<     <string name="uninstall">Uninstall</string>
+<     <string name="uninstall_tab_text">Single Click to quickly uninstall applications</string>
+<     <string name="view">View</string>
+<     <string name="widget">Widget</string>
+<     <string name="widget_auto_end_frequency">Widget Auto-End Frequency</string>
+---
+>     <string name="actions">操作​​​​​</string>
+>     <string name="activesince">引导后的活动时间​​​​</string>
+>     <string name="add">添加​</string>
+>     <string name="add_items">添加项目​​​​​</string>
+>     <string name="app_name">任务管理​​​​​​​​​​​​​​​​​</string>
+>     <string name="app_name_running">{0} 正在运行​​​​​​​</string>
+>     <string name="add_new_items">添加新项目​​​​​​​​</string>
+>     <string name="all_apps">所有程序​​​​</string>
+>     <string name="apps_to_be_auto_ended">自动结束的程序​​​​​​​​​​​​​​</string>
+>     <string name="applications">应用程序​​​​​​​​</string>
+>     <string name="apps">程序​​</string>
+>     <string name="auto_end_applications">自动结束程序​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_apps_list">自动结束程序列表​​​​​​​​​​</string>
+>     <string name="auto_end_apps_list_summary">选择程序时确认自动结束而不是运行程序​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_excluded_list">自动结束排除列表​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_excluded_list_summary">所选程序会排除在自动结束服务之外​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_frequency">自动结束频率​​​​​​​​​​​​</string>
+>     <string name="auto_end_running_apps">自动结束正在运行的程序​​​​​​​​​​</string>
+>     <string name="auto_end_running_apps_summary">启用自动结束非活动的正在运行的程序​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_service">自动结束服务​​​​​​​​​​​​​​​</string>
+>     <string name="automatic_startup">自动启动​​​​​​​​​​​​​</string>
+>     <string name="avail">效能：​​​</string>
+>     <string name="battery_bold"><b>电池​​​​​</b></string>
+>     <string name="cancel">取消​​​​</string>
+>     <string name="change_log">更新日志​​​​​​</string>
+>     <string name="close">关闭​​​</string>
+>     <string name="end">结束​</string>
+>     <string name="end_all">全部结束​​​</string>
+>     <string name="ended_applications">{0} 结束 {1} 个程序​​​​​​​​​​​​​​</string>
+>     <string name="ended_running_applications">{0} 结束 {1} 个正在运行的程序​​​​​​​​​​​​​​​​​</string>
+>     <string name="excluded_auto_end_list">自动结束排除的程序​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="exclude_list">排除列表​​​​​​​​</string>
+>     <string name="free_mem">剩余内存:​​​​</string>
+>     <string name="free_mem_bold"><b>剩余内存:​​​​</b></string>
+>     <string name="information">信息​​​​​​​​​</string>
+>     <string name="loading">正在加载​​​</string>
+>     <string name="mem"><u>占内存</u></string>
+>     <string name="name"><u>名称​​</u></string>
+>     <string name="no_items">没有项目​​​​</string>
+>     <string name="number_of_processes">进程数:​​​​​​​​​​​​​​​​</string>
+>     <string name="preferences">首选项​​​​​​​​</string>
+>     <string name="press_to_end">点击结束​​​​​​​​</string>
+>     <string name="processes">所有程序​​​​</string>
+>     <string name="process_tab_text">结束重要的系统进程会导致它们在尝试自动重启时暂时挂断电话。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="refresh">刷新​​​​​</string>
+>     <string name="remove">移除​​​​</string>
+>     <string name="remove_items">移除项目​​​​​​​​</string>
+>     <string name="services">服务​​​​​​</string>
+>     <string name="SDCard_bold"><b>SD卡​​​​</b></string>
+>     <string name="shake_end_all">启用摇动结束所有程序，需要重新启动应用。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="shake_threshold">摇动阈值​​​​​​​​​​​</string>
+>     <string name="shake_threshold_summary">需要重新启动应用程序，摇动阈值:​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="shake_threshold_summary2">指定摇动阈值，默认为 900。​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_auto_end_notification">显示自动结束通知​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_auto_end_notification_summary">当自动结束服务结束程序时显示通知。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_notification_icon">显示通知图标​​​​​​​​​​​​​​​​</string>
+>     <string name="show_notification_icon_summary">在通知栏显示图标。​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_excluded_items">显示排除的项目​​​​​​​​​​​​</string>
+>     <string name="show_excluded_items_summary">在运行的程序列表中显示排除的项目。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_mem_info">显示内存信息​​​​​​​​​​</string>
+>     <string name="show_mem_info_summary">显示内存信息，程序无响应时会关闭。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_icon_after_reboot">重启以后自动显示通知图标。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_allapps_tab">显示所有应用程序选项​​​​​​</string>
+>     <string name="show_allapps_tab_summary">显示所有应用程序选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_system_tab">显示系统选项​​​​​​​​​</string>
+>     <string name="show_system_tab_summary">显示系统选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_text_on_widget">在小部件上显示文字​​​​​​​​​​</string>
+>     <string name="show_text_on_widget_summary">在小部件上显示文字，需要重建小部件。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_uninstall_tab">显示卸载选项​​​​​​​​​​​​</string>
+>     <string name="show_uninstall_tab_summary">显示卸载选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_info_tab">显示信息选项​​​​​​​</string>
+>     <string name="show_info_tab_summary">显示信息选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="size"><u>大小​​</u></string>
+>     <string name="state">状态​​​</string>
+>     <string name="system">系统​​​​</string>
+>     <string name="system_memory_bold"><b>系统内存​​​​​​​​​</b></string>
+>     <string name="total">总数：​​​</string>
+>     <string name="uninstall">卸载​​​​​​​</string>
+>     <string name="uninstall_tab_text">单击快速卸载程序​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="view">查看​​</string>
+>     <string name="widget">小部件​​​</string>
+>     <string name="widget_auto_end_frequency">小部件自动终止频率​​​​​​​​​​​​​​​​</string>
+diff -r result/APP_79/App_B_79/res/values-en/strings.xml result/APP_79/App_M_79/res/values-en/strings.xml
+3,77c3,77
+<     <string name="actions">Actions</string>
+<     <string name="activesince">Active Since</string>
+<     <string name="add">Add</string>
+<     <string name="add_items">Add Items</string>
+<     <string name="app_name">Advanced Task Manager</string>
+<     <string name="app_name_running">{0} is running.</string>
+<     <string name="add_new_items">Add New Items</string>
+<     <string name="all_apps">All Apps</string>
+<     <string name="apps_to_be_auto_ended">Apps to be Auto-Ended</string>
+<     <string name="applications">Applications</string>
+<     <string name="apps">Apps</string>
+<     <string name="auto_end_applications">Auto-End Applications</string>
+<     <string name="auto_end_apps_list">Auto-End Apps List</string>
+<     <string name="auto_end_apps_list_summary">Select Apps to be explicitly auto-ended instead of running apps</string>
+<     <string name="auto_end_excluded_list">Auto-End Excluded List</string>
+<     <string name="auto_end_excluded_list_summary">Select Apps to be excluded from Auto-End Service</string>
+<     <string name="auto_end_frequency">Auto-End Frequency</string>
+<     <string name="auto_end_running_apps">Auto-End Running Apps</string>
+<     <string name="auto_end_running_apps_summary">Enable to auto-end non-active running applications.</string>
+<     <string name="auto_end_service">Auto-End Apps Service</string>
+<     <string name="automatic_startup">Automatic Startup</string>
+<     <string name="cancel">Cancel</string>
+<     <string name="change_log">Change Log</string>
+<     <string name="close">Close</string>
+<     <string name="end">End</string>
+<     <string name="end_all">End All</string>
+<     <string name="ended_applications">{0} ended {1} application(s)</string>
+<     <string name="ended_running_applications">{0} ended {1} running application(s)</string>
+<     <string name="excluded_auto_end_list">Excluded Auto-End Applications</string>
+<     <string name="exclude_list">Exclude List</string>
+<     <string name="free_mem">Free MEM:</string>
+<     <string name="information">Information</string>
+<     <string name="loading">Loading</string>
+<     <string name="mem"><u>MEM</u></string>
+<     <string name="name"><u>Name</u></string>
+<     <string name="no_items">No Items</string>
+<     <string name="number_of_processes">Number of processes:</string>
+<     <string name="preferences">Preferences</string>
+<     <string name="press_to_end">Press to End</string>
+<     <string name="processes">All Apps</string>
+<     <string name="process_tab_text">Ending vital system applications will cause phone to hang temporarily as they try to auto-restart.</string>
+<     <string name="refresh">Refresh</string>
+<     <string name="remove">Remove</string>
+<     <string name="remove_items">Remove Items</string>
+<     <string name="services">Services</string>
+<     <string name="shake_end_all">Enable Shake-to-End-All. Requires restart of application.</string>
+<     <string name="shake_threshold">Shake Threshold</string>
+<     <string name="shake_threshold_summary">Requires restart of application. Shake Threshold:</string>
+<     <string name="shake_threshold_summary2">Specify Shake Threshold. Default is 900.</string>
+<     <string name="show_auto_end_notification">Show Auto-End notification</string>
+<     <string name="show_auto_end_notification_summary">Show notification when Auto-End Service ends apps.</string>
+<     <string name="show_notification_icon">Show Notification Icon</string>
+<     <string name="show_notification_icon_summary">Show icon on notification bar.</string>
+<     <string name="show_excluded_items">Show Excluded Items</string>
+<     <string name="show_excluded_items_summary">Show excluded items on the list of running applications.</string>
+<     <string name="show_mem_info">Show Memory Info</string>
+<     <string name="show_mem_info_summary">Show memory information. Disable if application hangs.</string>
+<     <string name="show_icon_after_reboot">Show notification icon automatically after a reboot.</string>
+<     <string name="show_allapps_tab">Show AllApps Tab</string>
+<     <string name="show_allapps_tab_summary">Show AllApps Tab. Requires restart of application.</string>
+<     <string name="show_system_tab">Show System Tab</string>
+<     <string name="show_system_tab_summary">Show System Tab. Requires restart of application.</string>
+<     <string name="show_text_on_widget">Show Text on Widget</string>
+<     <string name="show_text_on_widget_summary">Show text on Widget. Requires widget to be recreated.</string>
+<     <string name="show_uninstall_tab">Show Uninstall Tab</string>
+<     <string name="show_uninstall_tab_summary">Show Uninstall Tab. Requires restart of application.</string>
+<     <string name="show_info_tab">Show Info Tab</string>
+<     <string name="show_info_tab_summary">Show Info Tab. Requires restart of application.</string>
+<     <string name="state">State</string>
+<     <string name="system">System</string>
+<     <string name="uninstall">Uninstall</string>
+<     <string name="uninstall_tab_text">Single Click to quickly uninstall applications</string>
+<     <string name="view">View</string>
+<     <string name="widget">Widget</string>
+<     <string name="widget_auto_end_frequency">Widget Auto-End Frequency</string>
+---
+>     <string name="actions">操作​​​​​</string>
+>     <string name="activesince">引导后的活动时间​​​​</string>
+>     <string name="add">添加​</string>
+>     <string name="add_items">添加项目​​​​​</string>
+>     <string name="app_name">任务管理​​​​​​​​​​​​​​​​​</string>
+>     <string name="app_name_running">{0} 正在运行​​​​​​​</string>
+>     <string name="add_new_items">添加新项目​​​​​​​​</string>
+>     <string name="all_apps">所有程序​​​​</string>
+>     <string name="apps_to_be_auto_ended">自动结束的程序​​​​​​​​​​​​​​</string>
+>     <string name="applications">应用程序​​​​​​​​</string>
+>     <string name="apps">程序​​</string>
+>     <string name="auto_end_applications">自动结束程序​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_apps_list">自动结束程序列表​​​​​​​​​​</string>
+>     <string name="auto_end_apps_list_summary">选择程序时确认自动结束而不是运行程序​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_excluded_list">自动结束排除列表​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_excluded_list_summary">所选程序会排除在自动结束服务之外​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_frequency">自动结束频率​​​​​​​​​​​​</string>
+>     <string name="auto_end_running_apps">自动结束正在运行的程序​​​​​​​​​​</string>
+>     <string name="auto_end_running_apps_summary">启用自动结束非活动的正在运行的程序​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="auto_end_service">自动结束服务​​​​​​​​​​​​​​​</string>
+>     <string name="automatic_startup">自动启动​​​​​​​​​​​​​</string>
+>     <string name="cancel">取消​​​​</string>
+>     <string name="change_log">更新日志​​​​​​</string>
+>     <string name="close">关闭​​​</string>
+>     <string name="end">结束​</string>
+>     <string name="end_all">全部结束​​​</string>
+>     <string name="ended_applications">{0} 结束 {1} 个程序​​​​​​​​​​​​​​</string>
+>     <string name="ended_running_applications">{0} 结束 {1} 个正在运行的程序​​​​​​​​​​​​​​​​​</string>
+>     <string name="excluded_auto_end_list">自动结束排除的程序​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="exclude_list">排除列表​​​​​​​​</string>
+>     <string name="free_mem">剩余内存:​​​​</string>
+>     <string name="information">信息​​​​​​​​​</string>
+>     <string name="loading">正在加载​​​</string>
+>     <string name="mem"><u>占内存</u></string>
+>     <string name="name"><u>名称​​</u></string>
+>     <string name="no_items">没有项目​​​​</string>
+>     <string name="number_of_processes">进程数:​​​​​​​​​​​​​​​​</string>
+>     <string name="preferences">首选项​​​​​​​​</string>
+>     <string name="press_to_end">点击结束​​​​​​​​</string>
+>     <string name="processes">所有程序​​​​</string>
+>     <string name="process_tab_text">结束重要的系统进程会导致它们在尝试自动重启时暂时挂断电话。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="refresh">刷新​​​​​</string>
+>     <string name="remove">移除​​​​</string>
+>     <string name="remove_items">移除项目​​​​​​​​</string>
+>     <string name="services">服务​​​​​​</string>
+>     <string name="shake_end_all">启用摇动结束所有程序，需要重新启动应用。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="shake_threshold">摇动阈值​​​​​​​​​​​</string>
+>     <string name="shake_threshold_summary">需要重新启动应用程序，摇动阈值:​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="shake_threshold_summary2">指定摇动阈值，默认为 900。​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_auto_end_notification">显示自动结束通知​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_auto_end_notification_summary">当自动结束服务结束程序时显示通知。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_notification_icon">显示通知图标​​​​​​​​​​​​​​​​</string>
+>     <string name="show_notification_icon_summary">在通知栏显示图标。​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_excluded_items">显示排除的项目​​​​​​​​​​​​</string>
+>     <string name="show_excluded_items_summary">在运行的程序列表中显示排除的项目。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_mem_info">显示内存信息​​​​​​​​​​</string>
+>     <string name="show_mem_info_summary">显示内存信息，程序无响应时会关闭。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_icon_after_reboot">重启以后自动显示通知图标。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_allapps_tab">显示所有应用程序选项​​​​​​</string>
+>     <string name="show_allapps_tab_summary">显示所有应用程序选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_system_tab">显示系统选项​​​​​​​​​</string>
+>     <string name="show_system_tab_summary">显示系统选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_text_on_widget">在小部件上显示文字​​​​​​​​​​</string>
+>     <string name="show_text_on_widget_summary">在小部件上显示文字，需要重建小部件。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_uninstall_tab">显示卸载选项​​​​​​​​​​​​</string>
+>     <string name="show_uninstall_tab_summary">显示卸载选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="show_info_tab">显示信息选项​​​​​​​</string>
+>     <string name="show_info_tab_summary">显示信息选项，需要重启程序。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="state">状态​​​</string>
+>     <string name="system">系统​​​​</string>
+>     <string name="uninstall">卸载​​​​​​​</string>
+>     <string name="uninstall_tab_text">单击快速卸载程序​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</string>
+>     <string name="view">查看​​</string>
+>     <string name="widget">小部件​​​</string>
+>     <string name="widget_auto_end_frequency">小部件自动终止频率​​​​​​​​​​​​​​​​</string>
+diff -r result/APP_79/App_B_79/res/xml/preferences2.xml result/APP_79/App_M_79/res/xml/preferences2.xml
+5c5
+<         <CheckBoxPreference android:title="Switch to Old View (v4.1)" android:key="key_switchToPreFroyo" android:summary="Switch back to the old tabbed-view interface in v4.1.  You must restart app." android:defaultValue="false" />
+---
+>         <CheckBoxPreference android:title="切换到旧版视图(v4.1)​​​​​​​​​​​​" android:key="key_switchToPreFroyo" android:summary="切换到4.1版本视图界面，重启生效​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​" android:defaultValue="false" />
+8c8
+<     <PreferenceCategory android:title="Applications" android:key="key_view">
+---
+>     <PreferenceCategory android:title="应用程序设置​​​​​​" android:key="key_view">
+diff -r result/APP_79/App_B_79/res/xml/preferences.xml result/APP_79/App_M_79/res/xml/preferences.xml
+4,5c4,5
+<     <PreferenceCategory android:title="Applications" android:key="key_Applications">
+<         <PreferenceScreen android:title="Applications">
+---
+>     <PreferenceCategory android:title="应用程序设置​​​​​​" android:key="key_Applications">
+>         <PreferenceScreen android:title="应用程序设置​​​​​​">
+24c24
+<         <CheckBoxPreference android:title="Switch to Old View (v4.1)" android:key="key_switchToPreFroyo" android:summary="Switch back to the old tabbed-view interface in v4.1.  You must restart app." android:defaultValue="false" />
+---
+>         <CheckBoxPreference android:title="切换到旧版视图(v4.1)​​​​​​​​​​​​" android:key="key_switchToPreFroyo" android:summary="切换到4.1版本视图界面，重启生效​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​" android:defaultValue="false" />
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity$DialogOnClickListener2.smali result/APP_79/App_M_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity$DialogOnClickListener2.smali
+76c76
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+105c105
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+132c132
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+159c159
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity$DialogOnClickListener.smali result/APP_79/App_M_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity$DialogOnClickListener.smali
+76c76
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+105c105
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+132c132
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+159c159
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsActivity.smali
+18c18
+< .field private static final CANCEL:Ljava/lang/String; = "Cancel"
+---
+> .field private static final CANCEL:Ljava/lang/String; = "\u53d6\u6d88"
+20c20
+< .field private static final ENDTASK:Ljava/lang/String; = "End Task"
+---
+> .field private static final ENDTASK:Ljava/lang/String; = "\u7ed3\u675f\u4efb\u52a1"
+22c22
+< .field private static final EXCLUDE:Ljava/lang/String; = "Exclude"
+---
+> .field private static final EXCLUDE:Ljava/lang/String; = "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+24c24
+< .field private static final INCLUDE:Ljava/lang/String; = "Remove Exclusion"
+---
+> .field private static final INCLUDE:Ljava/lang/String; = "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+26c26
+< .field private static final SWITCHTO:Ljava/lang/String; = "Switch To"
+---
+> .field private static final SWITCHTO:Ljava/lang/String; = "\u5207\u6362\u81f3"
+28c28
+< .field private static final UNINSTALL:Ljava/lang/String; = "Uninstall"
+---
+> .field private static final UNINSTALL:Ljava/lang/String; = "\u5378\u8f7d"
+129c129
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+133c133
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+137c137
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+141c141
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+147c147
+<     const-string v2, "Cancel"
+---
+>     const-string v2, "\u53d6\u6d88"
+158c158
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+162c162
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+166c166
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+170c170
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+176c176
+<     const-string v2, "Cancel"
+---
+>     const-string v2, "\u53d6\u6d88"
+1875c1875
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+1882c1882
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+1889c1889
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+1896c1896
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+1903c1903
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+2381c2381
+<     const-string v1, "Exclude List"
+---
+>     const-string v1, "\u6392\u9664\u5217\u8868"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsTabActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/taskManager2/ui/activities/ApplicationsTabActivity.smali
+74c74
+<     const-string v7, "Uninstall"
+---
+>     const-string v7, "\u5378\u8f7d"
+195c195
+<     const-string v3, "Uninstall"
+---
+>     const-string v3, "\u5378\u8f7d"
+217c217
+<     const-string v3, "Uninstall"
+---
+>     const-string v3, "\u5378\u8f7d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/taskManager2/ui/activities/SDCardActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/taskManager2/ui/activities/SDCardActivity.smali
+771c771
+<     const-string v1, "Loading"
+---
+>     const-string v1, "\u52a0\u8f7d\u4e2d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/taskManager2/ui/activities/UninstallActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/taskManager2/ui/activities/UninstallActivity.smali
+723c723
+<     const-string v1, "Loading"
+---
+>     const-string v1, "\u52a0\u8f7d\u4e2d"
+781c781
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/application/ApplicationListView$DialogOnClickListener2.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/application/ApplicationListView$DialogOnClickListener2.smali
+76c76
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+105c105
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+132c132
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+159c159
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/application/ApplicationListView$DialogOnClickListener.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/application/ApplicationListView$DialogOnClickListener.smali
+76c76
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+105c105
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+132c132
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+159c159
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/application/ApplicationListView.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/application/ApplicationListView.smali
+18c18
+< .field private static final CANCEL:Ljava/lang/String; = "Cancel"
+---
+> .field private static final CANCEL:Ljava/lang/String; = "\u53d6\u6d88"
+20c20
+< .field private static final ENDTASK:Ljava/lang/String; = "End Task"
+---
+> .field private static final ENDTASK:Ljava/lang/String; = "\u7ed3\u675f\u4efb\u52a1"
+22c22
+< .field private static final EXCLUDE:Ljava/lang/String; = "Exclude"
+---
+> .field private static final EXCLUDE:Ljava/lang/String; = "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+24c24
+< .field private static final INCLUDE:Ljava/lang/String; = "Remove Exclusion"
+---
+> .field private static final INCLUDE:Ljava/lang/String; = "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+26c26
+< .field private static final SWITCHTO:Ljava/lang/String; = "Switch To"
+---
+> .field private static final SWITCHTO:Ljava/lang/String; = "\u5207\u6362\u81f3"
+28c28
+< .field private static final UNINSTALL:Ljava/lang/String; = "Uninstall"
+---
+> .field private static final UNINSTALL:Ljava/lang/String; = "\u5378\u8f7d"
+135c135
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+139c139
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+143c143
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+147c147
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+153c153
+<     const-string v2, "Cancel"
+---
+>     const-string v2, "\u53d6\u6d88"
+164c164
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+168c168
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+172c172
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+176c176
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+182c182
+<     const-string v2, "Cancel"
+---
+>     const-string v2, "\u53d6\u6d88"
+1963c1963
+<     const-string v1, "Switch To"
+---
+>     const-string v1, "\u5207\u6362\u81f3"
+1970c1970
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+1977c1977
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+1984c1984
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+1991c1991
+<     const-string v1, "Uninstall"
+---
+>     const-string v1, "\u5378\u8f7d"
+2269c2269
+<     const-string v1, "Exclude List"
+---
+>     const-string v1, "\u6392\u9664\u5217\u8868"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/application/preferences/PreferencesActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/application/preferences/PreferencesActivity.smali
+54c54
+<     const-string v1, "Never"
+---
+>     const-string v1, "\u4ece\u4e0d"
+58c58
+<     const-string v1, "Every 30 mins"
+---
+>     const-string v1, "\u6bcf\u9694 30 \u5206\u949f"
+62c62
+<     const-string v1, "Every hour"
+---
+>     const-string v1, "\u6bcf\u9694 1 \u5c0f\u65f6"
+66c66
+<     const-string v1, "Every 2 hours"
+---
+>     const-string v1, "\u6bcf\u9694 2 \u5c0f\u65f6"
+70c70
+<     const-string v1, "Every 3 hours"
+---
+>     const-string v1, "\u6bcf\u9694 3 \u5c0f\u65f6"
+76c76
+<     const-string v2, "Every 5 hours"
+---
+>     const-string v2, "\u6bcf\u9694 5 \u5c0f\u65f6"
+82c82
+<     const-string v2, "Every 12 hours"
+---
+>     const-string v2, "\u6bcf\u9694 12 \u5c0f\u65f6"
+88c88
+<     const-string v2, "Every day"
+---
+>     const-string v2, "\u6bcf\u4e00\u5929"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/IconifiedTextView.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/IconifiedTextView.smali
+97c97
+<     const-string v0, "BackG"
+---
+>     const-string v0, "\u540e\u53f0"
+102c102
+<     const-string v0, "Idle"
+---
+>     const-string v0, "\u95f2\u7f6e"
+107c107
+<     const-string v0, "ForeG"
+---
+>     const-string v0, "\u524d\u53f0"
+112c112
+<     const-string v0, "Active"
+---
+>     const-string v0, "\u6d3b\u52a8"
+117c117
+<     const-string v0, "Service"
+---
+>     const-string v0, "\u670d\u52a1"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/InformationViewActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/InformationViewActivity.smali
+38c38
+<     const-string v4, "Applications are programs installed on the phone which run on its own process.  The lifecycle of an application, in general, is maintained by Android.\n\nServices are long running processes that may run for an indefinite period of time.  They are the usual suspects bogging and slowing a phone down.\n\nBoth of these fundamentals are separated by the two equivalent tabs: \'Apps & Services.\'  The \'All Apps\' tab shows all the running applications while the \'Apps\' tab show a safer and auto-condensed collection of running apps that users should preferably interact with.\n\n Services: To end services, simply press the end or use the end-all. To exclude services, single click on a service and choose \'Exclude.\'\n\nEnding applications: To end applications, simply press end, use the end-all, or the widget.  Auto-end service is described below.  As a note, ending any applications will cause all services and notifications for that application to be stopped.  Exclude any applications to prevent this.  Examples include Email, Facebook, or Twitter. \n\n"
+---
+>     const-string v4, "\nHiapk\u6c49\u5316\u7ec4\uff1aWinerisMY\u6c49\u5316\n2010\u5e7410\u670819\u65e5\u66f4\u65b0\n\u7248\u6743\u5f52\u539f\u4f5c\u8005\u6240\u6709\n\u4e0d\u61c8\u52aa\u529b\uff0c\u53ea\u56e0\u5174\u8da3\uff01\n\n\u4e00\u822c\u800c\u8a00,\u5728Android\u624b\u673a\u4e0a\u5b89\u88c5\u7684\u5e94\u7528\u7a0b\u5e8f\u90fd\u4ee5\u81ea\u5df1\u7684\u8fdb\u7a0b\u5728\u8fd0\u884c.\n\n\u8fdb\u7a0b\u957f\u671f\u5728\u670d\u52a1\u4e2d\u8fd0\u884c\u4f1a\u5bfc\u81f4\u7cfb\u7edf\u8fd0\u884c\u901f\u5ea6\u8d8a\u6765\u8d8a\u6162.\n\n\u8fd9\u4e9b\u5185\u5bb9\u5206\u5f00\u7531\u4e24\u4e2a\u6807\u7b7e\uff1a\'\u7a0b\u5e8f\'\u548c\'\u6240\u6709\u7a0b\u5e8f\'\u663e\u793a\u6240\u6709\u6b63\u5728\u8fd0\u884c\u7684\u5e94\u7528\u7a0b\u5e8f\uff0c\u800c\'\u7a0b\u5e8f\'\u6807\u7b7e\u663e\u793a\u7684\u5185\u5bb9\u6bd4\u8f83\u5b89\u5168,\u81ea\u52a8\u91c7\u96c6\u7528\u6237\u81ea\u5df1\u5b89\u88c5\u7684\u5e94\u7528\u7a0b\u5e8f.\n\n\u670d\u52a1\uff1a\u8981\u7ed3\u675f\u670d\u52a1,\u53ea\u9700\u6309\u7ed3\u675f\u6216\u8005\u5168\u90e8\u7ed3\u675f\uff1b\u8981\u6392\u9664\u670d\u52a1\u7684,\u5355\u51fb\u4e00\u4e0b\u670d\u52a1,\u7136\u540e\u9009\u62e9\'\u6392\u9664\'.\n\n\u7ed3\u675f\u7a0b\u5e8f\uff1a\u8981\u7ed3\u675f\u7a0b\u5e8f,\u53ea\u9700\u6309\u4e0b\u9762\u7684\u7ed3\u675f\u6216\u5168\u90e8\u7ed3\u675f.\u81ea\u52a8\u7ed3\u675f\u670d\u52a1\u4ecb\u7ecd\u5982\u4e0b\uff1a\u7ed3\u675f\u6240\u6709\u5e94\u7528\u7a0b\u5e8f\u5c06\u5bfc\u81f4\u8be5\u5217\u8868\u7684\u6240\u6709\u670d\u52a1\u548c\u901a\u77e5\u88ab\u505c\u6b62,\u6392\u9664\u4e00\u4e9b\u7a0b\u5e8f\u53ef\u9632\u6b62\u51fa\u9519.\u4f8b\u5982\uff1a\u7535\u5b50\u90ae\u4ef6,Facebook \u6216 Twitter.\n\n"
+44c44
+<     const-string v4, "Excluding applications: Applications not related to the auto-end service can be excluded by single clicking or long pressing from the application list and choosing exclude.  Once excluded, the appplication will not be terminated from end-all or the widget.  The auto-end service operates differently and is explained below.\n\n"
+---
+>     const-string v4, "\u6392\u9664\u7a0b\u5e8f\uff1a\u81ea\u52a8\u7ed3\u675f\u670d\u52a1\u53ef\u4ee5\u901a\u8fc7\u70b9\u51fb\u6216\u957f\u6309\u5e94\u7528\u7a0b\u5e8f\uff0c\u7136\u540e\u9009\u62e9\u6392\u9664\uff0c\u6392\u9664\u4e86\u5c31\u4e0d\u4f1a\u5728\u5168\u90e8\u7ed3\u675f\u65f6\u88ab\u7ed3\u675f.\u81ea\u52a8\u7ed3\u675f\u670d\u52a1\u7684\u7528\u6cd5\u4e0d\u540c\uff0c\u89e3\u91ca\u5982\u4e0b\uff1a\n\n"
+49c49
+<     const-string v4, "Auto-End Apps Service: A service that runs briefly in the background and auto-ends applications by the frequency period specified.    The service does not run constantly.  It works regardless if the application is running and whether the phone is sitting idle.  It will awake itself up, terminate the required applications and sleep itself afterward immediately.  This can be enabled from the Preferences menu.\n\n"
+---
+>     const-string v4, "\u81ea\u52a8\u7ed3\u675f\u7a0b\u5e8f\u670d\u52a1\uff1a\u4e00\u4e2a\u670d\u52a1\u8fd0\u884c\u5728\u540e\u53f0\u548c\u81ea\u52a8\u7ed3\u675f\u6307\u5b9a\u7684\u9891\u7387\u5468\u671f\u4e2d\u7684\u8fd0\u884c\uff0c\u6539\u670d\u52a1\u4e0d\u8fd0\u884c\u65f6\u4e5f\u4e0d\u7ed3\u675f\uff0c\u65e0\u8bba\u662f\u5426\u5728\u8fd0\u884c\u548c\u624b\u673a\u662f\u5426\u5728\u95f2\u7f6e\uff0c\u5b83\u4f1a\u81ea\u5df1\u5524\u9192\u3002\u7ed3\u675f\u6240\u9700\u7684\u5e94\u7528\u7a0b\u5e8f\u540e\u7acb\u523b\u5524\u9192\uff0c\u8fd9\u4e9b\u8bbe\u7f6e\u53ef\u4ee5\u5728\u83dc\u5355\u4e2d\u542f\u7528.\n\n"
+54c54
+<     const-string v4, "1) Auto-End Frequency - Change the frequency of when the Auto-End Service will wake itself up.\n\n"
+---
+>     const-string v4, "1) \u81ea\u52a8\u7ed3\u675f\u9891\u7387 - \u8bbe\u5b9a\u4e00\u4e2a\u9891\u7387\u53ef\u4ee5\u81ea\u52a8\u7ed3\u675f\u90a3\u4e9b\u81ea\u52a8\u5524\u9192\u7684\u8fdb\u7a0b.\n\n"
+59c59
+<     const-string v4, "2) Auto-End Running Apps - Enable this to auto-end non-active running applications.\n\n"
+---
+>     const-string v4, "2) \u81ea\u52a8\u7ed3\u675f\u8fd0\u884c\u7684\u7a0b\u5e8f - \u542f\u7528\u540e\uff0c\u81ea\u52a8\u7ed3\u675f\u975e\u6b63\u5e38\u8fd0\u884c\u7684\u5e94\u7528\u7a0b\u5e8f.\n\n"
+64c64
+<     const-string v4, "3) Auto-End Excluded List - Exclude apps that should not be ended from the Auto-End Service.  *Recommendations include apps that provide notificaton such as Gmail, Email, Messaging, Calendar & etc.  If not, these notifications will be erased when the service runs.*\n\n"
+---
+>     const-string v4, "3) \u81ea\u52a8\u7ed3\u675f\u6392\u9664\u5217\u8868 - \u81ea\u52a8\u7ed3\u675f\u6392\u9664\u5217\u8868\u4ee5\u5916\u7684\u7a0b\u5e8f. *\u5efa\u8bae\u5305\u62ec\uff1aGmail\u3001\u90ae\u4ef6\u3001\u77ed\u4fe1\u548c\u65e5\u5386\u7b49\u901a\u77e5\u3002\u5426\u5219*\u8fd9\u4e9b\u7a0b\u5e8f\u5c06\u4f1a\u5728\u7cfb\u7edf\u542f\u52a8\u65f6\u88ab\u7ed3\u675f.\n\n"
+69c69
+<     const-string v4, "4) Auto-End Apps List - Select apps to be explicitly auto-ended instead of ending running apps.  Only the specified apps in the list will be auto-ended when the service runs.This is overriden if Auto-End Running Apps is selected\n\n"
+---
+>     const-string v4, "4) \u81ea\u52a8\u7ed3\u675f\u7a0b\u5e8f\u5217\u8868 - \u9009\u62e9\u5fc5\u987b\u660e\u786e\u8981\u81ea\u52a8\u7ed3\u675f\u7684\u5e94\u7528\u800c\u4e0d\u662f\u7ed3\u675f\u6b63\u5728\u8fd0\u884c\u7684\u7a0b\u5e8f,\u5f53\u670d\u52a1\u8fd0\u884c\u65f6\u53ea\u6709\u5728\u5217\u8868\u4e2d\u6307\u5b9a\u7684\u7a0b\u5e8f\u5c06\u88ab\u81ea\u52a8\u7ed3\u675f.\u5982\u679c\'\u81ea\u52a8\u7ed3\u675f\u6b63\u5728\u8fd0\u884c\u7684\u7a0b\u5e8f\'\u5df2\u88ab\u9009\u62e9\u6b64\u670d\u52a1\u5c06\u88ab\u6539\u5199.\n\n"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/service/ServiceListView$DialogOnClickListener2.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/service/ServiceListView$DialogOnClickListener2.smali
+76c76
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+119c119
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/service/ServiceListView$DialogOnClickListener.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/service/ServiceListView$DialogOnClickListener.smali
+76c76
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+119c119
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/service/ServiceListView.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/service/ServiceListView.smali
+18c18
+< .field private static final CANCEL:Ljava/lang/String; = "Cancel"
+---
+> .field private static final CANCEL:Ljava/lang/String; = "\u53d6\u6d88"
+20c20
+< .field private static final ENDTASK:Ljava/lang/String; = "End Task"
+---
+> .field private static final ENDTASK:Ljava/lang/String; = "\u7ed3\u675f\u4efb\u52a1"
+22c22
+< .field private static final EXCLUDE:Ljava/lang/String; = "Exclude"
+---
+> .field private static final EXCLUDE:Ljava/lang/String; = "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+24c24
+< .field private static final INCLUDE:Ljava/lang/String; = "Remove Exclusion"
+---
+> .field private static final INCLUDE:Ljava/lang/String; = "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+96c96
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+100c100
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+104c104
+<     const-string v1, "Cancel"
+---
+>     const-string v1, "\u53d6\u6d88"
+113c113
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+117c117
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+121c121
+<     const-string v1, "Cancel"
+---
+>     const-string v1, "\u53d6\u6d88"
+1119c1119
+<     const-string v1, "End Task"
+---
+>     const-string v1, "\u7ed3\u675f\u4efb\u52a1"
+1126c1126
+<     const-string v1, "Exclude"
+---
+>     const-string v1, "\u6dfb\u52a0\u5230\u6392\u9664\u5217\u8868"
+1133c1133
+<     const-string v1, "Remove Exclusion"
+---
+>     const-string v1, "\u5728\u6392\u9664\u5217\u8868\u79fb\u9664"
+1399c1399
+<     const-string v1, "Exclude List"
+---
+>     const-string v1, "\u6392\u9664\u5217\u8868"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/ui/uninstall/UninstallActivity.smali result/APP_79/App_M_79/smali/com/arron/taskManager/ui/uninstall/UninstallActivity.smali
+406c406
+<     const-string v4, "Loading"
+---
+>     const-string v4, "\u52a0\u8f7d\u4e2d"
+diff -r result/APP_79/App_B_79/smali/com/arron/taskManager/util/ChangeDialogText.smali result/APP_79/App_M_79/smali/com/arron/taskManager/util/ChangeDialogText.smali
+22c22
+<     const-string v4, "Version 5.1:\n"
+---
+>     const-string v4, "\n[Hiapk\u6c49\u5316\u7ec4]WinerisMY\u6c49\u5316\n\n\u7248\u672c 5.1:\n"
+24c24
+<     const-string v3, "Version 5.0:\n"
+---
+>     const-string v3, "\u7248\u672c 5.0:\n"
+26c26
+<     const-string v2, "Version 4.1:\n"
+---
+>     const-string v2, "\u7248\u672c 4.1:\n"
+40c40
+<     const-string v1, "Version 5.1:\n"
+---
+>     const-string v1, "\n[Hiapk\u6c49\u5316\u7ec4]WinerisMY\u6c49\u5316\n\n\u7248\u672c 5.1:\n"
+50c50
+<     const-string v1, "Version 5.0:\n"
+---
+>     const-string v1, "\u7248\u672c 5.0:\n"
+60c60
+<     const-string v1, "Version 4.1:\n"
+---
+>     const-string v1, "\u7248\u672c 4.1:\n"
+71c71
+<     const-string v1, "Version 4.0:\n"
+---
+>     const-string v1, "\u7248\u672c 4.0:\n"
+101c101
+<     const-string v1, "Version 3.9:\n"
+---
+>     const-string v1, "\u7248\u672c 3.9:\n"
+121c121
+<     const-string v1, "Version 3.8:\n"
+---
+>     const-string v1, "\u7248\u672c 3.8:\n"
+146c146
+<     const-string v1, "Version 3.7:\n"
+---
+>     const-string v1, "\u7248\u672c 3.7:\n"
+161c161
+<     const-string v1, "Version 3.5:\n"
+---
+>     const-string v1, "\u7248\u672c 3.5:\n"
+186c186
+<     const-string v1, "Version 3.4:\n"
+---
+>     const-string v1, "\u7248\u672c 3.4:\n"
+206c206
+<     const-string v1, "Version 3.3:\n"
+---
+>     const-string v1, "\u7248\u672c 3.3:\n"
+221c221
+<     const-string v1, "Version 3.2:\n"
+---
+>     const-string v1, "\u7248\u672c 3.2:\n"
+246c246
+<     const-string v1, "Version 3.1:\n"
+---
+>     const-string v1, "\u7248\u672c 3.1:\n"
+271c271
+<     const-string v1, "Version 2.8:\n"
+---
+>     const-string v1, "\u7248\u672c 2.8:\n"
+304c304
+<     const-string v1, "Various bug fixes including fixing the widget\'s size."
+---
+>     const-string v1, "\u4fee\u590d\u5404\u79cdBUG\u95ee\u9898\uff0c\u5305\u62ec\u56fa\u5b9a\u5c0f\u90e8\u4ef6\u5927\u5c0f."
+309c309
+<     const-string v1, "Version 5.0:\n"
+---
+>     const-string v1, "\nVersion 5.0:\n"
+314c314
+<     const-string v1, "This update was for Android 2.2 and above mainly.  For other versions, a number of minor bugs have been fixed.  As a warning, the application\'s ability to end applications will be will greatly decreased after Android 2.2.\n\n"
+---
+>     const-string v1, "\u66f4\u65b0\u5bf9 Android 2.2 \u4ee5\u4e0a\u7cfb\u7edf\u7684\u652f\u6301.  \u5bf9\u4e8e\u5176\u5b83\u7248\u672c, \u5df2\u7ecf\u4fee\u590d\u5927\u91cf\u7684\u5c0fBUG\u95ee\u9898.  \u4f5c\u4e3a\u4e00\u4e2a\u8b66\u544a, \u8fd9\u4e2a\u5e94\u7528\u7a0b\u5e8f\u7684\u8bbe\u7f6e\u5e94\u7528\u6709\u53ef\u80fd\u5f71\u54cd Android 2.2 \u4ee5\u4e0a\u7cfb\u7edf\u7684\u673a\u578b.\n\n"
+319c319
+<     const-string v1, "Note: Ending an application will cause it to lose notifications.  Exclude them to avoid this.\n\n"
+---
+>     const-string v1, "\u6ce8\u610f: \u7ed3\u675f\u4e00\u4e2a\u5e94\u7528\u7a0b\u5e8f\u7684\u8fdb\u7a0b\u5c06\u4f1a\u4f7f\u5b83\u7684\u4fe1\u606f\u901a\u77e5\u6d88\u5931.  \u8bbe\u7f6e\u6392\u9664\u8bbe\u5b9a\u53ef\u4ee5\u907f\u514d\u5b83.\n\n"

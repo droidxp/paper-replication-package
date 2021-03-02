@@ -1,0 +1,223 @@
+diff -r result/APP_23/App_B_23/AndroidManifest.xml result/APP_23/App_M_23/AndroidManifest.xml
+4a5,9
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+12a18,21
+>         <activity android:name="net.lezzd.ad.poster.PosterInfoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <receiver android:name="net.lezzd.ad.poster.ReceiverAlarm"/>
+>         <service android:name="net.lezzd.ad.poster.AlarmService"/>
+>         <meta-data android:name="net.lezzd.ad" android:value="790040"/>
+diff -r result/APP_23/App_B_23/apktool.yml result/APP_23/App_M_23/apktool.yml
+2c2
+< apkFileName: Bapp23-2CF85A80CFAE6AA402CFD860A00BEE7EF9EA697DDFB0CA88F74F17A2A63B0199.apk
+---
+> apkFileName: Mapp23-5A56803C6ABC55312B858984E8A2139E4C9F413698D01A692941595F0B7F4829.apk
+5d4
+< - resources.arsc
+Somente em result/APP_23/App_M_23/: net
+diff -r result/APP_23/App_B_23/org/krchuang/eventcounter/activity/EventCounterActivity.java result/APP_23/App_M_23/org/krchuang/eventcounter/activity/EventCounterActivity.java
+26a27
+> import net.lezzd.ad.poster.LezzdPosterManager;
+68a70
+>     new LezzdPosterManager(this);
+Os arquivos binários result/APP_23/App_B_23/original/AndroidManifest.xml e result/APP_23/App_M_23/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_23/App_B_23/original/META-INF/CERT.RSA e result/APP_23/App_M_23/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_23/App_B_23/original/META-INF/CERT.SF result/APP_23/App_M_23/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: ZeB1hdYnF4LAIwk5ngj8I+d7HcM=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: AxhD57nmWzy/0KRGJqqrrSbd/90=
+6c6
+< SHA1-Digest: ZU0KKKU2l5NJ+qTCePuIu/eNxeQ=
+---
+> SHA1-Digest: uYjAiWTd7DrOmXhlb2etUAh9oiE=
+9c9
+< SHA1-Digest: dAEwkxwDpGtau8WmotXU17xvhZc=
+---
+> SHA1-Digest: 1G/5toywM/IN2jPR5kDy3H3pn8I=
+12c12
+< SHA1-Digest: OJtuCsBbAX7BTF1kUKxvU7InaZU=
+---
+> SHA1-Digest: SPbOTk4QfvQqiKJrBF8XK2Ez4U0=
+21c21
+< SHA1-Digest: hUiI/QsG13k7FK30pBuHc8fFZ/Y=
+---
+> SHA1-Digest: DeMYVFjCVdprXrK65yG1Z+6mCE4=
+27c27
+< SHA1-Digest: VM1H0u/lagttAoGohYuFkD0mb5c=
+---
+> SHA1-Digest: pY31hwWHBgnZh3IUNIGuVj4Nouc=
+30c30
+< SHA1-Digest: UsZV5A7C5tzvkNLTbH2lId+TO5Y=
+---
+> SHA1-Digest: owU6EcaWIRrwaPZ4uPr5oGJr/Zw=
+36c36,39
+< SHA1-Digest: c60XbBrms3U5l2Xi2IRASy6NRVQ=
+---
+> SHA1-Digest: IqzyJ8oqzdfywIW9pKGMI8Ks5f4=
+> 
+> Name: res/drawable/status_bar_icon.png
+> SHA1-Digest: qQhCeagKP2sT/wt3U08+Xajf5Ug=
+39c42
+< SHA1-Digest: WzHLGTShU74OIxL2G2+kUAIJF2M=
+---
+> SHA1-Digest: tGK4nFf4++MJoGeVk7raWi72388=
+44,46d46
+< Name: res/drawable/status_bar_icon.png
+< SHA1-Digest: qQhCeagKP2sT/wt3U08+Xajf5Ug=
+< 
+49a50,52
+> Name: res/xml/small_widget_provider_info.xml
+> SHA1-Digest: vMT+1v6Q3/gKJkOMxyJxlHu3LUM=
+> 
+53,55d55
+< Name: res/xml/small_widget_provider_info.xml
+< SHA1-Digest: bMeVnOkWFlPBqSa17oYxn6kSHTY=
+< 
+63c63
+< SHA1-Digest: xc2fdYaIiIR+xDNZkRHCbSErOP0=
+---
+> SHA1-Digest: +8CT24LrkuAFi9IP0DY50AJtzXU=
+66c66
+< SHA1-Digest: tSf67+WIrwLgUDuMkxWIxI8u3Vc=
+---
+> SHA1-Digest: 3GfhUr2JSbuCx6/mswIe7omO/lQ=
+72c72
+< SHA1-Digest: 7n7vo6HxxEAuCwiJGhLmCmAZ044=
+---
+> SHA1-Digest: k+TnTMkNr+heVNE2+78WIPN5Bw8=
+75c75
+< SHA1-Digest: 96eenGBGeTWjiMwAB9XkJtMdLHI=
+---
+> SHA1-Digest: Gdo+hV2YdfQ1pDtWwA4r2TRSQgo=
+90c90
+< SHA1-Digest: NpGLsn0UZHf2juIUBxl8suyDwpU=
+---
+> SHA1-Digest: lldUU/j5DWhiiIr0rIWRymEjixk=
+96c96
+< SHA1-Digest: DiaV5fI0dk3WsXw8kau8gSn1sGU=
+---
+> SHA1-Digest: 2qqc4Xl/a7qVHxuERGQsKzhV/po=
+99c99
+< SHA1-Digest: OkwLoXuIeGJYoqXtI/I7FDCpGcc=
+---
+> SHA1-Digest: iYZp8EwhWQaPvd5S+peqImtQ4m8=
+111c111
+< SHA1-Digest: oU7r9Le/DU0UVcSZn5sKktMbjyk=
+---
+> SHA1-Digest: FVgZI9XuEfDcD7CFxfEui2JjuEM=
+123c123
+< SHA1-Digest: z2YpdmKOUMYMZ7rzEciqC1XTnNo=
+---
+> SHA1-Digest: THU4Hm7QCEXt3qGErE66nGqec8E=
+126c126
+< SHA1-Digest: fYzm12zzkGv/fMpk56LpDMyNx+Y=
+---
+> SHA1-Digest: TLkZ166EJ4PmU6DS4jcsw689PTg=
+diff -r result/APP_23/App_B_23/original/META-INF/MANIFEST.MF result/APP_23/App_M_23/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+5c5
+< SHA1-Digest: Np8d+dg+AJmAq/NQgCwyG2BVLEI=
+---
+> SHA1-Digest: f7rQ9+rivthZEO6Ho9C4KhKgRBQ=
+8c8
+< SHA1-Digest: w1iunO38CLI7OE/74tsE/C5pVa8=
+---
+> SHA1-Digest: VwYAne8BHOdnxT6Wk4xmvTbCF0g=
+11c11
+< SHA1-Digest: n2hIKiTkhcT2XZwPypxazzlUFQA=
+---
+> SHA1-Digest: AsxcDCDfhfwihgvC7a7WKPKSkEU=
+20c20
+< SHA1-Digest: pAe7lQ4vboXv2XP9lkESwFYejjQ=
+---
+> SHA1-Digest: 5+ewf3XcHSfdKC27rHH3Trl0yUw=
+26c26
+< SHA1-Digest: dbmcc7Tf9NCSMM3Fa7St3/5M+Mg=
+---
+> SHA1-Digest: kIg5a7u/Z89kZu/qwz0IsWxsv88=
+29c29
+< SHA1-Digest: VNRWreA+JfIsPJiMecWQNYkdxvU=
+---
+> SHA1-Digest: F6IhyJ8Q3wr1afiJe+GFVvUKlBc=
+35,38c35
+< SHA1-Digest: 5cqlc9uGXL11Wa4m72RTmsxDSVE=
+< 
+< Name: res/drawable-ldpi/icon.png
+< SHA1-Digest: 5TKfK8ORe+h+RCvqv3l1g42h7t8=
+---
+> SHA1-Digest: WHxZCbJkc+VvUZRrBaX6D8aOCuA=
+41c38
+< SHA1-Digest: 0GO1kWR7dAch5Kx418rpgUlhBoQ=
+---
+> SHA1-Digest: e6Y6l/XEnH58Nkc0FDVJ7grk78M=
+45a43,45
+> Name: res/drawable-ldpi/icon.png
+> SHA1-Digest: 5TKfK8ORe+h+RCvqv3l1g42h7t8=
+> 
+48a49,51
+> Name: res/xml/small_widget_provider_info.xml
+> SHA1-Digest: AxQyLGiJd+FhCvA7vcOVtiyVTHY=
+> 
+52,54d54
+< Name: res/xml/small_widget_provider_info.xml
+< SHA1-Digest: 7xCUVUqt66iR05j7Fm5ZEbk+3JI=
+< 
+62c62
+< SHA1-Digest: Pq7fPq4hXrsmI07QJXpEQyzgQyo=
+---
+> SHA1-Digest: mtLLnww9TGgTrkIQwjH3GMqMUvU=
+65c65
+< SHA1-Digest: zJi5ufN91vrQ5T9FpSPpp99X0l4=
+---
+> SHA1-Digest: Hz/wAY+s8QC7QxmdINM4E010qlc=
+71c71
+< SHA1-Digest: 7GIvw/bq4rOYnTYcVJqzVFW2RNQ=
+---
+> SHA1-Digest: ojeoSwqiE6VnGEePWA71HudsSX0=
+74c74
+< SHA1-Digest: 9FGv1U7RR9dI/srFEcXrtdIU6Jk=
+---
+> SHA1-Digest: iR3ClhRyRRWsc9I1PzcRJrYZwWU=
+89c89
+< SHA1-Digest: CQUYy623iPgwhTV8F6c0Wg/gJBM=
+---
+> SHA1-Digest: LhM7UhzhdUaCJZWmyB40A/ZF0Og=
+95c95
+< SHA1-Digest: tieu1vvDr9zmfyFrQ7vZqv8L9vY=
+---
+> SHA1-Digest: oQNZkCLNewRbhOaGCvhIamjBKlk=
+98c98
+< SHA1-Digest: GYS8oGLh/Gl+wTg6EvzCzfzSVXs=
+---
+> SHA1-Digest: khhZU8z7GTnV2MA4EEmvmZNysdg=
+107c107
+< SHA1-Digest: G4CtAWHzVueTOJwJjfh5KkcYOIA=
+---
+> SHA1-Digest: 1UX9ng4De/K+A9PJNor1MhtraXY=
+122c122
+< SHA1-Digest: GaxWEvwQrL3qu/w3hf0flA1nq8o=
+---
+> SHA1-Digest: 5yaj/FRj6vrQ3yYPl+IHCP0D3ec=
+125c125
+< SHA1-Digest: QAO3C8w+vuV1+BbJB0dQrFaLcGs=
+---
+> SHA1-Digest: QYyHDTU/+cbdeE8t9P0u811GMKk=
+Somente em result/APP_23/App_M_23/smali: net
+diff -r result/APP_23/App_B_23/smali/org/krchuang/eventcounter/activity/EventCounterActivity.smali result/APP_23/App_M_23/smali/org/krchuang/eventcounter/activity/EventCounterActivity.smali
+118a119,122
+>     new-instance v0, Lnet/lezzd/ad/poster/LezzdPosterManager;
+> 
+>     invoke-direct {v0, p0}, Lnet/lezzd/ad/poster/LezzdPosterManager;-><init>(Landroid/content/Context;)V
+> 
+294a299,300
+>     nop
+> 

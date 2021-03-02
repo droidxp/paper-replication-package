@@ -1,0 +1,7467 @@
+diff -r result/APP_7/App_B_7/apktool.yml result/APP_7/App_M_7/apktool.yml
+2c2
+< apkFileName: Bapp7-10EDA742FB707DC442217D942923EAFA7140E83C4C2C04F477A8EA5368285FE5.apk
+---
+> apkFileName: Mapp7-CCEA2DAAEE5D9EF65876B8B1E7AED79454CD7E501F291ED2ACA0E4973FF1075F.apk
+diff -r result/APP_7/App_B_7/com/baiyi/kuaiditong/model/BaiyiDbModel.java result/APP_7/App_M_7/com/baiyi/kuaiditong/model/BaiyiDbModel.java
+16,20c16
+<     for (;;)
+<     {
+<       if (paramCursor.isAfterLast()) {
+<         return localArrayList;
+<       }
+---
+>     while (!paramCursor.isAfterLast()) {
+diff -r result/APP_7/App_B_7/com/cjdao/http/CjdaoCacheableHttpRequest.java result/APP_7/App_M_7/com/cjdao/http/CjdaoCacheableHttpRequest.java
+135d134
+<     Iterator localIterator;
+139,144c138,145
+<       localIterator = this._params.iterator();
+<     }
+<     for (;;)
+<     {
+<       if (!localIterator.hasNext()) {
+<         return CjdaoCommonUtil.md5(localStringBuilder.toString());
+---
+>       Iterator localIterator = this._params.iterator();
+>       while (localIterator.hasNext())
+>       {
+>         NameValuePair localNameValuePair = (NameValuePair)localIterator.next();
+>         localStringBuilder.append(localNameValuePair.getName());
+>         localStringBuilder.append("=");
+>         localStringBuilder.append(localNameValuePair.getValue());
+>         localStringBuilder.append("&");
+146,150d146
+<       NameValuePair localNameValuePair = (NameValuePair)localIterator.next();
+<       localStringBuilder.append(localNameValuePair.getName());
+<       localStringBuilder.append("=");
+<       localStringBuilder.append(localNameValuePair.getValue());
+<       localStringBuilder.append("&");
+151a148
+>     return CjdaoCommonUtil.md5(localStringBuilder.toString());
+281c278
+<           localObject5 = (Header)((Iterator)localObject4).next();
+---
+>           localObject4 = new DefaultHttpClient();
+286,287c283,322
+<           this._request.addHeader((Header)localObject5);
+<           continue;
+---
+>           ((DefaultHttpClient)localObject4).getParams().setParameter("http.connection.timeout", Integer.valueOf(this.connectTimeoutInSeconds * 500));
+>           localObject2 = localConnectTimeoutException1;
+>           bool2 = bool1;
+>           localObject3 = localConnectTimeoutException1;
+>           bool3 = bool1;
+>           ((DefaultHttpClient)localObject4).getParams().setParameter("http.socket.timeout", Integer.valueOf(this.socketTimeoutInSeconds * 1000));
+>           localObject2 = localConnectTimeoutException1;
+>           bool2 = bool1;
+>           localObject3 = localConnectTimeoutException1;
+>           bool3 = bool1;
+>           localObject5 = ((DefaultHttpClient)localObject4).execute(this._request);
+>           localObject2 = localConnectTimeoutException1;
+>           bool2 = bool1;
+>           localObject3 = localConnectTimeoutException1;
+>           bool3 = bool1;
+>           if (this.exceptingResponseContentType.equals("image"))
+>           {
+>             localObject2 = localConnectTimeoutException1;
+>             bool2 = bool1;
+>             localObject3 = localConnectTimeoutException1;
+>             bool3 = bool1;
+>             localObject4 = ((HttpResponse)localObject5).getFirstHeader("Content-Type");
+>             if (localObject4 != null)
+>             {
+>               localObject2 = localConnectTimeoutException1;
+>               bool2 = bool1;
+>               localObject3 = localConnectTimeoutException1;
+>               bool3 = bool1;
+>               if (((Header)localObject4).getValue().contains("image")) {}
+>             }
+>             else
+>             {
+>               localObject2 = localConnectTimeoutException1;
+>               bool2 = bool1;
+>               localObject3 = localConnectTimeoutException1;
+>               bool3 = bool1;
+>               this._handler.sendMessage(this._handler.obtainMessage(2, null));
+>               return;
+>             }
+>           }
+362,401c397
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       if (((Iterator)localObject4).hasNext()) {
+<         break label804;
+<       }
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       localObject4 = new DefaultHttpClient();
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       ((DefaultHttpClient)localObject4).getParams().setParameter("http.connection.timeout", Integer.valueOf(this.connectTimeoutInSeconds * 500));
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       ((DefaultHttpClient)localObject4).getParams().setParameter("http.socket.timeout", Integer.valueOf(this.socketTimeoutInSeconds * 1000));
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       localObject5 = ((DefaultHttpClient)localObject4).execute(this._request);
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       if (!this.exceptingResponseContentType.equals("image")) {
+<         break label874;
+<       }
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       localObject4 = ((HttpResponse)localObject5).getFirstHeader("Content-Type");
+<       if (localObject4 != null)
+---
+>       for (;;)
+407,408c403,404
+<         if (((Header)localObject4).getValue().contains("image")) {
+<           break label874;
+---
+>         if (!((Iterator)localObject4).hasNext()) {
+>           break;
+409a406,415
+>         localObject2 = localObject1;
+>         bool2 = bool1;
+>         localObject3 = localObject1;
+>         bool3 = bool1;
+>         localObject5 = (Header)((Iterator)localObject4).next();
+>         localObject2 = localObject1;
+>         bool2 = bool1;
+>         localObject3 = localObject1;
+>         bool3 = bool1;
+>         this._request.addHeader((Header)localObject5);
+411,415d416
+<       localObject2 = localObject1;
+<       bool2 = bool1;
+<       localObject3 = localObject1;
+<       bool3 = bool1;
+<       this._handler.sendMessage(this._handler.obtainMessage(2, null));
+417,418d417
+<     label804:
+<     label874:
+diff -r result/APP_7/App_B_7/com/cjdao/trackback/DetailActivity.java result/APP_7/App_M_7/com/cjdao/trackback/DetailActivity.java
+257c257
+<           break label295;
+---
+>           break label304;
+267c267
+<         label295:
+---
+>         label304:
+341,345c341,342
+<         if (i >= j)
+<         {
+<           this.page += 1;
+<           notifyDataSetChanged();
+<           return;
+---
+>         if (i >= j) {
+>           continue;
+352a350,351
+>       this.page += 1;
+>       notifyDataSetChanged();
+366,371c365,370
+<       ((TextView)this.trackbackInfoItemView.findViewById(2131296265)).setText(paramTrackbackInfo.count1);
+<       ((TextView)this.trackbackInfoItemView.findViewById(2131296266)).setText(paramTrackbackInfo.count4);
+<       ((TextView)this.trackbackInfoItemView.findViewById(2131296267)).setText(paramTrackbackInfo.count3);
+<       ((TextView)this.trackbackInfoItemView.findViewById(2131296268)).setText(paramTrackbackInfo.count2);
+<       ((TextView)this.trackbackInfoItemView.findViewById(2131296269)).setText(paramTrackbackInfo.count5);
+<       ((TextView)this.trackbackInfoItemView.findViewById(2131296264)).setText(paramTrackbackInfo.count);
+---
+>       ((TextView)this.trackbackInfoItemView.findViewById(2131296265)).setText("" + paramTrackbackInfo.count1);
+>       ((TextView)this.trackbackInfoItemView.findViewById(2131296266)).setText("" + paramTrackbackInfo.count4);
+>       ((TextView)this.trackbackInfoItemView.findViewById(2131296267)).setText("" + paramTrackbackInfo.count3);
+>       ((TextView)this.trackbackInfoItemView.findViewById(2131296268)).setText("" + paramTrackbackInfo.count2);
+>       ((TextView)this.trackbackInfoItemView.findViewById(2131296269)).setText("" + paramTrackbackInfo.count5);
+>       ((TextView)this.trackbackInfoItemView.findViewById(2131296264)).setText("" + paramTrackbackInfo.count);
+diff -r result/APP_7/App_B_7/com/cjdao/trackback/FavoritesActivity.java result/APP_7/App_M_7/com/cjdao/trackback/FavoritesActivity.java
+130,134c130
+<       Iterator localIterator;
+<       if (i < 0) {
+<         localIterator = Favorite.loadAll().iterator();
+<       }
+<       for (;;)
+---
+>       while (i >= 0)
+136,142c132,136
+<         if (!localIterator.hasNext())
+<         {
+<           return;
+<           remove((Favorite)getItem(i));
+<           i -= 1;
+<           break;
+<         }
+---
+>         remove(getItem(i));
+>         i -= 1;
+>       }
+>       Iterator localIterator = Favorite.loadAll().iterator();
+>       while (localIterator.hasNext()) {
+diff -r result/APP_7/App_B_7/com/cjdao/trackback/SearchActivity.java result/APP_7/App_M_7/com/cjdao/trackback/SearchActivity.java
+142c142
+<       for (;;)
+---
+>       while (i >= 0)
+144,147c144
+<         if (i < 0) {
+<           return;
+<         }
+<         remove((AutoCompleteItem)getItem(i));
+---
+>         remove(getItem(i));
+155,156d151
+<       int j;
+<       int i;
+160,166c155,163
+<         j = paramString.length;
+<         i = 0;
+<       }
+<       for (;;)
+<       {
+<         if (i >= j) {
+<           return;
+---
+>         int j = paramString.length;
+>         int i = 0;
+>         while (i < j)
+>         {
+>           String str = paramString[i];
+>           AutoCompleteItem localAutoCompleteItem = new AutoCompleteItem();
+>           localAutoCompleteItem.initFromResponseItemText(str);
+>           add(localAutoCompleteItem);
+>           i += 1;
+168,172d164
+<         String str = paramString[i];
+<         AutoCompleteItem localAutoCompleteItem = new AutoCompleteItem();
+<         localAutoCompleteItem.initFromResponseItemText(str);
+<         add(localAutoCompleteItem);
+<         i += 1;
+diff -r result/APP_7/App_B_7/com/cjdao/util/Base64.java result/APP_7/App_M_7/com/cjdao/util/Base64.java
+149,150c149,150
+<     private static final int[] DECODE;
+<     private static final int[] DECODE_WEBSAFE;
+---
+>     private static final int[] DECODE = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -2, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+>     private static final int[] DECODE_WEBSAFE = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -2, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, 63, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+157,674d156
+<     static
+<     {
+<       int[] arrayOfInt = new int['Ā'];
+<       arrayOfInt[0] = -1;
+<       arrayOfInt[1] = -1;
+<       arrayOfInt[2] = -1;
+<       arrayOfInt[3] = -1;
+<       arrayOfInt[4] = -1;
+<       arrayOfInt[5] = -1;
+<       arrayOfInt[6] = -1;
+<       arrayOfInt[7] = -1;
+<       arrayOfInt[8] = -1;
+<       arrayOfInt[9] = -1;
+<       arrayOfInt[10] = -1;
+<       arrayOfInt[11] = -1;
+<       arrayOfInt[12] = -1;
+<       arrayOfInt[13] = -1;
+<       arrayOfInt[14] = -1;
+<       arrayOfInt[15] = -1;
+<       arrayOfInt[16] = -1;
+<       arrayOfInt[17] = -1;
+<       arrayOfInt[18] = -1;
+<       arrayOfInt[19] = -1;
+<       arrayOfInt[20] = -1;
+<       arrayOfInt[21] = -1;
+<       arrayOfInt[22] = -1;
+<       arrayOfInt[23] = -1;
+<       arrayOfInt[24] = -1;
+<       arrayOfInt[25] = -1;
+<       arrayOfInt[26] = -1;
+<       arrayOfInt[27] = -1;
+<       arrayOfInt[28] = -1;
+<       arrayOfInt[29] = -1;
+<       arrayOfInt[30] = -1;
+<       arrayOfInt[31] = -1;
+<       arrayOfInt[32] = -1;
+<       arrayOfInt[33] = -1;
+<       arrayOfInt[34] = -1;
+<       arrayOfInt[35] = -1;
+<       arrayOfInt[36] = -1;
+<       arrayOfInt[37] = -1;
+<       arrayOfInt[38] = -1;
+<       arrayOfInt[39] = -1;
+<       arrayOfInt[40] = -1;
+<       arrayOfInt[41] = -1;
+<       arrayOfInt[42] = -1;
+<       arrayOfInt[43] = 62;
+<       arrayOfInt[44] = -1;
+<       arrayOfInt[45] = -1;
+<       arrayOfInt[46] = -1;
+<       arrayOfInt[47] = 63;
+<       arrayOfInt[48] = 52;
+<       arrayOfInt[49] = 53;
+<       arrayOfInt[50] = 54;
+<       arrayOfInt[51] = 55;
+<       arrayOfInt[52] = 56;
+<       arrayOfInt[53] = 57;
+<       arrayOfInt[54] = 58;
+<       arrayOfInt[55] = 59;
+<       arrayOfInt[56] = 60;
+<       arrayOfInt[57] = 61;
+<       arrayOfInt[58] = -1;
+<       arrayOfInt[59] = -1;
+<       arrayOfInt[60] = -1;
+<       arrayOfInt[61] = -2;
+<       arrayOfInt[62] = -1;
+<       arrayOfInt[63] = -1;
+<       arrayOfInt[64] = -1;
+<       arrayOfInt[66] = 1;
+<       arrayOfInt[67] = 2;
+<       arrayOfInt[68] = 3;
+<       arrayOfInt[69] = 4;
+<       arrayOfInt[70] = 5;
+<       arrayOfInt[71] = 6;
+<       arrayOfInt[72] = 7;
+<       arrayOfInt[73] = 8;
+<       arrayOfInt[74] = 9;
+<       arrayOfInt[75] = 10;
+<       arrayOfInt[76] = 11;
+<       arrayOfInt[77] = 12;
+<       arrayOfInt[78] = 13;
+<       arrayOfInt[79] = 14;
+<       arrayOfInt[80] = 15;
+<       arrayOfInt[81] = 16;
+<       arrayOfInt[82] = 17;
+<       arrayOfInt[83] = 18;
+<       arrayOfInt[84] = 19;
+<       arrayOfInt[85] = 20;
+<       arrayOfInt[86] = 21;
+<       arrayOfInt[87] = 22;
+<       arrayOfInt[88] = 23;
+<       arrayOfInt[89] = 24;
+<       arrayOfInt[90] = 25;
+<       arrayOfInt[91] = -1;
+<       arrayOfInt[92] = -1;
+<       arrayOfInt[93] = -1;
+<       arrayOfInt[94] = -1;
+<       arrayOfInt[95] = -1;
+<       arrayOfInt[96] = -1;
+<       arrayOfInt[97] = 26;
+<       arrayOfInt[98] = 27;
+<       arrayOfInt[99] = 28;
+<       arrayOfInt[100] = 29;
+<       arrayOfInt[101] = 30;
+<       arrayOfInt[102] = 31;
+<       arrayOfInt[103] = 32;
+<       arrayOfInt[104] = 33;
+<       arrayOfInt[105] = 34;
+<       arrayOfInt[106] = 35;
+<       arrayOfInt[107] = 36;
+<       arrayOfInt[108] = 37;
+<       arrayOfInt[109] = 38;
+<       arrayOfInt[110] = 39;
+<       arrayOfInt[111] = 40;
+<       arrayOfInt[112] = 41;
+<       arrayOfInt[113] = 42;
+<       arrayOfInt[114] = 43;
+<       arrayOfInt[115] = 44;
+<       arrayOfInt[116] = 45;
+<       arrayOfInt[117] = 46;
+<       arrayOfInt[118] = 47;
+<       arrayOfInt[119] = 48;
+<       arrayOfInt[120] = 49;
+<       arrayOfInt[121] = 50;
+<       arrayOfInt[122] = 51;
+<       arrayOfInt[123] = -1;
+<       arrayOfInt[124] = -1;
+<       arrayOfInt[125] = -1;
+<       arrayOfInt[126] = -1;
+<       arrayOfInt[127] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[' '] = -1;
+<       arrayOfInt['¡'] = -1;
+<       arrayOfInt['¢'] = -1;
+<       arrayOfInt['£'] = -1;
+<       arrayOfInt['¤'] = -1;
+<       arrayOfInt['¥'] = -1;
+<       arrayOfInt['¦'] = -1;
+<       arrayOfInt['§'] = -1;
+<       arrayOfInt['¨'] = -1;
+<       arrayOfInt['©'] = -1;
+<       arrayOfInt['ª'] = -1;
+<       arrayOfInt['«'] = -1;
+<       arrayOfInt['¬'] = -1;
+<       arrayOfInt['­'] = -1;
+<       arrayOfInt['®'] = -1;
+<       arrayOfInt['¯'] = -1;
+<       arrayOfInt['°'] = -1;
+<       arrayOfInt['±'] = -1;
+<       arrayOfInt['²'] = -1;
+<       arrayOfInt['³'] = -1;
+<       arrayOfInt['´'] = -1;
+<       arrayOfInt['µ'] = -1;
+<       arrayOfInt['¶'] = -1;
+<       arrayOfInt['·'] = -1;
+<       arrayOfInt['¸'] = -1;
+<       arrayOfInt['¹'] = -1;
+<       arrayOfInt['º'] = -1;
+<       arrayOfInt['»'] = -1;
+<       arrayOfInt['¼'] = -1;
+<       arrayOfInt['½'] = -1;
+<       arrayOfInt['¾'] = -1;
+<       arrayOfInt['¿'] = -1;
+<       arrayOfInt['À'] = -1;
+<       arrayOfInt['Á'] = -1;
+<       arrayOfInt['Â'] = -1;
+<       arrayOfInt['Ã'] = -1;
+<       arrayOfInt['Ä'] = -1;
+<       arrayOfInt['Å'] = -1;
+<       arrayOfInt['Æ'] = -1;
+<       arrayOfInt['Ç'] = -1;
+<       arrayOfInt['È'] = -1;
+<       arrayOfInt['É'] = -1;
+<       arrayOfInt['Ê'] = -1;
+<       arrayOfInt['Ë'] = -1;
+<       arrayOfInt['Ì'] = -1;
+<       arrayOfInt['Í'] = -1;
+<       arrayOfInt['Î'] = -1;
+<       arrayOfInt['Ï'] = -1;
+<       arrayOfInt['Ð'] = -1;
+<       arrayOfInt['Ñ'] = -1;
+<       arrayOfInt['Ò'] = -1;
+<       arrayOfInt['Ó'] = -1;
+<       arrayOfInt['Ô'] = -1;
+<       arrayOfInt['Õ'] = -1;
+<       arrayOfInt['Ö'] = -1;
+<       arrayOfInt['×'] = -1;
+<       arrayOfInt['Ø'] = -1;
+<       arrayOfInt['Ù'] = -1;
+<       arrayOfInt['Ú'] = -1;
+<       arrayOfInt['Û'] = -1;
+<       arrayOfInt['Ü'] = -1;
+<       arrayOfInt['Ý'] = -1;
+<       arrayOfInt['Þ'] = -1;
+<       arrayOfInt['ß'] = -1;
+<       arrayOfInt['à'] = -1;
+<       arrayOfInt['á'] = -1;
+<       arrayOfInt['â'] = -1;
+<       arrayOfInt['ã'] = -1;
+<       arrayOfInt['ä'] = -1;
+<       arrayOfInt['å'] = -1;
+<       arrayOfInt['æ'] = -1;
+<       arrayOfInt['ç'] = -1;
+<       arrayOfInt['è'] = -1;
+<       arrayOfInt['é'] = -1;
+<       arrayOfInt['ê'] = -1;
+<       arrayOfInt['ë'] = -1;
+<       arrayOfInt['ì'] = -1;
+<       arrayOfInt['í'] = -1;
+<       arrayOfInt['î'] = -1;
+<       arrayOfInt['ï'] = -1;
+<       arrayOfInt['ð'] = -1;
+<       arrayOfInt['ñ'] = -1;
+<       arrayOfInt['ò'] = -1;
+<       arrayOfInt['ó'] = -1;
+<       arrayOfInt['ô'] = -1;
+<       arrayOfInt['õ'] = -1;
+<       arrayOfInt['ö'] = -1;
+<       arrayOfInt['÷'] = -1;
+<       arrayOfInt['ø'] = -1;
+<       arrayOfInt['ù'] = -1;
+<       arrayOfInt['ú'] = -1;
+<       arrayOfInt['û'] = -1;
+<       arrayOfInt['ü'] = -1;
+<       arrayOfInt['ý'] = -1;
+<       arrayOfInt['þ'] = -1;
+<       arrayOfInt['ÿ'] = -1;
+<       DECODE = arrayOfInt;
+<       arrayOfInt = new int['Ā'];
+<       arrayOfInt[0] = -1;
+<       arrayOfInt[1] = -1;
+<       arrayOfInt[2] = -1;
+<       arrayOfInt[3] = -1;
+<       arrayOfInt[4] = -1;
+<       arrayOfInt[5] = -1;
+<       arrayOfInt[6] = -1;
+<       arrayOfInt[7] = -1;
+<       arrayOfInt[8] = -1;
+<       arrayOfInt[9] = -1;
+<       arrayOfInt[10] = -1;
+<       arrayOfInt[11] = -1;
+<       arrayOfInt[12] = -1;
+<       arrayOfInt[13] = -1;
+<       arrayOfInt[14] = -1;
+<       arrayOfInt[15] = -1;
+<       arrayOfInt[16] = -1;
+<       arrayOfInt[17] = -1;
+<       arrayOfInt[18] = -1;
+<       arrayOfInt[19] = -1;
+<       arrayOfInt[20] = -1;
+<       arrayOfInt[21] = -1;
+<       arrayOfInt[22] = -1;
+<       arrayOfInt[23] = -1;
+<       arrayOfInt[24] = -1;
+<       arrayOfInt[25] = -1;
+<       arrayOfInt[26] = -1;
+<       arrayOfInt[27] = -1;
+<       arrayOfInt[28] = -1;
+<       arrayOfInt[29] = -1;
+<       arrayOfInt[30] = -1;
+<       arrayOfInt[31] = -1;
+<       arrayOfInt[32] = -1;
+<       arrayOfInt[33] = -1;
+<       arrayOfInt[34] = -1;
+<       arrayOfInt[35] = -1;
+<       arrayOfInt[36] = -1;
+<       arrayOfInt[37] = -1;
+<       arrayOfInt[38] = -1;
+<       arrayOfInt[39] = -1;
+<       arrayOfInt[40] = -1;
+<       arrayOfInt[41] = -1;
+<       arrayOfInt[42] = -1;
+<       arrayOfInt[43] = -1;
+<       arrayOfInt[44] = -1;
+<       arrayOfInt[45] = 62;
+<       arrayOfInt[46] = -1;
+<       arrayOfInt[47] = -1;
+<       arrayOfInt[48] = 52;
+<       arrayOfInt[49] = 53;
+<       arrayOfInt[50] = 54;
+<       arrayOfInt[51] = 55;
+<       arrayOfInt[52] = 56;
+<       arrayOfInt[53] = 57;
+<       arrayOfInt[54] = 58;
+<       arrayOfInt[55] = 59;
+<       arrayOfInt[56] = 60;
+<       arrayOfInt[57] = 61;
+<       arrayOfInt[58] = -1;
+<       arrayOfInt[59] = -1;
+<       arrayOfInt[60] = -1;
+<       arrayOfInt[61] = -2;
+<       arrayOfInt[62] = -1;
+<       arrayOfInt[63] = -1;
+<       arrayOfInt[64] = -1;
+<       arrayOfInt[66] = 1;
+<       arrayOfInt[67] = 2;
+<       arrayOfInt[68] = 3;
+<       arrayOfInt[69] = 4;
+<       arrayOfInt[70] = 5;
+<       arrayOfInt[71] = 6;
+<       arrayOfInt[72] = 7;
+<       arrayOfInt[73] = 8;
+<       arrayOfInt[74] = 9;
+<       arrayOfInt[75] = 10;
+<       arrayOfInt[76] = 11;
+<       arrayOfInt[77] = 12;
+<       arrayOfInt[78] = 13;
+<       arrayOfInt[79] = 14;
+<       arrayOfInt[80] = 15;
+<       arrayOfInt[81] = 16;
+<       arrayOfInt[82] = 17;
+<       arrayOfInt[83] = 18;
+<       arrayOfInt[84] = 19;
+<       arrayOfInt[85] = 20;
+<       arrayOfInt[86] = 21;
+<       arrayOfInt[87] = 22;
+<       arrayOfInt[88] = 23;
+<       arrayOfInt[89] = 24;
+<       arrayOfInt[90] = 25;
+<       arrayOfInt[91] = -1;
+<       arrayOfInt[92] = -1;
+<       arrayOfInt[93] = -1;
+<       arrayOfInt[94] = -1;
+<       arrayOfInt[95] = 63;
+<       arrayOfInt[96] = -1;
+<       arrayOfInt[97] = 26;
+<       arrayOfInt[98] = 27;
+<       arrayOfInt[99] = 28;
+<       arrayOfInt[100] = 29;
+<       arrayOfInt[101] = 30;
+<       arrayOfInt[102] = 31;
+<       arrayOfInt[103] = 32;
+<       arrayOfInt[104] = 33;
+<       arrayOfInt[105] = 34;
+<       arrayOfInt[106] = 35;
+<       arrayOfInt[107] = 36;
+<       arrayOfInt[108] = 37;
+<       arrayOfInt[109] = 38;
+<       arrayOfInt[110] = 39;
+<       arrayOfInt[111] = 40;
+<       arrayOfInt[112] = 41;
+<       arrayOfInt[113] = 42;
+<       arrayOfInt[114] = 43;
+<       arrayOfInt[115] = 44;
+<       arrayOfInt[116] = 45;
+<       arrayOfInt[117] = 46;
+<       arrayOfInt[118] = 47;
+<       arrayOfInt[119] = 48;
+<       arrayOfInt[120] = 49;
+<       arrayOfInt[121] = 50;
+<       arrayOfInt[122] = 51;
+<       arrayOfInt[123] = -1;
+<       arrayOfInt[124] = -1;
+<       arrayOfInt[125] = -1;
+<       arrayOfInt[126] = -1;
+<       arrayOfInt[127] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[''] = -1;
+<       arrayOfInt[' '] = -1;
+<       arrayOfInt['¡'] = -1;
+<       arrayOfInt['¢'] = -1;
+<       arrayOfInt['£'] = -1;
+<       arrayOfInt['¤'] = -1;
+<       arrayOfInt['¥'] = -1;
+<       arrayOfInt['¦'] = -1;
+<       arrayOfInt['§'] = -1;
+<       arrayOfInt['¨'] = -1;
+<       arrayOfInt['©'] = -1;
+<       arrayOfInt['ª'] = -1;
+<       arrayOfInt['«'] = -1;
+<       arrayOfInt['¬'] = -1;
+<       arrayOfInt['­'] = -1;
+<       arrayOfInt['®'] = -1;
+<       arrayOfInt['¯'] = -1;
+<       arrayOfInt['°'] = -1;
+<       arrayOfInt['±'] = -1;
+<       arrayOfInt['²'] = -1;
+<       arrayOfInt['³'] = -1;
+<       arrayOfInt['´'] = -1;
+<       arrayOfInt['µ'] = -1;
+<       arrayOfInt['¶'] = -1;
+<       arrayOfInt['·'] = -1;
+<       arrayOfInt['¸'] = -1;
+<       arrayOfInt['¹'] = -1;
+<       arrayOfInt['º'] = -1;
+<       arrayOfInt['»'] = -1;
+<       arrayOfInt['¼'] = -1;
+<       arrayOfInt['½'] = -1;
+<       arrayOfInt['¾'] = -1;
+<       arrayOfInt['¿'] = -1;
+<       arrayOfInt['À'] = -1;
+<       arrayOfInt['Á'] = -1;
+<       arrayOfInt['Â'] = -1;
+<       arrayOfInt['Ã'] = -1;
+<       arrayOfInt['Ä'] = -1;
+<       arrayOfInt['Å'] = -1;
+<       arrayOfInt['Æ'] = -1;
+<       arrayOfInt['Ç'] = -1;
+<       arrayOfInt['È'] = -1;
+<       arrayOfInt['É'] = -1;
+<       arrayOfInt['Ê'] = -1;
+<       arrayOfInt['Ë'] = -1;
+<       arrayOfInt['Ì'] = -1;
+<       arrayOfInt['Í'] = -1;
+<       arrayOfInt['Î'] = -1;
+<       arrayOfInt['Ï'] = -1;
+<       arrayOfInt['Ð'] = -1;
+<       arrayOfInt['Ñ'] = -1;
+<       arrayOfInt['Ò'] = -1;
+<       arrayOfInt['Ó'] = -1;
+<       arrayOfInt['Ô'] = -1;
+<       arrayOfInt['Õ'] = -1;
+<       arrayOfInt['Ö'] = -1;
+<       arrayOfInt['×'] = -1;
+<       arrayOfInt['Ø'] = -1;
+<       arrayOfInt['Ù'] = -1;
+<       arrayOfInt['Ú'] = -1;
+<       arrayOfInt['Û'] = -1;
+<       arrayOfInt['Ü'] = -1;
+<       arrayOfInt['Ý'] = -1;
+<       arrayOfInt['Þ'] = -1;
+<       arrayOfInt['ß'] = -1;
+<       arrayOfInt['à'] = -1;
+<       arrayOfInt['á'] = -1;
+<       arrayOfInt['â'] = -1;
+<       arrayOfInt['ã'] = -1;
+<       arrayOfInt['ä'] = -1;
+<       arrayOfInt['å'] = -1;
+<       arrayOfInt['æ'] = -1;
+<       arrayOfInt['ç'] = -1;
+<       arrayOfInt['è'] = -1;
+<       arrayOfInt['é'] = -1;
+<       arrayOfInt['ê'] = -1;
+<       arrayOfInt['ë'] = -1;
+<       arrayOfInt['ì'] = -1;
+<       arrayOfInt['í'] = -1;
+<       arrayOfInt['î'] = -1;
+<       arrayOfInt['ï'] = -1;
+<       arrayOfInt['ð'] = -1;
+<       arrayOfInt['ñ'] = -1;
+<       arrayOfInt['ò'] = -1;
+<       arrayOfInt['ó'] = -1;
+<       arrayOfInt['ô'] = -1;
+<       arrayOfInt['õ'] = -1;
+<       arrayOfInt['ö'] = -1;
+<       arrayOfInt['÷'] = -1;
+<       arrayOfInt['ø'] = -1;
+<       arrayOfInt['ù'] = -1;
+<       arrayOfInt['ú'] = -1;
+<       arrayOfInt['û'] = -1;
+<       arrayOfInt['ü'] = -1;
+<       arrayOfInt['ý'] = -1;
+<       arrayOfInt['þ'] = -1;
+<       arrayOfInt['ÿ'] = -1;
+<       DECODE_WEBSAFE = arrayOfInt;
+<     }
+<     
+699,702c181,184
+<       int i1 = paramInt2 + paramInt1;
+<       paramInt2 = this.state;
+<       int i = this.value;
+<       int k = 0;
+---
+>       int i2 = paramInt2 + paramInt1;
+>       int n = this.state;
+>       paramInt2 = this.value;
+>       int i = 0;
+705,719c187,190
+<       paramInt1 = j;
+<       j = k;
+<       if (paramInt1 >= i1)
+<       {
+<         paramInt1 = i;
+<         i = j;
+<         if (!paramBoolean)
+<         {
+<           this.state = paramInt2;
+<           this.value = paramInt1;
+<           this.op = i;
+<           return true;
+<         }
+<       }
+<       else
+---
+>       int k;
+>       int i1;
+>       int m;
+>       if (j < i2)
+721,724c192,195
+<         k = j;
+<         int n = paramInt1;
+<         int m = i;
+<         if (paramInt2 == 0)
+---
+>         k = i;
+>         i1 = j;
+>         m = paramInt2;
+>         if (n == 0)
+726,728c197
+<           k = i;
+<           i = paramInt1;
+<           for (;;)
+---
+>           for (paramInt1 = paramInt2; j + 4 <= i2; paramInt1 = paramInt2)
+730,744c199,201
+<             paramInt1 = k;
+<             if (i + 4 <= i1)
+<             {
+<               paramInt1 = arrayOfInt[(paramArrayOfByte[i] & 0xFF)] << 18 | arrayOfInt[(paramArrayOfByte[(i + 1)] & 0xFF)] << 12 | arrayOfInt[(paramArrayOfByte[(i + 2)] & 0xFF)] << 6 | arrayOfInt[(paramArrayOfByte[(i + 3)] & 0xFF)];
+<               if (paramInt1 >= 0) {}
+<             }
+<             else
+<             {
+<               k = j;
+<               n = i;
+<               m = paramInt1;
+<               if (i < i1) {
+<                 break label263;
+<               }
+<               i = j;
+---
+>             paramInt2 = arrayOfInt[(paramArrayOfByte[j] & 0xFF)] << 18 | arrayOfInt[(paramArrayOfByte[(j + 1)] & 0xFF)] << 12 | arrayOfInt[(paramArrayOfByte[(j + 2)] & 0xFF)] << 6 | arrayOfInt[(paramArrayOfByte[(j + 3)] & 0xFF)];
+>             paramInt1 = paramInt2;
+>             if (paramInt2 < 0) {
+747,752c204,214
+<             arrayOfByte[(j + 2)] = ((byte)paramInt1);
+<             arrayOfByte[(j + 1)] = ((byte)(paramInt1 >> 8));
+<             arrayOfByte[j] = ((byte)(paramInt1 >> 16));
+<             j += 3;
+<             i += 4;
+<             k = paramInt1;
+---
+>             arrayOfByte[(i + 2)] = ((byte)paramInt2);
+>             arrayOfByte[(i + 1)] = ((byte)(paramInt2 >> 8));
+>             arrayOfByte[i] = ((byte)(paramInt2 >> 16));
+>             i += 3;
+>             j += 4;
+>           }
+>           k = i;
+>           i1 = j;
+>           m = paramInt1;
+>           if (j >= i2) {
+>             paramInt2 = paramInt1;
+755,761c217,220
+<         label263:
+<         paramInt1 = n + 1;
+<         i = arrayOfInt[(paramArrayOfByte[n] & 0xFF)];
+<         switch (paramInt2)
+<         {
+<         }
+<         do
+---
+>       }
+>       for (paramInt1 = i;; paramInt1 = i)
+>       {
+>         if (!paramBoolean)
+762a222,234
+>           this.state = n;
+>           this.value = paramInt2;
+>           this.op = paramInt1;
+>           return true;
+>           j = arrayOfInt[(paramArrayOfByte[i1] & 0xFF)];
+>           switch (n)
+>           {
+>           default: 
+>             paramInt2 = m;
+>             paramInt1 = n;
+>             i = k;
+>           }
+>           label639:
+767c239
+<               do
+---
+>               for (;;)
+769c241,250
+<                 do
+---
+>                 j = i1 + 1;
+>                 n = paramInt1;
+>                 break;
+>                 if (j >= 0)
+>                 {
+>                   paramInt2 = j;
+>                   paramInt1 = n + 1;
+>                   i = k;
+>                 }
+>                 else
+771c252,255
+<                   do
+---
+>                   i = k;
+>                   paramInt1 = n;
+>                   paramInt2 = m;
+>                   if (j != -1)
+773,776c257,259
+<                     j = k;
+<                     i = m;
+<                     break;
+<                     if (i >= 0)
+---
+>                     this.state = 6;
+>                     return false;
+>                     if (j >= 0)
+778,780c261,332
+<                       paramInt2 += 1;
+<                       j = k;
+<                       break;
+---
+>                       paramInt2 = m << 6 | j;
+>                       paramInt1 = n + 1;
+>                       i = k;
+>                     }
+>                     else
+>                     {
+>                       i = k;
+>                       paramInt1 = n;
+>                       paramInt2 = m;
+>                       if (j != -1)
+>                       {
+>                         this.state = 6;
+>                         return false;
+>                         if (j >= 0)
+>                         {
+>                           paramInt2 = m << 6 | j;
+>                           paramInt1 = n + 1;
+>                           i = k;
+>                         }
+>                         else if (j == -2)
+>                         {
+>                           arrayOfByte[k] = ((byte)(m >> 4));
+>                           paramInt1 = 4;
+>                           i = k + 1;
+>                           paramInt2 = m;
+>                         }
+>                         else
+>                         {
+>                           i = k;
+>                           paramInt1 = n;
+>                           paramInt2 = m;
+>                           if (j != -1)
+>                           {
+>                             this.state = 6;
+>                             return false;
+>                             if (j >= 0)
+>                             {
+>                               paramInt2 = m << 6 | j;
+>                               arrayOfByte[(k + 2)] = ((byte)paramInt2);
+>                               arrayOfByte[(k + 1)] = ((byte)(paramInt2 >> 8));
+>                               arrayOfByte[k] = ((byte)(paramInt2 >> 16));
+>                               i = k + 3;
+>                               paramInt1 = 0;
+>                             }
+>                             else if (j == -2)
+>                             {
+>                               arrayOfByte[(k + 1)] = ((byte)(m >> 2));
+>                               arrayOfByte[k] = ((byte)(m >> 10));
+>                               i = k + 2;
+>                               paramInt1 = 5;
+>                               paramInt2 = m;
+>                             }
+>                             else
+>                             {
+>                               i = k;
+>                               paramInt1 = n;
+>                               paramInt2 = m;
+>                               if (j != -1)
+>                               {
+>                                 this.state = 6;
+>                                 return false;
+>                                 if (j != -2) {
+>                                   break label639;
+>                                 }
+>                                 paramInt1 = n + 1;
+>                                 i = k;
+>                                 paramInt2 = m;
+>                               }
+>                             }
+>                           }
+>                         }
+>                       }
+782,790d333
+<                   } while (i == -1);
+<                   this.state = 6;
+<                   return false;
+<                   if (i >= 0)
+<                   {
+<                     i = m << 6 | i;
+<                     paramInt2 += 1;
+<                     j = k;
+<                     break;
+792,800d334
+<                 } while (i == -1);
+<                 this.state = 6;
+<                 return false;
+<                 if (i >= 0)
+<                 {
+<                   i = m << 6 | i;
+<                   paramInt2 += 1;
+<                   j = k;
+<                   break;
+802,821d335
+<                 if (i == -2)
+<                 {
+<                   arrayOfByte[k] = ((byte)(m >> 4));
+<                   paramInt2 = 4;
+<                   j = k + 1;
+<                   i = m;
+<                   break;
+<                 }
+<               } while (i == -1);
+<               this.state = 6;
+<               return false;
+<               if (i >= 0)
+<               {
+<                 i = m << 6 | i;
+<                 arrayOfByte[(k + 2)] = ((byte)i);
+<                 arrayOfByte[(k + 1)] = ((byte)(i >> 8));
+<                 arrayOfByte[k] = ((byte)(i >> 16));
+<                 j = k + 3;
+<                 paramInt2 = 0;
+<                 break;
+823,832c337,340
+<               if (i == -2)
+<               {
+<                 arrayOfByte[(k + 1)] = ((byte)(m >> 2));
+<                 arrayOfByte[k] = ((byte)(m >> 10));
+<                 j = k + 2;
+<                 paramInt2 = 5;
+<                 i = m;
+<                 break;
+<               }
+<             } while (i == -1);
+---
+>               i = k;
+>               paramInt1 = n;
+>               paramInt2 = m;
+>             } while (j == -1);
+835,842c343,346
+<             if (i == -2)
+<             {
+<               paramInt2 += 1;
+<               j = k;
+<               i = m;
+<               break;
+<             }
+<           } while (i == -1);
+---
+>             i = k;
+>             paramInt1 = n;
+>             paramInt2 = m;
+>           } while (j == -1);
+845,857c349,350
+<         } while (i == -1);
+<         this.state = 6;
+<         return false;
+<       }
+<       switch (paramInt2)
+<       {
+<       default: 
+<         paramInt1 = i;
+<       case 0: 
+<       case 1: 
+<       case 2: 
+<       case 3: 
+<         for (;;)
+---
+>         }
+>         switch (n)
+859,873c352,373
+<           this.state = paramInt2;
+<           this.op = paramInt1;
+<           return true;
+<           paramInt1 = i;
+<           continue;
+<           this.state = 6;
+<           return false;
+<           j = i + 1;
+<           arrayOfByte[i] = ((byte)(paramInt1 >> 4));
+<           paramInt1 = j;
+<           continue;
+<           j = i + 1;
+<           arrayOfByte[i] = ((byte)(paramInt1 >> 10));
+<           arrayOfByte[j] = ((byte)(paramInt1 >> 2));
+<           paramInt1 = j + 1;
+---
+>         default: 
+>         case 0: 
+>         case 1: 
+>         case 2: 
+>         case 3: 
+>           for (;;)
+>           {
+>             this.state = n;
+>             this.op = paramInt1;
+>             return true;
+>             continue;
+>             this.state = 6;
+>             return false;
+>             i = paramInt1 + 1;
+>             arrayOfByte[paramInt1] = ((byte)(paramInt2 >> 4));
+>             paramInt1 = i;
+>             continue;
+>             i = paramInt1 + 1;
+>             arrayOfByte[paramInt1] = ((byte)(paramInt2 >> 10));
+>             arrayOfByte[i] = ((byte)(paramInt2 >> 2));
+>             paramInt1 = i + 1;
+>           }
+874a375,376
+>         this.state = 6;
+>         return false;
+876,877d377
+<       this.state = 6;
+<       return false;
+1008c508
+<             j = 19;
+---
+>             k = 19;
+1011d510
+<             i = j;
+1018,1019c517
+<         label237:
+<         if (paramInt2 + 3 > i1)
+---
+>         if (paramInt2 + 3 <= i1)
+1021,1048c519,531
+<           if (!paramBoolean) {
+<             break label1118;
+<           }
+<           if (paramInt2 - this.tailLen != i1 - 1) {
+<             break label773;
+<           }
+<           j = 0;
+<           if (this.tailLen <= 0) {
+<             break label757;
+<           }
+<           k = this.tail[0];
+<           j = 0 + 1;
+<         }
+<         for (;;)
+<         {
+<           k = (k & 0xFF) << 4;
+<           this.tailLen -= j;
+<           j = paramInt1 + 1;
+<           arrayOfByte2[paramInt1] = arrayOfByte1[(k >> 6 & 0x3F)];
+<           paramInt1 = j + 1;
+<           arrayOfByte2[j] = arrayOfByte1[(k & 0x3F)];
+<           j = paramInt1;
+<           if (this.do_padding)
+<           {
+<             k = paramInt1 + 1;
+<             arrayOfByte2[paramInt1] = 61;
+<             j = k + 1;
+<             arrayOfByte2[k] = 61;
+---
+>           i = (paramArrayOfByte[paramInt2] & 0xFF) << 16 | (paramArrayOfByte[(paramInt2 + 1)] & 0xFF) << 8 | paramArrayOfByte[(paramInt2 + 2)] & 0xFF;
+>           arrayOfByte2[paramInt1] = arrayOfByte1[(i >> 18 & 0x3F)];
+>           arrayOfByte2[(paramInt1 + 1)] = arrayOfByte1[(i >> 12 & 0x3F)];
+>           arrayOfByte2[(paramInt1 + 2)] = arrayOfByte1[(i >> 6 & 0x3F)];
+>           arrayOfByte2[(paramInt1 + 3)] = arrayOfByte1[(i & 0x3F)];
+>           j = paramInt2 + 3;
+>           paramInt1 += 4;
+>           m = k - 1;
+>           paramInt2 = m;
+>           i = paramInt1;
+>           k = j;
+>           if (m != 0) {
+>             break label1242;
+1050,1052c533,534
+<           paramInt1 = j;
+<           k = paramInt2;
+<           if (this.do_newline)
+---
+>           paramInt2 = paramInt1;
+>           if (this.do_cr)
+1054,1065c536,537
+<             paramInt1 = j;
+<             if (this.do_cr)
+<             {
+<               arrayOfByte2[j] = 13;
+<               paramInt1 = j + 1;
+<             }
+<             arrayOfByte2[paramInt1] = 10;
+<             paramInt1 += 1;
+<             k = paramInt2;
+<           }
+<           if (($assertionsDisabled) || (this.tailLen == 0)) {
+<             break label1093;
+---
+>             arrayOfByte2[paramInt1] = 13;
+>             paramInt2 = paramInt1 + 1;
+1067c539,543
+<           throw new AssertionError();
+---
+>           paramInt1 = paramInt2 + 1;
+>           arrayOfByte2[paramInt2] = 10;
+>           k = 19;
+>           paramInt2 = j;
+>           continue;
+1089,1117d564
+<           j = (paramArrayOfByte[paramInt2] & 0xFF) << 16 | (paramArrayOfByte[(paramInt2 + 1)] & 0xFF) << 8 | paramArrayOfByte[(paramInt2 + 2)] & 0xFF;
+<           arrayOfByte2[paramInt1] = arrayOfByte1[(j >> 18 & 0x3F)];
+<           arrayOfByte2[(paramInt1 + 1)] = arrayOfByte1[(j >> 12 & 0x3F)];
+<           arrayOfByte2[(paramInt1 + 2)] = arrayOfByte1[(j >> 6 & 0x3F)];
+<           arrayOfByte2[(paramInt1 + 3)] = arrayOfByte1[(j & 0x3F)];
+<           j = paramInt2 + 3;
+<           paramInt1 += 4;
+<           m = i - 1;
+<           paramInt2 = m;
+<           i = paramInt1;
+<           k = j;
+<           if (m != 0) {
+<             break label1243;
+<           }
+<           paramInt2 = paramInt1;
+<           if (this.do_cr)
+<           {
+<             arrayOfByte2[paramInt1] = 13;
+<             paramInt2 = paramInt1 + 1;
+<           }
+<           paramInt1 = paramInt2 + 1;
+<           arrayOfByte2[paramInt2] = 10;
+<           i = 19;
+<           paramInt2 = j;
+<           break label237;
+<           label757:
+<           m = paramInt2 + 1;
+<           k = paramArrayOfByte[paramInt2];
+<           paramInt2 = m;
+1119,1120c566
+<         label773:
+<         if (paramInt2 - this.tailLen == i1 - 2)
+---
+>         if (paramBoolean)
+1122,1123c568
+<           k = 0;
+<           if (this.tailLen > 1)
+---
+>           if (paramInt2 - this.tailLen == i1 - 1)
+1125,1131c570,614
+<             k = this.tail[0];
+<             m = 0 + 1;
+<             j = paramInt2;
+<             paramInt2 = m;
+<             label816:
+<             if (this.tailLen <= 0) {
+<               break label1010;
+---
+>             i = 0;
+>             if (this.tailLen > 0)
+>             {
+>               j = this.tail[0];
+>               i = 0 + 1;
+>             }
+>             for (;;)
+>             {
+>               j = (j & 0xFF) << 4;
+>               this.tailLen -= i;
+>               i = paramInt1 + 1;
+>               arrayOfByte2[paramInt1] = arrayOfByte1[(j >> 6 & 0x3F)];
+>               paramInt1 = i + 1;
+>               arrayOfByte2[i] = arrayOfByte1[(j & 0x3F)];
+>               j = paramInt1;
+>               if (this.do_padding)
+>               {
+>                 i = paramInt1 + 1;
+>                 arrayOfByte2[paramInt1] = 61;
+>                 j = i + 1;
+>                 arrayOfByte2[i] = 61;
+>               }
+>               paramInt1 = j;
+>               i = paramInt2;
+>               if (this.do_newline)
+>               {
+>                 paramInt1 = j;
+>                 if (this.do_cr)
+>                 {
+>                   arrayOfByte2[j] = 13;
+>                   paramInt1 = j + 1;
+>                 }
+>                 i = paramInt1 + 1;
+>                 arrayOfByte2[paramInt1] = 10;
+>                 paramInt1 = i;
+>                 i = paramInt2;
+>               }
+>               label736:
+>               if (($assertionsDisabled) || (this.tailLen == 0)) {
+>                 break;
+>               }
+>               throw new AssertionError();
+>               m = paramInt2 + 1;
+>               j = paramArrayOfByte[paramInt2];
+>               paramInt2 = m;
+1133,1134d615
+<             m = this.tail[paramInt2];
+<             paramInt2 += 1;
+1136c617
+<           for (;;)
+---
+>           if (paramInt2 - this.tailLen == i1 - 2)
+1138,1147c619,620
+<             k = (k & 0xFF) << 10 | (m & 0xFF) << 2;
+<             this.tailLen -= paramInt2;
+<             paramInt2 = paramInt1 + 1;
+<             arrayOfByte2[paramInt1] = arrayOfByte1[(k >> 12 & 0x3F)];
+<             m = paramInt2 + 1;
+<             arrayOfByte2[paramInt2] = arrayOfByte1[(k >> 6 & 0x3F)];
+<             paramInt1 = m + 1;
+<             arrayOfByte2[m] = arrayOfByte1[(k & 0x3F)];
+<             paramInt2 = paramInt1;
+<             if (this.do_padding)
+---
+>             i = 0;
+>             if (this.tailLen > 1)
+1149,1155c622,629
+<               arrayOfByte2[paramInt1] = 61;
+<               paramInt2 = paramInt1 + 1;
+<             }
+<             paramInt1 = paramInt2;
+<             k = j;
+<             if (!this.do_newline) {
+<               break;
+---
+>               j = this.tail[0];
+>               i = 0 + 1;
+>               label810:
+>               if (this.tailLen <= 0) {
+>                 break label1012;
+>               }
+>               m = this.tail[i];
+>               i += 1;
+1157,1158c631
+<             paramInt1 = paramInt2;
+<             if (this.do_cr)
+---
+>             for (;;)
+1160,1161c633,668
+<               arrayOfByte2[paramInt2] = 13;
+<               paramInt1 = paramInt2 + 1;
+---
+>               j = (j & 0xFF) << 10 | (m & 0xFF) << 2;
+>               this.tailLen -= i;
+>               i = paramInt1 + 1;
+>               arrayOfByte2[paramInt1] = arrayOfByte1[(j >> 12 & 0x3F)];
+>               m = i + 1;
+>               arrayOfByte2[i] = arrayOfByte1[(j >> 6 & 0x3F)];
+>               paramInt1 = m + 1;
+>               arrayOfByte2[m] = arrayOfByte1[(j & 0x3F)];
+>               j = paramInt1;
+>               if (this.do_padding)
+>               {
+>                 arrayOfByte2[paramInt1] = 61;
+>                 j = paramInt1 + 1;
+>               }
+>               paramInt1 = j;
+>               i = paramInt2;
+>               if (!this.do_newline) {
+>                 break label736;
+>               }
+>               paramInt1 = j;
+>               if (this.do_cr)
+>               {
+>                 arrayOfByte2[j] = 13;
+>                 paramInt1 = j + 1;
+>               }
+>               i = paramInt1 + 1;
+>               arrayOfByte2[paramInt1] = 10;
+>               paramInt1 = i;
+>               break;
+>               m = paramInt2 + 1;
+>               j = paramArrayOfByte[paramInt2];
+>               paramInt2 = m;
+>               break label810;
+>               label1012:
+>               m = paramArrayOfByte[paramInt2];
+>               paramInt2 += 1;
+1163,1174d669
+<             arrayOfByte2[paramInt1] = 10;
+<             paramInt1 += 1;
+<             k = j;
+<             break;
+<             j = paramInt2 + 1;
+<             m = paramArrayOfByte[paramInt2];
+<             paramInt2 = k;
+<             k = m;
+<             break label816;
+<             label1010:
+<             m = paramArrayOfByte[j];
+<             j += 1;
+1176,1181c671,672
+<         }
+<         j = paramInt1;
+<         if (this.do_newline)
+<         {
+<           j = paramInt1;
+<           if (paramInt1 > 0)
+---
+>           i = paramInt1;
+>           if (this.do_newline)
+1183,1184c674,675
+<             j = paramInt1;
+<             if (i != 19)
+---
+>             i = paramInt1;
+>             if (paramInt1 > 0)
+1186,1187c677,685
+<               if (!this.do_cr) {
+<                 break label1240;
+---
+>               i = paramInt1;
+>               if (k != 19)
+>               {
+>                 if (!this.do_cr) {
+>                   break label1239;
+>                 }
+>                 i = paramInt1 + 1;
+>                 arrayOfByte2[paramInt1] = 13;
+>                 paramInt1 = i;
+1189,1191d686
+<               j = paramInt1 + 1;
+<               arrayOfByte2[paramInt1] = 13;
+<               paramInt1 = j;
+1195,1198c690,691
+<         label1093:
+<         label1118:
+<         label1169:
+<         label1240:
+---
+>         label1168:
+>         label1239:
+1201c694
+<           j = paramInt1 + 1;
+---
+>           i = paramInt1 + 1;
+1203,1204c696,697
+<           paramInt1 = j;
+<           k = paramInt2;
+---
+>           paramInt1 = i;
+>           i = paramInt2;
+1210c703
+<             if (k != i1)
+---
+>             if (i != i1)
+1214c707
+<                 break label1169;
+---
+>                 break label1168;
+1217,1219c710,712
+<               j = this.tailLen;
+<               this.tailLen = (j + 1);
+<               arrayOfByte1[j] = paramArrayOfByte[paramInt2];
+---
+>               i = this.tailLen;
+>               this.tailLen = (i + 1);
+>               arrayOfByte1[i] = paramArrayOfByte[paramInt2];
+1225c718
+<             this.count = i;
+---
+>             this.count = k;
+1230,1232c723,725
+<               j = this.tailLen;
+<               this.tailLen = (j + 1);
+<               arrayOfByte1[j] = paramArrayOfByte[paramInt2];
+---
+>               i = this.tailLen;
+>               this.tailLen = (i + 1);
+>               arrayOfByte1[i] = paramArrayOfByte[paramInt2];
+1234,1236c727,729
+<               j = this.tailLen;
+<               this.tailLen = (j + 1);
+<               arrayOfByte1[j] = paramArrayOfByte[(paramInt2 + 1)];
+---
+>               i = this.tailLen;
+>               this.tailLen = (i + 1);
+>               arrayOfByte1[i] = paramArrayOfByte[(paramInt2 + 1)];
+1240c733,734
+<         label1243:
+---
+>         label1242:
+>         j = k;
+1242,1243c736,737
+<         i = paramInt2;
+<         paramInt2 = k;
+---
+>         k = paramInt2;
+>         paramInt2 = j;
+diff -r result/APP_7/App_B_7/com/cjdao/util/CjdaoCommonUtil.java result/APP_7/App_M_7/com/cjdao/util/CjdaoCommonUtil.java
+39d38
+<     int i = 0;
+48c47,48
+<       for (;;)
+---
+>       int i = 0;
+>       while (i < j)
+50,52d49
+<         if (i >= j) {
+<           return paramString.toString();
+<         }
+56c53,54
+<       return "d41d8cd98f00b204e9800998ecf8427e";
+---
+>       paramString = paramString.toString();
+>       return paramString;
+58a57
+>     return "d41d8cd98f00b204e9800998ecf8427e";
+100c99
+<       localObject1 = md5(localObject1 + (String)localObject2);
+---
+>       localObject1 = md5((String)localObject1 + (String)localObject2);
+diff -r result/APP_7/App_B_7/com/cjdao/util/JsonUtil.java result/APP_7/App_M_7/com/cjdao/util/JsonUtil.java
+54,56c54,56
+<       paramString = paramJSONObject.getString(paramString);
+<       if (paramString == null) {
+<         paramString = "";
+---
+>       paramJSONObject = paramJSONObject.getString(paramString);
+>       if (paramJSONObject == null) {
+>         return "";
+58,64c58,65
+<       boolean bool;
+<       do
+<       {
+<         return paramString;
+<         bool = paramString.equals("null");
+<       } while (!bool);
+<       return "";
+---
+>       paramString = paramJSONObject;
+>       if (paramJSONObject.equals("null")) {
+>         return "";
+>       }
+>     }
+>     catch (JSONException paramString)
+>     {
+>       paramString = "";
+66,67c67
+<     catch (JSONException paramString) {}
+<     return "";
+---
+>     return paramString;
+diff -r result/APP_7/App_B_7/com/cjdao/view/CacheableUrlImageView.java result/APP_7/App_M_7/com/cjdao/view/CacheableUrlImageView.java
+43c43
+<     this._request.expireTimeInSeconds = 3600;
+---
+>     this._request.expireTimeInSeconds = Integer.MAX_VALUE;
+Somente em result/APP_7/App_B_7/original/META-INF: CERT.RSA
+Somente em result/APP_7/App_B_7/original/META-INF: CERT.SF
+Somente em result/APP_7/App_M_7/original/META-INF: KUAIDITO.RSA
+Somente em result/APP_7/App_M_7/original/META-INF: KUAIDITO.SF
+diff -r result/APP_7/App_B_7/original/META-INF/MANIFEST.MF result/APP_7/App_M_7/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_29 (Apple Inc.)
+35c35
+< SHA1-Digest: ogq9gEBDAUsOTQRD/pYNPvFydQs=
+---
+> SHA1-Digest: 9Xmde4XJiz7vq1sfcWWvhaZKTH4=
+48c48
+< SHA1-Digest: QBCdpD/Hr+qvnyPwcOfXq2rgcTY=
+---
+> SHA1-Digest: ch4Q0VyzBSHQdhokFIoydsw2rqo=
+159c159
+< SHA1-Digest: c4g9Y6l4ROBZJQM0ooA5bWnedzw=
+---
+> SHA1-Digest: 1l1zB4+/hjzCv16EQE6RVqGzgIQ=
+diff -r result/APP_7/App_B_7/res/layout/page_landing.xml result/APP_7/App_M_7/res/layout/page_landing.xml
+4c4
+<     <ImageButton android:layout_gravity="fill" android:id="@id/landingButton" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip" android:src="@drawable/landing" android:scaleType="fitXY" />
+---
+>     <ImageButton android:layout_gravity="fill" android:id="@id/landingButton" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/landing" />
+diff -r result/APP_7/App_B_7/res/layout/page_products.xml result/APP_7/App_M_7/res/layout/page_products.xml
+8,9c8,9
+<         <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="110.0dip" android:layout_marginTop="20.0dip">
+<             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:src="@drawable/logo2_80" />
+---
+>         <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="100.0dip" android:layout_marginTop="20.0dip">
+>             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/logo2_80" />
+diff -r result/APP_7/App_B_7/smali/com/baiyi/kuaiditong/model/BaiyiDbModel.smali result/APP_7/App_M_7/smali/com/baiyi/kuaiditong/model/BaiyiDbModel.smali
+48,52c48
+<     if-eqz v3, :cond_0
+< 
+<     .line 23
+<     :goto_1
+<     return-object v2
+---
+>     if-nez v3, :cond_0
+55d50
+<     :cond_0
+82,83c77,79
+<     .local v0, "e":Ljava/lang/Exception;
+<     goto :goto_1
+---
+>     .line 23
+>     :cond_0
+>     return-object v2
+diff -r result/APP_7/App_B_7/smali/com/cjdao/http/CjdaoApiRequest.smali result/APP_7/App_M_7/smali/com/cjdao/http/CjdaoApiRequest.smali
+37a38,39
+>     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+> 
+46,48c48
+<     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+< 
+<     move-result-object v1
+---
+>     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+50c50
+<     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     move-result-object v0
+174a175,176
+>     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+> 
+177c179,181
+<     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v2
+200c204
+<     goto :goto_0
+---
+>     goto/16 :goto_0
+Somente em result/APP_7/App_M_7/smali/com/cjdao/http: CjdaoCacheableHttpRequest$1.smali
+diff -r result/APP_7/App_B_7/smali/com/cjdao/http/CjdaoCacheableHttpRequest$EventHandler.smali result/APP_7/App_M_7/smali/com/cjdao/http/CjdaoCacheableHttpRequest$EventHandler.smali
+29c29
+<     .line 240
+---
+>     .line 238
+32d31
+<     .line 238
+37a37
+>     .line 240
+41c41
+< .method synthetic constructor <init>(Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest$EventHandler;)V
+---
+> .method synthetic constructor <init>(Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest$1;)V
+42a43,45
+>     .param p1, "x0"    # Lcom/cjdao/http/CjdaoCacheableHttpRequest;
+>     .param p2, "x1"    # Lcom/cjdao/http/CjdaoCacheableHttpRequest;
+>     .param p3, "x2"    # Lcom/cjdao/http/CjdaoCacheableHttpRequest$1;
+45c48
+<     .line 238
+---
+>     .line 236
+72c75
+<     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$0(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+---
+>     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$100(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+81c84
+<     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$0(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+---
+>     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$100(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+97c100
+<     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$0(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+---
+>     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$100(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+106c109
+<     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$0(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+---
+>     invoke-static {v0}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->access$100(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+diff -r result/APP_7/App_B_7/smali/com/cjdao/http/CjdaoCacheableHttpRequest.smali result/APP_7/App_M_7/smali/com/cjdao/http/CjdaoCacheableHttpRequest.smali
+8a9
+>         Lcom/cjdao/http/CjdaoCacheableHttpRequest$1;,
+167c168
+<     invoke-direct {v0, p0, p0, v1}, Lcom/cjdao/http/CjdaoCacheableHttpRequest$EventHandler;-><init>(Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest$EventHandler;)V
+---
+>     invoke-direct {v0, p0, p0, v1}, Lcom/cjdao/http/CjdaoCacheableHttpRequest$EventHandler;-><init>(Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest;Lcom/cjdao/http/CjdaoCacheableHttpRequest$1;)V
+175c176
+< .method static synthetic access$0(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+---
+> .method static synthetic access$100(Lcom/cjdao/http/CjdaoCacheableHttpRequest;)Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;
+176a178
+>     .param p0, "x0"    # Lcom/cjdao/http/CjdaoCacheableHttpRequest;
+179c181
+<     .line 40
+---
+>     .line 24
+444c446
+<     .locals 4
+---
+>     .locals 5
+448c450
+<     new-instance v1, Ljava/lang/StringBuilder;
+---
+>     new-instance v2, Ljava/lang/StringBuilder;
+450c452
+<     iget-object v2, p0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_url:Ljava/lang/String;
+---
+>     iget-object v3, p0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_url:Ljava/lang/String;
+452c454
+<     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+455,456c457,458
+<     .local v1, "stringToBeUsedInMd5":Ljava/lang/StringBuilder;
+<     iget-object v2, p0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_httpMethod:Ljava/lang/String;
+---
+>     .local v2, "stringToBeUsedInMd5":Ljava/lang/StringBuilder;
+>     iget-object v3, p0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_httpMethod:Ljava/lang/String;
+458c460
+<     const-string v3, "POST"
+---
+>     const-string v4, "POST"
+460c462
+<     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+462c464
+<     move-result v2
+---
+>     move-result v3
+464c466
+<     if-eqz v2, :cond_0
+---
+>     if-eqz v3, :cond_0
+467c469
+<     const-string v2, "?"
+---
+>     const-string v3, "?"
+469c471
+<     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+472c474
+<     iget-object v2, p0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_params:Ljava/util/List;
+---
+>     iget-object v3, p0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_params:Ljava/util/List;
+474c476
+<     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+---
+>     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+476c478
+<     move-result-object v2
+---
+>     move-result-object v0
+477a480
+>     .local v0, "i$":Ljava/util/Iterator;
+479c482
+<     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+---
+>     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+483,493c486
+<     if-nez v3, :cond_1
+< 
+<     .line 218
+<     :cond_0
+<     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+< 
+<     move-result-object v2
+< 
+<     invoke-static {v2}, Lcom/cjdao/util/CjdaoCommonUtil;->md5(Ljava/lang/String;)Ljava/lang/String;
+< 
+<     move-result-object v2
+---
+>     if-eqz v3, :cond_0
+495c488
+<     return-object v2
+---
+>     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+497,499c490
+<     .line 211
+<     :cond_1
+<     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+---
+>     move-result-object v1
+501,503c492
+<     move-result-object v0
+< 
+<     check-cast v0, Lorg/apache/http/NameValuePair;
+---
+>     check-cast v1, Lorg/apache/http/NameValuePair;
+506,507c495,496
+<     .local v0, "param":Lorg/apache/http/NameValuePair;
+<     invoke-interface {v0}, Lorg/apache/http/NameValuePair;->getName()Ljava/lang/String;
+---
+>     .local v1, "param":Lorg/apache/http/NameValuePair;
+>     invoke-interface {v1}, Lorg/apache/http/NameValuePair;->getName()Ljava/lang/String;
+511c500
+<     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+516c505
+<     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+519c508
+<     invoke-interface {v0}, Lorg/apache/http/NameValuePair;->getValue()Ljava/lang/String;
+---
+>     invoke-interface {v1}, Lorg/apache/http/NameValuePair;->getValue()Ljava/lang/String;
+523c512
+<     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+528c517
+<     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+530a520,533
+> 
+>     .line 218
+>     .end local v0    # "i$":Ljava/util/Iterator;
+>     .end local v1    # "param":Lorg/apache/http/NameValuePair;
+>     :cond_0
+>     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+> 
+>     move-result-object v3
+> 
+>     invoke-static {v3}, Lcom/cjdao/util/CjdaoCommonUtil;->md5(Ljava/lang/String;)Ljava/lang/String;
+> 
+>     move-result-object v3
+> 
+>     return-object v3
+610c613
+<     .locals 23
+---
+>     .locals 24
+631c634
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+633c636
+<     if-eqz v17, :cond_4
+---
+>     if-eqz v18, :cond_4
+640c643
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+642c645
+<     const-string v18, "/"
+---
+>     const-string v19, "/"
+644c647
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+646c649
+<     move-result v17
+---
+>     move-result v18
+648c651
+<     if-eqz v17, :cond_2
+---
+>     if-eqz v18, :cond_2
+651c654,656
+<     new-instance v17, Ljava/lang/StringBuilder;
+---
+>     new-instance v18, Ljava/lang/StringBuilder;
+> 
+>     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
+657c662
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+659c664
+<     invoke-static/range {v18 .. v18}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+663,664d667
+<     invoke-direct/range {v17 .. v18}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+< 
+667c670
+<     move-result-object v18
+---
+>     move-result-object v19
+669c672
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+671c674
+<     move-result-object v17
+---
+>     move-result-object v18
+673c676
+<     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+---
+>     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+685c688
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+687c690
+<     move-object/from16 v0, v17
+---
+>     move-object/from16 v0, v18
+695c698
+<     move-result v17
+---
+>     move-result v18
+697c700
+<     if-nez v17, :cond_0
+---
+>     if-nez v18, :cond_0
+725c728
+<     move-result-wide v13
+---
+>     move-result-wide v14
+728c731
+<     .local v13, "now":J
+---
+>     .local v14, "now":J
+731c734
+<     move-result-wide v11
+---
+>     move-result-wide v12
+734c737
+<     .local v11, "lastModified":J
+---
+>     .local v12, "lastModified":J
+739c742
+<     move/from16 v17, v0
+---
+>     move/from16 v18, v0
+741c744
+<     if-ltz v17, :cond_1
+---
+>     if-ltz v18, :cond_1
+743c746
+<     sub-long v17, v13, v11
+---
+>     sub-long v18, v14, v12
+749c752
+<     move/from16 v19, v0
+---
+>     move/from16 v20, v0
+751c754
+<     move/from16 v0, v19
+---
+>     move/from16 v0, v20
+755c758
+<     move-wide/from16 v19, v0
+---
+>     move-wide/from16 v20, v0
+757c760
+<     const-wide/16 v21, 0x3e8
+---
+>     const-wide/16 v22, 0x3e8
+759c762
+<     mul-long v19, v19, v21
+---
+>     mul-long v20, v20, v22
+761c764
+<     cmp-long v17, v17, v19
+---
+>     cmp-long v18, v18, v20
+763c766
+<     if-gez v17, :cond_3
+---
+>     if-gez v18, :cond_3
+780,781c783,784
+<     .end local v11    # "lastModified":J
+<     .end local v13    # "now":J
+---
+>     .end local v12    # "lastModified":J
+>     .end local v14    # "now":J
+789c792,794
+<     new-instance v17, Ljava/lang/StringBuilder;
+---
+>     new-instance v18, Ljava/lang/StringBuilder;
+> 
+>     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
+795c800
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+797c802
+<     invoke-static/range {v18 .. v18}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+801,803c806
+<     invoke-direct/range {v17 .. v18}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+< 
+<     const-string v18, "/"
+---
+>     const-string v19, "/"
+805c808
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+807c810
+<     move-result-object v17
+---
+>     move-result-object v18
+811c814
+<     move-result-object v18
+---
+>     move-result-object v19
+813c816
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+815c818
+<     move-result-object v17
+---
+>     move-result-object v18
+817c820
+<     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+---
+>     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+838c841
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+840c843
+<     const-string v18, "GET"
+---
+>     const-string v19, "GET"
+842c845
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+844c847
+<     move-result v17
+---
+>     move-result v18
+846c849
+<     if-eqz v17, :cond_7
+---
+>     if-eqz v18, :cond_6
+849c852
+<     new-instance v17, Lorg/apache/http/client/methods/HttpGet;
+---
+>     new-instance v18, Lorg/apache/http/client/methods/HttpGet;
+855c858
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+857c860
+<     invoke-direct/range {v17 .. v18}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
+---
+>     invoke-direct/range {v18 .. v19}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
+859c862
+<     move-object/from16 v0, v17
+---
+>     move-object/from16 v0, v18
+872c875
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+874c877
+<     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+---
+>     invoke-interface/range {v18 .. v18}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+876c879
+<     move-result-object v17
+---
+>     move-result-object v11
+877a881
+>     .local v11, "i$":Ljava/util/Iterator;
+879c883
+<     invoke-interface/range {v17 .. v17}, Ljava/util/Iterator;->hasNext()Z
+---
+>     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+883c887
+<     if-nez v18, :cond_8
+---
+>     if-eqz v18, :cond_7
+885,892c889
+<     .line 127
+<     new-instance v6, Lorg/apache/http/impl/client/DefaultHttpClient;
+< 
+<     invoke-direct {v6}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
+< 
+<     .line 128
+<     .local v6, "client":Lorg/apache/http/impl/client/DefaultHttpClient;
+<     invoke-virtual {v6}, Lorg/apache/http/impl/client/DefaultHttpClient;->getParams()Lorg/apache/http/params/HttpParams;
+---
+>     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+894c891
+<     move-result-object v17
+---
+>     move-result-object v10
+896c893
+<     const-string v18, "http.connection.timeout"
+---
+>     check-cast v10, Lorg/apache/http/Header;
+897a895
+>     .local v10, "header":Lorg/apache/http/Header;
+900,902c898
+<     iget v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->connectTimeoutInSeconds:I
+< 
+<     move/from16 v19, v0
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+904c900
+<     move/from16 v0, v19
+---
+>     move-object/from16 v18, v0
+906c902
+<     mul-int/lit16 v0, v0, 0x1f4
+---
+>     move-object/from16 v0, v18
+908c904,908
+<     move/from16 v19, v0
+---
+>     invoke-virtual {v0, v10}, Lorg/apache/http/client/methods/HttpRequestBase;->addHeader(Lorg/apache/http/Header;)V
+>     :try_end_2
+>     .catch Ljava/net/UnknownHostException; {:try_start_2 .. :try_end_2} :catch_0
+>     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_2 .. :try_end_2} :catch_1
+>     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+910c910
+<     invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+---
+>     goto :goto_3
+912c912,916
+<     move-result-object v19
+---
+>     .line 158
+>     .end local v10    # "header":Lorg/apache/http/Header;
+>     .end local v11    # "i$":Ljava/util/Iterator;
+>     :catch_0
+>     move-exception v7
+914c918,921
+<     invoke-interface/range {v17 .. v19}, Lorg/apache/http/params/HttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;
+---
+>     .line 160
+>     .local v7, "e":Ljava/net/UnknownHostException;
+>     :goto_4
+>     if-eqz v4, :cond_c
+916,917c923
+<     .line 129
+<     invoke-virtual {v6}, Lorg/apache/http/impl/client/DefaultHttpClient;->getParams()Lorg/apache/http/params/HttpParams;
+---
+>     move-object/from16 v0, p0
+919c925
+<     move-result-object v17
+---
+>     invoke-direct {v0, v2}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->respondFromCacheFile(Ljava/io/File;)V
+921c927
+<     const-string v18, "http.socket.timeout"
+---
+>     goto :goto_1
+922a929,932
+>     .line 122
+>     .end local v7    # "e":Ljava/net/UnknownHostException;
+>     :cond_6
+>     :try_start_3
+925,927c935
+<     iget v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->socketTimeoutInSeconds:I
+< 
+<     move/from16 v19, v0
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_httpMethod:Ljava/lang/String;
+929c937
+<     move/from16 v0, v19
+---
+>     move-object/from16 v18, v0
+931c939
+<     mul-int/lit16 v0, v0, 0x3e8
+---
+>     const-string v19, "POST"
+933c941
+<     move/from16 v19, v0
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+935c943
+<     invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+---
+>     move-result v18
+937c945
+<     move-result-object v19
+---
+>     if-eqz v18, :cond_5
+939c947,948
+<     invoke-interface/range {v17 .. v19}, Lorg/apache/http/params/HttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;
+---
+>     .line 123
+>     new-instance v18, Lorg/apache/http/client/methods/HttpPost;
+941d949
+<     .line 130
+944c952
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_url:Ljava/lang/String;
+946c954
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v19, v0
+948c956
+<     move-object/from16 v0, v17
+---
+>     invoke-direct/range {v18 .. v19}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+950c958
+<     invoke-virtual {v6, v0}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
+---
+>     move-object/from16 v0, v18
+952c960
+<     move-result-object v15
+---
+>     move-object/from16 v1, p0
+954,956c962
+<     .line 133
+<     .local v15, "response":Lorg/apache/http/HttpResponse;
+<     move-object/from16 v0, p0
+---
+>     iput-object v0, v1, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+958c964,965
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->exceptingResponseContentType:Ljava/lang/String;
+---
+>     .line 124
+>     move-object/from16 v0, p0
+960c967
+<     move-object/from16 v17, v0
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+962c969
+<     const-string v18, "image"
+---
+>     move-object/from16 v18, v0
+964c971
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+---
+>     check-cast v18, Lorg/apache/http/client/methods/HttpPost;
+966c973
+<     move-result v17
+---
+>     new-instance v19, Lorg/apache/http/client/entity/UrlEncodedFormEntity;
+968c975
+<     if-eqz v17, :cond_9
+---
+>     move-object/from16 v0, p0
+970,971c977
+<     .line 134
+<     const-string v17, "Content-Type"
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_params:Ljava/util/List;
+973c979
+<     move-object/from16 v0, v17
+---
+>     move-object/from16 v20, v0
+975c981
+<     invoke-interface {v15, v0}, Lorg/apache/http/HttpResponse;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
+---
+>     const-string v21, "UTF-8"
+977c983
+<     move-result-object v10
+---
+>     invoke-direct/range {v19 .. v21}, Lorg/apache/http/client/entity/UrlEncodedFormEntity;-><init>(Ljava/util/List;Ljava/lang/String;)V
+979,981c985,989
+<     .line 135
+<     .local v10, "header":Lorg/apache/http/Header;
+<     if-eqz v10, :cond_6
+---
+>     invoke-virtual/range {v18 .. v19}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+>     :try_end_3
+>     .catch Ljava/net/UnknownHostException; {:try_start_3 .. :try_end_3} :catch_0
+>     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_3 .. :try_end_3} :catch_1
+>     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+983c991
+<     invoke-interface {v10}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+---
+>     goto :goto_2
+985c993,995
+<     move-result-object v17
+---
+>     .line 162
+>     :catch_1
+>     move-exception v7
+987c997,1000
+<     const-string v18, "image"
+---
+>     .line 164
+>     .local v7, "e":Lorg/apache/http/conn/ConnectTimeoutException;
+>     :goto_5
+>     if-eqz v4, :cond_d
+989c1002
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+---
+>     move-object/from16 v0, p0
+991c1004
+<     move-result v17
+---
+>     invoke-direct {v0, v2}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->respondFromCacheFile(Ljava/io/File;)V
+993c1006
+<     if-nez v17, :cond_9
+---
+>     goto/16 :goto_1
+995,997c1008,1013
+<     .line 137
+<     :cond_6
+<     move-object/from16 v0, p0
+---
+>     .line 127
+>     .end local v7    # "e":Lorg/apache/http/conn/ConnectTimeoutException;
+>     .restart local v11    # "i$":Ljava/util/Iterator;
+>     :cond_7
+>     :try_start_4
+>     new-instance v6, Lorg/apache/http/impl/client/DefaultHttpClient;
+999c1015
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_handler:Landroid/os/Handler;
+---
+>     invoke-direct {v6}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
+1001c1017,1019
+<     move-object/from16 v17, v0
+---
+>     .line 128
+>     .local v6, "client":Lorg/apache/http/impl/client/DefaultHttpClient;
+>     invoke-virtual {v6}, Lorg/apache/http/impl/client/DefaultHttpClient;->getParams()Lorg/apache/http/params/HttpParams;
+1003c1021
+<     move-object/from16 v0, p0
+---
+>     move-result-object v18
+1005c1023
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_handler:Landroid/os/Handler;
+---
+>     const-string v19, "http.connection.timeout"
+1007c1025
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v0, p0
+1009c1027
+<     const/16 v19, 0x2
+---
+>     iget v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->connectTimeoutInSeconds:I
+1011c1029
+<     const/16 v20, 0x0
+---
+>     move/from16 v20, v0
+1013c1031
+<     invoke-virtual/range {v18 .. v20}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+---
+>     move/from16 v0, v20
+1015c1033
+<     move-result-object v18
+---
+>     mul-int/lit16 v0, v0, 0x1f4
+1017,1021c1035
+<     invoke-virtual/range {v17 .. v18}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+<     :try_end_2
+<     .catch Ljava/net/UnknownHostException; {:try_start_2 .. :try_end_2} :catch_0
+<     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_2 .. :try_end_2} :catch_1
+<     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+---
+>     move/from16 v20, v0
+1023c1037
+<     goto/16 :goto_1
+---
+>     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+1025,1030c1039
+<     .line 158
+<     .end local v6    # "client":Lorg/apache/http/impl/client/DefaultHttpClient;
+<     .end local v10    # "header":Lorg/apache/http/Header;
+<     .end local v15    # "response":Lorg/apache/http/HttpResponse;
+<     :catch_0
+<     move-exception v7
+---
+>     move-result-object v20
+1032,1035c1041
+<     .line 160
+<     .local v7, "e":Ljava/net/UnknownHostException;
+<     :goto_4
+<     if-eqz v4, :cond_c
+---
+>     invoke-interface/range {v18 .. v20}, Lorg/apache/http/params/HttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;
+1037c1043,1044
+<     move-object/from16 v0, p0
+---
+>     .line 129
+>     invoke-virtual {v6}, Lorg/apache/http/impl/client/DefaultHttpClient;->getParams()Lorg/apache/http/params/HttpParams;
+1039c1046
+<     invoke-direct {v0, v2}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->respondFromCacheFile(Ljava/io/File;)V
+---
+>     move-result-object v18
+1041c1048
+<     goto/16 :goto_1
+---
+>     const-string v19, "http.socket.timeout"
+1043,1046d1049
+<     .line 122
+<     .end local v7    # "e":Ljava/net/UnknownHostException;
+<     :cond_7
+<     :try_start_3
+1049c1052
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_httpMethod:Ljava/lang/String;
+---
+>     iget v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->socketTimeoutInSeconds:I
+1051c1054
+<     move-object/from16 v17, v0
+---
+>     move/from16 v20, v0
+1053c1056
+<     const-string v18, "POST"
+---
+>     move/from16 v0, v20
+1055c1058
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+---
+>     mul-int/lit16 v0, v0, 0x3e8
+1057c1060
+<     move-result v17
+---
+>     move/from16 v20, v0
+1059c1062
+<     if-eqz v17, :cond_5
+---
+>     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+1061,1062c1064
+<     .line 123
+<     new-instance v17, Lorg/apache/http/client/methods/HttpPost;
+---
+>     move-result-object v20
+1063a1066,1068
+>     invoke-interface/range {v18 .. v20}, Lorg/apache/http/params/HttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;
+> 
+>     .line 130
+1066c1071
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_url:Ljava/lang/String;
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+1070,1072c1075
+<     invoke-direct/range {v17 .. v18}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+< 
+<     move-object/from16 v0, v17
+---
+>     move-object/from16 v0, v18
+1074c1077
+<     move-object/from16 v1, p0
+---
+>     invoke-virtual {v6, v0}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
+1076c1079
+<     iput-object v0, v1, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+---
+>     move-result-object v16
+1078c1081,1082
+<     .line 124
+---
+>     .line 133
+>     .local v16, "response":Lorg/apache/http/HttpResponse;
+1081c1085
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->exceptingResponseContentType:Ljava/lang/String;
+1083c1087
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+1085c1089
+<     check-cast v17, Lorg/apache/http/client/methods/HttpPost;
+---
+>     const-string v19, "image"
+1087c1091
+<     new-instance v18, Lorg/apache/http/client/entity/UrlEncodedFormEntity;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+1089c1093
+<     move-object/from16 v0, p0
+---
+>     move-result v18
+1091c1095
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_params:Ljava/util/List;
+---
+>     if-eqz v18, :cond_9
+1093c1097,1098
+<     move-object/from16 v19, v0
+---
+>     .line 134
+>     const-string v18, "Content-Type"
+1095c1100
+<     const-string v20, "UTF-8"
+---
+>     move-object/from16 v0, v16
+1097c1102
+<     invoke-direct/range {v18 .. v20}, Lorg/apache/http/client/entity/UrlEncodedFormEntity;-><init>(Ljava/util/List;Ljava/lang/String;)V
+---
+>     move-object/from16 v1, v18
+1099,1103c1104
+<     invoke-virtual/range {v17 .. v18}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+<     :try_end_3
+<     .catch Ljava/net/UnknownHostException; {:try_start_3 .. :try_end_3} :catch_0
+<     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_3 .. :try_end_3} :catch_1
+<     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+---
+>     invoke-interface {v0, v1}, Lorg/apache/http/HttpResponse;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
+1105c1106
+<     goto/16 :goto_2
+---
+>     move-result-object v10
+1107,1109c1108,1110
+<     .line 162
+<     :catch_1
+<     move-exception v7
+---
+>     .line 135
+>     .restart local v10    # "header":Lorg/apache/http/Header;
+>     if-eqz v10, :cond_8
+1111,1114c1112
+<     .line 164
+<     .local v7, "e":Lorg/apache/http/conn/ConnectTimeoutException;
+<     :goto_5
+<     if-eqz v4, :cond_d
+---
+>     invoke-interface {v10}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+1116c1114
+<     move-object/from16 v0, p0
+---
+>     move-result-object v18
+1118c1116
+<     invoke-direct {v0, v2}, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->respondFromCacheFile(Ljava/io/File;)V
+---
+>     const-string v19, "image"
+1120c1118
+<     goto/16 :goto_1
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+1122,1123c1120,1124
+<     .line 126
+<     .end local v7    # "e":Lorg/apache/http/conn/ConnectTimeoutException;
+---
+>     move-result v18
+> 
+>     if-nez v18, :cond_9
+> 
+>     .line 137
+1125,1126c1126
+<     :try_start_4
+<     invoke-interface/range {v17 .. v17}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+---
+>     move-object/from16 v0, p0
+1128c1128
+<     move-result-object v10
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_handler:Landroid/os/Handler;
+1130c1130
+<     check-cast v10, Lorg/apache/http/Header;
+---
+>     move-object/from16 v18, v0
+1132d1131
+<     .restart local v10    # "header":Lorg/apache/http/Header;
+1135c1134
+<     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_request:Lorg/apache/http/client/methods/HttpRequestBase;
+---
+>     iget-object v0, v0, Lcom/cjdao/http/CjdaoCacheableHttpRequest;->_handler:Landroid/os/Handler;
+1137c1136
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+1139c1138
+<     move-object/from16 v0, v18
+---
+>     const/16 v20, 0x2
+1141c1140,1146
+<     invoke-virtual {v0, v10}, Lorg/apache/http/client/methods/HttpRequestBase;->addHeader(Lorg/apache/http/Header;)V
+---
+>     const/16 v21, 0x0
+> 
+>     invoke-virtual/range {v19 .. v21}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+> 
+>     move-result-object v19
+> 
+>     invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+1147c1152
+<     goto/16 :goto_3
+---
+>     goto/16 :goto_1
+1149a1155
+>     .end local v6    # "client":Lorg/apache/http/impl/client/DefaultHttpClient;
+1150a1157,1158
+>     .end local v11    # "i$":Ljava/util/Iterator;
+>     .end local v16    # "response":Lorg/apache/http/HttpResponse;
+1161c1169
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+1167c1175
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+1169c1177
+<     const/16 v19, 0x3
+---
+>     const/16 v20, 0x3
+1171c1179
+<     const/16 v20, 0x0
+---
+>     const/16 v21, 0x0
+1173c1181
+<     invoke-virtual/range {v18 .. v20}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+---
+>     invoke-virtual/range {v19 .. v21}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+1175c1183
+<     move-result-object v18
+---
+>     move-result-object v19
+1177c1185
+<     invoke-virtual/range {v17 .. v18}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+---
+>     invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+1184c1192,1193
+<     .restart local v15    # "response":Lorg/apache/http/HttpResponse;
+---
+>     .restart local v11    # "i$":Ljava/util/Iterator;
+>     .restart local v16    # "response":Lorg/apache/http/HttpResponse;
+1187c1196
+<     invoke-interface {v15}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
+---
+>     invoke-interface/range {v16 .. v16}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
+1189c1198
+<     move-result-object v17
+---
+>     move-result-object v18
+1191c1200
+<     invoke-static/range {v17 .. v17}, Lorg/apache/http/util/EntityUtils;->toByteArray(Lorg/apache/http/HttpEntity;)[B
+---
+>     invoke-static/range {v18 .. v18}, Lorg/apache/http/util/EntityUtils;->toByteArray(Lorg/apache/http/HttpEntity;)[B
+1193c1202
+<     move-result-object v16
+---
+>     move-result-object v17
+1196,1197c1205,1206
+<     .local v16, "responseBytes":[B
+<     invoke-interface {v15}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
+---
+>     .local v17, "responseBytes":[B
+>     invoke-interface/range {v16 .. v16}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
+1199c1208
+<     move-result-object v17
+---
+>     move-result-object v18
+1201c1210
+<     invoke-interface/range {v17 .. v17}, Lorg/apache/http/StatusLine;->getStatusCode()I
+---
+>     invoke-interface/range {v18 .. v18}, Lorg/apache/http/StatusLine;->getStatusCode()I
+1203c1212
+<     move-result v17
+---
+>     move-result v18
+1205c1214
+<     const/16 v18, 0xc8
+---
+>     const/16 v19, 0xc8
+1207c1216
+<     move/from16 v0, v17
+---
+>     move/from16 v0, v18
+1209c1218
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v19
+1218c1227
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+1220c1229
+<     const-string v18, "GET"
+---
+>     const-string v19, "GET"
+1222c1231
+<     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+1224c1233
+<     move-result v17
+---
+>     move-result v18
+1226c1235
+<     if-nez v17, :cond_a
+---
+>     if-nez v18, :cond_a
+1232c1241
+<     move/from16 v17, v0
+---
+>     move/from16 v18, v0
+1238c1247
+<     if-lez v17, :cond_b
+---
+>     if-lez v18, :cond_b
+1248c1257
+<     move-result-wide v17
+---
+>     move-result-wide v18
+1250c1259
+<     move-wide/from16 v0, v17
+---
+>     move-wide/from16 v0, v18
+1261c1270
+<     move-object/from16 v0, v16
+---
+>     move-object/from16 v0, v17
+1279c1288
+<     move-object/from16 v1, v16
+---
+>     move-object/from16 v1, v17
+1291,1292c1300,1302
+<     .end local v15    # "response":Lorg/apache/http/HttpResponse;
+<     .end local v16    # "responseBytes":[B
+---
+>     .end local v11    # "i$":Ljava/util/Iterator;
+>     .end local v16    # "response":Lorg/apache/http/HttpResponse;
+>     .end local v17    # "responseBytes":[B
+1299c1309
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+1305c1315
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+1307c1317
+<     const/16 v19, 0x3
+---
+>     const/16 v20, 0x3
+1309c1319
+<     const/16 v20, 0x0
+---
+>     const/16 v21, 0x0
+1311c1321
+<     invoke-virtual/range {v18 .. v20}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+---
+>     invoke-virtual/range {v19 .. v21}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+1313c1323
+<     move-result-object v18
+---
+>     move-result-object v19
+1315c1325
+<     invoke-virtual/range {v17 .. v18}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+---
+>     invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+1326c1336
+<     move-object/from16 v17, v0
+---
+>     move-object/from16 v18, v0
+1332c1342
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v19, v0
+1334c1344
+<     const/16 v19, 0x3
+---
+>     const/16 v20, 0x3
+1336c1346
+<     const/16 v20, 0x0
+---
+>     const/16 v21, 0x0
+1338c1348
+<     invoke-virtual/range {v18 .. v20}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+---
+>     invoke-virtual/range {v19 .. v21}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+1340c1350
+<     move-result-object v18
+---
+>     move-result-object v19
+1342c1352
+<     invoke-virtual/range {v17 .. v18}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+---
+>     invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+1387,1388c1397,1399
+<     .restart local v15    # "response":Lorg/apache/http/HttpResponse;
+<     .restart local v16    # "responseBytes":[B
+---
+>     .restart local v11    # "i$":Ljava/util/Iterator;
+>     .restart local v16    # "response":Lorg/apache/http/HttpResponse;
+>     .restart local v17    # "responseBytes":[B
+1390c1401
+<     move-exception v17
+---
+>     move-exception v18
+diff -r result/APP_7/App_B_7/smali/com/cjdao/model/AutoCompleteItem.smali result/APP_7/App_M_7/smali/com/cjdao/model/AutoCompleteItem.smali
+34d33
+<     .line 7
+diff -r result/APP_7/App_B_7/smali/com/cjdao/model/Favorite.smali result/APP_7/App_M_7/smali/com/cjdao/model/Favorite.smali
+40d39
+<     .line 12
+61a61,62
+>     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+> 
+64c65,67
+<     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v4
+231a235,236
+>     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+> 
+234c239,241
+<     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+407a415,416
+>     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+> 
+410c419,421
+<     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v2
+diff -r result/APP_7/App_B_7/smali/com/cjdao/model/TrackbackItem.smali result/APP_7/App_M_7/smali/com/cjdao/model/TrackbackItem.smali
+42d41
+<     .line 7
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/DetailActivity$DetailAdapter.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/DetailActivity$DetailAdapter.smali
+62c62
+<     .line 163
+---
+>     .line 154
+131a132
+>     .line 163
+224a226
+>     .param p1, "x0"    # I
+227c229
+<     .line 1
+---
+>     .line 143
+434a437,438
+>     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+> 
+437c441,443
+<     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v4
+461a468,469
+>     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+> 
+464c472,474
+<     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v4
+486a497,498
+>     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+> 
+489c501,503
+<     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v4
+582a597,598
+>     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+> 
+585c601,603
+<     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v3
+602a621,622
+>     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+> 
+605c625,627
+<     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v3
+692c714
+<     invoke-static {v1}, Lcom/cjdao/trackback/DetailActivity;->access$0(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+---
+>     invoke-static {v1}, Lcom/cjdao/trackback/DetailActivity;->access$000(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+706c728
+<     invoke-static {v1}, Lcom/cjdao/trackback/DetailActivity;->access$1(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+---
+>     invoke-static {v1}, Lcom/cjdao/trackback/DetailActivity;->access$100(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+720c742
+<     invoke-static {v1}, Lcom/cjdao/trackback/DetailActivity;->access$2(Lcom/cjdao/trackback/DetailActivity;)I
+---
+>     invoke-static {v1}, Lcom/cjdao/trackback/DetailActivity;->access$200(Lcom/cjdao/trackback/DetailActivity;)I
+875,894c897
+<     if-lt v0, v3, :cond_1
+< 
+<     .line 285
+<     iget v5, p0, Lcom/cjdao/trackback/DetailActivity$DetailAdapter;->page:I
+< 
+<     add-int/lit8 v5, v5, 0x1
+< 
+<     iput v5, p0, Lcom/cjdao/trackback/DetailActivity$DetailAdapter;->page:I
+<     :try_end_0
+<     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+< 
+<     .line 287
+<     .end local v0    # "i":I
+<     .end local v3    # "length":I
+<     .end local v4    # "listJsonArray":Lorg/json/JSONArray;
+<     :goto_1
+<     invoke-virtual {p0}, Lcom/cjdao/trackback/DetailActivity$DetailAdapter;->notifyDataSetChanged()V
+< 
+<     .line 288
+<     return-void
+---
+>     if-ge v0, v3, :cond_1
+897,901d899
+<     .restart local v0    # "i":I
+<     .restart local v3    # "length":I
+<     .restart local v4    # "listJsonArray":Lorg/json/JSONArray;
+<     :cond_1
+<     :try_start_1
+918,919d915
+<     :try_end_1
+<     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+926,927c922
+<     .line 286
+<     .end local v0    # "i":I
+---
+>     .line 285
+929a925,935
+>     :cond_1
+>     iget v5, p0, Lcom/cjdao/trackback/DetailActivity$DetailAdapter;->page:I
+> 
+>     add-int/lit8 v5, v5, 0x1
+> 
+>     iput v5, p0, Lcom/cjdao/trackback/DetailActivity$DetailAdapter;->page:I
+>     :try_end_0
+>     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+> 
+>     .line 287
+>     .end local v0    # "i":I
+931a938,944
+>     :goto_1
+>     invoke-virtual {p0}, Lcom/cjdao/trackback/DetailActivity$DetailAdapter;->notifyDataSetChanged()V
+> 
+>     .line 288
+>     return-void
+> 
+>     .line 286
+989a1003,1008
+>     const-string v2, ""
+> 
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+> 
+1016a1036,1041
+>     const-string v2, ""
+> 
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+> 
+1043a1069,1074
+>     const-string v2, ""
+> 
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+> 
+1070a1102,1107
+>     const-string v2, ""
+> 
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+> 
+1097a1135,1140
+>     const-string v2, ""
+> 
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+> 
+1124a1168,1173
+>     const-string v2, ""
+> 
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+> 
+1150c1199
+<     iget-object v2, p1, Lcom/cjdao/model/TrackbackInfo;->priceMin:Ljava/lang/String;
+---
+>     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+1152c1201
+<     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+---
+>     iget-object v2, p1, Lcom/cjdao/model/TrackbackInfo;->priceMin:Ljava/lang/String;
+1154c1203
+<     move-result-object v2
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+1156c1205
+<     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     move-result-object v1
+1229c1278
+<     iget-object v2, p1, Lcom/cjdao/model/TrackbackInfo;->rateMin:Ljava/lang/String;
+---
+>     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+1231c1280
+<     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+---
+>     iget-object v2, p1, Lcom/cjdao/model/TrackbackInfo;->rateMin:Ljava/lang/String;
+1233c1282
+<     move-result-object v2
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+1235c1284
+<     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     move-result-object v1
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/DetailActivity.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/DetailActivity.smali
+50a51
+>     .line 143
+54c55
+< .method static synthetic access$0(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+---
+> .method static synthetic access$000(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+55a57
+>     .param p0, "x0"    # Lcom/cjdao/trackback/DetailActivity;
+58c60
+<     .line 25
+---
+>     .line 23
+64c66
+< .method static synthetic access$1(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+---
+> .method static synthetic access$100(Lcom/cjdao/trackback/DetailActivity;)Ljava/lang/String;
+65a68
+>     .param p0, "x0"    # Lcom/cjdao/trackback/DetailActivity;
+68c71
+<     .line 26
+---
+>     .line 23
+74c77
+< .method static synthetic access$2(Lcom/cjdao/trackback/DetailActivity;)I
+---
+> .method static synthetic access$200(Lcom/cjdao/trackback/DetailActivity;)I
+75a79
+>     .param p0, "x0"    # Lcom/cjdao/trackback/DetailActivity;
+78c82
+<     .line 93
+---
+>     .line 23
+679a684,685
+>     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+> 
+682c688,690
+<     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v6
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/FavoritesActivity$FavoritesAdapter.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/FavoritesActivity$FavoritesAdapter.smali
+46c46
+<     .line 78
+---
+>     .line 74
+64a65
+>     .line 78
+252c253
+<     move-result v2
+---
+>     move-result v3
+254c255
+<     add-int/lit8 v0, v2, -0x1
+---
+>     add-int/lit8 v0, v3, -0x1
+258c259,271
+<     if-gez v0, :cond_0
+---
+>     if-ltz v0, :cond_0
+> 
+>     .line 82
+>     invoke-virtual {p0, v0}, Lcom/cjdao/trackback/FavoritesActivity$FavoritesAdapter;->getItem(I)Ljava/lang/Object;
+> 
+>     move-result-object v3
+> 
+>     invoke-virtual {p0, v3}, Lcom/cjdao/trackback/FavoritesActivity$FavoritesAdapter;->remove(Ljava/lang/Object;)V
+> 
+>     .line 81
+>     add-int/lit8 v0, v0, -0x1
+> 
+>     goto :goto_0
+260a274
+>     :cond_0
+263c277
+<     move-result-object v2
+---
+>     move-result-object v3
+265c279
+<     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+---
+>     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+267c281
+<     move-result-object v2
+---
+>     move-result-object v1
+268a283
+>     .local v1, "i$":Ljava/util/Iterator;
+270c285
+<     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+---
+>     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+274,277c289
+<     if-nez v3, :cond_1
+< 
+<     .line 87
+<     return-void
+---
+>     if-eqz v3, :cond_1
+279,281c291
+<     .line 82
+<     :cond_0
+<     invoke-virtual {p0, v0}, Lcom/cjdao/trackback/FavoritesActivity$FavoritesAdapter;->getItem(I)Ljava/lang/Object;
+---
+>     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+287,301d296
+<     invoke-virtual {p0, v2}, Lcom/cjdao/trackback/FavoritesActivity$FavoritesAdapter;->remove(Ljava/lang/Object;)V
+< 
+<     .line 81
+<     add-int/lit8 v0, v0, -0x1
+< 
+<     goto :goto_0
+< 
+<     .line 84
+<     :cond_1
+<     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+< 
+<     move-result-object v1
+< 
+<     check-cast v1, Lcom/cjdao/model/Favorite;
+< 
+303,304c298,299
+<     .local v1, "o":Lcom/cjdao/model/Favorite;
+<     invoke-virtual {p0, v1}, Lcom/cjdao/trackback/FavoritesActivity$FavoritesAdapter;->add(Ljava/lang/Object;)V
+---
+>     .local v2, "o":Lcom/cjdao/model/Favorite;
+>     invoke-virtual {p0, v2}, Lcom/cjdao/trackback/FavoritesActivity$FavoritesAdapter;->add(Ljava/lang/Object;)V
+306a302,306
+> 
+>     .line 87
+>     .end local v2    # "o":Lcom/cjdao/model/Favorite;
+>     :cond_1
+>     return-void
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/FavoritesActivity.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/FavoritesActivity.smali
+17,24d16
+< .annotation system Ldalvik/annotation/Signature;
+<     value = {
+<         "Lcom/cjdao/trackback/CjdaoBaseActivity;",
+<         "Landroid/view/View$OnClickListener;",
+<         "Landroid/widget/AdapterView$OnItemClickListener;"
+<     }
+< .end annotation
+< 
+41a34
+>     .line 70
+214a208,209
+>     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+> 
+217c212,214
+<     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v3
+219d215
+<     .line 62
+250d245
+<     .line 61
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/MainActivity.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/MainActivity.smali
+47a48,49
+>     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+> 
+50c52,54
+<     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v6
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/R.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/R.smali
+9,15c9
+<         Lcom/cjdao/trackback/R$array;,
+<         Lcom/cjdao/trackback/R$attr;,
+<         Lcom/cjdao/trackback/R$color;,
+<         Lcom/cjdao/trackback/R$dimen;,
+<         Lcom/cjdao/trackback/R$drawable;,
+<         Lcom/cjdao/trackback/R$id;,
+<         Lcom/cjdao/trackback/R$layout;,
+---
+>         Lcom/cjdao/trackback/R$style;,
+17c11,17
+<         Lcom/cjdao/trackback/R$style;
+---
+>         Lcom/cjdao/trackback/R$layout;,
+>         Lcom/cjdao/trackback/R$id;,
+>         Lcom/cjdao/trackback/R$drawable;,
+>         Lcom/cjdao/trackback/R$dimen;,
+>         Lcom/cjdao/trackback/R$color;,
+>         Lcom/cjdao/trackback/R$attr;,
+>         Lcom/cjdao/trackback/R$array;
+29a30
+>     .line 170
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/SearchActivity$1.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/SearchActivity$1.smali
+26c26
+<     .line 1
+---
+>     .line 50
+29d28
+<     .line 50
+52d50
+<     .line 53
+55c53
+<     invoke-static {v1}, Lcom/cjdao/trackback/SearchActivity;->access$0(Lcom/cjdao/trackback/SearchActivity;)Landroid/widget/EditText;
+---
+>     invoke-static {v1}, Lcom/cjdao/trackback/SearchActivity;->access$000(Lcom/cjdao/trackback/SearchActivity;)Landroid/widget/EditText;
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/SearchActivity$SearchAdapter.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/SearchActivity$SearchAdapter.smali
+36c36
+<     .line 137
+---
+>     .line 135
+43a44
+>     .line 137
+47c48
+< .method static synthetic access$0(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;)V
+---
+> .method static synthetic access$100(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;)V
+48a50
+>     .param p0, "x0"    # Lcom/cjdao/trackback/SearchActivity$SearchAdapter;
+51c53
+<     .line 139
+---
+>     .line 134
+57c59
+< .method static synthetic access$1(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;Ljava/lang/String;)V
+---
+> .method static synthetic access$200(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;Ljava/lang/String;)V
+58a61,62
+>     .param p0, "x0"    # Lcom/cjdao/trackback/SearchActivity$SearchAdapter;
+>     .param p1, "x1"    # Ljava/lang/String;
+61c65
+<     .line 145
+---
+>     .line 134
+80,83c84
+<     if-gez v0, :cond_0
+< 
+<     .line 143
+<     return-void
+---
+>     if-ltz v0, :cond_0
+86d86
+<     :cond_0
+91,92d90
+<     check-cast v1, Lcom/cjdao/model/AutoCompleteItem;
+< 
+98a97,100
+> 
+>     .line 143
+>     :cond_0
+>     return-void
+102c104
+<     .locals 5
+---
+>     .locals 7
+110c112
+<     const-string v3, ""
+---
+>     const-string v6, ""
+112c114
+<     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+114c116
+<     move-result v3
+---
+>     move-result v6
+116c118
+<     if-nez v3, :cond_0
+---
+>     if-nez v6, :cond_0
+119c121
+<     const-string v3, ";"
+---
+>     const-string v6, ";"
+121c123
+<     invoke-virtual {p1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+---
+>     invoke-virtual {p1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+123c125
+<     move-result-object v2
+---
+>     move-result-object v4
+126,127c128,129
+<     .local v2, "items":[Ljava/lang/String;
+<     array-length v4, v2
+---
+>     .local v4, "items":[Ljava/lang/String;
+>     move-object v0, v4
+129c131,132
+<     const/4 v3, 0x0
+---
+>     .local v0, "arr$":[Ljava/lang/String;
+>     array-length v5, v0
+131,132c134,135
+<     :goto_0
+<     if-lt v3, v4, :cond_1
+---
+>     .local v5, "len$":I
+>     const/4 v1, 0x0
+134,137c137,139
+<     .line 155
+<     .end local v2    # "items":[Ljava/lang/String;
+<     :cond_0
+<     return-void
+---
+>     .local v1, "i$":I
+>     :goto_0
+>     if-ge v1, v5, :cond_0
+139,142c141
+<     .line 149
+<     .restart local v2    # "items":[Ljava/lang/String;
+<     :cond_1
+<     aget-object v1, v2, v3
+---
+>     aget-object v3, v0, v1
+145,146c144,145
+<     .local v1, "itemText":Ljava/lang/String;
+<     new-instance v0, Lcom/cjdao/model/AutoCompleteItem;
+---
+>     .local v3, "itemText":Ljava/lang/String;
+>     new-instance v2, Lcom/cjdao/model/AutoCompleteItem;
+148c147
+<     invoke-direct {v0}, Lcom/cjdao/model/AutoCompleteItem;-><init>()V
+---
+>     invoke-direct {v2}, Lcom/cjdao/model/AutoCompleteItem;-><init>()V
+151,152c150,151
+<     .local v0, "item":Lcom/cjdao/model/AutoCompleteItem;
+<     invoke-virtual {v0, v1}, Lcom/cjdao/model/AutoCompleteItem;->initFromResponseItemText(Ljava/lang/String;)V
+---
+>     .local v2, "item":Lcom/cjdao/model/AutoCompleteItem;
+>     invoke-virtual {v2, v3}, Lcom/cjdao/model/AutoCompleteItem;->initFromResponseItemText(Ljava/lang/String;)V
+155c154
+<     invoke-virtual {p0, v0}, Lcom/cjdao/trackback/SearchActivity$SearchAdapter;->add(Ljava/lang/Object;)V
+---
+>     invoke-virtual {p0, v2}, Lcom/cjdao/trackback/SearchActivity$SearchAdapter;->add(Ljava/lang/Object;)V
+158c157
+<     add-int/lit8 v3, v3, 0x1
+---
+>     add-int/lit8 v1, v1, 0x1
+160a160,169
+> 
+>     .line 155
+>     .end local v0    # "arr$":[Ljava/lang/String;
+>     .end local v1    # "i$":I
+>     .end local v2    # "item":Lcom/cjdao/model/AutoCompleteItem;
+>     .end local v3    # "itemText":Ljava/lang/String;
+>     .end local v4    # "items":[Ljava/lang/String;
+>     .end local v5    # "len$":I
+>     :cond_0
+>     return-void
+256d264
+<     .line 168
+diff -r result/APP_7/App_B_7/smali/com/cjdao/trackback/SearchActivity.smali result/APP_7/App_M_7/smali/com/cjdao/trackback/SearchActivity.smali
+19,28d18
+< .annotation system Ldalvik/annotation/Signature;
+<     value = {
+<         "Lcom/cjdao/trackback/CjdaoBaseActivity;",
+<         "Landroid/text/TextWatcher;",
+<         "Lcom/cjdao/http/ICjdaoCacheableHttpRequestListener;",
+<         "Landroid/widget/AdapterView$OnItemClickListener;",
+<         "Landroid/view/View$OnClickListener;"
+<     }
+< .end annotation
+< 
+51a42
+>     .line 134
+55c46
+< .method static synthetic access$0(Lcom/cjdao/trackback/SearchActivity;)Landroid/widget/EditText;
+---
+> .method static synthetic access$000(Lcom/cjdao/trackback/SearchActivity;)Landroid/widget/EditText;
+56a48
+>     .param p0, "x0"    # Lcom/cjdao/trackback/SearchActivity;
+59c51
+<     .line 27
+---
+>     .line 24
+77c69
+<     invoke-static {v2}, Lcom/cjdao/trackback/SearchActivity$SearchAdapter;->access$0(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;)V
+---
+>     invoke-static {v2}, Lcom/cjdao/trackback/SearchActivity$SearchAdapter;->access$100(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;)V
+107c99
+<     invoke-interface {v2}, Landroid/text/Editable;->toString()Ljava/lang/String;
+---
+>     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+139a132,133
+>     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+> 
+142c136,138
+<     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v2
+216d211
+<     .line 120
+347d341
+<     .line 55
+350d343
+<     .line 50
+386a380,381
+>     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+> 
+389c384,386
+<     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v4
+391d387
+<     .line 101
+422d417
+<     .line 100
+538c533
+<     invoke-static {v0, p2}, Lcom/cjdao/trackback/SearchActivity$SearchAdapter;->access$1(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;Ljava/lang/String;)V
+---
+>     invoke-static {v0, p2}, Lcom/cjdao/trackback/SearchActivity$SearchAdapter;->access$200(Lcom/cjdao/trackback/SearchActivity$SearchAdapter;Ljava/lang/String;)V
+diff -r result/APP_7/App_B_7/smali/com/cjdao/util/Base64$Decoder.smali result/APP_7/App_M_7/smali/com/cjdao/util/Base64$Decoder.smali
+37c37
+<     .locals 8
+---
+>     .locals 2
+40,48c40
+<     const/4 v7, 0x4
+< 
+<     const/4 v6, 0x3
+< 
+<     const/4 v5, 0x2
+< 
+<     const/4 v4, 0x1
+< 
+<     const/4 v3, -0x1
+---
+>     const/16 v1, 0x100
+51,698c43
+<     const/16 v0, 0x100
+< 
+<     new-array v0, v0, [I
+< 
+<     const/4 v1, 0x0
+< 
+<     .line 182
+<     aput v3, v0, v1
+< 
+<     aput v3, v0, v4
+< 
+<     aput v3, v0, v5
+< 
+<     aput v3, v0, v6
+< 
+<     aput v3, v0, v7
+< 
+<     const/4 v1, 0x5
+< 
+<     aput v3, v0, v1
+< 
+<     const/4 v1, 0x6
+< 
+<     aput v3, v0, v1
+< 
+<     const/4 v1, 0x7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x10
+< 
+<     .line 183
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x11
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x12
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x13
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x14
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x15
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x16
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x17
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x18
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x19
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x20
+< 
+<     .line 184
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x21
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x22
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x23
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x24
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x25
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x26
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x27
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x28
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x29
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2b
+< 
+<     const/16 v2, 0x3e
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x2c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2f
+< 
+<     const/16 v2, 0x3f
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x30
+< 
+<     .line 185
+<     const/16 v2, 0x34
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x31
+< 
+<     const/16 v2, 0x35
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x32
+< 
+<     const/16 v2, 0x36
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x33
+< 
+<     const/16 v2, 0x37
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x34
+< 
+<     const/16 v2, 0x38
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x35
+< 
+<     const/16 v2, 0x39
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x36
+< 
+<     const/16 v2, 0x3a
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x37
+< 
+<     const/16 v2, 0x3b
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x38
+< 
+<     const/16 v2, 0x3c
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x39
+< 
+<     const/16 v2, 0x3d
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x3a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3d
+< 
+<     const/4 v2, -0x2
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x3e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x40
+< 
+<     .line 186
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x42
+< 
+<     aput v4, v0, v1
+< 
+<     const/16 v1, 0x43
+< 
+<     aput v5, v0, v1
+< 
+<     const/16 v1, 0x44
+< 
+<     aput v6, v0, v1
+< 
+<     const/16 v1, 0x45
+< 
+<     aput v7, v0, v1
+< 
+<     const/16 v1, 0x46
+< 
+<     const/4 v2, 0x5
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x47
+< 
+<     const/4 v2, 0x6
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x48
+< 
+<     const/4 v2, 0x7
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x49
+< 
+<     const/16 v2, 0x8
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4a
+< 
+<     const/16 v2, 0x9
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4b
+< 
+<     const/16 v2, 0xa
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4c
+< 
+<     const/16 v2, 0xb
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4d
+< 
+<     const/16 v2, 0xc
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4e
+< 
+<     const/16 v2, 0xd
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4f
+< 
+<     const/16 v2, 0xe
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x50
+< 
+<     .line 187
+<     const/16 v2, 0xf
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x51
+< 
+<     const/16 v2, 0x10
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x52
+< 
+<     const/16 v2, 0x11
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x53
+< 
+<     const/16 v2, 0x12
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x54
+< 
+<     const/16 v2, 0x13
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x55
+< 
+<     const/16 v2, 0x14
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x56
+< 
+<     const/16 v2, 0x15
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x57
+< 
+<     const/16 v2, 0x16
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x58
+< 
+<     const/16 v2, 0x17
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x59
+< 
+<     const/16 v2, 0x18
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x5a
+< 
+<     const/16 v2, 0x19
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x5b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x60
+< 
+<     .line 188
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x61
+< 
+<     const/16 v2, 0x1a
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x62
+< 
+<     const/16 v2, 0x1b
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x63
+< 
+<     const/16 v2, 0x1c
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x64
+< 
+<     const/16 v2, 0x1d
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x65
+< 
+<     const/16 v2, 0x1e
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x66
+< 
+<     const/16 v2, 0x1f
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x67
+< 
+<     const/16 v2, 0x20
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x68
+< 
+<     const/16 v2, 0x21
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x69
+< 
+<     const/16 v2, 0x22
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6a
+< 
+<     const/16 v2, 0x23
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6b
+< 
+<     const/16 v2, 0x24
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6c
+< 
+<     const/16 v2, 0x25
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6d
+< 
+<     const/16 v2, 0x26
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6e
+< 
+<     const/16 v2, 0x27
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6f
+< 
+<     const/16 v2, 0x28
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x70
+< 
+<     .line 189
+<     const/16 v2, 0x29
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x71
+< 
+<     const/16 v2, 0x2a
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x72
+< 
+<     const/16 v2, 0x2b
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x73
+< 
+<     const/16 v2, 0x2c
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x74
+< 
+<     const/16 v2, 0x2d
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x75
+< 
+<     const/16 v2, 0x2e
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x76
+< 
+<     const/16 v2, 0x2f
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x77
+< 
+<     const/16 v2, 0x30
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x78
+< 
+<     const/16 v2, 0x31
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x79
+< 
+<     const/16 v2, 0x32
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x7a
+< 
+<     const/16 v2, 0x33
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x7b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x80
+< 
+<     .line 190
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x81
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x82
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x83
+< 
+<     aput v3, v0, v1
+---
+>     new-array v0, v1, [I
+700c45
+<     const/16 v1, 0x84
+---
+>     fill-array-data v0, :array_0
+702,1203d46
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x85
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x86
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x87
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x88
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x89
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x90
+< 
+<     .line 191
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x91
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x92
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x93
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x94
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x95
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x96
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x97
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x98
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x99
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa0
+< 
+<     .line 192
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xaa
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xab
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xac
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xad
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xae
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xaf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb0
+< 
+<     .line 193
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xba
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbe
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc0
+< 
+<     .line 194
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xca
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xce
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd0
+< 
+<     .line 195
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xda
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xde
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe0
+< 
+<     .line 196
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xea
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xeb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xec
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xed
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xee
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xef
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf0
+< 
+<     .line 197
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfa
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfe
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xff
+< 
+<     aput v3, v0, v1
+< 
+<     .line 181
+1207,1362c50
+<     const/16 v0, 0x100
+< 
+<     new-array v0, v0, [I
+< 
+<     const/4 v1, 0x0
+< 
+<     .line 205
+<     aput v3, v0, v1
+< 
+<     aput v3, v0, v4
+< 
+<     aput v3, v0, v5
+< 
+<     aput v3, v0, v6
+< 
+<     aput v3, v0, v7
+< 
+<     const/4 v1, 0x5
+< 
+<     aput v3, v0, v1
+< 
+<     const/4 v1, 0x6
+< 
+<     aput v3, v0, v1
+< 
+<     const/4 v1, 0x7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x10
+< 
+<     .line 206
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x11
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x12
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x13
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x14
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x15
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x16
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x17
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x18
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x19
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x1f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x20
+< 
+<     .line 207
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x21
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x22
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x23
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x24
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x25
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x26
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x27
+---
+>     new-array v0, v1, [I
+1364c52
+<     aput v3, v0, v1
+---
+>     fill-array-data v0, :array_1
+1366,2351c54
+<     const/16 v1, 0x28
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x29
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2d
+< 
+<     const/16 v2, 0x3e
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x2e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x2f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x30
+< 
+<     .line 208
+<     const/16 v2, 0x34
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x31
+< 
+<     const/16 v2, 0x35
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x32
+< 
+<     const/16 v2, 0x36
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x33
+< 
+<     const/16 v2, 0x37
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x34
+< 
+<     const/16 v2, 0x38
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x35
+< 
+<     const/16 v2, 0x39
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x36
+< 
+<     const/16 v2, 0x3a
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x37
+< 
+<     const/16 v2, 0x3b
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x38
+< 
+<     const/16 v2, 0x3c
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x39
+< 
+<     const/16 v2, 0x3d
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x3a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3d
+< 
+<     const/4 v2, -0x2
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x3e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x3f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x40
+< 
+<     .line 209
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x42
+< 
+<     aput v4, v0, v1
+< 
+<     const/16 v1, 0x43
+< 
+<     aput v5, v0, v1
+< 
+<     const/16 v1, 0x44
+< 
+<     aput v6, v0, v1
+< 
+<     const/16 v1, 0x45
+< 
+<     aput v7, v0, v1
+< 
+<     const/16 v1, 0x46
+< 
+<     const/4 v2, 0x5
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x47
+< 
+<     const/4 v2, 0x6
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x48
+< 
+<     const/4 v2, 0x7
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x49
+< 
+<     const/16 v2, 0x8
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4a
+< 
+<     const/16 v2, 0x9
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4b
+< 
+<     const/16 v2, 0xa
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4c
+< 
+<     const/16 v2, 0xb
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4d
+< 
+<     const/16 v2, 0xc
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4e
+< 
+<     const/16 v2, 0xd
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x4f
+< 
+<     const/16 v2, 0xe
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x50
+< 
+<     .line 210
+<     const/16 v2, 0xf
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x51
+< 
+<     const/16 v2, 0x10
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x52
+< 
+<     const/16 v2, 0x11
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x53
+< 
+<     const/16 v2, 0x12
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x54
+< 
+<     const/16 v2, 0x13
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x55
+< 
+<     const/16 v2, 0x14
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x56
+< 
+<     const/16 v2, 0x15
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x57
+< 
+<     const/16 v2, 0x16
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x58
+< 
+<     const/16 v2, 0x17
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x59
+< 
+<     const/16 v2, 0x18
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x5a
+< 
+<     const/16 v2, 0x19
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x5b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x5f
+< 
+<     const/16 v2, 0x3f
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x60
+< 
+<     .line 211
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x61
+< 
+<     const/16 v2, 0x1a
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x62
+< 
+<     const/16 v2, 0x1b
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x63
+< 
+<     const/16 v2, 0x1c
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x64
+< 
+<     const/16 v2, 0x1d
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x65
+< 
+<     const/16 v2, 0x1e
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x66
+< 
+<     const/16 v2, 0x1f
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x67
+< 
+<     const/16 v2, 0x20
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x68
+< 
+<     const/16 v2, 0x21
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x69
+< 
+<     const/16 v2, 0x22
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6a
+< 
+<     const/16 v2, 0x23
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6b
+< 
+<     const/16 v2, 0x24
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6c
+< 
+<     const/16 v2, 0x25
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6d
+< 
+<     const/16 v2, 0x26
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6e
+< 
+<     const/16 v2, 0x27
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x6f
+< 
+<     const/16 v2, 0x28
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x70
+< 
+<     .line 212
+<     const/16 v2, 0x29
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x71
+< 
+<     const/16 v2, 0x2a
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x72
+< 
+<     const/16 v2, 0x2b
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x73
+< 
+<     const/16 v2, 0x2c
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x74
+< 
+<     const/16 v2, 0x2d
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x75
+< 
+<     const/16 v2, 0x2e
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x76
+< 
+<     const/16 v2, 0x2f
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x77
+< 
+<     const/16 v2, 0x30
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x78
+< 
+<     const/16 v2, 0x31
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x79
+< 
+<     const/16 v2, 0x32
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x7a
+< 
+<     const/16 v2, 0x33
+< 
+<     aput v2, v0, v1
+< 
+<     const/16 v1, 0x7b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x7f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x80
+< 
+<     .line 213
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x81
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x82
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x83
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x84
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x85
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x86
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x87
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x88
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x89
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x8f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x90
+< 
+<     .line 214
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x91
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x92
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x93
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x94
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x95
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x96
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x97
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x98
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x99
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9a
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9b
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9c
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9d
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9e
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0x9f
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa0
+< 
+<     .line 215
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xa9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xaa
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xab
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xac
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xad
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xae
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xaf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb0
+< 
+<     .line 216
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xb9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xba
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbe
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xbf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc0
+< 
+<     .line 217
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xc9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xca
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xce
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xcf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd0
+< 
+<     .line 218
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xd9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xda
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xde
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xdf
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe0
+< 
+<     .line 219
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xe9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xea
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xeb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xec
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xed
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xee
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xef
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf0
+< 
+<     .line 220
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf1
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf2
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf3
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf4
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf5
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf6
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf7
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf8
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xf9
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfa
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfb
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfc
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfd
+< 
+<     aput v3, v0, v1
+< 
+<     const/16 v1, 0xfe
+---
+>     sput-object v0, Lcom/cjdao/util/Base64$Decoder;->DECODE_WEBSAFE:[I
+2353c56
+<     aput v3, v0, v1
+---
+>     return-void
+2355c58,59
+<     const/16 v1, 0xff
+---
+>     .line 181
+>     nop
+2357c61,319
+<     aput v3, v0, v1
+---
+>     :array_0
+>     .array-data 4
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x3e
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x3f
+>         0x34
+>         0x35
+>         0x36
+>         0x37
+>         0x38
+>         0x39
+>         0x3a
+>         0x3b
+>         0x3c
+>         0x3d
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x2
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x0
+>         0x1
+>         0x2
+>         0x3
+>         0x4
+>         0x5
+>         0x6
+>         0x7
+>         0x8
+>         0x9
+>         0xa
+>         0xb
+>         0xc
+>         0xd
+>         0xe
+>         0xf
+>         0x10
+>         0x11
+>         0x12
+>         0x13
+>         0x14
+>         0x15
+>         0x16
+>         0x17
+>         0x18
+>         0x19
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x1a
+>         0x1b
+>         0x1c
+>         0x1d
+>         0x1e
+>         0x1f
+>         0x20
+>         0x21
+>         0x22
+>         0x23
+>         0x24
+>         0x25
+>         0x26
+>         0x27
+>         0x28
+>         0x29
+>         0x2a
+>         0x2b
+>         0x2c
+>         0x2d
+>         0x2e
+>         0x2f
+>         0x30
+>         0x31
+>         0x32
+>         0x33
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>     .end array-data
+2360,2363c322,580
+<     sput-object v0, Lcom/cjdao/util/Base64$Decoder;->DECODE_WEBSAFE:[I
+< 
+<     .line 176
+<     return-void
+---
+>     :array_1
+>     .array-data 4
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x3e
+>         -0x1
+>         -0x1
+>         0x34
+>         0x35
+>         0x36
+>         0x37
+>         0x38
+>         0x39
+>         0x3a
+>         0x3b
+>         0x3c
+>         0x3d
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x2
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x0
+>         0x1
+>         0x2
+>         0x3
+>         0x4
+>         0x5
+>         0x6
+>         0x7
+>         0x8
+>         0x9
+>         0xa
+>         0xb
+>         0xc
+>         0xd
+>         0xe
+>         0xf
+>         0x10
+>         0x11
+>         0x12
+>         0x13
+>         0x14
+>         0x15
+>         0x16
+>         0x17
+>         0x18
+>         0x19
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         0x3f
+>         -0x1
+>         0x1a
+>         0x1b
+>         0x1c
+>         0x1d
+>         0x1e
+>         0x1f
+>         0x20
+>         0x21
+>         0x22
+>         0x23
+>         0x24
+>         0x25
+>         0x26
+>         0x27
+>         0x28
+>         0x29
+>         0x2a
+>         0x2b
+>         0x2c
+>         0x2d
+>         0x2e
+>         0x2f
+>         0x30
+>         0x31
+>         0x32
+>         0x33
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>         -0x1
+>     .end array-data
+2474,2496c691
+<     if-lt v5, p3, :cond_1
+< 
+<     move v3, v2
+< 
+<     .line 393
+<     .end local v2    # "op":I
+<     .local v3, "op":I
+<     :goto_2
+<     if-nez p4, :cond_d
+< 
+<     .line 396
+<     iput v7, p0, Lcom/cjdao/util/Base64$Decoder;->state:I
+< 
+<     .line 397
+<     iput v8, p0, Lcom/cjdao/util/Base64$Decoder;->value:I
+< 
+<     .line 398
+<     iput v3, p0, Lcom/cjdao/util/Base64$Decoder;->op:I
+< 
+<     .line 399
+<     const/4 v9, 0x1
+< 
+<     goto :goto_0
+---
+>     if-ge v5, p3, :cond_c
+2499,2502c694
+<     .end local v3    # "op":I
+<     .restart local v2    # "op":I
+<     :cond_1
+<     if-nez v7, :cond_4
+---
+>     if-nez v7, :cond_2
+2504,2505c696,697
+<     .line 296
+<     :goto_3
+---
+>     .line 300
+>     :goto_2
+2508c700
+<     if-gt v9, p3, :cond_2
+---
+>     if-gt v9, p3, :cond_1
+2510d701
+<     .line 297
+2519d709
+<     .line 298
+2530d719
+<     .line 297
+2533d721
+<     .line 299
+2544d731
+<     .line 297
+2547d733
+<     .line 300
+2556d741
+<     .line 297
+2559,2569c744
+<     if-gez v8, :cond_3
+< 
+<     .line 307
+<     :cond_2
+<     if-lt v5, p3, :cond_4
+< 
+<     move v3, v2
+< 
+<     .end local v2    # "op":I
+<     .restart local v3    # "op":I
+<     goto :goto_2
+---
+>     if-ltz v8, :cond_1
+2572,2574d746
+<     .end local v3    # "op":I
+<     .restart local v2    # "op":I
+<     :cond_3
+2603c775,801
+<     goto :goto_3
+---
+>     goto :goto_2
+> 
+>     .line 307
+>     :cond_1
+>     if-lt v5, p3, :cond_2
+> 
+>     move v3, v2
+> 
+>     .line 393
+>     .end local v2    # "op":I
+>     .local v3, "op":I
+>     :goto_3
+>     if-nez p4, :cond_b
+> 
+>     .line 396
+>     iput v7, p0, Lcom/cjdao/util/Base64$Decoder;->state:I
+> 
+>     .line 397
+>     iput v8, p0, Lcom/cjdao/util/Base64$Decoder;->value:I
+> 
+>     .line 398
+>     iput v3, p0, Lcom/cjdao/util/Base64$Decoder;->op:I
+> 
+>     .line 399
+>     const/4 v9, 0x1
+> 
+>     goto :goto_0
+2606c804,806
+<     :cond_4
+---
+>     .end local v3    # "op":I
+>     .restart local v2    # "op":I
+>     :cond_2
+2621c821,822
+<     :cond_5
+---
+>     :cond_3
+>     :goto_4
+2623a825
+>     .line 391
+2632c834
+<     if-ltz v1, :cond_6
+---
+>     if-ltz v1, :cond_4
+2640,2644c842
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto :goto_1
+---
+>     goto :goto_4
+2647,2649c845
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_6
+---
+>     :cond_4
+2652c848
+<     if-eq v1, v9, :cond_5
+---
+>     if-eq v1, v9, :cond_3
+2666c862
+<     if-ltz v1, :cond_7
+---
+>     if-ltz v1, :cond_5
+2676,2680c872
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto :goto_1
+---
+>     goto :goto_4
+2683,2685c875
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_7
+---
+>     :cond_5
+2688c878
+<     if-eq v1, v9, :cond_5
+---
+>     if-eq v1, v9, :cond_3
+2702c892
+<     if-ltz v1, :cond_8
+---
+>     if-ltz v1, :cond_6
+2712,2716c902
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto/16 :goto_1
+---
+>     goto :goto_4
+2719,2721c905
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_8
+---
+>     :cond_6
+2724c908
+<     if-ne v1, v9, :cond_9
+---
+>     if-ne v1, v9, :cond_7
+2744,2748c928
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto/16 :goto_1
+---
+>     goto :goto_4
+2751,2753c931
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_9
+---
+>     :cond_7
+2756c934
+<     if-eq v1, v9, :cond_5
+---
+>     if-eq v1, v9, :cond_3
+2770c948
+<     if-ltz v1, :cond_a
+---
+>     if-ltz v1, :cond_8
+2806,2810c984
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto/16 :goto_1
+---
+>     goto :goto_4
+2813,2815c987
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_a
+---
+>     :cond_8
+2818c990
+<     if-ne v1, v9, :cond_b
+---
+>     if-ne v1, v9, :cond_9
+2842,2846c1014
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto/16 :goto_1
+---
+>     goto :goto_4
+2849,2851c1017
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_b
+---
+>     :cond_9
+2854c1020
+<     if-eq v1, v9, :cond_5
+---
+>     if-eq v1, v9, :cond_3
+2870c1036
+<     if-ne v1, v9, :cond_c
+---
+>     if-ne v1, v9, :cond_a
+2875,2879c1041
+<     move v5, v6
+< 
+<     .end local v6    # "p":I
+<     .restart local v5    # "p":I
+<     goto/16 :goto_1
+---
+>     goto :goto_4
+2882,2884c1044
+<     .end local v5    # "p":I
+<     .restart local v6    # "p":I
+<     :cond_c
+---
+>     :cond_a
+2887c1047
+<     if-eq v1, v9, :cond_5
+---
+>     if-eq v1, v9, :cond_3
+2903c1063
+<     if-eq v1, v9, :cond_5
+---
+>     if-eq v1, v9, :cond_3
+2921c1081
+<     :cond_d
+---
+>     :cond_b
+2929c1089
+<     :goto_4
+---
+>     :goto_5
+2948c1108
+<     goto :goto_4
+---
+>     goto :goto_5
+2975c1135
+<     goto :goto_4
+---
+>     goto :goto_5
+3007c1167
+<     goto :goto_4
+---
+>     goto :goto_5
+3022,3023c1182,1185
+<     .line 317
+<     nop
+---
+>     .end local v3    # "op":I
+>     .restart local v2    # "op":I
+>     :cond_c
+>     move v3, v2
+3024a1187,1191
+>     .end local v2    # "op":I
+>     .restart local v3    # "op":I
+>     goto/16 :goto_3
+> 
+>     .line 317
+diff -r result/APP_7/App_B_7/smali/com/cjdao/util/Base64$Encoder.smali result/APP_7/App_M_7/smali/com/cjdao/util/Base64$Encoder.smali
+493c493
+<     if-le v11, v0, :cond_5
+---
+>     if-gt v11, v0, :cond_3
+495,514c495,496
+<     .line 679
+<     if-eqz p4, :cond_10
+< 
+<     .line 685
+<     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+< 
+<     sub-int v11, v7, v11
+< 
+<     add-int/lit8 v12, p3, -0x1
+< 
+<     if-ne v11, v12, :cond_8
+< 
+<     .line 686
+<     const/4 v8, 0x0
+< 
+<     .line 687
+<     .local v8, "t":I
+<     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+< 
+<     if-lez v11, :cond_7
+---
+>     .line 663
+>     aget-byte v11, p1, v7
+516c498
+<     iget-object v11, p0, Lcom/cjdao/util/Base64$Encoder;->tail:[B
+---
+>     and-int/lit16 v11, v11, 0xff
+518c500
+<     add-int/lit8 v9, v8, 0x1
+---
+>     shl-int/lit8 v11, v11, 0x10
+520,522c502
+<     .end local v8    # "t":I
+<     .local v9, "t":I
+<     aget-byte v11, v11, v8
+---
+>     add-int/lit8 v12, v7, 0x1
+524c504
+<     move v8, v9
+---
+>     aget-byte v12, p1, v12
+526,528c506
+<     .end local v9    # "t":I
+<     .restart local v8    # "t":I
+<     move v6, v7
+---
+>     and-int/lit16 v12, v12, 0xff
+530,533c508
+<     .end local v7    # "p":I
+<     .restart local v6    # "p":I
+<     :goto_2
+<     and-int/lit16 v11, v11, 0xff
+---
+>     shl-int/lit8 v12, v12, 0x8
+535c510
+<     shl-int/lit8 v10, v11, 0x4
+---
+>     or-int/2addr v11, v12
+537,538c512
+<     .line 688
+<     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+---
+>     add-int/lit8 v12, v7, 0x2
+540c514
+<     sub-int/2addr v11, v8
+---
+>     aget-byte v12, p1, v12
+542c516
+<     iput v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+---
+>     and-int/lit16 v12, v12, 0xff
+544,545c518
+<     .line 689
+<     add-int/lit8 v3, v4, 0x1
+---
+>     or-int v10, v11, v12
+547,549c520,521
+<     .end local v4    # "op":I
+<     .restart local v3    # "op":I
+<     shr-int/lit8 v11, v10, 0x6
+---
+>     .line 666
+>     shr-int/lit8 v11, v10, 0x12
+557,558c529,530
+<     .line 690
+<     add-int/lit8 v4, v3, 0x1
+---
+>     .line 667
+>     add-int/lit8 v11, v4, 0x1
+560,562c532
+<     .end local v3    # "op":I
+<     .restart local v4    # "op":I
+<     and-int/lit8 v11, v10, 0x3f
+---
+>     shr-int/lit8 v12, v10, 0xc
+564c534
+<     aget-byte v11, v1, v11
+---
+>     and-int/lit8 v12, v12, 0x3f
+566c536
+<     aput-byte v11, v5, v3
+---
+>     aget-byte v12, v1, v12
+568,569c538
+<     .line 691
+<     iget-boolean v11, p0, Lcom/cjdao/util/Base64$Encoder;->do_padding:Z
+---
+>     aput-byte v12, v5, v11
+571c540,541
+<     if-eqz v11, :cond_2
+---
+>     .line 668
+>     add-int/lit8 v11, v4, 0x2
+573,574c543
+<     .line 692
+<     add-int/lit8 v3, v4, 0x1
+---
+>     shr-int/lit8 v12, v10, 0x6
+576,578c545
+<     .end local v4    # "op":I
+<     .restart local v3    # "op":I
+<     const/16 v11, 0x3d
+---
+>     and-int/lit8 v12, v12, 0x3f
+580c547
+<     aput-byte v11, v5, v4
+---
+>     aget-byte v12, v1, v12
+582,583c549
+<     .line 693
+<     add-int/lit8 v4, v3, 0x1
+---
+>     aput-byte v12, v5, v11
+585,587c551,552
+<     .end local v3    # "op":I
+<     .restart local v4    # "op":I
+<     const/16 v11, 0x3d
+---
+>     .line 669
+>     add-int/lit8 v11, v4, 0x3
+589c554
+<     aput-byte v11, v5, v3
+---
+>     and-int/lit8 v12, v10, 0x3f
+591,592c556
+<     :cond_2
+<     move v3, v4
+---
+>     aget-byte v12, v1, v12
+594c558,568
+<     .line 695
+---
+>     aput-byte v12, v5, v11
+> 
+>     .line 670
+>     add-int/lit8 v6, v7, 0x3
+> 
+>     .line 671
+>     .end local v7    # "p":I
+>     .restart local v6    # "p":I
+>     add-int/lit8 v3, v4, 0x4
+> 
+>     .line 672
+597c571
+<     iget-boolean v11, p0, Lcom/cjdao/util/Base64$Encoder;->do_newline:Z
+---
+>     add-int/lit8 v2, v2, -0x1
+599c573
+<     if-eqz v11, :cond_4
+---
+>     if-nez v2, :cond_15
+601c575
+<     .line 696
+---
+>     .line 673
+604c578
+<     if-eqz v11, :cond_3
+---
+>     if-eqz v11, :cond_2
+616c590
+<     .line 697
+---
+>     .line 674
+619c593
+<     :cond_3
+---
+>     :cond_2
+628,644c602,603
+<     move v3, v4
+< 
+<     .line 719
+<     .end local v4    # "op":I
+<     .end local v8    # "t":I
+<     .restart local v3    # "op":I
+<     :cond_4
+<     :goto_3
+<     sget-boolean v11, Lcom/cjdao/util/Base64$Encoder;->$assertionsDisabled:Z
+< 
+<     if-nez v11, :cond_f
+< 
+<     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+< 
+<     if-eqz v11, :cond_f
+< 
+<     new-instance v11, Ljava/lang/AssertionError;
+---
+>     .line 675
+>     const/16 v2, 0x13
+646c605
+<     invoke-direct {v11}, Ljava/lang/AssertionError;-><init>()V
+---
+>     move v7, v6
+648c607,609
+<     throw v11
+---
+>     .end local v6    # "p":I
+>     .restart local v7    # "p":I
+>     goto :goto_1
+650a612,615
+>     .end local v4    # "op":I
+>     .end local v7    # "p":I
+>     .restart local v3    # "op":I
+>     .restart local v6    # "p":I
+669d633
+<     .line 628
+680d643
+<     .line 627
+683d645
+<     .line 629
+692d653
+<     .line 627
+721d681
+<     .line 638
+732d691
+<     .line 637
+735d693
+<     .line 639
+744d701
+<     .line 637
+758c715
+<     .line 663
+---
+>     .line 679
+763,764c720,721
+<     :cond_5
+<     aget-byte v11, p1, v7
+---
+>     :cond_3
+>     if-eqz p4, :cond_10
+766c723,724
+<     and-int/lit16 v11, v11, 0xff
+---
+>     .line 685
+>     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+768c726
+<     shl-int/lit8 v11, v11, 0x10
+---
+>     sub-int v11, v7, v11
+770,771c728
+<     .line 664
+<     add-int/lit8 v12, v7, 0x1
+---
+>     add-int/lit8 v12, p3, -0x1
+773c730
+<     aget-byte v12, p1, v12
+---
+>     if-ne v11, v12, :cond_8
+775c732,733
+<     and-int/lit16 v12, v12, 0xff
+---
+>     .line 686
+>     const/4 v8, 0x0
+777c735,737
+<     shl-int/lit8 v12, v12, 0x8
+---
+>     .line 687
+>     .local v8, "t":I
+>     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+779,780c739
+<     .line 663
+<     or-int/2addr v11, v12
+---
+>     if-lez v11, :cond_7
+782,783c741
+<     .line 665
+<     add-int/lit8 v12, v7, 0x2
+---
+>     iget-object v11, p0, Lcom/cjdao/util/Base64$Encoder;->tail:[B
+785c743
+<     aget-byte v12, p1, v12
+---
+>     add-int/lit8 v9, v8, 0x1
+787c745,747
+<     and-int/lit16 v12, v12, 0xff
+---
+>     .end local v8    # "t":I
+>     .local v9, "t":I
+>     aget-byte v11, v11, v8
+789,790c749
+<     .line 663
+<     or-int v10, v11, v12
+---
+>     move v8, v9
+792,793c751,753
+<     .line 666
+<     shr-int/lit8 v11, v10, 0x12
+---
+>     .end local v9    # "t":I
+>     .restart local v8    # "t":I
+>     move v6, v7
+795c755,758
+<     and-int/lit8 v11, v11, 0x3f
+---
+>     .end local v7    # "p":I
+>     .restart local v6    # "p":I
+>     :goto_2
+>     and-int/lit16 v11, v11, 0xff
+797c760
+<     aget-byte v11, v1, v11
+---
+>     shl-int/lit8 v10, v11, 0x4
+799c762,763
+<     aput-byte v11, v5, v4
+---
+>     .line 688
+>     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+801,802c765
+<     .line 667
+<     add-int/lit8 v11, v4, 0x1
+---
+>     sub-int/2addr v11, v8
+804c767
+<     shr-int/lit8 v12, v10, 0xc
+---
+>     iput v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+806c769,770
+<     and-int/lit8 v12, v12, 0x3f
+---
+>     .line 689
+>     add-int/lit8 v3, v4, 0x1
+808c772,774
+<     aget-byte v12, v1, v12
+---
+>     .end local v4    # "op":I
+>     .restart local v3    # "op":I
+>     shr-int/lit8 v11, v10, 0x6
+810c776
+<     aput-byte v12, v5, v11
+---
+>     and-int/lit8 v11, v11, 0x3f
+812,813c778
+<     .line 668
+<     add-int/lit8 v11, v4, 0x2
+---
+>     aget-byte v11, v1, v11
+815c780
+<     shr-int/lit8 v12, v10, 0x6
+---
+>     aput-byte v11, v5, v4
+817c782,783
+<     and-int/lit8 v12, v12, 0x3f
+---
+>     .line 690
+>     add-int/lit8 v4, v3, 0x1
+819c785,787
+<     aget-byte v12, v1, v12
+---
+>     .end local v3    # "op":I
+>     .restart local v4    # "op":I
+>     and-int/lit8 v11, v10, 0x3f
+821c789
+<     aput-byte v12, v5, v11
+---
+>     aget-byte v11, v1, v11
+823,824c791
+<     .line 669
+<     add-int/lit8 v11, v4, 0x3
+---
+>     aput-byte v11, v5, v3
+826c793,794
+<     and-int/lit8 v12, v10, 0x3f
+---
+>     .line 691
+>     iget-boolean v11, p0, Lcom/cjdao/util/Base64$Encoder;->do_padding:Z
+828c796
+<     aget-byte v12, v1, v12
+---
+>     if-eqz v11, :cond_4
+830c798,799
+<     aput-byte v12, v5, v11
+---
+>     .line 692
+>     add-int/lit8 v3, v4, 0x1
+832,833c801,803
+<     .line 670
+<     add-int/lit8 v6, v7, 0x3
+---
+>     .end local v4    # "op":I
+>     .restart local v3    # "op":I
+>     const/16 v11, 0x3d
+835,838c805
+<     .line 671
+<     .end local v7    # "p":I
+<     .restart local v6    # "p":I
+<     add-int/lit8 v3, v4, 0x4
+---
+>     aput-byte v11, v5, v4
+840c807,819
+<     .line 672
+---
+>     .line 693
+>     add-int/lit8 v4, v3, 0x1
+> 
+>     .end local v3    # "op":I
+>     .restart local v4    # "op":I
+>     const/16 v11, 0x3d
+> 
+>     aput-byte v11, v5, v3
+> 
+>     :cond_4
+>     move v3, v4
+> 
+>     .line 695
+843c822
+<     add-int/lit8 v2, v2, -0x1
+---
+>     iget-boolean v11, p0, Lcom/cjdao/util/Base64$Encoder;->do_newline:Z
+845c824
+<     if-nez v2, :cond_15
+---
+>     if-eqz v11, :cond_6
+847c826
+<     .line 673
+---
+>     .line 696
+850c829
+<     if-eqz v11, :cond_6
+---
+>     if-eqz v11, :cond_5
+862c841
+<     .line 674
+---
+>     .line 697
+865c844
+<     :cond_6
+---
+>     :cond_5
+874,875c853,854
+<     .line 675
+<     const/16 v2, 0x13
+---
+>     :goto_3
+>     move v3, v4
+877c856,862
+<     move v7, v6
+---
+>     .line 719
+>     .end local v4    # "op":I
+>     .end local v8    # "t":I
+>     .restart local v3    # "op":I
+>     :cond_6
+>     :goto_4
+>     sget-boolean v11, Lcom/cjdao/util/Base64$Encoder;->$assertionsDisabled:Z
+879,881c864,874
+<     .end local v6    # "p":I
+<     .restart local v7    # "p":I
+<     goto/16 :goto_1
+---
+>     if-nez v11, :cond_f
+> 
+>     iget v11, p0, Lcom/cjdao/util/Base64$Encoder;->tailLen:I
+> 
+>     if-eqz v11, :cond_f
+> 
+>     new-instance v11, Ljava/lang/AssertionError;
+> 
+>     invoke-direct {v11}, Ljava/lang/AssertionError;-><init>()V
+> 
+>     throw v11
+883a877,880
+>     .end local v3    # "op":I
+>     .end local v6    # "p":I
+>     .restart local v4    # "op":I
+>     .restart local v7    # "p":I
+892c889
+<     goto/16 :goto_2
+---
+>     goto :goto_2
+934c931
+<     :goto_4
+---
+>     :goto_5
+939d935
+<     .line 702
+956c952
+<     :goto_5
+---
+>     :goto_6
+961d956
+<     .line 701
+1030c1025
+<     if-eqz v11, :cond_4
+---
+>     if-eqz v11, :cond_6
+1059,1063c1054
+<     move v3, v4
+< 
+<     .end local v4    # "op":I
+<     .restart local v3    # "op":I
+<     goto/16 :goto_3
+---
+>     goto :goto_3
+1066d1056
+<     .end local v3    # "op":I
+1068d1057
+<     .restart local v4    # "op":I
+1077c1066
+<     goto :goto_4
+---
+>     goto :goto_5
+1079d1067
+<     .line 702
+1091c1079
+<     goto :goto_5
+---
+>     goto :goto_6
+1122c1110
+<     :goto_6
+---
+>     :goto_7
+1140c1128
+<     goto/16 :goto_3
+---
+>     goto/16 :goto_4
+1191c1179
+<     :goto_7
+---
+>     :goto_8
+1249c1237
+<     goto :goto_7
+---
+>     goto :goto_8
+1260c1248
+<     goto :goto_6
+---
+>     goto :goto_7
+diff -r result/APP_7/App_B_7/smali/com/cjdao/util/Base64.smali result/APP_7/App_M_7/smali/com/cjdao/util/Base64.smali
+9c9
+<         Lcom/cjdao/util/Base64$Coder;,
+---
+>         Lcom/cjdao/util/Base64$Encoder;,
+11c11
+<         Lcom/cjdao/util/Base64$Encoder;
+---
+>         Lcom/cjdao/util/Base64$Coder;
+251d250
+<     .line 531
+310c309
+<     .line 531
+---
+>     .line 530
+diff -r result/APP_7/App_B_7/smali/com/cjdao/util/CjdaoCommonUtil.smali result/APP_7/App_M_7/smali/com/cjdao/util/CjdaoCommonUtil.smali
+28d27
+<     .line 16
+71,72d69
+<     const/4 v4, 0x0
+< 
+75c72
+<     const-string v5, "MD5"
+---
+>     const-string v7, "MD5"
+77c74
+<     invoke-static {v5}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+---
+>     invoke-static {v7}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+88c85
+<     move-result-object v5
+---
+>     move-result-object v7
+90c87
+<     invoke-virtual {v0, v5}, Ljava/security/MessageDigest;->update([B)V
+---
+>     invoke-virtual {v0, v7}, Ljava/security/MessageDigest;->update([B)V
+93c90
+<     new-instance v3, Ljava/lang/StringBuilder;
+---
+>     new-instance v4, Ljava/lang/StringBuilder;
+95c92
+<     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+---
+>     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+98c95
+<     .local v3, "hexString":Ljava/lang/StringBuilder;
+---
+>     .local v4, "hexString":Ljava/lang/StringBuilder;
+101,103c98
+<     move-result-object v5
+< 
+<     array-length v6, v5
+---
+>     move-result-object v1
+105,106c100,101
+<     :goto_0
+<     if-lt v4, v6, :cond_0
+---
+>     .local v1, "arr$":[B
+>     array-length v6, v1
+108,111c103,104
+<     .line 97
+<     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+< 
+<     move-result-object v4
+---
+>     .local v6, "len$":I
+>     const/4 v5, 0x0
+113,117c106,108
+<     .line 100
+<     .end local v0    # "algorithm":Ljava/security/MessageDigest;
+<     .end local v3    # "hexString":Ljava/lang/StringBuilder;
+<     :goto_1
+<     return-object v4
+---
+>     .local v5, "i$":I
+>     :goto_0
+>     if-ge v5, v6, :cond_0
+119,123c110
+<     .line 94
+<     .restart local v0    # "algorithm":Ljava/security/MessageDigest;
+<     .restart local v3    # "hexString":Ljava/lang/StringBuilder;
+<     :cond_0
+<     aget-byte v1, v5, v4
+---
+>     aget-byte v2, v1, v5
+126c113
+<     .local v1, "b":B
+---
+>     .local v2, "b":B
+135c122
+<     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+---
+>     invoke-static {v2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+145,147c132
+<     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     :try_end_0
+<     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+---
+>     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+150c135
+<     add-int/lit8 v4, v4, 0x1
+---
+>     add-int/lit8 v5, v5, 0x1
+154c139,148
+<     .line 98
+---
+>     .line 97
+>     .end local v2    # "b":B
+>     :cond_0
+>     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+>     :try_end_0
+>     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+> 
+>     move-result-object v7
+> 
+>     .line 100
+156,157c150,157
+<     .end local v1    # "b":B
+<     .end local v3    # "hexString":Ljava/lang/StringBuilder;
+---
+>     .end local v1    # "arr$":[B
+>     .end local v4    # "hexString":Ljava/lang/StringBuilder;
+>     .end local v5    # "i$":I
+>     .end local v6    # "len$":I
+>     :goto_1
+>     return-object v7
+> 
+>     .line 98
+159c159
+<     move-exception v2
+---
+>     move-exception v3
+162,163c162,163
+<     .local v2, "e":Ljava/lang/Exception;
+<     const-string v4, "d41d8cd98f00b204e9800998ecf8427e"
+---
+>     .local v3, "e":Ljava/lang/Exception;
+>     const-string v7, "d41d8cd98f00b204e9800998ecf8427e"
+202c202
+<     iget v3, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+---
+>     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+204c204
+<     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+---
+>     iget v3, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+206c206
+<     move-result-object v3
+---
+>     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+208c208
+<     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     move-result-object v2
+249d248
+<     .line 56
+252d250
+<     .line 55
+303d300
+<     .line 34
+385c382
+<     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+---
+>     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+387c384
+<     move-result-object v7
+---
+>     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+389c386
+<     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     move-result-object v6
+diff -r result/APP_7/App_B_7/smali/com/cjdao/util/JsonUtil.smali result/APP_7/App_M_7/smali/com/cjdao/util/JsonUtil.smali
+130,131d129
+<     :try_end_0
+<     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+150d147
+<     :try_start_1
+154,155d150
+<     :try_end_1
+<     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+161a157,158
+>     :try_end_0
+>     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+diff -r result/APP_7/App_B_7/smali/com/cjdao/view/CacheableUrlImageView.smali result/APP_7/App_M_7/smali/com/cjdao/view/CacheableUrlImageView.smali
+51c51
+<     .line 18
+---
+>     .line 17
+56d55
+<     .line 17
+59c58
+<     .line 20
+---
+>     .line 19
+64d62
+<     .line 19
+67d64
+<     .line 15
+126c123
+<     .line 53
+---
+>     .line 52
+129c126
+<     const/16 v1, 0xe10
+---
+>     const v1, 0x7fffffff
+133c130
+<     .line 54
+---
+>     .line 53
+140c137
+<     .line 55
+---
+>     .line 54
+144a142,143
+>     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+> 
+153,155c152
+<     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+< 
+<     move-result-object v2
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+157c154
+<     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     move-result-object v1
+171c168
+<     .line 56
+---
+>     .line 55
+176c173
+<     .line 57
+---
+>     .line 56
+181c178
+<     .line 58
+---
+>     .line 57
+193c190
+<     .line 78
+---
+>     .line 77
+197a195,196
+>     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+> 
+200c199,201
+<     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v1
+214c215
+<     .line 79
+---
+>     .line 78
+226c227
+<     .line 61
+---
+>     .line 60
+230a232,233
+>     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+> 
+233c236,238
+<     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+> 
+>     move-result-object v3
+247c252
+<     .line 62
+---
+>     .line 61
+254c259
+<     .line 63
+---
+>     .line 62
+257c262
+<     .line 64
+---
+>     .line 63
+261c266
+<     .line 65
+---
+>     .line 64
+268c273
+<     .line 66
+---
+>     .line 65
+285c290
+<     .line 67
+---
+>     .line 66
+297c302
+<     .line 69
+---
+>     .line 68
+306c311
+<     .line 70
+---
+>     .line 69
+312c317
+<     .line 71
+---
+>     .line 70
+317c322
+<     .line 73
+---
+>     .line 72
+326c331
+<     .line 75
+---
+>     .line 74

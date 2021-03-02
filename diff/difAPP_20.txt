@@ -1,0 +1,1367 @@
+Somente em result/APP_20/App_M_20/: android
+diff -r result/APP_20/App_B_20/AndroidManifest.xml result/APP_20/App_M_20/AndroidManifest.xml
+2c2,4
+<     <application android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name">
+---
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <application android:icon="@drawable/ic_launcher" android:label="@string/app_name">
+9,11c11,13
+<         <activity android:name=".BrainteaserActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+<         <activity android:name=".MyArrayAdapter"/>
+<         <activity android:name=".Brainteasermain" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+---
+>         <activity android:name=".BrainteaserActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+>         <activity android:name="MyMain" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+>         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.ads.AdActivity"/>
+diff -r result/APP_20/App_B_20/apktool.yml result/APP_20/App_M_20/apktool.yml
+2c2
+< apkFileName: Bapp20-268ACDFDAB9F6F187640789D5849CE53E810AD9A30EC67E1033403E198C4B7F5.apk
+---
+> apkFileName: Mapp20-3B84803142BFA6DB2BC325F8BE61B388B58DE48517836417203C526447303B4B.apk
+Somente em result/APP_20/App_M_20/com: google
+diff -r result/APP_20/App_B_20/com/griffin/brain/JigsawBoardView.java result/APP_20/App_M_20/com/griffin/brain/JigsawBoardView.java
+63d62
+<       Toast.makeText(getContext(), "end key pressed", 0).show();
+474c473
+<       new AlertDialog.Builder(this.context).setMessage("GAme Over").setTitle("U Rocks").setNegativeButton("OK ", null).show();
+---
+>       new AlertDialog.Builder(this.context).setMessage("Image Completed...").setTitle("Congratulations !!!").setNegativeButton("OK ", null).show();
+566c565
+<       Toast.makeText(getBaseContext(), "menu pressed................", 0).show();
+---
+>       Toast.makeText(getBaseContext(), "Menu Pressed................", 0).show();
+diff -r result/APP_20/App_B_20/com/griffin/brain/JigsawSetting.java result/APP_20/App_M_20/com/griffin/brain/JigsawSetting.java
+8c8
+< import com.griffin.brainteasermain.Brainteasermain;
+---
+> import com.griffin.brainteasermain.MyMain;
+83c83
+<       str = Brainteasermain.keyword;
+---
+>       str = MyMain.keyword;
+87c87
+<       this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968584)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>       this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968580)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+94c94
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968580)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968578)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+96c96
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968592)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968585)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+98c98
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968582)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968579)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+100c100
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968590)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968584)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+102c102
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968578)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968577)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+104c104
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968588)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968583)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+106c106
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968594)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968586)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+110c110
+<         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968587)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+---
+>         this.currentJigwasImage = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(getResources().openRawResource(2130968582)), this.jigsawBoardWidth, this.jigsawBoardHeight, true);
+Somente em result/APP_20/App_B_20/com/griffin/brainteasermain: Brainteasermain.java
+Somente em result/APP_20/App_M_20/com/griffin/brainteasermain: BuildConfig.java
+Somente em result/APP_20/App_B_20/com/griffin/brainteasermain: MyArrayAdapter.java
+Somente em result/APP_20/App_M_20/com/griffin/brainteasermain: MyMain.java
+diff -r result/APP_20/App_B_20/com/griffin/brainteasermain/R.java result/APP_20/App_M_20/com/griffin/brainteasermain/R.java
+15c15,17
+<     public static final int ic_launcher = 2130837505;
+---
+>     public static final int forward = 2130837505;
+>     public static final int ic_launcher = 2130837506;
+>     public static final int titbg = 2130837507;
+22,30c24,31
+<     public static final int LinearLayout01 = 2131165189;
+<     public static final int button1 = 2131165185;
+<     public static final int button2 = 2131165188;
+<     public static final int button3 = 2131165187;
+<     public static final int button4 = 2131165186;
+<     public static final int icon = 2131165190;
+<     public static final int jigsawBoard = 2131165192;
+<     public static final int label = 2131165191;
+<     public static final int quickContactBadge1 = 2131165184;
+---
+>     public static final int adView = 2131165188;
+>     public static final int img = 2131165184;
+>     public static final int img2 = 2131165186;
+>     public static final int itemval = 2131165185;
+>     public static final int jigsawBoard = 2131165191;
+>     public static final int listView1 = 2131165190;
+>     public static final int textView1 = 2131165187;
+>     public static final int textView2 = 2131165189;
+37,38c38,39
+<     public static final int main = 2130903040;
+<     public static final int rowlist = 2130903041;
+---
+>     public static final int listitem = 2130903040;
+>     public static final int mymain = 2130903041;
+55,73c56,65
+<     public static final int bird_icon = 2130968577;
+<     public static final int cat = 2130968578;
+<     public static final int cat_icon = 2130968579;
+<     public static final int cindrella = 2130968580;
+<     public static final int cindrella_icon = 2130968581;
+<     public static final int cutecat = 2130968582;
+<     public static final int cutecat_icon = 2130968583;
+<     public static final int face = 2130968584;
+<     public static final int face_icon = 2130968585;
+<     public static final int horse_icon = 2130968586;
+<     public static final int hourse = 2130968587;
+<     public static final int house = 2130968588;
+<     public static final int house_icon = 2130968589;
+<     public static final int rabit = 2130968590;
+<     public static final int rabit_icon = 2130968591;
+<     public static final int rat = 2130968592;
+<     public static final int rat_icon = 2130968593;
+<     public static final int tiger = 2130968594;
+<     public static final int tiger_icon = 2130968595;
+---
+>     public static final int cat = 2130968577;
+>     public static final int cindrella = 2130968578;
+>     public static final int cutecat = 2130968579;
+>     public static final int face = 2130968580;
+>     public static final int forward = 2130968581;
+>     public static final int hourse = 2130968582;
+>     public static final int house = 2130968583;
+>     public static final int rabit = 2130968584;
+>     public static final int rat = 2130968585;
+>     public static final int tiger = 2130968586;
+Os arquivos binários result/APP_20/App_B_20/original/AndroidManifest.xml e result/APP_20/App_M_20/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_20/App_B_20/original/META-INF/CERT.RSA e result/APP_20/App_M_20/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_20/App_B_20/original/META-INF/CERT.SF result/APP_20/App_M_20/original/META-INF/CERT.SF
+3c3,6
+< SHA1-Digest-Manifest: lCNaSqu00M84ZHNH10RI1S5MIK0=
+---
+> SHA1-Digest-Manifest: XiYGuNiF4yGGM0TvW5fWYC86P5o=
+> 
+> Name: res/drawable-hdpi/forward.png
+> SHA1-Digest: tlt+/PRPUMTIbsoV/o1U4ynpGaU=
+9c12
+< SHA1-Digest: B+YYmDzTeYsFKJSblruPQR07Z6g=
+---
+> SHA1-Digest: w2D65+QmpuyKtcBIUORK+OQ1okE=
+12c15
+< SHA1-Digest: vloaypZtW6kFcCsDHZp5/AqYBTQ=
+---
+> SHA1-Digest: so92uDszoB7yzwUByYdTKJCp1sk=
+14,15c17,18
+< Name: res/raw/cindrella.png
+< SHA1-Digest: 5GcIuDcMRPjJlWn88yy4RMTUbPU=
+---
+> Name: res/layout/listitem.xml
+> SHA1-Digest: hI2Fnwn2MSEOVrDU+mMrXgsSNRM=
+20,27c23,24
+< Name: AndroidManifest.xml
+< SHA1-Digest: t319bFcbtB1FUSnnz+9M6nwSAvM=
+< 
+< Name: res/raw/rat_icon.png
+< SHA1-Digest: s/6S/z+8HSDfCypUvmBmUB0KsCg=
+< 
+< Name: res/raw/face_icon.png
+< SHA1-Digest: 7hCYf7Hooc/QbKTcG3sR0obkXic=
+---
+> Name: res/raw/cindrella.png
+> SHA1-Digest: 5GcIuDcMRPjJlWn88yy4RMTUbPU=
+29,30c26,27
+< Name: res/raw/rabit_icon.png
+< SHA1-Digest: 2yin4WM6BcZ0Dj/XE9lkhr6HUiU=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: Ndkfjo7v5REELHQW/bPyaKnB8LQ=
+35,37d31
+< Name: res/raw/tiger_icon.png
+< SHA1-Digest: l1ktT1G2cYB4HQ1lovoUj+0UW1w=
+< 
+44,46d37
+< Name: res/raw/bird_icon.png
+< SHA1-Digest: CCbkE7KVrMZx4e7KR1g9KlilksM=
+< 
+50,52d40
+< Name: res/layout/splash.xml
+< SHA1-Digest: L6WXC+Va6S1UpHsKgJIFDHaOgJ4=
+< 
+55a44,46
+> Name: res/layout/splash.xml
+> SHA1-Digest: 7eSIOzxRlM3W/qoa+csMvgowsZs=
+> 
+59,69c50,51
+< Name: res/layout/rowlist.xml
+< SHA1-Digest: kavGq8qmJ2Xn+qtXdoCdEj+Hpe0=
+< 
+< Name: res/raw/horse_icon.png
+< SHA1-Digest: qBXJCat9A7fPoCDChJ8lYtAB3Pk=
+< 
+< Name: res/raw/cindrella_icon.png
+< SHA1-Digest: YQQCZSCvEMbFkD/9yirewJ7mwHM=
+< 
+< Name: res/raw/cat_icon.png
+< SHA1-Digest: X04adffONyxDDdOLKonCTftuOUQ=
+---
+> Name: res/raw/forward.png
+> SHA1-Digest: wVVEto7j3jV4I8uB4ayAh1nKt1E=
+72c54
+< SHA1-Digest: TLDqR+hooJspv9V+lttRc5yav2c=
+---
+> SHA1-Digest: gyqmPe3AmtXvpHB4ochy8aiLyu8=
+75,81c57
+< SHA1-Digest: otfgbjSvn0c8L5UYyzCIVBiobh0=
+< 
+< Name: res/layout/main.xml
+< SHA1-Digest: 15y9yWOxE9ZJ8FUhV6k4iuDs4No=
+< 
+< Name: res/raw/house_icon.png
+< SHA1-Digest: ptY3nbwIFTaZZaPRQCNj0f55w6Q=
+---
+> SHA1-Digest: 2HF0VF6WYdXugcxXWuxB1M1m1hg=
+94a71,76
+> Name: res/drawable-hdpi/titbg.png
+> SHA1-Digest: QSOXpIbFPqAHx/PwfOI6B0E+SIE=
+> 
+> Name: res/layout/mymain.xml
+> SHA1-Digest: dQbn8mnOseGkczhdWHNY5w5AFYs=
+> 
+97,99d78
+< 
+< Name: res/raw/cutecat_icon.png
+< SHA1-Digest: 7GY1qSdVF2uueNPfMc4+VW2atfM=
+diff -r result/APP_20/App_B_20/original/META-INF/MANIFEST.MF result/APP_20/App_M_20/original/META-INF/MANIFEST.MF
+3a4,6
+> Name: res/drawable-hdpi/forward.png
+> SHA1-Digest: rF6bN6LxKfYtQhcELPL1LcrlMWg=
+> 
+8c11
+< SHA1-Digest: g4cj+Sz8fGKLlEUkumBNwe/6SWE=
+---
+> SHA1-Digest: 6OWHHk1WWxkBQXU4VEsp+R10ivk=
+11c14
+< SHA1-Digest: WMmszRccWi4EmaHdj6k6yhqJ5+g=
+---
+> SHA1-Digest: PonsCuKk4fWCzorNJQjDj76USSM=
+13,14c16,17
+< Name: res/drawable-ldpi/ic_launcher.png
+< SHA1-Digest: 4xFhFqaefMjb+NygC8Boeih2+h0=
+---
+> Name: res/layout/listitem.xml
+> SHA1-Digest: ghzrR2pc0L0j+RwlzIBU9hF3oaQ=
+19,23c22,23
+< Name: AndroidManifest.xml
+< SHA1-Digest: cWCUGpOuoyXfE9GBR7CvXq6+wF4=
+< 
+< Name: res/raw/face_icon.png
+< SHA1-Digest: 7qZWxCH01vaui7Vu16GGQXAs4Ek=
+---
+> Name: res/drawable-ldpi/ic_launcher.png
+> SHA1-Digest: 4xFhFqaefMjb+NygC8Boeih2+h0=
+25,26c25,26
+< Name: res/raw/rat_icon.png
+< SHA1-Digest: OG/B0OtBgWSw6s3+85E4eEn7XPE=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: 0BZ/Nxe1wGO6cDeNwo6k6b7MDYY=
+31,36d30
+< Name: res/raw/rabit_icon.png
+< SHA1-Digest: KssmBr/fhBdyrA72kkRA7G8IXGU=
+< 
+< Name: res/raw/tiger_icon.png
+< SHA1-Digest: zvo2MzqrPlh+NJIf9MH2Vtz3ggo=
+< 
+43,45d36
+< Name: res/raw/bird_icon.png
+< SHA1-Digest: AdkopNqjFQvXN5pK2kwLNH4Vp4g=
+< 
+49,51d39
+< Name: res/layout/splash.xml
+< SHA1-Digest: sLBnk6/g12M3fjctHQw/jikZlMA=
+< 
+54a43,45
+> Name: res/layout/splash.xml
+> SHA1-Digest: MGHGrAzEZbcdDT/jx2VRRGuVbVk=
+> 
+58,68c49,50
+< Name: res/layout/rowlist.xml
+< SHA1-Digest: Jgsq2DDCkFJ8SRAic34Cx/DStJw=
+< 
+< Name: res/raw/horse_icon.png
+< SHA1-Digest: grcEqAeFyAUjnw2uTjYjtxwzdRY=
+< 
+< Name: res/raw/cindrella_icon.png
+< SHA1-Digest: uY1s5BXjMVbs9e6qhQGGsmRapCI=
+< 
+< Name: res/raw/cat_icon.png
+< SHA1-Digest: 4hD2gu8afUrsJJ+YOFWCnBl8R/s=
+---
+> Name: res/raw/forward.png
+> SHA1-Digest: rF6bN6LxKfYtQhcELPL1LcrlMWg=
+71c53
+< SHA1-Digest: 2GKkaat1MiM9T3dMCX4xMSjYG+0=
+---
+> SHA1-Digest: UyejyvzVwaQFh5Xe++ZC1EoQYLE=
+74,77c56
+< SHA1-Digest: iODR5OgOtVVT0SVKhK3zJ9rkXnc=
+< 
+< Name: res/layout/main.xml
+< SHA1-Digest: /O6AiDNua1Z4Y4TLCWhwst3dAjw=
+---
+> SHA1-Digest: bq1o7I3aiTronEcWU2YE1ln+V4g=
+82,84d60
+< Name: res/raw/house_icon.png
+< SHA1-Digest: T0ZkgwgBdgakrNsCtr9ErRJOnro=
+< 
+93a70,75
+> Name: res/drawable-hdpi/titbg.png
+> SHA1-Digest: ygb1kkx2athf35fyemoAjtZ/8QI=
+> 
+> Name: res/layout/mymain.xml
+> SHA1-Digest: /gEjhu4PCjlpEvUWviwvomf/c/w=
+> 
+96,98d77
+< 
+< Name: res/raw/cutecat_icon.png
+< SHA1-Digest: rTU5BQIthNvfAFa5WoJO4QzNuhE=
+Os arquivos binários result/APP_20/App_B_20/res/drawable-hdpi-v4/brn_teser.jpg e result/APP_20/App_M_20/res/drawable-hdpi-v4/brn_teser.jpg são diferentes
+Somente em result/APP_20/App_M_20/res/drawable-hdpi-v4: forward.png
+Somente em result/APP_20/App_M_20/res/drawable-hdpi-v4: titbg.png
+Somente em result/APP_20/App_M_20/res/layout: listitem.xml
+Somente em result/APP_20/App_B_20/res/layout: main.xml
+Somente em result/APP_20/App_M_20/res/layout: mymain.xml
+Somente em result/APP_20/App_B_20/res/layout: rowlist.xml
+diff -r result/APP_20/App_B_20/res/layout/sawboard.xml result/APP_20/App_M_20/res/layout/sawboard.xml
+2,4c2,13
+< <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+<   xmlns:android="http://schemas.android.com/apk/res/android">
+<     <com.griffin.brain.JigsawBoardView android:id="@id/jigsawBoard" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+---
+> <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+>   xmlns:android="http://schemas.android.com/apk/res/android"
+>   xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+>     <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+>         <TableRow>
+>             <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Large Text" />
+>         </TableRow>
+>         <TableRow>
+>             <com.griffin.brain.JigsawBoardView android:id="@id/jigsawBoard" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+>         </TableRow>
+>     </TableLayout>
+>     <com.google.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" ads:adUnitId="a14ff289421d952" ads:adSize="BANNER" ads:loadAdOnCreate="true" />
+diff -r result/APP_20/App_B_20/res/layout/splash.xml result/APP_20/App_M_20/res/layout/splash.xml
+3c3,6
+<   xmlns:android="http://schemas.android.com/apk/res/android" />
+\ Nenhum caractere de nova linha no final do arquivo
+---
+>   xmlns:android="http://schemas.android.com/apk/res/android"
+>   xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+>     <com.google.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" ads:adUnitId="a14ff289421d952" ads:adSize="BANNER" ads:loadAdOnCreate="true" />
+> </LinearLayout>
+\ Nenhum caractere de nova linha no final do arquivo
+Somente em result/APP_20/App_B_20/res/raw: bird_icon.png
+Somente em result/APP_20/App_B_20/res/raw: cat_icon.png
+Somente em result/APP_20/App_B_20/res/raw: cindrella_icon.png
+Somente em result/APP_20/App_B_20/res/raw: cutecat_icon.png
+Somente em result/APP_20/App_B_20/res/raw: face_icon.png
+Somente em result/APP_20/App_M_20/res/raw: forward.png
+Somente em result/APP_20/App_B_20/res/raw: horse_icon.png
+Somente em result/APP_20/App_B_20/res/raw: house_icon.png
+Somente em result/APP_20/App_B_20/res/raw: rabit_icon.png
+Somente em result/APP_20/App_B_20/res/raw: rat_icon.png
+Somente em result/APP_20/App_B_20/res/raw: tiger_icon.png
+diff -r result/APP_20/App_B_20/res/values/ids.xml result/APP_20/App_M_20/res/values/ids.xml
+3,10c3,9
+<     <item type="id" name="quickContactBadge1" />
+<     <item type="id" name="button1" />
+<     <item type="id" name="button4" />
+<     <item type="id" name="button3" />
+<     <item type="id" name="button2" />
+<     <item type="id" name="LinearLayout01" />
+<     <item type="id" name="icon" />
+<     <item type="id" name="label" />
+---
+>     <item type="id" name="img" />
+>     <item type="id" name="itemval" />
+>     <item type="id" name="img2" />
+>     <item type="id" name="textView1" />
+>     <item type="id" name="adView" />
+>     <item type="id" name="textView2" />
+>     <item type="id" name="listView1" />
+diff -r result/APP_20/App_B_20/res/values/public.xml result/APP_20/App_M_20/res/values/public.xml
+3c3
+<     <public type="drawable" name="ic_launcher" id="0x7f020001" />
+---
+>     <public type="drawable" name="ic_launcher" id="0x7f020002" />
+5,6c5,8
+<     <public type="layout" name="main" id="0x7f030000" />
+<     <public type="layout" name="rowlist" id="0x7f030001" />
+---
+>     <public type="drawable" name="forward" id="0x7f020001" />
+>     <public type="drawable" name="titbg" id="0x7f020003" />
+>     <public type="layout" name="listitem" id="0x7f030000" />
+>     <public type="layout" name="mymain" id="0x7f030001" />
+10,28c12,21
+<     <public type="raw" name="bird_icon" id="0x7f040001" />
+<     <public type="raw" name="cat" id="0x7f040002" />
+<     <public type="raw" name="cat_icon" id="0x7f040003" />
+<     <public type="raw" name="cindrella" id="0x7f040004" />
+<     <public type="raw" name="cindrella_icon" id="0x7f040005" />
+<     <public type="raw" name="cutecat" id="0x7f040006" />
+<     <public type="raw" name="cutecat_icon" id="0x7f040007" />
+<     <public type="raw" name="face" id="0x7f040008" />
+<     <public type="raw" name="face_icon" id="0x7f040009" />
+<     <public type="raw" name="horse_icon" id="0x7f04000a" />
+<     <public type="raw" name="hourse" id="0x7f04000b" />
+<     <public type="raw" name="house" id="0x7f04000c" />
+<     <public type="raw" name="house_icon" id="0x7f04000d" />
+<     <public type="raw" name="rabit" id="0x7f04000e" />
+<     <public type="raw" name="rabit_icon" id="0x7f04000f" />
+<     <public type="raw" name="rat" id="0x7f040010" />
+<     <public type="raw" name="rat_icon" id="0x7f040011" />
+<     <public type="raw" name="tiger" id="0x7f040012" />
+<     <public type="raw" name="tiger_icon" id="0x7f040013" />
+---
+>     <public type="raw" name="cat" id="0x7f040001" />
+>     <public type="raw" name="cindrella" id="0x7f040002" />
+>     <public type="raw" name="cutecat" id="0x7f040003" />
+>     <public type="raw" name="face" id="0x7f040004" />
+>     <public type="raw" name="forward" id="0x7f040005" />
+>     <public type="raw" name="hourse" id="0x7f040006" />
+>     <public type="raw" name="house" id="0x7f040007" />
+>     <public type="raw" name="rabit" id="0x7f040008" />
+>     <public type="raw" name="rat" id="0x7f040009" />
+>     <public type="raw" name="tiger" id="0x7f04000a" />
+32,40c25,32
+<     <public type="id" name="quickContactBadge1" id="0x7f070000" />
+<     <public type="id" name="button1" id="0x7f070001" />
+<     <public type="id" name="button4" id="0x7f070002" />
+<     <public type="id" name="button3" id="0x7f070003" />
+<     <public type="id" name="button2" id="0x7f070004" />
+<     <public type="id" name="LinearLayout01" id="0x7f070005" />
+<     <public type="id" name="icon" id="0x7f070006" />
+<     <public type="id" name="label" id="0x7f070007" />
+<     <public type="id" name="jigsawBoard" id="0x7f070008" />
+---
+>     <public type="id" name="img" id="0x7f070000" />
+>     <public type="id" name="itemval" id="0x7f070001" />
+>     <public type="id" name="img2" id="0x7f070002" />
+>     <public type="id" name="textView1" id="0x7f070003" />
+>     <public type="id" name="adView" id="0x7f070004" />
+>     <public type="id" name="textView2" id="0x7f070005" />
+>     <public type="id" name="listView1" id="0x7f070006" />
+>     <public type="id" name="jigsawBoard" id="0x7f070007" />
+Somente em result/APP_20/App_M_20/smali: android
+Somente em result/APP_20/App_M_20/smali/com: google
+diff -r result/APP_20/App_B_20/smali/com/griffin/brain/JigsawBoardKeyListener.smali result/APP_20/App_M_20/smali/com/griffin/brain/JigsawBoardKeyListener.smali
+40c40
+<     .line 18
+---
+>     .line 16
+45c45
+<     .line 19
+---
+>     .line 17
+53c53
+<     .line 20
+---
+>     .line 18
+58c58
+<     .line 21
+---
+>     .line 19
+69c69
+<     .line 22
+---
+>     .line 20
+75c75
+<     .line 23
+---
+>     .line 21
+86c86
+<     .line 24
+---
+>     .line 22
+92c92
+<     .line 25
+---
+>     .line 23
+103c103
+<     .line 26
+---
+>     .line 24
+109c109
+<     .line 27
+---
+>     .line 25
+120c120
+<     .line 28
+---
+>     .line 26
+128c128
+<     .line 29
+---
+>     .line 27
+133c133
+<     .line 31
+---
+>     .line 29
+139c139
+<     .line 32
+---
+>     .line 30
+144c144
+<     .line 34
+---
+>     .line 32
+148c148
+<     .line 36
+---
+>     .line 34
+159c159
+<     .line 40
+---
+>     .line 38
+diff -r result/APP_20/App_B_20/smali/com/griffin/brain/JigsawBoardView$aa.smali result/APP_20/App_M_20/smali/com/griffin/brain/JigsawBoardView$aa.smali
+51c51
+<     const-string v1, "menu pressed................"
+---
+>     const-string v1, "Menu Pressed................"
+diff -r result/APP_20/App_B_20/smali/com/griffin/brain/JigsawBoardView.smali result/APP_20/App_M_20/smali/com/griffin/brain/JigsawBoardView.smali
+141c141
+<     .locals 3
+---
+>     .locals 2
+146c146
+<     .line 655
+---
+>     .line 656
+154,166d153
+<     invoke-virtual {p0}, Lcom/griffin/brain/JigsawBoardView;->getContext()Landroid/content/Context;
+< 
+<     move-result-object v1
+< 
+<     const-string v2, "end key pressed"
+< 
+<     invoke-static {v1, v2, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+< 
+<     move-result-object v1
+< 
+<     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
+< 
+<     .line 659
+169c156
+<     .line 661
+---
+>     .line 658
+172c159
+<     .line 662
+---
+>     .line 659
+175c162
+<     .line 664
+---
+>     .line 661
+188c175
+<     .line 587
+---
+>     .line 588
+197c184
+<     .line 588
+---
+>     .line 589
+202c189
+<     .line 596
+---
+>     .line 597
+206c193
+<     .line 589
+---
+>     .line 590
+216c203
+<     .line 590
+---
+>     .line 591
+223c210
+<     .line 596
+---
+>     .line 597
+252c239
+<     .line 554
+---
+>     .line 555
+261c248
+<     .line 557
+---
+>     .line 558
+290c277
+<     .line 566
+---
+>     .line 567
+299c286
+<     .line 569
+---
+>     .line 570
+322c309
+<     .line 578
+---
+>     .line 579
+348c335
+<     .line 441
+---
+>     .line 442
+359c346
+<     .line 462
+---
+>     .line 463
+362c349
+<     .line 442
+---
+>     .line 443
+370c357
+<     .line 441
+---
+>     .line 442
+377c364
+<     .line 444
+---
+>     .line 445
+385c372
+<     .line 445
+---
+>     .line 446
+390c377
+<     .line 448
+---
+>     .line 449
+398c385
+<     .line 449
+---
+>     .line 450
+403c390
+<     .line 453
+---
+>     .line 454
+411c398
+<     .line 454
+---
+>     .line 455
+416c403
+<     .line 458
+---
+>     .line 459
+424c411
+<     .line 459
+---
+>     .line 460
+429c416
+<     .line 442
+---
+>     .line 443
+539c526
+<     .line 423
+---
+>     .line 424
+553c540
+<     .line 366
+---
+>     .line 367
+577c564
+<     .line 362
+---
+>     .line 363
+590c577
+<     .line 618
+---
+>     .line 619
+597c584
+<     .line 619
+---
+>     .line 620
+600c587
+<     .line 621
+---
+>     .line 622
+620c607
+<     .line 431
+---
+>     .line 432
+635c622
+<     .line 630
+---
+>     .line 631
+646c633
+<     .line 639
+---
+>     .line 640
+656c643
+<     .line 358
+---
+>     .line 359
+666c653
+<     .line 354
+---
+>     .line 355
+681c668
+<     .line 606
+---
+>     .line 607
+688c675
+<     .line 607
+---
+>     .line 608
+691c678
+<     .line 609
+---
+>     .line 610
+712c699
+<     .line 260
+---
+>     .line 261
+719c706
+<     .line 261
+---
+>     .line 262
+727c714
+<     .line 263
+---
+>     .line 264
+733c720
+<     .line 324
+---
+>     .line 325
+738c725
+<     .line 266
+---
+>     .line 267
+746c733
+<     .line 267
+---
+>     .line 268
+755c742
+<     .line 268
+---
+>     .line 269
+764c751
+<     .line 269
+---
+>     .line 270
+768c755
+<     .line 270
+---
+>     .line 271
+771c758
+<     .line 273
+---
+>     .line 274
+778c765
+<     .line 274
+---
+>     .line 275
+784c771
+<     .line 277
+---
+>     .line 278
+791c778
+<     .line 281
+---
+>     .line 282
+799c786
+<     .line 284
+---
+>     .line 285
+807c794
+<     .line 286
+---
+>     .line 287
+814c801
+<     .line 287
+---
+>     .line 288
+831c818
+<     .line 288
+---
+>     .line 289
+840c827
+<     .line 290
+---
+>     .line 291
+848c835
+<     .line 292
+---
+>     .line 293
+856c843
+<     .line 294
+---
+>     .line 295
+862c849
+<     .line 295
+---
+>     .line 296
+869c856
+<     .line 299
+---
+>     .line 300
+876c863
+<     .line 304
+---
+>     .line 305
+884c871
+<     .line 307
+---
+>     .line 308
+892c879
+<     .line 308
+---
+>     .line 309
+899c886
+<     .line 314
+---
+>     .line 315
+906c893
+<     .line 320
+---
+>     .line 321
+1004c991
+<     .line 350
+---
+>     .line 351
+1015c1002
+<     .line 375
+---
+>     .line 376
+1038c1025
+<     .line 395
+---
+>     .line 396
+1049c1036
+<     .line 396
+---
+>     .line 397
+1082c1069
+<     .line 415
+---
+>     .line 416
+1107c1094
+<     .line 405
+---
+>     .line 406
+1120c1107
+<     .line 406
+---
+>     .line 407
+1135c1122
+<     .line 405
+---
+>     .line 406
+1144c1131
+<     .line 384
+---
+>     .line 385
+1151c1138
+<     .line 385
+---
+>     .line 386
+1166c1153
+<     .line 384
+---
+>     .line 385
+1175c1162
+<     .line 332
+---
+>     .line 333
+1186c1173
+<     .line 341
+---
+>     .line 342
+1197c1184
+<     .line 498
+---
+>     .line 499
+1226c1213
+<     .line 471
+---
+>     .line 472
+1249c1236
+<     .line 480
+---
+>     .line 481
+1272c1259
+<     .line 489
+---
+>     .line 490
+1354c1341
+<     .line 510
+---
+>     .line 511
+1363c1350
+<     .line 511
+---
+>     .line 512
+1367c1354
+<     .line 513
+---
+>     .line 514
+1375c1362
+<     .line 672
+---
+>     .line 669
+1386c1373
+<     .line 673
+---
+>     .line 670
+1389c1376
+<     .line 674
+---
+>     .line 671
+1396c1383
+<     .line 673
+---
+>     .line 670
+1399c1386
+<     .line 675
+---
+>     .line 672
+1402c1389
+<     .line 676
+---
+>     .line 673
+1405c1392
+<     .line 678
+---
+>     .line 675
+1419c1406
+<     .line 687
+---
+>     .line 684
+1426c1413
+<     .line 688
+---
+>     .line 685
+1429c1416
+<     .line 689
+---
+>     .line 686
+1436c1423
+<     .line 688
+---
+>     .line 685
+1439c1426
+<     .line 690
+---
+>     .line 687
+1442c1429
+<     .line 691
+---
+>     .line 688
+1445c1432
+<     .line 693
+---
+>     .line 690
+1459c1446
+<     .line 701
+---
+>     .line 698
+1466c1453
+<     .line 702
+---
+>     .line 699
+1469c1456
+<     .line 703
+---
+>     .line 700
+1476c1463
+<     .line 702
+---
+>     .line 699
+1479c1466
+<     .line 704
+---
+>     .line 701
+1482c1469
+<     .line 705
+---
+>     .line 702
+1485c1472
+<     .line 707
+---
+>     .line 704
+1499c1486
+<     .line 647
+---
+>     .line 648
+1506c1493
+<     .line 648
+---
+>     .line 649
+1517c1504
+<     .line 649
+---
+>     .line 650
+1520c1507
+<     .line 650
+---
+>     .line 651
+1523c1510
+<     .line 652
+---
+>     .line 653
+1538c1525
+<     .line 530
+---
+>     .line 531
+1545c1532
+<     .line 531
+---
+>     .line 532
+1550c1537
+<     .line 532
+---
+>     .line 533
+1560c1547
+<     .line 539
+---
+>     .line 540
+1567c1554
+<     .line 540
+---
+>     .line 541
+1572c1559
+<     .line 541
+---
+>     .line 542
+1582c1569
+<     .line 520
+---
+>     .line 521
+1591c1578
+<     .line 521
+---
+>     .line 522
+1595c1582
+<     .line 523
+---
+>     .line 524
+1794c1781
+<     .line 224
+---
+>     .line 225
+1801c1788
+<     const-string v2, "GAme Over"
+---
+>     const-string v2, "Image Completed..."
+1807,1808c1794,1795
+<     .line 225
+<     const-string v2, "U Rocks"
+---
+>     .line 226
+>     const-string v2, "Congratulations !!!"
+1824c1811
+<     .line 227
+---
+>     .line 228
+1835c1822
+<     .line 711
+---
+>     .line 708
+1848c1835
+<     .line 712
+---
+>     .line 709
+1859c1846
+<     .line 714
+---
+>     .line 711
+2139c2126
+<     .line 237
+---
+>     .line 238
+2148c2135
+<     .line 238
+---
+>     .line 239
+2164c2151
+<     .line 239
+---
+>     .line 240
+2171c2158
+<     .line 240
+---
+>     .line 241
+2184c2171
+<     .line 241
+---
+>     .line 242
+2195c2182
+<     .line 245
+---
+>     .line 246
+2200c2187
+<     .line 242
+---
+>     .line 243
+2214c2201
+<     .line 243
+---
+>     .line 244
+diff -r result/APP_20/App_B_20/smali/com/griffin/brain/JigsawSetting.smali result/APP_20/App_M_20/smali/com/griffin/brain/JigsawSetting.smali
+193c193
+<     sget-object v0, Lcom/griffin/brainteasermain/Brainteasermain;->keyword:Ljava/lang/String;
+---
+>     sget-object v0, Lcom/griffin/brainteasermain/MyMain;->keyword:Ljava/lang/String;
+211c211
+<     const v2, 0x7f040008
+---
+>     const v2, 0x7f040004
+260c260
+<     const v2, 0x7f040004
+---
+>     const v2, 0x7f040002
+302c302
+<     const v2, 0x7f040010
+---
+>     const v2, 0x7f040009
+344c344
+<     const v2, 0x7f040006
+---
+>     const v2, 0x7f040003
+386c386
+<     const v2, 0x7f04000e
+---
+>     const v2, 0x7f040008
+428c428
+<     const v2, 0x7f040002
+---
+>     const v2, 0x7f040001
+470c470
+<     const v2, 0x7f04000c
+---
+>     const v2, 0x7f040007
+512c512
+<     const v2, 0x7f040012
+---
+>     const v2, 0x7f04000a
+596c596
+<     const v2, 0x7f04000b
+---
+>     const v2, 0x7f040006
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/BrainteaserActivity.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/BrainteaserActivity.smali
+27c27
+<     .line 13
+---
+>     .line 14
+32c32
+<     .line 14
+---
+>     .line 15
+36c36
+<     .line 16
+---
+>     .line 17
+Somente em result/APP_20/App_B_20/smali/com/griffin/brainteasermain: Brainteasermain.smali
+Somente em result/APP_20/App_M_20/smali/com/griffin/brainteasermain: BuildConfig.smali
+Somente em result/APP_20/App_B_20/smali/com/griffin/brainteasermain: MyArrayAdapter$ViewHolder.smali
+Somente em result/APP_20/App_B_20/smali/com/griffin/brainteasermain: MyArrayAdapter.smali
+Somente em result/APP_20/App_M_20/smali/com/griffin/brainteasermain: MyMain$1.smali
+Somente em result/APP_20/App_M_20/smali/com/griffin/brainteasermain: MyMain$UserItemAdapter.smali
+Somente em result/APP_20/App_M_20/smali/com/griffin/brainteasermain: MyMain$UserRecord.smali
+Somente em result/APP_20/App_M_20/smali/com/griffin/brainteasermain: MyMain.smali
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/R$drawable.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/R$drawable.smali
+20c20,24
+< .field public static final ic_launcher:I = 0x7f020001
+---
+> .field public static final forward:I = 0x7f020001
+> 
+> .field public static final ic_launcher:I = 0x7f020002
+> 
+> .field public static final titbg:I = 0x7f020003
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/R$id.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/R$id.smali
+18c18
+< .field public static final LinearLayout01:I = 0x7f070005
+---
+> .field public static final adView:I = 0x7f070004
+20c20
+< .field public static final button1:I = 0x7f070001
+---
+> .field public static final img:I = 0x7f070000
+22c22
+< .field public static final button2:I = 0x7f070004
+---
+> .field public static final img2:I = 0x7f070002
+24c24
+< .field public static final button3:I = 0x7f070003
+---
+> .field public static final itemval:I = 0x7f070001
+26c26
+< .field public static final button4:I = 0x7f070002
+---
+> .field public static final jigsawBoard:I = 0x7f070007
+28c28
+< .field public static final icon:I = 0x7f070006
+---
+> .field public static final listView1:I = 0x7f070006
+30c30
+< .field public static final jigsawBoard:I = 0x7f070008
+---
+> .field public static final textView1:I = 0x7f070003
+32,34c32
+< .field public static final label:I = 0x7f070007
+< 
+< .field public static final quickContactBadge1:I = 0x7f070000
+---
+> .field public static final textView2:I = 0x7f070005
+42c40
+<     .line 17
+---
+>     .line 19
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/R$layout.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/R$layout.smali
+18c18
+< .field public static final main:I = 0x7f030000
+---
+> .field public static final listitem:I = 0x7f030000
+20c20
+< .field public static final rowlist:I = 0x7f030001
+---
+> .field public static final mymain:I = 0x7f030001
+32c32
+<     .line 28
+---
+>     .line 29
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/R$menu.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/R$menu.smali
+26c26
+<     .line 34
+---
+>     .line 35
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/R$raw.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/R$raw.smali
+20c20
+< .field public static final bird_icon:I = 0x7f040001
+---
+> .field public static final cat:I = 0x7f040001
+22c22
+< .field public static final cat:I = 0x7f040002
+---
+> .field public static final cindrella:I = 0x7f040002
+24c24
+< .field public static final cat_icon:I = 0x7f040003
+---
+> .field public static final cutecat:I = 0x7f040003
+26c26
+< .field public static final cindrella:I = 0x7f040004
+---
+> .field public static final face:I = 0x7f040004
+28c28
+< .field public static final cindrella_icon:I = 0x7f040005
+---
+> .field public static final forward:I = 0x7f040005
+30c30
+< .field public static final cutecat:I = 0x7f040006
+---
+> .field public static final hourse:I = 0x7f040006
+32c32
+< .field public static final cutecat_icon:I = 0x7f040007
+---
+> .field public static final house:I = 0x7f040007
+34c34
+< .field public static final face:I = 0x7f040008
+---
+> .field public static final rabit:I = 0x7f040008
+36c36
+< .field public static final face_icon:I = 0x7f040009
+---
+> .field public static final rat:I = 0x7f040009
+38,56c38
+< .field public static final horse_icon:I = 0x7f04000a
+< 
+< .field public static final hourse:I = 0x7f04000b
+< 
+< .field public static final house:I = 0x7f04000c
+< 
+< .field public static final house_icon:I = 0x7f04000d
+< 
+< .field public static final rabit:I = 0x7f04000e
+< 
+< .field public static final rabit_icon:I = 0x7f04000f
+< 
+< .field public static final rat:I = 0x7f040010
+< 
+< .field public static final rat_icon:I = 0x7f040011
+< 
+< .field public static final tiger:I = 0x7f040012
+< 
+< .field public static final tiger_icon:I = 0x7f040013
+---
+> .field public static final tiger:I = 0x7f04000a
+64c46
+<     .line 37
+---
+>     .line 38
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/R$string.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/R$string.smali
+28c28
+<     .line 59
+---
+>     .line 51
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/SplashScreen$1.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/SplashScreen$1.smali
+63c63
+<     .line 45
+---
+>     .line 46
+70c70
+<     const-class v4, Lcom/griffin/brainteasermain/Brainteasermain;
+---
+>     const-class v4, Lcom/griffin/brainteasermain/MyMain;
+76c76
+<     .line 46
+---
+>     .line 47
+81c81
+<     .line 48
+---
+>     .line 49
+131c131
+<     .line 45
+---
+>     .line 46
+138c138
+<     const-class v4, Lcom/griffin/brainteasermain/Brainteasermain;
+---
+>     const-class v4, Lcom/griffin/brainteasermain/MyMain;
+144c144
+<     .line 46
+---
+>     .line 47
+156c156
+<     .line 45
+---
+>     .line 46
+163c163
+<     const-class v5, Lcom/griffin/brainteasermain/Brainteasermain;
+---
+>     const-class v5, Lcom/griffin/brainteasermain/MyMain;
+169c169
+<     .line 46
+---
+>     .line 47
+174c174
+<     .line 47
+---
+>     .line 48
+diff -r result/APP_20/App_B_20/smali/com/griffin/brainteasermain/SplashScreen.smali result/APP_20/App_M_20/smali/com/griffin/brainteasermain/SplashScreen.smali
+41c41
+<     .line 50
+---
+>     .line 51
+45c45
+<     .line 51
+---
+>     .line 52

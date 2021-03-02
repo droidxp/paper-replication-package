@@ -1,0 +1,3582 @@
+diff -r result/APP_37/App_B_37/AndroidManifest.xml result/APP_37/App_M_37/AndroidManifest.xml
+39a40,43
+>         <activity android:name="cn.domob.android.ads.DomobActivity" android:theme="@android:style/Theme.Translucent"/>
+>         <activity android:label="@string/app_name" android:name="com.adwo.adsdk.AdwoAdBrowserActivity"/>
+>         <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.mt.airad.MultiAD"/>
+>         <meta-data android:name="ADMOGO_KEY" android:value="bbff9c170cf34a079e2ca8ab223c2c09"/>
+diff -r result/APP_37/App_B_37/apktool.yml result/APP_37/App_M_37/apktool.yml
+2c2
+< apkFileName: Bapp37-4A9246E4D7C054563187716BF66918843837EA27D56EAFF3D01724A4BF42A8DE.apk
+---
+> apkFileName: Mapp37-DFE187680B20DD5119F08EDA71A317FC45139382CEE1466F21C3623C5F5A127D.apk
+5d4
+< - resources.arsc
+18,20c17
+< unknownFiles:
+<   assembly-descriptor.xml: '8'
+<   com/adwhirl/assets/ad_frame.gif: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_37/App_M_37/: cn
+Somente em result/APP_37/App_M_37/com: admogo
+Somente em result/APP_37/App_M_37/com: adwo
+diff -r result/APP_37/App_B_37/com/androgames/BubbleBurst/BoardSurfaceView.java result/APP_37/App_M_37/com/androgames/BubbleBurst/BoardSurfaceView.java
+56,57c56,57
+<   static float ballWidth;
+<   static float[][] clipPaths;
+---
+>   static float ballWidth = pieceWidth;
+>   static float[][] clipPaths = { { 0.0F, 0.0F, 36.0F, 0.0F, 26.0F, 22.0F, 15.0F, 29.0F, 0.0F, 36.0F }, { 0.0F, 36.0F, 15.0F, 29.0F, 32.0F, 45.0F, 22.0F, 60.0F, 0.0F, 60.0F }, { 15.0F, 29.0F, 26.0F, 22.0F, 45.0F, 37.0F, 32.0F, 45.0F }, { 36.0F, 0.0F, 60.0F, 0.0F, 60.0F, 35.0F, 45.0F, 37.0F, 26.0F, 22.0F }, { 60.0F, 35.0F, 60.0F, 60.0F, 22.0F, 60.0F, 32.0F, 45.0F, 45.0F, 37.0F } };
+131,139d130
+<   
+<   static
+<   {
+<     ballWidth = pieceWidth;
+<     float[] arrayOfFloat1 = { 0.0F, 0.0F, 36.0F, 0.0F, 26.0F, 22.0F, 15.0F, 29.0F, 0.0F, 36.0F };
+<     float[] arrayOfFloat2 = { 15.0F, 29.0F, 26.0F, 22.0F, 45.0F, 37.0F, 32.0F, 45.0F };
+<     float[] arrayOfFloat3 = { 60.0F, 35.0F, 60.0F, 60.0F, 22.0F, 60.0F, 32.0F, 45.0F, 45.0F, 37.0F };
+<     clipPaths = new float[][] { arrayOfFloat1, { 0.0F, 36.0F, 15.0F, 29.0F, 32.0F, 45.0F, 22.0F, 60.0F, 0.0F, 60.0F }, arrayOfFloat2, { 36.0F, 0.0F, 60.0F, 0.0F, 60.0F, 35.0F, 45.0F, 37.0F, 26.0F, 22.0F }, arrayOfFloat3 };
+<   }
+diff -r result/APP_37/App_B_37/com/androgames/BubbleBurst/BubbleBurst.java result/APP_37/App_M_37/com/androgames/BubbleBurst/BubbleBurst.java
+157,162c157,162
+<     int[] arrayOfInt = new int[5];
+<     arrayOfInt[1] = 1;
+<     arrayOfInt[2] = 2;
+<     arrayOfInt[3] = 3;
+<     arrayOfInt[4] = 4;
+<     playModes = arrayOfInt;
+---
+>     int[] arrayOfInt1 = new int[5];
+>     arrayOfInt1[1] = 1;
+>     arrayOfInt1[2] = 2;
+>     arrayOfInt1[3] = 3;
+>     arrayOfInt1[4] = 4;
+>     playModes = arrayOfInt1;
+168c168,170
+<     boardRowColNum = new int[][] { { 12, 11 }, { 10, 9 }, { 8, 7 } };
+---
+>     arrayOfInt1 = new int[] { 10, 9 };
+>     int[] arrayOfInt2 = { 8, 7 };
+>     boardRowColNum = new int[][] { { 12, 11 }, arrayOfInt1, arrayOfInt2 };
+Somente em result/APP_37/App_M_37/com: baidu
+diff -r result/APP_37/App_B_37/com/mobclix/android/sdk/FetchRemoteConfig.java result/APP_37/App_M_37/com/mobclix/android/sdk/FetchRemoteConfig.java
+444,457c444,457
+<     //   227: astore 7
+<     //   229: getstatic 52	com/mobclix/android/sdk/Mobclix:MC_AD_SIZES	[Ljava/lang/String;
+<     //   232: astore_1
+<     //   233: aload_1
+<     //   234: arraylength
+<     //   235: istore_3
+<     //   236: iconst_0
+<     //   237: istore_2
+<     //   238: iload_2
+<     //   239: iload_3
+<     //   240: if_icmplt +297 -> 537
+<     //   243: aload_0
+<     //   244: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   247: aload 7
+---
+>     //   227: astore_1
+>     //   228: getstatic 52	com/mobclix/android/sdk/Mobclix:MC_AD_SIZES	[Ljava/lang/String;
+>     //   231: astore 8
+>     //   233: aload 8
+>     //   235: arraylength
+>     //   236: istore_3
+>     //   237: iconst_0
+>     //   238: istore_2
+>     //   239: iload_2
+>     //   240: iload_3
+>     //   241: if_icmplt +296 -> 537
+>     //   244: aload_0
+>     //   245: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   248: aload_1
+471c471
+<     //   272: if_icmpne +653 -> 925
+---
+>     //   272: if_icmpne +654 -> 926
+587,781c587,780
+<     //   537: aload_1
+<     //   538: iload_2
+<     //   539: aaload
+<     //   540: astore 8
+<     //   542: aload 8
+<     //   544: invokestatic 193	com/mobclix/android/sdk/Mobclix:hasPref	(Ljava/lang/String;)Z
+<     //   547: ifeq +292 -> 839
+<     //   550: aload 8
+<     //   552: invokestatic 196	com/mobclix/android/sdk/Mobclix:getPref	(Ljava/lang/String;)Ljava/lang/String;
+<     //   555: ldc_w 383
+<     //   558: invokevirtual 387	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
+<     //   561: astore 9
+<     //   563: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+<     //   566: aload 8
+<     //   568: aload 9
+<     //   570: iconst_0
+<     //   571: aaload
+<     //   572: ldc_w 392
+<     //   575: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   578: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   581: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   584: pop
+<     //   585: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+<     //   588: aload 8
+<     //   590: aload 9
+<     //   592: iconst_1
+<     //   593: aaload
+<     //   594: invokestatic 401	java/lang/Long:parseLong	(Ljava/lang/String;)J
+<     //   597: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   600: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   603: pop
+<     //   604: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+<     //   607: aload 8
+<     //   609: aload 9
+<     //   611: iconst_2
+<     //   612: aaload
+<     //   613: ldc_w 392
+<     //   616: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   619: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   622: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   625: pop
+<     //   626: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+<     //   629: aload 8
+<     //   631: aload 9
+<     //   633: iconst_3
+<     //   634: aaload
+<     //   635: invokestatic 401	java/lang/Long:parseLong	(Ljava/lang/String;)J
+<     //   638: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   641: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   644: pop
+<     //   645: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+<     //   648: aload 8
+<     //   650: aload 9
+<     //   652: iconst_4
+<     //   653: aaload
+<     //   654: ldc_w 392
+<     //   657: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   660: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   663: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   666: pop
+<     //   667: getstatic 170	com/mobclix/android/sdk/Mobclix:customAdSet	Ljava/util/HashMap;
+<     //   670: aload 8
+<     //   672: iconst_0
+<     //   673: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   676: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   679: pop
+<     //   680: new 124	java/lang/StringBuilder
+<     //   683: dup
+<     //   684: aload 8
+<     //   686: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   689: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   692: ldc -92
+<     //   694: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   697: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   700: invokestatic 193	com/mobclix/android/sdk/Mobclix:hasPref	(Ljava/lang/String;)Z
+<     //   703: ifeq +208 -> 911
+<     //   706: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+<     //   709: aload 8
+<     //   711: new 124	java/lang/StringBuilder
+<     //   714: dup
+<     //   715: aload 8
+<     //   717: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   720: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   723: ldc -92
+<     //   725: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   728: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   731: invokestatic 196	com/mobclix/android/sdk/Mobclix:getPref	(Ljava/lang/String;)Ljava/lang/String;
+<     //   734: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   737: pop
+<     //   738: iload_2
+<     //   739: iconst_1
+<     //   740: iadd
+<     //   741: istore_2
+<     //   742: goto -504 -> 238
+<     //   745: astore 10
+<     //   747: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+<     //   750: aload 8
+<     //   752: iconst_1
+<     //   753: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   756: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   759: pop
+<     //   760: goto -175 -> 585
+<     //   763: astore 10
+<     //   765: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+<     //   768: aload 8
+<     //   770: ldc2_w 414
+<     //   773: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   776: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   779: pop
+<     //   780: goto -176 -> 604
+<     //   783: astore 10
+<     //   785: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+<     //   788: aload 8
+<     //   790: iconst_0
+<     //   791: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   794: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   797: pop
+<     //   798: goto -172 -> 626
+<     //   801: astore 10
+<     //   803: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+<     //   806: aload 8
+<     //   808: ldc2_w 416
+<     //   811: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   814: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   817: pop
+<     //   818: goto -173 -> 645
+<     //   821: astore 9
+<     //   823: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+<     //   826: aload 8
+<     //   828: iconst_1
+<     //   829: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   832: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   835: pop
+<     //   836: goto -169 -> 667
+<     //   839: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+<     //   842: aload 8
+<     //   844: iconst_1
+<     //   845: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   848: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   851: pop
+<     //   852: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+<     //   855: aload 8
+<     //   857: ldc2_w 414
+<     //   860: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   863: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   866: pop
+<     //   867: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+<     //   870: aload 8
+<     //   872: iconst_0
+<     //   873: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   876: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   879: pop
+<     //   880: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+<     //   883: aload 8
+<     //   885: ldc2_w 416
+<     //   888: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   891: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   894: pop
+<     //   895: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+<     //   898: aload 8
+<     //   900: iconst_1
+<     //   901: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   904: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   907: pop
+<     //   908: goto -241 -> 667
+<     //   911: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+<     //   914: aload 8
+<     //   916: ldc 66
+<     //   918: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   921: pop
+<     //   922: goto -184 -> 738
+<     //   925: aload_0
+<     //   926: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   929: aload_1
+<     //   930: new 124	java/lang/StringBuilder
+<     //   933: dup
+<     //   934: ldc_w 419
+<     //   937: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   940: iload_2
+<     //   941: invokevirtual 422	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+<     //   944: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   947: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   950: astore_1
+<     //   951: aload_0
+<     //   952: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   955: aload_1
+<     //   956: ldc_w 424
+<     //   959: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   962: astore_1
+<     //   963: iload_2
+<     //   964: iconst_1
+<     //   965: if_icmpne +1432 -> 2397
+<     //   968: iconst_1
+<     //   969: istore 5
+<     //   971: aload_0
+---
+>     //   537: aload 8
+>     //   539: iload_2
+>     //   540: aaload
+>     //   541: astore 7
+>     //   543: aload 7
+>     //   545: invokestatic 193	com/mobclix/android/sdk/Mobclix:hasPref	(Ljava/lang/String;)Z
+>     //   548: ifeq +292 -> 840
+>     //   551: aload 7
+>     //   553: invokestatic 196	com/mobclix/android/sdk/Mobclix:getPref	(Ljava/lang/String;)Ljava/lang/String;
+>     //   556: ldc_w 383
+>     //   559: invokevirtual 387	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
+>     //   562: astore 9
+>     //   564: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+>     //   567: aload 7
+>     //   569: aload 9
+>     //   571: iconst_0
+>     //   572: aaload
+>     //   573: ldc_w 392
+>     //   576: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   579: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   582: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   585: pop
+>     //   586: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+>     //   589: aload 7
+>     //   591: aload 9
+>     //   593: iconst_1
+>     //   594: aaload
+>     //   595: invokestatic 401	java/lang/Long:parseLong	(Ljava/lang/String;)J
+>     //   598: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   601: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   604: pop
+>     //   605: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+>     //   608: aload 7
+>     //   610: aload 9
+>     //   612: iconst_2
+>     //   613: aaload
+>     //   614: ldc_w 392
+>     //   617: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   620: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   623: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   626: pop
+>     //   627: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+>     //   630: aload 7
+>     //   632: aload 9
+>     //   634: iconst_3
+>     //   635: aaload
+>     //   636: invokestatic 401	java/lang/Long:parseLong	(Ljava/lang/String;)J
+>     //   639: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   642: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   645: pop
+>     //   646: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+>     //   649: aload 7
+>     //   651: aload 9
+>     //   653: iconst_4
+>     //   654: aaload
+>     //   655: ldc_w 392
+>     //   658: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   661: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   664: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   667: pop
+>     //   668: getstatic 170	com/mobclix/android/sdk/Mobclix:customAdSet	Ljava/util/HashMap;
+>     //   671: aload 7
+>     //   673: iconst_0
+>     //   674: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   677: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   680: pop
+>     //   681: new 124	java/lang/StringBuilder
+>     //   684: dup
+>     //   685: aload 7
+>     //   687: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   690: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   693: ldc -92
+>     //   695: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   698: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   701: invokestatic 193	com/mobclix/android/sdk/Mobclix:hasPref	(Ljava/lang/String;)Z
+>     //   704: ifeq +208 -> 912
+>     //   707: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+>     //   710: aload 7
+>     //   712: new 124	java/lang/StringBuilder
+>     //   715: dup
+>     //   716: aload 7
+>     //   718: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   721: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   724: ldc -92
+>     //   726: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   729: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   732: invokestatic 196	com/mobclix/android/sdk/Mobclix:getPref	(Ljava/lang/String;)Ljava/lang/String;
+>     //   735: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   738: pop
+>     //   739: iload_2
+>     //   740: iconst_1
+>     //   741: iadd
+>     //   742: istore_2
+>     //   743: goto -504 -> 239
+>     //   746: astore 10
+>     //   748: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+>     //   751: aload 7
+>     //   753: iconst_1
+>     //   754: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   757: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   760: pop
+>     //   761: goto -175 -> 586
+>     //   764: astore 10
+>     //   766: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+>     //   769: aload 7
+>     //   771: ldc2_w 414
+>     //   774: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   777: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   780: pop
+>     //   781: goto -176 -> 605
+>     //   784: astore 10
+>     //   786: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+>     //   789: aload 7
+>     //   791: iconst_0
+>     //   792: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   795: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   798: pop
+>     //   799: goto -172 -> 627
+>     //   802: astore 10
+>     //   804: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+>     //   807: aload 7
+>     //   809: ldc2_w 416
+>     //   812: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   815: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   818: pop
+>     //   819: goto -173 -> 646
+>     //   822: astore 9
+>     //   824: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+>     //   827: aload 7
+>     //   829: iconst_1
+>     //   830: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   833: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   836: pop
+>     //   837: goto -169 -> 668
+>     //   840: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+>     //   843: aload 7
+>     //   845: iconst_1
+>     //   846: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   849: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   852: pop
+>     //   853: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+>     //   856: aload 7
+>     //   858: ldc2_w 414
+>     //   861: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   864: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   867: pop
+>     //   868: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+>     //   871: aload 7
+>     //   873: iconst_0
+>     //   874: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   877: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   880: pop
+>     //   881: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+>     //   884: aload 7
+>     //   886: ldc2_w 416
+>     //   889: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   892: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   895: pop
+>     //   896: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+>     //   899: aload 7
+>     //   901: iconst_1
+>     //   902: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   905: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   908: pop
+>     //   909: goto -241 -> 668
+>     //   912: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+>     //   915: aload 7
+>     //   917: ldc 66
+>     //   919: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   922: pop
+>     //   923: goto -184 -> 739
+>     //   926: aload_0
+>     //   927: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   930: aload_1
+>     //   931: new 124	java/lang/StringBuilder
+>     //   934: dup
+>     //   935: ldc_w 419
+>     //   938: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   941: iload_2
+>     //   942: invokevirtual 422	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+>     //   945: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   948: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   951: astore_1
+>     //   952: aload_0
+>     //   953: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   956: aload_1
+>     //   957: ldc_w 424
+>     //   960: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   963: astore_1
+>     //   964: iload_2
+>     //   965: iconst_1
+>     //   966: if_icmpne +1432 -> 2398
+>     //   969: iconst_1
+>     //   970: istore 5
+783,1906c782,1906
+<     //   973: iload 5
+<     //   975: invokespecial 426	com/mobclix/android/sdk/FetchRemoteConfig:getConfigUrl	(Z)Ljava/lang/String;
+<     //   978: putfield 428	com/mobclix/android/sdk/FetchRemoteConfig:url	Ljava/lang/String;
+<     //   981: aload_0
+<     //   982: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   985: aload_1
+<     //   986: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   989: astore_1
+<     //   990: aload_0
+<     //   991: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   994: aload_1
+<     //   995: ldc_w 430
+<     //   998: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   1001: astore_1
+<     //   1002: ldc 66
+<     //   1004: astore 13
+<     //   1006: new 432	com/mobclix/android/sdk/Mobclix$MobclixHttpClient
+<     //   1009: dup
+<     //   1010: aload_0
+<     //   1011: getfield 428	com/mobclix/android/sdk/FetchRemoteConfig:url	Ljava/lang/String;
+<     //   1014: invokespecial 433	com/mobclix/android/sdk/Mobclix$MobclixHttpClient:<init>	(Ljava/lang/String;)V
+<     //   1017: invokevirtual 436	com/mobclix/android/sdk/Mobclix$MobclixHttpClient:execute	()Lorg/apache/http/HttpResponse;
+<     //   1020: astore 7
+<     //   1022: aload 7
+<     //   1024: invokeinterface 98 1 0
+<     //   1029: astore 12
+<     //   1031: aload 7
+<     //   1033: invokeinterface 440 1 0
+<     //   1038: invokeinterface 446 1 0
+<     //   1043: sipush 200
+<     //   1046: if_icmpne +2263 -> 3309
+<     //   1049: new 448	java/io/BufferedReader
+<     //   1052: dup
+<     //   1053: new 450	java/io/InputStreamReader
+<     //   1056: dup
+<     //   1057: aload 12
+<     //   1059: invokeinterface 112 1 0
+<     //   1064: invokespecial 453	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;)V
+<     //   1067: sipush 8000
+<     //   1070: invokespecial 456	java/io/BufferedReader:<init>	(Ljava/io/Reader;I)V
+<     //   1073: astore 9
+<     //   1075: aload 6
+<     //   1077: astore 11
+<     //   1079: aload_1
+<     //   1080: astore 7
+<     //   1082: aload 9
+<     //   1084: astore 10
+<     //   1086: aload 9
+<     //   1088: invokevirtual 459	java/io/BufferedReader:readLine	()Ljava/lang/String;
+<     //   1091: astore 8
+<     //   1093: aload 8
+<     //   1095: ifnonnull +1308 -> 2403
+<     //   1098: aload 6
+<     //   1100: astore 11
+<     //   1102: aload_1
+<     //   1103: astore 7
+<     //   1105: aload 9
+<     //   1107: astore 10
+<     //   1109: aload 12
+<     //   1111: invokeinterface 462 1 0
+<     //   1116: aload 6
+<     //   1118: astore 11
+<     //   1120: aload_1
+<     //   1121: astore 7
+<     //   1123: aload 9
+<     //   1125: astore 10
+<     //   1127: aload_0
+<     //   1128: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1131: aload_1
+<     //   1132: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1135: astore_1
+<     //   1136: aload 6
+<     //   1138: astore 11
+<     //   1140: aload_1
+<     //   1141: astore 7
+<     //   1143: aload 9
+<     //   1145: astore 10
+<     //   1147: aload_0
+<     //   1148: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1151: aload_1
+<     //   1152: ldc_w 464
+<     //   1155: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   1158: astore 12
+<     //   1160: aload 6
+<     //   1162: astore 11
+<     //   1164: aload 12
+<     //   1166: astore 7
+<     //   1168: aload 9
+<     //   1170: astore 10
+<     //   1172: aload 13
+<     //   1174: ldc 66
+<     //   1176: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   1179: istore 5
+<     //   1181: aload 6
+<     //   1183: astore 8
+<     //   1185: aload 9
+<     //   1187: astore 7
+<     //   1189: aload 12
+<     //   1191: astore_1
+<     //   1192: iload 5
+<     //   1194: ifne +1141 -> 2335
+<     //   1197: aload 6
+<     //   1199: astore 8
+<     //   1201: aload 12
+<     //   1203: astore_1
+<     //   1204: aload 9
+<     //   1206: astore 10
+<     //   1208: aload_0
+<     //   1209: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1212: aload 12
+<     //   1214: ldc_w 466
+<     //   1217: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   1220: astore 7
+<     //   1222: aload 6
+<     //   1224: astore 8
+<     //   1226: aload 7
+<     //   1228: astore_1
+<     //   1229: aload 9
+<     //   1231: astore 10
+<     //   1233: new 468	org/json/JSONObject
+<     //   1236: dup
+<     //   1237: aload 13
+<     //   1239: invokespecial 469	org/json/JSONObject:<init>	(Ljava/lang/String;)V
+<     //   1242: astore 11
+<     //   1244: aload 6
+<     //   1246: astore 8
+<     //   1248: aload 7
+<     //   1250: astore_1
+<     //   1251: aload 9
+<     //   1253: astore 10
+<     //   1255: aload_0
+<     //   1256: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1259: aload 7
+<     //   1261: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1264: astore 7
+<     //   1266: aload 6
+<     //   1268: astore 8
+<     //   1270: aload 7
+<     //   1272: astore_1
+<     //   1273: aload 9
+<     //   1275: astore 10
+<     //   1277: aload_0
+<     //   1278: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1281: aload 7
+<     //   1283: ldc_w 471
+<     //   1286: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   1289: astore 7
+<     //   1291: aload 6
+<     //   1293: astore 8
+<     //   1295: aload 7
+<     //   1297: astore_1
+<     //   1298: aload 9
+<     //   1300: astore 10
+<     //   1302: aload_0
+<     //   1303: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1306: aload 13
+<     //   1308: ldc_w 473
+<     //   1311: getstatic 304	com/mobclix/android/sdk/MobclixInstrumentation:STARTUP	Ljava/lang/String;
+<     //   1314: invokevirtual 477	com/mobclix/android/sdk/MobclixInstrumentation:addInfo	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+<     //   1317: aload 6
+<     //   1319: astore 8
+<     //   1321: aload 7
+<     //   1323: astore_1
+<     //   1324: aload 9
+<     //   1326: astore 10
+<     //   1328: aload_0
+<     //   1329: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1332: aload 11
+<     //   1334: ldc_w 479
+<     //   1337: getstatic 304	com/mobclix/android/sdk/MobclixInstrumentation:STARTUP	Ljava/lang/String;
+<     //   1340: invokevirtual 477	com/mobclix/android/sdk/MobclixInstrumentation:addInfo	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+<     //   1343: aload 6
+<     //   1345: astore 8
+<     //   1347: aload 7
+<     //   1349: astore_1
+<     //   1350: aload 9
+<     //   1352: astore 10
+<     //   1354: aload_0
+<     //   1355: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1358: aload 7
+<     //   1360: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1363: astore 7
+<     //   1365: aload 6
+<     //   1367: astore 8
+<     //   1369: aload 7
+<     //   1371: astore_1
+<     //   1372: aload 9
+<     //   1374: astore 10
+<     //   1376: aload_0
+<     //   1377: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1380: aload 7
+<     //   1382: ldc_w 481
+<     //   1385: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   1388: astore 7
+<     //   1390: aload 6
+<     //   1392: astore 8
+<     //   1394: aload 7
+<     //   1396: astore_1
+<     //   1397: aload 9
+<     //   1399: astore 10
+<     //   1401: aload 11
+<     //   1403: ldc_w 483
+<     //   1406: invokevirtual 487	org/json/JSONObject:getJSONObject	(Ljava/lang/String;)Lorg/json/JSONObject;
+<     //   1409: astore 12
+<     //   1411: aload 6
+<     //   1413: astore 8
+<     //   1415: aload 7
+<     //   1417: astore_1
+<     //   1418: aload 9
+<     //   1420: astore 10
+<     //   1422: aload_0
+<     //   1423: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1426: aload 12
+<     //   1428: ldc_w 309
+<     //   1431: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1434: putfield 184	com/mobclix/android/sdk/Mobclix:configServer	Ljava/lang/String;
+<     //   1437: aload 6
+<     //   1439: astore 8
+<     //   1441: aload 7
+<     //   1443: astore_1
+<     //   1444: aload 9
+<     //   1446: astore 10
+<     //   1448: aload_0
+<     //   1449: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1452: aload 12
+<     //   1454: ldc_w 492
+<     //   1457: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1460: putfield 357	com/mobclix/android/sdk/Mobclix:adServer	Ljava/lang/String;
+<     //   1463: aload 6
+<     //   1465: astore 8
+<     //   1467: aload 7
+<     //   1469: astore_1
+<     //   1470: aload 9
+<     //   1472: astore 10
+<     //   1474: aload_0
+<     //   1475: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1478: aload 12
+<     //   1480: ldc_w 494
+<     //   1483: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1486: putfield 362	com/mobclix/android/sdk/Mobclix:analyticsServer	Ljava/lang/String;
+<     //   1489: aload 6
+<     //   1491: astore 8
+<     //   1493: aload 7
+<     //   1495: astore_1
+<     //   1496: aload 9
+<     //   1498: astore 10
+<     //   1500: aload_0
+<     //   1501: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1504: aload 12
+<     //   1506: ldc_w 496
+<     //   1509: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1512: putfield 367	com/mobclix/android/sdk/Mobclix:vcServer	Ljava/lang/String;
+<     //   1515: aload 6
+<     //   1517: astore 8
+<     //   1519: aload 7
+<     //   1521: astore_1
+<     //   1522: aload 9
+<     //   1524: astore 10
+<     //   1526: aload_0
+<     //   1527: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1530: aload 12
+<     //   1532: ldc_w 498
+<     //   1535: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1538: putfield 372	com/mobclix/android/sdk/Mobclix:feedbackServer	Ljava/lang/String;
+<     //   1541: aload 6
+<     //   1543: astore 8
+<     //   1545: aload 7
+<     //   1547: astore_1
+<     //   1548: aload 9
+<     //   1550: astore 10
+<     //   1552: aload_0
+<     //   1553: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1556: aload 12
+<     //   1558: ldc_w 500
+<     //   1561: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   1564: putfield 503	com/mobclix/android/sdk/Mobclix:debugServer	Ljava/lang/String;
+<     //   1567: aload 6
+<     //   1569: astore 8
+<     //   1571: aload 7
+<     //   1573: astore_1
+<     //   1574: aload 9
+<     //   1576: astore 10
+<     //   1578: aload_0
+<     //   1579: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1582: aload 11
+<     //   1584: ldc_w 505
+<     //   1587: invokevirtual 508	org/json/JSONObject:getInt	(Ljava/lang/String;)I
+<     //   1590: sipush 1000
+<     //   1593: imul
+<     //   1594: putfield 341	com/mobclix/android/sdk/Mobclix:idleTimeout	I
+<     //   1597: aload 9
+<     //   1599: astore 10
+<     //   1601: aload_0
+<     //   1602: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1605: aload 11
+<     //   1607: ldc_w 510
+<     //   1610: invokevirtual 508	org/json/JSONObject:getInt	(Ljava/lang/String;)I
+<     //   1613: sipush 1000
+<     //   1616: imul
+<     //   1617: putfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+<     //   1620: aload 6
+<     //   1622: astore 8
+<     //   1624: aload 7
+<     //   1626: astore_1
+<     //   1627: aload 9
+<     //   1629: astore 10
+<     //   1631: aload_0
+<     //   1632: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1635: aload_0
+<     //   1636: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1639: getfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+<     //   1642: aload_0
+<     //   1643: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1646: getfield 341	com/mobclix/android/sdk/Mobclix:idleTimeout	I
+<     //   1649: invokestatic 516	java/lang/Math:min	(II)I
+<     //   1652: putfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+<     //   1655: aload 6
+<     //   1657: astore 8
+<     //   1659: aload 7
+<     //   1661: astore_1
+<     //   1662: aload 9
+<     //   1664: astore 10
+<     //   1666: aload_0
+<     //   1667: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   1670: aload 7
+<     //   1672: ldc_w 518
+<     //   1675: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+<     //   1678: astore 7
+<     //   1680: aload 6
+<     //   1682: astore 8
+<     //   1684: aload 7
+<     //   1686: astore_1
+<     //   1687: aload 9
+<     //   1689: astore 10
+<     //   1691: new 58	java/util/HashMap
+<     //   1694: dup
+<     //   1695: invokespecial 519	java/util/HashMap:<init>	()V
+<     //   1698: astore 12
+<     //   1700: aload 6
+<     //   1702: astore 8
+<     //   1704: aload 7
+<     //   1706: astore_1
+<     //   1707: aload 9
+<     //   1709: astore 10
+<     //   1711: aload 12
+<     //   1713: ldc -67
+<     //   1715: aload_0
+<     //   1716: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1719: getfield 184	com/mobclix/android/sdk/Mobclix:configServer	Ljava/lang/String;
+<     //   1722: invokeinterface 522 3 0
+<     //   1727: pop
+<     //   1728: aload 6
+<     //   1730: astore 8
+<     //   1732: aload 7
+<     //   1734: astore_1
+<     //   1735: aload 9
+<     //   1737: astore 10
+<     //   1739: aload 12
+<     //   1741: ldc_w 354
+<     //   1744: aload_0
+<     //   1745: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1748: getfield 357	com/mobclix/android/sdk/Mobclix:adServer	Ljava/lang/String;
+<     //   1751: invokeinterface 522 3 0
+<     //   1756: pop
+<     //   1757: aload 6
+<     //   1759: astore 8
+<     //   1761: aload 7
+<     //   1763: astore_1
+<     //   1764: aload 9
+<     //   1766: astore 10
+<     //   1768: aload 12
+<     //   1770: ldc_w 359
+<     //   1773: aload_0
+<     //   1774: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1777: getfield 362	com/mobclix/android/sdk/Mobclix:analyticsServer	Ljava/lang/String;
+<     //   1780: invokeinterface 522 3 0
+<     //   1785: pop
+<     //   1786: aload 6
+<     //   1788: astore 8
+<     //   1790: aload 7
+<     //   1792: astore_1
+<     //   1793: aload 9
+<     //   1795: astore 10
+<     //   1797: aload 12
+<     //   1799: ldc_w 364
+<     //   1802: aload_0
+<     //   1803: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1806: getfield 367	com/mobclix/android/sdk/Mobclix:vcServer	Ljava/lang/String;
+<     //   1809: invokeinterface 522 3 0
+<     //   1814: pop
+<     //   1815: aload 6
+<     //   1817: astore 8
+<     //   1819: aload 7
+<     //   1821: astore_1
+<     //   1822: aload 9
+<     //   1824: astore 10
+<     //   1826: aload 12
+<     //   1828: ldc_w 369
+<     //   1831: aload_0
+<     //   1832: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1835: getfield 372	com/mobclix/android/sdk/Mobclix:feedbackServer	Ljava/lang/String;
+<     //   1838: invokeinterface 522 3 0
+<     //   1843: pop
+<     //   1844: aload 6
+<     //   1846: astore 8
+<     //   1848: aload 7
+<     //   1850: astore_1
+<     //   1851: aload 9
+<     //   1853: astore 10
+<     //   1855: aload 12
+<     //   1857: ldc_w 332
+<     //   1860: aload_0
+<     //   1861: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1864: getfield 341	com/mobclix/android/sdk/Mobclix:idleTimeout	I
+<     //   1867: invokestatic 525	java/lang/Integer:toString	(I)Ljava/lang/String;
+<     //   1870: invokeinterface 522 3 0
+<     //   1875: pop
+<     //   1876: aload 6
+<     //   1878: astore 8
+<     //   1880: aload 7
+<     //   1882: astore_1
+<     //   1883: aload 9
+<     //   1885: astore 10
+<     //   1887: aload 12
+<     //   1889: ldc_w 343
+<     //   1892: aload_0
+<     //   1893: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   1896: getfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+<     //   1899: invokestatic 525	java/lang/Integer:toString	(I)Ljava/lang/String;
+<     //   1902: invokeinterface 522 3 0
+<     //   1907: pop
+<     //   1908: aload 6
+<     //   1910: astore 8
+<     //   1912: aload 7
+<     //   1914: astore_1
+<     //   1915: aload 9
+<     //   1917: astore 10
+<     //   1919: aload 11
+<     //   1921: ldc_w 527
+<     //   1924: invokevirtual 531	org/json/JSONObject:getJSONArray	(Ljava/lang/String;)Lorg/json/JSONArray;
+<     //   1927: astore 14
+<     //   1929: iconst_0
+<     //   1930: istore_3
+<     //   1931: aload 6
+<     //   1933: astore 8
+<     //   1935: aload 7
+<     //   1937: astore_1
+<     //   1938: aload 9
+<     //   1940: astore 10
+<     //   1942: aload 14
+<     //   1944: invokevirtual 536	org/json/JSONArray:length	()I
+<     //   1947: istore 4
+<     //   1949: iload_3
+<     //   1950: iload 4
+<     //   1952: if_icmplt +505 -> 2457
+<     //   1955: aload 9
+<     //   1957: astore 10
+<     //   1959: aload 11
+<     //   1961: ldc_w 538
+<     //   1964: invokevirtual 487	org/json/JSONObject:getJSONObject	(Ljava/lang/String;)Lorg/json/JSONObject;
+<     //   1967: astore_1
+<     //   1968: aload 9
+<     //   1970: astore 10
+<     //   1972: getstatic 541	com/mobclix/android/sdk/MobclixInstrumentation:MC_DEBUG_CATS	[Ljava/lang/String;
+<     //   1975: astore 13
+<     //   1977: aload 9
+<     //   1979: astore 10
+<     //   1981: aload 13
+<     //   1983: arraylength
+<     //   1984: istore 4
+<     //   1986: iconst_0
+<     //   1987: istore_3
+<     //   1988: iload_3
+<     //   1989: iload 4
+<     //   1991: if_icmplt +1137 -> 3128
+<     //   1994: aload 9
+<     //   1996: astore 10
+<     //   1998: aload_1
+<     //   1999: invokevirtual 545	org/json/JSONObject:keys	()Ljava/util/Iterator;
+<     //   2002: astore 8
+<     //   2004: aload 9
+<     //   2006: astore 10
+<     //   2008: aload 8
+<     //   2010: invokeinterface 551 1 0
+<     //   2015: istore 5
+<     //   2017: iload 5
+<     //   2019: ifne +1147 -> 3166
+<     //   2022: aload 9
+<     //   2024: astore 10
+<     //   2026: aload 11
+<     //   2028: ldc_w 553
+<     //   2031: invokevirtual 531	org/json/JSONObject:getJSONArray	(Ljava/lang/String;)Lorg/json/JSONArray;
+<     //   2034: astore_1
+<     //   2035: aload_1
+<     //   2036: astore 6
+<     //   2038: aload 9
+<     //   2040: astore 10
+<     //   2042: aload 11
+<     //   2044: ldc_w 555
+<     //   2047: invokevirtual 531	org/json/JSONObject:getJSONArray	(Ljava/lang/String;)Lorg/json/JSONArray;
+<     //   2050: astore_1
+<     //   2051: iconst_0
+<     //   2052: istore_3
+<     //   2053: aload 9
+<     //   2055: astore 10
+<     //   2057: aload_1
+<     //   2058: invokevirtual 536	org/json/JSONArray:length	()I
+<     //   2061: istore 4
+<     //   2063: iload_3
+<     //   2064: iload 4
+<     //   2066: if_icmplt +1214 -> 3280
+<     //   2069: aload 6
+<     //   2071: astore 8
+<     //   2073: aload 7
+<     //   2075: astore_1
+<     //   2076: aload 9
+<     //   2078: astore 10
+<     //   2080: aload_0
+<     //   2081: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   2084: getfield 273	com/mobclix/android/sdk/Mobclix:previousDeviceId	Ljava/lang/String;
+<     //   2087: ifnull +27 -> 2114
+<     //   2090: aload 6
+<     //   2092: astore 8
+<     //   2094: aload 7
+<     //   2096: astore_1
+<     //   2097: aload 9
+<     //   2099: astore 10
+<     //   2101: ldc_w 328
+<     //   2104: aload_0
+<     //   2105: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   2108: getfield 330	com/mobclix/android/sdk/Mobclix:deviceId	Ljava/lang/String;
+<     //   2111: invokestatic 167	com/mobclix/android/sdk/Mobclix:addPref	(Ljava/lang/String;Ljava/lang/String;)V
+<     //   2114: aload 6
+<     //   2116: astore 8
+<     //   2118: aload 7
+<     //   2120: astore_1
+<     //   2121: aload 9
+<     //   2123: astore 10
+<     //   2125: aload 12
+<     //   2127: ldc_w 260
+<     //   2130: ldc_w 557
+<     //   2133: invokeinterface 522 3 0
+<     //   2138: pop
+<     //   2139: aload 6
+<     //   2141: astore 8
+<     //   2143: aload 7
+<     //   2145: astore_1
+<     //   2146: aload 9
+<     //   2148: astore 10
+<     //   2150: aload 12
+<     //   2152: ldc_w 264
+<     //   2155: ldc_w 557
+<     //   2158: invokeinterface 522 3 0
+<     //   2163: pop
+<     //   2164: aload 6
+<     //   2166: astore 8
+<     //   2168: aload 7
+<     //   2170: astore_1
+<     //   2171: aload 9
+<     //   2173: astore 10
+<     //   2175: aload 12
+<     //   2177: ldc_w 268
+<     //   2180: ldc_w 557
+<     //   2183: invokeinterface 522 3 0
+<     //   2188: pop
+<     //   2189: aload 6
+<     //   2191: astore 8
+<     //   2193: aload 7
+<     //   2195: astore_1
+<     //   2196: aload 9
+<     //   2198: astore 10
+<     //   2200: aload 12
+<     //   2202: invokestatic 560	com/mobclix/android/sdk/Mobclix:addPref	(Ljava/util/Map;)V
+<     //   2205: aload 6
+<     //   2207: astore 8
+<     //   2209: aload 7
+<     //   2211: astore_1
+<     //   2212: aload 9
+<     //   2214: astore 10
+<     //   2216: ldc_w 292
+<     //   2219: invokestatic 193	com/mobclix/android/sdk/Mobclix:hasPref	(Ljava/lang/String;)Z
+<     //   2222: ifeq +20 -> 2242
+<     //   2225: aload 6
+<     //   2227: astore 8
+<     //   2229: aload 7
+<     //   2231: astore_1
+<     //   2232: aload 9
+<     //   2234: astore 10
+<     //   2236: ldc_w 292
+<     //   2239: invokestatic 563	com/mobclix/android/sdk/Mobclix:removePref	(Ljava/lang/String;)V
+<     //   2242: aload 6
+<     //   2244: astore 8
+<     //   2246: aload 7
+<     //   2248: astore_1
+<     //   2249: aload 9
+<     //   2251: astore 10
+<     //   2253: aload_0
+<     //   2254: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   2257: aload 7
+<     //   2259: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   2262: astore 7
+<     //   2264: aload 6
+<     //   2266: astore 8
+<     //   2268: aload 7
+<     //   2270: astore_1
+<     //   2271: aload 9
+<     //   2273: astore 10
+<     //   2275: aload_0
+<     //   2276: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   2279: aload 7
+<     //   2281: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   2284: astore 7
+<     //   2286: aload 6
+<     //   2288: astore 8
+<     //   2290: aload 7
+<     //   2292: astore_1
+<     //   2293: aload 9
+<     //   2295: astore 10
+<     //   2297: aload_0
+<     //   2298: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   2301: iconst_0
+<     //   2302: putfield 375	com/mobclix/android/sdk/Mobclix:isOfflineSession	Z
+<     //   2305: aload 6
+<     //   2307: astore 8
+<     //   2309: aload 7
+<     //   2311: astore_1
+<     //   2312: aload 9
+<     //   2314: astore 10
+<     //   2316: aload_0
+<     //   2317: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   2320: iconst_1
+<     //   2321: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   2324: aload 7
+<     //   2326: astore_1
+<     //   2327: aload 9
+<     //   2329: astore 7
+<     //   2331: aload 6
+<     //   2333: astore 8
+<     //   2335: aload 7
+<     //   2337: invokevirtual 564	java/io/BufferedReader:close	()V
+<     //   2340: aload 8
+<     //   2342: astore 6
+<     //   2344: iconst_0
+<     //   2345: ifeq +11 -> 2356
+<     //   2348: new 566	java/lang/NullPointerException
+<     //   2351: dup
+<     //   2352: invokespecial 567	java/lang/NullPointerException:<init>	()V
+<     //   2355: athrow
+<     //   2356: aload_0
+<     //   2357: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   2360: aload_1
+<     //   2361: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   2364: astore_1
+<     //   2365: aload_0
+<     //   2366: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+<     //   2369: aload_1
+<     //   2370: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+<     //   2373: astore 8
+<     //   2375: aload 6
+<     //   2377: astore 7
+<     //   2379: aload 8
+<     //   2381: astore_1
+<     //   2382: iload_2
+<     //   2383: iconst_1
+<     //   2384: if_icmpgt -2105 -> 279
+<     //   2387: iload_2
+<     //   2388: iconst_1
+<     //   2389: iadd
+<     //   2390: istore_2
+<     //   2391: aload 8
+<     //   2393: astore_1
+<     //   2394: goto -2130 -> 264
+<     //   2397: iconst_0
+<     //   2398: istore 5
+<     //   2400: goto -1429 -> 971
+<     //   2403: aload 6
+<     //   2405: astore 11
+<     //   2407: aload_1
+<     //   2408: astore 7
+<     //   2410: aload 9
+<     //   2412: astore 10
+<     //   2414: new 124	java/lang/StringBuilder
+<     //   2417: dup
+<     //   2418: aload 13
+<     //   2420: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   2423: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   2426: aload 8
+<     //   2428: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2431: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   2434: astore 13
+<     //   2436: aload 6
+<     //   2438: astore 11
+<     //   2440: aload_1
+<     //   2441: astore 7
+<     //   2443: aload 9
+<     //   2445: astore 10
+<     //   2447: aload 9
+<     //   2449: invokevirtual 459	java/io/BufferedReader:readLine	()Ljava/lang/String;
+<     //   2452: astore 8
+<     //   2454: goto -1361 -> 1093
+<     //   2457: aload 6
+<     //   2459: astore 8
+<     //   2461: aload 7
+<     //   2463: astore_1
+<     //   2464: aload 9
+<     //   2466: astore 10
+<     //   2468: aload 14
+<     //   2470: iload_3
+<     //   2471: invokevirtual 570	org/json/JSONArray:getJSONObject	(I)Lorg/json/JSONObject;
+<     //   2474: astore 15
+<     //   2476: aload 6
+<     //   2478: astore 8
+<     //   2480: aload 7
+<     //   2482: astore_1
+<     //   2483: aload 9
+<     //   2485: astore 10
+<     //   2487: aload 15
+<     //   2489: ldc_w 572
+<     //   2492: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   2495: astore 13
+<     //   2497: aload 6
+<     //   2499: astore 8
+<     //   2501: aload 7
+<     //   2503: astore_1
+<     //   2504: aload 9
+<     //   2506: astore 10
+<     //   2508: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+<     //   2511: aload 13
+<     //   2513: aload 15
+<     //   2515: ldc_w 573
+<     //   2518: invokevirtual 576	org/json/JSONObject:getBoolean	(Ljava/lang/String;)Z
+<     //   2521: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   2524: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2527: pop
+<     //   2528: aload 6
+<     //   2530: astore 8
+<     //   2532: aload 7
+<     //   2534: astore_1
+<     //   2535: aload 9
+<     //   2537: astore 10
+<     //   2539: aload 15
+<     //   2541: ldc_w 578
+<     //   2544: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+<     //   2547: ldc2_w 582
+<     //   2550: lcmp
+<     //   2551: ifne +346 -> 2897
+<     //   2554: aload 6
+<     //   2556: astore 8
+<     //   2558: aload 7
+<     //   2560: astore_1
+<     //   2561: aload 9
+<     //   2563: astore 10
+<     //   2565: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+<     //   2568: aload 13
+<     //   2570: ldc2_w 582
+<     //   2573: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   2576: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2579: pop
+<     //   2580: aload 6
+<     //   2582: astore 8
+<     //   2584: aload 7
+<     //   2586: astore_1
+<     //   2587: aload 9
+<     //   2589: astore 10
+<     //   2591: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+<     //   2594: aload 13
+<     //   2596: aload 15
+<     //   2598: ldc_w 584
+<     //   2601: invokevirtual 576	org/json/JSONObject:getBoolean	(Ljava/lang/String;)Z
+<     //   2604: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   2607: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2610: pop
+<     //   2611: aload 6
+<     //   2613: astore 8
+<     //   2615: aload 7
+<     //   2617: astore_1
+<     //   2618: aload 9
+<     //   2620: astore 10
+<     //   2622: aload 15
+<     //   2624: ldc_w 586
+<     //   2627: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+<     //   2630: ldc2_w 582
+<     //   2633: lcmp
+<     //   2634: ifne +366 -> 3000
+<     //   2637: aload 6
+<     //   2639: astore 8
+<     //   2641: aload 7
+<     //   2643: astore_1
+<     //   2644: aload 9
+<     //   2646: astore 10
+<     //   2648: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+<     //   2651: aload 13
+<     //   2653: ldc2_w 582
+<     //   2656: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   2659: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2662: pop
+<     //   2663: aload 6
+<     //   2665: astore 8
+<     //   2667: aload 7
+<     //   2669: astore_1
+<     //   2670: aload 9
+<     //   2672: astore 10
+<     //   2674: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+<     //   2677: aload 13
+<     //   2679: aload 15
+<     //   2681: ldc_w 584
+<     //   2684: invokevirtual 576	org/json/JSONObject:getBoolean	(Ljava/lang/String;)Z
+<     //   2687: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   2690: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2693: pop
+<     //   2694: aload 6
+<     //   2696: astore 8
+<     //   2698: aload 7
+<     //   2700: astore_1
+<     //   2701: aload 9
+<     //   2703: astore 10
+<     //   2705: aload 12
+<     //   2707: aload 13
+<     //   2709: new 124	java/lang/StringBuilder
+<     //   2712: dup
+<     //   2713: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+<     //   2716: aload 13
+<     //   2718: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2721: checkcast 172	java/lang/Boolean
+<     //   2724: invokevirtual 589	java/lang/Boolean:booleanValue	()Z
+<     //   2727: invokestatic 591	java/lang/Boolean:toString	(Z)Ljava/lang/String;
+<     //   2730: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   2733: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   2736: ldc_w 383
+<     //   2739: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2742: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+<     //   2745: aload 13
+<     //   2747: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2750: checkcast 397	java/lang/Long
+<     //   2753: invokevirtual 592	java/lang/Long:toString	()Ljava/lang/String;
+<     //   2756: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2759: ldc_w 383
+<     //   2762: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2765: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+<     //   2768: aload 13
+<     //   2770: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2773: checkcast 172	java/lang/Boolean
+<     //   2776: invokevirtual 589	java/lang/Boolean:booleanValue	()Z
+<     //   2779: invokestatic 591	java/lang/Boolean:toString	(Z)Ljava/lang/String;
+<     //   2782: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2785: ldc_w 383
+<     //   2788: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2791: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+<     //   2794: aload 13
+<     //   2796: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2799: checkcast 397	java/lang/Long
+<     //   2802: invokevirtual 592	java/lang/Long:toString	()Ljava/lang/String;
+<     //   2805: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2808: ldc_w 383
+<     //   2811: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2814: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+<     //   2817: aload 13
+<     //   2819: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2822: checkcast 172	java/lang/Boolean
+<     //   2825: invokevirtual 589	java/lang/Boolean:booleanValue	()Z
+<     //   2828: invokestatic 591	java/lang/Boolean:toString	(Z)Ljava/lang/String;
+<     //   2831: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2834: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   2837: invokeinterface 522 3 0
+<     //   2842: pop
+<     //   2843: aload 9
+<     //   2845: astore 10
+<     //   2847: aload 15
+<     //   2849: ldc_w 593
+<     //   2852: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   2855: astore_1
+<     //   2856: aload 9
+<     //   2858: astore 10
+<     //   2860: aload_1
+<     //   2861: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+<     //   2864: aload 13
+<     //   2866: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2869: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2872: ifeq +186 -> 3058
+<     //   2875: aload 9
+<     //   2877: astore 10
+<     //   2879: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+<     //   2882: aload 13
+<     //   2884: ldc 66
+<     //   2886: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2889: pop
+<     //   2890: iload_3
+<     //   2891: iconst_1
+<     //   2892: iadd
+<     //   2893: istore_3
+<     //   2894: goto -963 -> 1931
+<     //   2897: aload 6
+<     //   2899: astore 8
+<     //   2901: aload 7
+<     //   2903: astore_1
+<     //   2904: aload 9
+<     //   2906: astore 10
+<     //   2908: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+<     //   2911: aload 13
+<     //   2913: aload 15
+<     //   2915: ldc_w 578
+<     //   2918: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+<     //   2921: ldc2_w 594
+<     //   2924: lmul
+<     //   2925: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   2928: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   2931: pop
+<     //   2932: goto -352 -> 2580
+<     //   2935: astore 6
+<     //   2937: aload 8
+<     //   2939: astore 11
+<     //   2941: aload_1
+<     //   2942: astore 7
+<     //   2944: aload 9
+<     //   2946: astore 10
+<     //   2948: aload_0
+<     //   2949: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   2952: iconst_m1
+<     //   2953: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   2956: aload 9
+<     //   2958: astore 7
+<     //   2960: goto -625 -> 2335
+<     //   2963: astore_1
+<     //   2964: aload 7
+<     //   2966: astore_1
+<     //   2967: aload 11
+<     //   2969: astore 6
+<     //   2971: aload 9
+<     //   2973: astore 10
+<     //   2975: aload_0
+<     //   2976: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   2979: iconst_m1
+<     //   2980: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   2983: aload 9
+<     //   2985: invokevirtual 564	java/io/BufferedReader:close	()V
+<     //   2988: iconst_0
+<     //   2989: ifeq -633 -> 2356
+<     //   2992: new 566	java/lang/NullPointerException
+<     //   2995: dup
+<     //   2996: invokespecial 567	java/lang/NullPointerException:<init>	()V
+<     //   2999: athrow
+<     //   3000: aload 6
+<     //   3002: astore 8
+<     //   3004: aload 7
+<     //   3006: astore_1
+<     //   3007: aload 9
+<     //   3009: astore 10
+<     //   3011: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+<     //   3014: aload 13
+<     //   3016: aload 15
+<     //   3018: ldc_w 586
+<     //   3021: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+<     //   3024: ldc2_w 594
+<     //   3027: lmul
+<     //   3028: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+<     //   3031: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   3034: pop
+<     //   3035: goto -372 -> 2663
+<     //   3038: astore_1
+<     //   3039: aload 10
+<     //   3041: invokevirtual 564	java/io/BufferedReader:close	()V
+<     //   3044: iconst_0
+<     //   3045: ifeq +11 -> 3056
+<     //   3048: new 566	java/lang/NullPointerException
+<     //   3051: dup
+<     //   3052: invokespecial 567	java/lang/NullPointerException:<init>	()V
+<     //   3055: athrow
+<     //   3056: aload_1
+<     //   3057: athrow
+<     //   3058: aload 9
+<     //   3060: astore 10
+<     //   3062: new 124	java/lang/StringBuilder
+<     //   3065: dup
+<     //   3066: aload 13
+<     //   3068: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   3071: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   3074: ldc -92
+<     //   3076: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   3079: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   3082: invokestatic 563	com/mobclix/android/sdk/Mobclix:removePref	(Ljava/lang/String;)V
+<     //   3085: aload 9
+<     //   3087: astore 10
+<     //   3089: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+<     //   3092: aload 13
+<     //   3094: aload_1
+<     //   3095: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   3098: pop
+<     //   3099: goto -209 -> 2890
+<     //   3102: astore_1
+<     //   3103: aload 6
+<     //   3105: astore 8
+<     //   3107: aload 7
+<     //   3109: astore_1
+<     //   3110: aload 9
+<     //   3112: astore 10
+<     //   3114: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+<     //   3117: aload 13
+<     //   3119: ldc 66
+<     //   3121: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   3124: pop
+<     //   3125: goto -235 -> 2890
+<     //   3128: aload 13
+<     //   3130: iload_3
+<     //   3131: aaload
+<     //   3132: astore 8
+<     //   3134: aload 9
+<     //   3136: astore 10
+<     //   3138: new 124	java/lang/StringBuilder
+<     //   3141: dup
+<     //   3142: ldc_w 597
+<     //   3145: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   3148: aload 8
+<     //   3150: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   3153: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   3156: invokestatic 563	com/mobclix/android/sdk/Mobclix:removePref	(Ljava/lang/String;)V
+<     //   3159: iload_3
+<     //   3160: iconst_1
+<     //   3161: iadd
+<     //   3162: istore_3
+<     //   3163: goto -1175 -> 1988
+<     //   3166: aload 9
+<     //   3168: astore 10
+<     //   3170: aload 8
+<     //   3172: invokeinterface 601 1 0
+<     //   3177: checkcast 64	java/lang/String
+<     //   3180: astore 14
+<     //   3182: aload 9
+<     //   3184: astore 10
+<     //   3186: aload_1
+<     //   3187: aload 14
+<     //   3189: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+<     //   3192: astore 13
+<     //   3194: aload 9
+<     //   3196: astore 10
+<     //   3198: getstatic 604	com/mobclix/android/sdk/Mobclix:debugConfig	Ljava/util/HashMap;
+<     //   3201: aload 14
+<     //   3203: aload 13
+<     //   3205: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+<     //   3208: pop
+<     //   3209: aload 9
+<     //   3211: astore 10
+<     //   3213: new 124	java/lang/StringBuilder
+<     //   3216: dup
+<     //   3217: ldc_w 597
+<     //   3220: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   3223: aload 14
+<     //   3225: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   3228: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   3231: aload 13
+<     //   3233: invokestatic 167	com/mobclix/android/sdk/Mobclix:addPref	(Ljava/lang/String;Ljava/lang/String;)V
+<     //   3236: goto -1232 -> 2004
+<     //   3239: astore 13
+<     //   3241: aload 9
+<     //   3243: astore 10
+<     //   3245: getstatic 24	com/mobclix/android/sdk/FetchRemoteConfig:TAG	Ljava/lang/String;
+<     //   3248: new 124	java/lang/StringBuilder
+<     //   3251: dup
+<     //   3252: ldc_w 606
+<     //   3255: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   3258: aload 13
+<     //   3260: invokevirtual 607	java/lang/Exception:toString	()Ljava/lang/String;
+<     //   3263: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   3266: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   3269: invokestatic 613	android/util/Log:v	(Ljava/lang/String;Ljava/lang/String;)I
+<     //   3272: pop
+<     //   3273: goto -1269 -> 2004
+<     //   3276: astore_1
+<     //   3277: goto -1255 -> 2022
+<     //   3280: aload 9
+<     //   3282: astore 10
+<     //   3284: aload_0
+<     //   3285: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   3288: getfield 617	com/mobclix/android/sdk/Mobclix:nativeUrls	Ljava/util/List;
+<     //   3291: aload_1
+<     //   3292: iload_3
+<     //   3293: invokevirtual 619	org/json/JSONArray:getString	(I)Ljava/lang/String;
+<     //   3296: invokeinterface 624 2 0
+<     //   3301: pop
+<     //   3302: iload_3
+<     //   3303: iconst_1
+<     //   3304: iadd
+<     //   3305: istore_3
+<     //   3306: goto -1253 -> 2053
+<     //   3309: aload_0
+<     //   3310: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   3313: iconst_m1
+<     //   3314: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   3317: aconst_null
+<     //   3318: astore 7
+<     //   3320: aload 6
+<     //   3322: astore 8
+<     //   3324: goto -989 -> 2335
+<     //   3327: astore 7
+<     //   3329: aload_0
+<     //   3330: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   3333: iconst_m1
+<     //   3334: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   3337: goto -349 -> 2988
+<     //   3340: astore 6
+<     //   3342: aload_0
+<     //   3343: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   3346: iconst_m1
+<     //   3347: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   3350: goto -306 -> 3044
+<     //   3353: astore 6
+<     //   3355: aload_0
+<     //   3356: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+<     //   3359: iconst_m1
+<     //   3360: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+<     //   3363: goto -1023 -> 2340
+<     //   3366: astore_1
+<     //   3367: aconst_null
+<     //   3368: astore 10
+<     //   3370: goto -331 -> 3039
+<     //   3373: astore 7
+<     //   3375: aconst_null
+<     //   3376: astore 9
+<     //   3378: goto -407 -> 2971
+<     //   3381: astore_1
+<     //   3382: goto -1313 -> 2069
+<     //   3385: astore_1
+<     //   3386: goto -1348 -> 2038
+<     //   3389: astore_1
+<     //   3390: goto -1770 -> 1620
+---
+>     //   973: aload_0
+>     //   974: iload 5
+>     //   976: invokespecial 426	com/mobclix/android/sdk/FetchRemoteConfig:getConfigUrl	(Z)Ljava/lang/String;
+>     //   979: putfield 428	com/mobclix/android/sdk/FetchRemoteConfig:url	Ljava/lang/String;
+>     //   982: aload_0
+>     //   983: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   986: aload_1
+>     //   987: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   990: astore_1
+>     //   991: aload_0
+>     //   992: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   995: aload_1
+>     //   996: ldc_w 430
+>     //   999: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   1002: astore_1
+>     //   1003: ldc 66
+>     //   1005: astore 13
+>     //   1007: new 432	com/mobclix/android/sdk/Mobclix$MobclixHttpClient
+>     //   1010: dup
+>     //   1011: aload_0
+>     //   1012: getfield 428	com/mobclix/android/sdk/FetchRemoteConfig:url	Ljava/lang/String;
+>     //   1015: invokespecial 433	com/mobclix/android/sdk/Mobclix$MobclixHttpClient:<init>	(Ljava/lang/String;)V
+>     //   1018: invokevirtual 436	com/mobclix/android/sdk/Mobclix$MobclixHttpClient:execute	()Lorg/apache/http/HttpResponse;
+>     //   1021: astore 7
+>     //   1023: aload 7
+>     //   1025: invokeinterface 98 1 0
+>     //   1030: astore 12
+>     //   1032: aload 7
+>     //   1034: invokeinterface 440 1 0
+>     //   1039: invokeinterface 446 1 0
+>     //   1044: sipush 200
+>     //   1047: if_icmpne +2263 -> 3310
+>     //   1050: new 448	java/io/BufferedReader
+>     //   1053: dup
+>     //   1054: new 450	java/io/InputStreamReader
+>     //   1057: dup
+>     //   1058: aload 12
+>     //   1060: invokeinterface 112 1 0
+>     //   1065: invokespecial 453	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;)V
+>     //   1068: sipush 8000
+>     //   1071: invokespecial 456	java/io/BufferedReader:<init>	(Ljava/io/Reader;I)V
+>     //   1074: astore 9
+>     //   1076: aload 6
+>     //   1078: astore 11
+>     //   1080: aload_1
+>     //   1081: astore 7
+>     //   1083: aload 9
+>     //   1085: astore 10
+>     //   1087: aload 9
+>     //   1089: invokevirtual 459	java/io/BufferedReader:readLine	()Ljava/lang/String;
+>     //   1092: astore 8
+>     //   1094: aload 8
+>     //   1096: ifnonnull +1308 -> 2404
+>     //   1099: aload 6
+>     //   1101: astore 11
+>     //   1103: aload_1
+>     //   1104: astore 7
+>     //   1106: aload 9
+>     //   1108: astore 10
+>     //   1110: aload 12
+>     //   1112: invokeinterface 462 1 0
+>     //   1117: aload 6
+>     //   1119: astore 11
+>     //   1121: aload_1
+>     //   1122: astore 7
+>     //   1124: aload 9
+>     //   1126: astore 10
+>     //   1128: aload_0
+>     //   1129: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1132: aload_1
+>     //   1133: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1136: astore_1
+>     //   1137: aload 6
+>     //   1139: astore 11
+>     //   1141: aload_1
+>     //   1142: astore 7
+>     //   1144: aload 9
+>     //   1146: astore 10
+>     //   1148: aload_0
+>     //   1149: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1152: aload_1
+>     //   1153: ldc_w 464
+>     //   1156: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   1159: astore 12
+>     //   1161: aload 6
+>     //   1163: astore 11
+>     //   1165: aload 12
+>     //   1167: astore 7
+>     //   1169: aload 9
+>     //   1171: astore 10
+>     //   1173: aload 13
+>     //   1175: ldc 66
+>     //   1177: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   1180: istore 5
+>     //   1182: aload 6
+>     //   1184: astore 8
+>     //   1186: aload 9
+>     //   1188: astore 7
+>     //   1190: aload 12
+>     //   1192: astore_1
+>     //   1193: iload 5
+>     //   1195: ifne +1141 -> 2336
+>     //   1198: aload 6
+>     //   1200: astore 8
+>     //   1202: aload 12
+>     //   1204: astore_1
+>     //   1205: aload 9
+>     //   1207: astore 10
+>     //   1209: aload_0
+>     //   1210: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1213: aload 12
+>     //   1215: ldc_w 466
+>     //   1218: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   1221: astore 7
+>     //   1223: aload 6
+>     //   1225: astore 8
+>     //   1227: aload 7
+>     //   1229: astore_1
+>     //   1230: aload 9
+>     //   1232: astore 10
+>     //   1234: new 468	org/json/JSONObject
+>     //   1237: dup
+>     //   1238: aload 13
+>     //   1240: invokespecial 469	org/json/JSONObject:<init>	(Ljava/lang/String;)V
+>     //   1243: astore 11
+>     //   1245: aload 6
+>     //   1247: astore 8
+>     //   1249: aload 7
+>     //   1251: astore_1
+>     //   1252: aload 9
+>     //   1254: astore 10
+>     //   1256: aload_0
+>     //   1257: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1260: aload 7
+>     //   1262: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1265: astore 7
+>     //   1267: aload 6
+>     //   1269: astore 8
+>     //   1271: aload 7
+>     //   1273: astore_1
+>     //   1274: aload 9
+>     //   1276: astore 10
+>     //   1278: aload_0
+>     //   1279: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1282: aload 7
+>     //   1284: ldc_w 471
+>     //   1287: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   1290: astore 7
+>     //   1292: aload 6
+>     //   1294: astore 8
+>     //   1296: aload 7
+>     //   1298: astore_1
+>     //   1299: aload 9
+>     //   1301: astore 10
+>     //   1303: aload_0
+>     //   1304: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1307: aload 13
+>     //   1309: ldc_w 473
+>     //   1312: getstatic 304	com/mobclix/android/sdk/MobclixInstrumentation:STARTUP	Ljava/lang/String;
+>     //   1315: invokevirtual 477	com/mobclix/android/sdk/MobclixInstrumentation:addInfo	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+>     //   1318: aload 6
+>     //   1320: astore 8
+>     //   1322: aload 7
+>     //   1324: astore_1
+>     //   1325: aload 9
+>     //   1327: astore 10
+>     //   1329: aload_0
+>     //   1330: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1333: aload 11
+>     //   1335: ldc_w 479
+>     //   1338: getstatic 304	com/mobclix/android/sdk/MobclixInstrumentation:STARTUP	Ljava/lang/String;
+>     //   1341: invokevirtual 477	com/mobclix/android/sdk/MobclixInstrumentation:addInfo	(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+>     //   1344: aload 6
+>     //   1346: astore 8
+>     //   1348: aload 7
+>     //   1350: astore_1
+>     //   1351: aload 9
+>     //   1353: astore 10
+>     //   1355: aload_0
+>     //   1356: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1359: aload 7
+>     //   1361: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1364: astore 7
+>     //   1366: aload 6
+>     //   1368: astore 8
+>     //   1370: aload 7
+>     //   1372: astore_1
+>     //   1373: aload 9
+>     //   1375: astore 10
+>     //   1377: aload_0
+>     //   1378: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1381: aload 7
+>     //   1383: ldc_w 481
+>     //   1386: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   1389: astore 7
+>     //   1391: aload 6
+>     //   1393: astore 8
+>     //   1395: aload 7
+>     //   1397: astore_1
+>     //   1398: aload 9
+>     //   1400: astore 10
+>     //   1402: aload 11
+>     //   1404: ldc_w 483
+>     //   1407: invokevirtual 487	org/json/JSONObject:getJSONObject	(Ljava/lang/String;)Lorg/json/JSONObject;
+>     //   1410: astore 12
+>     //   1412: aload 6
+>     //   1414: astore 8
+>     //   1416: aload 7
+>     //   1418: astore_1
+>     //   1419: aload 9
+>     //   1421: astore 10
+>     //   1423: aload_0
+>     //   1424: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1427: aload 12
+>     //   1429: ldc_w 309
+>     //   1432: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1435: putfield 184	com/mobclix/android/sdk/Mobclix:configServer	Ljava/lang/String;
+>     //   1438: aload 6
+>     //   1440: astore 8
+>     //   1442: aload 7
+>     //   1444: astore_1
+>     //   1445: aload 9
+>     //   1447: astore 10
+>     //   1449: aload_0
+>     //   1450: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1453: aload 12
+>     //   1455: ldc_w 492
+>     //   1458: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1461: putfield 357	com/mobclix/android/sdk/Mobclix:adServer	Ljava/lang/String;
+>     //   1464: aload 6
+>     //   1466: astore 8
+>     //   1468: aload 7
+>     //   1470: astore_1
+>     //   1471: aload 9
+>     //   1473: astore 10
+>     //   1475: aload_0
+>     //   1476: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1479: aload 12
+>     //   1481: ldc_w 494
+>     //   1484: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1487: putfield 362	com/mobclix/android/sdk/Mobclix:analyticsServer	Ljava/lang/String;
+>     //   1490: aload 6
+>     //   1492: astore 8
+>     //   1494: aload 7
+>     //   1496: astore_1
+>     //   1497: aload 9
+>     //   1499: astore 10
+>     //   1501: aload_0
+>     //   1502: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1505: aload 12
+>     //   1507: ldc_w 496
+>     //   1510: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1513: putfield 367	com/mobclix/android/sdk/Mobclix:vcServer	Ljava/lang/String;
+>     //   1516: aload 6
+>     //   1518: astore 8
+>     //   1520: aload 7
+>     //   1522: astore_1
+>     //   1523: aload 9
+>     //   1525: astore 10
+>     //   1527: aload_0
+>     //   1528: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1531: aload 12
+>     //   1533: ldc_w 498
+>     //   1536: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1539: putfield 372	com/mobclix/android/sdk/Mobclix:feedbackServer	Ljava/lang/String;
+>     //   1542: aload 6
+>     //   1544: astore 8
+>     //   1546: aload 7
+>     //   1548: astore_1
+>     //   1549: aload 9
+>     //   1551: astore 10
+>     //   1553: aload_0
+>     //   1554: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1557: aload 12
+>     //   1559: ldc_w 500
+>     //   1562: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   1565: putfield 503	com/mobclix/android/sdk/Mobclix:debugServer	Ljava/lang/String;
+>     //   1568: aload 6
+>     //   1570: astore 8
+>     //   1572: aload 7
+>     //   1574: astore_1
+>     //   1575: aload 9
+>     //   1577: astore 10
+>     //   1579: aload_0
+>     //   1580: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1583: aload 11
+>     //   1585: ldc_w 505
+>     //   1588: invokevirtual 508	org/json/JSONObject:getInt	(Ljava/lang/String;)I
+>     //   1591: sipush 1000
+>     //   1594: imul
+>     //   1595: putfield 341	com/mobclix/android/sdk/Mobclix:idleTimeout	I
+>     //   1598: aload 9
+>     //   1600: astore 10
+>     //   1602: aload_0
+>     //   1603: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1606: aload 11
+>     //   1608: ldc_w 510
+>     //   1611: invokevirtual 508	org/json/JSONObject:getInt	(Ljava/lang/String;)I
+>     //   1614: sipush 1000
+>     //   1617: imul
+>     //   1618: putfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+>     //   1621: aload 6
+>     //   1623: astore 8
+>     //   1625: aload 7
+>     //   1627: astore_1
+>     //   1628: aload 9
+>     //   1630: astore 10
+>     //   1632: aload_0
+>     //   1633: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1636: aload_0
+>     //   1637: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1640: getfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+>     //   1643: aload_0
+>     //   1644: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1647: getfield 341	com/mobclix/android/sdk/Mobclix:idleTimeout	I
+>     //   1650: invokestatic 516	java/lang/Math:min	(II)I
+>     //   1653: putfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+>     //   1656: aload 6
+>     //   1658: astore 8
+>     //   1660: aload 7
+>     //   1662: astore_1
+>     //   1663: aload 9
+>     //   1665: astore 10
+>     //   1667: aload_0
+>     //   1668: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   1671: aload 7
+>     //   1673: ldc_w 518
+>     //   1676: invokevirtual 312	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkStart	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+>     //   1679: astore 7
+>     //   1681: aload 6
+>     //   1683: astore 8
+>     //   1685: aload 7
+>     //   1687: astore_1
+>     //   1688: aload 9
+>     //   1690: astore 10
+>     //   1692: new 58	java/util/HashMap
+>     //   1695: dup
+>     //   1696: invokespecial 519	java/util/HashMap:<init>	()V
+>     //   1699: astore 12
+>     //   1701: aload 6
+>     //   1703: astore 8
+>     //   1705: aload 7
+>     //   1707: astore_1
+>     //   1708: aload 9
+>     //   1710: astore 10
+>     //   1712: aload 12
+>     //   1714: ldc -67
+>     //   1716: aload_0
+>     //   1717: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1720: getfield 184	com/mobclix/android/sdk/Mobclix:configServer	Ljava/lang/String;
+>     //   1723: invokeinterface 522 3 0
+>     //   1728: pop
+>     //   1729: aload 6
+>     //   1731: astore 8
+>     //   1733: aload 7
+>     //   1735: astore_1
+>     //   1736: aload 9
+>     //   1738: astore 10
+>     //   1740: aload 12
+>     //   1742: ldc_w 354
+>     //   1745: aload_0
+>     //   1746: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1749: getfield 357	com/mobclix/android/sdk/Mobclix:adServer	Ljava/lang/String;
+>     //   1752: invokeinterface 522 3 0
+>     //   1757: pop
+>     //   1758: aload 6
+>     //   1760: astore 8
+>     //   1762: aload 7
+>     //   1764: astore_1
+>     //   1765: aload 9
+>     //   1767: astore 10
+>     //   1769: aload 12
+>     //   1771: ldc_w 359
+>     //   1774: aload_0
+>     //   1775: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1778: getfield 362	com/mobclix/android/sdk/Mobclix:analyticsServer	Ljava/lang/String;
+>     //   1781: invokeinterface 522 3 0
+>     //   1786: pop
+>     //   1787: aload 6
+>     //   1789: astore 8
+>     //   1791: aload 7
+>     //   1793: astore_1
+>     //   1794: aload 9
+>     //   1796: astore 10
+>     //   1798: aload 12
+>     //   1800: ldc_w 364
+>     //   1803: aload_0
+>     //   1804: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1807: getfield 367	com/mobclix/android/sdk/Mobclix:vcServer	Ljava/lang/String;
+>     //   1810: invokeinterface 522 3 0
+>     //   1815: pop
+>     //   1816: aload 6
+>     //   1818: astore 8
+>     //   1820: aload 7
+>     //   1822: astore_1
+>     //   1823: aload 9
+>     //   1825: astore 10
+>     //   1827: aload 12
+>     //   1829: ldc_w 369
+>     //   1832: aload_0
+>     //   1833: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1836: getfield 372	com/mobclix/android/sdk/Mobclix:feedbackServer	Ljava/lang/String;
+>     //   1839: invokeinterface 522 3 0
+>     //   1844: pop
+>     //   1845: aload 6
+>     //   1847: astore 8
+>     //   1849: aload 7
+>     //   1851: astore_1
+>     //   1852: aload 9
+>     //   1854: astore 10
+>     //   1856: aload 12
+>     //   1858: ldc_w 332
+>     //   1861: aload_0
+>     //   1862: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1865: getfield 341	com/mobclix/android/sdk/Mobclix:idleTimeout	I
+>     //   1868: invokestatic 525	java/lang/Integer:toString	(I)Ljava/lang/String;
+>     //   1871: invokeinterface 522 3 0
+>     //   1876: pop
+>     //   1877: aload 6
+>     //   1879: astore 8
+>     //   1881: aload 7
+>     //   1883: astore_1
+>     //   1884: aload 9
+>     //   1886: astore 10
+>     //   1888: aload 12
+>     //   1890: ldc_w 343
+>     //   1893: aload_0
+>     //   1894: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   1897: getfield 345	com/mobclix/android/sdk/Mobclix:pollTime	I
+>     //   1900: invokestatic 525	java/lang/Integer:toString	(I)Ljava/lang/String;
+>     //   1903: invokeinterface 522 3 0
+>     //   1908: pop
+>     //   1909: aload 6
+>     //   1911: astore 8
+>     //   1913: aload 7
+>     //   1915: astore_1
+>     //   1916: aload 9
+>     //   1918: astore 10
+>     //   1920: aload 11
+>     //   1922: ldc_w 527
+>     //   1925: invokevirtual 531	org/json/JSONObject:getJSONArray	(Ljava/lang/String;)Lorg/json/JSONArray;
+>     //   1928: astore 13
+>     //   1930: iconst_0
+>     //   1931: istore_3
+>     //   1932: aload 6
+>     //   1934: astore 8
+>     //   1936: aload 7
+>     //   1938: astore_1
+>     //   1939: aload 9
+>     //   1941: astore 10
+>     //   1943: aload 13
+>     //   1945: invokevirtual 536	org/json/JSONArray:length	()I
+>     //   1948: istore 4
+>     //   1950: iload_3
+>     //   1951: iload 4
+>     //   1953: if_icmplt +505 -> 2458
+>     //   1956: aload 9
+>     //   1958: astore 10
+>     //   1960: aload 11
+>     //   1962: ldc_w 538
+>     //   1965: invokevirtual 487	org/json/JSONObject:getJSONObject	(Ljava/lang/String;)Lorg/json/JSONObject;
+>     //   1968: astore_1
+>     //   1969: aload 9
+>     //   1971: astore 10
+>     //   1973: getstatic 541	com/mobclix/android/sdk/MobclixInstrumentation:MC_DEBUG_CATS	[Ljava/lang/String;
+>     //   1976: astore 13
+>     //   1978: aload 9
+>     //   1980: astore 10
+>     //   1982: aload 13
+>     //   1984: arraylength
+>     //   1985: istore 4
+>     //   1987: iconst_0
+>     //   1988: istore_3
+>     //   1989: iload_3
+>     //   1990: iload 4
+>     //   1992: if_icmplt +1137 -> 3129
+>     //   1995: aload 9
+>     //   1997: astore 10
+>     //   1999: aload_1
+>     //   2000: invokevirtual 545	org/json/JSONObject:keys	()Ljava/util/Iterator;
+>     //   2003: astore 8
+>     //   2005: aload 9
+>     //   2007: astore 10
+>     //   2009: aload 8
+>     //   2011: invokeinterface 551 1 0
+>     //   2016: istore 5
+>     //   2018: iload 5
+>     //   2020: ifne +1147 -> 3167
+>     //   2023: aload 9
+>     //   2025: astore 10
+>     //   2027: aload 11
+>     //   2029: ldc_w 553
+>     //   2032: invokevirtual 531	org/json/JSONObject:getJSONArray	(Ljava/lang/String;)Lorg/json/JSONArray;
+>     //   2035: astore_1
+>     //   2036: aload_1
+>     //   2037: astore 6
+>     //   2039: aload 9
+>     //   2041: astore 10
+>     //   2043: aload 11
+>     //   2045: ldc_w 555
+>     //   2048: invokevirtual 531	org/json/JSONObject:getJSONArray	(Ljava/lang/String;)Lorg/json/JSONArray;
+>     //   2051: astore_1
+>     //   2052: iconst_0
+>     //   2053: istore_3
+>     //   2054: aload 9
+>     //   2056: astore 10
+>     //   2058: aload_1
+>     //   2059: invokevirtual 536	org/json/JSONArray:length	()I
+>     //   2062: istore 4
+>     //   2064: iload_3
+>     //   2065: iload 4
+>     //   2067: if_icmplt +1214 -> 3281
+>     //   2070: aload 6
+>     //   2072: astore 8
+>     //   2074: aload 7
+>     //   2076: astore_1
+>     //   2077: aload 9
+>     //   2079: astore 10
+>     //   2081: aload_0
+>     //   2082: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   2085: getfield 273	com/mobclix/android/sdk/Mobclix:previousDeviceId	Ljava/lang/String;
+>     //   2088: ifnull +27 -> 2115
+>     //   2091: aload 6
+>     //   2093: astore 8
+>     //   2095: aload 7
+>     //   2097: astore_1
+>     //   2098: aload 9
+>     //   2100: astore 10
+>     //   2102: ldc_w 328
+>     //   2105: aload_0
+>     //   2106: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   2109: getfield 330	com/mobclix/android/sdk/Mobclix:deviceId	Ljava/lang/String;
+>     //   2112: invokestatic 167	com/mobclix/android/sdk/Mobclix:addPref	(Ljava/lang/String;Ljava/lang/String;)V
+>     //   2115: aload 6
+>     //   2117: astore 8
+>     //   2119: aload 7
+>     //   2121: astore_1
+>     //   2122: aload 9
+>     //   2124: astore 10
+>     //   2126: aload 12
+>     //   2128: ldc_w 260
+>     //   2131: ldc_w 557
+>     //   2134: invokeinterface 522 3 0
+>     //   2139: pop
+>     //   2140: aload 6
+>     //   2142: astore 8
+>     //   2144: aload 7
+>     //   2146: astore_1
+>     //   2147: aload 9
+>     //   2149: astore 10
+>     //   2151: aload 12
+>     //   2153: ldc_w 264
+>     //   2156: ldc_w 557
+>     //   2159: invokeinterface 522 3 0
+>     //   2164: pop
+>     //   2165: aload 6
+>     //   2167: astore 8
+>     //   2169: aload 7
+>     //   2171: astore_1
+>     //   2172: aload 9
+>     //   2174: astore 10
+>     //   2176: aload 12
+>     //   2178: ldc_w 268
+>     //   2181: ldc_w 557
+>     //   2184: invokeinterface 522 3 0
+>     //   2189: pop
+>     //   2190: aload 6
+>     //   2192: astore 8
+>     //   2194: aload 7
+>     //   2196: astore_1
+>     //   2197: aload 9
+>     //   2199: astore 10
+>     //   2201: aload 12
+>     //   2203: invokestatic 560	com/mobclix/android/sdk/Mobclix:addPref	(Ljava/util/Map;)V
+>     //   2206: aload 6
+>     //   2208: astore 8
+>     //   2210: aload 7
+>     //   2212: astore_1
+>     //   2213: aload 9
+>     //   2215: astore 10
+>     //   2217: ldc_w 292
+>     //   2220: invokestatic 193	com/mobclix/android/sdk/Mobclix:hasPref	(Ljava/lang/String;)Z
+>     //   2223: ifeq +20 -> 2243
+>     //   2226: aload 6
+>     //   2228: astore 8
+>     //   2230: aload 7
+>     //   2232: astore_1
+>     //   2233: aload 9
+>     //   2235: astore 10
+>     //   2237: ldc_w 292
+>     //   2240: invokestatic 563	com/mobclix/android/sdk/Mobclix:removePref	(Ljava/lang/String;)V
+>     //   2243: aload 6
+>     //   2245: astore 8
+>     //   2247: aload 7
+>     //   2249: astore_1
+>     //   2250: aload 9
+>     //   2252: astore 10
+>     //   2254: aload_0
+>     //   2255: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   2258: aload 7
+>     //   2260: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   2263: astore 7
+>     //   2265: aload 6
+>     //   2267: astore 8
+>     //   2269: aload 7
+>     //   2271: astore_1
+>     //   2272: aload 9
+>     //   2274: astore 10
+>     //   2276: aload_0
+>     //   2277: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   2280: aload 7
+>     //   2282: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   2285: astore 7
+>     //   2287: aload 6
+>     //   2289: astore 8
+>     //   2291: aload 7
+>     //   2293: astore_1
+>     //   2294: aload 9
+>     //   2296: astore 10
+>     //   2298: aload_0
+>     //   2299: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   2302: iconst_0
+>     //   2303: putfield 375	com/mobclix/android/sdk/Mobclix:isOfflineSession	Z
+>     //   2306: aload 6
+>     //   2308: astore 8
+>     //   2310: aload 7
+>     //   2312: astore_1
+>     //   2313: aload 9
+>     //   2315: astore 10
+>     //   2317: aload_0
+>     //   2318: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   2321: iconst_1
+>     //   2322: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   2325: aload 7
+>     //   2327: astore_1
+>     //   2328: aload 9
+>     //   2330: astore 7
+>     //   2332: aload 6
+>     //   2334: astore 8
+>     //   2336: aload 7
+>     //   2338: invokevirtual 564	java/io/BufferedReader:close	()V
+>     //   2341: aload 8
+>     //   2343: astore 6
+>     //   2345: iconst_0
+>     //   2346: ifeq +11 -> 2357
+>     //   2349: new 566	java/lang/NullPointerException
+>     //   2352: dup
+>     //   2353: invokespecial 567	java/lang/NullPointerException:<init>	()V
+>     //   2356: athrow
+>     //   2357: aload_0
+>     //   2358: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   2361: aload_1
+>     //   2362: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   2365: astore_1
+>     //   2366: aload_0
+>     //   2367: getfield 38	com/mobclix/android/sdk/FetchRemoteConfig:instrumentation	Lcom/mobclix/android/sdk/MobclixInstrumentation;
+>     //   2370: aload_1
+>     //   2371: invokevirtual 320	com/mobclix/android/sdk/MobclixInstrumentation:benchmarkFinishPath	(Ljava/lang/String;)Ljava/lang/String;
+>     //   2374: astore 8
+>     //   2376: aload 6
+>     //   2378: astore 7
+>     //   2380: aload 8
+>     //   2382: astore_1
+>     //   2383: iload_2
+>     //   2384: iconst_1
+>     //   2385: if_icmpgt -2106 -> 279
+>     //   2388: iload_2
+>     //   2389: iconst_1
+>     //   2390: iadd
+>     //   2391: istore_2
+>     //   2392: aload 8
+>     //   2394: astore_1
+>     //   2395: goto -2131 -> 264
+>     //   2398: iconst_0
+>     //   2399: istore 5
+>     //   2401: goto -1429 -> 972
+>     //   2404: aload 6
+>     //   2406: astore 11
+>     //   2408: aload_1
+>     //   2409: astore 7
+>     //   2411: aload 9
+>     //   2413: astore 10
+>     //   2415: new 124	java/lang/StringBuilder
+>     //   2418: dup
+>     //   2419: aload 13
+>     //   2421: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   2424: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   2427: aload 8
+>     //   2429: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2432: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   2435: astore 13
+>     //   2437: aload 6
+>     //   2439: astore 11
+>     //   2441: aload_1
+>     //   2442: astore 7
+>     //   2444: aload 9
+>     //   2446: astore 10
+>     //   2448: aload 9
+>     //   2450: invokevirtual 459	java/io/BufferedReader:readLine	()Ljava/lang/String;
+>     //   2453: astore 8
+>     //   2455: goto -1361 -> 1094
+>     //   2458: aload 6
+>     //   2460: astore 8
+>     //   2462: aload 7
+>     //   2464: astore_1
+>     //   2465: aload 9
+>     //   2467: astore 10
+>     //   2469: aload 13
+>     //   2471: iload_3
+>     //   2472: invokevirtual 570	org/json/JSONArray:getJSONObject	(I)Lorg/json/JSONObject;
+>     //   2475: astore 15
+>     //   2477: aload 6
+>     //   2479: astore 8
+>     //   2481: aload 7
+>     //   2483: astore_1
+>     //   2484: aload 9
+>     //   2486: astore 10
+>     //   2488: aload 15
+>     //   2490: ldc_w 572
+>     //   2493: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   2496: astore 14
+>     //   2498: aload 6
+>     //   2500: astore 8
+>     //   2502: aload 7
+>     //   2504: astore_1
+>     //   2505: aload 9
+>     //   2507: astore 10
+>     //   2509: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+>     //   2512: aload 14
+>     //   2514: aload 15
+>     //   2516: ldc_w 573
+>     //   2519: invokevirtual 576	org/json/JSONObject:getBoolean	(Ljava/lang/String;)Z
+>     //   2522: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   2525: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2528: pop
+>     //   2529: aload 6
+>     //   2531: astore 8
+>     //   2533: aload 7
+>     //   2535: astore_1
+>     //   2536: aload 9
+>     //   2538: astore 10
+>     //   2540: aload 15
+>     //   2542: ldc_w 578
+>     //   2545: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+>     //   2548: ldc2_w 582
+>     //   2551: lcmp
+>     //   2552: ifne +346 -> 2898
+>     //   2555: aload 6
+>     //   2557: astore 8
+>     //   2559: aload 7
+>     //   2561: astore_1
+>     //   2562: aload 9
+>     //   2564: astore 10
+>     //   2566: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+>     //   2569: aload 14
+>     //   2571: ldc2_w 582
+>     //   2574: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   2577: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2580: pop
+>     //   2581: aload 6
+>     //   2583: astore 8
+>     //   2585: aload 7
+>     //   2587: astore_1
+>     //   2588: aload 9
+>     //   2590: astore 10
+>     //   2592: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+>     //   2595: aload 14
+>     //   2597: aload 15
+>     //   2599: ldc_w 584
+>     //   2602: invokevirtual 576	org/json/JSONObject:getBoolean	(Ljava/lang/String;)Z
+>     //   2605: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   2608: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2611: pop
+>     //   2612: aload 6
+>     //   2614: astore 8
+>     //   2616: aload 7
+>     //   2618: astore_1
+>     //   2619: aload 9
+>     //   2621: astore 10
+>     //   2623: aload 15
+>     //   2625: ldc_w 586
+>     //   2628: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+>     //   2631: ldc2_w 582
+>     //   2634: lcmp
+>     //   2635: ifne +366 -> 3001
+>     //   2638: aload 6
+>     //   2640: astore 8
+>     //   2642: aload 7
+>     //   2644: astore_1
+>     //   2645: aload 9
+>     //   2647: astore 10
+>     //   2649: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+>     //   2652: aload 14
+>     //   2654: ldc2_w 582
+>     //   2657: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   2660: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2663: pop
+>     //   2664: aload 6
+>     //   2666: astore 8
+>     //   2668: aload 7
+>     //   2670: astore_1
+>     //   2671: aload 9
+>     //   2673: astore 10
+>     //   2675: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+>     //   2678: aload 14
+>     //   2680: aload 15
+>     //   2682: ldc_w 584
+>     //   2685: invokevirtual 576	org/json/JSONObject:getBoolean	(Ljava/lang/String;)Z
+>     //   2688: invokestatic 175	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   2691: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2694: pop
+>     //   2695: aload 6
+>     //   2697: astore 8
+>     //   2699: aload 7
+>     //   2701: astore_1
+>     //   2702: aload 9
+>     //   2704: astore 10
+>     //   2706: aload 12
+>     //   2708: aload 14
+>     //   2710: new 124	java/lang/StringBuilder
+>     //   2713: dup
+>     //   2714: getstatic 390	com/mobclix/android/sdk/Mobclix:enabled	Ljava/util/HashMap;
+>     //   2717: aload 14
+>     //   2719: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2722: checkcast 172	java/lang/Boolean
+>     //   2725: invokevirtual 589	java/lang/Boolean:booleanValue	()Z
+>     //   2728: invokestatic 591	java/lang/Boolean:toString	(Z)Ljava/lang/String;
+>     //   2731: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   2734: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   2737: ldc_w 383
+>     //   2740: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2743: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+>     //   2746: aload 14
+>     //   2748: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2751: checkcast 397	java/lang/Long
+>     //   2754: invokevirtual 592	java/lang/Long:toString	()Ljava/lang/String;
+>     //   2757: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2760: ldc_w 383
+>     //   2763: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2766: getstatic 407	com/mobclix/android/sdk/Mobclix:autoplay	Ljava/util/HashMap;
+>     //   2769: aload 14
+>     //   2771: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2774: checkcast 172	java/lang/Boolean
+>     //   2777: invokevirtual 589	java/lang/Boolean:booleanValue	()Z
+>     //   2780: invokestatic 591	java/lang/Boolean:toString	(Z)Ljava/lang/String;
+>     //   2783: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2786: ldc_w 383
+>     //   2789: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2792: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+>     //   2795: aload 14
+>     //   2797: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2800: checkcast 397	java/lang/Long
+>     //   2803: invokevirtual 592	java/lang/Long:toString	()Ljava/lang/String;
+>     //   2806: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2809: ldc_w 383
+>     //   2812: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2815: getstatic 413	com/mobclix/android/sdk/Mobclix:rmRequireUser	Ljava/util/HashMap;
+>     //   2818: aload 14
+>     //   2820: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2823: checkcast 172	java/lang/Boolean
+>     //   2826: invokevirtual 589	java/lang/Boolean:booleanValue	()Z
+>     //   2829: invokestatic 591	java/lang/Boolean:toString	(Z)Ljava/lang/String;
+>     //   2832: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2835: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   2838: invokeinterface 522 3 0
+>     //   2843: pop
+>     //   2844: aload 9
+>     //   2846: astore 10
+>     //   2848: aload 15
+>     //   2850: ldc_w 593
+>     //   2853: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   2856: astore_1
+>     //   2857: aload 9
+>     //   2859: astore 10
+>     //   2861: aload_1
+>     //   2862: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+>     //   2865: aload 14
+>     //   2867: invokevirtual 62	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2870: invokevirtual 70	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2873: ifeq +186 -> 3059
+>     //   2876: aload 9
+>     //   2878: astore 10
+>     //   2880: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+>     //   2883: aload 14
+>     //   2885: ldc 66
+>     //   2887: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2890: pop
+>     //   2891: iload_3
+>     //   2892: iconst_1
+>     //   2893: iadd
+>     //   2894: istore_3
+>     //   2895: goto -963 -> 1932
+>     //   2898: aload 6
+>     //   2900: astore 8
+>     //   2902: aload 7
+>     //   2904: astore_1
+>     //   2905: aload 9
+>     //   2907: astore 10
+>     //   2909: getstatic 395	com/mobclix/android/sdk/Mobclix:refreshTime	Ljava/util/HashMap;
+>     //   2912: aload 14
+>     //   2914: aload 15
+>     //   2916: ldc_w 578
+>     //   2919: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+>     //   2922: ldc2_w 594
+>     //   2925: lmul
+>     //   2926: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   2929: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   2932: pop
+>     //   2933: goto -352 -> 2581
+>     //   2936: astore 6
+>     //   2938: aload 8
+>     //   2940: astore 11
+>     //   2942: aload_1
+>     //   2943: astore 7
+>     //   2945: aload 9
+>     //   2947: astore 10
+>     //   2949: aload_0
+>     //   2950: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   2953: iconst_m1
+>     //   2954: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   2957: aload 9
+>     //   2959: astore 7
+>     //   2961: goto -625 -> 2336
+>     //   2964: astore_1
+>     //   2965: aload 7
+>     //   2967: astore_1
+>     //   2968: aload 11
+>     //   2970: astore 6
+>     //   2972: aload 9
+>     //   2974: astore 10
+>     //   2976: aload_0
+>     //   2977: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   2980: iconst_m1
+>     //   2981: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   2984: aload 9
+>     //   2986: invokevirtual 564	java/io/BufferedReader:close	()V
+>     //   2989: iconst_0
+>     //   2990: ifeq -633 -> 2357
+>     //   2993: new 566	java/lang/NullPointerException
+>     //   2996: dup
+>     //   2997: invokespecial 567	java/lang/NullPointerException:<init>	()V
+>     //   3000: athrow
+>     //   3001: aload 6
+>     //   3003: astore 8
+>     //   3005: aload 7
+>     //   3007: astore_1
+>     //   3008: aload 9
+>     //   3010: astore 10
+>     //   3012: getstatic 410	com/mobclix/android/sdk/Mobclix:autoplayInterval	Ljava/util/HashMap;
+>     //   3015: aload 14
+>     //   3017: aload 15
+>     //   3019: ldc_w 586
+>     //   3022: invokevirtual 581	org/json/JSONObject:getLong	(Ljava/lang/String;)J
+>     //   3025: ldc2_w 594
+>     //   3028: lmul
+>     //   3029: invokestatic 404	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+>     //   3032: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   3035: pop
+>     //   3036: goto -372 -> 2664
+>     //   3039: astore_1
+>     //   3040: aload 10
+>     //   3042: invokevirtual 564	java/io/BufferedReader:close	()V
+>     //   3045: iconst_0
+>     //   3046: ifeq +11 -> 3057
+>     //   3049: new 566	java/lang/NullPointerException
+>     //   3052: dup
+>     //   3053: invokespecial 567	java/lang/NullPointerException:<init>	()V
+>     //   3056: athrow
+>     //   3057: aload_1
+>     //   3058: athrow
+>     //   3059: aload 9
+>     //   3061: astore 10
+>     //   3063: new 124	java/lang/StringBuilder
+>     //   3066: dup
+>     //   3067: aload 14
+>     //   3069: invokestatic 128	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   3072: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   3075: ldc -92
+>     //   3077: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   3080: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   3083: invokestatic 563	com/mobclix/android/sdk/Mobclix:removePref	(Ljava/lang/String;)V
+>     //   3086: aload 9
+>     //   3088: astore 10
+>     //   3090: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+>     //   3093: aload 14
+>     //   3095: aload_1
+>     //   3096: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   3099: pop
+>     //   3100: goto -209 -> 2891
+>     //   3103: astore_1
+>     //   3104: aload 6
+>     //   3106: astore 8
+>     //   3108: aload 7
+>     //   3110: astore_1
+>     //   3111: aload 9
+>     //   3113: astore 10
+>     //   3115: getstatic 56	com/mobclix/android/sdk/Mobclix:customAdUrl	Ljava/util/HashMap;
+>     //   3118: aload 14
+>     //   3120: ldc 66
+>     //   3122: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   3125: pop
+>     //   3126: goto -235 -> 2891
+>     //   3129: aload 13
+>     //   3131: iload_3
+>     //   3132: aaload
+>     //   3133: astore 8
+>     //   3135: aload 9
+>     //   3137: astore 10
+>     //   3139: new 124	java/lang/StringBuilder
+>     //   3142: dup
+>     //   3143: ldc_w 597
+>     //   3146: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   3149: aload 8
+>     //   3151: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   3154: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   3157: invokestatic 563	com/mobclix/android/sdk/Mobclix:removePref	(Ljava/lang/String;)V
+>     //   3160: iload_3
+>     //   3161: iconst_1
+>     //   3162: iadd
+>     //   3163: istore_3
+>     //   3164: goto -1175 -> 1989
+>     //   3167: aload 9
+>     //   3169: astore 10
+>     //   3171: aload 8
+>     //   3173: invokeinterface 601 1 0
+>     //   3178: checkcast 64	java/lang/String
+>     //   3181: astore 14
+>     //   3183: aload 9
+>     //   3185: astore 10
+>     //   3187: aload_1
+>     //   3188: aload 14
+>     //   3190: invokevirtual 490	org/json/JSONObject:getString	(Ljava/lang/String;)Ljava/lang/String;
+>     //   3193: astore 13
+>     //   3195: aload 9
+>     //   3197: astore 10
+>     //   3199: getstatic 604	com/mobclix/android/sdk/Mobclix:debugConfig	Ljava/util/HashMap;
+>     //   3202: aload 14
+>     //   3204: aload 13
+>     //   3206: invokevirtual 179	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+>     //   3209: pop
+>     //   3210: aload 9
+>     //   3212: astore 10
+>     //   3214: new 124	java/lang/StringBuilder
+>     //   3217: dup
+>     //   3218: ldc_w 597
+>     //   3221: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   3224: aload 14
+>     //   3226: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   3229: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   3232: aload 13
+>     //   3234: invokestatic 167	com/mobclix/android/sdk/Mobclix:addPref	(Ljava/lang/String;Ljava/lang/String;)V
+>     //   3237: goto -1232 -> 2005
+>     //   3240: astore 13
+>     //   3242: aload 9
+>     //   3244: astore 10
+>     //   3246: getstatic 24	com/mobclix/android/sdk/FetchRemoteConfig:TAG	Ljava/lang/String;
+>     //   3249: new 124	java/lang/StringBuilder
+>     //   3252: dup
+>     //   3253: ldc_w 606
+>     //   3256: invokespecial 129	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   3259: aload 13
+>     //   3261: invokevirtual 607	java/lang/Exception:toString	()Ljava/lang/String;
+>     //   3264: invokevirtual 135	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   3267: invokevirtual 139	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   3270: invokestatic 613	android/util/Log:v	(Ljava/lang/String;Ljava/lang/String;)I
+>     //   3273: pop
+>     //   3274: goto -1269 -> 2005
+>     //   3277: astore_1
+>     //   3278: goto -1255 -> 2023
+>     //   3281: aload 9
+>     //   3283: astore 10
+>     //   3285: aload_0
+>     //   3286: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   3289: getfield 617	com/mobclix/android/sdk/Mobclix:nativeUrls	Ljava/util/List;
+>     //   3292: aload_1
+>     //   3293: iload_3
+>     //   3294: invokevirtual 619	org/json/JSONArray:getString	(I)Ljava/lang/String;
+>     //   3297: invokeinterface 624 2 0
+>     //   3302: pop
+>     //   3303: iload_3
+>     //   3304: iconst_1
+>     //   3305: iadd
+>     //   3306: istore_3
+>     //   3307: goto -1253 -> 2054
+>     //   3310: aload_0
+>     //   3311: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   3314: iconst_m1
+>     //   3315: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   3318: aconst_null
+>     //   3319: astore 7
+>     //   3321: aload 6
+>     //   3323: astore 8
+>     //   3325: goto -989 -> 2336
+>     //   3328: astore 7
+>     //   3330: aload_0
+>     //   3331: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   3334: iconst_m1
+>     //   3335: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   3338: goto -349 -> 2989
+>     //   3341: astore 6
+>     //   3343: aload_0
+>     //   3344: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   3347: iconst_m1
+>     //   3348: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   3351: goto -306 -> 3045
+>     //   3354: astore 6
+>     //   3356: aload_0
+>     //   3357: getfield 45	com/mobclix/android/sdk/FetchRemoteConfig:c	Lcom/mobclix/android/sdk/Mobclix;
+>     //   3360: iconst_m1
+>     //   3361: putfield 350	com/mobclix/android/sdk/Mobclix:remoteConfigSet	I
+>     //   3364: goto -1023 -> 2341
+>     //   3367: astore_1
+>     //   3368: aconst_null
+>     //   3369: astore 10
+>     //   3371: goto -331 -> 3040
+>     //   3374: astore 7
+>     //   3376: aconst_null
+>     //   3377: astore 9
+>     //   3379: goto -407 -> 2972
+>     //   3382: astore_1
+>     //   3383: goto -1313 -> 2070
+>     //   3386: astore_1
+>     //   3387: goto -1348 -> 2039
+>     //   3390: astore_1
+>     //   3391: goto -1770 -> 1621
+1909,1919c1909,1919
+<     //   0	3393	0	this	FetchRemoteConfig
+<     //   0	3393	1	paramVarArgs	String[]
+<     //   237	2154	2	i	int
+<     //   235	3071	3	j	int
+<     //   1947	120	4	k	int
+<     //   969	1430	5	bool	boolean
+<     //   78	2820	6	localObject1	Object
+<     //   2935	1	6	localException1	Exception
+<     //   2969	352	6	localObject2	Object
+<     //   3340	1	6	localException2	Exception
+<     //   3353	1	6	localException3	Exception
+---
+>     //   0	3394	0	this	FetchRemoteConfig
+>     //   0	3394	1	paramVarArgs	String[]
+>     //   238	2154	2	i	int
+>     //   236	3071	3	j	int
+>     //   1948	120	4	k	int
+>     //   970	1430	5	bool	boolean
+>     //   78	2821	6	localObject1	Object
+>     //   2936	1	6	localException1	Exception
+>     //   2970	352	6	localObject2	Object
+>     //   3341	1	6	localException2	Exception
+>     //   3354	1	6	localException3	Exception
+1922,1939c1922,1939
+<     //   1020	2299	7	localObject4	Object
+<     //   3327	1	7	localException5	Exception
+<     //   3373	1	7	localException6	Exception
+<     //   540	2783	8	localObject5	Object
+<     //   561	90	9	arrayOfString	String[]
+<     //   821	1	9	localException7	Exception
+<     //   1073	2304	9	localBufferedReader1	java.io.BufferedReader
+<     //   745	1	10	localException8	Exception
+<     //   763	1	10	localException9	Exception
+<     //   783	1	10	localException10	Exception
+<     //   801	1	10	localException11	Exception
+<     //   1084	2285	10	localBufferedReader2	java.io.BufferedReader
+<     //   1077	1891	11	localObject6	Object
+<     //   1029	1677	12	localObject7	Object
+<     //   1004	2228	13	localObject8	Object
+<     //   3239	20	13	localException12	Exception
+<     //   1927	1297	14	localObject9	Object
+<     //   2474	543	15	localJSONObject	org.json.JSONObject
+---
+>     //   541	2779	7	localObject4	Object
+>     //   3328	1	7	localException5	Exception
+>     //   3374	1	7	localException6	Exception
+>     //   231	3093	8	localObject5	Object
+>     //   562	90	9	arrayOfString	String[]
+>     //   822	1	9	localException7	Exception
+>     //   1074	2304	9	localBufferedReader1	java.io.BufferedReader
+>     //   746	1	10	localException8	Exception
+>     //   764	1	10	localException9	Exception
+>     //   784	1	10	localException10	Exception
+>     //   802	1	10	localException11	Exception
+>     //   1085	2285	10	localBufferedReader2	java.io.BufferedReader
+>     //   1078	1891	11	localObject6	Object
+>     //   1030	1677	12	localObject7	Object
+>     //   1005	2228	13	localObject8	Object
+>     //   3240	20	13	localException12	Exception
+>     //   2496	729	14	str	String
+>     //   2475	543	15	localJSONObject	org.json.JSONObject
+1944,2120c1944,2120
+<     //   563	585	745	java/lang/Exception
+<     //   585	604	763	java/lang/Exception
+<     //   604	626	783	java/lang/Exception
+<     //   626	645	801	java/lang/Exception
+<     //   645	667	821	java/lang/Exception
+<     //   1208	1222	2935	java/lang/Exception
+<     //   1233	1244	2935	java/lang/Exception
+<     //   1255	1266	2935	java/lang/Exception
+<     //   1277	1291	2935	java/lang/Exception
+<     //   1302	1317	2935	java/lang/Exception
+<     //   1328	1343	2935	java/lang/Exception
+<     //   1354	1365	2935	java/lang/Exception
+<     //   1376	1390	2935	java/lang/Exception
+<     //   1401	1411	2935	java/lang/Exception
+<     //   1422	1437	2935	java/lang/Exception
+<     //   1448	1463	2935	java/lang/Exception
+<     //   1474	1489	2935	java/lang/Exception
+<     //   1500	1515	2935	java/lang/Exception
+<     //   1526	1541	2935	java/lang/Exception
+<     //   1552	1567	2935	java/lang/Exception
+<     //   1578	1597	2935	java/lang/Exception
+<     //   1631	1655	2935	java/lang/Exception
+<     //   1666	1680	2935	java/lang/Exception
+<     //   1691	1700	2935	java/lang/Exception
+<     //   1711	1728	2935	java/lang/Exception
+<     //   1739	1757	2935	java/lang/Exception
+<     //   1768	1786	2935	java/lang/Exception
+<     //   1797	1815	2935	java/lang/Exception
+<     //   1826	1844	2935	java/lang/Exception
+<     //   1855	1876	2935	java/lang/Exception
+<     //   1887	1908	2935	java/lang/Exception
+<     //   1919	1929	2935	java/lang/Exception
+<     //   1942	1949	2935	java/lang/Exception
+<     //   2080	2090	2935	java/lang/Exception
+<     //   2101	2114	2935	java/lang/Exception
+<     //   2125	2139	2935	java/lang/Exception
+<     //   2150	2164	2935	java/lang/Exception
+<     //   2175	2189	2935	java/lang/Exception
+<     //   2200	2205	2935	java/lang/Exception
+<     //   2216	2225	2935	java/lang/Exception
+<     //   2236	2242	2935	java/lang/Exception
+<     //   2253	2264	2935	java/lang/Exception
+<     //   2275	2286	2935	java/lang/Exception
+<     //   2297	2305	2935	java/lang/Exception
+<     //   2316	2324	2935	java/lang/Exception
+<     //   2468	2476	2935	java/lang/Exception
+<     //   2487	2497	2935	java/lang/Exception
+<     //   2508	2528	2935	java/lang/Exception
+<     //   2539	2554	2935	java/lang/Exception
+<     //   2565	2580	2935	java/lang/Exception
+<     //   2591	2611	2935	java/lang/Exception
+<     //   2622	2637	2935	java/lang/Exception
+<     //   2648	2663	2935	java/lang/Exception
+<     //   2674	2694	2935	java/lang/Exception
+<     //   2705	2843	2935	java/lang/Exception
+<     //   2908	2932	2935	java/lang/Exception
+<     //   3011	3035	2935	java/lang/Exception
+<     //   3114	3125	2935	java/lang/Exception
+<     //   1086	1093	2963	java/lang/Exception
+<     //   1109	1116	2963	java/lang/Exception
+<     //   1127	1136	2963	java/lang/Exception
+<     //   1147	1160	2963	java/lang/Exception
+<     //   1172	1181	2963	java/lang/Exception
+<     //   2414	2436	2963	java/lang/Exception
+<     //   2447	2454	2963	java/lang/Exception
+<     //   2948	2956	2963	java/lang/Exception
+<     //   1086	1093	3038	finally
+<     //   1109	1116	3038	finally
+<     //   1127	1136	3038	finally
+<     //   1147	1160	3038	finally
+<     //   1172	1181	3038	finally
+<     //   1208	1222	3038	finally
+<     //   1233	1244	3038	finally
+<     //   1255	1266	3038	finally
+<     //   1277	1291	3038	finally
+<     //   1302	1317	3038	finally
+<     //   1328	1343	3038	finally
+<     //   1354	1365	3038	finally
+<     //   1376	1390	3038	finally
+<     //   1401	1411	3038	finally
+<     //   1422	1437	3038	finally
+<     //   1448	1463	3038	finally
+<     //   1474	1489	3038	finally
+<     //   1500	1515	3038	finally
+<     //   1526	1541	3038	finally
+<     //   1552	1567	3038	finally
+<     //   1578	1597	3038	finally
+<     //   1601	1620	3038	finally
+<     //   1631	1655	3038	finally
+<     //   1666	1680	3038	finally
+<     //   1691	1700	3038	finally
+<     //   1711	1728	3038	finally
+<     //   1739	1757	3038	finally
+<     //   1768	1786	3038	finally
+<     //   1797	1815	3038	finally
+<     //   1826	1844	3038	finally
+<     //   1855	1876	3038	finally
+<     //   1887	1908	3038	finally
+<     //   1919	1929	3038	finally
+<     //   1942	1949	3038	finally
+<     //   1959	1968	3038	finally
+<     //   1972	1977	3038	finally
+<     //   1981	1986	3038	finally
+<     //   1998	2004	3038	finally
+<     //   2008	2017	3038	finally
+<     //   2026	2035	3038	finally
+<     //   2042	2051	3038	finally
+<     //   2057	2063	3038	finally
+<     //   2080	2090	3038	finally
+<     //   2101	2114	3038	finally
+<     //   2125	2139	3038	finally
+<     //   2150	2164	3038	finally
+<     //   2175	2189	3038	finally
+<     //   2200	2205	3038	finally
+<     //   2216	2225	3038	finally
+<     //   2236	2242	3038	finally
+<     //   2253	2264	3038	finally
+<     //   2275	2286	3038	finally
+<     //   2297	2305	3038	finally
+<     //   2316	2324	3038	finally
+<     //   2414	2436	3038	finally
+<     //   2447	2454	3038	finally
+<     //   2468	2476	3038	finally
+<     //   2487	2497	3038	finally
+<     //   2508	2528	3038	finally
+<     //   2539	2554	3038	finally
+<     //   2565	2580	3038	finally
+<     //   2591	2611	3038	finally
+<     //   2622	2637	3038	finally
+<     //   2648	2663	3038	finally
+<     //   2674	2694	3038	finally
+<     //   2705	2843	3038	finally
+<     //   2847	2856	3038	finally
+<     //   2860	2875	3038	finally
+<     //   2879	2890	3038	finally
+<     //   2908	2932	3038	finally
+<     //   2948	2956	3038	finally
+<     //   2975	2983	3038	finally
+<     //   3011	3035	3038	finally
+<     //   3062	3085	3038	finally
+<     //   3089	3099	3038	finally
+<     //   3114	3125	3038	finally
+<     //   3138	3159	3038	finally
+<     //   3170	3182	3038	finally
+<     //   3186	3194	3038	finally
+<     //   3198	3209	3038	finally
+<     //   3213	3236	3038	finally
+<     //   3245	3273	3038	finally
+<     //   3284	3302	3038	finally
+<     //   2847	2856	3102	java/lang/Exception
+<     //   2860	2875	3102	java/lang/Exception
+<     //   2879	2890	3102	java/lang/Exception
+<     //   3062	3085	3102	java/lang/Exception
+<     //   3089	3099	3102	java/lang/Exception
+<     //   3170	3182	3239	java/lang/Exception
+<     //   3186	3194	3239	java/lang/Exception
+<     //   3198	3209	3239	java/lang/Exception
+<     //   3213	3236	3239	java/lang/Exception
+<     //   1959	1968	3276	java/lang/Exception
+<     //   1972	1977	3276	java/lang/Exception
+<     //   1981	1986	3276	java/lang/Exception
+<     //   1998	2004	3276	java/lang/Exception
+<     //   2008	2017	3276	java/lang/Exception
+<     //   3138	3159	3276	java/lang/Exception
+<     //   3245	3273	3276	java/lang/Exception
+<     //   2983	2988	3327	java/lang/Exception
+<     //   3039	3044	3340	java/lang/Exception
+<     //   2335	2340	3353	java/lang/Exception
+<     //   1006	1075	3366	finally
+<     //   3309	3317	3366	finally
+<     //   1006	1075	3373	java/lang/Exception
+<     //   3309	3317	3373	java/lang/Exception
+<     //   2042	2051	3381	java/lang/Exception
+<     //   2057	2063	3381	java/lang/Exception
+<     //   3284	3302	3381	java/lang/Exception
+<     //   2026	2035	3385	java/lang/Exception
+<     //   1601	1620	3389	java/lang/Exception
+---
+>     //   564	586	746	java/lang/Exception
+>     //   586	605	764	java/lang/Exception
+>     //   605	627	784	java/lang/Exception
+>     //   627	646	802	java/lang/Exception
+>     //   646	668	822	java/lang/Exception
+>     //   1209	1223	2936	java/lang/Exception
+>     //   1234	1245	2936	java/lang/Exception
+>     //   1256	1267	2936	java/lang/Exception
+>     //   1278	1292	2936	java/lang/Exception
+>     //   1303	1318	2936	java/lang/Exception
+>     //   1329	1344	2936	java/lang/Exception
+>     //   1355	1366	2936	java/lang/Exception
+>     //   1377	1391	2936	java/lang/Exception
+>     //   1402	1412	2936	java/lang/Exception
+>     //   1423	1438	2936	java/lang/Exception
+>     //   1449	1464	2936	java/lang/Exception
+>     //   1475	1490	2936	java/lang/Exception
+>     //   1501	1516	2936	java/lang/Exception
+>     //   1527	1542	2936	java/lang/Exception
+>     //   1553	1568	2936	java/lang/Exception
+>     //   1579	1598	2936	java/lang/Exception
+>     //   1632	1656	2936	java/lang/Exception
+>     //   1667	1681	2936	java/lang/Exception
+>     //   1692	1701	2936	java/lang/Exception
+>     //   1712	1729	2936	java/lang/Exception
+>     //   1740	1758	2936	java/lang/Exception
+>     //   1769	1787	2936	java/lang/Exception
+>     //   1798	1816	2936	java/lang/Exception
+>     //   1827	1845	2936	java/lang/Exception
+>     //   1856	1877	2936	java/lang/Exception
+>     //   1888	1909	2936	java/lang/Exception
+>     //   1920	1930	2936	java/lang/Exception
+>     //   1943	1950	2936	java/lang/Exception
+>     //   2081	2091	2936	java/lang/Exception
+>     //   2102	2115	2936	java/lang/Exception
+>     //   2126	2140	2936	java/lang/Exception
+>     //   2151	2165	2936	java/lang/Exception
+>     //   2176	2190	2936	java/lang/Exception
+>     //   2201	2206	2936	java/lang/Exception
+>     //   2217	2226	2936	java/lang/Exception
+>     //   2237	2243	2936	java/lang/Exception
+>     //   2254	2265	2936	java/lang/Exception
+>     //   2276	2287	2936	java/lang/Exception
+>     //   2298	2306	2936	java/lang/Exception
+>     //   2317	2325	2936	java/lang/Exception
+>     //   2469	2477	2936	java/lang/Exception
+>     //   2488	2498	2936	java/lang/Exception
+>     //   2509	2529	2936	java/lang/Exception
+>     //   2540	2555	2936	java/lang/Exception
+>     //   2566	2581	2936	java/lang/Exception
+>     //   2592	2612	2936	java/lang/Exception
+>     //   2623	2638	2936	java/lang/Exception
+>     //   2649	2664	2936	java/lang/Exception
+>     //   2675	2695	2936	java/lang/Exception
+>     //   2706	2844	2936	java/lang/Exception
+>     //   2909	2933	2936	java/lang/Exception
+>     //   3012	3036	2936	java/lang/Exception
+>     //   3115	3126	2936	java/lang/Exception
+>     //   1087	1094	2964	java/lang/Exception
+>     //   1110	1117	2964	java/lang/Exception
+>     //   1128	1137	2964	java/lang/Exception
+>     //   1148	1161	2964	java/lang/Exception
+>     //   1173	1182	2964	java/lang/Exception
+>     //   2415	2437	2964	java/lang/Exception
+>     //   2448	2455	2964	java/lang/Exception
+>     //   2949	2957	2964	java/lang/Exception
+>     //   1087	1094	3039	finally
+>     //   1110	1117	3039	finally
+>     //   1128	1137	3039	finally
+>     //   1148	1161	3039	finally
+>     //   1173	1182	3039	finally
+>     //   1209	1223	3039	finally
+>     //   1234	1245	3039	finally
+>     //   1256	1267	3039	finally
+>     //   1278	1292	3039	finally
+>     //   1303	1318	3039	finally
+>     //   1329	1344	3039	finally
+>     //   1355	1366	3039	finally
+>     //   1377	1391	3039	finally
+>     //   1402	1412	3039	finally
+>     //   1423	1438	3039	finally
+>     //   1449	1464	3039	finally
+>     //   1475	1490	3039	finally
+>     //   1501	1516	3039	finally
+>     //   1527	1542	3039	finally
+>     //   1553	1568	3039	finally
+>     //   1579	1598	3039	finally
+>     //   1602	1621	3039	finally
+>     //   1632	1656	3039	finally
+>     //   1667	1681	3039	finally
+>     //   1692	1701	3039	finally
+>     //   1712	1729	3039	finally
+>     //   1740	1758	3039	finally
+>     //   1769	1787	3039	finally
+>     //   1798	1816	3039	finally
+>     //   1827	1845	3039	finally
+>     //   1856	1877	3039	finally
+>     //   1888	1909	3039	finally
+>     //   1920	1930	3039	finally
+>     //   1943	1950	3039	finally
+>     //   1960	1969	3039	finally
+>     //   1973	1978	3039	finally
+>     //   1982	1987	3039	finally
+>     //   1999	2005	3039	finally
+>     //   2009	2018	3039	finally
+>     //   2027	2036	3039	finally
+>     //   2043	2052	3039	finally
+>     //   2058	2064	3039	finally
+>     //   2081	2091	3039	finally
+>     //   2102	2115	3039	finally
+>     //   2126	2140	3039	finally
+>     //   2151	2165	3039	finally
+>     //   2176	2190	3039	finally
+>     //   2201	2206	3039	finally
+>     //   2217	2226	3039	finally
+>     //   2237	2243	3039	finally
+>     //   2254	2265	3039	finally
+>     //   2276	2287	3039	finally
+>     //   2298	2306	3039	finally
+>     //   2317	2325	3039	finally
+>     //   2415	2437	3039	finally
+>     //   2448	2455	3039	finally
+>     //   2469	2477	3039	finally
+>     //   2488	2498	3039	finally
+>     //   2509	2529	3039	finally
+>     //   2540	2555	3039	finally
+>     //   2566	2581	3039	finally
+>     //   2592	2612	3039	finally
+>     //   2623	2638	3039	finally
+>     //   2649	2664	3039	finally
+>     //   2675	2695	3039	finally
+>     //   2706	2844	3039	finally
+>     //   2848	2857	3039	finally
+>     //   2861	2876	3039	finally
+>     //   2880	2891	3039	finally
+>     //   2909	2933	3039	finally
+>     //   2949	2957	3039	finally
+>     //   2976	2984	3039	finally
+>     //   3012	3036	3039	finally
+>     //   3063	3086	3039	finally
+>     //   3090	3100	3039	finally
+>     //   3115	3126	3039	finally
+>     //   3139	3160	3039	finally
+>     //   3171	3183	3039	finally
+>     //   3187	3195	3039	finally
+>     //   3199	3210	3039	finally
+>     //   3214	3237	3039	finally
+>     //   3246	3274	3039	finally
+>     //   3285	3303	3039	finally
+>     //   2848	2857	3103	java/lang/Exception
+>     //   2861	2876	3103	java/lang/Exception
+>     //   2880	2891	3103	java/lang/Exception
+>     //   3063	3086	3103	java/lang/Exception
+>     //   3090	3100	3103	java/lang/Exception
+>     //   3171	3183	3240	java/lang/Exception
+>     //   3187	3195	3240	java/lang/Exception
+>     //   3199	3210	3240	java/lang/Exception
+>     //   3214	3237	3240	java/lang/Exception
+>     //   1960	1969	3277	java/lang/Exception
+>     //   1973	1978	3277	java/lang/Exception
+>     //   1982	1987	3277	java/lang/Exception
+>     //   1999	2005	3277	java/lang/Exception
+>     //   2009	2018	3277	java/lang/Exception
+>     //   3139	3160	3277	java/lang/Exception
+>     //   3246	3274	3277	java/lang/Exception
+>     //   2984	2989	3328	java/lang/Exception
+>     //   3040	3045	3341	java/lang/Exception
+>     //   2336	2341	3354	java/lang/Exception
+>     //   1007	1076	3367	finally
+>     //   3310	3318	3367	finally
+>     //   1007	1076	3374	java/lang/Exception
+>     //   3310	3318	3374	java/lang/Exception
+>     //   2043	2052	3382	java/lang/Exception
+>     //   2058	2064	3382	java/lang/Exception
+>     //   3285	3303	3382	java/lang/Exception
+>     //   2027	2036	3386	java/lang/Exception
+>     //   1602	1621	3390	java/lang/Exception
+Somente em result/APP_37/App_M_37/com: mt
+Os arquivos binários result/APP_37/App_B_37/original/AndroidManifest.xml e result/APP_37/App_M_37/original/AndroidManifest.xml são diferentes
+Somente em result/APP_37/App_B_37/original/META-INF: CERT.RSA
+Somente em result/APP_37/App_B_37/original/META-INF: CERT.SF
+diff -r result/APP_37/App_B_37/original/META-INF/MANIFEST.MF result/APP_37/App_M_37/original/META-INF/MANIFEST.MF
+2c2,14
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_10-beta (Sun Microsystems Inc.)
+> 
+> Name: res/raw/tada.mid
+> SHA1-Digest: ttjjEJlkMSSt9uAg0gMxHRHSmgw=
+> 
+> Name: res/drawable/scores.png
+> SHA1-Digest: Z2DGcFp+P3jHPaYh/aniNw1kp4Q=
+> 
+> Name: res/layout/introduction.xml
+> SHA1-Digest: QpCl1JBP6kIlpYuV2ScKH/tCGJI=
+> 
+> Name: res/raw/novel.txt
+> SHA1-Digest: EKNOn3+aqtDnhrHokvHJDyhKAHA=
+7,9d18
+< Name: assembly-descriptor.xml
+< SHA1-Digest: 1S+kj47zhHaLAfkRSEqWJ4uOaCs=
+< 
+12a22,30
+> Name: res/drawable/btn_exit_now.png
+> SHA1-Digest: cykDbPP936GnI68OrUGo77JJv1U=
+> 
+> Name: res/layout-long/main.xml
+> SHA1-Digest: THzGBiVNZHgc+tv6U8tg3pX98u4=
+> 
+> Name: res/raw/cymbal.mid
+> SHA1-Digest: ldW58gQx3XETRnJkICG5rLEeS9U=
+> 
+15a34,39
+> Name: res/drawable/btn_get_started.png
+> SHA1-Digest: CUTkGhdrvT2OKQhYtnbuNKjYWeE=
+> 
+> Name: res/layout/shared_progress.xml
+> SHA1-Digest: 8w2LgbVdadkoJYBAlwsKgQZLjJ0=
+> 
+17c41,44
+< SHA1-Digest: fduFeZfYFwlQE6EzdxgtLu7omR8=
+---
+> SHA1-Digest: lAEXZ899a70w/nTQ9ZjQn0cvf4Y=
+> 
+> Name: res/layout/shared_divider.xml
+> SHA1-Digest: z/1NtBFlIyXFci1WSMe7N4w8L2U=
+20c47
+< SHA1-Digest: PsXkPYmhOFDCu3IVMyPvzQDqX8k=
+---
+> SHA1-Digest: P8eUsV6N/cylvVAyKvl0YYbIkMY=
+23,26c50
+< SHA1-Digest: nSY2BxniRYblvLBD+S7QQrB0HFc=
+< 
+< Name: res/layout/pending_games.xml
+< SHA1-Digest: P+wuy+gev8j++ussrv41PEWpA34=
+---
+> SHA1-Digest: 8jvwpU8JCpAcabWSszFoDuVZV8w=
+30a55,60
+> Name: res/layout/pending_games.xml
+> SHA1-Digest: sYnX/pv0TzbbAKUhIhzDd/wRH4c=
+> 
+> Name: res/drawable/btn_download_now.png
+> SHA1-Digest: h8tkF9F6vcTPzmisOxwcpjzGfJA=
+> 
+32c62
+< SHA1-Digest: tP8vw3OzLfcLMTeAIDBJ3g/8Gas=
+---
+> SHA1-Digest: asbwb8EL1BxVkD6GwBg8odc7sG8=
+39a70,78
+> Name: res/drawable/balloutline.png
+> SHA1-Digest: TinF6ozAxAIxbBNzfRU3nziZbBE=
+> 
+> Name: res/drawable/help.png
+> SHA1-Digest: KZiBrRGa+J23aVjjvZ/nJgarhoo=
+> 
+> Name: res/layout/main.xml
+> SHA1-Digest: THzGBiVNZHgc+tv6U8tg3pX98u4=
+> 
+47c86,98
+< SHA1-Digest: GMLbAq4hFjiU/msAmveIaizgXms=
+---
+> SHA1-Digest: gjFevusKEpESaxw1gCPV5GCq61w=
+> 
+> Name: res/layout/info_donotshow.xml
+> SHA1-Digest: KR2lAjj0+lXgxLahvwn6XxKn/nA=
+> 
+> Name: assets/millennial_left_arrow.png
+> SHA1-Digest: ErGBbOWjw5fxc1B51k0zBTuwcl8=
+> 
+> Name: res/layout/main_full.xml
+> SHA1-Digest: r/KbuJxFo0WAxIE/v18pi7C6ZZg=
+> 
+> Name: res/drawable/undo.png
+> SHA1-Digest: AuqX3GDFot/JHHDDTIWGnbWBLeI=
+53c104
+< SHA1-Digest: 0g30uu4EQqjQSJ3tuWZ1MDme400=
+---
+> SHA1-Digest: O5o+Od/jAXiA5zEYmDgkAS7Y8hQ=
+55,56c106,107
+< Name: res/layout/main_full.xml
+< SHA1-Digest: OMMbea6N/TzLg9NgGuL4ldCwTDQ=
+---
+> Name: res/drawable/circle.png
+> SHA1-Digest: BM1mZCK+ZEUmuutbEMTpR1UHZoQ=
+66a118,120
+> Name: res/layout/scoreboard.xml
+> SHA1-Digest: d0pbn6Rj/14Iffp4xb/A/BwUzMI=
+> 
+72a127,129
+> Name: assets/millennial_right_arrow.png
+> SHA1-Digest: KZ+C1GNQfKqZeVL0oJGcTwrT/po=
+> 
+74c131,137
+< SHA1-Digest: riCKGJut9gyLbNDhCFJ6VjkhAlE=
+---
+> SHA1-Digest: sG68KCfN2KSGUK6KEIJvcSHqEeU=
+> 
+> Name: res/drawable/diamond.png
+> SHA1-Digest: wnAJHwmFC51cHCuHVVjIgvXbWGc=
+> 
+> Name: res/raw/harp.mid
+> SHA1-Digest: FsQgocAx5deNOqfdWpzyiaSStXI=
+83c146
+< SHA1-Digest: GnTalMpvZoEbXma2qepaip8pS6Q=
+---
+> SHA1-Digest: aT6QJTRE9eT7I/yc0wTthnngqmg=
+85,86c148,149
+< Name: res/layout/topscores_full.xml
+< SHA1-Digest: nn79b9zSDHT5Yj1U122evo2XRGk=
+---
+> Name: resources.arsc
+> SHA1-Digest: YDfduRixOPY1BR5ASfDb5k586C0=
+91,92c154,161
+< Name: resources.arsc
+< SHA1-Digest: dZEI2m01Mtmu241PIot/njnfdiY=
+---
+> Name: res/raw/biggong.ogg
+> SHA1-Digest: cT1xKK25LmAPBQs81oA0yGzfxF0=
+> 
+> Name: res/layout/topscores_full.xml
+> SHA1-Digest: qWbFRsBDcjMFwBitHUDB9OGOCeI=
+> 
+> Name: res/drawable/btn_close.png
+> SHA1-Digest: uXVtIHUJoKjJInNccn5FEAyIPpI=
+98c167,170
+< SHA1-Digest: cCQNlgw23/elMpCIk/jdsBMCNj8=
+---
+> SHA1-Digest: Vehioaia9MwHrxzufwE4RizjwhE=
+> 
+> Name: res/drawable/bubbleback.png
+> SHA1-Digest: CxUBs40t0eqt3Ue10O4yrfl0Z6Q=
+101c173,176
+< SHA1-Digest: WE04SgoNYYKJ3bWaZr/GBe3N9l8=
+---
+> SHA1-Digest: 7RM9HGOOIlW+HDP9E3t1zylrYeM=
+> 
+> Name: res/drawable/ball602.png
+> SHA1-Digest: uanfkwg18deaSzWfZGqp7ny09wc=
+105a181,183
+> Name: res/layout/score_row.xml
+> SHA1-Digest: pRr8tTYMoVHuBo2Hs2kJc76pGsY=
+> 
+107c185,188
+< SHA1-Digest: phSzfVNygezlB4WC/7e+L6oX0no=
+---
+> SHA1-Digest: kC41ObnM5P8HOAzIVuTPU+fyg50=
+> 
+> Name: res/layout/options_full.xml
+> SHA1-Digest: BQLR1DZID97c8STlQER1jzkcOzU=
+115,249d195
+< Name: res/drawable/trioshapes.png
+< SHA1-Digest: oNyZfjLs+ZV9gJCF/4Q2A6Ciw6s=
+< 
+< Name: res/layout/pending_game_row.xml
+< SHA1-Digest: 8uO5oP47PZuwfLrzK5PuPUEn/j0=
+< 
+< Name: res/drawable/btn_try_again.png
+< SHA1-Digest: Oe1iwqKCbFeJGJ6HuzYzdK2Fpr4=
+< 
+< Name: res/drawable/square.png
+< SHA1-Digest: CcaFb74/wsTG5nEDAJD7mlM4ocI=
+< 
+< Name: res/drawable/highlightstar.png
+< SHA1-Digest: AP11RttjQbZSGRFtYvgLSxxy5+k=
+< 
+< Name: res/drawable/row_back.xml
+< SHA1-Digest: 9CPiAO6DSemU/iYdCjSNlw3Mqbc=
+< 
+< Name: res/layout/main_fs.xml
+< SHA1-Digest: urWaQ92DwAEJLAWJ8EIFIMMl5NQ=
+< 
+< Name: res/drawable/triangle.png
+< SHA1-Digest: 592doHMXLp0EX/wQgsR9BsVULVU=
+< 
+< Name: classes.dex
+< SHA1-Digest: YZjo/JI/C0eL2TcN15r1cst39j8=
+< 
+< Name: assets/fr/intro.html
+< SHA1-Digest: BBo+0zjMQZfbnjquCJaXdgxpv0c=
+< 
+< Name: res/drawable/icon.png
+< SHA1-Digest: Y/3g9LwPIyJg7PF8ZJi7BOtB+h4=
+< 
+< Name: assets/millennial_close.png
+< SHA1-Digest: 5XxYsmkG/kt9AZjBzcGhaoHrYLs=
+< 
+< Name: res/raw/bubble_pop.wav
+< SHA1-Digest: uwECtZnz9R86fvCEX7aCsk2drfM=
+< 
+< Name: res/drawable/trioball.png
+< SHA1-Digest: 6qksY4fIo+XvAdeR4IErZ96L+XI=
+< 
+< Name: res/values/attrs.xml
+< SHA1-Digest: lzd8NzzhV2ClMStIanL70VDhRp4=
+< 
+< Name: res/layout/button_continue.xml
+< SHA1-Digest: yJfSPdLckgNsL8LMeUHAt1MW/Ew=
+< 
+< Name: res/drawable/scores.png
+< SHA1-Digest: Z2DGcFp+P3jHPaYh/aniNw1kp4Q=
+< 
+< Name: res/raw/tada.mid
+< SHA1-Digest: ttjjEJlkMSSt9uAg0gMxHRHSmgw=
+< 
+< Name: res/layout/introduction.xml
+< SHA1-Digest: tl83f0lLDhzvdBdjoNMnhyVXOT0=
+< 
+< Name: res/raw/novel.txt
+< SHA1-Digest: EKNOn3+aqtDnhrHokvHJDyhKAHA=
+< 
+< Name: res/drawable/btn_exit_now.png
+< SHA1-Digest: cykDbPP936GnI68OrUGo77JJv1U=
+< 
+< Name: res/layout-long/main.xml
+< SHA1-Digest: CX1+ugFATwCK/AwpELQ7pkTsxcY=
+< 
+< Name: res/raw/cymbal.mid
+< SHA1-Digest: ldW58gQx3XETRnJkICG5rLEeS9U=
+< 
+< Name: res/drawable/btn_get_started.png
+< SHA1-Digest: CUTkGhdrvT2OKQhYtnbuNKjYWeE=
+< 
+< Name: res/layout/shared_progress.xml
+< SHA1-Digest: DukUfqGu+/a6Rbt1k9nkqF7wM04=
+< 
+< Name: res/layout/shared_divider.xml
+< SHA1-Digest: Cc3dVAQRN5lY1SeVTks4Rpiz1Po=
+< 
+< Name: res/drawable/btn_download_now.png
+< SHA1-Digest: h8tkF9F6vcTPzmisOxwcpjzGfJA=
+< 
+< Name: res/drawable/help.png
+< SHA1-Digest: KZiBrRGa+J23aVjjvZ/nJgarhoo=
+< 
+< Name: res/drawable/balloutline.png
+< SHA1-Digest: TinF6ozAxAIxbBNzfRU3nziZbBE=
+< 
+< Name: res/layout/main.xml
+< SHA1-Digest: E16bTR3zm0pb5Q8sWqZafsSNgQ0=
+< 
+< Name: res/layout/info_donotshow.xml
+< SHA1-Digest: gtiB68gjFoP05hBf7qVONoGRs3c=
+< 
+< Name: assets/millennial_left_arrow.png
+< SHA1-Digest: ErGBbOWjw5fxc1B51k0zBTuwcl8=
+< 
+< Name: res/drawable/circle.png
+< SHA1-Digest: BM1mZCK+ZEUmuutbEMTpR1UHZoQ=
+< 
+< Name: res/drawable/undo.png
+< SHA1-Digest: AuqX3GDFot/JHHDDTIWGnbWBLeI=
+< 
+< Name: res/layout/scoreboard.xml
+< SHA1-Digest: iKwnlbW1yDoUPhMdt9kRYgYviUw=
+< 
+< Name: assets/millennial_right_arrow.png
+< SHA1-Digest: KZ+C1GNQfKqZeVL0oJGcTwrT/po=
+< 
+< Name: res/drawable/diamond.png
+< SHA1-Digest: wnAJHwmFC51cHCuHVVjIgvXbWGc=
+< 
+< Name: res/raw/harp.mid
+< SHA1-Digest: FsQgocAx5deNOqfdWpzyiaSStXI=
+< 
+< Name: res/raw/biggong.ogg
+< SHA1-Digest: cT1xKK25LmAPBQs81oA0yGzfxF0=
+< 
+< Name: res/drawable/btn_close.png
+< SHA1-Digest: uXVtIHUJoKjJInNccn5FEAyIPpI=
+< 
+< Name: res/drawable/bubbleback.png
+< SHA1-Digest: CxUBs40t0eqt3Ue10O4yrfl0Z6Q=
+< 
+< Name: com/adwhirl/assets/ad_frame.gif
+< SHA1-Digest: AACcaGyMNbP2a2g0wfiNMAQvyOU=
+< 
+< Name: res/drawable/ball602.png
+< SHA1-Digest: uanfkwg18deaSzWfZGqp7ny09wc=
+< 
+< Name: res/layout/score_row.xml
+< SHA1-Digest: 1L5IHbfeG1FtXcCNN/4t0FrV8IY=
+< 
+< Name: res/layout/options_full.xml
+< SHA1-Digest: 2Rs3lzSyh4O3HxPiHbjwq3F6wV4=
+< 
+256,257c202,209
+< Name: res/layout/mainintro.xml
+< SHA1-Digest: yfXWLMN1TjzB+s04kcOIGVDl50U=
+---
+> Name: res/layout/pending_game_row.xml
+> SHA1-Digest: hvIN4xSB/54HovaUUSxxzFZTI24=
+> 
+> Name: res/drawable/trioshapes.png
+> SHA1-Digest: oNyZfjLs+ZV9gJCF/4Q2A6Ciw6s=
+> 
+> Name: res/drawable/btn_try_again.png
+> SHA1-Digest: Oe1iwqKCbFeJGJ6HuzYzdK2Fpr4=
+261a214,216
+> Name: res/layout/mainintro.xml
+> SHA1-Digest: ugr3kJAd0xcqIJiBsQfMmUhHAkI=
+> 
+263c218,224
+< SHA1-Digest: ZG84RG7Mf2+q0GqL7XYZORiwc/A=
+---
+> SHA1-Digest: yjHJddQr1orr8WYjB5IgvZin9Y0=
+> 
+> Name: res/drawable/highlightstar.png
+> SHA1-Digest: AP11RttjQbZSGRFtYvgLSxxy5+k=
+> 
+> Name: res/drawable/square.png
+> SHA1-Digest: CcaFb74/wsTG5nEDAJD7mlM4ocI=
+266c227
+< SHA1-Digest: 70a903Cmeszxmuv3ssML84LyJPw=
+---
+> SHA1-Digest: miRePB3e2f+Yt9PMA/FNzRMgxXY=
+271,272c232,236
+< Name: assets/millennial_right_arrow_disabled.png
+< SHA1-Digest: 96660cgpVLPwRf15TEBmOpxWZRM=
+---
+> Name: res/drawable/row_back.xml
+> SHA1-Digest: GxHF/k1qPp6Nl0PmVXxjJnAAh7U=
+> 
+> Name: res/layout/main_fs.xml
+> SHA1-Digest: 2WpzacVSlm/zjSOHQ0q2p0C71uY=
+276a241,249
+> Name: assets/millennial_right_arrow_disabled.png
+> SHA1-Digest: 96660cgpVLPwRf15TEBmOpxWZRM=
+> 
+> Name: classes.dex
+> SHA1-Digest: Nk1p5vJFZPDjyoIaOSiglhPIXIM=
+> 
+> Name: res/drawable/triangle.png
+> SHA1-Digest: 592doHMXLp0EX/wQgsR9BsVULVU=
+> 
+285a259,261
+> Name: assets/fr/intro.html
+> SHA1-Digest: BBo+0zjMQZfbnjquCJaXdgxpv0c=
+> 
+288a265,273
+> Name: assets/millennial_close.png
+> SHA1-Digest: 5XxYsmkG/kt9AZjBzcGhaoHrYLs=
+> 
+> Name: res/drawable/icon.png
+> SHA1-Digest: Y/3g9LwPIyJg7PF8ZJi7BOtB+h4=
+> 
+> Name: res/raw/bubble_pop.wav
+> SHA1-Digest: uwECtZnz9R86fvCEX7aCsk2drfM=
+> 
+294a280,285
+> Name: res/layout/list_advt.xml
+> SHA1-Digest: oQhtVCU/zBIl9ern2GE9qvWtUu0=
+> 
+> Name: res/drawable/trioball.png
+> SHA1-Digest: 6qksY4fIo+XvAdeR4IErZ96L+XI=
+> 
+298,299c289,290
+< Name: res/layout/list_advt.xml
+< SHA1-Digest: WX81Umib+358N6YmyH6QSXkWSBY=
+---
+> Name: res/layout/button_continue.xml
+> SHA1-Digest: HmXKtbRAjQnfCuC8/Kw2lXoU9Yk=
+Somente em result/APP_37/App_M_37/original/META-INF: SQL.RSA
+Somente em result/APP_37/App_M_37/original/META-INF: SQL.SF
+diff -r result/APP_37/App_B_37/res/layout/introduction.xml result/APP_37/App_M_37/res/layout/introduction.xml
+8,10c8,10
+<     <Button android:id="@id/tryPro" android:background="@drawable/custom_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginBottom="10.0sp" android:text="Upgrade to Bubble Burst Pro." android:layout_above="@id/start" android:layout_centerHorizontal="true" />
+<     <Button android:id="@id/start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginBottom="10.0sp" android:tint="#ffff4040" android:text="Play Bubble Burst Free." android:layout_above="@id/adview" android:layout_centerHorizontal="true" />
+<     <com.google.ads.GoogleAdView android:id="@id/adview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+---
+>     <Button android:id="@id/tryPro" android:background="@drawable/custom_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginBottom="10.0sp" android:text="" android:layout_above="@id/start" android:layout_centerHorizontal="true" />
+>     <Button android:id="@id/start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginBottom="10.0sp" android:tint="#ffff4040" android:text="start game" android:layout_above="@id/admogo_layout" android:layout_centerHorizontal="true" />
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" />
+diff -r result/APP_37/App_B_37/res/layout/main_fs.xml result/APP_37/App_M_37/res/layout/main_fs.xml
+15c15,16
+<     <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/adv" android:layout_width="fill_parent" android:layout_height="52.0dip" />
+---
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" />
+>     <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/adv" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+diff -r result/APP_37/App_B_37/res/layout/main.xml result/APP_37/App_M_37/res/layout/main.xml
+16c16,17
+<     <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/adv" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+---
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" />
+>     <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/adv" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+diff -r result/APP_37/App_B_37/res/layout-long-v4/main.xml result/APP_37/App_M_37/res/layout-long-v4/main.xml
+16c16,17
+<     <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/adv" android:layout_width="fill_parent" android:layout_height="52.0dip" />
+---
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" />
+>     <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/adv" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+diff -r result/APP_37/App_B_37/res/values/ids.xml result/APP_37/App_M_37/res/values/ids.xml
+89a90
+>     <item type="id" name="admogo_layout" />
+diff -r result/APP_37/App_B_37/res/values/public.xml result/APP_37/App_M_37/res/values/public.xml
+229a230
+>     <public type="id" name="admogo_layout" id="0x7f070057" />
+Somente em result/APP_37/App_B_37/res: values-fr
+Somente em result/APP_37/App_M_37/smali: cn
+Somente em result/APP_37/App_M_37/smali/com: admogo
+Somente em result/APP_37/App_M_37/smali/com: adwo
+Somente em result/APP_37/App_M_37/smali/com: baidu
+Somente em result/APP_37/App_M_37/smali/com: mt
+Somente em result/APP_37/App_B_37/: unknown

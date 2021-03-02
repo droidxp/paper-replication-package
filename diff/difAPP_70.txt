@@ -1,0 +1,60 @@
+diff -r result/APP_70/App_B_70/apktool.yml result/APP_70/App_M_70/apktool.yml
+2c2
+< apkFileName: Bapp70-9BA74E2C15E8F6B3D99B36C01BA9E801C8BE8A2942ED7D44A12CC576D51900DD.apk
+---
+> apkFileName: Mapp70-6A2505A2B66A3D8031FB32F3982F4E5346361E4AE5E5879756DFD48856204E85.apk
+Os arquivos binários result/APP_70/App_B_70/assets/armeabi/reboot e result/APP_70/App_M_70/assets/armeabi/reboot são diferentes
+Os arquivos binários result/APP_70/App_B_70/assets/armeabi/su e result/APP_70/App_M_70/assets/armeabi/su são diferentes
+Os arquivos binários result/APP_70/App_B_70/assets/mips/reboot e result/APP_70/App_M_70/assets/mips/reboot são diferentes
+Os arquivos binários result/APP_70/App_B_70/assets/mips/su e result/APP_70/App_M_70/assets/mips/su são diferentes
+Os arquivos binários result/APP_70/App_B_70/assets/x86/reboot e result/APP_70/App_M_70/assets/x86/reboot são diferentes
+Os arquivos binários result/APP_70/App_B_70/assets/x86/su e result/APP_70/App_M_70/assets/x86/su são diferentes
+Somente em result/APP_70/App_B_70/original/META-INF: 32BE1815.RSA
+Somente em result/APP_70/App_B_70/original/META-INF: 32BE1815.SF
+Somente em result/APP_70/App_M_70/original/META-INF: CERT.RSA
+Somente em result/APP_70/App_M_70/original/META-INF: CERT.SF
+diff -r result/APP_70/App_B_70/original/META-INF/MANIFEST.MF result/APP_70/App_M_70/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.7.0_51 (Oracle Corporation)
+---
+> Created-By: 1.0 (Android)
+47c47
+< SHA1-Digest: vgPgF6wtaQrdo4hPFoX27T9D3jM=
+---
+> SHA1-Digest: K9/Tmva70o6SBNtj6VigQV3VUco=
+143c143
+< SHA1-Digest: GWbxjBsBSUI7BIbCT9be7AivAS4=
+---
+> SHA1-Digest: DSvXVcam5Cs4YSEHZMAx+MP2Cd8=
+164c164
+< SHA1-Digest: 1jXQoU+lLEPb7+XtIJ7Y4J6h+64=
+---
+> SHA1-Digest: aEEtmG4pg5o/CjlFMAlOGsCUpl0=
+206c206
+< SHA1-Digest: /UE+4zLC9ar04srrrUdhneNu/Hg=
+---
+> SHA1-Digest: cvhLQ+i+c/AiAy/BN0hdcCdRQ3o=
+224c224
+< SHA1-Digest: hSgUQ+lPfC6rRUBKHvEtz15B8sA=
+---
+> SHA1-Digest: Rf4pxm1NGGZG2xbJVMVP1VgHaoU=
+395c395
+< SHA1-Digest: bOXgjTesMoTmT48swzIMOLzKTfg=
+---
+> SHA1-Digest: q581hEWlfb/KMEdO7llAg4NPujQ=
+473c473
+< SHA1-Digest: QP8A7Nhliu4p3KPqTNThP+0bcCo=
+---
+> SHA1-Digest: 4dB9LAl4cqfQeD7tqryDndokzgg=
+488c488
+< SHA1-Digest: sgQHBrEh9gQccZwdmn2x+i6k3M0=
+---
+> SHA1-Digest: lS9ek/UxlyXo/FbKzoRG/EiGvtE=
+diff -r result/APP_70/App_B_70/smali/com/koushikdutta/superuser/db/UidCommand.smali result/APP_70/App_M_70/smali/com/koushikdutta/superuser/db/UidCommand.smali
+133c133
+<     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+---
+>     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+diff -r result/APP_70/App_B_70/smali/com/koushikdutta/superuser/PolicyNativeFragment.smali result/APP_70/App_M_70/smali/com/koushikdutta/superuser/PolicyNativeFragment.smali
+41d40
+<     .line 41

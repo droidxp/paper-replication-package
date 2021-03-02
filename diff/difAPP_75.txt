@@ -1,0 +1,223 @@
+diff -r result/APP_75/App_B_75/apktool.yml result/APP_75/App_M_75/apktool.yml
+2c2
+< apkFileName: Bapp75-AB2F74DCE4D133C8AB7D63DFB085E136A3EECD8BE02D037DFDA4662D43C5735C.apk
+---
+> apkFileName: Mapp75-9206DB87EB97A43429E181A1CA5FD568AE2211255682A2D959CBE460882AFB37.apk
+diff -r result/APP_75/App_B_75/com/anddoes/notifier/az.java result/APP_75/App_M_75/com/anddoes/notifier/az.java
+6d5
+< import android.content.pm.PackageManager.NameNotFoundException;
+48,55c47
+<     paramContext = paramContext.getPackageManager();
+<     try
+<     {
+<       paramContext.getPackageInfo(paramString, 0);
+<       return true;
+<     }
+<     catch (PackageManager.NameNotFoundException paramContext) {}
+<     return false;
+---
+>     return true;
+Os arquivos binários result/APP_75/App_B_75/original/AndroidManifest.xml e result/APP_75/App_M_75/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_75/App_B_75/original/META-INF/CERT.RSA e result/APP_75/App_M_75/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_75/App_B_75/original/META-INF/CERT.SF result/APP_75/App_M_75/original/META-INF/CERT.SF
+2,6c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: 7eHlHm/69EAzLBqG1hSFFXoLlFU=
+< 
+< Name: res/layout-v17/preference_header_switch_item.xml
+< SHA1-Digest: B2PSyfYXFWZN/B+07y/bcBZiJGc=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: iawZgWiV5bhKBWA/HX8yszyFqHo=
+10a8,10
+> Name: res/layout-v17/preference_header_switch_item.xml
+> SHA1-Digest: EHRfxlwS9kqWeh/O5Sd/NjcjgAY=
+> 
+12c12
+< SHA1-Digest: Jeei7B8Fsi42mp1wAq1Yt8TwHDk=
+---
+> SHA1-Digest: ou8WYutx8sCmxdw8PL0wmUpuYrQ=
+21c21
+< SHA1-Digest: Bb1Q9ljWTim0VJwnxUZ053unKQI=
+---
+> SHA1-Digest: Ibq4/KFdcNxTUlXLrFyJ58NT3tQ=
+30c30,33
+< SHA1-Digest: Tii/zv7fv0CXHEtGL/RGGxznLm8=
+---
+> SHA1-Digest: oK17V2ALUYomcXyKwOSYK6dyLAc=
+> 
+> Name: res/xml-zh-CN/preferences.xml
+> SHA1-Digest: jEQo/D5p2mY3lttC+e09cXsiTVw=
+35,37d37
+< Name: res/layout/dialog_about.xml
+< SHA1-Digest: 1p5ery6E5N1ir0je/oeoPpBNNho=
+< 
+39c39,42
+< SHA1-Digest: 5pnGl6MsljQftU2pquY/1nsRP2U=
+---
+> SHA1-Digest: 8WEjvlPNIIpb3mSN++Gcwv5DgHc=
+> 
+> Name: res/layout/dialog_about.xml
+> SHA1-Digest: 6XEwa3/FyDsRxud6Sl3ga7BFzZU=
+43a47,49
+> Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
+> SHA1-Digest: e4nKkxQ9Rg0ti/neY2OXnQvkEQQ=
+> 
+47,48c53,54
+< Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
+< SHA1-Digest: e4nKkxQ9Rg0ti/neY2OXnQvkEQQ=
+---
+> Name: res/xml-zh-TW/preferences.xml
+> SHA1-Digest: RxregI0selg1z2ERVrVAK9hjom0=
+58a65,67
+> Name: res/layout/number_picker_preference.xml
+> SHA1-Digest: wo2lxtbCq7VBWpGfK3YPSdDt4bg=
+> 
+62,64d70
+< Name: res/layout/number_picker_preference.xml
+< SHA1-Digest: ZCAstH8Vz7s765gnRDQF1IgwONg=
+< 
+66c72
+< SHA1-Digest: f+ny9VsYcsLaJ3xjNMCsB/980/M=
+---
+> SHA1-Digest: iE7x7PQthNqO7X0w0wEbKntIC2g=
+69c75
+< SHA1-Digest: IVKbyvkhhCMBkl6LYS/f3lpUAI4=
+---
+> SHA1-Digest: mbSiuaC8y5fY0AAB1ko6uhG+sbQ=
+93c99
+< SHA1-Digest: NV0LfRdjRLvxvVyxr7J9xPxD63o=
+---
+> SHA1-Digest: tzmXS0AWSxM2E4SB2i8FyUSDvpw=
+104,106d109
+< Name: res/menu/main.xml
+< SHA1-Digest: LRut47CS9JWglE4/OZPw4u2fm74=
+< 
+108c111,114
+< SHA1-Digest: me1LqDQMK5luUdTgGwsYSESTTNE=
+---
+> SHA1-Digest: fB1pjtReSmq5/535gvkwhlRkrdg=
+> 
+> Name: res/menu/main.xml
+> SHA1-Digest: dqE2svtvaIpKRqiZuvqn056oBDQ=
+116,118d121
+< Name: res/xml/preferences_empty.xml
+< SHA1-Digest: G7ffkp1aWfYKfDErWYk8ytZ5IgQ=
+< 
+121a125,127
+> Name: res/xml/preferences_empty.xml
+> SHA1-Digest: Vlpti7mmvCIvkje87evNhOSmfF0=
+> 
+129c135
+< SHA1-Digest: +lyrDRolHbjcnqhtIMSCeG/Prx8=
+---
+> SHA1-Digest: JXIcCs8ZwTb//kIaS3jOTBIPr2s=
+141c147
+< SHA1-Digest: yNQ8T7pcKWcgxYql5GnfCzLauYs=
+---
+> SHA1-Digest: W7joOLaY3m/c72WW0iGTQ0/cF4M=
+diff -r result/APP_75/App_B_75/original/META-INF/MANIFEST.MF result/APP_75/App_M_75/original/META-INF/MANIFEST.MF
+2c2,5
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+> 
+> Name: res/layout-v17/preference_header_switch_item.xml
+> SHA1-Digest: 1quQO3wHwbZv1gw3W6OpdHELvs0=
+7,9d9
+< Name: res/layout-v17/preference_header_switch_item.xml
+< SHA1-Digest: nqb03UKAQhR9+pYbc7W2pZGHyzs=
+< 
+11c11
+< SHA1-Digest: dfOCNsSoXekpVw7A7sx8TFYxm3A=
+---
+> SHA1-Digest: wLM8s2dyk2SrlzTgHLaSrC6J5UE=
+20c20
+< SHA1-Digest: 8Q8kDhzyEFntJqHxu6k/bCGIZq4=
+---
+> SHA1-Digest: w73vtZGEbogsZU5m/kHa0+av4Ac=
+27a28,30
+> Name: res/xml-zh-CN/preferences.xml
+> SHA1-Digest: a/HI1xVyPUq5JpQYwZlTp1O6hgk=
+> 
+29c32
+< SHA1-Digest: Wq7JYWJ+bl/cAWH3BuF3sMORx7I=
+---
+> SHA1-Digest: TgLclukWTXsdpbOne8BmuTCLq5g=
+35c38
+< SHA1-Digest: c10DBD5GGVLD4jE6b3ekFc7Z/Yo=
+---
+> SHA1-Digest: jtdXEZrZ8NbWDYH3LpLffQf/hx8=
+38c41
+< SHA1-Digest: Hko+xGbGmwrQemEC6OElJk/adDs=
+---
+> SHA1-Digest: 1m/09YEXgDKElV9Z+2cDl6/aUB0=
+42a46,48
+> Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
+> SHA1-Digest: jSdN5hjQoweAWVz3QpOxJsL/dbE=
+> 
+46,47c52,53
+< Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
+< SHA1-Digest: jSdN5hjQoweAWVz3QpOxJsL/dbE=
+---
+> Name: res/xml-zh-TW/preferences.xml
+> SHA1-Digest: ZCTH1BWj9NaZovUbrijLYtTPHNg=
+57a64,66
+> Name: res/layout/number_picker_preference.xml
+> SHA1-Digest: Lr59te2i7tkWsdZ2rXLFxzZeSpg=
+> 
+61,63d69
+< Name: res/layout/number_picker_preference.xml
+< SHA1-Digest: 1cBgI3+eztciEbdM0lJunpl5NFI=
+< 
+65c71
+< SHA1-Digest: V/iirB04YrMkKu4oQZwf5ij6x78=
+---
+> SHA1-Digest: /iL3nkVwn9F29SYFaMPOfripjcw=
+68c74
+< SHA1-Digest: bebejGgYxI+//DheNwArNpVHzEc=
+---
+> SHA1-Digest: RMpj7laJFJE9yVCRCOSd7Wj2nbM=
+89c95
+< SHA1-Digest: dedrWfcYkNnnSEmkRRPVuDglGSU=
+---
+> SHA1-Digest: l8t9OZvz0emdYGeHiG7RPfjDLk4=
+100,102d105
+< Name: res/layout-v17/list_item_calendar.xml
+< SHA1-Digest: 3bKvD7vbtcS4ioeAtQOaLuqaDm4=
+< 
+104c107,110
+< SHA1-Digest: JLqqAYXe3CToipGOY0XaLCdZnQ4=
+---
+> SHA1-Digest: pkhr2eDJ+CZ5h3W8ybYYcnacblQ=
+> 
+> Name: res/layout-v17/list_item_calendar.xml
+> SHA1-Digest: Whai3R+ZzZilPKXA/gOF7SdoaMk=
+114a121,123
+> Name: res/xml/preferences_empty.xml
+> SHA1-Digest: RRG4p4oGaGX411nU57FXVYG6QS8=
+> 
+118,120d126
+< Name: res/xml/preferences_empty.xml
+< SHA1-Digest: DaX45DjFoolKyfGULnqdLvUBNf4=
+< 
+125c131
+< SHA1-Digest: MisnIiOg0igHX77tQ7zIK0Ff2qU=
+---
+> SHA1-Digest: 5V3pHTgYi70XOiPxu0iaTpLJ8og=
+140c146
+< SHA1-Digest: omIz8No7ncFwAPmUxL7JFAxRgcE=
+---
+> SHA1-Digest: 6xwVPA9jxmYEfux+HsuFp5USJ+I=
+Somente em result/APP_75/App_B_75/res: values-it
+Somente em result/APP_75/App_M_75/res: values-zh-rCN
+Somente em result/APP_75/App_M_75/res: values-zh-rTW
+Somente em result/APP_75/App_M_75/res: xml-zh-rCN
+Somente em result/APP_75/App_M_75/res: xml-zh-rTW
+diff -r result/APP_75/App_B_75/smali/com/anddoes/notifier/az.smali result/APP_75/App_M_75/smali/com/anddoes/notifier/az.smali
+104c104,106
+<     const/4 v0, 0x0
+---
+>     const/4 v0, 0x1
+> 
+>     return v0

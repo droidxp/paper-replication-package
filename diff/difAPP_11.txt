@@ -1,0 +1,2217 @@
+diff -r result/APP_11/App_B_11/AndroidManifest.xml result/APP_11/App_M_11/AndroidManifest.xml
+18a19,20
+>         <meta-data android:name="Wooboo_PID" android:value="9e28a35a50054eecab6524082e35511f"/>
+>         <meta-data android:name="Market_ID" android:value="74"/>
+22d23
+<     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+24,25d24
+<     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+diff -r result/APP_11/App_B_11/apktool.yml result/APP_11/App_M_11/apktool.yml
+2c2
+< apkFileName: Bapp11-1B711580F7F41814467446BCA0FE2088F5728DF27794ED4DA2F6B5046D08572A.apk
+---
+> apkFileName: Mapp11-BB602F10C5B6BCA72570E572B1AEF22AE0364930016B94888B4B25F5A9A5D3FF.apk
+6d5
+< - png
+7a7
+> - png
+Somente em result/APP_11/App_M_11/assets: wooboo_btn.png
+Somente em result/APP_11/App_M_11/assets: wooboo_logo.png
+Somente em result/APP_11/App_M_11/assets: wooboo_ua.properties
+diff -r result/APP_11/App_B_11/com/omesoft/nosick/ActivityMain.java result/APP_11/App_M_11/com/omesoft/nosick/ActivityMain.java
+24,27c24
+< import com.omesoft.platinumminers.IPlayback;
+< import com.omesoft.platinumminers.IPlayback.Stub;
+< import net.youmi.android.AdManager;
+< import net.youmi.android.AdView;
+---
+> import com.wooboo.adlib_android.WoobooAdView;
+34a32
+>   private WoobooAdView adView;
+98,102d95
+<   static
+<   {
+<     AdManager.init("1ad9ac3c9d412c6c", "7046fd3889c47760", 30, false, "1.1");
+<   }
+<   
+160a154
+>     this.adView = ((WoobooAdView)findViewById(2131165184));
+167a162
+>         ActivityMain.this.adView.RequstAdOnce();
+179a175
+>         ActivityMain.this.adView.RequstAdOnce();
+191a188
+>         ActivityMain.this.adView.RequstAdOnce();
+202a200
+>         ActivityMain.this.adView.RequstAdOnce();
+213a212
+>         ActivityMain.this.adView.RequstAdOnce();
+233a233
+>         ActivityMain.this.adView.RequstAdOnce();
+250a251
+>         ActivityMain.this.adView.RequstAdOnce();
+352,355d352
+<     }
+<     AdView localAdView = (AdView)findViewById(2131165184);
+<     if (localAdView != null) {
+<       localAdView.onDestroy();
+diff -r result/APP_11/App_B_11/com/omesoft/nosick/MusicService.java result/APP_11/App_M_11/com/omesoft/nosick/MusicService.java
+18d17
+< import com.omesoft.platinumminers.IPlayback.Stub;
+diff -r result/APP_11/App_B_11/com/omesoft/nosick/R.java result/APP_11/App_M_11/com/omesoft/nosick/R.java
+10c10,11
+<     public static final int backgroundTransparent = 2130771970;
+---
+>     public static final int refreshInterval = 2130771971;
+>     public static final int testing = 2130771970;
+36c37
+<     public static final int adView = 2131165184;
+---
+>     public static final int adwooboo = 2131165184;
+91,94c92,96
+<     public static final int[] net_youmi_android_AdView = { 2130771968, 2130771969, 2130771970 };
+<     public static final int net_youmi_android_AdView_backgroundColor = 0;
+<     public static final int net_youmi_android_AdView_backgroundTransparent = 2;
+<     public static final int net_youmi_android_AdView_textColor = 1;
+---
+>     public static final int[] com_wooboo_adlib_android_WoobooAdView = { 2130771968, 2130771969, 2130771970, 2130771971 };
+>     public static final int com_wooboo_adlib_android_WoobooAdView_backgroundColor = 0;
+>     public static final int com_wooboo_adlib_android_WoobooAdView_refreshInterval = 3;
+>     public static final int com_wooboo_adlib_android_WoobooAdView_testing = 2;
+>     public static final int com_wooboo_adlib_android_WoobooAdView_textColor = 1;
+diff -r result/APP_11/App_B_11/com/omesoft/nosick/WebAbout.java result/APP_11/App_M_11/com/omesoft/nosick/WebAbout.java
+7d6
+< import net.youmi.android.AdView;
+36,44d34
+<   }
+<   
+<   protected void onDestroy()
+<   {
+<     super.onDestroy();
+<     AdView localAdView = (AdView)findViewById(2131165184);
+<     if (localAdView != null) {
+<       localAdView.onDestroy();
+<     }
+Somente em result/APP_11/App_B_11/com/omesoft: platinumminers
+Somente em result/APP_11/App_M_11/com: wooboo
+Somente em result/APP_11/App_B_11/: net
+Os arquivos binários result/APP_11/App_B_11/original/AndroidManifest.xml e result/APP_11/App_M_11/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_11/App_B_11/original/META-INF/CERT.RSA e result/APP_11/App_M_11/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_11/App_B_11/original/META-INF/CERT.SF result/APP_11/App_M_11/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: R0WzpKcU0TiBCW0veVpi7A3CS38=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: bqzNo8EWijwveo/Jx2bY08RW2zQ=
+6c6
+< SHA1-Digest: PEFDkY2zNcf9gbcibVqNTVAIaKo=
+---
+> SHA1-Digest: iRWuS0SjA6QU5FR2v2L5SNppFD4=
+9c9
+< SHA1-Digest: DXomer17z5zecQbf4Ct04TdatH4=
+---
+> SHA1-Digest: q/dEAmyaaOg0cjeVNUh/G0Kcu68=
+21c21
+< SHA1-Digest: nxDpAIC0MA9CvQzdCDrpOMfqi3Y=
+---
+> SHA1-Digest: STf7dXvLJ1kr6A/lxYJLethHdBk=
+27c27
+< SHA1-Digest: kOkF7BDDhZ4E3TnqW4WTiTzIRWo=
+---
+> SHA1-Digest: 5pc0ehlJEiNxNnhb2egsbfweWpw=
+30c30
+< SHA1-Digest: PahIohlMweKuXbIx5h3NmbMQSsE=
+---
+> SHA1-Digest: DBP/Hedl+AlzgP1EVcSDeixTkpg=
+36c36
+< SHA1-Digest: Dx0S2mhBWb1Ap9d1YTxOhMvhsaw=
+---
+> SHA1-Digest: FdrUOVFvCWzjw090g1in1wwKwk8=
+39c39
+< SHA1-Digest: lIjLP7+LT3aZVDgMnxqy+CwhYnc=
+---
+> SHA1-Digest: c0kVQoYKWUa/lN5kSaR6k6tg7Ek=
+42c42
+< SHA1-Digest: nvLW2VRkA54ipIwFFVAXNPFM0cA=
+---
+> SHA1-Digest: l3e4KikUa0bFKygA6ZVxk6MYIUI=
+48c48
+< SHA1-Digest: 7far/cDxFFPoxuNhj9kmdjbYR58=
+---
+> SHA1-Digest: S7pJSY23Qe1UPh3Tt+I9TGjUcpY=
+61a62,64
+> Name: assets/wooboo_logo.png
+> SHA1-Digest: mbMwXGKlOQ8XVg0sQtx8QD6AlOQ=
+> 
+66c69
+< SHA1-Digest: jdzYU8MX12VGEnojw8nKk0wnkTk=
+---
+> SHA1-Digest: D6aF5iHsK0Lt+Z/9Vt+jpI6m7vY=
+75c78
+< SHA1-Digest: VswvONWJXBS0JXw8wOO5ysyZKp4=
+---
+> SHA1-Digest: sYJw/T177QA8puiDm/efC1r/jnk=
+90c93
+< SHA1-Digest: szh5kObJDAoY7FGpTSsrjzCRXgU=
+---
+> SHA1-Digest: Hn45IqGMgXXSxSI28hBYMyIoOLw=
+93c96
+< SHA1-Digest: mOntW4oG+QFaxG+lRSH20OOm0UQ=
+---
+> SHA1-Digest: ALx0BcyP7DTl3olCHsa27dQdn9I=
+99c102
+< SHA1-Digest: rWQvasrEWvOn5qggd0osxNnh/FE=
+---
+> SHA1-Digest: 43v4HL/4EnHC+lMGHY3ijFZ3sc4=
+103a107,109
+> Name: assets/wooboo_ua.properties
+> SHA1-Digest: eomCDBY7Udr4ZUptXHbVH0tRaxE=
+> 
+111a118,120
+> 
+> Name: assets/wooboo_btn.png
+> SHA1-Digest: 6A1JRof8T0yPOPpTvZ84SOSS3jA=
+diff -r result/APP_11/App_B_11/original/META-INF/MANIFEST.MF result/APP_11/App_M_11/original/META-INF/MANIFEST.MF
+5c5
+< SHA1-Digest: Ak9jnwk957hRhcX22s64iqNACLA=
+---
+> SHA1-Digest: zOwjZEcj2KuXVUnboJ19wmbl6lk=
+8c8
+< SHA1-Digest: GIKehjVgkK1BUc8rE6XYxnvBEvs=
+---
+> SHA1-Digest: gRt/bVw4m975J824hTIX+/Z2pfw=
+17c17
+< SHA1-Digest: vyYQ/8Vdz5RiCQdLY5J/EGYgSmU=
+---
+> SHA1-Digest: TPM88VLJwPW73CENOOSeZ6Dnutw=
+23c23
+< SHA1-Digest: 3inDgDH+vReXCVvZw6lBSWLVUYI=
+---
+> SHA1-Digest: 5F4t/V9j4umJ1wh7pyDQH9q9EXQ=
+29c29
+< SHA1-Digest: mbDPO6mcFraFgRWM7tN724QBU5w=
+---
+> SHA1-Digest: 2xX2hYEH1v3eZXQVNWZRI08OEbs=
+35c35
+< SHA1-Digest: 6ZtH+gaU+NjgVpsWx5vaHxkT4QQ=
+---
+> SHA1-Digest: 9QbooN2vsre+/jagatJ+Jp5V75w=
+38c38
+< SHA1-Digest: E0xUS+V9Uvedq403OePXnrsE980=
+---
+> SHA1-Digest: q71WGN564xru08Fg4o+GJXCw2oI=
+41c41
+< SHA1-Digest: tHpdvAYbmB6GNO2RnF0pMJyBgnA=
+---
+> SHA1-Digest: 0Sp4fhrTXLAqWkXs20dZUbLduR8=
+47c47
+< SHA1-Digest: dDaHs0h5MFcqbGhMMxAlfO7yAAY=
+---
+> SHA1-Digest: qbHFIVBYXhdkpVGosWq5+pnqiQQ=
+60a61,63
+> Name: assets/wooboo_logo.png
+> SHA1-Digest: PctO9O1XH7y4kTZElfTR7wA0vR8=
+> 
+65c68
+< SHA1-Digest: P6yvcM8WBhCke3d96XNhqK0bUj0=
+---
+> SHA1-Digest: pGCj2kG1q8mUnO7Em++MIsVAN6M=
+74c77
+< SHA1-Digest: adzQfCyrXNHk7Cjglzu9sNZ2TXE=
+---
+> SHA1-Digest: YBo/CzlaeQvgduWsWds5Bovozf0=
+89c92
+< SHA1-Digest: pKdXaEzf1NzMhMR2ORQPtXdDRmQ=
+---
+> SHA1-Digest: wlhGYbXuIsa123EJIoeUp6Ol1Gc=
+92c95
+< SHA1-Digest: o/T8gAJIFMAsum0n6Qa2EXZExk0=
+---
+> SHA1-Digest: Pzd9P1SS8qvV/F0dKEDunl+nCAg=
+98c101
+< SHA1-Digest: 12hxd3xnYruQ6Qu5j7u5A4Vk3FE=
+---
+> SHA1-Digest: jvmjnv5gzGPlublh2JtS6KleF0o=
+102a106,108
+> Name: assets/wooboo_ua.properties
+> SHA1-Digest: VV+o5cNYZkuTNTlMzhOK1wfRwtc=
+> 
+110a117,119
+> 
+> Name: assets/wooboo_btn.png
+> SHA1-Digest: qm8SfYV2S4MandyI3LUEXUtgjlM=
+Os arquivos binários result/APP_11/App_B_11/res/drawable/cover.jpg e result/APP_11/App_M_11/res/drawable/cover.jpg são diferentes
+diff -r result/APP_11/App_B_11/res/layout/background.xml result/APP_11/App_M_11/res/layout/background.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+6c6
+<     <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>     <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout/main.xml result/APP_11/App_M_11/res/layout/main.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+6c6
+<         <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>         <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout/showinfo.xml result/APP_11/App_M_11/res/layout/showinfo.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+8c8
+<     <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>     <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout/webabout.xml result/APP_11/App_M_11/res/layout/webabout.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+6c6
+<     <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>     <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout-480x320/main.xml result/APP_11/App_M_11/res/layout-480x320/main.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+6c6
+<         <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>         <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout-480x320/showinfo.xml result/APP_11/App_M_11/res/layout-480x320/showinfo.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+8c8
+<     <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>     <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout-640x360/main.xml result/APP_11/App_M_11/res/layout-640x360/main.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+6c6
+<         <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>         <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout-640x360/showinfo.xml result/APP_11/App_M_11/res/layout-640x360/showinfo.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+8c8
+<     <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>     <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout-854x480/main.xml result/APP_11/App_M_11/res/layout-854x480/main.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+6c6
+<         <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>         <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/layout-854x480/showinfo.xml result/APP_11/App_M_11/res/layout-854x480/showinfo.xml
+4c4
+<   xmlns:umadsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+---
+>   xmlns:adsdk="http://schemas.android.com/apk/res/com.omesoft.nosick">
+8c8
+<     <net.youmi.android.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:backgroundColor="#ff808080" umadsdk:textColor="#ffffffff" umadsdk:backgroundTransparent="155" />
+---
+>     <com.wooboo.adlib_android.WoobooAdView android:id="@id/adwooboo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" adsdk:backgroundColor="#00000000" adsdk:textColor="#ffffffff" adsdk:testing="false" adsdk:refreshInterval="20" />
+diff -r result/APP_11/App_B_11/res/values/attrs.xml result/APP_11/App_M_11/res/values/attrs.xml
+5c5,6
+<     <attr name="backgroundTransparent" format="integer" />
+---
+>     <attr name="testing" format="boolean" />
+>     <attr name="refreshInterval" format="integer" />
+diff -r result/APP_11/App_B_11/res/values/ids.xml result/APP_11/App_M_11/res/values/ids.xml
+3c3
+<     <item type="id" name="adView" />
+---
+>     <item type="id" name="adwooboo" />
+diff -r result/APP_11/App_B_11/res/values/public.xml result/APP_11/App_M_11/res/values/public.xml
+5c5,6
+<     <public type="attr" name="backgroundTransparent" id="0x7f010002" />
+---
+>     <public type="attr" name="testing" id="0x7f010002" />
+>     <public type="attr" name="refreshInterval" id="0x7f010003" />
+34c35
+<     <public type="id" name="adView" id="0x7f070000" />
+---
+>     <public type="id" name="adwooboo" id="0x7f070000" />
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$10.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$10.smali
+32c32
+<     .line 213
+---
+>     .line 221
+45c45,54
+<     .line 216
+---
+>     .line 223
+>     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain$10;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v1
+> 
+>     invoke-virtual {v1}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 225
+53c62
+<     .line 217
+---
+>     .line 226
+56c65
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+60c69
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->stop()V
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->stop()V
+64c73
+<     .line 222
+---
+>     .line 231
+69c78
+<     .line 219
+---
+>     .line 228
+75c84
+<     .line 220
+---
+>     .line 229
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$11.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$11.smali
+32c32
+<     .line 226
+---
+>     .line 235
+43c43
+<     .line 253
+---
+>     .line 262
+62c62
+<     .line 264
+---
+>     .line 273
+67c67
+<     .line 267
+---
+>     .line 276
+71c71
+<     .line 255
+---
+>     .line 264
+79c79
+<     .line 258
+---
+>     .line 267
+87c87
+<     .line 261
+---
+>     .line 270
+95c95
+<     .line 253
+---
+>     .line 262
+111c111
+<     .line 237
+---
+>     .line 246
+130c130
+<     .line 248
+---
+>     .line 257
+135c135
+<     .line 251
+---
+>     .line 260
+139c139
+<     .line 239
+---
+>     .line 248
+147c147
+<     .line 242
+---
+>     .line 251
+155c155
+<     .line 245
+---
+>     .line 254
+163c163
+<     .line 237
+---
+>     .line 246
+182c182
+<     .line 229
+---
+>     .line 238
+189c189
+<     .line 230
+---
+>     .line 239
+192c192
+<     .line 234
+---
+>     .line 243
+199c199
+<     .line 231
+---
+>     .line 240
+209c209
+<     .line 232
+---
+>     .line 241
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$1.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$1.smali
+29c29
+<     .line 46
+---
+>     .line 47
+42c42
+<     .line 49
+---
+>     .line 50
+47c47
+<     .line 57
+---
+>     .line 58
+51c51
+<     .line 51
+---
+>     .line 52
+59c59
+<     .line 49
+---
+>     .line 50
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$2.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$2.smali
+32c32
+<     .line 60
+---
+>     .line 61
+46c46
+<     .line 64
+---
+>     .line 65
+49c49
+<     invoke-static {p2}, Lcom/omesoft/platinumminers/IPlayback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {p2}, Lcom/omesoft/nosick/IPlayback$Stub;->asInterface(Landroid/os/IBinder;)Lcom/omesoft/nosick/IPlayback;
+53c53
+<     invoke-static {v0, v1}, Lcom/omesoft/nosick/ActivityMain;->access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/platinumminers/IPlayback;)V
+---
+>     invoke-static {v0, v1}, Lcom/omesoft/nosick/ActivityMain;->access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/nosick/IPlayback;)V
+55c55
+<     .line 66
+---
+>     .line 67
+76c76
+<     .line 67
+---
+>     .line 68
+85c85
+<     .line 70
+---
+>     .line 71
+90c90
+<     invoke-static {v0, v1}, Lcom/omesoft/nosick/ActivityMain;->access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/platinumminers/IPlayback;)V
+---
+>     invoke-static {v0, v1}, Lcom/omesoft/nosick/ActivityMain;->access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/nosick/IPlayback;)V
+92c92
+<     .line 71
+---
+>     .line 72
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$3.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$3.smali
+32c32
+<     .line 318
+---
+>     .line 327
+47c47
+<     .line 322
+---
+>     .line 331
+50c50
+<     .line 324
+---
+>     .line 333
+62c62
+<     .line 325
+---
+>     .line 334
+66c66
+<     invoke-static {v2}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v2}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+70c70
+<     invoke-interface {v2}, Lcom/omesoft/platinumminers/IPlayback;->getDuration()I
+---
+>     invoke-interface {v2}, Lcom/omesoft/nosick/IPlayback;->getDuration()I
+78c78
+<     .line 326
+---
+>     .line 335
+82c82
+<     invoke-static {v2}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v2}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+86c86
+<     invoke-interface {v2, v1}, Lcom/omesoft/platinumminers/IPlayback;->seek(I)V
+---
+>     invoke-interface {v2, v1}, Lcom/omesoft/nosick/IPlayback;->seek(I)V
+90c90
+<     .line 332
+---
+>     .line 341
+96c96
+<     .line 328
+---
+>     .line 337
+102c102
+<     .line 329
+---
+>     .line 338
+114c114
+<     .line 333
+---
+>     .line 342
+123c123
+<     .line 334
+---
+>     .line 343
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$4.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$4.smali
+32c32
+<     .line 136
+---
+>     .line 138
+45c45,54
+<     .line 139
+---
+>     .line 141
+>     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain$4;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v1
+> 
+>     invoke-virtual {v1}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 142
+54c63
+<     .line 140
+---
+>     .line 143
+62c71
+<     .line 141
+---
+>     .line 144
+67c76
+<     .line 142
+---
+>     .line 145
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$5.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$5.smali
+32c32
+<     .line 148
+---
+>     .line 151
+45c45,54
+<     .line 151
+---
+>     .line 154
+>     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain$5;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v1
+> 
+>     invoke-virtual {v1}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 155
+54c63
+<     .line 152
+---
+>     .line 156
+62c71
+<     .line 153
+---
+>     .line 157
+67c76
+<     .line 154
+---
+>     .line 158
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$6.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$6.smali
+32c32
+<     .line 160
+---
+>     .line 164
+45c45,54
+<     .line 163
+---
+>     .line 167
+>     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain$6;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v1
+> 
+>     invoke-virtual {v1}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 168
+54c63
+<     .line 164
+---
+>     .line 169
+60c69
+<     .line 165
+---
+>     .line 170
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$7.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$7.smali
+32c32
+<     .line 171
+---
+>     .line 176
+45c45,54
+<     .line 174
+---
+>     .line 179
+>     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain$7;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v1
+> 
+>     invoke-virtual {v1}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 180
+54c63
+<     .line 175
+---
+>     .line 181
+60c69
+<     .line 176
+---
+>     .line 182
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$8.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$8.smali
+32c32
+<     .line 182
+---
+>     .line 188
+45c45,54
+<     .line 185
+---
+>     .line 190
+>     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain$8;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v1
+> 
+>     invoke-virtual {v1}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 192
+49c58
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+53c62
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->isPlaying()Z
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->isPlaying()Z
+59c68
+<     .line 187
+---
+>     .line 194
+62c71
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+66c75
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->start()V
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->start()V
+70c79
+<     .line 192
+---
+>     .line 199
+75c84
+<     .line 189
+---
+>     .line 196
+81c90
+<     .line 190
+---
+>     .line 197
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$9.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$9.smali
+32c32
+<     .line 198
+---
+>     .line 205
+45c45,54
+<     .line 202
+---
+>     .line 208
+>     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain$9;->this$0:Lcom/omesoft/nosick/ActivityMain;
+> 
+>     invoke-static {v0}, Lcom/omesoft/nosick/ActivityMain;->access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     move-result-object v0
+> 
+>     invoke-virtual {v0}, Lcom/wooboo/adlib_android/WoobooAdView;->RequstAdOnce()V
+> 
+>     .line 210
+49c58
+<     invoke-static {v0}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v0}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+53c62
+<     invoke-interface {v0}, Lcom/omesoft/platinumminers/IPlayback;->isPlaying()Z
+---
+>     invoke-interface {v0}, Lcom/omesoft/nosick/IPlayback;->isPlaying()Z
+59c68
+<     .line 203
+---
+>     .line 211
+62c71
+<     invoke-static {v0}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v0}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+66c75
+<     invoke-interface {v0}, Lcom/omesoft/platinumminers/IPlayback;->pause()V
+---
+>     invoke-interface {v0}, Lcom/omesoft/nosick/IPlayback;->pause()V
+70c79
+<     .line 207
+---
+>     .line 215
+75c84
+<     .line 205
+---
+>     .line 213
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain$MyPhoneStateListener.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain$MyPhoneStateListener.smali
+32c32
+<     .line 270
+---
+>     .line 279
+37c37
+<     .line 271
+---
+>     .line 280
+40c40
+<     .line 272
+---
+>     .line 281
+58c58
+<     .line 276
+---
+>     .line 285
+61c61
+<     .line 278
+---
+>     .line 287
+64c64
+<     .line 314
+---
+>     .line 323
+69c69
+<     .line 280
+---
+>     .line 289
+73c73
+<     .line 282
+---
+>     .line 291
+77c77
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+81c81
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->isPlaying()Z
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->isPlaying()Z
+87c87
+<     .line 283
+---
+>     .line 292
+90c90
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+94c94
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->pause()V
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->pause()V
+96c96
+<     .line 284
+---
+>     .line 293
+105c105
+<     .line 286
+---
+>     .line 295
+111c111
+<     .line 290
+---
+>     .line 299
+115c115
+<     .line 292
+---
+>     .line 301
+119c119
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+123c123
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->isPlaying()Z
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->isPlaying()Z
+129c129
+<     .line 293
+---
+>     .line 302
+132c132
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+136c136
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->pause()V
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->pause()V
+138c138
+<     .line 294
+---
+>     .line 303
+147c147
+<     .line 296
+---
+>     .line 305
+153c153
+<     .line 301
+---
+>     .line 310
+159c159
+<     .line 302
+---
+>     .line 311
+162c162
+<     .line 304
+---
+>     .line 313
+166c166
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+170c170
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->isPlaying()Z
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->isPlaying()Z
+180c180
+<     .line 305
+---
+>     .line 314
+183c183
+<     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+>     invoke-static {v1}, Lcom/omesoft/nosick/ActivityMain;->access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+187c187
+<     invoke-interface {v1}, Lcom/omesoft/platinumminers/IPlayback;->start()V
+---
+>     invoke-interface {v1}, Lcom/omesoft/nosick/IPlayback;->start()V
+189c189
+<     .line 306
+---
+>     .line 315
+198c198
+<     .line 308
+---
+>     .line 317
+204c204
+<     .line 309
+---
+>     .line 318
+210c210
+<     .line 278
+---
+>     .line 287
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/ActivityMain.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/ActivityMain.smali
+22a23,24
+> .field private adView:Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+49c51
+< .field private service:Lcom/omesoft/platinumminers/IPlayback;
+---
+> .field private service:Lcom/omesoft/nosick/IPlayback;
+58c60
+<     .locals 5
+---
+>     .locals 1
+61c63
+<     .line 44
+---
+>     .line 42
+66,79c68
+<     .line 359
+<     const-string v0, "1ad9ac3c9d412c6c"
+< 
+<     const-string v1, "7046fd3889c47760"
+< 
+<     const/16 v2, 0x1e
+< 
+<     const/4 v3, 0x0
+< 
+<     const-string v4, "1.1"
+< 
+<     invoke-static {v0, v1, v2, v3, v4}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
+< 
+<     .line 30
+---
+>     .line 28
+87c76
+<     .line 30
+---
+>     .line 28
+90c79
+<     .line 46
+---
+>     .line 47
+97c86
+<     .line 60
+---
+>     .line 61
+104c93
+<     .line 73
+---
+>     .line 74
+109c98
+<     .line 318
+---
+>     .line 327
+116c105
+<     .line 30
+---
+>     .line 28
+124c113
+<     .line 74
+---
+>     .line 75
+130c119
+< .method static synthetic access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/platinumminers/IPlayback;)V
+---
+> .method static synthetic access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/nosick/IPlayback;)V
+134,135c123,124
+<     .line 40
+<     iput-object p1, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+---
+>     .line 38
+>     iput-object p1, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+144c133
+<     .line 46
+---
+>     .line 47
+150c139
+< .method static synthetic access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+---
+> .method static synthetic access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
+154,155c143,154
+<     .line 40
+<     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+---
+>     .line 38
+>     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+> 
+>     return-object v0
+> .end method
+> 
+> .method static synthetic access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+>     .locals 1
+> 
+>     .prologue
+>     .line 44
+>     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
+165c164
+<     .line 226
+---
+>     .line 235
+172c171
+<     .line 269
+---
+>     .line 278
+180c179,190
+<     .line 133
+---
+>     .line 134
+>     const/high16 v0, 0x7f070000
+> 
+>     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
+> 
+>     move-result-object v0
+> 
+>     check-cast v0, Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
+> 
+>     .line 135
+191c201
+<     .line 134
+---
+>     .line 136
+202c212
+<     .line 135
+---
+>     .line 137
+207c217
+<     .line 136
+---
+>     .line 138
+216c226
+<     .line 145
+---
+>     .line 148
+227c237
+<     .line 146
+---
+>     .line 149
+238c248
+<     .line 147
+---
+>     .line 150
+243c253
+<     .line 148
+---
+>     .line 151
+252c262
+<     .line 157
+---
+>     .line 161
+263c273
+<     .line 158
+---
+>     .line 162
+274c284
+<     .line 159
+---
+>     .line 163
+279c289
+<     .line 160
+---
+>     .line 164
+288c298
+<     .line 168
+---
+>     .line 173
+299c309
+<     .line 169
+---
+>     .line 174
+310c320
+<     .line 170
+---
+>     .line 175
+315c325
+<     .line 171
+---
+>     .line 176
+324c334
+<     .line 179
+---
+>     .line 185
+335c345
+<     .line 180
+---
+>     .line 186
+346c356
+<     .line 181
+---
+>     .line 187
+351c361
+<     .line 182
+---
+>     .line 188
+360c370
+<     .line 195
+---
+>     .line 202
+371c381
+<     .line 196
+---
+>     .line 203
+382c392
+<     .line 197
+---
+>     .line 204
+387c397
+<     .line 198
+---
+>     .line 205
+396c406
+<     .line 210
+---
+>     .line 218
+407c417
+<     .line 211
+---
+>     .line 219
+418c428
+<     .line 212
+---
+>     .line 220
+423c433
+<     .line 213
+---
+>     .line 221
+432c442
+<     .line 224
+---
+>     .line 233
+446c456
+<     .line 77
+---
+>     .line 78
+448c458
+<     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+---
+>     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+452,453c462,463
+<     .line 79
+<     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+---
+>     .line 80
+>     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+455c465
+<     invoke-interface {v5}, Lcom/omesoft/platinumminers/IPlayback;->getDuration()I
+---
+>     invoke-interface {v5}, Lcom/omesoft/nosick/IPlayback;->getDuration()I
+461c471
+<     .line 80
+---
+>     .line 81
+463c473
+<     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+---
+>     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+465c475
+<     invoke-interface {v5}, Lcom/omesoft/platinumminers/IPlayback;->getTime()I
+---
+>     invoke-interface {v5}, Lcom/omesoft/nosick/IPlayback;->getTime()I
+471c481
+<     .line 81
+---
+>     .line 82
+485c495
+<     .line 82
+---
+>     .line 83
+494c504
+<     .line 83
+---
+>     .line 84
+501c511
+<     .line 84
+---
+>     .line 85
+511c521
+<     .line 89
+---
+>     .line 90
+523c533
+<     .line 90
+---
+>     .line 91
+531c541
+<     .line 95
+---
+>     .line 96
+541c551
+<     .line 98
+---
+>     .line 99
+559c569
+<     .line 102
+---
+>     .line 103
+568c578
+<     .line 84
+---
+>     .line 85
+571c581
+<     .line 86
+---
+>     .line 87
+581c591
+<     .line 87
+---
+>     .line 88
+595c605
+<     .line 99
+---
+>     .line 100
+603c613
+<     .line 100
+---
+>     .line 101
+615c625
+<     .line 87
+---
+>     .line 88
+618c628
+<     .line 92
+---
+>     .line 93
+641c651
+<     .line 106
+---
+>     .line 107
+644c654
+<     .line 107
+---
+>     .line 108
+649c659
+<     .line 108
+---
+>     .line 109
+652c662
+<     .line 109
+---
+>     .line 110
+655c665
+<     .line 110
+---
+>     .line 111
+666c676
+<     .line 111
+---
+>     .line 112
+673c683
+<     .line 112
+---
+>     .line 113
+680c690
+<     .line 113
+---
+>     .line 114
+687c697
+<     .line 114
+---
+>     .line 115
+698c708
+<     .line 115
+---
+>     .line 116
+709,710c719,720
+<     .line 116
+<     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+---
+>     .line 117
+>     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+714c724
+<     .line 117
+---
+>     .line 118
+721c731
+<     .line 118
+---
+>     .line 119
+725c735
+<     .line 119
+---
+>     .line 120
+732c742
+<     .line 121
+---
+>     .line 122
+736c746
+<     .line 122
+---
+>     .line 123
+739c749
+<     .line 126
+---
+>     .line 127
+749c759
+<     .line 125
+---
+>     .line 126
+752c762
+<     .line 127
+---
+>     .line 128
+759c769
+<     .line 128
+---
+>     .line 129
+762c772
+<     .line 127
+---
+>     .line 128
+765c775
+<     .line 130
+---
+>     .line 131
+773c783
+<     .locals 3
+---
+>     .locals 2
+776c786
+<     .line 344
+---
+>     .line 353
+779,780c789,790
+<     .line 345
+<     iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain;->connection:Landroid/content/ServiceConnection;
+---
+>     .line 354
+>     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->connection:Landroid/content/ServiceConnection;
+782c792
+<     invoke-virtual {p0, v1}, Lcom/omesoft/nosick/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
+---
+>     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
+784,785c794,795
+<     .line 346
+<     const/4 v1, 0x0
+---
+>     .line 355
+>     const/4 v0, 0x0
+787c797
+<     sput-boolean v1, Lcom/omesoft/nosick/ActivityMain;->isShow:Z
+---
+>     sput-boolean v0, Lcom/omesoft/nosick/ActivityMain;->isShow:Z
+789,790c799,800
+<     .line 347
+<     sget v1, Lcom/omesoft/nosick/MusicService;->state:I
+---
+>     .line 356
+>     sget v0, Lcom/omesoft/nosick/MusicService;->state:I
+792c802
+<     const/4 v2, 0x2
+---
+>     const/4 v1, 0x2
+794c804
+<     if-eq v1, v2, :cond_0
+---
+>     if-eq v0, v1, :cond_0
+796c806
+<     sget v1, Lcom/omesoft/nosick/MusicService;->state:I
+---
+>     sget v0, Lcom/omesoft/nosick/MusicService;->state:I
+798c808
+<     const/4 v2, 0x3
+---
+>     const/4 v1, 0x3
+800c810
+<     if-ne v1, v2, :cond_1
+---
+>     if-ne v0, v1, :cond_1
+802c812
+<     .line 348
+---
+>     .line 357
+804c814
+<     new-instance v1, Landroid/content/Intent;
+---
+>     new-instance v0, Landroid/content/Intent;
+806c816
+<     const-string v2, "com.omesoft.nosick.TRACK_UPDATED"
+---
+>     const-string v1, "com.omesoft.nosick.TRACK_UPDATED"
+808c818
+<     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+---
+>     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+810c820
+<     invoke-virtual {p0, v1}, Lcom/omesoft/nosick/ActivityMain;->stopService(Landroid/content/Intent;)Z
+---
+>     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->stopService(Landroid/content/Intent;)Z
+812c822
+<     .line 350
+---
+>     .line 359
+814,830d823
+<     const/high16 v1, 0x7f070000
+< 
+<     invoke-virtual {p0, v1}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v0
+< 
+<     check-cast v0, Lnet/youmi/android/AdView;
+< 
+<     .line 352
+<     .local v0, "adView":Lnet/youmi/android/AdView;
+<     if-eqz v0, :cond_2
+< 
+<     .line 353
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+< 
+<     .line 355
+<     :cond_2
+838c831
+<     .line 339
+---
+>     .line 348
+841c834
+<     .line 340
+---
+>     .line 349
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/MusicService$1.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/MusicService$1.smali
+2c2
+< .super Lcom/omesoft/platinumminers/IPlayback$Stub;
+---
+> .super Lcom/omesoft/nosick/IPlayback$Stub;
+29,30c29,30
+<     .line 44
+<     invoke-direct {p0}, Lcom/omesoft/platinumminers/IPlayback$Stub;-><init>()V
+---
+>     .line 43
+>     invoke-direct {p0}, Lcom/omesoft/nosick/IPlayback$Stub;-><init>()V
+46c46
+<     .line 86
+---
+>     .line 85
+55c55
+<     .line 87
+---
+>     .line 86
+66c66
+<     .line 89
+---
+>     .line 88
+85c85
+<     .line 94
+---
+>     .line 93
+94c94
+<     .line 95
+---
+>     .line 94
+105c105
+<     .line 97
+---
+>     .line 96
+124c124
+<     .line 107
+---
+>     .line 106
+133c133
+<     .line 108
+---
+>     .line 107
+144c144
+<     .line 110
+---
+>     .line 109
+163c163
+<     .line 48
+---
+>     .line 47
+176c176
+<     .line 49
+---
+>     .line 48
+185c185
+<     .line 50
+---
+>     .line 49
+190c190
+<     .line 52
+---
+>     .line 51
+204c204
+<     .line 115
+---
+>     .line 114
+213c213
+<     .line 116
+---
+>     .line 115
+220c220
+<     .line 117
+---
+>     .line 116
+225c225
+<     .line 118
+---
+>     .line 117
+239c239
+<     .line 101
+---
+>     .line 100
+260c260
+<     .line 102
+---
+>     .line 101
+269c269
+<     .line 104
+---
+>     .line 103
+285c285
+<     .line 56
+---
+>     .line 55
+292c292
+<     .line 57
+---
+>     .line 56
+297c297
+<     .line 58
+---
+>     .line 57
+302c302
+<     .line 68
+---
+>     .line 67
+322c322
+<     .line 69
+---
+>     .line 68
+329c329
+<     .line 71
+---
+>     .line 70
+333c333
+<     .line 59
+---
+>     .line 58
+339c339
+<     .line 61
+---
+>     .line 60
+348c348
+<     .line 62
+---
+>     .line 61
+355c355
+<     .line 64
+---
+>     .line 63
+361c361
+<     .line 65
+---
+>     .line 64
+378c378
+<     .line 75
+---
+>     .line 74
+385c385
+<     .line 76
+---
+>     .line 75
+394c394
+<     .line 77
+---
+>     .line 76
+399c399
+<     .line 79
+---
+>     .line 78
+408c408
+<     .line 80
+---
+>     .line 79
+419c419
+<     .line 82
+---
+>     .line 81
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/MusicService$2.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/MusicService$2.smali
+32c32
+<     .line 192
+---
+>     .line 191
+45c45
+<     .line 194
+---
+>     .line 193
+50c50
+<     .line 195
+---
+>     .line 194
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/MusicService$3.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/MusicService$3.smali
+32c32
+<     .line 198
+---
+>     .line 197
+45c45
+<     .line 200
+---
+>     .line 199
+52c52
+<     .line 201
+---
+>     .line 200
+61c61
+<     .line 202
+---
+>     .line 201
+66c66
+<     .line 203
+---
+>     .line 202
+73c73
+<     .line 204
+---
+>     .line 203
+79c79
+<     .line 205
+---
+>     .line 204
+84c84
+<     .line 207
+---
+>     .line 206
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/MusicService$4.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/MusicService$4.smali
+32c32
+<     .line 210
+---
+>     .line 209
+47c47
+<     .line 212
+---
+>     .line 211
+52c52
+<     .line 213
+---
+>     .line 212
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/MusicService$5.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/MusicService$5.smali
+29c29
+<     .line 152
+---
+>     .line 151
+41c41
+<     .line 155
+---
+>     .line 154
+46c46
+<     .line 156
+---
+>     .line 155
+55c55
+<     .line 157
+---
+>     .line 156
+60c60
+<     .line 159
+---
+>     .line 158
+69c69
+<     .line 160
+---
+>     .line 159
+80c80
+<     .line 164
+---
+>     .line 163
+89c89
+<     .line 165
+---
+>     .line 164
+94c94
+<     .line 166
+---
+>     .line 165
+97c97
+<     .line 162
+---
+>     .line 161
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/MusicService.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/MusicService.smali
+51c51
+<     .line 30
+---
+>     .line 29
+56c56
+<     .line 33
+---
+>     .line 32
+61c61
+<     .line 34
+---
+>     .line 33
+66c66
+<     .line 37
+---
+>     .line 36
+71c71
+<     .line 24
+---
+>     .line 23
+81c81
+<     .line 24
+---
+>     .line 23
+84c84
+<     .line 32
+---
+>     .line 31
+87c87
+<     .line 35
+---
+>     .line 34
+90c90
+<     .line 44
+---
+>     .line 43
+97c97
+<     .line 192
+---
+>     .line 191
+104c104
+<     .line 198
+---
+>     .line 197
+111c111
+<     .line 210
+---
+>     .line 209
+118c118
+<     .line 24
+---
+>     .line 23
+126c126
+<     .line 219
+---
+>     .line 218
+132c132
+<     .line 220
+---
+>     .line 219
+139c139
+<     .line 221
+---
+>     .line 220
+146c146
+<     .line 222
+---
+>     .line 221
+153c153
+<     .line 223
+---
+>     .line 222
+160c160
+<     .line 228
+---
+>     .line 227
+172c172
+<     .line 229
+---
+>     .line 228
+184c184
+<     .line 230
+---
+>     .line 229
+189c189
+<     .line 229
+---
+>     .line 228
+192c192
+<     .line 232
+---
+>     .line 231
+197c197
+<     .line 240
+---
+>     .line 239
+202c202
+<     .line 226
+---
+>     .line 225
+214c214
+<     .line 233
+---
+>     .line 232
+220c220
+<     .line 234
+---
+>     .line 233
+226c226
+<     .line 235
+---
+>     .line 234
+233c233
+<     .line 236
+---
+>     .line 235
+239c239
+<     .line 237
+---
+>     .line 236
+246c246
+<     .line 238
+---
+>     .line 237
+257c257
+<     .line 39
+---
+>     .line 38
+267c267
+<     .line 217
+---
+>     .line 216
+277c277
+<     .line 150
+---
+>     .line 149
+287c287
+<     .line 38
+---
+>     .line 37
+297c297
+<     .line 39
+---
+>     .line 38
+307c307
+<     .line 242
+---
+>     .line 241
+317c317
+<     .line 37
+---
+>     .line 36
+327c327
+<     .line 37
+---
+>     .line 36
+341c341
+<     .line 243
+---
+>     .line 242
+346c346
+<     .line 244
+---
+>     .line 243
+352c352
+<     .line 245
+---
+>     .line 244
+357c357
+<     .line 244
+---
+>     .line 243
+360c360
+<     .line 247
+---
+>     .line 246
+364c364
+<     .line 248
+---
+>     .line 247
+369c369
+<     .line 247
+---
+>     .line 246
+374c374
+<     .line 250
+---
+>     .line 249
+382c382
+<     .line 251
+---
+>     .line 250
+386c386
+<     .line 252
+---
+>     .line 251
+391c391
+<     .line 253
+---
+>     .line 252
+402c402
+<     .line 255
+---
+>     .line 254
+408c408
+<     .line 256
+---
+>     .line 255
+417c417
+<     .line 151
+---
+>     .line 150
+422c422
+<     .line 152
+---
+>     .line 151
+428c428
+<     .line 168
+---
+>     .line 167
+434c434
+<     .line 169
+---
+>     .line 168
+439c439
+<     .line 171
+---
+>     .line 170
+443c443
+<     .line 172
+---
+>     .line 171
+446c446
+<     .line 173
+---
+>     .line 172
+457c457
+<     .line 124
+---
+>     .line 123
+467c467
+<     .line 129
+---
+>     .line 128
+470c470
+<     .line 130
+---
+>     .line 129
+481c481
+<     .line 133
+---
+>     .line 132
+491c491
+<     .line 137
+---
+>     .line 136
+494c494
+<     .line 138
+---
+>     .line 137
+499c499
+<     .line 139
+---
+>     .line 138
+504c504
+<     .line 140
+---
+>     .line 139
+507c507
+<     .line 142
+---
+>     .line 141
+513c513
+<     .line 143
+---
+>     .line 142
+520c520
+<     .line 144
+---
+>     .line 143
+523c523
+<     .line 147
+---
+>     .line 146
+538c538
+<     .line 177
+---
+>     .line 176
+541c541
+<     .line 178
+---
+>     .line 177
+558c558
+<     .line 179
+---
+>     .line 178
+562c562
+<     .line 181
+---
+>     .line 180
+574c574
+<     .line 182
+---
+>     .line 181
+585c585
+<     .line 183
+---
+>     .line 182
+604c604
+<     .line 184
+---
+>     .line 183
+609c609
+<     .line 189
+---
+>     .line 188
+614c614
+<     .line 190
+---
+>     .line 189
+617c617
+<     .line 185
+---
+>     .line 184
+631c631
+<     .line 186
+---
+>     .line 185
+636c636
+<     .line 187
+---
+>     .line 186
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$attr.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$attr.smali
+20c20,22
+< .field public static final backgroundTransparent:I = 0x7f010002
+---
+> .field public static final refreshInterval:I = 0x7f010003
+> 
+> .field public static final testing:I = 0x7f010002
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$drawable.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$drawable.smali
+48c48
+<     .line 41
+---
+>     .line 47
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$id.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$id.smali
+18c18
+< .field public static final adView:I = 0x7f070000
+---
+> .field public static final adwooboo:I = 0x7f070000
+56c56
+<     .line 55
+---
+>     .line 61
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$layout.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$layout.smali
+38c38
+<     .line 73
+---
+>     .line 79
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$raw.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$raw.smali
+28c28
+<     .line 82
+---
+>     .line 88
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$string.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$string.smali
+36c36
+<     .line 86
+---
+>     .line 92
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$styleable.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$styleable.smali
+18c18
+< .field public static final net_youmi_android_AdView:[I
+---
+> .field public static final com_wooboo_adlib_android_WoobooAdView:[I
+20c20
+< .field public static final net_youmi_android_AdView_backgroundColor:I = 0x0
+---
+> .field public static final com_wooboo_adlib_android_WoobooAdView_backgroundColor:I = 0x0
+22c22
+< .field public static final net_youmi_android_AdView_backgroundTransparent:I = 0x2
+---
+> .field public static final com_wooboo_adlib_android_WoobooAdView_refreshInterval:I = 0x3
+24c24,26
+< .field public static final net_youmi_android_AdView_textColor:I = 0x1
+---
+> .field public static final com_wooboo_adlib_android_WoobooAdView_testing:I = 0x2
+> 
+> .field public static final com_wooboo_adlib_android_WoobooAdView_textColor:I = 0x1
+32,33c34,35
+<     .line 112
+<     const/4 v0, 0x3
+---
+>     .line 120
+>     const/4 v0, 0x4
+39c41
+<     sput-object v0, Lcom/omesoft/nosick/R$styleable;->net_youmi_android_AdView:[I
+---
+>     sput-object v0, Lcom/omesoft/nosick/R$styleable;->com_wooboo_adlib_android_WoobooAdView:[I
+41c43
+<     .line 97
+---
+>     .line 103
+44c46
+<     .line 112
+---
+>     .line 120
+51a54
+>         0x7f010003
+59c62
+<     .line 97
+---
+>     .line 103
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/R$xml.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/R$xml.smali
+26c26
+<     .line 94
+---
+>     .line 100
+diff -r result/APP_11/App_B_11/smali/com/omesoft/nosick/WebAbout.smali result/APP_11/App_M_11/smali/com/omesoft/nosick/WebAbout.smali
+15c15
+<     .line 8
+---
+>     .line 7
+25c25
+<     .line 24
+---
+>     .line 23
+35c35
+<     .line 28
+---
+>     .line 27
+39c39
+<     .line 25
+---
+>     .line 24
+45c45
+<     .line 26
+---
+>     .line 25
+59c59
+<     .line 12
+---
+>     .line 11
+62c62
+<     .line 13
+---
+>     .line 12
+67c67
+<     .line 14
+---
+>     .line 13
+78c78
+<     .line 15
+---
+>     .line 14
+89c89
+<     .line 16
+---
+>     .line 15
+92,120c92
+<     .line 17
+<     return-void
+< .end method
+< 
+< .method protected onDestroy()V
+<     .locals 2
+< 
+<     .prologue
+<     .line 31
+<     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+< 
+<     .line 32
+<     const/high16 v1, 0x7f070000
+< 
+<     invoke-virtual {p0, v1}, Lcom/omesoft/nosick/WebAbout;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v0
+< 
+<     check-cast v0, Lnet/youmi/android/AdView;
+< 
+<     .line 33
+<     .local v0, "adView":Lnet/youmi/android/AdView;
+<     if-eqz v0, :cond_0
+< 
+<     .line 34
+<     invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+< 
+<     .line 35
+<     :cond_0
+---
+>     .line 16
+Somente em result/APP_11/App_B_11/smali/com/omesoft: platinumminers
+Somente em result/APP_11/App_M_11/smali/com: wooboo
+Somente em result/APP_11/App_B_11/smali: net

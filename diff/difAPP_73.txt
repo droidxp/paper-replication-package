@@ -1,0 +1,39 @@
+diff -r result/APP_73/App_B_73/apktool.yml result/APP_73/App_M_73/apktool.yml
+2c2
+< apkFileName: Bapp73-A4700D4E61E4F2D8035BFB616A668B3993A1C3638239065D9368D6E7DA746F12.apk
+---
+> apkFileName: Mapp73-9B8010FF3755C2C008FBFE2304E7E4B5D39AB9788A3E4EE345A1C111265F42E9.apk
+6a7
+> - gif
+Os arquivos binários result/APP_73/App_B_73/original/META-INF/CERT.RSA e result/APP_73/App_M_73/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_73/App_B_73/original/META-INF/CERT.SF result/APP_73/App_M_73/original/META-INF/CERT.SF
+3c3,6
+< SHA1-Digest-Manifest: lKaj99YCbtyVS3EWh+qar2u0YCI=
+---
+> SHA1-Digest-Manifest: zvEpNszrNm+PR/qiUC6hhUlFCrg=
+> 
+> Name: res/drawable/icon.gif
+> SHA1-Digest: TsL8PbY9Jfi+U2HXIiF8uxPcokc=
+6c9
+< SHA1-Digest: c7+0Jf5Tvh/B3j/RuFBmI9hhltA=
+---
+> SHA1-Digest: cilOcFaBHx6+DRxNPlxXWtIg40w=
+31,33d33
+< 
+< Name: res/drawable/icon.png
+< SHA1-Digest: 4OYQkFbO1YVX3V7JDFDUyFjNhMs=
+diff -r result/APP_73/App_B_73/original/META-INF/MANIFEST.MF result/APP_73/App_M_73/original/META-INF/MANIFEST.MF
+3a4,6
+> Name: res/drawable/icon.gif
+> SHA1-Digest: DgdhfKj6i1NSStrMLSJye+7gZJ0=
+> 
+5c8
+< SHA1-Digest: rkzTTsbLW1heW9TPkSGLUwtp5pY=
+---
+> SHA1-Digest: 5kXLk4SUWVqBVgoz/YgjnV9wOOI=
+30,32d32
+< 
+< Name: res/drawable/icon.png
+< SHA1-Digest: 1rvVFbfFO4RHwQlAVRYhKrC59Lk=
+Somente em result/APP_73/App_M_73/res/drawable: icon.gif
+Somente em result/APP_73/App_B_73/res/drawable: icon.png

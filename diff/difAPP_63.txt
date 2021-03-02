@@ -1,0 +1,6 @@
+diff -r result/APP_63/App_B_63/apktool.yml result/APP_63/App_M_63/apktool.yml
+2c2
+< apkFileName: Bapp63-8DCA4433C10BD0EC6884864B6BDF06C40E225C9D33D6B45E70685303927225CF.apk
+---
+> apkFileName: Mapp63-43BEA394D0C1926023D552D296FEBAF61B32B66115CCC3574DF3648A3C2747F4.apk
+Os arquivos binários result/APP_63/App_B_63/original/META-INF/CERT.RSA e result/APP_63/App_M_63/original/META-INF/CERT.RSA são diferentes

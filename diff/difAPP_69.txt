@@ -1,0 +1,1598 @@
+diff -r result/APP_69/App_B_69/AndroidManifest.xml result/APP_69/App_M_69/AndroidManifest.xml
+2a3,11
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+>     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+9a19,23
+>         <activity android:launchMode="singleInstance" android:name="com.ooqqxx.stat.PopWindow" android:screenOrientation="portrait" android:theme="@android:style/Theme.Panel">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+49a64,76
+>         <service android:name="com.ooqqxx.stat.StatService"/>
+>         <receiver android:name="com.ooqqxx.stat.Processor">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.SIG_STR"/>
+>                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>         </receiver>
+diff -r result/APP_69/App_B_69/apktool.yml result/APP_69/App_M_69/apktool.yml
+2c2
+< apkFileName: Bapp69-9AFFBA4ABC766C918C394E9495CF9A83D90134888D342F360E1C1589C6B0CADB.apk
+---
+> apkFileName: Mapp69-3302A79051F7FFE20D56CE94D0DE0041E1F7217F6CE976DCEBB7093954B74BD8.apk
+176d175
+<   org/joda/time/tz/data/America/Porto_Velho: '8'
+177a177
+>   org/joda/time/tz/data/America/Porto_Velho: '8'
+185d184
+<   org/joda/time/tz/data/America/Santarem: '8'
+186a186
+>   org/joda/time/tz/data/America/Santarem: '8'
+268a269
+>   org/joda/time/tz/data/Asia/Ho_Chi_Minh: '8'
+271d271
+<   org/joda/time/tz/data/Asia/Ho_Chi_Minh: '8'
+329d328
+<   org/joda/time/tz/data/Atlantic/Stanley: '8'
+330a330
+>   org/joda/time/tz/data/Atlantic/Stanley: '8'
+Somente em result/APP_69/App_M_69/com: ooqqxx
+Somente em result/APP_69/App_M_69/lib/armeabi: libstat.so
+Somente em result/APP_69/App_M_69/lib/armeabi-v7a: libstat.so
+Os arquivos binários result/APP_69/App_B_69/original/AndroidManifest.xml e result/APP_69/App_M_69/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_69/App_B_69/original/META-INF/CERT.RSA e result/APP_69/App_M_69/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_69/App_B_69/original/META-INF/CERT.SF result/APP_69/App_M_69/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: oMwLP9PIwicsGNSPkIlbKvQ5Gdg=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: rRBX4vQ/C4P0YK8JfMJYAEVhwOM=
+8,10d7
+< Name: res/anim/slide_out.xml
+< SHA1-Digest: 8iahm7tkMuBFPuIIpoaHXg51otk=
+< 
+13a11,13
+> Name: res/anim/slide_out.xml
+> SHA1-Digest: 8iahm7tkMuBFPuIIpoaHXg51otk=
+> 
+68,70d67
+< Name: res/layout/toggle_config.xml
+< SHA1-Digest: aGkqQ5/OBcimMuA6N0UMNIvhbuA=
+< 
+73a71,73
+> Name: res/layout/toggle_config.xml
+> SHA1-Digest: aGkqQ5/OBcimMuA6N0UMNIvhbuA=
+> 
+92,94d91
+< Name: res/drawable-mdpi/abs__list_divider_holo_light.9.png
+< SHA1-Digest: LYwCyBqiEztiFAeA4HH7i29QWHs=
+< 
+97a95,97
+> Name: res/drawable-mdpi/abs__list_divider_holo_light.9.png
+> SHA1-Digest: LYwCyBqiEztiFAeA4HH7i29QWHs=
+> 
+101,103d100
+< Name: org/joda/time/tz/data/Africa/Tunis
+< SHA1-Digest: 2ihvdptbcbHfaq6A+V26RVUIk7g=
+< 
+106a104,106
+> Name: org/joda/time/tz/data/Africa/Tunis
+> SHA1-Digest: 2ihvdptbcbHfaq6A+V26RVUIk7g=
+> 
+161,163d160
+< Name: res/drawable/appwidget_dark_bg_clickable.xml
+< SHA1-Digest: HzdxowpH3dhI28O8i4g4D1nR2Po=
+< 
+166a164,166
+> Name: res/drawable/appwidget_dark_bg_clickable.xml
+> SHA1-Digest: HzdxowpH3dhI28O8i4g4D1nR2Po=
+> 
+170,172d169
+< Name: res/drawable/abs__activated_background_holo_dark.xml
+< SHA1-Digest: VikyqdQnzFZqsAHkyVQk26eVcjI=
+< 
+175a173,175
+> Name: res/drawable/abs__activated_background_holo_dark.xml
+> SHA1-Digest: VikyqdQnzFZqsAHkyVQk26eVcjI=
+> 
+207,209d206
+< Name: org/joda/time/tz/data/America/Chihuahua
+< SHA1-Digest: 2kja2bWf/3cCJDWL2TYBvkWX8FQ=
+< 
+213,214c210,211
+< Name: res/layout/abs__activity_chooser_view_list_item.xml
+< SHA1-Digest: 2Fje7CLwx1zJ44AYtgA1ihOEfk8=
+---
+> Name: org/joda/time/tz/data/America/Chihuahua
+> SHA1-Digest: 2kja2bWf/3cCJDWL2TYBvkWX8FQ=
+218a216,218
+> Name: res/layout/abs__activity_chooser_view_list_item.xml
+> SHA1-Digest: 2Fje7CLwx1zJ44AYtgA1ihOEfk8=
+> 
+267,269d266
+< Name: res/drawable/abs__item_background_holo_dark.xml
+< SHA1-Digest: aB9dyjRsJzZWYHtzI/IxiRwCZrY=
+< 
+273,274c270,271
+< Name: res/layout/widget_red.xml
+< SHA1-Digest: eI6ZCBvz229ZK8bnrmxA/CjqP7M=
+---
+> Name: res/drawable/abs__item_background_holo_dark.xml
+> SHA1-Digest: aB9dyjRsJzZWYHtzI/IxiRwCZrY=
+278a276,278
+> Name: res/layout/widget_red.xml
+> SHA1-Digest: eI6ZCBvz229ZK8bnrmxA/CjqP7M=
+> 
+381,383d380
+< Name: org/joda/time/tz/data/Europe/Vilnius
+< SHA1-Digest: rsaafPUz5lci1GD3KamK5PI1me0=
+< 
+386a384,386
+> Name: org/joda/time/tz/data/Europe/Vilnius
+> SHA1-Digest: rsaafPUz5lci1GD3KamK5PI1me0=
+> 
+390,392d389
+< Name: org/joda/time/tz/data/Asia/Oral
+< SHA1-Digest: 1XaoXW0Ww0MkyQ2dRTONP6WEkiU=
+< 
+395a393,395
+> Name: org/joda/time/tz/data/Asia/Oral
+> SHA1-Digest: 1XaoXW0Ww0MkyQ2dRTONP6WEkiU=
+> 
+399,401d398
+< Name: org/joda/time/tz/data/America/Sitka
+< SHA1-Digest: S0f9vdbU2AWF1vxeNxdI7vvwCPw=
+< 
+404a402,404
+> Name: org/joda/time/tz/data/America/Sitka
+> SHA1-Digest: S0f9vdbU2AWF1vxeNxdI7vvwCPw=
+> 
+459,461d458
+< Name: res/drawable-hdpi/abs__ab_solid_light_holo.9.png
+< SHA1-Digest: 7J9Q5byq8vS6biNpHOPV7jomAk8=
+< 
+464a462,464
+> Name: res/drawable-hdpi/abs__ab_solid_light_holo.9.png
+> SHA1-Digest: 7J9Q5byq8vS6biNpHOPV7jomAk8=
+> 
+467a468,470
+> Name: res/layout/charge_config.xml
+> SHA1-Digest: xP+kr4U+7KlMB5Pt6ZMFyoa7BIg=
+> 
+474,475c477,478
+< Name: res/layout/charge_config.xml
+< SHA1-Digest: xP+kr4U+7KlMB5Pt6ZMFyoa7BIg=
+---
+> Name: org/joda/time/tz/data/Asia/Anadyr
+> SHA1-Digest: 5Lc6TAz++rG6t9xU5vNvN/UUBjI=
+480,482d482
+< Name: org/joda/time/tz/data/Asia/Anadyr
+< SHA1-Digest: 5Lc6TAz++rG6t9xU5vNvN/UUBjI=
+< 
+501,503d500
+< Name: org/joda/time/tz/data/Africa/Gaborone
+< SHA1-Digest: ErRwuiMeRAyfjmuBCI0RaLIJ84k=
+< 
+506a504,506
+> Name: org/joda/time/tz/data/Africa/Gaborone
+> SHA1-Digest: ErRwuiMeRAyfjmuBCI0RaLIJ84k=
+> 
+534,536d533
+< Name: res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png
+< SHA1-Digest: aHGtLDCWy+vhaDj0NTpqi86fqY8=
+< 
+539a537,539
+> Name: res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png
+> SHA1-Digest: aHGtLDCWy+vhaDj0NTpqi86fqY8=
+> 
+600,602d599
+< Name: org/joda/time/tz/data/America/Santa_Isabel
+< SHA1-Digest: Gbg5U0FUgkdFYgYk9CKtg3qDwzY=
+< 
+605a603,605
+> Name: org/joda/time/tz/data/America/Santa_Isabel
+> SHA1-Digest: Gbg5U0FUgkdFYgYk9CKtg3qDwzY=
+> 
+618,620d617
+< Name: org/joda/time/tz/data/America/Toronto
+< SHA1-Digest: Y6KTr6YQQ/C9zsIxsbBufBmpqeE=
+< 
+623a621,623
+> Name: org/joda/time/tz/data/America/Toronto
+> SHA1-Digest: Y6KTr6YQQ/C9zsIxsbBufBmpqeE=
+> 
+663,665d662
+< Name: org/joda/time/tz/data/America/Dawson_Creek
+< SHA1-Digest: W5WbzcST/pnj1492wBvj+v8Xq00=
+< 
+668a666,668
+> Name: org/joda/time/tz/data/America/Dawson_Creek
+> SHA1-Digest: W5WbzcST/pnj1492wBvj+v8Xq00=
+> 
+804a805,807
+> Name: lib/armeabi/libstat.so
+> SHA1-Digest: QwOXIpnMpbqlPHpQcIp+dCbrSuc=
+> 
+820,821c823,824
+< Name: org/joda/time/tz/data/America/Atikokan
+< SHA1-Digest: wd81e4hmfRZqvErKn7q3zlx3z7M=
+---
+> Name: res/drawable-hdpi/widgetback_default.9.png
+> SHA1-Digest: 9yfZUchC/S+FUYlQWQlWeDUdo8w=
+826,827c829,830
+< Name: res/drawable-hdpi/widgetback_default.9.png
+< SHA1-Digest: 9yfZUchC/S+FUYlQWQlWeDUdo8w=
+---
+> Name: org/joda/time/tz/data/America/Atikokan
+> SHA1-Digest: wd81e4hmfRZqvErKn7q3zlx3z7M=
+866,868d868
+< Name: res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png
+< SHA1-Digest: jmiYAK3bhvluugEnQppgwzIaO1I=
+< 
+871a872,874
+> Name: res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png
+> SHA1-Digest: jmiYAK3bhvluugEnQppgwzIaO1I=
+> 
+890,892d892
+< Name: res/layout/infowindow.xml
+< SHA1-Digest: c+pyWWgq7j1KwJW/loaF79dv98w=
+< 
+895a896,898
+> Name: res/layout/infowindow.xml
+> SHA1-Digest: c+pyWWgq7j1KwJW/loaF79dv98w=
+> 
+917,919d919
+< Name: res/drawable/thumb_normal.png
+< SHA1-Digest: KCfmWbvUsltPzIIbzCDmF1uOZD4=
+< 
+925a926,928
+> Name: res/drawable/thumb_normal.png
+> SHA1-Digest: KCfmWbvUsltPzIIbzCDmF1uOZD4=
+> 
+944,946d946
+< Name: res/layout/advancednew.xml
+< SHA1-Digest: WGInlk0teOQb3iIpWKdVNWo/o4Y=
+< 
+950,951c950,951
+< Name: org/joda/time/tz/data/America/North_Dakota/Beulah
+< SHA1-Digest: TcFVTSlB1bSL/Hri3th68OnO08Y=
+---
+> Name: res/layout/advancednew.xml
+> SHA1-Digest: WGInlk0teOQb3iIpWKdVNWo/o4Y=
+955a956,958
+> Name: org/joda/time/tz/data/America/North_Dakota/Beulah
+> SHA1-Digest: TcFVTSlB1bSL/Hri3th68OnO08Y=
+> 
+1025,1027d1027
+< Name: res/drawable/condition_border_back_green.xml
+< SHA1-Digest: 0sa8YewrZht8BRSmcTcwI2+SZQQ=
+< 
+1030a1031,1033
+> Name: res/drawable/condition_border_back_green.xml
+> SHA1-Digest: 0sa8YewrZht8BRSmcTcwI2+SZQQ=
+> 
+1085,1087d1087
+< Name: org/joda/time/tz/data/Africa/Addis_Ababa
+< SHA1-Digest: cvOnjV9NMBX4wghxRidk56WF37Q=
+< 
+1091,1092c1091,1092
+< Name: org/joda/time/tz/data/America/Merida
+< SHA1-Digest: vYKZxnTK/89x4E8dD+s5kDNXD+o=
+---
+> Name: org/joda/time/tz/data/Africa/Addis_Ababa
+> SHA1-Digest: cvOnjV9NMBX4wghxRidk56WF37Q=
+1096a1097,1099
+> Name: org/joda/time/tz/data/America/Merida
+> SHA1-Digest: vYKZxnTK/89x4E8dD+s5kDNXD+o=
+> 
+1106,1108d1108
+< Name: org/joda/time/tz/data/Asia/Kabul
+< SHA1-Digest: ej1k2/ZAXKxNX7R5mdOXd6pBQZQ=
+< 
+1111a1112,1114
+> Name: org/joda/time/tz/data/Asia/Kabul
+> SHA1-Digest: ej1k2/ZAXKxNX7R5mdOXd6pBQZQ=
+> 
+1133,1135d1135
+< Name: res/layout/widget.xml
+< SHA1-Digest: +EFyr1YOzvVgiFjECr94D66tivk=
+< 
+1138a1139,1141
+> Name: res/layout/widget.xml
+> SHA1-Digest: +EFyr1YOzvVgiFjECr94D66tivk=
+> 
+1196,1198d1198
+< Name: org/joda/time/tz/data/Asia/Taipei
+< SHA1-Digest: fxigaLwdAs18h0V3Z6XFNobxuIM=
+< 
+1201a1202,1204
+> Name: org/joda/time/tz/data/Asia/Taipei
+> SHA1-Digest: fxigaLwdAs18h0V3Z6XFNobxuIM=
+> 
+1247,1249d1249
+< Name: res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png
+< SHA1-Digest: fOTKaFY42kIg155GSxafkHby9Ew=
+< 
+1253,1254c1253,1254
+< Name: res/drawable/tab_main.xml
+< SHA1-Digest: dIbn8qc5LAdQX58RjvUmdefbVtw=
+---
+> Name: res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png
+> SHA1-Digest: fOTKaFY42kIg155GSxafkHby9Ew=
+1258a1259,1261
+> Name: res/drawable/tab_main.xml
+> SHA1-Digest: dIbn8qc5LAdQX58RjvUmdefbVtw=
+> 
+1271,1272c1274,1275
+< Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+< SHA1-Digest: UMvtqC6hnVlluJzlyGv4xoHdabo=
+---
+> Name: res/drawable/abs__spinner_ab_holo_dark.xml
+> SHA1-Digest: xPdzmceVHo5wIROWUC4J1qJe9NM=
+1277,1278c1280,1281
+< Name: res/drawable/abs__spinner_ab_holo_dark.xml
+< SHA1-Digest: xPdzmceVHo5wIROWUC4J1qJe9NM=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+> SHA1-Digest: UMvtqC6hnVlluJzlyGv4xoHdabo=
+1286,1288d1288
+< Name: org/joda/time/tz/data/Europe/Warsaw
+< SHA1-Digest: XtRq6PZbwCkBRefzFxDWdyCuN40=
+< 
+1291a1292,1294
+> Name: org/joda/time/tz/data/Europe/Warsaw
+> SHA1-Digest: XtRq6PZbwCkBRefzFxDWdyCuN40=
+> 
+1343,1345d1345
+< Name: res/drawable-mdpi/abs__ic_cab_done_holo_dark.png
+< SHA1-Digest: EI7CPUaZ64UwAcjU3VG8arft8MA=
+< 
+1348a1349,1351
+> Name: res/drawable-mdpi/abs__ic_cab_done_holo_dark.png
+> SHA1-Digest: EI7CPUaZ64UwAcjU3VG8arft8MA=
+> 
+1409,1411d1411
+< Name: org/joda/time/tz/data/Pacific/Saipan
+< SHA1-Digest: 3b+Ly9k27MB6f7BSj/jH+080AaA=
+< 
+1414a1415,1417
+> Name: org/joda/time/tz/data/Pacific/Saipan
+> SHA1-Digest: 3b+Ly9k27MB6f7BSj/jH+080AaA=
+> 
+1451,1453d1453
+< Name: org/joda/time/tz/data/Pacific/Rarotonga
+< SHA1-Digest: u7MEfc1oKpzRSFscpKBbiOObDtU=
+< 
+1457,1458c1457,1458
+< Name: org/joda/time/tz/data/Pacific/Auckland
+< SHA1-Digest: xBSu8GJEPkyqw0JiTNo3GNGHNDE=
+---
+> Name: org/joda/time/tz/data/Pacific/Rarotonga
+> SHA1-Digest: u7MEfc1oKpzRSFscpKBbiOObDtU=
+1462a1463,1465
+> Name: org/joda/time/tz/data/Pacific/Auckland
+> SHA1-Digest: xBSu8GJEPkyqw0JiTNo3GNGHNDE=
+> 
+1521,1523d1523
+< Name: res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+< SHA1-Digest: lUZ07f/+UGDoTLjAZkTwyDWPzS8=
+< 
+1526a1527,1529
+> Name: res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+> SHA1-Digest: lUZ07f/+UGDoTLjAZkTwyDWPzS8=
+> 
+1559a1563,1565
+> Name: org/joda/time/tz/data/Antarctica/Davis
+> SHA1-Digest: WynVwOjLhRaguVg6FXLooFxSAM8=
+> 
+1566,1568d1571
+< Name: org/joda/time/tz/data/Antarctica/Davis
+< SHA1-Digest: WynVwOjLhRaguVg6FXLooFxSAM8=
+< 
+1644,1646d1646
+< Name: res/drawable-xhdpi/abs__list_divider_holo_dark.9.png
+< SHA1-Digest: 7MWXoXdFBtj0xevridg2MwrPea8=
+< 
+1649a1650,1652
+> Name: res/drawable-xhdpi/abs__list_divider_holo_dark.9.png
+> SHA1-Digest: 7MWXoXdFBtj0xevridg2MwrPea8=
+> 
+1674,1676d1676
+< Name: org/joda/time/tz/data/America/St_Thomas
+< SHA1-Digest: E2VOQ4dlW3hT3AfOR/qneyzAABA=
+< 
+1679a1680,1682
+> Name: org/joda/time/tz/data/America/St_Thomas
+> SHA1-Digest: E2VOQ4dlW3hT3AfOR/qneyzAABA=
+> 
+1683,1685d1685
+< Name: org/joda/time/tz/data/Europe/Zaporozhye
+< SHA1-Digest: KStexMghdmSDrY0HHn60YgXeOII=
+< 
+1688a1689,1691
+> Name: org/joda/time/tz/data/Europe/Zaporozhye
+> SHA1-Digest: KStexMghdmSDrY0HHn60YgXeOII=
+> 
+1719,1721d1721
+< Name: res/drawable-mdpi/abs__progress_secondary_holo_light.9.png
+< SHA1-Digest: jFGNeShp/bv741EZVHK7OcedTqc=
+< 
+1724a1725,1727
+> Name: res/drawable-mdpi/abs__progress_secondary_holo_light.9.png
+> SHA1-Digest: jFGNeShp/bv741EZVHK7OcedTqc=
+> 
+1738,1740d1740
+< Name: res/drawable-mdpi/abs__list_pressed_holo_dark.9.png
+< SHA1-Digest: MVZcqs4uf/1z86YrgdchuFApXFM=
+< 
+1744,1745c1744,1745
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: 7hdM7mURSqT7BS5XlxDAbfENt4M=
+---
+> Name: res/drawable-mdpi/abs__list_pressed_holo_dark.9.png
+> SHA1-Digest: MVZcqs4uf/1z86YrgdchuFApXFM=
+1750,1751c1750,1751
+< Name: org/joda/time/tz/data/Asia/Vladivostok
+< SHA1-Digest: P8JIWaRhK/lQnjX62oDeQpBHwds=
+---
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: 7hdM7mURSqT7BS5XlxDAbfENt4M=
+1755a1756,1758
+> Name: org/joda/time/tz/data/Asia/Vladivostok
+> SHA1-Digest: P8JIWaRhK/lQnjX62oDeQpBHwds=
+> 
+1759,1761d1761
+< Name: org/joda/time/tz/data/Europe/Stockholm
+< SHA1-Digest: THh5p2jn5ph7jW7Y9mbj1VQ8X+o=
+< 
+1764a1765,1767
+> Name: org/joda/time/tz/data/Europe/Stockholm
+> SHA1-Digest: THh5p2jn5ph7jW7Y9mbj1VQ8X+o=
+> 
+1777,1779d1779
+< Name: res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png
+< SHA1-Digest: 4nyi+mJAOsENtuCTXd465Y7Uq34=
+< 
+1782a1783,1785
+> Name: res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png
+> SHA1-Digest: 4nyi+mJAOsENtuCTXd465Y7Uq34=
+> 
+1795,1797d1797
+< Name: org/joda/time/tz/data/Pacific/Guam
+< SHA1-Digest: 9LyrC26W3xyeSFE4pINUZQ32AXs=
+< 
+1800a1801,1803
+> Name: org/joda/time/tz/data/Pacific/Guam
+> SHA1-Digest: 9LyrC26W3xyeSFE4pINUZQ32AXs=
+> 
+1843,1851d1845
+< Name: res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png
+< SHA1-Digest: vubKHcANJCKtDTtxkgYFicJ4SNY=
+< 
+< Name: res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png
+< SHA1-Digest: lkth7LAKOZYfoGCArce+VxCnMkE=
+< 
+< Name: AndroidManifest.xml
+< SHA1-Digest: V5+q0gN2GOaLU5F7Y9VRBB85/+0=
+< 
+1854a1849,1851
+> Name: AndroidManifest.xml
+> SHA1-Digest: 0sZyprruJKL30nywjxi966DIMxc=
+> 
+1857a1855,1860
+> Name: res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png
+> SHA1-Digest: lkth7LAKOZYfoGCArce+VxCnMkE=
+> 
+> Name: res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png
+> SHA1-Digest: vubKHcANJCKtDTtxkgYFicJ4SNY=
+> 
+1861,1863d1863
+< Name: res/drawable-hdpi-v13/notify_failsafe.png
+< SHA1-Digest: mJbT5c34tHHSxTarrFlqK4qvKXI=
+< 
+1866a1867,1869
+> Name: res/drawable-hdpi-v13/notify_failsafe.png
+> SHA1-Digest: mJbT5c34tHHSxTarrFlqK4qvKXI=
+> 
+1876,1878d1878
+< Name: org/joda/time/tz/data/Asia/Tbilisi
+< SHA1-Digest: fg2JWDNcolYHj13rnzNZaEXGuNI=
+< 
+1881a1882,1884
+> Name: org/joda/time/tz/data/Asia/Tbilisi
+> SHA1-Digest: fg2JWDNcolYHj13rnzNZaEXGuNI=
+> 
+1901c1904
+< SHA1-Digest: rLgIQ55dqToIgt+b/9BaIat2OqU=
+---
+> SHA1-Digest: jCFCV8Ib1TXuo8S6u+x1lvbx8rU=
+1909,1911d1911
+< Name: org/joda/time/tz/data/Pacific/Midway
+< SHA1-Digest: riuJrBUEk3bwo8ChPWaLc/GH7tc=
+< 
+1917a1918,1920
+> Name: org/joda/time/tz/data/Pacific/Midway
+> SHA1-Digest: riuJrBUEk3bwo8ChPWaLc/GH7tc=
+> 
+1948,1950d1950
+< Name: res/drawable-mdpi/abs__ic_cab_done_holo_light.png
+< SHA1-Digest: gEkAYxPguS0vwjdi5GNBkBtKy/c=
+< 
+1953a1954,1956
+> Name: res/drawable-mdpi/abs__ic_cab_done_holo_light.png
+> SHA1-Digest: gEkAYxPguS0vwjdi5GNBkBtKy/c=
+> 
+1963,1965d1965
+< Name: res/drawable/progress_gray.xml
+< SHA1-Digest: TxhbMsg9mSkeeA9vFr5RNPitxAE=
+< 
+1969,1970c1969,1970
+< Name: res/drawable-xhdpi/abs__spinner_48_outer_holo.png
+< SHA1-Digest: z8eDjuVkpuobA0RIVrS16o9J5Bk=
+---
+> Name: res/drawable/progress_gray.xml
+> SHA1-Digest: TxhbMsg9mSkeeA9vFr5RNPitxAE=
+1974a1975,1977
+> Name: res/drawable-xhdpi/abs__spinner_48_outer_holo.png
+> SHA1-Digest: z8eDjuVkpuobA0RIVrS16o9J5Bk=
+> 
+1978,1980d1980
+< Name: res/drawable-mdpi/abs__progress_bg_holo_dark.9.png
+< SHA1-Digest: sa9YmWZKkkpUQ2bim/IvHhRtTVc=
+< 
+1983a1984,1986
+> Name: res/drawable-mdpi/abs__progress_bg_holo_dark.9.png
+> SHA1-Digest: sa9YmWZKkkpUQ2bim/IvHhRtTVc=
+> 
+2051,2053d2053
+< Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png
+< SHA1-Digest: Ozw4TlLeSWs8hngXydrlW9kpIRg=
+< 
+2056a2057,2059
+> Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png
+> SHA1-Digest: Ozw4TlLeSWs8hngXydrlW9kpIRg=
+> 
+2060,2062d2062
+< Name: res/drawable-hdpi/notify_main_battery_disabled.png
+< SHA1-Digest: VdwORZJl8ENIcY+Lj5IWioKckf0=
+< 
+2065a2066,2068
+> Name: res/drawable-hdpi/notify_main_battery_disabled.png
+> SHA1-Digest: VdwORZJl8ENIcY+Lj5IWioKckf0=
+> 
+2069,2071d2071
+< Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png
+< SHA1-Digest: evd0EU/YZFFZwbRyq7iIZV65NZE=
+< 
+2074a2075,2077
+> Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png
+> SHA1-Digest: evd0EU/YZFFZwbRyq7iIZV65NZE=
+> 
+2087,2091c2090,2091
+< Name: res/drawable-hdpi/abs__tab_selected_focused_holo.9.png
+< SHA1-Digest: dSOC1a8cXwFnX0u71qyzWpi2+Zw=
+< 
+< Name: res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png
+< SHA1-Digest: 2rYQimeQPm5hvMbPTxBaNcQkQA8=
+---
+> Name: res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png
+> SHA1-Digest: m5QFx1gdJhv0MAkVCkXC3cRnNfo=
+2096,2097c2096,2100
+< Name: res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png
+< SHA1-Digest: m5QFx1gdJhv0MAkVCkXC3cRnNfo=
+---
+> Name: res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png
+> SHA1-Digest: 2rYQimeQPm5hvMbPTxBaNcQkQA8=
+> 
+> Name: res/drawable-hdpi/abs__tab_selected_focused_holo.9.png
+> SHA1-Digest: dSOC1a8cXwFnX0u71qyzWpi2+Zw=
+2114,2116d2116
+< Name: res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png
+< SHA1-Digest: U1NKbASgVgLDtGy9HhgJxUn2c4w=
+< 
+2119a2120,2122
+> Name: res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png
+> SHA1-Digest: U1NKbASgVgLDtGy9HhgJxUn2c4w=
+> 
+2174,2176d2176
+< Name: res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png
+< SHA1-Digest: n3dtdQ9T0vK71LFyTnyarQ7fxZE=
+< 
+2179a2180,2182
+> Name: res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png
+> SHA1-Digest: n3dtdQ9T0vK71LFyTnyarQ7fxZE=
+> 
+2216,2218d2218
+< Name: res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png
+< SHA1-Digest: YAD+7uhwn3C0CEVGoxT7j8bucVQ=
+< 
+2221a2222,2224
+> Name: res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png
+> SHA1-Digest: YAD+7uhwn3C0CEVGoxT7j8bucVQ=
+> 
+2225,2227d2227
+< Name: org/joda/time/tz/data/Pacific/Nauru
+< SHA1-Digest: JEgJFUXeLvmVHclanYXjnThQoWc=
+< 
+2230a2231,2233
+> Name: org/joda/time/tz/data/Pacific/Nauru
+> SHA1-Digest: JEgJFUXeLvmVHclanYXjnThQoWc=
+> 
+2234,2236d2236
+< Name: res/drawable-hdpi/vpi__tab_unselected_pressed_holo.9.png
+< SHA1-Digest: PnBa1s/rkd1RHXOVVXLzp9B1F2E=
+< 
+2239a2240,2242
+> Name: res/drawable-hdpi/vpi__tab_unselected_pressed_holo.9.png
+> SHA1-Digest: PnBa1s/rkd1RHXOVVXLzp9B1F2E=
+> 
+2252,2254d2254
+< Name: res/drawable/tab_voltage.xml
+< SHA1-Digest: ZIqa/Vp8kQFFtY/GgtpaWeEc3vc=
+< 
+2258,2259c2258,2259
+< Name: res/layout/date_range_config.xml
+< SHA1-Digest: SDjc/ij3IDEU9yUrDZMpoTLeQYc=
+---
+> Name: res/drawable/tab_voltage.xml
+> SHA1-Digest: ZIqa/Vp8kQFFtY/GgtpaWeEc3vc=
+2263a2264,2266
+> Name: res/layout/date_range_config.xml
+> SHA1-Digest: SDjc/ij3IDEU9yUrDZMpoTLeQYc=
+> 
+2285,2287d2287
+< Name: res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png
+< SHA1-Digest: RlKXmBRG932A/8TUkCqDEp/Oec8=
+< 
+2290a2291,2293
+> Name: res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png
+> SHA1-Digest: RlKXmBRG932A/8TUkCqDEp/Oec8=
+> 
+2309,2311d2311
+< Name: org/joda/time/tz/data/ZoneInfoMap
+< SHA1-Digest: AvNuFvDEqY5mWvtEO4J4sQJcVZg=
+< 
+2314a2315,2317
+> Name: org/joda/time/tz/data/ZoneInfoMap
+> SHA1-Digest: AvNuFvDEqY5mWvtEO4J4sQJcVZg=
+> 
+2321,2323d2323
+< Name: org/joda/time/tz/data/Africa/Niamey
+< SHA1-Digest: kJcxsBnKPSxUa7arAVwc26jOOPo=
+< 
+2326a2327,2329
+> Name: org/joda/time/tz/data/Africa/Niamey
+> SHA1-Digest: kJcxsBnKPSxUa7arAVwc26jOOPo=
+> 
+2335a2339,2341
+> Name: lib/armeabi-v7a/libstat.so
+> SHA1-Digest: ajIsvzhDU0ozQxnmvD/BEUp/BBA=
+> 
+2339,2341d2344
+< Name: res/drawable/abs__progress_medium_holo.xml
+< SHA1-Digest: EZVO10aAlliGPxpeC26cr+RV6bw=
+< 
+2345,2346c2348,2349
+< Name: res/drawable/tab_profiles.xml
+< SHA1-Digest: 4+H3yED2QFpd45sl0BtpsR165pU=
+---
+> Name: res/drawable/abs__progress_medium_holo.xml
+> SHA1-Digest: EZVO10aAlliGPxpeC26cr+RV6bw=
+2350a2354,2356
+> Name: res/drawable/tab_profiles.xml
+> SHA1-Digest: 4+H3yED2QFpd45sl0BtpsR165pU=
+> 
+2369,2371d2374
+< Name: org/joda/time/tz/data/America/St_Vincent
+< SHA1-Digest: kEv5TZAjFXgXAWSndwcMq3c2AkQ=
+< 
+2374a2378,2380
+> Name: org/joda/time/tz/data/America/St_Vincent
+> SHA1-Digest: kEv5TZAjFXgXAWSndwcMq3c2AkQ=
+> 
+2390,2392d2395
+< Name: res/drawable-hdpi/abs__progress_bg_holo_dark.9.png
+< SHA1-Digest: Iw89Sp82/2Wj0jf2QyfcdVW4ePg=
+< 
+2395a2399,2401
+> Name: res/drawable-hdpi/abs__progress_bg_holo_dark.9.png
+> SHA1-Digest: Iw89Sp82/2Wj0jf2QyfcdVW4ePg=
+> 
+2437a2444,2446
+> Name: org/joda/time/tz/data/Pacific/Norfolk
+> SHA1-Digest: wgC7tAsaubkhlYDi9+KzyB2GdWI=
+> 
+2444,2446d2452
+< Name: org/joda/time/tz/data/Pacific/Norfolk
+< SHA1-Digest: wgC7tAsaubkhlYDi9+KzyB2GdWI=
+< 
+2450,2452d2455
+< Name: res/layout/abs__list_menu_item_layout.xml
+< SHA1-Digest: dNz89gyyobcW1v2gTV44tgA85X4=
+< 
+2455a2459,2461
+> Name: res/layout/abs__list_menu_item_layout.xml
+> SHA1-Digest: dNz89gyyobcW1v2gTV44tgA85X4=
+> 
+2507,2509d2512
+< Name: org/joda/time/tz/data/Asia/Irkutsk
+< SHA1-Digest: IaeqjXJZqEn9ZKrH9piYr38Y3LI=
+< 
+2512a2516,2518
+> Name: org/joda/time/tz/data/Asia/Irkutsk
+> SHA1-Digest: IaeqjXJZqEn9ZKrH9piYr38Y3LI=
+> 
+2519,2521d2524
+< Name: res/drawable-hdpi/profile_move.png
+< SHA1-Digest: 0MzGjQQl5lNuQEpxavMOg6bg5pQ=
+< 
+2524a2528,2530
+> Name: res/drawable-hdpi/profile_move.png
+> SHA1-Digest: 0MzGjQQl5lNuQEpxavMOg6bg5pQ=
+> 
+2540,2542d2545
+< Name: org/joda/time/tz/data/America/Thunder_Bay
+< SHA1-Digest: 1vKyC/bteoqlaSB20RILH+TMubM=
+< 
+2545a2549,2551
+> Name: org/joda/time/tz/data/America/Thunder_Bay
+> SHA1-Digest: 1vKyC/bteoqlaSB20RILH+TMubM=
+> 
+2597,2599d2602
+< Name: org/joda/time/tz/data/America/Araguaina
+< SHA1-Digest: To9LKTYfUD0PJHzLJxeRwJ4yhIA=
+< 
+2602a2606,2608
+> Name: org/joda/time/tz/data/America/Araguaina
+> SHA1-Digest: To9LKTYfUD0PJHzLJxeRwJ4yhIA=
+> 
+2657,2659d2662
+< Name: org/joda/time/tz/data/America/Lima
+< SHA1-Digest: r2ZFoku+C02z/s7+/AUkFIUM254=
+< 
+2662a2666,2668
+> Name: org/joda/time/tz/data/America/Lima
+> SHA1-Digest: r2ZFoku+C02z/s7+/AUkFIUM254=
+> 
+2714,2716d2719
+< Name: org/joda/time/tz/data/America/Boa_Vista
+< SHA1-Digest: pyhp1kHTwiMJ4HUg5kp29ZyG6hA=
+< 
+2720,2721c2723,2724
+< Name: res/layout/condition_logic_header.xml
+< SHA1-Digest: b++xKyzCn7jLLRQt5tGFY/wRSAA=
+---
+> Name: org/joda/time/tz/data/America/Boa_Vista
+> SHA1-Digest: pyhp1kHTwiMJ4HUg5kp29ZyG6hA=
+2725a2729,2731
+> Name: res/layout/condition_logic_header.xml
+> SHA1-Digest: b++xKyzCn7jLLRQt5tGFY/wRSAA=
+> 
+2789,2791d2794
+< Name: org/joda/time/tz/data/Antarctica/Vostok
+< SHA1-Digest: UcUXyHs0+jnNpwr+DLVtFIRCMeg=
+< 
+2795,2796c2798,2799
+< Name: org/joda/time/tz/data/America/North_Dakota/New_Salem
+< SHA1-Digest: Kcmb1u5CHEZiXWkoDFc0E+EBGOY=
+---
+> Name: org/joda/time/tz/data/Antarctica/Vostok
+> SHA1-Digest: UcUXyHs0+jnNpwr+DLVtFIRCMeg=
+2800a2804,2806
+> Name: org/joda/time/tz/data/America/North_Dakota/New_Salem
+> SHA1-Digest: Kcmb1u5CHEZiXWkoDFc0E+EBGOY=
+> 
+2816,2818d2821
+< Name: res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png
+< SHA1-Digest: Iv9+d8iSlqYeG85x2ip3PC+TXqI=
+< 
+2821a2825,2827
+> Name: res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png
+> SHA1-Digest: Iv9+d8iSlqYeG85x2ip3PC+TXqI=
+> 
+2828,2830d2833
+< Name: res/layout-sw600dp-land/home.xml
+< SHA1-Digest: i+Ww0VPsbYysEBDXOZty0w7XORM=
+< 
+2833a2837,2839
+> Name: res/layout-sw600dp-land/home.xml
+> SHA1-Digest: i+Ww0VPsbYysEBDXOZty0w7XORM=
+> 
+2843,2845d2848
+< Name: res/layout/profileedit.xml
+< SHA1-Digest: aiHAV3o9mHHCLmFfFkv+j3gOAI8=
+< 
+2847a2851,2853
+> 
+> Name: res/layout/profileedit.xml
+> SHA1-Digest: aiHAV3o9mHHCLmFfFkv+j3gOAI8=
+diff -r result/APP_69/App_B_69/original/META-INF/MANIFEST.MF result/APP_69/App_M_69/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+7,9d6
+< Name: res/anim/slide_out.xml
+< SHA1-Digest: MRYtUNjFJvrMwenL4EsvOZ+WxSE=
+< 
+12a10,12
+> Name: res/anim/slide_out.xml
+> SHA1-Digest: MRYtUNjFJvrMwenL4EsvOZ+WxSE=
+> 
+67,69d66
+< Name: res/drawable-mdpi/abs__dialog_full_holo_dark.9.png
+< SHA1-Digest: 3KCAL2gOTvb1XnoWeEkg5JF/Gf0=
+< 
+72a70,72
+> Name: res/drawable-mdpi/abs__dialog_full_holo_dark.9.png
+> SHA1-Digest: 3KCAL2gOTvb1XnoWeEkg5JF/Gf0=
+> 
+91,93d90
+< Name: res/drawable-mdpi/abs__list_divider_holo_light.9.png
+< SHA1-Digest: PoxeeFE1gxgKYYjKMfN1ri2qqEo=
+< 
+96a94,96
+> Name: res/drawable-mdpi/abs__list_divider_holo_light.9.png
+> SHA1-Digest: PoxeeFE1gxgKYYjKMfN1ri2qqEo=
+> 
+100,102d99
+< Name: org/joda/time/tz/data/Africa/Tunis
+< SHA1-Digest: 62tEiprxYUTkVqFwTXNQAzoLyLs=
+< 
+105a103,105
+> Name: org/joda/time/tz/data/Africa/Tunis
+> SHA1-Digest: 62tEiprxYUTkVqFwTXNQAzoLyLs=
+> 
+160,162d159
+< Name: res/drawable-hdpi/notify_main_call.png
+< SHA1-Digest: XPGG8FHtLW/Q4qWRBfAzFYzEywg=
+< 
+165a163,165
+> Name: res/drawable-hdpi/notify_main_call.png
+> SHA1-Digest: XPGG8FHtLW/Q4qWRBfAzFYzEywg=
+> 
+169,171d168
+< Name: res/drawable-hdpi/notify_call.png
+< SHA1-Digest: NRWPrLEMvkM8tElgEmJInDUbIxE=
+< 
+174a172,174
+> Name: res/drawable-hdpi/notify_call.png
+> SHA1-Digest: NRWPrLEMvkM8tElgEmJInDUbIxE=
+> 
+206,208d205
+< Name: res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png
+< SHA1-Digest: 3NDFAI7pBRqjniZiLX9Lx9e8DZw=
+< 
+212,213c209,210
+< Name: org/joda/time/tz/data/Pacific/Easter
+< SHA1-Digest: L7EVKERtnErd1JwNInObFGAxpZs=
+---
+> Name: res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png
+> SHA1-Digest: 3NDFAI7pBRqjniZiLX9Lx9e8DZw=
+217a215,217
+> Name: org/joda/time/tz/data/Pacific/Easter
+> SHA1-Digest: L7EVKERtnErd1JwNInObFGAxpZs=
+> 
+266,268d265
+< Name: res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png
+< SHA1-Digest: O7VzHYR+6JhnffuSbjNtgZFGN7Q=
+< 
+272,273c269,270
+< Name: res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png
+< SHA1-Digest: QzTUHUDBIXKqST0Qgr9lLSju9FM=
+---
+> Name: res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png
+> SHA1-Digest: O7VzHYR+6JhnffuSbjNtgZFGN7Q=
+277a275,277
+> Name: res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png
+> SHA1-Digest: QzTUHUDBIXKqST0Qgr9lLSju9FM=
+> 
+380,382d379
+< Name: org/joda/time/tz/data/Europe/Vilnius
+< SHA1-Digest: n6Bh0RsKTbw1As1rmVPOfZcV5XY=
+< 
+385a383,385
+> Name: org/joda/time/tz/data/Europe/Vilnius
+> SHA1-Digest: n6Bh0RsKTbw1As1rmVPOfZcV5XY=
+> 
+389,391d388
+< Name: org/joda/time/tz/data/Asia/Oral
+< SHA1-Digest: mxGr+rqTc2nG+1SnRr77qkjIsU0=
+< 
+394a392,394
+> Name: org/joda/time/tz/data/Asia/Oral
+> SHA1-Digest: mxGr+rqTc2nG+1SnRr77qkjIsU0=
+> 
+398,400d397
+< Name: org/joda/time/tz/data/America/Sitka
+< SHA1-Digest: uKRukrV9E5Ea+FbX3BNtZ+gslaA=
+< 
+403a401,403
+> Name: org/joda/time/tz/data/America/Sitka
+> SHA1-Digest: uKRukrV9E5Ea+FbX3BNtZ+gslaA=
+> 
+458,460d457
+< Name: res/drawable-hdpi/abs__ab_solid_light_holo.9.png
+< SHA1-Digest: iVAzmC25Uwto74jHtkTBV2YHVsw=
+< 
+463a461,463
+> Name: res/drawable-hdpi/abs__ab_solid_light_holo.9.png
+> SHA1-Digest: iVAzmC25Uwto74jHtkTBV2YHVsw=
+> 
+466a467,469
+> Name: res/layout/charge_config.xml
+> SHA1-Digest: DjsKVlEa5xGmjbxDBrb04lZ0Kg0=
+> 
+473,474c476,477
+< Name: res/layout/charge_config.xml
+< SHA1-Digest: DjsKVlEa5xGmjbxDBrb04lZ0Kg0=
+---
+> Name: org/joda/time/tz/data/Asia/Anadyr
+> SHA1-Digest: RsEWMt5ScZx8/8BgxfM+48IxQnY=
+479,481d481
+< Name: org/joda/time/tz/data/Asia/Anadyr
+< SHA1-Digest: RsEWMt5ScZx8/8BgxfM+48IxQnY=
+< 
+500,502d499
+< Name: org/joda/time/tz/data/Africa/Gaborone
+< SHA1-Digest: gB7uCNuUqZNWMIMCAsyaVvyZ3cA=
+< 
+505a503,505
+> Name: org/joda/time/tz/data/Africa/Gaborone
+> SHA1-Digest: gB7uCNuUqZNWMIMCAsyaVvyZ3cA=
+> 
+533,535d532
+< Name: res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png
+< SHA1-Digest: N4pxrY//CzQeTPqMUlApq1xAKjk=
+< 
+538a536,538
+> Name: res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png
+> SHA1-Digest: N4pxrY//CzQeTPqMUlApq1xAKjk=
+> 
+578,580d577
+< Name: res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+< SHA1-Digest: 7cVaONlDvpPZrbfvhhQcqnmYAGo=
+< 
+583a581,583
+> Name: res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+> SHA1-Digest: 7cVaONlDvpPZrbfvhhQcqnmYAGo=
+> 
+599,601d598
+< Name: res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png
+< SHA1-Digest: dpjB6BOrhRPOK5N48hRjtBoUCLw=
+< 
+604a602,604
+> Name: res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png
+> SHA1-Digest: dpjB6BOrhRPOK5N48hRjtBoUCLw=
+> 
+617,619d616
+< Name: res/drawable-hdpi-v13/notify_intent.png
+< SHA1-Digest: kWmiFfwhe8l2Ju82pTTMLoCDcyA=
+< 
+622a620,622
+> Name: res/drawable-hdpi-v13/notify_intent.png
+> SHA1-Digest: kWmiFfwhe8l2Ju82pTTMLoCDcyA=
+> 
+662,664d661
+< Name: org/joda/time/tz/data/Europe/Sofia
+< SHA1-Digest: NOzxuYE/c94P6f8DauoFhK0z6Lo=
+< 
+667a665,667
+> Name: org/joda/time/tz/data/Europe/Sofia
+> SHA1-Digest: NOzxuYE/c94P6f8DauoFhK0z6Lo=
+> 
+803a804,806
+> Name: lib/armeabi/libstat.so
+> SHA1-Digest: v8S3n0sBwAJjAgJ0wOp49NQaQ2g=
+> 
+819,820c822,823
+< Name: res/drawable-hdpi/widgetback_default.9.png
+< SHA1-Digest: nycjXy/ksyHRh99w1URCjj/tzGc=
+---
+> Name: org/joda/time/tz/data/America/Atikokan
+> SHA1-Digest: 9IRZr0sjxr2hOpSeZsXWI83XCLM=
+825,826c828,829
+< Name: org/joda/time/tz/data/America/Atikokan
+< SHA1-Digest: 9IRZr0sjxr2hOpSeZsXWI83XCLM=
+---
+> Name: res/drawable-hdpi/widgetback_default.9.png
+> SHA1-Digest: nycjXy/ksyHRh99w1URCjj/tzGc=
+865,867d867
+< Name: res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png
+< SHA1-Digest: m9zFr/8DlkhzV0iM8Tc5P9Sv9G8=
+< 
+870a871,873
+> Name: res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png
+> SHA1-Digest: m9zFr/8DlkhzV0iM8Tc5P9Sv9G8=
+> 
+889,891d891
+< Name: res/drawable-hdpi/tab_profiles_deselected.png
+< SHA1-Digest: xl1K+Jwednbhubp24XkJJVfG+R8=
+< 
+894a895,897
+> Name: res/drawable-hdpi/tab_profiles_deselected.png
+> SHA1-Digest: xl1K+Jwednbhubp24XkJJVfG+R8=
+> 
+915a919,921
+> Name: res/drawable/thumb_normal.png
+> SHA1-Digest: F6R4/JE7YjvcfB4Q17eVPOcNJ94=
+> 
+922,924d927
+< Name: res/drawable/thumb_normal.png
+< SHA1-Digest: F6R4/JE7YjvcfB4Q17eVPOcNJ94=
+< 
+943,945d945
+< Name: res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png
+< SHA1-Digest: 7EAtE/Hud24EgXIDi6iilu47Ey0=
+< 
+949,950c949,950
+< Name: org/joda/time/tz/data/MET
+< SHA1-Digest: jdBNtiyG2PEb63/5aTYnhtwBEt0=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png
+> SHA1-Digest: 7EAtE/Hud24EgXIDi6iilu47Ey0=
+954a955,957
+> Name: org/joda/time/tz/data/MET
+> SHA1-Digest: jdBNtiyG2PEb63/5aTYnhtwBEt0=
+> 
+1024,1026d1026
+< Name: org/joda/time/tz/data/Etc/GMT-5
+< SHA1-Digest: vkGsNiEJ23npZm/jigyZaYhfm40=
+< 
+1029a1030,1032
+> Name: org/joda/time/tz/data/Etc/GMT-5
+> SHA1-Digest: vkGsNiEJ23npZm/jigyZaYhfm40=
+> 
+1084,1086d1086
+< Name: res/drawable-xhdpi-v11/ic_menu_mark.png
+< SHA1-Digest: s32ojV5e40RjWAC1+WiHCN1P12c=
+< 
+1089a1090,1092
+> Name: res/drawable-xhdpi-v11/ic_menu_mark.png
+> SHA1-Digest: s32ojV5e40RjWAC1+WiHCN1P12c=
+> 
+1093,1095d1095
+< Name: res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png
+< SHA1-Digest: d3zzB2nQ2k8nh8wt560Gg+RI/Wc=
+< 
+1098a1099,1101
+> Name: res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png
+> SHA1-Digest: d3zzB2nQ2k8nh8wt560Gg+RI/Wc=
+> 
+1105,1107d1107
+< Name: res/drawable-xhdpi/appwidget_bg.9.png
+< SHA1-Digest: cC71dqh6S/XO0RMGreOMJoC4RAI=
+< 
+1110a1111,1113
+> Name: res/drawable-xhdpi/appwidget_bg.9.png
+> SHA1-Digest: cC71dqh6S/XO0RMGreOMJoC4RAI=
+> 
+1129,1131d1131
+< Name: org/joda/time/tz/data/Pacific/Majuro
+< SHA1-Digest: CZde5IUZw418nY6TA1iNg6lM6ms=
+< 
+1134a1135,1137
+> Name: org/joda/time/tz/data/Pacific/Majuro
+> SHA1-Digest: CZde5IUZw418nY6TA1iNg6lM6ms=
+> 
+1195,1197d1197
+< Name: org/joda/time/tz/data/Asia/Taipei
+< SHA1-Digest: 1mzXI0j1Izk3sJTbImfTzSBXfSM=
+< 
+1200a1201,1203
+> Name: org/joda/time/tz/data/Asia/Taipei
+> SHA1-Digest: 1mzXI0j1Izk3sJTbImfTzSBXfSM=
+> 
+1246,1248d1248
+< Name: res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png
+< SHA1-Digest: NMBIh/bnWT3qQP/nmyNVDeRnYIE=
+< 
+1252,1253c1252,1253
+< Name: res/drawable/tab_main.xml
+< SHA1-Digest: UgBFmeEgkYinQiYC2dxFrUGbf3A=
+---
+> Name: res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png
+> SHA1-Digest: NMBIh/bnWT3qQP/nmyNVDeRnYIE=
+1257a1258,1260
+> Name: res/drawable/tab_main.xml
+> SHA1-Digest: UgBFmeEgkYinQiYC2dxFrUGbf3A=
+> 
+1270,1271c1273,1274
+< Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+< SHA1-Digest: a0psDiPv6W6Oe9GsTr40v9t6L4g=
+---
+> Name: res/drawable/abs__spinner_ab_holo_dark.xml
+> SHA1-Digest: z7WXEKlH+o4beYsWt7BF5jSjMUA=
+1276,1277c1279,1280
+< Name: res/drawable/abs__spinner_ab_holo_dark.xml
+< SHA1-Digest: z7WXEKlH+o4beYsWt7BF5jSjMUA=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+> SHA1-Digest: a0psDiPv6W6Oe9GsTr40v9t6L4g=
+1285,1287d1287
+< Name: org/joda/time/tz/data/Europe/Warsaw
+< SHA1-Digest: rPqRZ6av4k6ToHs8JPlgwRu57y0=
+< 
+1290a1291,1293
+> Name: org/joda/time/tz/data/Europe/Warsaw
+> SHA1-Digest: rPqRZ6av4k6ToHs8JPlgwRu57y0=
+> 
+1342,1344d1344
+< Name: res/drawable-mdpi/abs__ic_cab_done_holo_dark.png
+< SHA1-Digest: bReJxscH6ASuWZVUiV0H+XMY9iw=
+< 
+1347a1348,1350
+> Name: res/drawable-mdpi/abs__ic_cab_done_holo_dark.png
+> SHA1-Digest: bReJxscH6ASuWZVUiV0H+XMY9iw=
+> 
+1408,1410d1410
+< Name: org/joda/time/tz/data/Pacific/Saipan
+< SHA1-Digest: aTQZ6wvKCslIdYnMYTl9ZyahZxs=
+< 
+1413a1414,1416
+> Name: org/joda/time/tz/data/Pacific/Saipan
+> SHA1-Digest: aTQZ6wvKCslIdYnMYTl9ZyahZxs=
+> 
+1450,1452d1452
+< Name: org/joda/time/tz/data/Pacific/Rarotonga
+< SHA1-Digest: R/Vs8Oj2hrtJ0Ik7arU2PhaHBYg=
+< 
+1456,1457c1456,1457
+< Name: org/joda/time/tz/data/Pacific/Auckland
+< SHA1-Digest: +xiOC1tkuiXdu0PEoEYV6L6uRXk=
+---
+> Name: org/joda/time/tz/data/Pacific/Rarotonga
+> SHA1-Digest: R/Vs8Oj2hrtJ0Ik7arU2PhaHBYg=
+1461a1462,1464
+> Name: org/joda/time/tz/data/Pacific/Auckland
+> SHA1-Digest: +xiOC1tkuiXdu0PEoEYV6L6uRXk=
+> 
+1520,1522d1522
+< Name: res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+< SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+< 
+1525a1526,1528
+> Name: res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+> SHA1-Digest: cKGQg8jgT0IkOi1RPo5Y+TSnQb4=
+> 
+1558a1562,1564
+> Name: org/joda/time/tz/data/Antarctica/Davis
+> SHA1-Digest: TOuUTbmnHG5luajI7Tyw7xOwlys=
+> 
+1565,1567d1570
+< Name: org/joda/time/tz/data/Antarctica/Davis
+< SHA1-Digest: TOuUTbmnHG5luajI7Tyw7xOwlys=
+< 
+1643,1645d1645
+< Name: res/drawable-xhdpi/abs__list_divider_holo_dark.9.png
+< SHA1-Digest: 8+TP02NA3lGiMXaQ8fIb7yOyVIE=
+< 
+1648a1649,1651
+> Name: res/drawable-xhdpi/abs__list_divider_holo_dark.9.png
+> SHA1-Digest: 8+TP02NA3lGiMXaQ8fIb7yOyVIE=
+> 
+1673,1675d1675
+< Name: org/joda/time/tz/data/America/St_Thomas
+< SHA1-Digest: M2kMHqy01DaipA7lqD7ZjOAzIUY=
+< 
+1678a1679,1681
+> Name: org/joda/time/tz/data/America/St_Thomas
+> SHA1-Digest: M2kMHqy01DaipA7lqD7ZjOAzIUY=
+> 
+1682,1684d1684
+< Name: org/joda/time/tz/data/Europe/Zaporozhye
+< SHA1-Digest: YSG+64HCvJowhpSz45y0ofq9vmE=
+< 
+1687a1688,1690
+> Name: org/joda/time/tz/data/Europe/Zaporozhye
+> SHA1-Digest: YSG+64HCvJowhpSz45y0ofq9vmE=
+> 
+1718,1720d1720
+< Name: res/drawable-mdpi/abs__progress_secondary_holo_light.9.png
+< SHA1-Digest: Gmly5SVlR6fM5w0tsgda0qA5W+Q=
+< 
+1723a1724,1726
+> Name: res/drawable-mdpi/abs__progress_secondary_holo_light.9.png
+> SHA1-Digest: Gmly5SVlR6fM5w0tsgda0qA5W+Q=
+> 
+1737,1739d1739
+< Name: res/drawable-mdpi/abs__list_pressed_holo_dark.9.png
+< SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+< 
+1743,1744c1743,1744
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: 3Q7RW1eJq+R3fkdGje8BTDKQlrw=
+---
+> Name: res/drawable-mdpi/abs__list_pressed_holo_dark.9.png
+> SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+1749,1750c1749,1750
+< Name: org/joda/time/tz/data/Asia/Vladivostok
+< SHA1-Digest: y7jLgkd7jKDedlOhwVXd5uMqPLo=
+---
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: 3Q7RW1eJq+R3fkdGje8BTDKQlrw=
+1754a1755,1757
+> Name: org/joda/time/tz/data/Asia/Vladivostok
+> SHA1-Digest: y7jLgkd7jKDedlOhwVXd5uMqPLo=
+> 
+1758,1760d1760
+< Name: org/joda/time/tz/data/Europe/Stockholm
+< SHA1-Digest: Uf7t9c8AVKoQlIYTV6skM4WlwkM=
+< 
+1763a1764,1766
+> Name: org/joda/time/tz/data/Europe/Stockholm
+> SHA1-Digest: Uf7t9c8AVKoQlIYTV6skM4WlwkM=
+> 
+1776,1778d1778
+< Name: res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png
+< SHA1-Digest: nFbPNkMe+vQdXhbYujQoPLd3IDM=
+< 
+1781a1782,1784
+> Name: res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png
+> SHA1-Digest: nFbPNkMe+vQdXhbYujQoPLd3IDM=
+> 
+1794,1796d1796
+< Name: org/joda/time/tz/data/Pacific/Guam
+< SHA1-Digest: X+ivB65EPlpQgG30d0tvw+8kkr8=
+< 
+1799a1800,1802
+> Name: org/joda/time/tz/data/Pacific/Guam
+> SHA1-Digest: X+ivB65EPlpQgG30d0tvw+8kkr8=
+> 
+1842,1850d1844
+< Name: res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png
+< SHA1-Digest: IWbFY9JE6tLDg3vps8a1XGSmx7I=
+< 
+< Name: res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png
+< SHA1-Digest: RJK5iAyAruNbqpC6Mp0pt1YUgS4=
+< 
+< Name: AndroidManifest.xml
+< SHA1-Digest: ZLX6jH1uf/m783HpicjI6kXBaoQ=
+< 
+1853a1848,1850
+> Name: AndroidManifest.xml
+> SHA1-Digest: GklWu2M9aU25h5HimXmVeS6B2k0=
+> 
+1856a1854,1859
+> Name: res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png
+> SHA1-Digest: RJK5iAyAruNbqpC6Mp0pt1YUgS4=
+> 
+> Name: res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png
+> SHA1-Digest: IWbFY9JE6tLDg3vps8a1XGSmx7I=
+> 
+1860,1862d1862
+< Name: res/drawable-hdpi-v13/notify_failsafe.png
+< SHA1-Digest: fEZ+EoLcErIkPcpMXXm6OEhzRKw=
+< 
+1865a1866,1868
+> Name: res/drawable-hdpi-v13/notify_failsafe.png
+> SHA1-Digest: fEZ+EoLcErIkPcpMXXm6OEhzRKw=
+> 
+1875,1877d1877
+< Name: org/joda/time/tz/data/Asia/Tbilisi
+< SHA1-Digest: uer346wizT1UtuHUZtC4YlJnD7c=
+< 
+1880a1881,1883
+> Name: org/joda/time/tz/data/Asia/Tbilisi
+> SHA1-Digest: uer346wizT1UtuHUZtC4YlJnD7c=
+> 
+1900c1903
+< SHA1-Digest: Pyyha4E7QNZD1iLaRA5LRMAbhJk=
+---
+> SHA1-Digest: OOVcdz6d7ll+Ek4wMRo4CpQ8SAM=
+1908,1910d1910
+< Name: org/joda/time/tz/data/Pacific/Midway
+< SHA1-Digest: 3sfIAKFxOJm2lfz8/UwQUdVQVMQ=
+< 
+1916a1917,1919
+> Name: org/joda/time/tz/data/Pacific/Midway
+> SHA1-Digest: 3sfIAKFxOJm2lfz8/UwQUdVQVMQ=
+> 
+1947,1949d1949
+< Name: res/drawable-mdpi/abs__ic_cab_done_holo_light.png
+< SHA1-Digest: xLtep77kLVwbASmGNfTrXbTFt4U=
+< 
+1952a1953,1955
+> Name: res/drawable-mdpi/abs__ic_cab_done_holo_light.png
+> SHA1-Digest: xLtep77kLVwbASmGNfTrXbTFt4U=
+> 
+1962,1964d1964
+< Name: res/drawable/progress_gray.xml
+< SHA1-Digest: rFe/pzczkyXakLJeWmQeODzCgS0=
+< 
+1968,1969c1968,1969
+< Name: res/drawable-xhdpi/abs__spinner_48_outer_holo.png
+< SHA1-Digest: fDrqMUrUZ5Sd8ul86SD5W6Ai4Uk=
+---
+> Name: res/drawable/progress_gray.xml
+> SHA1-Digest: rFe/pzczkyXakLJeWmQeODzCgS0=
+1973a1974,1976
+> Name: res/drawable-xhdpi/abs__spinner_48_outer_holo.png
+> SHA1-Digest: fDrqMUrUZ5Sd8ul86SD5W6Ai4Uk=
+> 
+1977,1979d1979
+< Name: res/drawable-mdpi/abs__progress_bg_holo_dark.9.png
+< SHA1-Digest: 2AZThryVu0dfcrzTN64z6SjGSFU=
+< 
+1982a1983,1985
+> Name: res/drawable-mdpi/abs__progress_bg_holo_dark.9.png
+> SHA1-Digest: 2AZThryVu0dfcrzTN64z6SjGSFU=
+> 
+2050,2052d2052
+< Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png
+< SHA1-Digest: dfartktshco1QWrbsNpif24wjJg=
+< 
+2055a2056,2058
+> Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png
+> SHA1-Digest: dfartktshco1QWrbsNpif24wjJg=
+> 
+2059,2061d2061
+< Name: res/drawable-hdpi/notify_main_battery_disabled.png
+< SHA1-Digest: +38s9CGJCp479k7hmz6VU95Mjnk=
+< 
+2064a2065,2067
+> Name: res/drawable-hdpi/notify_main_battery_disabled.png
+> SHA1-Digest: +38s9CGJCp479k7hmz6VU95Mjnk=
+> 
+2068,2070d2070
+< Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png
+< SHA1-Digest: mPL3543lybVupzqT933BKAl+dlU=
+< 
+2073a2074,2076
+> Name: res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png
+> SHA1-Digest: mPL3543lybVupzqT933BKAl+dlU=
+> 
+2086,2090c2089,2090
+< Name: res/drawable-hdpi/abs__tab_selected_focused_holo.9.png
+< SHA1-Digest: YyCZ0NHjYUP2jEOwswAoE6MoWsc=
+< 
+< Name: res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png
+< SHA1-Digest: +7uw2X/1KZpnoaqfuXTMaxfBfPY=
+---
+> Name: res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png
+> SHA1-Digest: re6f3Dt6EmMQ1BAhi28dpZ+KSqg=
+2095,2096c2095,2099
+< Name: res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png
+< SHA1-Digest: re6f3Dt6EmMQ1BAhi28dpZ+KSqg=
+---
+> Name: res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png
+> SHA1-Digest: +7uw2X/1KZpnoaqfuXTMaxfBfPY=
+> 
+> Name: res/drawable-hdpi/abs__tab_selected_focused_holo.9.png
+> SHA1-Digest: YyCZ0NHjYUP2jEOwswAoE6MoWsc=
+2113,2115d2115
+< Name: res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png
+< SHA1-Digest: 6mFx7W/WZzwz8KaB8gz1FwlUflU=
+< 
+2118a2119,2121
+> Name: res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png
+> SHA1-Digest: 6mFx7W/WZzwz8KaB8gz1FwlUflU=
+> 
+2173,2175d2175
+< Name: res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png
+< SHA1-Digest: sXUh1a054bWtm2NSgK70cbl4mis=
+< 
+2178a2179,2181
+> Name: res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png
+> SHA1-Digest: sXUh1a054bWtm2NSgK70cbl4mis=
+> 
+2215,2217d2217
+< Name: res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png
+< SHA1-Digest: xaK+sWCPT47/QiqeFNHU+6mso9s=
+< 
+2220a2221,2223
+> Name: res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png
+> SHA1-Digest: xaK+sWCPT47/QiqeFNHU+6mso9s=
+> 
+2224,2226d2226
+< Name: org/joda/time/tz/data/Pacific/Nauru
+< SHA1-Digest: ugcetgHPRDoqqozHZ0z9VO6BFq8=
+< 
+2229a2230,2232
+> Name: org/joda/time/tz/data/Pacific/Nauru
+> SHA1-Digest: ugcetgHPRDoqqozHZ0z9VO6BFq8=
+> 
+2233,2235d2235
+< Name: res/drawable-hdpi/vpi__tab_unselected_pressed_holo.9.png
+< SHA1-Digest: TJPqye6pp5Iw3LyfyGWFUjWAkKc=
+< 
+2238a2239,2241
+> Name: res/drawable-hdpi/vpi__tab_unselected_pressed_holo.9.png
+> SHA1-Digest: TJPqye6pp5Iw3LyfyGWFUjWAkKc=
+> 
+2251,2253d2253
+< Name: res/drawable/tab_voltage.xml
+< SHA1-Digest: xV7NFtT7tYqbmikJVT+wAtoRBb4=
+< 
+2257,2258c2257,2258
+< Name: res/layout/date_range_config.xml
+< SHA1-Digest: 0vloYzpCIKAMdjSjcjuO7yF2kvc=
+---
+> Name: res/drawable/tab_voltage.xml
+> SHA1-Digest: xV7NFtT7tYqbmikJVT+wAtoRBb4=
+2262a2263,2265
+> Name: res/layout/date_range_config.xml
+> SHA1-Digest: 0vloYzpCIKAMdjSjcjuO7yF2kvc=
+> 
+2284,2286d2286
+< Name: res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png
+< SHA1-Digest: HjRIDaTJpRHroGCRPqkiQhHo5cE=
+< 
+2289a2290,2292
+> Name: res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png
+> SHA1-Digest: HjRIDaTJpRHroGCRPqkiQhHo5cE=
+> 
+2308,2310d2310
+< Name: org/joda/time/tz/data/ZoneInfoMap
+< SHA1-Digest: Yxy842m1n7JJwH1kXVYp5HG+VLI=
+< 
+2313a2314,2316
+> Name: org/joda/time/tz/data/ZoneInfoMap
+> SHA1-Digest: Yxy842m1n7JJwH1kXVYp5HG+VLI=
+> 
+2320,2322d2322
+< Name: res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png
+< SHA1-Digest: B+e5zyD7l5DOf6+xwIccY75ErxQ=
+< 
+2325a2326,2328
+> Name: res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png
+> SHA1-Digest: B+e5zyD7l5DOf6+xwIccY75ErxQ=
+> 
+2334a2338,2340
+> Name: lib/armeabi-v7a/libstat.so
+> SHA1-Digest: A0fVTNMbOjCVRz7t4WGjVNpkEB4=
+> 
+2338,2340d2343
+< Name: org/joda/time/tz/data/Australia/Hobart
+< SHA1-Digest: it6FpuzfPBDaIzDewSZ4PqIQlDE=
+< 
+2344,2345c2347,2348
+< Name: res/drawable-mdpi/abs__ab_solid_light_holo.9.png
+< SHA1-Digest: w5eNJ2dsSzfy7QRf9OUKUQrv0hM=
+---
+> Name: org/joda/time/tz/data/Australia/Hobart
+> SHA1-Digest: it6FpuzfPBDaIzDewSZ4PqIQlDE=
+2349a2353,2355
+> Name: res/drawable-mdpi/abs__ab_solid_light_holo.9.png
+> SHA1-Digest: w5eNJ2dsSzfy7QRf9OUKUQrv0hM=
+> 
+2371,2373d2376
+< Name: org/joda/time/tz/data/Africa/Mogadishu
+< SHA1-Digest: slzVlfLYtnLfU1Vi2xJ86VUHhcM=
+< 
+2376a2380,2382
+> Name: org/joda/time/tz/data/Africa/Mogadishu
+> SHA1-Digest: slzVlfLYtnLfU1Vi2xJ86VUHhcM=
+> 
+2389,2391d2394
+< Name: res/drawable-hdpi/abs__progress_bg_holo_light.9.png
+< SHA1-Digest: MmdQaTii1skRRuZ2pZXpeqP/kO8=
+< 
+2394a2398,2400
+> Name: res/drawable-hdpi/abs__progress_bg_holo_light.9.png
+> SHA1-Digest: MmdQaTii1skRRuZ2pZXpeqP/kO8=
+> 
+2437,2439d2442
+< Name: org/joda/time/tz/data/Pacific/Norfolk
+< SHA1-Digest: xKwrgF5Vuzke/ShxhZ440VecjUo=
+< 
+2445a2449,2451
+> Name: org/joda/time/tz/data/Pacific/Norfolk
+> SHA1-Digest: xKwrgF5Vuzke/ShxhZ440VecjUo=
+> 
+2449,2451d2454
+< Name: res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png
+< SHA1-Digest: QeVPBZISJz+N12VyjvKj6lwfGP0=
+< 
+2454a2458,2460
+> Name: res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png
+> SHA1-Digest: QeVPBZISJz+N12VyjvKj6lwfGP0=
+> 
+2506,2508d2511
+< Name: org/joda/time/tz/data/Asia/Brunei
+< SHA1-Digest: 5B4k8XRvo/PhziWy3d5hzseSfaY=
+< 
+2511a2515,2517
+> Name: org/joda/time/tz/data/Asia/Brunei
+> SHA1-Digest: 5B4k8XRvo/PhziWy3d5hzseSfaY=
+> 
+2518,2520d2523
+< Name: res/drawable-mdpi/abs__list_longpressed_holo.9.png
+< SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+< 
+2523a2527,2529
+> Name: res/drawable-mdpi/abs__list_longpressed_holo.9.png
+> SHA1-Digest: /uU9+qqC9MjC0cwR3L+DskCy9xM=
+> 
+2539,2541d2544
+< Name: res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png
+< SHA1-Digest: 98aPD0Xqx5q4D+vZs6Jb7lXg2Go=
+< 
+2544a2548,2550
+> Name: res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png
+> SHA1-Digest: 98aPD0Xqx5q4D+vZs6Jb7lXg2Go=
+> 
+2596,2598d2601
+< Name: org/joda/time/tz/data/Africa/Sao_Tome
+< SHA1-Digest: aNv6RlKLWhWdi8mvmd/rMQKxMhw=
+< 
+2601a2605,2607
+> Name: org/joda/time/tz/data/Africa/Sao_Tome
+> SHA1-Digest: aNv6RlKLWhWdi8mvmd/rMQKxMhw=
+> 
+2656,2658d2661
+< Name: res/drawable-hdpi/notify_main_charge_disabled.png
+< SHA1-Digest: CQa/5kEbaDl/hFxPQLbmoGmHVe0=
+< 
+2661a2665,2667
+> Name: res/drawable-hdpi/notify_main_charge_disabled.png
+> SHA1-Digest: CQa/5kEbaDl/hFxPQLbmoGmHVe0=
+> 
+2713,2715d2718
+< Name: res/drawable-mdpi-v11/notify_battery.png
+< SHA1-Digest: FwRLptxFuhMc/LgOAI+kHgEPd1g=
+< 
+2719,2720c2722,2723
+< Name: org/joda/time/tz/data/Asia/Yerevan
+< SHA1-Digest: F5GN5Kph/CskLghxEt4GnlHfQJE=
+---
+> Name: res/drawable-mdpi-v11/notify_battery.png
+> SHA1-Digest: FwRLptxFuhMc/LgOAI+kHgEPd1g=
+2724a2728,2730
+> Name: org/joda/time/tz/data/Asia/Yerevan
+> SHA1-Digest: F5GN5Kph/CskLghxEt4GnlHfQJE=
+> 
+2788,2790d2793
+< Name: org/joda/time/tz/data/Antarctica/Syowa
+< SHA1-Digest: T6VvasEr7nkh40P6e0dSi7jExXo=
+< 
+2794,2795c2797,2798
+< Name: org/joda/time/tz/data/Indian/Mayotte
+< SHA1-Digest: lyLcKZDxq2+IfJPx2Vlie9CSM+g=
+---
+> Name: org/joda/time/tz/data/Antarctica/Syowa
+> SHA1-Digest: T6VvasEr7nkh40P6e0dSi7jExXo=
+2799a2803,2805
+> Name: org/joda/time/tz/data/Indian/Mayotte
+> SHA1-Digest: lyLcKZDxq2+IfJPx2Vlie9CSM+g=
+> 
+2815,2817d2820
+< Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+< SHA1-Digest: Z4xMacb4bX2fkIkRjYPviIm0JW8=
+< 
+2820a2824,2826
+> Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+> SHA1-Digest: Z4xMacb4bX2fkIkRjYPviIm0JW8=
+> 
+2827,2829d2832
+< Name: res/drawable/abs__ic_menu_moreoverflow_holo_light.xml
+< SHA1-Digest: SATgNM/CPEXKdJYo+BjsJv1BQI4=
+< 
+2832a2836,2838
+> Name: res/drawable/abs__ic_menu_moreoverflow_holo_light.xml
+> SHA1-Digest: SATgNM/CPEXKdJYo+BjsJv1BQI4=
+> 
+2842,2844d2847
+< Name: org/joda/time/tz/data/Pacific/Chuuk
+< SHA1-Digest: fOSqnJ8oQXL6tdoWxjNfjxdRj2s=
+< 
+2846a2850,2852
+> 
+> Name: org/joda/time/tz/data/Pacific/Chuuk
+> SHA1-Digest: fOSqnJ8oQXL6tdoWxjNfjxdRj2s=
+Somente em result/APP_69/App_M_69/smali/com: ooqqxx

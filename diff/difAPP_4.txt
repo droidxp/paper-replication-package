@@ -1,0 +1,632 @@
+diff -r result/APP_4/App_B_4/apktool.yml result/APP_4/App_M_4/apktool.yml
+2c2
+< apkFileName: Bapp4-05667DDF242B81000B2D29946A63C1113162C8C72FF13B82464C123DA26C64A3.apk
+---
+> apkFileName: Mapp4-3FF73591AB3C0BD3D8271A3F5B5643154F3E4D6DFF7203FBFFF052AEA71BB9B1.apk
+5d4
+< - resources.arsc
+Somente em result/APP_4/App_M_4/com: mmsdk
+Os arquivos binários result/APP_4/App_B_4/original/AndroidManifest.xml e result/APP_4/App_M_4/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_4/App_B_4/original/META-INF/CERT.RSA e result/APP_4/App_M_4/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_4/App_B_4/original/META-INF/CERT.SF result/APP_4/App_M_4/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: 2cWeEVenVYBi3S92dvHSMP6gxVA=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: ISosKM66os1tcGomlr73lm5mLsg=
+5,18c5,6
+< Name: assets/f18.png
+< SHA1-Digest: T8agG2RQFK3l72Xe1mxU8haT2HU=
+< 
+< Name: assets/submit.gif
+< SHA1-Digest: Hmp9t8NTC8NyK5tOKPnb09wZ4tQ=
+< 
+< Name: AndroidManifest.xml
+< SHA1-Digest: PERsc6kzJAcuCyC65uy5f4bwXTY=
+< 
+< Name: assets/g.png
+< SHA1-Digest: j1W11YWIlzKQvf8d9UjuvQWw6yw=
+< 
+< Name: assets/f1.png
+< SHA1-Digest: N39br1qlG0F8N39INTruRGdEDf0=
+---
+> Name: assets/p.png
+> SHA1-Digest: PQyUFwdUZtSvX6rIzYWXGZUlcmI=
+20,21c8,9
+< Name: res/drawable/icon.png
+< SHA1-Digest: 6iBSptbzrPWZ+78f8HfT3EzQ/AM=
+---
+> Name: assets/s7.jpg
+> SHA1-Digest: g7CU6tqvMuyXs/3Ts4adf/Yjpt0=
+23,24c11,12
+< Name: assets/dse.jpg
+< SHA1-Digest: PhGbxd7fsXvBioaANU7mSGlDTr0=
+---
+> Name: res/drawable/ad1.jpg
+> SHA1-Digest: azgbyhlJ+QM7NGIyGTR2G9EyQcQ=
+26,27c14,15
+< Name: classes.dex
+< SHA1-Digest: Er9cOAIojX8SQiNAEMh4f61jJIs=
+---
+> Name: assets/i3.gif
+> SHA1-Digest: DliILPMI03m44YkmxZxBNXAT4qU=
+29,30c17,18
+< Name: assets/f13.png
+< SHA1-Digest: g5azH5Dkr5gNN298yBr88YiUmEM=
+---
+> Name: assets/f15.png
+> SHA1-Digest: VM3jvKu0dTAM3xrx/DcLm/+OavI=
+32,33c20,21
+< Name: assets/s6.jpg
+< SHA1-Digest: +MFOTc/O9pXG6Vs5l7N+Vv0ClQw=
+---
+> Name: assets/f5.png
+> SHA1-Digest: gDlESOueSToM8adP6Y48D/bVZhA=
+35,36c23,24
+< Name: assets/f19.png
+< SHA1-Digest: SyfGfBIGu+xH3uj50EAHXOg+vGo=
+---
+> Name: assets/bg.jpg
+> SHA1-Digest: uGij8PUfgImwN6ilMmlPGtrhWyY=
+41,42c29,30
+< Name: assets/f15.png
+< SHA1-Digest: VM3jvKu0dTAM3xrx/DcLm/+OavI=
+---
+> Name: assets/s3.jpg
+> SHA1-Digest: tItKyq3YxbjtEQzFOW2R+6M2WUw=
+47,54c35,36
+< Name: assets/i0.gif
+< SHA1-Digest: uxWq1irg/UaDr6Rj/TIsCo2coVk=
+< 
+< Name: assets/yes.gif
+< SHA1-Digest: BUxHchtXsZhlT18bQl/xThjc4qE=
+< 
+< Name: assets/i4.gif
+< SHA1-Digest: pdoDpNsPREJ3edt4clsSuDEsemw=
+---
+> Name: assets/f16.png
+> SHA1-Digest: ynBWfJXGmhmN+wKZzlFGumqcfIM=
+56,57c38,39
+< Name: assets/f0.png
+< SHA1-Digest: mYtK+K5+bFAOEqNa1Fr24ejcwso=
+---
+> Name: assets/down.gif
+> SHA1-Digest: TNBcrZBLTIQ64+17rfh9a57+62I=
+62,67d43
+< Name: assets/s5.jpg
+< SHA1-Digest: vQNca+bg7t2koLNBnDyx/Q2dM0g=
+< 
+< Name: assets/f2.png
+< SHA1-Digest: /VRLfwixRtWExa8NzC9v7iBxrKU=
+< 
+71,72c47,48
+< Name: resources.arsc
+< SHA1-Digest: aUXFXmSePw7vmN0cI8q0t/znmHo=
+---
+> Name: assets/dse.jpg
+> SHA1-Digest: PhGbxd7fsXvBioaANU7mSGlDTr0=
+74,75c50,51
+< Name: assets/i3.gif
+< SHA1-Digest: DliILPMI03m44YkmxZxBNXAT4qU=
+---
+> Name: assets/f0.png
+> SHA1-Digest: mYtK+K5+bFAOEqNa1Fr24ejcwso=
+77,78c53,60
+< Name: assets/paddle.png
+< SHA1-Digest: DQD6E1St8S0ExfvI+2d6glNtkSE=
+---
+> Name: assets/f13.png
+> SHA1-Digest: g5azH5Dkr5gNN298yBr88YiUmEM=
+> 
+> Name: assets/f12.png
+> SHA1-Digest: 3DwltgfOr1bULlvvfTy5cS2Vo1g=
+> 
+> Name: res/layout/main.xml
+> SHA1-Digest: LQ02Q03q80jbtMKV9/+4x97hSg0=
+83,84c65,66
+< Name: assets/s7.jpg
+< SHA1-Digest: g7CU6tqvMuyXs/3Ts4adf/Yjpt0=
+---
+> Name: assets/f7.png
+> SHA1-Digest: ED0z/XEPepGbHSVH5FSRBWEuhho=
+86,87c68,69
+< Name: assets/go.gif
+< SHA1-Digest: g4ffbJusvzKKLgLzbFK0ZqXlhDY=
+---
+> Name: assets/back.gif
+> SHA1-Digest: PPlv58j9zZya2+hwPCvJc4mqI/I=
+89,90c71,72
+< Name: assets/i1.gif
+< SHA1-Digest: PYQHCSh7sBu/5cqEycdHtxxIaz4=
+---
+> Name: assets/s0.jpg
+> SHA1-Digest: OUTNEwPVPanVJpfuva2rw1sn89A=
+92,93c74,75
+< Name: assets/no.gif
+< SHA1-Digest: pvQ6ZZWPIiow4scRwgkWCkX+c0E=
+---
+> Name: assets/up.gif
+> SHA1-Digest: I4JAdsL+tVwz6nR8k2cZtKNlMUM=
+95,96c77,78
+< Name: assets/f12.png
+< SHA1-Digest: 3DwltgfOr1bULlvvfTy5cS2Vo1g=
+---
+> Name: assets/f1.png
+> SHA1-Digest: N39br1qlG0F8N39INTruRGdEDf0=
+98,99c80,81
+< Name: assets/down.gif
+< SHA1-Digest: TNBcrZBLTIQ64+17rfh9a57+62I=
+---
+> Name: assets/f18.png
+> SHA1-Digest: T8agG2RQFK3l72Xe1mxU8haT2HU=
+101,102c83,84
+< Name: assets/back.gif
+< SHA1-Digest: PPlv58j9zZya2+hwPCvJc4mqI/I=
+---
+> Name: assets/s1.jpg
+> SHA1-Digest: VMYvBPCRiN/bkTrdov9TO2mNats=
+104,105c86,87
+< Name: assets/f3.png
+< SHA1-Digest: XdTlEvjGtIwpdHMZ/EAhKjDfDaU=
+---
+> Name: assets/f20.png
+> SHA1-Digest: yppJPth0v8w0rOV+2Gl+yEY62sE=
+107,108c89,90
+< Name: assets/up.gif
+< SHA1-Digest: I4JAdsL+tVwz6nR8k2cZtKNlMUM=
+---
+> Name: assets/al.gif
+> SHA1-Digest: c99R+u+QMJMKFnOjv6D13AaKbXE=
+110,111c92,93
+< Name: assets/s2.jpg
+< SHA1-Digest: hAagHTlOuDy24DecjzAzFnEk+Qo=
+---
+> Name: assets/g.png
+> SHA1-Digest: j1W11YWIlzKQvf8d9UjuvQWw6yw=
+113,114c95,108
+< Name: assets/bg.jpg
+< SHA1-Digest: uGij8PUfgImwN6ilMmlPGtrhWyY=
+---
+> Name: assets/f11.png
+> SHA1-Digest: 5PMpfkhSMLL5nGfgNP2qCbZscjQ=
+> 
+> Name: assets/af.gif
+> SHA1-Digest: r5Ip51XQjMlMRHte5wEdK5IgRrA=
+> 
+> Name: assets/f9.png
+> SHA1-Digest: 4S601K/6htJI9aMEbuH8zhWfAuc=
+> 
+> Name: assets/go.gif
+> SHA1-Digest: g4ffbJusvzKKLgLzbFK0ZqXlhDY=
+> 
+> Name: assets/i1.gif
+> SHA1-Digest: PYQHCSh7sBu/5cqEycdHtxxIaz4=
+119,120c113,126
+< Name: assets/s3.jpg
+< SHA1-Digest: tItKyq3YxbjtEQzFOW2R+6M2WUw=
+---
+> Name: assets/f19.png
+> SHA1-Digest: SyfGfBIGu+xH3uj50EAHXOg+vGo=
+> 
+> Name: resources.arsc
+> SHA1-Digest: cuOAHz4pPzuuHvyckkaq5hAcfew=
+> 
+> Name: assets/f14.png
+> SHA1-Digest: wWjlIEFEHGlpEqOeYQVsi7sdwKw=
+> 
+> Name: assets/no.gif
+> SHA1-Digest: pvQ6ZZWPIiow4scRwgkWCkX+c0E=
+> 
+> Name: assets/i4.gif
+> SHA1-Digest: pdoDpNsPREJ3edt4clsSuDEsemw=
+125,127d130
+< Name: assets/s0.jpg
+< SHA1-Digest: OUTNEwPVPanVJpfuva2rw1sn89A=
+< 
+131,132c134,135
+< Name: assets/f10.png
+< SHA1-Digest: sLpO6cNuUjXu+8k0QYwO/D2GYfw=
+---
+> Name: assets/f3.png
+> SHA1-Digest: XdTlEvjGtIwpdHMZ/EAhKjDfDaU=
+134,135c137,138
+< Name: assets/VirtualDog1.jpg
+< SHA1-Digest: pagS0Baj+oLT0NvcjuHtYeeHx5E=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: gmHYx3Zqd8PXEYfZGL+/HA1v5oI=
+140,144c143,144
+< Name: assets/s1.jpg
+< SHA1-Digest: VMYvBPCRiN/bkTrdov9TO2mNats=
+< 
+< Name: assets/f20.png
+< SHA1-Digest: yppJPth0v8w0rOV+2Gl+yEY62sE=
+---
+> Name: assets/submit.gif
+> SHA1-Digest: Hmp9t8NTC8NyK5tOKPnb09wZ4tQ=
+146,147c146,147
+< Name: assets/al.gif
+< SHA1-Digest: c99R+u+QMJMKFnOjv6D13AaKbXE=
+---
+> Name: assets/paddle.png
+> SHA1-Digest: DQD6E1St8S0ExfvI+2d6glNtkSE=
+149,150c149,150
+< Name: assets/p.png
+< SHA1-Digest: PQyUFwdUZtSvX6rIzYWXGZUlcmI=
+---
+> Name: assets/yes.gif
+> SHA1-Digest: BUxHchtXsZhlT18bQl/xThjc4qE=
+152,153c152,153
+< Name: assets/f16.png
+< SHA1-Digest: ynBWfJXGmhmN+wKZzlFGumqcfIM=
+---
+> Name: assets/i0.gif
+> SHA1-Digest: uxWq1irg/UaDr6Rj/TIsCo2coVk=
+155,156c155,156
+< Name: assets/f11.png
+< SHA1-Digest: 5PMpfkhSMLL5nGfgNP2qCbZscjQ=
+---
+> Name: assets/f2.png
+> SHA1-Digest: /VRLfwixRtWExa8NzC9v7iBxrKU=
+158,159c158,159
+< Name: assets/af.gif
+< SHA1-Digest: r5Ip51XQjMlMRHte5wEdK5IgRrA=
+---
+> Name: classes.dex
+> SHA1-Digest: dXwP4MtOm+Wvj5bsuUiBopJ4ZYo=
+161,162c161,162
+< Name: assets/f5.png
+< SHA1-Digest: gDlESOueSToM8adP6Y48D/bVZhA=
+---
+> Name: assets/s6.jpg
+> SHA1-Digest: +MFOTc/O9pXG6Vs5l7N+Vv0ClQw=
+164,165c164,165
+< Name: assets/f9.png
+< SHA1-Digest: 4S601K/6htJI9aMEbuH8zhWfAuc=
+---
+> Name: assets/VirtualDog1.jpg
+> SHA1-Digest: pagS0Baj+oLT0NvcjuHtYeeHx5E=
+167,168c167,168
+< Name: assets/f7.png
+< SHA1-Digest: ED0z/XEPepGbHSVH5FSRBWEuhho=
+---
+> Name: res/drawable/icon.png
+> SHA1-Digest: 6iBSptbzrPWZ+78f8HfT3EzQ/AM=
+170,171c170,171
+< Name: assets/VirtualDog.html
+< SHA1-Digest: 4LkQkosFmlc/CIAKztJy4jh9jRU=
+---
+> Name: assets/s5.jpg
+> SHA1-Digest: vQNca+bg7t2koLNBnDyx/Q2dM0g=
+173,174c173,174
+< Name: res/drawable/ad1.jpg
+< SHA1-Digest: azgbyhlJ+QM7NGIyGTR2G9EyQcQ=
+---
+> Name: assets/f10.png
+> SHA1-Digest: sLpO6cNuUjXu+8k0QYwO/D2GYfw=
+176,177c176,177
+< Name: res/layout/main.xml
+< SHA1-Digest: QXWPZs5GqMZecg6h9zK3+EX/aXA=
+---
+> Name: assets/s2.jpg
+> SHA1-Digest: hAagHTlOuDy24DecjzAzFnEk+Qo=
+179,180c179,180
+< Name: assets/f14.png
+< SHA1-Digest: wWjlIEFEHGlpEqOeYQVsi7sdwKw=
+---
+> Name: assets/VirtualDog.html
+> SHA1-Digest: 4LkQkosFmlc/CIAKztJy4jh9jRU=
+diff -r result/APP_4/App_B_4/original/META-INF/MANIFEST.MF result/APP_4/App_M_4/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: d2j-apk-sign 0.0.0.5
+4,17c4,5
+< Name: assets/f18.png
+< SHA1-Digest: 3xeVtscwdtmVPsn2BvfO7tQ2kPc=
+< 
+< Name: assets/submit.gif
+< SHA1-Digest: qiSwr2FAzZ3KmNe1oioj0+PSGVc=
+< 
+< Name: AndroidManifest.xml
+< SHA1-Digest: eEg4L41fgs98hWVw/6lGfu9j9Ps=
+< 
+< Name: assets/g.png
+< SHA1-Digest: bkLNxsNsHGmzr2ISl6p9ddrSkjg=
+< 
+< Name: assets/f1.png
+< SHA1-Digest: 9BZDDrJ8BzI7QO7/vy7HzrLXIfc=
+---
+> Name: assets/p.png
+> SHA1-Digest: fK2FFxwUBN+jiuetWDVcyTJ3HUo=
+19,20c7,8
+< Name: res/drawable/icon.png
+< SHA1-Digest: cOVKcOgQiQA/5E0hU1Gs4fc/xxM=
+---
+> Name: assets/s7.jpg
+> SHA1-Digest: Cr6ZwfiSWSIrpkQapuRWNA8tA0w=
+22,23c10,11
+< Name: assets/dse.jpg
+< SHA1-Digest: PKYBfeq2PpnKvUCh32geXbJF/Ks=
+---
+> Name: res/drawable/ad1.jpg
+> SHA1-Digest: hio0DUzzOVi3fIaqxxGZGezWQGM=
+25,26c13,14
+< Name: classes.dex
+< SHA1-Digest: VhACldHtCdtCj60U5gsp4+/unUI=
+---
+> Name: assets/i3.gif
+> SHA1-Digest: B0PRvrhz++fOwZiUYhnVqK1lgwk=
+28,29c16,17
+< Name: assets/f13.png
+< SHA1-Digest: RvwnvG1CxK+zjkWF7aOad0R/bjA=
+---
+> Name: assets/f15.png
+> SHA1-Digest: O6dUZTbCUibBomsypmhJLDtrFx4=
+31,32c19,20
+< Name: assets/s6.jpg
+< SHA1-Digest: cPGlmDgxbFN6WUus6C3gad/fEW0=
+---
+> Name: assets/f5.png
+> SHA1-Digest: e2hetZwYKH6FP6ovOX8506MYEq4=
+34,35c22,23
+< Name: assets/f19.png
+< SHA1-Digest: OZVYSnaR3p0VXtdOX1C7mDVNVEQ=
+---
+> Name: assets/bg.jpg
+> SHA1-Digest: CL+NhH91H49Ht0zDI4oRRodoxUk=
+40,41c28,29
+< Name: assets/f15.png
+< SHA1-Digest: O6dUZTbCUibBomsypmhJLDtrFx4=
+---
+> Name: assets/s3.jpg
+> SHA1-Digest: 4K6cH9BX44f4m3fGENMX8u4ywjo=
+46,50c34,35
+< Name: assets/i0.gif
+< SHA1-Digest: Iwdscqd3LeC+0fx9prJpb4Y+TR8=
+< 
+< Name: assets/yes.gif
+< SHA1-Digest: QPhiL1MXZC7bDf9+CxatqxQWAEY=
+---
+> Name: assets/f16.png
+> SHA1-Digest: muaUkcEIY2rbB+PHHemOmB/bHTs=
+52,53c37,38
+< Name: assets/f0.png
+< SHA1-Digest: 2KfBdWPDmSLhxb5CDIBf8nVN8Ow=
+---
+> Name: assets/down.gif
+> SHA1-Digest: uH60gie7O9VDUtwOgrDZ10R4lJw=
+55,56c40,41
+< Name: assets/i4.gif
+< SHA1-Digest: aZ713nF4rg4kUAsq56yxnMjwaLk=
+---
+> Name: assets/f17.png
+> SHA1-Digest: UanXwa5+0USr4Rq4+/HxTV6mWFI=
+61,62c46,47
+< Name: assets/f2.png
+< SHA1-Digest: A5MwiwS2MEb5k46zuD6TVNXzJH8=
+---
+> Name: assets/dse.jpg
+> SHA1-Digest: PKYBfeq2PpnKvUCh32geXbJF/Ks=
+64,65c49,50
+< Name: assets/s5.jpg
+< SHA1-Digest: jrBdHgNQEbo6wm5S/EJxOn5UMUc=
+---
+> Name: assets/f0.png
+> SHA1-Digest: 2KfBdWPDmSLhxb5CDIBf8nVN8Ow=
+67,68c52,53
+< Name: resources.arsc
+< SHA1-Digest: 632X8qLrG7MIL3JyNtqLfHw3bNw=
+---
+> Name: assets/f13.png
+> SHA1-Digest: RvwnvG1CxK+zjkWF7aOad0R/bjA=
+70,71c55,56
+< Name: assets/f17.png
+< SHA1-Digest: UanXwa5+0USr4Rq4+/HxTV6mWFI=
+---
+> Name: assets/f12.png
+> SHA1-Digest: OXdUD2L0KH3/GwTdyy6dtDwdfwQ=
+73,74c58,59
+< Name: assets/i3.gif
+< SHA1-Digest: B0PRvrhz++fOwZiUYhnVqK1lgwk=
+---
+> Name: res/layout/main.xml
+> SHA1-Digest: QkgBMcSIjMR3iWqoBSQRyvwzFBw=
+76,77c61,65
+< Name: assets/paddle.png
+< SHA1-Digest: YcnE008/ecK0qTpWWxNu91b1Up4=
+---
+> Name: assets/back.gif
+> SHA1-Digest: Z+XKji96sLSIzP7qBLjfta2UrGY=
+> 
+> Name: assets/f7.png
+> SHA1-Digest: Wat7XUNmzZBQBxv9tpa0Nx5PQm8=
+82,83c70,71
+< Name: assets/s7.jpg
+< SHA1-Digest: Cr6ZwfiSWSIrpkQapuRWNA8tA0w=
+---
+> Name: assets/s0.jpg
+> SHA1-Digest: siUwEeVqQnc3TV/x23hFKfDPJNg=
+85,86c73,74
+< Name: assets/go.gif
+< SHA1-Digest: Fs0DtHHXejl0iFj5cvMkXlagfaU=
+---
+> Name: assets/up.gif
+> SHA1-Digest: vB7hCH8m0rS/OSW9xrek2Y4p7s4=
+88,89c76,77
+< Name: assets/i1.gif
+< SHA1-Digest: PokQFxpktQFNi8FYbhxHTiVY6v0=
+---
+> Name: assets/f1.png
+> SHA1-Digest: 9BZDDrJ8BzI7QO7/vy7HzrLXIfc=
+91,92c79,80
+< Name: assets/no.gif
+< SHA1-Digest: ua6BKsFf6EWg8nPksOFkebmbRK4=
+---
+> Name: assets/f18.png
+> SHA1-Digest: 3xeVtscwdtmVPsn2BvfO7tQ2kPc=
+94,95c82,83
+< Name: assets/f12.png
+< SHA1-Digest: OXdUD2L0KH3/GwTdyy6dtDwdfwQ=
+---
+> Name: assets/s1.jpg
+> SHA1-Digest: BRJ24DBhyYRtdjP6Ym01Xl4ZoYQ=
+97,98c85,86
+< Name: assets/down.gif
+< SHA1-Digest: uH60gie7O9VDUtwOgrDZ10R4lJw=
+---
+> Name: assets/f20.png
+> SHA1-Digest: +YwXbZQudcfVm0TyblQrZjLxHYE=
+100,101c88,89
+< Name: assets/back.gif
+< SHA1-Digest: Z+XKji96sLSIzP7qBLjfta2UrGY=
+---
+> Name: assets/al.gif
+> SHA1-Digest: cFehv3xoKMh/jNYIELCBBls08NI=
+103,104c91,92
+< Name: assets/f3.png
+< SHA1-Digest: +PLrhFcGDTyu9rmMy86Vq+GoHLA=
+---
+> Name: assets/g.png
+> SHA1-Digest: bkLNxsNsHGmzr2ISl6p9ddrSkjg=
+106,107c94,95
+< Name: assets/up.gif
+< SHA1-Digest: vB7hCH8m0rS/OSW9xrek2Y4p7s4=
+---
+> Name: assets/f11.png
+> SHA1-Digest: 8k1L1T9MPX7Ug7EFOziMiBET6Dg=
+109,110c97,98
+< Name: assets/s2.jpg
+< SHA1-Digest: 53XZHXXF9txnnaSX8SHiJsOSMWA=
+---
+> Name: assets/af.gif
+> SHA1-Digest: Q4Tc7NL+dfOhbofVVirLDBQU+pc=
+112,113c100,107
+< Name: assets/bg.jpg
+< SHA1-Digest: CL+NhH91H49Ht0zDI4oRRodoxUk=
+---
+> Name: assets/f9.png
+> SHA1-Digest: nX79ud86WT8siu2dlaD+eDPawnw=
+> 
+> Name: assets/go.gif
+> SHA1-Digest: Fs0DtHHXejl0iFj5cvMkXlagfaU=
+> 
+> Name: assets/i1.gif
+> SHA1-Digest: PokQFxpktQFNi8FYbhxHTiVY6v0=
+118,119c112,125
+< Name: assets/s3.jpg
+< SHA1-Digest: 4K6cH9BX44f4m3fGENMX8u4ywjo=
+---
+> Name: assets/f19.png
+> SHA1-Digest: OZVYSnaR3p0VXtdOX1C7mDVNVEQ=
+> 
+> Name: resources.arsc
+> SHA1-Digest: mJL0xWJgE4+q0ivX42KXuMY9rVg=
+> 
+> Name: assets/f14.png
+> SHA1-Digest: ZQi+v2dpb6o5kz5T/JmuVn8k9o8=
+> 
+> Name: assets/no.gif
+> SHA1-Digest: ua6BKsFf6EWg8nPksOFkebmbRK4=
+> 
+> Name: assets/i4.gif
+> SHA1-Digest: aZ713nF4rg4kUAsq56yxnMjwaLk=
+124,126d129
+< Name: assets/s0.jpg
+< SHA1-Digest: siUwEeVqQnc3TV/x23hFKfDPJNg=
+< 
+130,131c133,134
+< Name: assets/f10.png
+< SHA1-Digest: jIFHTM0yn9QbR5JIotH5M5DJPXc=
+---
+> Name: assets/f3.png
+> SHA1-Digest: +PLrhFcGDTyu9rmMy86Vq+GoHLA=
+133,134c136,137
+< Name: assets/VirtualDog1.jpg
+< SHA1-Digest: 557h3IEIK2GhTg4BYTAt8KtfKNU=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: upf4vzoDHdPVWjKsBIqI5UJAgNc=
+139,143c142,143
+< Name: assets/s1.jpg
+< SHA1-Digest: BRJ24DBhyYRtdjP6Ym01Xl4ZoYQ=
+< 
+< Name: assets/f20.png
+< SHA1-Digest: +YwXbZQudcfVm0TyblQrZjLxHYE=
+---
+> Name: assets/submit.gif
+> SHA1-Digest: qiSwr2FAzZ3KmNe1oioj0+PSGVc=
+145,146c145,146
+< Name: assets/al.gif
+< SHA1-Digest: cFehv3xoKMh/jNYIELCBBls08NI=
+---
+> Name: assets/paddle.png
+> SHA1-Digest: YcnE008/ecK0qTpWWxNu91b1Up4=
+148,149c148,149
+< Name: assets/p.png
+< SHA1-Digest: fK2FFxwUBN+jiuetWDVcyTJ3HUo=
+---
+> Name: assets/yes.gif
+> SHA1-Digest: QPhiL1MXZC7bDf9+CxatqxQWAEY=
+151,152c151,152
+< Name: assets/f16.png
+< SHA1-Digest: muaUkcEIY2rbB+PHHemOmB/bHTs=
+---
+> Name: assets/f2.png
+> SHA1-Digest: A5MwiwS2MEb5k46zuD6TVNXzJH8=
+154,155c154,155
+< Name: assets/af.gif
+< SHA1-Digest: Q4Tc7NL+dfOhbofVVirLDBQU+pc=
+---
+> Name: assets/i0.gif
+> SHA1-Digest: Iwdscqd3LeC+0fx9prJpb4Y+TR8=
+157,158c157,158
+< Name: assets/f11.png
+< SHA1-Digest: 8k1L1T9MPX7Ug7EFOziMiBET6Dg=
+---
+> Name: classes.dex
+> SHA1-Digest: ispv4jG4eCHBoEElJf8JEOgPofc=
+160,161c160,161
+< Name: assets/f5.png
+< SHA1-Digest: e2hetZwYKH6FP6ovOX8506MYEq4=
+---
+> Name: assets/s6.jpg
+> SHA1-Digest: cPGlmDgxbFN6WUus6C3gad/fEW0=
+163,164c163,164
+< Name: assets/f9.png
+< SHA1-Digest: nX79ud86WT8siu2dlaD+eDPawnw=
+---
+> Name: assets/VirtualDog1.jpg
+> SHA1-Digest: 557h3IEIK2GhTg4BYTAt8KtfKNU=
+166,167c166,167
+< Name: assets/f7.png
+< SHA1-Digest: Wat7XUNmzZBQBxv9tpa0Nx5PQm8=
+---
+> Name: res/drawable/icon.png
+> SHA1-Digest: cOVKcOgQiQA/5E0hU1Gs4fc/xxM=
+169,170c169,170
+< Name: assets/VirtualDog.html
+< SHA1-Digest: JOFYp0p/kgK+adi5oGDO3t9NzPc=
+---
+> Name: assets/s5.jpg
+> SHA1-Digest: jrBdHgNQEbo6wm5S/EJxOn5UMUc=
+172,173c172,173
+< Name: res/layout/main.xml
+< SHA1-Digest: RqZGSQ5rhJmTdjMkQ5u8EjVwWEM=
+---
+> Name: assets/f10.png
+> SHA1-Digest: jIFHTM0yn9QbR5JIotH5M5DJPXc=
+175,176c175,176
+< Name: res/drawable/ad1.jpg
+< SHA1-Digest: hio0DUzzOVi3fIaqxxGZGezWQGM=
+---
+> Name: assets/s2.jpg
+> SHA1-Digest: 53XZHXXF9txnnaSX8SHiJsOSMWA=
+178,179c178,179
+< Name: assets/f14.png
+< SHA1-Digest: ZQi+v2dpb6o5kz5T/JmuVn8k9o8=
+---
+> Name: assets/VirtualDog.html
+> SHA1-Digest: JOFYp0p/kgK+adi5oGDO3t9NzPc=
+Somente em result/APP_4/App_M_4/smali/com: mmsdk

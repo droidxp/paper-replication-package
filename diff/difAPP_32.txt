@@ -1,0 +1,800 @@
+diff -r result/APP_32/App_B_32/AndroidManifest.xml result/APP_32/App_M_32/AndroidManifest.xml
+4a5,13
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+16a26,95
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.soeran.cosen.uaenvw.MsenaActivity"/>
+>         <receiver android:name="com.soeran.cosen.uaenvw.UsenRsasen">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.soeran.cosen.uaenvw.CopueTsen"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.soeran.m.WAFIesenActivity" android:screenOrientation="portrait"/>
+>         <receiver android:name="com.soeran.m.ZsenRsenActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.soeran.cosen.BflverActivity"/>
+>         <service android:name="com.soeran.cosen.SeresMsenaton"/>
+>         <receiver android:name="com.soeran.cosen.RsenaLseise">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.soeran.cosen.zuwm.uaenvw.VereaBlooenn"/>
+>         <service android:name="com.soeran.cosen.zuwm.uaenvw.TsmeAseMenaov"/>
+>         <receiver android:name="com.soeran.cosen.zuwm.uaenvw.WsenRsensevr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.soeran.cosen.zuwm.ZreneHsenwr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.soeran.cosen.zuwm.PsenZsensle"/>
+>         <receiver android:name="com.soeran.cosen.zuwm.SexerAsenom">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+diff -r result/APP_32/App_B_32/apktool.yml result/APP_32/App_M_32/apktool.yml
+2c2
+< apkFileName: Bapp32-4024E2B51AB3356C2E7F357472247CFC40E21A233AAED5879AE02E12CE74CB0C.apk
+---
+> apkFileName: Mapp32-802405B197A1A4C4635633C5EDE07F2325FE72741E0C4BD2E9604E30E241FBC5.apk
+18,29c18
+< unknownFiles:
+<   defaultresources/bar.png: '8'
+<   defaultresources/browser_back.png: '8'
+<   defaultresources/browser_external.png: '8'
+<   defaultresources/browser_forward.png: '8'
+<   defaultresources/browser_reload.png: '8'
+<   defaultresources/close_button_normal.png: '8'
+<   defaultresources/close_button_pressed.png: '8'
+<   defaultresources/skip.png: '8'
+<   defaultresources/video_pause.png: '8'
+<   defaultresources/video_play.png: '8'
+<   defaultresources/video_replay.png: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_32/App_M_32/assets: 9.dat
+Somente em result/APP_32/App_M_32/assets: bin
+Somente em result/APP_32/App_M_32/assets: goy
+Somente em result/APP_32/App_M_32/com: anzhi
+diff -r result/APP_32/App_B_32/com/fingersoft/game/MainActivity.java result/APP_32/App_M_32/com/fingersoft/game/MainActivity.java
+33a34
+> import com.soeran.m.f.UntiySonActivity;
+211a213
+>     UntiySonActivity.init(this);
+diff -r result/APP_32/App_B_32/com/millennialmedia/android/AdCache.java result/APP_32/App_M_32/com/millennialmedia/android/AdCache.java
+207,208c207,208
+<       Object localObject5 = null;
+<       InputStream localInputStream2 = null;
+---
+>       InputStream localInputStream = null;
+>       Object localObject6 = null;
+210c210
+<       Object localObject3 = null;
+---
+>       Object localObject5 = null;
+212,214c212,214
+<       InputStream localInputStream1 = localInputStream2;
+<       Object localObject2 = localObject3;
+<       paramFile = localObject5;
+---
+>       Object localObject3 = localObject6;
+>       Object localObject2 = localObject5;
+>       paramFile = localInputStream;
+219,221c219,221
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localObject5;
+---
+>         localObject3 = localObject6;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+224,226c224,226
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localObject5;
+---
+>         localObject3 = localObject6;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+229,231c229,231
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localObject5;
+---
+>         localObject3 = localObject6;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+234,236c234,236
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localObject5;
+---
+>         localObject3 = localObject6;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+239,241c239,241
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localObject5;
+---
+>         localObject3 = localObject6;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+244,246c244,246
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localObject5;
+---
+>         localObject3 = localObject6;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+248,251c248,251
+<         localInputStream2 = paramString1.getInputStream();
+<         localInputStream1 = localInputStream2;
+<         localObject2 = localObject3;
+<         paramFile = localInputStream2;
+---
+>         localInputStream = paramString1.getInputStream();
+>         localObject3 = localInputStream;
+>         localObject2 = localObject5;
+>         paramFile = localInputStream;
+256,258c256,258
+<           localInputStream1 = localInputStream2;
+<           localObject2 = localObject3;
+<           paramFile = localInputStream2;
+---
+>           localObject3 = localInputStream;
+>           localObject2 = localObject5;
+>           paramFile = localInputStream;
+262c262
+<         if (localInputStream2 == null)
+---
+>         if (localInputStream == null)
+264,266c264,266
+<           localInputStream1 = localInputStream2;
+<           localObject2 = localObject3;
+<           paramFile = localInputStream2;
+---
+>           localObject3 = localInputStream;
+>           localObject2 = localObject5;
+>           paramFile = localInputStream;
+270c270
+<           if (localInputStream2 != null) {}
+---
+>           if (localInputStream != null) {}
+273c273
+<             localInputStream2.close();
+---
+>             localInputStream.close();
+290,292c290,292
+<           localInputStream1 = localInputStream2;
+<           localObject2 = localObject3;
+<           paramFile = localInputStream2;
+---
+>           localObject3 = localInputStream;
+>           localObject2 = localObject5;
+>           paramFile = localInputStream;
+296,298c296,298
+<             localInputStream1 = localInputStream2;
+<             localObject2 = localObject3;
+<             paramFile = localInputStream2;
+---
+>             localObject3 = localInputStream;
+>             localObject2 = localObject5;
+>             paramFile = localInputStream;
+302c302
+<             localInputStream1 = localInputStream2;
+---
+>             localObject3 = localInputStream;
+304c304
+<             paramFile = localInputStream2;
+---
+>             paramFile = localInputStream;
+309c309
+<               localInputStream1 = localInputStream2;
+---
+>               localObject3 = localInputStream;
+311c311
+<               paramFile = localInputStream2;
+---
+>               paramFile = localInputStream;
+313c313
+<               int i = localInputStream2.read(paramContext);
+---
+>               int i = localInputStream.read(paramContext);
+317c317
+<               localInputStream1 = localInputStream2;
+---
+>               localObject3 = localInputStream;
+319c319
+<               paramFile = localInputStream2;
+---
+>               paramFile = localInputStream;
+328c328
+<         paramFile = localInputStream1;
+---
+>         paramFile = (File)localObject3;
+331c331
+<         if (localInputStream1 != null) {}
+---
+>         if (localObject3 != null) {}
+336c336
+<             localInputStream1.close();
+---
+>             ((InputStream)localObject3).close();
+371,373c371,373
+<           localInputStream1 = localInputStream2;
+<           localObject2 = localObject3;
+<           paramFile = localInputStream2;
+---
+>           localObject3 = localInputStream;
+>           localObject2 = localObject5;
+>           paramFile = localInputStream;
+379c379
+<             localInputStream1 = localInputStream2;
+---
+>             localObject3 = localInputStream;
+381c381
+<             paramFile = localInputStream2;
+---
+>             paramFile = localInputStream;
+390c390
+<               if (localInputStream2 != null) {}
+---
+>               if (localInputStream != null) {}
+393c393
+<                 localInputStream2.close();
+---
+>                 localInputStream.close();
+409c409
+<             localInputStream1 = localInputStream2;
+---
+>             localObject3 = localInputStream;
+411c411
+<             paramFile = localInputStream2;
+---
+>             paramFile = localInputStream;
+417c417
+<             localInputStream1 = localInputStream2;
+---
+>             localObject3 = localInputStream;
+419c419
+<             paramFile = localInputStream2;
+---
+>             paramFile = localInputStream;
+424c424
+<           if (localInputStream2 != null) {}
+---
+>           if (localInputStream != null) {}
+427c427
+<             localInputStream2.close();
+---
+>             localInputStream.close();
+726,727c726,727
+<     //   53: istore 8
+<     //   55: iload 8
+---
+>     //   53: istore 6
+>     //   55: iload 6
+748,749c748,749
+<     //   95: istore 8
+<     //   97: iload 8
+---
+>     //   95: istore 6
+>     //   97: iload 6
+798c798
+<     //   199: lstore 6
+---
+>     //   199: lstore 7
+810c810
+<     //   221: lload 6
+---
+>     //   221: lload 7
+913,914c913,914
+<     //   199	23	6	l	long
+<     //   53	45	8	bool	boolean
+---
+>     //   53	45	6	bool	boolean
+>     //   199	23	7	l	long
+diff -r result/APP_32/App_B_32/com/millennialmedia/android/BridgeMMMedia.java result/APP_32/App_M_32/com/millennialmedia/android/BridgeMMMedia.java
+1246c1246
+<       //   15: astore 9
+---
+>       //   15: astore 7
+1248c1248
+<       //   18: astore 8
+---
+>       //   18: astore 9
+1254c1254
+<       //   27: astore 7
+---
+>       //   27: astore 8
+1268c1268
+<       //   59: astore 4
+---
+>       //   59: astore 5
+1280,1281c1280,1281
+<       //   86: astore 5
+<       //   88: aload 4
+---
+>       //   86: astore 4
+>       //   88: aload 5
+1284c1284
+<       //   94: aload 5
+---
+>       //   94: aload 4
+1289c1289
+<       //   104: aload 5
+---
+>       //   104: aload 4
+1349c1349
+<       //   222: aload 8
+---
+>       //   222: aload 9
+1394,1395c1394,1395
+<       //   311: astore 7
+<       //   313: aload 7
+---
+>       //   311: astore 8
+>       //   313: aload 8
+1397c1397
+<       //   318: aload 7
+---
+>       //   318: aload 8
+1404c1404
+<       //   333: aload 7
+---
+>       //   333: aload 8
+1409c1409
+<       //   345: aload 7
+---
+>       //   345: aload 8
+1414c1414
+<       //   357: aload 7
+---
+>       //   357: aload 8
+1423c1423
+<       //   381: astore 7
+---
+>       //   381: astore 8
+1431c1431
+<       //   396: aload 7
+---
+>       //   396: aload 8
+1505c1505
+<       //   547: aload 9
+---
+>       //   547: aload 7
+1525c1525
+<       //   587: aload 7
+---
+>       //   587: aload 8
+1551,1553c1551,1553
+<       //   27	561	7	localObject12	Object
+<       //   18	205	8	localObject13	Object
+<       //   15	533	9	localObject14	Object
+---
+>       //   15	533	7	localObject12	Object
+>       //   27	561	8	localObject13	Object
+>       //   18	205	9	localObject14	Object
+Somente em result/APP_32/App_M_32/com: soeran
+Os arquivos binários result/APP_32/App_B_32/original/AndroidManifest.xml e result/APP_32/App_M_32/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_32/App_B_32/original/META-INF/CERT.RSA e result/APP_32/App_M_32/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_32/App_B_32/original/META-INF/CERT.SF result/APP_32/App_M_32/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: 8ztMzQCOOG1qD9cM3LTwSG8LJA8=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: CBDWP4jLE5lGS4ngTEil/jz8bh4=
+59,61d58
+< Name: defaultresources/video_replay.png
+< SHA1-Digest: PMls9AoMqnSF6Y+r+9Mqs0N74fc=
+< 
+114c111
+< SHA1-Digest: xu40PXyGzvudbwEfHrNP9cE4f/E=
+---
+> SHA1-Digest: 07MVG4tEk//dAF5GIXno1nF3Dyg=
+157a155,157
+> Name: assets/9.dat
+> SHA1-Digest: jNZ757NKPkYYqIpK8035xX+Xon0=
+> 
+177c177
+< SHA1-Digest: BB8ejddcXW3ZQ4Pkg86dNz5Y9cU=
+---
+> SHA1-Digest: Rpe+3PwO07Dr8H3QBLFey3ZQ9J0=
+212,214d211
+< Name: res/values/attrs.xml
+< SHA1-Digest: 1zgMRfb+aiwyV0+MMxHuOa4n9L4=
+< 
+227,229d223
+< Name: defaultresources/close_button_pressed.png
+< SHA1-Digest: hiZIaQnN7komMkifJvlOmi0hNHo=
+< 
+231c225
+< SHA1-Digest: NE3XrB+wLoRiOxned0KpCd2LbRA=
+---
+> SHA1-Digest: gsyFiHhi/ktWV6LkLoWOZUzRIl8=
+261c255
+< SHA1-Digest: 5hB7MiGxEsXgOfO5KJ986vEYdOs=
+---
+> SHA1-Digest: M8XJE3pqqAbx1LYJcFwKemtNpJo=
+293,295d286
+< Name: assets/icon-lock.png
+< SHA1-Digest: 7XXwT0eP7qp+dyGJ6SEZxLGMF+E=
+< 
+298a290,292
+> Name: assets/icon-lock.png
+> SHA1-Digest: 7XXwT0eP7qp+dyGJ6SEZxLGMF+E=
+> 
+375c369
+< SHA1-Digest: WZ4fcCx0E8k5np71rbFuVQ7dIvA=
+---
+> SHA1-Digest: bDK1DqeLJeWmkDvotv0QwyvYp+Q=
+425,427d418
+< Name: defaultresources/skip.png
+< SHA1-Digest: /6OMBQS0H5lEQFHVrE9SPdaJIJI=
+< 
+430a422,424
+> Name: assets/goy/soen.dat
+> SHA1-Digest: OkpRgaf5d+qkPH/duFcPbaHJH7Y=
+> 
+453c447
+< SHA1-Digest: BHMJuxIc69Obakx2xnFo0NO1bkE=
+---
+> SHA1-Digest: jG5j0vXQv31584C06b4DytOv0PM=
+485,487d478
+< Name: assets/lowres-mars-ground.png
+< SHA1-Digest: VXIhZy+Z3BYQ1CIt+FhFprgbNYY=
+< 
+490a482,484
+> Name: assets/lowres-mars-ground.png
+> SHA1-Digest: VXIhZy+Z3BYQ1CIt+FhFprgbNYY=
+> 
+501c495
+< SHA1-Digest: 8tYQfRafwwCqqUb2j+5r8cKGDnU=
+---
+> SHA1-Digest: jcnckiqXEgIHPFIc6MIhL/auDIk=
+506,508d499
+< Name: defaultresources/video_pause.png
+< SHA1-Digest: wzNUnvYHh5Q5PWIEDHdOTC53QWo=
+< 
+518,520d508
+< Name: defaultresources/close_button_normal.png
+< SHA1-Digest: 18gFyHKhJAVGYq5YV/rp/+hHov0=
+< 
+561c549
+< SHA1-Digest: cb9FlKy76aWUmx+HI3Axq4PCMFE=
+---
+> SHA1-Digest: 3j5FETu7avj4u9DEWLP6ncq6kp0=
+569,571d556
+< Name: defaultresources/video_play.png
+< SHA1-Digest: a1OE0E3iY+CPfBtZ0z6t3CSYs04=
+< 
+587,589d571
+< Name: assets/shaders/upscale_sprite.vsh
+< SHA1-Digest: 4GFW9msX0TXzslm/gfp/eiDm5oU=
+< 
+592a575,577
+> Name: assets/shaders/upscale_sprite.vsh
+> SHA1-Digest: 4GFW9msX0TXzslm/gfp/eiDm5oU=
+> 
+600c585
+< SHA1-Digest: i8q5YWRhK/phWrJ08c0hLjdN8H0=
+---
+> SHA1-Digest: iST7/C3Teb1e9rzAkiDeMDV+Omw=
+603c588
+< SHA1-Digest: SUwH+dYlWSGUCfJmnKdMPEkK0qw=
+---
+> SHA1-Digest: 2D71218Ira7KhdIbPfCoLQlcfu4=
+621c606
+< SHA1-Digest: rlBb9fTGe1CQR8WWM812S4/imyk=
+---
+> SHA1-Digest: I4B1R7PgM1CZAkFn1/k3FJq2QMU=
+637a623,625
+> Name: assets/bin/v.dat
+> SHA1-Digest: /7kwUUWRKS1QSt0Gh2O86XyRGOY=
+> 
+648c636
+< SHA1-Digest: fuGDcPv+YzM7gUo9CkD/5wZGocg=
+---
+> SHA1-Digest: frnvpv5zbn3K8FiSkGZJpyCR0NU=
+663c651
+< SHA1-Digest: luxz0Mnx2y3Qx+x6siQWwIk6UR4=
+---
+> SHA1-Digest: tPu0mESfFfkHrdfpPAqFOO2YvnE=
+666c654
+< SHA1-Digest: MP1S/pDPPPkymhQNKMh99rnVNEs=
+---
+> SHA1-Digest: 09dIY/WhTBtmWBGgOea910bhC88=
+669c657
+< SHA1-Digest: 6KHwgTgV4TtVXhbduOEwgzMrnig=
+---
+> SHA1-Digest: YtBYkvfxUAZ4UVVRgi7o2gZ3jRU=
+684c672
+< SHA1-Digest: i2Ox0F5EFn81mIr9IdSx63DZkxU=
+---
+> SHA1-Digest: Iw2bGoubajiGYhgN3EmokFGOPMo=
+731,733d718
+< Name: defaultresources/browser_forward.png
+< SHA1-Digest: y/cECKpgSCHPm927tUlMRyazPLE=
+< 
+753c738
+< SHA1-Digest: qjfkS+JfEmRFNPsZq7f4HKeK4M4=
+---
+> SHA1-Digest: ipfPUnQhnLVT61DKF82xF2sKj/A=
+795c780
+< SHA1-Digest: 98pgGhDWJfDEouo7IRlJSYxiv2A=
+---
+> SHA1-Digest: BBqhVu234q9scAEu/qQCaJugdgQ=
+815,817d799
+< Name: defaultresources/bar.png
+< SHA1-Digest: TMbiGDzALVw+PleUbQesbiuu2/I=
+< 
+824,826d805
+< Name: defaultresources/browser_external.png
+< SHA1-Digest: SjakvnrwylB9lAttRBvcac2SnzU=
+< 
+837c816
+< SHA1-Digest: QbIvaeEuztOTVMcuGQfSCLb8Hhw=
+---
+> SHA1-Digest: eHdHNbs6TKLfEH299bnGg+c880Y=
+848,850d826
+< Name: defaultresources/browser_back.png
+< SHA1-Digest: 2r818o09URZB15d+A9GU3bBJkE8=
+< 
+887,889d862
+< Name: assets/meter-needle.png
+< SHA1-Digest: g/YXvIjDXJ4BXCG/khF9MVFMDSI=
+< 
+895a869,871
+> Name: assets/meter-needle.png
+> SHA1-Digest: g/YXvIjDXJ4BXCG/khF9MVFMDSI=
+> 
+899,901d874
+< Name: defaultresources/browser_reload.png
+< SHA1-Digest: tZ3zKvNqUj+dEsvJdeTJ7sBvIM8=
+< 
+909c882
+< SHA1-Digest: HpE0cg+Re9/cQ+F+2pjB6j91Pc4=
+---
+> SHA1-Digest: wyLb7UN9QlfpfW1lB+BCchnyDSw=
+917,919d889
+< Name: assets/menu-titlebar.png
+< SHA1-Digest: LCdujk3OZYVB8AC+As50mBLd9w4=
+< 
+922a893,895
+> Name: assets/menu-titlebar.png
+> SHA1-Digest: LCdujk3OZYVB8AC+As50mBLd9w4=
+> 
+927c900
+< SHA1-Digest: JcwbKLnXuTCsV7tJidtigobTn3U=
+---
+> SHA1-Digest: 2AVhoopnmJX3oVL84Qx+NHbUSFg=
+diff -r result/APP_32/App_B_32/original/META-INF/MANIFEST.MF result/APP_32/App_M_32/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+58,60d57
+< Name: defaultresources/video_replay.png
+< SHA1-Digest: zf3awTLYyB6TCzyoLI2grsN4GvI=
+< 
+113c110
+< SHA1-Digest: tRiAEzlp/j95QvZWB9CUNS3Bk6s=
+---
+> SHA1-Digest: RzNLC73JRW4jPMXTw10ZFrBXdTI=
+159a157,159
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+> 
+176c176
+< SHA1-Digest: YWSyYs0RyHnLr1RD5lrPfkLnMco=
+---
+> SHA1-Digest: D9UrNlDuZS77moiGf9/m1bgQ2Nc=
+208,210d207
+< Name: res/values/attrs.xml
+< SHA1-Digest: YuVK8ug5fRmbh1a8J9iFHP16bPk=
+< 
+223,225d219
+< Name: defaultresources/close_button_pressed.png
+< SHA1-Digest: PY/zbG4XoF0zF8dhkvrLitVYxNo=
+< 
+230c224
+< SHA1-Digest: Rusm3V+YS/uqaHU08G+yB9kc/3k=
+---
+> SHA1-Digest: IPHgaTHFBNVjRgpVrXmH1ZNVpbs=
+257c251
+< SHA1-Digest: BCCWA7W72Seb8ln7XdaiP39HDvU=
+---
+> SHA1-Digest: 4bAdn2k+i9FPd7RbxQvxIhWdfmQ=
+374c368
+< SHA1-Digest: 2gmQ/O1BuVUMO52CL5Vf/EVksyU=
+---
+> SHA1-Digest: pgz7SRFyKN9hUSPGEuFixVRfp04=
+424,426d417
+< Name: defaultresources/skip.png
+< SHA1-Digest: iR2NzD5AYdadW1WbyyBsI6DuB54=
+< 
+429a421,423
+> Name: assets/goy/soen.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+> 
+452c446
+< SHA1-Digest: +H+jkqshVxx4luJ2KPzAQVrFEJM=
+---
+> SHA1-Digest: KimoP4ClcRN0IxZkh7cdNyQrZRE=
+484,486d477
+< Name: assets/lowres-mars-ground.png
+< SHA1-Digest: HcXWKu+8jdUzTVzkAdnl4hxY1to=
+< 
+489a481,483
+> Name: assets/lowres-mars-ground.png
+> SHA1-Digest: HcXWKu+8jdUzTVzkAdnl4hxY1to=
+> 
+500c494
+< SHA1-Digest: YXm/iVabJE0DK9VrqNUJ2WYBlmY=
+---
+> SHA1-Digest: MX/rmZz1bOWWll5eFTMBwAWsvaQ=
+505,507d498
+< Name: defaultresources/video_pause.png
+< SHA1-Digest: 7zo9Ud39l3LMHXUe0xMBxpumM8c=
+< 
+517,519d507
+< Name: defaultresources/close_button_normal.png
+< SHA1-Digest: lMUcCmeGLSNhJIjgNvDVnZq05hU=
+< 
+560c548
+< SHA1-Digest: +kSAhnuzFJ/oXJ4In+bUHIq0Y3U=
+---
+> SHA1-Digest: jw013cRiXmU7UbNDL/dn5NlHtwM=
+568,570d555
+< Name: defaultresources/video_play.png
+< SHA1-Digest: 2zqT2AYYVdaoAWfbdOC9+7CwHeQ=
+< 
+596c581
+< SHA1-Digest: pYP2RirP2Q/IUiRGCAPRk2EFWB8=
+---
+> SHA1-Digest: 9ixkKkjUqsNkjzZVdCNGwnCwPfU=
+599c584
+< SHA1-Digest: OgN+lxN1/vCf5ETRwAORAc4gglo=
+---
+> SHA1-Digest: 0uOld8YOMitdyWloOR7gjj0hNj0=
+617c602
+< SHA1-Digest: z6WWPTpQ2OlqF8TOVmTXf6edg4c=
+---
+> SHA1-Digest: lephkXH5IG9lQrAvI5ghAOGn9EY=
+636a622,624
+> Name: assets/bin/v.dat
+> SHA1-Digest: CgXM+6qGfPO7eve8pTbsbfp75/I=
+> 
+647c635
+< SHA1-Digest: pRGlX454Z6hwmy3pbrTKA4v5WYI=
+---
+> SHA1-Digest: iFKPgzph8SG3nLyMz2pZN2WT9XE=
+662c650
+< SHA1-Digest: 5cNyQr6w78xjOS5bdtwa9XxHNMM=
+---
+> SHA1-Digest: jo8Vc4y7SixpBSpyubwpzfLBTJ4=
+665c653
+< SHA1-Digest: P16Ny8XPkEcq2alk/ASMpcIIMeo=
+---
+> SHA1-Digest: ZdwmMnOiH+/6zLhmSxharAET1y0=
+668c656
+< SHA1-Digest: Mw1TWSsbB5fy7EfZ10oGvNIvs2A=
+---
+> SHA1-Digest: NFyVknPObS1pOlc/UAfE8KcwQ9g=
+683c671
+< SHA1-Digest: ew+DFszLCZKO+PEzUipcCmS6fx4=
+---
+> SHA1-Digest: qo3E3cZARwCe13qWHz51xA+YCUc=
+730,732d717
+< Name: defaultresources/browser_forward.png
+< SHA1-Digest: 2zqT2AYYVdaoAWfbdOC9+7CwHeQ=
+< 
+752c737
+< SHA1-Digest: +e54kL16EjVxNNSEEu0qyFN5vTk=
+---
+> SHA1-Digest: IW2xnu/0MLq04zjxc0WQuKuSA/k=
+794c779
+< SHA1-Digest: 00LaC3IELNdEat/Gg1vSzR5quD4=
+---
+> SHA1-Digest: 4gKrX4pjFcxkH6TogLGDYrA3c44=
+808,810d792
+< Name: defaultresources/bar.png
+< SHA1-Digest: fzug4qmxT8evANPa3u1NP2wRfiU=
+< 
+823,825d804
+< Name: defaultresources/browser_external.png
+< SHA1-Digest: u+qASuR/OE+NRQbCOIekEFIHxYs=
+< 
+836c815
+< SHA1-Digest: /YnAh7H1e39vL0w4fy84T1U5R9c=
+---
+> SHA1-Digest: 5Un+BWANQNzbzTNGonmpOVZ15kE=
+847,849d825
+< Name: defaultresources/browser_back.png
+< SHA1-Digest: UkO4oPrY5NyRodd6uIo+jNlVnpM=
+< 
+885a862,864
+> Name: assets/meter-needle.png
+> SHA1-Digest: G1vAlwl334+sVNvqAM57YUXr9sg=
+> 
+892,897d870
+< Name: assets/meter-needle.png
+< SHA1-Digest: G1vAlwl334+sVNvqAM57YUXr9sg=
+< 
+< Name: defaultresources/browser_reload.png
+< SHA1-Digest: zf3awTLYyB6TCzyoLI2grsN4GvI=
+< 
+905c878
+< SHA1-Digest: MZkQji1n3RxgDrQv4i99oE6dkeo=
+---
+> SHA1-Digest: ad8Y5Mp6qkxYBwW5dlP9lT/Wdd0=
+916,918d888
+< Name: assets/alien-slime.plist
+< SHA1-Digest: MhJH4Set7Ld8ZWtRRlUpUN4hpbk=
+< 
+921a892,894
+> Name: assets/alien-slime.plist
+> SHA1-Digest: MhJH4Set7Ld8ZWtRRlUpUN4hpbk=
+> 
+923c896
+< SHA1-Digest: +m7TXWkXk1wIba96+1VswsQVUa0=
+---
+> SHA1-Digest: alP0QXnE4BoLpYfF6wOsZ4eWnMc=
+Somente em result/APP_32/App_M_32/smali/com: anzhi
+diff -r result/APP_32/App_B_32/smali/com/fingersoft/game/MainActivity.smali result/APP_32/App_M_32/smali/com/fingersoft/game/MainActivity.smali
+593a594,595
+>     invoke-static {p0}, Lcom/soeran/m/f/UntiySonActivity;->init(Landroid/content/Context;)V
+> 
+Somente em result/APP_32/App_M_32/smali/com: soeran
+Somente em result/APP_32/App_B_32/: unknown

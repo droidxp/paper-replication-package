@@ -1,0 +1,47 @@
+diff -r result/APP_15/App_B_15/AndroidManifest.xml result/APP_15/App_M_15/AndroidManifest.xml
+23c23
+<         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14c8c4e4238346"/>
+---
+>         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14e0f149f2d5b1"/>
+diff -r result/APP_15/App_B_15/apktool.yml result/APP_15/App_M_15/apktool.yml
+2c2
+< apkFileName: Bapp15-1F1DDB0D06F4A0753C9389C9A16B1B13925C497729C9E9D66C44824C4798A639.apk
+---
+> apkFileName: Mapp15-ADC32D86A5D4785BA15FAFCA79AB1A4078BD5FED5E973222268C539F6B50AFE6.apk
+5d4
+< - resources.arsc
+Os arquivos binários result/APP_15/App_B_15/original/AndroidManifest.xml e result/APP_15/App_M_15/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_15/App_B_15/original/META-INF/CERT.RSA e result/APP_15/App_M_15/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_15/App_B_15/original/META-INF/CERT.SF result/APP_15/App_M_15/original/META-INF/CERT.SF
+2,3c2,4
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: VgGyxik0QcL6GWYrJ6CuX1sF6pk=
+---
+> SHA1-Digest-Manifest-Main-Attributes: ZKXxNW/3Rg7JA1r0+RlbJIP6IMA=
+> Created-By: 1.6.0_25 (Sun Microsystems Inc.)
+> SHA1-Digest-Manifest: EEjr46sSJ8sW7BbRSFoPDeOk6AU=
+24c25
+< SHA1-Digest: GRpmAdFZcy/1XYYQagiEcddUcC8=
+---
+> SHA1-Digest: GZ8ewQD47300nKBmzMKcYBmZYmc=
+41,43d41
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: 3vv9derC/UrLpiam9i2Yo16eHXw=
+< 
+45a44,46
+> 
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: 3vv9derC/UrLpiam9i2Yo16eHXw=
+diff -r result/APP_15/App_B_15/original/META-INF/MANIFEST.MF result/APP_15/App_M_15/original/META-INF/MANIFEST.MF
+23c23
+< SHA1-Digest: fGa2Mklje/0j3bVNIDYa5mw2QBc=
+---
+> SHA1-Digest: sKy8LTtJZ7h0caiYy3/UHVY1P1w=
+40,42d39
+< Name: res/layout/linha.xml
+< SHA1-Digest: 6jtDc6ZuRo7mkrqqG2tGZ5D4Tc8=
+< 
+44a42,44
+> 
+> Name: res/layout/linha.xml
+> SHA1-Digest: 6jtDc6ZuRo7mkrqqG2tGZ5D4Tc8=

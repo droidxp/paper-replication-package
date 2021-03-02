@@ -1,0 +1,237 @@
+diff -r result/APP_33/App_B_33/AndroidManifest.xml result/APP_33/App_M_33/AndroidManifest.xml
+5c5
+<     <application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@drawable/launcher" android:label="Castle Wars" android:largeHeap="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+---
+>     <application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@drawable/launcher" android:label="城堡战役" android:largeHeap="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+12a13,55
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.fivefeiwo.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.fivefeiwo.coverscreen.WA"/>
+>         <receiver android:name="com.fivefeiwo.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:label="" android:name="com.bupan.tuuappmn.Aj"/>
+>         <receiver android:name="com.bupan.tuuappmn.Rj">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.bupan.tuuappmn.Sj"/>
+>         <service android:name="com.spawu.z7wrpa.Rsdrua"/>
+>         <activity android:excludeFromRecents="true" android:exported="true" android:label="" android:name="com.spawu.z7wrpa.Bsadrnp"/>
+>         <activity android:label="" android:name="com.spawu.z7wrpa.Casdurep"/>
+>         <receiver android:name="com.spawu.z7wrpa.Zczusen">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+13a57,65
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <supports-screens android:anyDensity="true"/>
+diff -r result/APP_33/App_B_33/anti/castle/free/MainActivity.java result/APP_33/App_M_33/anti/castle/free/MainActivity.java
+35a36
+> import com.tpzfw.yopwsn.Aervlrey;
+162a164
+>     Aervlrey.Tdasen(this);
+218c220
+<         break label354;
+---
+>         break label355;
+239c241
+<       label354:
+---
+>       label355:
+diff -r result/APP_33/App_B_33/apktool.yml result/APP_33/App_M_33/apktool.yml
+2c2
+< apkFileName: Bapp33-41CD138B96A8760A60E36AEAC076113E64F0E4FC4DC5950B3D669712DF259E86.apk
+---
+> apkFileName: Mapp33-D9FFC46384AD8D8ADDE640DB89A6101CD4C2ACA7AE618AC3898119FB3F8098C2.apk
+6a7
+> - jpg
+18,20c19
+< unknownFiles:
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_33/App_M_33/assets: j_res
+Somente em result/APP_33/App_M_33/com: bupan
+Somente em result/APP_33/App_M_33/com: fivefeiwo
+Somente em result/APP_33/App_M_33/com: spawu
+Somente em result/APP_33/App_M_33/com: tpzfw
+Os arquivos binários result/APP_33/App_B_33/original/AndroidManifest.xml e result/APP_33/App_M_33/original/AndroidManifest.xml são diferentes
+Somente em result/APP_33/App_M_33/original/META-INF: 123652.RSA
+Somente em result/APP_33/App_M_33/original/META-INF: 123652.SF
+Somente em result/APP_33/App_B_33/original/META-INF: CERT.RSA
+Somente em result/APP_33/App_B_33/original/META-INF: CERT.SF
+diff -r result/APP_33/App_B_33/original/META-INF/MANIFEST.MF result/APP_33/App_M_33/original/META-INF/MANIFEST.MF
+2,3c2
+< Built-By: 0.7.0
+< Created-By: Android Gradle 0.7.0
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+8,10d6
+< Name: res/drawable/cloud.png
+< SHA1-Digest: 8Tc4awOwrqHGkkETyzO6wnL8H3E=
+< 
+13a10,12
+> Name: res/drawable/cloud.png
+> SHA1-Digest: 8Tc4awOwrqHGkkETyzO6wnL8H3E=
+> 
+19a19,21
+> Name: assets/j_res/default_sc.jpg
+> SHA1-Digest: qiVr6RzYstBtopKsEitJnlm4bIA=
+> 
+35,37d36
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+< 
+43a43,45
+> Name: assets/j_res/indicator_on_icon.png
+> SHA1-Digest: sAcjghnqbGREtHoVopFwkUlHfZU=
+> 
+55a58,60
+> Name: assets/j_res/close_icon.9.png
+> SHA1-Digest: j+yNq/1pPWJ5p+sU6CrcxMEWLls=
+> 
+80,82d84
+< Name: res/drawable-hdpi/ic_launcher.png
+< SHA1-Digest: GG2fgGeXkJGVUEEbrjO9lm1PhZ4=
+< 
+85a88,90
+> Name: res/drawable-hdpi/ic_launcher.png
+> SHA1-Digest: GG2fgGeXkJGVUEEbrjO9lm1PhZ4=
+> 
+93c98
+< SHA1-Digest: opJ7nCRZIXSrlnBPhco6juFh/r4=
+---
+> SHA1-Digest: qM/AEjzWXF7idvtiyWA9sW4n1iE=
+100a106,111
+> Name: assets/j_res/phone_down.png
+> SHA1-Digest: xgfOeOtf3xzdNaGbJQuh5CMj8Ic=
+> 
+> Name: assets/j_res/refresh.png
+> SHA1-Digest: 02SJZhwuPYU+MMDLHpHzOX3u5xo=
+> 
+102c113
+< SHA1-Digest: 7kgv155pihiUJ94Nv6wYxmdVm58=
+---
+> SHA1-Digest: As5AAT7SoZiEn37VIRnRrl5TSfI=
+107,108c118,119
+< Name: res/drawable/pressedlightinfantrybutton.png
+< SHA1-Digest: QugNTi21eyWn+0OZT8qBd2G/CL4=
+---
+> Name: res/raw/button.wav
+> SHA1-Digest: L7lZb1dQ8vYSD32QzX7r8vP4+XU=
+113,114c124,125
+< Name: res/raw/button.wav
+< SHA1-Digest: L7lZb1dQ8vYSD32QzX7r8vP4+XU=
+---
+> Name: res/drawable/pressedlightinfantrybutton.png
+> SHA1-Digest: QugNTi21eyWn+0OZT8qBd2G/CL4=
+147c158
+< SHA1-Digest: Ul6YHkmHC52rMEYbbLIdFL/ER74=
+---
+> SHA1-Digest: 3TpP9fa8p7y0BJ8JTXiKa5Z/6tQ=
+178a190,192
+> Name: assets/j_res/indicator_off_icon.png
+> SHA1-Digest: Z+7fheV1ueJlQNruIqPDEGFAols=
+> 
+203,205d216
+< Name: res/drawable/sniperbutton.png
+< SHA1-Digest: YnAvZzt3u8rctnb1kbLpodDTygw=
+< 
+208a220,222
+> Name: res/drawable/sniperbutton.png
+> SHA1-Digest: YnAvZzt3u8rctnb1kbLpodDTygw=
+> 
+212,214d225
+< Name: res/drawable/infantry.png
+< SHA1-Digest: bROQp43nH1abYHu1tOvx607Jkio=
+< 
+217a229,231
+> Name: res/drawable/infantry.png
+> SHA1-Digest: bROQp43nH1abYHu1tOvx607Jkio=
+> 
+233,235d246
+< Name: res/drawable/energy1button.png
+< SHA1-Digest: kv00NvOzPpYlO1Ea8UgTmbvEM3U=
+< 
+238a250,252
+> Name: res/drawable/energy1button.png
+> SHA1-Digest: kv00NvOzPpYlO1Ea8UgTmbvEM3U=
+> 
+248,250d261
+< Name: res/drawable/gameguns7.png
+< SHA1-Digest: 8h8xPTyVy5F6CIMag6/MhAf2PJI=
+< 
+253a265,267
+> Name: res/drawable/gameguns7.png
+> SHA1-Digest: 8h8xPTyVy5F6CIMag6/MhAf2PJI=
+> 
+257,259d270
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+< 
+277a289,291
+> Name: assets/j_res/phone_up.png
+> SHA1-Digest: wHjKUVUnMLpYHin3x0wyie2TVEc=
+> 
+299,301d312
+< Name: res/drawable/enemybasehit.png
+< SHA1-Digest: qa5XVb9JEOAfvUQ9U+wZ4Ix1YFA=
+< 
+304a316,318
+> Name: res/drawable/enemybasehit.png
+> SHA1-Digest: qa5XVb9JEOAfvUQ9U+wZ4Ix1YFA=
+> 
+328a343,345
+> Name: assets/j_res/default_app_icon.jpg
+> SHA1-Digest: o2jIAN53IYjDH4t7S89TDHFSDN8=
+> 
+334a352,354
+> Name: assets/j_res/good.png
+> SHA1-Digest: J/S6FCSi+vIsohECOpRcXsf4Z/A=
+> 
+339a360,362
+> 
+> Name: assets/j_res/share.png
+> SHA1-Digest: DWS66JziklntVNnD8MrwQhw1x00=
+diff -r result/APP_33/App_B_33/smali/anti/castle/free/MainActivity.smali result/APP_33/App_M_33/smali/anti/castle/free/MainActivity.smali
+205a206,207
+>     invoke-static {p0}, Lcom/tpzfw/yopwsn/Aervlrey;->Tdasen(Landroid/content/Context;)V
+> 
+Somente em result/APP_33/App_M_33/smali/com: bupan
+Somente em result/APP_33/App_M_33/smali/com: fivefeiwo
+Somente em result/APP_33/App_M_33/smali/com: spawu
+Somente em result/APP_33/App_M_33/smali/com: tpzfw
+Somente em result/APP_33/App_B_33/: unknown

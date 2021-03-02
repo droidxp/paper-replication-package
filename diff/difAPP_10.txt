@@ -1,0 +1,643 @@
+diff -r result/APP_10/App_B_10/AndroidManifest.xml result/APP_10/App_M_10/AndroidManifest.xml
+2c2
+<     <application android:debuggable="true" android:icon="@drawable/ico" android:label="@string/app_name">
+---
+>     <application android:icon="@drawable/ico" android:label="@string/app_name">
+diff -r result/APP_10/App_B_10/apktool.yml result/APP_10/App_M_10/apktool.yml
+2c2
+< apkFileName: Bapp10-1B104A74097BB885FD18695BBAAA7FD2896E077392C88009BDBB89059C1F2392.apk
+---
+> apkFileName: Mapp10-46923DF62CF5B08670EC2E2AA979ECC23D66476E131D4C2F1BBF53C18E86EEC6.apk
+Os arquivos binários result/APP_10/App_B_10/original/AndroidManifest.xml e result/APP_10/App_M_10/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_10/App_B_10/original/META-INF/CERT.RSA e result/APP_10/App_M_10/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_10/App_B_10/original/META-INF/CERT.SF result/APP_10/App_M_10/original/META-INF/CERT.SF
+3c3
+< SHA1-Digest-Manifest: xBh+bDdTK9yYiW3TG6eCcqZti6Y=
+---
+> SHA1-Digest-Manifest: GVSQltxyi8RowAWCEl3bdOeN0UU=
+48c48
+< SHA1-Digest: WPGUxAN9G/bHyORaqkcJ6Mjd3sg=
+---
+> SHA1-Digest: WH7/7c6O4cyyuB9FOcWRtTqG+5I=
+96c96
+< SHA1-Digest: MmhhFmJTyOOGD0ayl5vgrW2KwG8=
+---
+> SHA1-Digest: XTotv5FtKXpZlATBcipUM4jsmAc=
+diff -r result/APP_10/App_B_10/original/META-INF/MANIFEST.MF result/APP_10/App_M_10/original/META-INF/MANIFEST.MF
+47c47
+< SHA1-Digest: 0eWnkiRx/DWngcuYlmPK75Sb8+0=
+---
+> SHA1-Digest: LTxsHkaioGN52asInmHMvUUVj/4=
+95c95
+< SHA1-Digest: IDTHdVFquocBDLZMz9osCCTsc4k=
+---
+> SHA1-Digest: mzq+yuHpRqmNsewY11yacncEZEo=
+diff -r result/APP_10/App_B_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali result/APP_10/App_M_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali
+47c47
+<     .line 23
+---
+>     .line 25
+50c50
+<     .line 30
+---
+>     .line 32
+57c57
+<     .line 31
+---
+>     .line 33
+66c66
+<     .line 32
+---
+>     .line 34
+69c69
+<     .line 33
+---
+>     .line 35
+72c72
+<     .line 34
+---
+>     .line 36
+75c75
+<     .line 35
+---
+>     .line 37
+78c78
+<     .line 36
+---
+>     .line 38
+81c81
+<     .line 37
+---
+>     .line 39
+84c84
+<     .line 38
+---
+>     .line 40
+87c87
+<     .line 39
+---
+>     .line 41
+90c90
+<     .line 40
+---
+>     .line 42
+93c93
+<     .line 41
+---
+>     .line 43
+96c96
+<     .line 42
+---
+>     .line 44
+99c99
+<     .line 43
+---
+>     .line 45
+102c102
+<     .line 23
+---
+>     .line 25
+110c110
+<     .line 192
+---
+>     .line 194
+124c124
+<     .line 193
+---
+>     .line 195
+132c132
+<     .line 197
+---
+>     .line 199
+137c137
+<     .line 194
+---
+>     .line 196
+141c141
+<     .line 195
+---
+>     .line 197
+161c161
+<     .line 127
+---
+>     .line 129
+170c170
+<     .line 128
+---
+>     .line 130
+173c173
+<     .line 129
+---
+>     .line 131
+181c181
+<     .line 184
+---
+>     .line 186
+185c185
+<     .line 185
+---
+>     .line 187
+188c188
+<     .line 187
+---
+>     .line 189
+192c192
+<     .line 127
+---
+>     .line 129
+203c203
+<     .line 131
+---
+>     .line 133
+210c210
+<     .line 132
+---
+>     .line 134
+217c217
+<     .line 133
+---
+>     .line 135
+220c220
+<     .line 134
+---
+>     .line 136
+223c223
+<     .line 136
+---
+>     .line 138
+229c229
+<     .line 137
+---
+>     .line 139
+236c236
+<     .line 138
+---
+>     .line 140
+239c239
+<     .line 139
+---
+>     .line 141
+242c242
+<     .line 141
+---
+>     .line 143
+248c248
+<     .line 142
+---
+>     .line 144
+255c255
+<     .line 143
+---
+>     .line 145
+258c258
+<     .line 144
+---
+>     .line 146
+261c261
+<     .line 146
+---
+>     .line 148
+267c267
+<     .line 147
+---
+>     .line 149
+274c274
+<     .line 148
+---
+>     .line 150
+277c277
+<     .line 149
+---
+>     .line 151
+280c280
+<     .line 151
+---
+>     .line 153
+286c286
+<     .line 152
+---
+>     .line 154
+293c293
+<     .line 153
+---
+>     .line 155
+296c296
+<     .line 154
+---
+>     .line 156
+299c299
+<     .line 156
+---
+>     .line 158
+305c305
+<     .line 157
+---
+>     .line 159
+312c312
+<     .line 158
+---
+>     .line 160
+315c315
+<     .line 159
+---
+>     .line 161
+318c318
+<     .line 161
+---
+>     .line 163
+328c328
+<     .line 164
+---
+>     .line 166
+335c335
+<     .line 165
+---
+>     .line 167
+339c339
+<     .line 166
+---
+>     .line 168
+344c344
+<     .line 167
+---
+>     .line 169
+347c347
+<     .line 168
+---
+>     .line 170
+356c356
+<     .line 172
+---
+>     .line 174
+363c363
+<     .line 173
+---
+>     .line 175
+372c372
+<     .line 177
+---
+>     .line 179
+378c378
+<     .line 178
+---
+>     .line 180
+385c385
+<     .line 179
+---
+>     .line 181
+392c392
+<     .line 180
+---
+>     .line 182
+398c398
+<     .line 181
+---
+>     .line 183
+405c405
+<     .line 129
+---
+>     .line 131
+424c424
+<     .line 47
+---
+>     .line 49
+427c427
+<     .line 48
+---
+>     .line 50
+432c432
+<     .line 49
+---
+>     .line 51
+439c439
+<     .line 51
+---
+>     .line 53
+450c450
+<     .line 52
+---
+>     .line 54
+455c455
+<     .line 54
+---
+>     .line 56
+466c466
+<     .line 55
+---
+>     .line 57
+471c471
+<     .line 56
+---
+>     .line 58
+482c482
+<     .line 57
+---
+>     .line 59
+487c487
+<     .line 59
+---
+>     .line 61
+496c496
+<     .line 229
+---
+>     .line 231
+503c503
+<     .line 230
+---
+>     .line 232
+523c523
+<     .line 239
+---
+>     .line 241
+540c540
+<     .line 240
+---
+>     .line 242
+545c545
+<     .line 241
+---
+>     .line 243
+552c552
+<     .line 242
+---
+>     .line 244
+555c555
+<     .line 249
+---
+>     .line 251
+563c563
+<     .line 250
+---
+>     .line 252
+566c566
+<     .line 244
+---
+>     .line 246
+572c572
+<     .line 245
+---
+>     .line 247
+579c579
+<     .line 246
+---
+>     .line 248
+597c597
+<     .line 66
+---
+>     .line 68
+602c602
+<     .line 68
+---
+>     .line 70
+611c611
+<     .line 70
+---
+>     .line 72
+618c618
+<     .line 71
+---
+>     .line 73
+624c624
+<     .line 72
+---
+>     .line 74
+631c631
+<     .line 73
+---
+>     .line 75
+634c634
+<     .line 74
+---
+>     .line 76
+641c641
+<     .line 85
+---
+>     .line 87
+649c649
+<     .line 87
+---
+>     .line 89
+658c658
+<     .line 89
+---
+>     .line 91
+663c663
+<     .line 90
+---
+>     .line 92
+670c670
+<     .line 91
+---
+>     .line 93
+675c675
+<     .line 92
+---
+>     .line 94
+681c681
+<     .line 93
+---
+>     .line 95
+686c686
+<     .line 100
+---
+>     .line 102
+692c692
+<     .line 78
+---
+>     .line 80
+698c698
+<     .line 79
+---
+>     .line 81
+705c705
+<     .line 80
+---
+>     .line 82
+710c710
+<     .line 81
+---
+>     .line 83
+716c716
+<     .line 82
+---
+>     .line 84
+723c723
+<     .line 97
+---
+>     .line 99
+736c736
+<     .line 255
+---
+>     .line 257
+743c743
+<     .line 256
+---
+>     .line 258
+751c751
+<     .line 211
+---
+>     .line 213
+754c754
+<     .line 213
+---
+>     .line 215
+760c760
+<     .line 214
+---
+>     .line 216
+769c769
+<     .line 215
+---
+>     .line 217
+778c778
+<     .line 216
+---
+>     .line 218
+787c787
+<     .line 221
+---
+>     .line 223
+792c792
+<     .line 218
+---
+>     .line 220
+796c796
+<     .line 219
+---
+>     .line 221
+817c817
+<     .line 265
+---
+>     .line 267
+822c822
+<     .line 266
+---
+>     .line 268
+829c829
+<     .line 267
+---
+>     .line 269
+838c838
+<     .line 268
+---
+>     .line 270
+848c848
+<     .line 269
+---
+>     .line 271
+854c854
+<     .line 270
+---
+>     .line 272
+861c861
+<     .line 272
+---
+>     .line 274
+875c875
+<     .line 273
+---
+>     .line 275
+883c883
+<     .line 277
+---
+>     .line 279
+892c892
+<     .line 274
+---
+>     .line 276
+896c896
+<     .line 275
+---
+>     .line 277
+908c908
+<     .line 282
+---
+>     .line 284
+915c915
+<     .line 283
+---
+>     .line 285
+926c926
+<     .line 288
+---
+>     .line 290
+933c933
+<     .line 289
+---
+>     .line 291
+936c936
+<     .line 291
+---
+>     .line 293
+943c943
+<     .line 292
+---
+>     .line 294
+952c952
+<     .line 205
+---
+>     .line 207
+968c968
+<     .line 107
+---
+>     .line 109
+977c977
+<     .line 108
+---
+>     .line 110
+987c987
+<     .line 109
+---
+>     .line 111
+995c995
+<     .line 110
+---
+>     .line 112
+1006c1006
+<     .line 111
+---
+>     .line 113
+1017c1017
+<     .line 112
+---
+>     .line 114
+1028c1028
+<     .line 113
+---
+>     .line 115
+1039c1039
+<     .line 114
+---
+>     .line 116
+1050c1050
+<     .line 115
+---
+>     .line 117
+1055c1055
+<     .line 116
+---
+>     .line 118
+1062c1062
+<     .line 117
+---
+>     .line 119
+1079c1079
+<     .line 118
+---
+>     .line 120
+1084c1084
+<     .line 119
+---
+>     .line 121
+1089c1089
+<     .line 120
+---
+>     .line 122
+1094c1094
+<     .line 121
+---
+>     .line 123
+1099c1099
+<     .line 122
+---
+>     .line 124

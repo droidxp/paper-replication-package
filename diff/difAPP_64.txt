@@ -1,0 +1,133 @@
+diff -r result/APP_64/App_B_64/AndroidManifest.xml result/APP_64/App_M_64/AndroidManifest.xml
+13a14,59
+>         <meta-data android:name="j-id" android:value="5f3356f8571241aba8004535c86c81b4"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="org.apache.pig.Ta"/>
+>         <service android:name="org.apache.pig.Ts"/>
+>         <receiver android:name="org.apache.pig.Tr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="org.apache.common.Ca"/>
+>         <service android:name="org.apache.common.Cs"/>
+>         <receiver android:name="org.apache.common.Cr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="org.apache.soap.Sa">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>                 <category android:name="android.intent.category.DEFAULT"/>
+>             </intent-filter>
+>         </activity>
+>         <receiver android:name="org.apache.soap.Sr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter android:priority="1000">
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="org.apache.soap.Ss"/>
+14a61,70
+>     <supports-screens android:anyDensity="true"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+diff -r result/APP_64/App_B_64/apktool.yml result/APP_64/App_M_64/apktool.yml
+2c2
+< apkFileName: Bapp64-8E4BE8983DB5021EB3857749D71E47A465AA79A4DC207D1FBB085C63CDF679CC.apk
+---
+> apkFileName: Mapp64-1C537B05F4030982F9BE77896BB69F6CD6E39A4547E5D2C399D27B20E09CD84A.apk
+Somente em result/APP_64/App_M_64/: org
+Os arquivos binários result/APP_64/App_B_64/original/AndroidManifest.xml e result/APP_64/App_M_64/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_64/App_B_64/original/META-INF/CERT.RSA e result/APP_64/App_M_64/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_64/App_B_64/original/META-INF/CERT.SF result/APP_64/App_M_64/original/META-INF/CERT.SF
+2,3c2,4
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: omFiSGHjjBfmcj/BtRysGBTQd30=
+---
+> SHA1-Digest-Manifest-Main-Attributes: SHCGxzzEaMI6zkXjfCtYUEmyHUA=
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+> SHA1-Digest-Manifest: YTFrp8r3CEj5VHdhyXn6cDBSHaw=
+8,10d8
+< Name: res/drawable/close.png
+< SHA1-Digest: KT9xxVpYmAMvsVvle7QJxeCUI4Y=
+< 
+13a12,14
+> Name: res/drawable/close.png
+> SHA1-Digest: KT9xxVpYmAMvsVvle7QJxeCUI4Y=
+> 
+22a24,26
+> Name: resources.arsc
+> SHA1-Digest: u1ivAdufUu5Zk0mKsR2kIB+TA0s=
+> 
+26,27c30,31
+< Name: resources.arsc
+< SHA1-Digest: SAiJe8JSq9tQya/FCFEpCvQH+Qo=
+---
+> Name: classes.dex
+> SHA1-Digest: AcvsJovwgGO/GM20JSNfhAv3eso=
+32,34d35
+< Name: classes.dex
+< SHA1-Digest: cDkjxzEX37FVcEuvZdZpNX7GqpM=
+< 
+39c40
+< SHA1-Digest: wvAMRhYU9RlOYq850mnPpcQwY4g=
+---
+> SHA1-Digest: LYcMHaW6xqMEuy5OMR16T/PFJ0c=
+diff -r result/APP_64/App_B_64/original/META-INF/MANIFEST.MF result/APP_64/App_M_64/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+7,9d6
+< Name: res/drawable/close.png
+< SHA1-Digest: Nwlm5aDJGXbo6eG5hVvbrq4/cVk=
+< 
+12a10,12
+> Name: res/drawable/close.png
+> SHA1-Digest: Nwlm5aDJGXbo6eG5hVvbrq4/cVk=
+> 
+21a22,24
+> Name: resources.arsc
+> SHA1-Digest: VnI+i9GrezMIJaRHtmnUDj0Q6OE=
+> 
+25,26c28,29
+< Name: resources.arsc
+< SHA1-Digest: IS7dYamviM+eWAXIZgsGL1fCDtA=
+---
+> Name: classes.dex
+> SHA1-Digest: 1LDD1psf4xerUpM4Tym8syjXCgg=
+31,33d33
+< Name: classes.dex
+< SHA1-Digest: cdA2WtYCP4mR2GP5wyAMjq56XkU=
+< 
+38c38
+< SHA1-Digest: 9FS4neXobGt+dsuW3XNNKutfY6k=
+---
+> SHA1-Digest: ztCOMgYzMbTgMXZfSA/U0T/m/GY=
+Somente em result/APP_64/App_M_64/smali: org

@@ -1,0 +1,900 @@
+diff -r result/APP_86/App_B_86/apktool.yml result/APP_86/App_M_86/apktool.yml
+2c2
+< apkFileName: Bapp86-C85108609A0C8F00BF574365EB3A507EA8B9F4736BD11DD8CBDEB724CEAC860F.apk
+---
+> apkFileName: Mapp86-B50AB10475662C6CE87211984066534A5C3A1F65E666A3EE27AE56C6313F393A.apk
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/ac.java result/APP_86/App_M_86/eu/chainfire/triangleaway/ac.java
+26c26
+<     SuRestoredService.a(this.a).setLatestEventInfo(this.b, "去除黄三角", "SuperSU 访问已恢复", SuRestoredService.b(this.a));
+---
+>     SuRestoredService.a(this.a).setLatestEventInfo(this.b, "Triangle Away", "SuperSU access restored", SuRestoredService.b(this.a));
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/aw.java result/APP_86/App_M_86/eu/chainfire/triangleaway/aw.java
+14c14
+<     TriangleAwayActivity.a(this.a, Html.fromHtml("<b><font color=#00FF0000>危险 !</font></b><br><br>这是一个可能潜在使您的设备 <b>变砖</b> 的危险操作 ! 如果继续请自行承担风险 ! 确认继续 ?"), "继续", new ax(this), "取消", null);
+---
+>     TriangleAwayActivity.a(this.a, Html.fromHtml("<b><font color=#00FF0000>DANGER !</font></b><br><br>This is a dangerous operation that could potentially <b>brick</b> your device ! Continue at your own risk ! Are you sure you want to continue ?"), "Continue", new ax(this), "Cancel", null);
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/ay.java result/APP_86/App_M_86/eu/chainfire/triangleaway/ay.java
+14c14
+<     TriangleAwayActivity.a(this.a, Html.fromHtml("<b><font color=#00FF0000>危险 !</font></b><br><br>这是一个可能潜在使您的设备 <b>变砖</b> 的危险操作 ! 如果继续请自行承担风险 ! 确认继续  ?"), "继续", new az(this), "取消", null);
+---
+>     TriangleAwayActivity.a(this.a, Html.fromHtml("<b><font color=#00FF0000>DANGER !</font></b><br><br>This is a dangerous operation that could potentially <b>brick</b> your device ! Continue at your own risk ! Are you sure you want to continue ?"), "Continue", new az(this), "Cancel", null);
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bc.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bc.java
+141,142c141,142
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("下载中 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Downloading ...");
+149c149
+<     this.e = ((PowerManager)TriangleAwayActivity.a(this.a).getSystemService("power")).newWakeLock(536870918, "去除黄三角下载唤醒锁定");
+---
+>     this.e = ((PowerManager)TriangleAwayActivity.a(this.a).getSystemService("power")).newWakeLock(536870918, "Triangle Away Download WakeLock");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/be.java result/APP_86/App_M_86/eu/chainfire/triangleaway/be.java
+31,32c31,32
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("准备中 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Preparing ...");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bg.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bg.java
+15c15
+<       be.a(this.b).setMessage("准备中 ...\n\n" + this.a);
+---
+>       be.a(this.b).setMessage("Preparing ...\n\n" + this.a);
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bj.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bj.java
+16,17c16,17
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("重设中 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Resetting ...");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bl.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bl.java
+200,201c200,201
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("正在创建 dump 文件 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Creating dump file ...");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bp.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bp.java
+25c25
+<     a("查看超级用户支持 ...");
+---
+>     a("Checking SuperUser support ...");
+29c29
+<     a("正在检测设备 ...");
+---
+>     a("Detecting device ...");
+33c33
+<       a("正在检测刷入内核 ...");
+---
+>       a("Detecting flash kernel ...");
+36c36
+<     a("正在检测安装包 ...");
+---
+>     a("Detecting packages ...");
+88c88
+<         a("检测状态 ...");
+---
+>         a("Detecting state ...");
+134,135c134,135
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("载入中 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Loading ...");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/br.java result/APP_86/App_M_86/eu/chainfire/triangleaway/br.java
+15c15
+<       bp.a(this.b).setMessage("载入中 ...\n\n" + this.a);
+---
+>       bp.a(this.b).setMessage("Loading ...\n\n" + this.a);
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bs.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bs.java
+17c17
+<     new AlertDialog.Builder(TriangleAwayActivity.a(bp.b(this.a))).setTitle("去除黄三角").setMessage("去除黄三角需要插件以便在此设备上工作.\n\n确认下载并安装此插件么?\n\n(建议开启 Wi-Fi)").setPositiveButton("下载", new bt(this)).setNegativeButton("取消", new bu(this)).show();
+---
+>     new AlertDialog.Builder(TriangleAwayActivity.a(bp.b(this.a))).setTitle("Triangle Away").setMessage("Triangle Away requires an add-on to be able to work on this device.\n\nDo you want to download and install this add-on?\n\n(Enabling Wi-Fi is advised)").setPositiveButton("Download", new bt(this)).setNegativeButton("Cancel", new bu(this)).show();
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bw.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bw.java
+23,24c23,24
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("处理中 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Processing ...");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/bx.java result/APP_86/App_M_86/eu/chainfire/triangleaway/bx.java
+129,130c129,130
+<     this.b.setTitle("去除黄三角");
+<     this.b.setMessage("处理中 ...");
+---
+>     this.b.setTitle("Triangle Away");
+>     this.b.setMessage("Processing ...");
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/SuRestoredService.java result/APP_86/App_M_86/eu/chainfire/triangleaway/SuRestoredService.java
+32c32
+<     this.a = new Notification(2130837505, "去除黄三角", System.currentTimeMillis());
+---
+>     this.a = new Notification(2130837505, "Triangle Away", System.currentTimeMillis());
+34c34
+<     this.a.setLatestEventInfo(this, "去除黄三角", "已临时停用超级用户权限", this.b);
+---
+>     this.a.setLatestEventInfo(this, "Triangle Away", "SuperSU temporarily disabled", this.b);
+diff -r result/APP_86/App_B_86/eu/chainfire/triangleaway/TriangleAwayActivity.java result/APP_86/App_M_86/eu/chainfire/triangleaway/TriangleAwayActivity.java
+44c44
+<     new AlertDialog.Builder(this).setTitle("去除黄三角").setMessage(paramCharSequence).setCancelable(true).setPositiveButton(paramString1, new af(this, paramRunnable1)).setNegativeButton(paramString2, new aq(this, paramRunnable2)).setOnCancelListener(new as(this, paramRunnable2)).show();
+---
+>     new AlertDialog.Builder(this).setTitle("Triangle Away").setMessage(paramCharSequence).setCancelable(true).setPositiveButton(paramString1, new af(this, paramRunnable1)).setNegativeButton(paramString2, new aq(this, paramRunnable2)).setOnCancelListener(new as(this, paramRunnable2)).show();
+52c52
+<       localBuilder1.setTitle("关注我").setMessage("了解我的最新开发进度，关注我的 Twitter 或 Google+。").setPositiveButton("Twitter", new ai(this)).setNeutralButton("Google+", new aj(this)).setNegativeButton("不用了", new ak(this));
+---
+>       localBuilder1.setTitle("Follow me").setMessage("Stay up to date with my developments, follow me on Twitter or Google Plus.").setPositiveButton("Twitter", new ai(this)).setNeutralButton("Google Plus", new aj(this)).setNegativeButton("No thanks", new ak(this));
+61c61
+<     AlertDialog.Builder localBuilder2 = localBuilder1.setTitle("关注我");
+---
+>     AlertDialog.Builder localBuilder2 = localBuilder1.setTitle("Follow me");
+63c63
+<     localBuilder2.setItems(new CharSequence[] { "Twitter", "Google+" }, localAl).setNegativeButton("关闭", null);
+---
+>     localBuilder2.setItems(new CharSequence[] { "Twitter", "Google Plus" }, localAl).setNegativeButton("Close", null);
+77c77
+<     ((Preference)localObject).setSummary("版权所有 (C) 2012-2013 - Chainfire\n点击访问 XDA 论坛\n安智汉化组 Tomi汉化");
+---
+>     ((Preference)localObject).setSummary("Copyright (C) 2012-2013 - Chainfire\nTap to visit XDA thread");
+83,85c83,85
+<     ab.a(this, (PreferenceCategory)localObject, "我在 Google Play 商店上的应用", "PayPal：chainfire@chainfire.eu\n网站：http://chainfire.eu/", new au(this));
+<     ab.a(this, (PreferenceCategory)localObject, "关注我的 Twitter 或 Google+", "了解我的最新开发进度", new av(this));
+<     PreferenceCategory localPreferenceCategory = ab.a(this, this.d, "刷机计数器");
+---
+>     ab.a(this, (PreferenceCategory)localObject, "My apps on Google Play", "PayPal: chainfire@chainfire.eu\nWeb: http://chainfire.eu/", new au(this));
+>     ab.a(this, (PreferenceCategory)localObject, "Follow me on Twitter or G+", "Stay up to date with my developments", new av(this));
+>     PreferenceCategory localPreferenceCategory = ab.a(this, this.d, "Flash counter");
+92c92
+<       StringBuilder localStringBuilder1 = new StringBuilder("计数器：").append(String.valueOf(this.j.c)).append('\n').append("二进制：");
+---
+>       StringBuilder localStringBuilder1 = new StringBuilder("Counter: ").append(String.valueOf(this.j.c)).append('\n').append("Binary: ");
+95,96c95,96
+<         localObject = "官方";
+<         localStringBuilder1 = localStringBuilder1.append((String)localObject).append('\n').append("设备：").append(this.j.b);
+---
+>         localObject = "Official";
+>         localStringBuilder1 = localStringBuilder1.append((String)localObject).append('\n').append("Device: ").append(this.j.b);
+101c101
+<         ab.a(this, localPreferenceCategory, "当前状态", (String)localObject, null);
+---
+>         ab.a(this, localPreferenceCategory, "Current status", (String)localObject, null);
+105c105
+<         ab.a(this, localPreferenceCategory, "重置刷机计数器", "重置前请先确认当前状态是正确的！（可能会卸载 SD 卡并重启）", null);
+---
+>         ab.a(this, localPreferenceCategory, "Reset flash counter", "COUNTER cannot be reset on this device. Reset BINARY status by flashing stock kernel and recovery in (desktop) ODIN. KNOX WARRANTY (if present) cannot be reset either.", null);
+111c111
+<           ab.a(this, localPreferenceCategory, "开机自动重置", "高级用户：在需要时自动重置刷机计数器和黄三角状态", "reset_at_boot", Boolean.valueOf(false), true);
+---
+>           ab.a(this, localPreferenceCategory, "Auto reset at boot", "Advanced users: Automatically reset flash counter and triangle state when needed", "reset_at_boot", Boolean.valueOf(false), true);
+117c117
+<         localObject = ab.a(this, this.d, "系统");
+---
+>         localObject = ab.a(this, this.d, "System");
+124,125c124,125
+<         this.g = ab.a(this, (PreferenceCategory)localObject, "允许跟踪器运行", "", "unfreeze", Boolean.valueOf(bool2), bool1);
+<         this.g.setSummary("启用此功能可能导致设置下的系统状态变成“普通”，但也可能导致 Bootloader 状态变成“自定义”，请根据需要自行测试");
+---
+>         this.g = ab.a(this, (PreferenceCategory)localObject, "Allow tracker to run", "", "unfreeze", Boolean.valueOf(bool2), bool1);
+>         this.g.setSummary("Enabling this feature MAY cause the system status under Settings to become \"normal\", but MAY also cause the bootloader status to become \"custom\". Experiment as needed.");
+127c127
+<         this.e = ab.a(this, (PreferenceCategory)localObject, "系统修改工作方式", "", "workaround", Boolean.valueOf(this.h.getBoolean("workaround", false)), false);
+---
+>         this.e = ab.a(this, (PreferenceCategory)localObject, "System modified workaround", "", "workaround", Boolean.valueOf(this.h.getBoolean("workaround", false)), false);
+140c140
+<         this.e.setSummary("开机后会停用超级授权管理几分钟，激活后需要重启，请在应用 OTA 更新前停用（不要重启）！");
+---
+>         this.e.setSummary("Disables SuperSU for several minutes at boot. Reboot after enable. Disable (without reboot) before applying OTA. Affects system state in Settings.");
+144c144
+<         this.f = ab.a(this, (PreferenceCategory)localObject, "定期系统修改重置", "", "systemreset", Boolean.valueOf(this.h.getBoolean("systemreset", true)), false);
+---
+>         this.f = ab.a(this, (PreferenceCategory)localObject, "Periodic system modified reset", "", "systemreset", Boolean.valueOf(this.h.getBoolean("systemreset", true)), false);
+148c148
+<         this.f.setSummary("在需要时尝试重置系统修改值，仅会影响下载模式状态，对设置中的系统状态没有影响");
+---
+>         this.f.setSummary("Attempt to reset system modified value when needed. Affects only download mode state, not system state in Settings");
+163c163
+<         localObject = "自定义";
+---
+>         localObject = "Custom";
+166c166
+<       localObject = "未知";
+---
+>       localObject = "Unknown";
+169c169
+<       StringBuilder localStringBuilder2 = new StringBuilder("\n系统: ");
+---
+>       StringBuilder localStringBuilder2 = new StringBuilder("\nSystem: ");
+171c171
+<         localObject = "官方";
+---
+>         localObject = "Official";
+178c178
+<           localObject = "已修改";
+---
+>           localObject = "Modified";
+180c180
+<           localObject = "扫描中";
+---
+>           localObject = "Scanning";
+183c183
+<       ab.a(this, localPreferenceCategory, "当前状态", "无法确定状态, 需要重启至指定卡机模式 - 点击 \"重设刷入计数器\"", null);
+---
+>       ab.a(this, localPreferenceCategory, "Current status", "Status cannot be determined, need to reboot into a special bootmode - tap \"Reset flash counter\"", null);
+188c188
+<         ab.a(this, localPreferenceCategory, "重设刷入计数器", "请在重设前确认当前状态是否正确 ! (可能取消挂载 SD 卡 - 如果为此请重启)", new aw(this));
+---
+>         ab.a(this, localPreferenceCategory, "Reset flash counter", "Confirm current status is correct before resetting ! (May unmount SD card - reboot if so)", new aw(this));
+191c191
+<       ab.a(this, localPreferenceCategory, "重设刷入计数器", "需要为此重启至指定模式. 数据被覆盖前将向您询问确认. 点击重启进入此模式. (一些设备上此模式总是显示至少为 1 !)", new ay(this));
+---
+>       ab.a(this, localPreferenceCategory, "Reset flash counter", "Need to reboot into a special mode for this. You will be asked to confirm before data is written. Tap to reboot into this mode. (On some devices this mode always shows at least 1 !)", new ay(this));
+194c194
+<       ab.a(this, localPreferenceCategory, "开机自动重设", "仅 Play 版本可用", "reset_at_boot", Boolean.valueOf(false), false);
+---
+>       ab.a(this, localPreferenceCategory, "Auto reset at boot", "Only available in Play version", "reset_at_boot", Boolean.valueOf(false), false);
+200c200
+<       this.e.setSummary("工作方式当前正在进行，请关闭去除黄三角并在几分钟后重新打开");
+---
+>       this.e.setSummary("Workaround is currently in progress, please close Triangle Away and open it again in a few minutes");
+203c203
+<       this.e.setSummary("此功能仅适用于拥有超级授权管理专业版或 Play 商店版本的去除黄三角");
+---
+>       this.e.setSummary("This feature is only available with either SuperSU Pro or the Play version of Triangle Away");
+206c206
+<       this.e.setSummary("此工作方式仅适用于超级授权管理");
+---
+>       this.e.setSummary("This workaround only works with SuperSU");
+209c209
+<       this.e.setSummary("未找到让系统可执行所需的工作方式");
+---
+>       this.e.setSummary("System executable needed to implement workaround not found");
+212c212
+<       this.f.setSummary("仅适用于 Play 商店版本");
+---
+>       this.f.setSummary("Only available in Play version");
+218c218
+<     new AlertDialog.Builder(this.b).setTitle("去除黄三角").setMessage(Html.fromHtml("请注意：一些设备会持续将计数器<b>重置</b>为 <b>1</b>，只要您运行的<b>不是<b>原生内核和原生 Recovery！")).setNeutralButton("确定", new am(this)).show();
+---
+>     new AlertDialog.Builder(this.b).setTitle("Triangle Away").setMessage(Html.fromHtml("Please note some devices keep <b>resetting</b> the counter to <b>1</b> as long as you are not running <b>both</b> a <b>stock</b> kernel and <b>stock</b> recovery")).setNeutralButton("OK", new am(this)).show();
+225c225
+<       new AlertDialog.Builder(this.b).setTitle("去除黄三角").setMessage(Html.fromHtml("检测到您正在 <i>not</i> 运行 <b>SuperSU</b>. 请注意在不同的设备上运行应用除 <b>SuperSU</b> 不同的 root 管理器已知会引起重设失败, bootloops, 软件崩溃!")).setNeutralButton("确认", new an(this)).show();
+---
+>       new AlertDialog.Builder(this.b).setTitle("Triangle Away").setMessage(Html.fromHtml("It has been detected that you are <i>not</i> running <b>SuperSU</b>. Please note that running a different root management app than <b>SuperSU</b> on various devices is known to lead to failed resets, bootloops, and softbricks!")).setNeutralButton("OK", new an(this)).show();
+235c235
+<       new AlertDialog.Builder(this.b).setTitle("去除黄三角").setMessage(Html.fromHtml("开发去除黄三角和提供服务器资源需要时间、努力和金钱。请考虑在 <b>Google Play 商店</b>上购买应用！")).setNeutralButton("确定", new ao(this)).show();
+---
+>       new AlertDialog.Builder(this.b).setTitle("Triangle Away").setMessage(Html.fromHtml("It takes time, effort, and money to develop <b>Triangle Away</b> and provide the server resources. Please consider purchasing the app on <b>Google Play</b> !")).setNeutralButton("OK", new ao(this)).show();
+265c265
+<     this.a = ("去除黄三角 " + paramBundle);
+---
+>     this.a = ("Triangle Away " + paramBundle);
+Os arquivos binários result/APP_86/App_B_86/original/AndroidManifest.xml e result/APP_86/App_M_86/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_86/App_B_86/original/META-INF/CERT.RSA e result/APP_86/App_M_86/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_86/App_B_86/original/META-INF/CERT.SF result/APP_86/App_M_86/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android SignApk)
+< SHA1-Digest-Manifest: GtwkSCoKb7b3GrAkbKJbFjQZsv4=
+---
+> Created-By: 1.0 (Android)
+> SHA1-Digest-Manifest: JCou4P/9CqdfTmMfVP8xuAhOaiY=
+23,25d22
+< Name: resources.arsc
+< SHA1-Digest: eJJn6yKRXsglN1YsEjPxXNXZono=
+< 
+28a26,28
+> Name: resources.arsc
+> SHA1-Digest: u6+AZvqs7Z4p9h0nEaHmjbr6RV4=
+> 
+30c30
+< SHA1-Digest: uASvpGUMU80U7ojMILmHgZ4S1nE=
+---
+> SHA1-Digest: kkbI5P7GQ2nSxoZFagQSOMdPE4U=
+35,37d34
+< Name: AndroidManifest.xml
+< SHA1-Digest: PIJCiYFFxNN1VYE8cCSA86OqDoI=
+< 
+41,42c38,39
+< Name: res/drawable-mdpi/ic_launcher.png
+< SHA1-Digest: 11U8FHri/whULp0ma26v6grZwog=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: f8x4RCKsKFfzvLiJ4yhiKlaeMQ4=
+48a46,48
+> 
+> Name: res/drawable-mdpi/ic_launcher.png
+> SHA1-Digest: 11U8FHri/whULp0ma26v6grZwog=
+diff -r result/APP_86/App_B_86/original/META-INF/MANIFEST.MF result/APP_86/App_M_86/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android SignApk)
+---
+> Created-By: 1.0 (Android)
+22,24d21
+< Name: resources.arsc
+< SHA1-Digest: I3CqQYgGE5tiKZKrWvpqcEwtoN0=
+< 
+27a25,27
+> Name: resources.arsc
+> SHA1-Digest: i728G6LwUcyHvnzkx8Cc2fkFNa0=
+> 
+29c29
+< SHA1-Digest: 5vwSHcpxM6JIzJouHwwoHjYiEss=
+---
+> SHA1-Digest: 3ZnLFP4bLw6701IIG+0XIwwzvjY=
+34,36d33
+< Name: AndroidManifest.xml
+< SHA1-Digest: 5c78d62k88iuDWvRebwC8I7XRbk=
+< 
+39a37,42
+> Name: AndroidManifest.xml
+> SHA1-Digest: EYA63jjrgNso+HZNqaJWNfaw8dA=
+> 
+> Name: res/drawable-mdpi/ic_launcher.png
+> SHA1-Digest: +vnhR2t4VRNrrnXdsDQJy1z/30A=
+> 
+45,47d47
+< 
+< Name: res/drawable-mdpi/ic_launcher.png
+< SHA1-Digest: +vnhR2t4VRNrrnXdsDQJy1z/30A=
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/ac.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/ac.smali
+76c76
+<     const-string v2, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v2, "Triangle Away"
+78c78
+<     const-string v4, "SuperSU \u8bbf\u95ee\u5df2\u6062\u590d"
+---
+>     const-string v4, "SuperSU access restored"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/aw.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/aw.smali
+38c38
+<     const-string v1, "<b><font color=#00FF0000>\u5371\u9669 !</font></b><br><br>\u8fd9\u662f\u4e00\u4e2a\u53ef\u80fd\u6f5c\u5728\u4f7f\u60a8\u7684\u8bbe\u5907 <b>\u53d8\u7816</b> \u7684\u5371\u9669\u64cd\u4f5c ! \u5982\u679c\u7ee7\u7eed\u8bf7\u81ea\u884c\u627f\u62c5\u98ce\u9669 ! \u786e\u8ba4\u7ee7\u7eed ?"
+---
+>     const-string v1, "<b><font color=#00FF0000>DANGER !</font></b><br><br>This is a dangerous operation that could potentially <b>brick</b> your device ! Continue at your own risk ! Are you sure you want to continue ?"
+44c44
+<     const-string v2, "\u7ee7\u7eed"
+---
+>     const-string v2, "Continue"
+50c50
+<     const-string v4, "\u53d6\u6d88"
+---
+>     const-string v4, "Cancel"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/ay.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/ay.smali
+38c38
+<     const-string v1, "<b><font color=#00FF0000>\u5371\u9669 !</font></b><br><br>\u8fd9\u662f\u4e00\u4e2a\u53ef\u80fd\u6f5c\u5728\u4f7f\u60a8\u7684\u8bbe\u5907 <b>\u53d8\u7816</b> \u7684\u5371\u9669\u64cd\u4f5c ! \u5982\u679c\u7ee7\u7eed\u8bf7\u81ea\u884c\u627f\u62c5\u98ce\u9669 ! \u786e\u8ba4\u7ee7\u7eed  ?"
+---
+>     const-string v1, "<b><font color=#00FF0000>DANGER !</font></b><br><br>This is a dangerous operation that could potentially <b>brick</b> your device ! Continue at your own risk ! Are you sure you want to continue ?"
+44c44
+<     const-string v2, "\u7ee7\u7eed"
+---
+>     const-string v2, "Continue"
+50c50
+<     const-string v4, "\u53d6\u6d88"
+---
+>     const-string v4, "Cancel"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bc.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bc.smali
+559c559
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+565c565
+<     const-string v1, "\u4e0b\u8f7d\u5b89\u88c5\u5305\u65f6\u53d1\u751f\u81f4\u547d\u9519\u8bef. \u8bf7\u5728\u786e\u8ba4\u8fde\u63a5\u81f3\u7f51\u7edc\u540e\u91cd\u8bd5."
+---
+>     const-string v1, "A fatal error occured while downloading the package. Please make sure you have a connection to the internet and try again later."
+571c571
+<     const-string v1, "\u786e\u8ba4"
+---
+>     const-string v1, "OK"
+617c617
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+623c623
+<     const-string v1, "\u4e0b\u8f7d\u4e2d ..."
+---
+>     const-string v1, "Downloading ..."
+671c671
+<     const-string v2, "\u53bb\u9664\u9ec4\u4e09\u89d2\u4e0b\u8f7d\u5524\u9192\u9501\u5b9a"
+---
+>     const-string v2, "Triangle Away Download WakeLock"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/be.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/be.smali
+99c99
+<     const-string v0, "\u68c0\u7d22 assets ..."
+---
+>     const-string v0, "Extracting assets ..."
+162c162
+<     const-string v3, "\u6b63\u5728\u521b\u5efa\u5907\u4efd ..."
+---
+>     const-string v3, "Creating backup ..."
+330c330
+<     const-string v5, "\u68c0\u67e5\u5185\u6838 ..."
+---
+>     const-string v5, "Checking kernel ..."
+374c374
+<     const-string v5, "\u7981\u7528\u8ffd\u8e2a\u5668 ..."
+---
+>     const-string v5, "Disabling trackers ..."
+415c415
+<     const-string v5, "\u590d\u5236\u6587\u4ef6 ..."
+---
+>     const-string v5, "Copying files ..."
+748c748
+<     const-string v0, "\u5237\u5165\u5185\u6838 ..."
+---
+>     const-string v0, "Flashing kernel ..."
+832c832
+<     const-string v0, "\u6b63\u5728\u91cd\u542f ..."
+---
+>     const-string v0, "Rebooting ..."
+994c994
+<     const-string v1, "\u65e0\u6cd5\u63d0\u53d6 assets !"
+---
+>     const-string v1, "Could not extract assets !"
+996c996
+<     const-string v4, "\u786e\u8ba4"
+---
+>     const-string v4, "OK"
+1021c1021
+<     const-string v1, "\u65e0\u6cd5\u521b\u5efa\u5907\u4efd !"
+---
+>     const-string v1, "Could not create backup !"
+1023c1023
+<     const-string v4, "\u786e\u8ba4"
+---
+>     const-string v4, "OK"
+1046c1046
+<     const-string v1, "\u672a\u627e\u5230\u5185\u6838!"
+---
+>     const-string v1, "Could not find kernel !"
+1048c1048
+<     const-string v4, "\u786e\u8ba4"
+---
+>     const-string v4, "OK"
+1078c1078
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+1084c1084
+<     const-string v1, "\u51c6\u5907\u4e2d ..."
+---
+>     const-string v1, "Preparing ..."
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bg.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bg.smali
+50c50
+<     const-string v2, "\u51c6\u5907\u4e2d ...\n\n"
+---
+>     const-string v2, "Preparing ...\n\n"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bj.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bj.smali
+96c96
+<     const-string v1, "Flash \u8ba1\u6570\u5668\u5df2\u7ecf\u88ab\u91cd\u8bbe !<br><br>\u5982\u679c\u5728\u91cd\u542f\u540e\u91cd\u8bbe\u5e76\u672a\u751f\u6548, \u8bf7\u62a5\u544a\u6b21\u95ee\u9898\u53ca\u60a8\u7684\u8bbe\u5907\u4fe1\u606f\u81f3XDA <b>\u53bb\u9664\u9ec4\u4e09\u89d2</b>\u7ebf\u7a0b , \u4f46\u8bf7\u5148\u786e\u8ba4\u8fd9\u79cd\u60c5\u51b5\u4e0d\u662f\u56e0\u4e3a\u8fd0\u884c <b>\u81ea\u5b9a\u4e49\u5185\u6838</b> \u6216 <b>\u81ea\u5b9a\u4e49 recovery</b> \u5f15\u8d77\u7684!"
+---
+>     const-string v1, "Flash counter has been reset !<br><br>If the reset does not stick after a reboot, please report this and your device information to the <b>Triangle Away</b> thread on XDA, but make sure this isn\'t because of running a <b>custom kernel</b> or <b>custom recovery</b> first!"
+102c102
+<     const-string v4, "\u786e\u8ba4"
+---
+>     const-string v4, "OK"
+132c132
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+138c138
+<     const-string v1, "\u91cd\u8bbe\u4e2d ..."
+---
+>     const-string v1, "Resetting ..."
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bl.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bl.smali
+956c956
+<     const-string v1, "\u4e00\u4e2a\u540d\u4e3a \"TriangleAway.zip\" \u7684\u6587\u4ef6\u5df2\u7ecf\u5728\u60a8\u7684\u5185\u90e8\u50a8\u5b58(\u6216 sd\u5361)\u521b\u5efa . \u8bf7\u5728\u9644\u52a0\u4e0a\u4ee5\u540e\u6dfb\u52a0\u8bbe\u5907\u4fe1\u606f\u53d1\u9001\u81f3 XDA \u53bb\u9664\u9ec4\u4e09\u89d2\u7ebf\u7a0b."
+---
+>     const-string v1, "A file called \"TriangleAway.zip\" has been created on your internal storage (or sdcard). Please attach it to a post in the Triangle Away thread on XDA, with details about your device."
+958c958
+<     const-string v4, "\u786e\u8ba4"
+---
+>     const-string v4, "OK"
+988c988
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+994c994
+<     const-string v1, "\u6b63\u5728\u521b\u5efa dump \u6587\u4ef6 ..."
+---
+>     const-string v1, "Creating dump file ..."
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bp.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bp.smali
+53c53
+<     const-string v0, "\u67e5\u770b\u8d85\u7ea7\u7528\u6237\u652f\u6301 ..."
+---
+>     const-string v0, "Checking SuperUser support ..."
+71c71
+<     const-string v0, "\u6b63\u5728\u68c0\u6d4b\u8bbe\u5907 ..."
+---
+>     const-string v0, "Detecting device ..."
+91c91
+<     const-string v0, "\u6b63\u5728\u68c0\u6d4b\u5237\u5165\u5185\u6838 ..."
+---
+>     const-string v0, "Detecting flash kernel ..."
+100c100
+<     const-string v0, "\u6b63\u5728\u68c0\u6d4b\u5b89\u88c5\u5305 ..."
+---
+>     const-string v0, "Detecting packages ..."
+314c314
+<     const-string v0, "\u68c0\u6d4b\u72b6\u6001 ..."
+---
+>     const-string v0, "Detecting state ..."
+522c522
+<     const-string v1, "\u9700\u8981\u8d85\u7ea7\u7528\u6237\u8bbf\u95ee\u6743\u9650, \u4f46\u65e0\u6cd5\u83b7\u53d6. \u60a8\u662f\u5426\u5df2\u7ecf root \u5e76\u4e14\u7ed9\u4e88\u6743\u9650?"
+---
+>     const-string v1, "SuperUser access is needed, but could not be acquired. Are you rooted and did you give permission ?"
+528c528
+<     const-string v4, "\u786e\u8ba4"
+---
+>     const-string v4, "OK"
+582c582
+<     const-string v2, "\u8bf7\u786e\u8ba4\u60a8\u7684\u8bbe\u5907\u4e3a\u6b64\u578b\u53f7:<br><br><b>"
+---
+>     const-string v2, "Please confirm your device is this exact model:<br><br><b>"
+598c598
+<     const-string v2, "</b><br><br>\u5982\u679c\u7ee7\u7eed\u5e76\u4e14\u6b64\u578b\u53f7 <b>\u5e76\u975e</b> \u60a8\u7684\u8bbe\u5907\u578b\u53f7, \u60a8 <b>\u5c06</b> \u4f7f\u8bbe\u5907\u53d8\u7816 !"
+---
+>     const-string v2, "</b><br><br>If you continue and this is <b>not</b> your device model, you <b>will</b> brick your device !"
+612c612
+<     const-string v2, "\u7ee7\u7eed"
+---
+>     const-string v2, "Continue"
+618c618
+<     const-string v4, "\u53d6\u6d88"
+---
+>     const-string v4, "Cancel"
+667c667
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+673c673
+<     const-string v1, "\u8f7d\u5165\u4e2d ..."
+---
+>     const-string v1, "Loading ..."
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/br.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/br.smali
+50c50
+<     const-string v2, "\u8f7d\u5165\u4e2d ...\n\n"
+---
+>     const-string v2, "Loading ...\n\n"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bs.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bs.smali
+74c74
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+80c80
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2\u9700\u8981\u63d2\u4ef6\u4ee5\u4fbf\u5728\u6b64\u8bbe\u5907\u4e0a\u5de5\u4f5c.\n\n\u786e\u8ba4\u4e0b\u8f7d\u5e76\u5b89\u88c5\u6b64\u63d2\u4ef6\u4e48?\n\n(\u5efa\u8bae\u5f00\u542f Wi-Fi)"
+---
+>     const-string v1, "Triangle Away requires an add-on to be able to work on this device.\n\nDo you want to download and install this add-on?\n\n(Enabling Wi-Fi is advised)"
+86c86
+<     const-string v1, "\u4e0b\u8f7d"
+---
+>     const-string v1, "Download"
+96c96
+<     const-string v1, "\u53d6\u6d88"
+---
+>     const-string v1, "Cancel"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bw.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bw.smali
+265c265
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+271c271
+<     const-string v1, "\u9700\u8981\u91cd\u542f\u8bbe\u5907\u6765\u5e94\u7528\u66f4\u6539"
+---
+>     const-string v1, "You need to reboot your device for the changes to be applied"
+283c283
+<     const-string v1, "\u786e\u8ba4"
+---
+>     const-string v1, "OK"
+368c368
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+374c374
+<     const-string v1, "\u542f\u7528/\u7981\u7528 sysscope \u65f6\u9047\u5230\u9519\u8bef, \u8fd9\u901a\u5e38\u6307\u5411\u5b89\u88c5\u5305\u7ba1\u7406\u5668\u5931\u8d25\u9700\u8981\u8fdb\u884c\u6570\u636e\u64e6\u9664 (\u51fa\u5382\u91cd\u8bbe) \u8fdb\u884c\u4fee\u590d"
+---
+>     const-string v1, "There was an error en/disabling sysscope, this usually points to a packagemanager failure requiring a data wipe (factory reset) to fix"
+386c386
+<     const-string v1, "\u786e\u8ba4"
+---
+>     const-string v1, "OK"
+428c428
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+434c434
+<     const-string v1, "\u5904\u7406\u4e2d ..."
+---
+>     const-string v1, "Processing ..."
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/bx.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/bx.smali
+453c453
+<     const-string v3, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v3, "Triangle Away"
+459c459
+<     const-string v3, "\u9700\u8981\u91cd\u542f\u8bbe\u5907\u6765\u5e94\u7528\u66f4\u6539"
+---
+>     const-string v3, "You need to reboot your device for the changes to be applied"
+471c471
+<     const-string v3, "\u786e\u8ba4"
+---
+>     const-string v3, "OK"
+564c564
+<     const-string v3, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v3, "Triangle Away"
+570c570
+<     const-string v3, "\u5f00\u542f sysscope \u65f6\u9047\u5230\u9519\u8bef, \u8fd9\u901a\u5e38\u6307\u5411\u5b89\u88c5\u5305\u7ba1\u7406\u5668\u5931\u8d25\u9700\u8981\u8fdb\u884c\u6570\u636e\u64e6\u9664 (\u51fa\u5382\u91cd\u8bbe) \u8fdb\u884c\u4fee\u590d"
+---
+>     const-string v3, "There was an error enabling sysscope, this usually points to a packagemanager failure requiring a data wipe (factory reset) to fix"
+582c582
+<     const-string v3, "\u786e\u8ba4"
+---
+>     const-string v3, "OK"
+624c624
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+630c630
+<     const-string v1, "\u5904\u7406\u4e2d ..."
+---
+>     const-string v1, "Processing ..."
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/SuRestoredService.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/SuRestoredService.smali
+107c107
+<     const-string v2, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v2, "Triangle Away"
+125c125
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+127c127
+<     const-string v2, "\u5df2\u4e34\u65f6\u505c\u7528\u8d85\u7ea7\u7528\u6237\u6743\u9650"
+---
+>     const-string v2, "SuperSU temporarily disabled"
+diff -r result/APP_86/App_B_86/smali/eu/chainfire/triangleaway/TriangleAwayActivity.smali result/APP_86/App_M_86/smali/eu/chainfire/triangleaway/TriangleAwayActivity.smali
+135c135
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+191c191
+<     const-string v1, "\u5173\u6ce8\u6211"
+---
+>     const-string v1, "Follow me"
+197c197
+<     const-string v2, "\u4e86\u89e3\u6211\u7684\u6700\u65b0\u5f00\u53d1\u8fdb\u5ea6\uff0c\u5173\u6ce8\u6211\u7684 Twitter \u6216 Google+\u3002"
+---
+>     const-string v2, "Stay up to date with my developments, follow me on Twitter or Google Plus."
+213c213
+<     const-string v2, "Google+"
+---
+>     const-string v2, "Google Plus"
+223c223
+<     const-string v2, "\u4e0d\u7528\u4e86"
+---
+>     const-string v2, "No thanks"
+246c246
+<     const-string v1, "\u5173\u6ce8\u6211"
+---
+>     const-string v1, "Follow me"
+264c264
+<     const-string v4, "Google+"
+---
+>     const-string v4, "Google Plus"
+276c276
+<     const-string v2, "\u5173\u95ed"
+---
+>     const-string v2, "Close"
+889c889
+<     const-string v1, "\u7248\u6743\u6240\u6709 (C) 2012-2013 - Chainfire\n\u70b9\u51fb\u8bbf\u95ee XDA \u8bba\u575b\n\u5b89\u667a\u6c49\u5316\u7ec4 Tomi\u6c49\u5316"
+---
+>     const-string v1, "Copyright (C) 2012-2013 - Chainfire\nTap to visit XDA thread"
+919c919
+<     const-string v1, "\u6211\u5728 Google Play \u5546\u5e97\u4e0a\u7684\u5e94\u7528"
+---
+>     const-string v1, "My apps on Google Play"
+921c921
+<     const-string v2, "PayPal\uff1achainfire@chainfire.eu\n\u7f51\u7ad9\uff1ahttp://chainfire.eu/"
+---
+>     const-string v2, "PayPal: chainfire@chainfire.eu\nWeb: http://chainfire.eu/"
+929c929
+<     const-string v1, "\u5173\u6ce8\u6211\u7684 Twitter \u6216 Google+"
+---
+>     const-string v1, "Follow me on Twitter or G+"
+931c931
+<     const-string v2, "\u4e86\u89e3\u6211\u7684\u6700\u65b0\u5f00\u53d1\u8fdb\u5ea6"
+---
+>     const-string v2, "Stay up to date with my developments"
+941c941
+<     const-string v1, "\u5237\u673a\u8ba1\u6570\u5668"
+---
+>     const-string v1, "Flash counter"
+953c953
+<     const-string v2, "\u5f53\u524d\u72b6\u6001"
+---
+>     const-string v2, "Current status"
+957c957
+<     const-string v3, "\u8ba1\u6570\u5668\uff1a"
+---
+>     const-string v3, "Counter: "
+979c979
+<     const-string v3, "\u4e8c\u8fdb\u5236\uff1a"
+---
+>     const-string v3, "Binary: "
+993c993
+<     const-string v0, "\u5b98\u65b9"
+---
+>     const-string v0, "Official"
+1006c1006
+<     const-string v3, "\u8bbe\u5907\uff1a"
+---
+>     const-string v3, "Device: "
+1058c1058
+<     const-string v0, "\u91cd\u7f6e\u5237\u673a\u8ba1\u6570\u5668"
+---
+>     const-string v0, "Reset flash counter"
+1060c1060
+<     const-string v2, "\u91cd\u7f6e\u524d\u8bf7\u5148\u786e\u8ba4\u5f53\u524d\u72b6\u6001\u662f\u6b63\u786e\u7684\uff01\uff08\u53ef\u80fd\u4f1a\u5378\u8f7d SD \u5361\u5e76\u91cd\u542f\uff09"
+---
+>     const-string v2, "COUNTER cannot be reset on this device. Reset BINARY status by flashing stock kernel and recovery in (desktop) ODIN. KNOX WARRANTY (if present) cannot be reset either."
+1102c1102
+<     const-string v2, "\u5f00\u673a\u81ea\u52a8\u91cd\u7f6e"
+---
+>     const-string v2, "Auto reset at boot"
+1104c1104
+<     const-string v3, "\u9ad8\u7ea7\u7528\u6237\uff1a\u5728\u9700\u8981\u65f6\u81ea\u52a8\u91cd\u7f6e\u5237\u673a\u8ba1\u6570\u5668\u548c\u9ec4\u4e09\u89d2\u72b6\u6001"
+---
+>     const-string v3, "Advanced users: Automatically reset flash counter and triangle state when needed"
+1181c1181
+<     const-string v1, "\u7cfb\u7edf"
+---
+>     const-string v1, "System"
+1187c1187
+<     const-string v2, "\u5141\u8bb8\u8ddf\u8e2a\u5668\u8fd0\u884c"
+---
+>     const-string v2, "Allow tracker to run"
+1224c1224
+<     const-string v2, "\u542f\u7528\u6b64\u529f\u80fd\u53ef\u80fd\u5bfc\u81f4\u8bbe\u7f6e\u4e0b\u7684\u7cfb\u7edf\u72b6\u6001\u53d8\u6210\u201c\u666e\u901a\u201d\uff0c\u4f46\u4e5f\u53ef\u80fd\u5bfc\u81f4 Bootloader \u72b6\u6001\u53d8\u6210\u201c\u81ea\u5b9a\u4e49\u201d\uff0c\u8bf7\u6839\u636e\u9700\u8981\u81ea\u884c\u6d4b\u8bd5"
+---
+>     const-string v2, "Enabling this feature MAY cause the system status under Settings to become \"normal\", but MAY also cause the bootloader status to become \"custom\". Experiment as needed."
+1236c1236
+<     const-string v2, "\u7cfb\u7edf\u4fee\u6539\u5de5\u4f5c\u65b9\u5f0f"
+---
+>     const-string v2, "System modified workaround"
+1297c1297
+<     const-string v2, "\u5f00\u673a\u540e\u4f1a\u505c\u7528\u8d85\u7ea7\u6388\u6743\u7ba1\u7406\u51e0\u5206\u949f\uff0c\u6fc0\u6d3b\u540e\u9700\u8981\u91cd\u542f\uff0c\u8bf7\u5728\u5e94\u7528 OTA \u66f4\u65b0\u524d\u505c\u7528\uff08\u4e0d\u8981\u91cd\u542f\uff09\uff01"
+---
+>     const-string v2, "Disables SuperSU for several minutes at boot. Reboot after enable. Disable (without reboot) before applying OTA. Affects system state in Settings."
+1316c1316
+<     const-string v2, "\u5b9a\u671f\u7cfb\u7edf\u4fee\u6539\u91cd\u7f6e"
+---
+>     const-string v2, "Periodic system modified reset"
+1352c1352
+<     const-string v1, "\u5728\u9700\u8981\u65f6\u5c1d\u8bd5\u91cd\u7f6e\u7cfb\u7edf\u4fee\u6539\u503c\uff0c\u4ec5\u4f1a\u5f71\u54cd\u4e0b\u8f7d\u6a21\u5f0f\u72b6\u6001\uff0c\u5bf9\u8bbe\u7f6e\u4e2d\u7684\u7cfb\u7edf\u72b6\u6001\u6ca1\u6709\u5f71\u54cd"
+---
+>     const-string v1, "Attempt to reset system modified value when needed. Affects only download mode state, not system state in Settings"
+1417c1417
+<     const-string v0, "\u81ea\u5b9a\u4e49"
+---
+>     const-string v0, "Custom"
+1422c1422
+<     const-string v0, "\u672a\u77e5"
+---
+>     const-string v0, "Unknown"
+1429c1429
+<     const-string v0, "\n\u7cfb\u7edf: "
+---
+>     const-string v0, "\nSystem: "
+1441c1441
+<     const-string v0, "\u5b98\u65b9"
+---
+>     const-string v0, "Official"
+1463c1463
+<     const-string v0, "\u5df2\u4fee\u6539"
+---
+>     const-string v0, "Modified"
+1468c1468
+<     const-string v0, "\u626b\u63cf\u4e2d"
+---
+>     const-string v0, "Scanning"
+1473c1473
+<     const-string v0, "\u5f53\u524d\u72b6\u6001"
+---
+>     const-string v0, "Current status"
+1475c1475
+<     const-string v2, "\u65e0\u6cd5\u786e\u5b9a\u72b6\u6001, \u9700\u8981\u91cd\u542f\u81f3\u6307\u5b9a\u5361\u673a\u6a21\u5f0f - \u70b9\u51fb \"\u91cd\u8bbe\u5237\u5165\u8ba1\u6570\u5668\""
+---
+>     const-string v2, "Status cannot be determined, need to reboot into a special bootmode - tap \"Reset flash counter\""
+1505c1505
+<     const-string v0, "\u91cd\u8bbe\u5237\u5165\u8ba1\u6570\u5668"
+---
+>     const-string v0, "Reset flash counter"
+1507c1507
+<     const-string v2, "\u8bf7\u5728\u91cd\u8bbe\u524d\u786e\u8ba4\u5f53\u524d\u72b6\u6001\u662f\u5426\u6b63\u786e ! (\u53ef\u80fd\u53d6\u6d88\u6302\u8f7d SD \u5361 - \u5982\u679c\u4e3a\u6b64\u8bf7\u91cd\u542f)"
+---
+>     const-string v2, "Confirm current status is correct before resetting ! (May unmount SD card - reboot if so)"
+1518c1518
+<     const-string v0, "\u91cd\u8bbe\u5237\u5165\u8ba1\u6570\u5668"
+---
+>     const-string v0, "Reset flash counter"
+1520c1520
+<     const-string v2, "\u9700\u8981\u4e3a\u6b64\u91cd\u542f\u81f3\u6307\u5b9a\u6a21\u5f0f. \u6570\u636e\u88ab\u8986\u76d6\u524d\u5c06\u5411\u60a8\u8be2\u95ee\u786e\u8ba4. \u70b9\u51fb\u91cd\u542f\u8fdb\u5165\u6b64\u6a21\u5f0f. (\u4e00\u4e9b\u8bbe\u5907\u4e0a\u6b64\u6a21\u5f0f\u603b\u662f\u663e\u793a\u81f3\u5c11\u4e3a 1 !)"
+---
+>     const-string v2, "Need to reboot into a special mode for this. You will be asked to confirm before data is written. Tap to reboot into this mode. (On some devices this mode always shows at least 1 !)"
+1531c1531
+<     const-string v2, "\u5f00\u673a\u81ea\u52a8\u91cd\u8bbe"
+---
+>     const-string v2, "Auto reset at boot"
+1533c1533
+<     const-string v3, "\u4ec5 Play \u7248\u672c\u53ef\u7528"
+---
+>     const-string v3, "Only available in Play version"
+1559c1559
+<     const-string v2, "\u5de5\u4f5c\u65b9\u5f0f\u5f53\u524d\u6b63\u5728\u8fdb\u884c\uff0c\u8bf7\u5173\u95ed\u53bb\u9664\u9ec4\u4e09\u89d2\u5e76\u5728\u51e0\u5206\u949f\u540e\u91cd\u65b0\u6253\u5f00"
+---
+>     const-string v2, "Workaround is currently in progress, please close Triangle Away and open it again in a few minutes"
+1568c1568
+<     const-string v2, "\u6b64\u529f\u80fd\u4ec5\u9002\u7528\u4e8e\u62e5\u6709\u8d85\u7ea7\u6388\u6743\u7ba1\u7406\u4e13\u4e1a\u7248\u6216 Play \u5546\u5e97\u7248\u672c\u7684\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v2, "This feature is only available with either SuperSU Pro or the Play version of Triangle Away"
+1577c1577
+<     const-string v2, "\u6b64\u5de5\u4f5c\u65b9\u5f0f\u4ec5\u9002\u7528\u4e8e\u8d85\u7ea7\u6388\u6743\u7ba1\u7406"
+---
+>     const-string v2, "This workaround only works with SuperSU"
+1586c1586
+<     const-string v2, "\u672a\u627e\u5230\u8ba9\u7cfb\u7edf\u53ef\u6267\u884c\u6240\u9700\u7684\u5de5\u4f5c\u65b9\u5f0f"
+---
+>     const-string v2, "System executable needed to implement workaround not found"
+1595c1595
+<     const-string v1, "\u4ec5\u9002\u7528\u4e8e Play \u5546\u5e97\u7248\u672c"
+---
+>     const-string v1, "Only available in Play version"
+1641c1641
+<     const-string v1, "\u65e0\u6cd5\u5b9a\u4f4d  magic header\u3002\u8fd9\u53ef\u80fd\u662f\u56e0\u4e3a\u60a8\u6ca1\u6709 ROOT \u6743\u9650\uff0c\u6216\u4e0d\u652f\u6301\u60a8\u7684\u8bbe\u5907\u3002\u5bf9\u4e8e\u591a\u6570\u673a\u578b\u800c\u8a00\u9700\u8981  Android 4.0 \u53ca\u4ee5\u4e0a\u3002\n\n\u5982\u679c\u4e0d\u652f\u6301\u60a8\u7684\u8bbe\u5907\uff08\u4f46\u60a8\u6709 ROOT \u6743\u9650\uff09\uff0c\u5219\u53ef\u521b\u5efa\u6709\u52a9\u4e8e\u8ba9\u60a8\u7684\u8bbe\u5907\u83b7\u5f97\u652f\u6301\u7684\u8f6c\u50a8\u6587\u4ef6\u3002\u8981\u521b\u5efa\u8f6c\u50a8\u6587\u4ef6\u5417\uff1f"
+---
+>     const-string v1, "Could not locate magic header. This may be because you are not rooted, or your device is not supported. On many devices you need to be running Android 4.0 or newer.\n\nIf your device is not yet supported (but you are rooted), a dump file can be made that might help bring support to your device. Create a dump file ?"
+1643c1643
+<     const-string v2, "\u521b\u5efa\u8f6c\u50a8"
+---
+>     const-string v2, "Create dump"
+1649c1649
+<     const-string v4, "\u9000\u51fa"
+---
+>     const-string v4, "Exit"
+1733c1733
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+1739c1739
+<     const-string v1, "\u8bf7\u6ce8\u610f\uff1a\u4e00\u4e9b\u8bbe\u5907\u4f1a\u6301\u7eed\u5c06\u8ba1\u6570\u5668<b>\u91cd\u7f6e</b>\u4e3a <b>1</b>\uff0c\u53ea\u8981\u60a8\u8fd0\u884c\u7684<b>\u4e0d\u662f<b>\u539f\u751f\u5185\u6838\u548c\u539f\u751f Recovery\uff01"
+---
+>     const-string v1, "Please note some devices keep <b>resetting</b> the counter to <b>1</b> as long as you are not running <b>both</b> a <b>stock</b> kernel and <b>stock</b> recovery"
+1749c1749
+<     const-string v1, "\u786e\u5b9a"
+---
+>     const-string v1, "OK"
+1777c1777
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+1783c1783
+<     const-string v1, "\u68c0\u6d4b\u5230\u60a8\u6b63\u5728 <i>not</i> \u8fd0\u884c <b>SuperSU</b>. \u8bf7\u6ce8\u610f\u5728\u4e0d\u540c\u7684\u8bbe\u5907\u4e0a\u8fd0\u884c\u5e94\u7528\u9664 <b>SuperSU</b> \u4e0d\u540c\u7684 root \u7ba1\u7406\u5668\u5df2\u77e5\u4f1a\u5f15\u8d77\u91cd\u8bbe\u5931\u8d25, bootloops, \u8f6f\u4ef6\u5d29\u6e83!"
+---
+>     const-string v1, "It has been detected that you are <i>not</i> running <b>SuperSU</b>. Please note that running a different root management app than <b>SuperSU</b> on various devices is known to lead to failed resets, bootloops, and softbricks!"
+1793c1793
+<     const-string v1, "\u786e\u8ba4"
+---
+>     const-string v1, "OK"
+1827c1827
+<     const-string v1, "\u53bb\u9664\u9ec4\u4e09\u89d2"
+---
+>     const-string v1, "Triangle Away"
+1833c1833
+<     const-string v1, "\u5f00\u53d1\u53bb\u9664\u9ec4\u4e09\u89d2\u548c\u63d0\u4f9b\u670d\u52a1\u5668\u8d44\u6e90\u9700\u8981\u65f6\u95f4\u3001\u52aa\u529b\u548c\u91d1\u94b1\u3002\u8bf7\u8003\u8651\u5728 <b>Google Play \u5546\u5e97</b>\u4e0a\u8d2d\u4e70\u5e94\u7528\uff01"
+---
+>     const-string v1, "It takes time, effort, and money to develop <b>Triangle Away</b> and provide the server resources. Please consider purchasing the app on <b>Google Play</b> !"
+1843c1843
+<     const-string v1, "\u786e\u5b9a"
+---
+>     const-string v1, "OK"
+1926c1926
+<     const-string v2, "\u53bb\u9664\u9ec4\u4e09\u89d2 "
+---
+>     const-string v2, "Triangle Away "

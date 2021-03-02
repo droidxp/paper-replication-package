@@ -1,0 +1,236 @@
+diff -r result/APP_18/App_B_18/AndroidManifest.xml result/APP_18/App_M_18/AndroidManifest.xml
+3a4,9
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+25a32,34
+>         <meta-data android:name="DOMOB_PID" android:value="56OJycH4uMA26K8Mcy"/>
+>         <meta-data android:name="DOMOB_TEST_MODE" android:value="true"/>
+>         <activity android:name="cn.domob.android.ads.DomobActivity" android:theme="@android:style/Theme.Translucent"/>
+diff -r result/APP_18/App_B_18/apktool.yml result/APP_18/App_M_18/apktool.yml
+2c2
+< apkFileName: Bapp18-24956C7D5C895C0B41A69EF3A727519F8FCAAFB526FCD13AD29FDB67DB7B0BB9.apk
+---
+> apkFileName: Mapp18-8FF6FD070D2ECFF9F8EEDD32C7BDFB21E3B8BA480A7C44939EACE06BC909F5C2.apk
+4,8c4
+< doNotCompress:
+< - resources.arsc
+< - ogg
+< - png
+< - jpg
+---
+> doNotCompress: null
+Somente em result/APP_18/App_M_18/assets: banner.png
+Somente em result/APP_18/App_M_18/assets: close.png
+Somente em result/APP_18/App_M_18/assets: def_0_32000048.png
+Somente em result/APP_18/App_M_18/assets: def_0.png
+Somente em result/APP_18/App_M_18/assets: exit.png
+Somente em result/APP_18/App_M_18/assets: loading.png
+Somente em result/APP_18/App_M_18/assets: next_off.png
+Somente em result/APP_18/App_M_18/assets: next.png
+Somente em result/APP_18/App_M_18/assets: out.png
+Somente em result/APP_18/App_M_18/assets: preview_off.png
+Somente em result/APP_18/App_M_18/assets: preview.png
+Somente em result/APP_18/App_M_18/assets: refresh.png
+Somente em result/APP_18/App_M_18/: cn
+Os arquivos binários result/APP_18/App_B_18/original/AndroidManifest.xml e result/APP_18/App_M_18/original/AndroidManifest.xml são diferentes
+Somente em result/APP_18/App_M_18/original/META-INF: ANDROIDD.RSA
+Somente em result/APP_18/App_M_18/original/META-INF: ANDROIDD.SF
+Somente em result/APP_18/App_B_18/original/META-INF: FRUITSMO.RSA
+Somente em result/APP_18/App_B_18/original/META-INF: FRUITSMO.SF
+diff -r result/APP_18/App_B_18/original/META-INF/MANIFEST.MF result/APP_18/App_M_18/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_22 (Sun Microsystems Inc.)
+---
+> Created-By: 1.6.0_24 (Sun Microsystems Inc.)
+8c8
+< SHA1-Digest: iZ1ZKX3/+t1SNLDX9GFIk7LSSoc=
+---
+> SHA1-Digest: D5tJrieLkxtS02Twgc7ajLbchLM=
+18a19,21
+> Name: assets/close.png
+> SHA1-Digest: EzTFh+1itbq0pmiica8OM7Cj1hY=
+> 
+26c29
+< SHA1-Digest: vlFj2g/UEVuvEWr6cAttXoJ1dhM=
+---
+> SHA1-Digest: Pc2fyN/HnXvwHqgOHROUrU9y320=
+30a34,36
+> Name: assets/def_0_32000048.png
+> SHA1-Digest: kndimctb0rQoHz2T8JjBtbS1Ae0=
+> 
+35c41
+< SHA1-Digest: VFjujewpZ/wT1oGFaotpRP3mwlk=
+---
+> SHA1-Digest: 8Q6TqLj+nkvMBRN2Da1WLvi/MKU=
+54a61,63
+> Name: res/anim/left_in.xml
+> SHA1-Digest: qGb+67SvhrJwkP3ik0bfvIb8J7o=
+> 
+58,60d66
+< Name: res/anim/left_in.xml
+< SHA1-Digest: dBS+C5sXUkmB6TI2NpM5gTDy9sc=
+< 
+64,66d69
+< Name: res/drawable/num8.png
+< SHA1-Digest: z0/6jCYJoEfbL5wzovsgadgq8+k=
+< 
+69a73,75
+> Name: res/drawable/num8.png
+> SHA1-Digest: z0/6jCYJoEfbL5wzovsgadgq8+k=
+> 
+79,81d84
+< Name: res/drawable/quiz.png
+< SHA1-Digest: Pqp+P3EaY3YIPxxXaFyJOi3NJ+I=
+< 
+84a88,90
+> Name: res/drawable/quiz.png
+> SHA1-Digest: Pqp+P3EaY3YIPxxXaFyJOi3NJ+I=
+> 
+87a94,96
+> Name: assets/out.png
+> SHA1-Digest: UOCtmFgBge0CR6Hf5aS0SZ+gSPE=
+> 
+95c104
+< SHA1-Digest: DVhNsDUaKydADxusGqsO3WpTRKc=
+---
+> SHA1-Digest: zEl8UQXov5EIFa4iTMWXRNFRjOY=
+107c116
+< SHA1-Digest: 5nLgsbgg5H3lKKTHyZq9JRXrjOw=
+---
+> SHA1-Digest: +oMSIpjfZYjxTrA32FRI0BBRZTo=
+113,116c122
+< SHA1-Digest: 5AFM/jsYhFha58GKXbcC3K+yGts=
+< 
+< Name: res/drawable/music_2.png
+< SHA1-Digest: zlvdiCczKFB3xTbWwzfnhj/sEdc=
+---
+> SHA1-Digest: xrE1f7WvZjgTBGMFiLsm4LqCKmE=
+120a127,129
+> Name: res/drawable/music_2.png
+> SHA1-Digest: zlvdiCczKFB3xTbWwzfnhj/sEdc=
+> 
+126a136,141
+> Name: assets/banner.png
+> SHA1-Digest: pxTcvUnFGb+3etlJHikU+4KyzAc=
+> 
+> Name: assets/def_0.png
+> SHA1-Digest: MPxwuD54DTp8NkK/5/RUgiQ6c30=
+> 
+137,140c152
+< SHA1-Digest: fUcktDC9IUTs7P6nfWGGqha6zwg=
+< 
+< Name: res/drawable/play_bg.jpg
+< SHA1-Digest: 1ZQLK37J7KijP9Gz97a1weGcyZc=
+---
+> SHA1-Digest: aHEamgZANrRRI238FVwNUGmyy3k=
+144a157,159
+> Name: res/drawable/play_bg.jpg
+> SHA1-Digest: 1ZQLK37J7KijP9Gz97a1weGcyZc=
+> 
+148,150d162
+< Name: res/drawable/score5.png
+< SHA1-Digest: MMPk5938M3p/BX7wL4EyD1uKcXA=
+< 
+153a166,168
+> Name: res/drawable/score5.png
+> SHA1-Digest: MMPk5938M3p/BX7wL4EyD1uKcXA=
+> 
+155c170
+< SHA1-Digest: wvAe88dk4CsJ8Pjh3SF206rKW9M=
+---
+> SHA1-Digest: /zElF5pdei/Tn7UE0oGwOfIN3pg=
+163,165d177
+< Name: res/drawable/score7.png
+< SHA1-Digest: 6lvpwt77pai/xPxo9SHiQVtjzeE=
+< 
+169,170c181,182
+< Name: res/drawable/num9.png
+< SHA1-Digest: q8toJhm5UdWz9oWcYXSjz7rE/8A=
+---
+> Name: res/drawable/score7.png
+> SHA1-Digest: 6lvpwt77pai/xPxo9SHiQVtjzeE=
+174a187,189
+> Name: res/drawable/num9.png
+> SHA1-Digest: q8toJhm5UdWz9oWcYXSjz7rE/8A=
+> 
+180a196,198
+> Name: assets/next_off.png
+> SHA1-Digest: Xjupp/Ag2wLZpifAiFRtfETN7qU=
+> 
+195a214,216
+> Name: res/drawable/score.png
+> SHA1-Digest: DPCOGqt2Bwt7PENupsyb6fT7qgM=
+> 
+199,200c220,221
+< Name: res/drawable/score.png
+< SHA1-Digest: DPCOGqt2Bwt7PENupsyb6fT7qgM=
+---
+> Name: assets/loading.png
+> SHA1-Digest: FL55C1gRyTSyfjHId8rJHGTySz8=
+204a226,228
+> Name: assets/preview_off.png
+> SHA1-Digest: 7PBMCBtD7LVBKytqXJIff4kbMd0=
+> 
+213a238,243
+> Name: assets/refresh.png
+> SHA1-Digest: BwoiRqAz9PWmjE22fyT0kVIzG2Y=
+> 
+> Name: assets/preview.png
+> SHA1-Digest: c6+V3nd0HnYSpvyBHOI+rRLQmKQ=
+> 
+225a256,258
+> Name: assets/next.png
+> SHA1-Digest: f42c0y/wh7N6xBRje4bC4656kbQ=
+> 
+229,231d261
+< Name: res/anim/left_out.xml
+< SHA1-Digest: VC13noQhEzkl3dDsdF+eBRrnIO8=
+< 
+237a268,270
+> Name: res/anim/left_out.xml
+> SHA1-Digest: f9HGHaRxTEp0MWpMZiHG3MPTo1g=
+> 
+239c272
+< SHA1-Digest: vAprhrHQAZ2J3GMew8GL342Mhbs=
+---
+> SHA1-Digest: JDoAb7ykwlZapceLFahRtA6Df3Y=
+242c275
+< SHA1-Digest: YGBvZPn2q0HhT3DYnw1cRf35t7A=
+---
+> SHA1-Digest: Sdumd4F4DoG8/VzCm7buqqo1Ly0=
+244,245c277,278
+< Name: res/xml/cube.xml
+< SHA1-Digest: gu+ZVmdsglcAxEq6suPULe7Eyf0=
+---
+> Name: assets/sound/wrong.ogg
+> SHA1-Digest: 9jNnOdxoBvd2W0OwJsWVlcyBgF8=
+250,251c283,284
+< Name: assets/sound/wrong.ogg
+< SHA1-Digest: 9jNnOdxoBvd2W0OwJsWVlcyBgF8=
+---
+> Name: res/xml/cube.xml
+> SHA1-Digest: M8qsHHFdY2HM6L0mfLkz7MN4bU0=
+264a298,300
+> Name: assets/exit.png
+> SHA1-Digest: ZXarJw64rywBR9mWLoRIz5YpIXI=
+> 
+341c377
+< SHA1-Digest: mibXYv2uw7O2YHK4qrUy8UHcFQs=
+---
+> SHA1-Digest: sgHyxRoEBG9vpT0gJWzgc7YNR7w=
+diff -r result/APP_18/App_B_18/res/layout/finish.xml result/APP_18/App_M_18/res/layout/finish.xml
+10a11
+>         <cn.domob.android.ads.DomobAdView android:gravity="bottom" android:layout_gravity="right" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+diff -r result/APP_18/App_B_18/res/layout/play.xml result/APP_18/App_M_18/res/layout/play.xml
+4c4
+<     <RelativeLayout android:id="@id/gameboard" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+---
+>     <RelativeLayout android:id="@id/gameboard" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+6a7
+>     <cn.domob.android.ads.DomobAdView android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+Somente em result/APP_18/App_M_18/res: values-zh-rCN
+Somente em result/APP_18/App_M_18/smali: cn

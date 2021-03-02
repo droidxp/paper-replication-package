@@ -1,0 +1,24 @@
+diff -r result/APP_99/App_B_99/AndroidManifest.xml result/APP_99/App_M_99/AndroidManifest.xml
+44c44
+<         <meta-data android:name="app_market" android:value="360"/>
+---
+>         <meta-data android:name="app_market" android:value="anzhi"/>
+diff -r result/APP_99/App_B_99/apktool.yml result/APP_99/App_M_99/apktool.yml
+2c2
+< apkFileName: Bapp99-D36213FD7CA96865647BC0AAB07A7664CD5428C4B6C20FC36B30A72DCD554AF0.apk
+---
+> apkFileName: Mapp99-2875570F5F00B29A4CD9BB8F33FDFB93EF97063DA532DB6A9A9E195960926D35.apk
+Os arquivos binários result/APP_99/App_B_99/original/AndroidManifest.xml e result/APP_99/App_M_99/original/AndroidManifest.xml são diferentes
+Somente em result/APP_99/App_B_99/original/META-INF: ANDROIDD.RSA
+Somente em result/APP_99/App_B_99/original/META-INF: ANDROIDD.SF
+Somente em result/APP_99/App_M_99/original/META-INF: CERT.RSA
+Somente em result/APP_99/App_M_99/original/META-INF: CERT.SF
+diff -r result/APP_99/App_B_99/original/META-INF/MANIFEST.MF result/APP_99/App_M_99/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_30 (Sun Microsystems Inc.)
+---
+> Created-By: 1.0 (Android)
+2111c2111
+< SHA1-Digest: WzS/CLRplrFhiZTpurMkv8O+l5w=
+---
+> SHA1-Digest: SqyUI/S8Trmco6ZPj85GkAFTgQI=

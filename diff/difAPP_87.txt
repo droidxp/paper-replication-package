@@ -1,0 +1,437 @@
+diff -r result/APP_87/App_B_87/AndroidManifest.xml result/APP_87/App_M_87/AndroidManifest.xml
+6a7,15
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+15a25,41
+>         <meta-data android:name="cooId" android:value="7b9da47476054333a121e9e9ec42ea52"/>
+>         <meta-data android:name="channelId" android:value="k-gfan"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.MainActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.BoutiqueActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <service android:name="com.kuguo.ad.MainService"/>
+>         <receiver android:name="com.kuguo.ad.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="net.youmi.android.AdActivity"/>
+>         <meta-data android:name="YOUMI_CHANNEL" android:value="10020"/>
+>         <meta-data android:name="AdView_CHANNEL" android:value="GFAN"/>
+diff -r result/APP_87/App_B_87/apktool.yml result/APP_87/App_M_87/apktool.yml
+2c2
+< apkFileName: Bapp87-C855893D5231540B18997609825E488F1D3CFE3E9CF22E26A821E49E229A850A.apk
+---
+> apkFileName: Mapp87-8285337EFEF19C7B80ED5AA1CF11F45922A17C0E6CA26572D252D167447B83FA.apk
+5,6d4
+< - resources.arsc
+< - res/raw/datas_zip
+7a6
+> - res/raw/datas_zip
+Somente em result/APP_87/App_M_87/: assets
+Somente em result/APP_87/App_M_87/com: adview
+Somente em result/APP_87/App_M_87/com: example
+diff -r result/APP_87/App_B_87/com/gamayun/biketothefuturefree/ActivityPlay.java result/APP_87/App_M_87/com/gamayun/biketothefuturefree/ActivityPlay.java
+700c700
+<     //   258: ifne +287 -> 545
+---
+>     //   258: ifne +303 -> 561
+733c733
+<     //   333: if_icmpgt +241 -> 574
+---
+>     //   333: if_icmpgt +257 -> 590
+786c786
+<     //   466: ifle +132 -> 598
+---
+>     //   466: ifle +148 -> 614
+818,852c818,860
+<     //   536: return
+<     //   537: astore_1
+<     //   538: ldc_w 310
+<     //   541: astore_1
+<     //   542: goto -459 -> 83
+<     //   545: getstatic 295	com/gamayun/biketothefuturefree/ActivityPlay:layout	Landroid/widget/RelativeLayout;
+<     //   548: getstatic 364	com/gamayun/biketothefuturefree/ActivityPlay:mGLView	Lcom/gamayun/biketothefuturefree/ActivityPlay$MyGLSurfaceView;
+<     //   551: invokevirtual 485	android/widget/RelativeLayout:addView	(Landroid/view/View;)V
+<     //   554: aload_0
+<     //   555: invokevirtual 299	com/gamayun/biketothefuturefree/ActivityPlay:getWindow	()Landroid/view/Window;
+<     //   558: sipush 128
+<     //   561: invokevirtual 488	android/view/Window:addFlags	(I)V
+<     //   564: iconst_0
+<     //   565: invokestatic 138	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+<     //   568: putstatic 140	com/gamayun/biketothefuturefree/ActivityPlay:bWaitOnCreate	Ljava/lang/Boolean;
+<     //   571: goto -287 -> 284
+<     //   574: new 415	com/google/ads/AdView
+<     //   577: dup
+<     //   578: aload_0
+<     //   579: getstatic 491	com/google/ads/AdSize:SMART_BANNER	Lcom/google/ads/AdSize;
+<     //   582: ldc_w 423
+<     //   585: invokespecial 426	com/google/ads/AdView:<init>	(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+<     //   588: putstatic 158	com/gamayun/biketothefuturefree/ActivityPlay:adView	Lcom/google/ads/AdView;
+<     //   591: goto -238 -> 353
+<     //   594: astore_1
+<     //   595: goto -218 -> 377
+<     //   598: iconst_0
+<     //   599: istore_3
+<     //   600: goto -129 -> 471
+<     //   603: astore_1
+<     //   604: goto -116 -> 488
+<     //   607: astore_1
+<     //   608: goto -309 -> 299
+<     //   611: astore 4
+<     //   613: goto -530 -> 83
+---
+>     //   536: invokestatic 487	com/kuguo/ad/KuguoAdsManager:getInstance	()Lcom/kuguo/ad/KuguoAdsManager;
+>     //   539: aload_0
+>     //   540: iconst_1
+>     //   541: invokevirtual 491	com/kuguo/ad/KuguoAdsManager:receivePushMessage	(Landroid/content/Context;Z)V
+>     //   544: invokestatic 487	com/kuguo/ad/KuguoAdsManager:getInstance	()Lcom/kuguo/ad/KuguoAdsManager;
+>     //   547: aload_0
+>     //   548: iconst_0
+>     //   549: invokevirtual 495	com/kuguo/ad/KuguoAdsManager:showKuguoSprite	(Landroid/content/Context;I)V
+>     //   552: return
+>     //   553: astore_1
+>     //   554: ldc_w 310
+>     //   557: astore_1
+>     //   558: goto -475 -> 83
+>     //   561: getstatic 295	com/gamayun/biketothefuturefree/ActivityPlay:layout	Landroid/widget/RelativeLayout;
+>     //   564: getstatic 364	com/gamayun/biketothefuturefree/ActivityPlay:mGLView	Lcom/gamayun/biketothefuturefree/ActivityPlay$MyGLSurfaceView;
+>     //   567: invokevirtual 499	android/widget/RelativeLayout:addView	(Landroid/view/View;)V
+>     //   570: aload_0
+>     //   571: invokevirtual 299	com/gamayun/biketothefuturefree/ActivityPlay:getWindow	()Landroid/view/Window;
+>     //   574: sipush 128
+>     //   577: invokevirtual 502	android/view/Window:addFlags	(I)V
+>     //   580: iconst_0
+>     //   581: invokestatic 138	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+>     //   584: putstatic 140	com/gamayun/biketothefuturefree/ActivityPlay:bWaitOnCreate	Ljava/lang/Boolean;
+>     //   587: goto -303 -> 284
+>     //   590: new 415	com/google/ads/AdView
+>     //   593: dup
+>     //   594: aload_0
+>     //   595: getstatic 505	com/google/ads/AdSize:SMART_BANNER	Lcom/google/ads/AdSize;
+>     //   598: ldc_w 423
+>     //   601: invokespecial 426	com/google/ads/AdView:<init>	(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+>     //   604: putstatic 158	com/gamayun/biketothefuturefree/ActivityPlay:adView	Lcom/google/ads/AdView;
+>     //   607: goto -254 -> 353
+>     //   610: astore_1
+>     //   611: goto -234 -> 377
+>     //   614: iconst_0
+>     //   615: istore_3
+>     //   616: goto -145 -> 471
+>     //   619: astore_1
+>     //   620: goto -132 -> 488
+>     //   623: astore_1
+>     //   624: goto -325 -> 299
+>     //   627: astore 4
+>     //   629: goto -546 -> 83
+855,856c863,864
+<     //   0	616	0	this	ActivityPlay
+<     //   0	616	1	paramBundle	android.os.Bundle
+---
+>     //   0	632	0	this	ActivityPlay
+>     //   0	632	1	paramBundle	android.os.Bundle
+858c866
+<     //   470	130	3	bool	boolean
+---
+>     //   470	146	3	bool	boolean
+860c868
+<     //   611	1	4	localThrowable	Throwable
+---
+>     //   627	1	4	localThrowable	Throwable
+864,871c872,879
+<     //   63	80	537	android/content/pm/PackageManager$NameNotFoundException
+<     //   305	353	594	java/lang/Throwable
+<     //   353	377	594	java/lang/Throwable
+<     //   574	591	594	java/lang/Throwable
+<     //   377	469	603	java/lang/Throwable
+<     //   471	488	603	java/lang/Throwable
+<     //   284	299	607	java/lang/Throwable
+<     //   63	80	611	java/lang/Throwable
+---
+>     //   63	80	553	android/content/pm/PackageManager$NameNotFoundException
+>     //   305	353	610	java/lang/Throwable
+>     //   353	377	610	java/lang/Throwable
+>     //   590	607	610	java/lang/Throwable
+>     //   377	469	619	java/lang/Throwable
+>     //   471	488	619	java/lang/Throwable
+>     //   284	299	623	java/lang/Throwable
+>     //   63	80	627	java/lang/Throwable
+Somente em result/APP_87/App_M_87/com: kuguo
+Os arquivos binários result/APP_87/App_B_87/original/AndroidManifest.xml e result/APP_87/App_M_87/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_87/App_B_87/original/META-INF/CERT.RSA e result/APP_87/App_M_87/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_87/App_B_87/original/META-INF/CERT.SF result/APP_87/App_M_87/original/META-INF/CERT.SF
+2,9c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: WlgDBpqMC6ZZyxZOp5Et0AhcEaw=
+< 
+< Name: res/layout/splash.xml
+< SHA1-Digest: y2dtPmA3jla64lF7WOynzr/y8Os=
+< 
+< Name: res/drawable-xhdpi/icon.png
+< SHA1-Digest: Teawnwef++q/X+8vMnqBY4sbmMk=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: 8/bfFKFVZzS4L2y1iwIh3qqOBi0=
+12c6
+< SHA1-Digest: p3ZP7o+fz+x1mOmTneig5Uf6fCw=
+---
+> SHA1-Digest: 9uye9Au7yVgmxIrFaGAAcSRW7kM=
+15c9
+< SHA1-Digest: BI8SF2nblXyTm3CjrjfQTPw57jM=
+---
+> SHA1-Digest: WtDCDI0EnnOg4LowFZSue33wMus=
+17,24c11,12
+< Name: classes.dex
+< SHA1-Digest: gpMawSMFFSZLvFWTseeGRBT2gz4=
+< 
+< Name: res/layout/billing_not_supported.xml
+< SHA1-Digest: qJTPxwTPQ1vZk4eLa0DEOwkEtvk=
+< 
+< Name: res/raw/datas_zip
+< SHA1-Digest: yWquTqW/4qVIidzgwv+snAbszKU=
+---
+> Name: assets/kuguo_res/rating_half.png
+> SHA1-Digest: PMXbhhnPK1/KrUlzUqZ7q5+DCOY=
+27c15
+< SHA1-Digest: 1PIw4rfQWNasuJsAOWPMvM6G704=
+---
+> SHA1-Digest: D479eAOrp3lfucWv4PvL5smYEGo=
+31a20,22
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: exCEUCoij44b4J2D6hSxXrd8Lng=
+> 
+37a29,31
+> Name: assets/kuguo_res/kuguo.png
+> SHA1-Digest: bDMuesWvLatDEc07k0RwsCX5/qg=
+> 
+40a35,94
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: 40WHVDdM8kZb/q54nNbuaE8BlhM=
+> 
+> Name: assets/kuguo_res/kuguo_side2.png
+> SHA1-Digest: emkIp8SHolTfyNnKMG7hkV1s1aE=
+> 
+> Name: res/layout/splash.xml
+> SHA1-Digest: KPjNDK1StezX5ZgrF8abI9Tx5CI=
+> 
+> Name: res/drawable-xhdpi/icon.png
+> SHA1-Digest: Teawnwef++q/X+8vMnqBY4sbmMk=
+> 
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: dyfZ67AGcUzIDQUXmzeyMP4bJeE=
+> 
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: toMTngQnEGJx2v8SBYt2FRqRJmg=
+> 
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: j5G+wQ6dp8tu9dKwXtuWPTdJIbg=
+> 
+> Name: classes.dex
+> SHA1-Digest: 0k3m7Tr8l6JcZoQebyFmFdcwnrg=
+> 
+> Name: res/layout/billing_not_supported.xml
+> SHA1-Digest: A5tG67YEKR7qXnE2VZSfZebLjhc=
+> 
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: iSxAiKO82hU1AeXsuKgB3Imvov4=
+> 
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: DLo9FsQPY0aO1jrOI9rciqZN6v0=
+> 
+> Name: res/raw/datas_zip
+> SHA1-Digest: yWquTqW/4qVIidzgwv+snAbszKU=
+> 
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: Mp0t/QlWdXcsKkZEPqOeQF1a5J0=
+> 
+> Name: assets/kuguo_res/kuguo_top_pressed.png
+> SHA1-Digest: 5rdFFTTX++ieM6PTs7zKGvckBkk=
+> 
+> Name: assets/kuguo_res/rating_full.png
+> SHA1-Digest: nWWMGKSDcQ09UEVq+8nEJ092E3k=
+> 
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: ZXInUC0nzWILs+lBTSKLaoQu6Kc=
+> 
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: YlBVEsVMBnGLiKPkVdT8jntv5zY=
+> 
+> Name: assets/kuguo_res/kuguo_side.png
+> SHA1-Digest: pUWx8KvQWCNzzeT16G05W5fa9u0=
+> 
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: FZTNNvzgMEoLhWncGneGp4CYkk0=
+> 
+> Name: assets/kuguo_res/installed.png
+> SHA1-Digest: uON+Oi96KjfQNj1q/LCCqcFbKf0=
+> 
+45a100,108
+> 
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: xwmLE3+EkzoBatMn8lpxanytqXg=
+> 
+> Name: assets/kuguo_res/rating_empty.png
+> SHA1-Digest: yBv78HZ6lquUiuKtbBcoGLXN2IA=
+> 
+> Name: assets/kuguo_res/kuguo_top.png
+> SHA1-Digest: nbBiRcbWh9OdMfJVjo8xsYF4CsQ=
+diff -r result/APP_87/App_B_87/original/META-INF/MANIFEST.MF result/APP_87/App_M_87/original/META-INF/MANIFEST.MF
+2c2,38
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+> 
+> Name: res/layout/play.xml
+> SHA1-Digest: 9XWaH4pcKUQa0hKUR161nWUCS2A=
+> 
+> Name: resources.arsc
+> SHA1-Digest: EZBKZwGPBbrQLhxhgr8hzaGk7A8=
+> 
+> Name: assets/kuguo_res/rating_half.png
+> SHA1-Digest: S00vYSJAZN4Kp03dNJ9JV3C7gyA=
+> 
+> Name: res/drawable-ldpi/icon.png
+> SHA1-Digest: EdLSJPt8bbRuySvHgV90rYhb7v4=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: l+deCQYSc/UEDPKvQsFP11YT7JQ=
+> 
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+> Name: res/drawable-mdpi/icon.png
+> SHA1-Digest: jV1Qzw93Og6yZ8Hj/tLirhW0MGI=
+> 
+> Name: lib/armeabi/libDG.so
+> SHA1-Digest: qgWHK6e7BuTCHj1zRaAfoysMzhk=
+> 
+> Name: assets/kuguo_res/kuguo.png
+> SHA1-Digest: RuPZmtaRC1tisx8zwArgndvGfA8=
+> 
+> Name: lib/armeabi-v7a/libDG.so
+> SHA1-Digest: e+H709ITdbXAiAz/72aI1WZ89QI=
+> 
+> Name: assets/kuguo_res/kuguo_side2.png
+> SHA1-Digest: TV5gKbN886OE4Zydpl4+L+LOYmU=
+> 
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: UhRfBMZZGUHgA1i0uGFbOWx4SEk=
+5c41
+< SHA1-Digest: t9HPltsgDUrqlHnWaRTgisjJHXY=
+---
+> SHA1-Digest: 2zRt72pZh7nlfjaNpVO2gU3ENVo=
+10,11c46,47
+< Name: res/layout/play.xml
+< SHA1-Digest: Vv1RjDNczFfF0W7yhQlz+F7IIYY=
+---
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: bKjU+M74YySS1qW5nxZ+v4udGCk=
+13,14c49,53
+< Name: resources.arsc
+< SHA1-Digest: o7hWvnivEe2Lbc9GjPxZb6VEOgI=
+---
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: mnoiAMSb+9/PFWSZZ/2ThYkuDYs=
+> 
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+17c56
+< SHA1-Digest: LyXpLdMet07BB2hBdJ5FyVdwpuk=
+---
+> SHA1-Digest: F4ZlkF9qLxi6uy57MC9y7wUKiQQ=
+20c59,65
+< SHA1-Digest: Xz7YIc8G8pOIPujuB5BLSB6Z8QI=
+---
+> SHA1-Digest: 695K40iY1ZM8jt/fdgtGTA0od+E=
+> 
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: zQ+3kBPQs5wwK+CNfm0vSZe9VYc=
+> 
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: mNxr9OFpueKt9Rn83vsUCcm3roc=
+25,26c70,71
+< Name: AndroidManifest.xml
+< SHA1-Digest: rf+D7tZWoDX3BwznglmsT0KGwEM=
+---
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+28,29c73,74
+< Name: res/drawable-ldpi/icon.png
+< SHA1-Digest: EdLSJPt8bbRuySvHgV90rYhb7v4=
+---
+> Name: assets/kuguo_res/kuguo_top_pressed.png
+> SHA1-Digest: /tDiKS+zIjOO9zZ1+KBFGJLvlxs=
+31,32c76,77
+< Name: res/drawable-mdpi/icon.png
+< SHA1-Digest: jV1Qzw93Og6yZ8Hj/tLirhW0MGI=
+---
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+34,35c79,80
+< Name: lib/armeabi/libDG.so
+< SHA1-Digest: qgWHK6e7BuTCHj1zRaAfoysMzhk=
+---
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: JqsMeWSOWGXiCsvHrx3OJD5JLEM=
+37,38c82,92
+< Name: lib/x86/libDG.so
+< SHA1-Digest: 2HOkrRacgLx7/MvTp7KNVqJXkPw=
+---
+> Name: assets/kuguo_res/rating_full.png
+> SHA1-Digest: OrNYZwr7L4Fc/g6m44wteyioSI0=
+> 
+> Name: assets/kuguo_res/kuguo_side.png
+> SHA1-Digest: /yJxD5QPHvZTl9gVzckrOwkqsVc=
+> 
+> Name: assets/kuguo_res/installed.png
+> SHA1-Digest: i1GhQd02nmGumG0Efgq4KVtZY4I=
+> 
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+43,44c97,107
+< Name: lib/armeabi-v7a/libDG.so
+< SHA1-Digest: e+H709ITdbXAiAz/72aI1WZ89QI=
+---
+> Name: lib/x86/libDG.so
+> SHA1-Digest: 2HOkrRacgLx7/MvTp7KNVqJXkPw=
+> 
+> Name: assets/kuguo_res/kuguo_top.png
+> SHA1-Digest: +stugZmNOH1w3MN6Y0DAYL5g8zk=
+> 
+> Name: assets/kuguo_res/rating_empty.png
+> SHA1-Digest: /pdjhl209wEvFa24abz75d7jrts=
+> 
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+Somente em result/APP_87/App_M_87/smali/com: adview
+Somente em result/APP_87/App_M_87/smali/com: example
+diff -r result/APP_87/App_B_87/smali/com/gamayun/biketothefuturefree/ActivityPlay.smali result/APP_87/App_M_87/smali/com/gamayun/biketothefuturefree/ActivityPlay.smali
+900a901,918
+>     .line 17
+>     invoke-static {}, Lcom/kuguo/ad/KuguoAdsManager;->getInstance()Lcom/kuguo/ad/KuguoAdsManager;
+> 
+>     move-result-object v0
+> 
+>     const/4 v1, 0x1
+> 
+>     invoke-virtual {v0, p0, v1}, Lcom/kuguo/ad/KuguoAdsManager;->receivePushMessage(Landroid/content/Context;Z)V
+> 
+>     .line 34
+>     invoke-static {}, Lcom/kuguo/ad/KuguoAdsManager;->getInstance()Lcom/kuguo/ad/KuguoAdsManager;
+> 
+>     move-result-object v0
+> 
+>     const/4 v1, 0x0
+> 
+>     invoke-virtual {v0, p0, v1}, Lcom/kuguo/ad/KuguoAdsManager;->showKuguoSprite(Landroid/content/Context;I)V
+> 
+Somente em result/APP_87/App_M_87/smali/com: kuguo

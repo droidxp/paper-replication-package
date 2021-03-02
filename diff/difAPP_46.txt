@@ -1,0 +1,2690 @@
+diff -r result/APP_46/App_B_46/AndroidManifest.xml result/APP_46/App_M_46/AndroidManifest.xml
+16,17c16
+<         <meta-data android:name="com.casee.adsdk.siteId" android:value="F70411BBE39999BECB2CDDF9477159AF"/>
+<         <meta-data android:name="com.casee.adsdk.isTesting" android:value="false"/>
+---
+>         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14bf37390324aa"/>
+diff -r result/APP_46/App_B_46/apktool.yml result/APP_46/App_M_46/apktool.yml
+2c2
+< apkFileName: Bapp46-6C8A5B1FF6B22F522A0D22DD42A1CF6769722B47B41B8293AC58D6709467A0C8.apk
+---
+> apkFileName: Mapp46-9F7FDE7B3D0A03654179FBA3477B063699D718B2484154C95077CE584CCD10B9.apk
+15,16c15
+< unknownFiles:
+<   com/casee/adsdk/logo.png: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_46/App_M_46/com: admob
+Somente em result/APP_46/App_B_46/com: casee
+diff -r result/APP_46/App_B_46/oms/sdt/colorlist.java result/APP_46/App_M_46/oms/sdt/colorlist.java
+26d25
+< import com.casee.adsdk.CaseeAdView;
+144c143
+<       this.tv.setText("多彩颜色选择:" + Integer.toString(this.nSelected) + "种");
+---
+>       this.tv.setText("Selected Color:" + Integer.toString(this.nSelected) + " Types");
+176c175
+<           new AlertDialog.Builder(this).setTitle("信息提示！").setMessage("请选择大于等于2小于等于9种颜色！").setPositiveButton("关闭", null).show();
+---
+>           new AlertDialog.Builder(this).setTitle("Info！").setMessage("Please select greater than or equal to 2 less than equal to 9 colors！").setPositiveButton("Close", null).show();
+226c225
+<     ((Button)localObject).setText("增加颜色");
+---
+>     ((Button)localObject).setText("Add");
+233c232
+<     ((Button)localObject).setText("删除颜色");
+---
+>     ((Button)localObject).setText("Delete");
+241c240
+<     ((Button)localObject).setText("确定");
+---
+>     ((Button)localObject).setText("OK");
+249c248
+<     ((Button)localObject).setText("返回");
+---
+>     ((Button)localObject).setText("Cancel");
+258,260d256
+<     localObject = new AppLayout(this);
+<     ((AppLayout)localObject).init();
+<     this.linearLayoutTop.addView((View)localObject, new LinearLayout.LayoutParams(-1, -2));
+265c261
+<     this.tv.setText("多彩颜色选择:" + Integer.toString(this.nSelected) + "种");
+---
+>     this.tv.setText("Selected Color:" + Integer.toString(this.nSelected) + " Types");
+269,294d264
+<   }
+<   
+<   class AppLayout
+<     extends RelativeLayout
+<   {
+<     CaseeAdView cav;
+<     Context context;
+<     
+<     AppLayout(Context paramContext)
+<     {
+<       super(null, 0);
+<       this.context = paramContext;
+<       init();
+<     }
+<     
+<     CaseeAdView getCav()
+<     {
+<       return this.cav;
+<     }
+<     
+<     void init()
+<     {
+<       this.cav = new CaseeAdView(this.context, null, 0, "F70411BBE39999BECB2CDDF9477159AF", false, 10000, -16776961, -16777216, 13.5F, false);
+<       RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, 48);
+<       addView(this.cav, localLayoutParams);
+<     }
+diff -r result/APP_46/App_B_46/oms/sdt/deletecolor.java result/APP_46/App_M_46/oms/sdt/deletecolor.java
+51c51
+<       new AlertDialog.Builder(this).setTitle("信息提示！").setMessage("删除成功！").setPositiveButton("关闭", null).show();
+---
+>       new AlertDialog.Builder(this).setTitle("Info！").setMessage("Deleted successfully！").setPositiveButton("Close", null).show();
+70c70
+<           new AlertDialog.Builder(this).setTitle("错误提示！").setMessage(localSQLException.getMessage()).setPositiveButton("关闭", null).show();
+---
+>           new AlertDialog.Builder(this).setTitle("Error！").setMessage(localSQLException.getMessage()).setPositiveButton("Close", null).show();
+178c178
+<     ((TextView)localObject).setText("颜色删除界面");
+---
+>     ((TextView)localObject).setText("Delete Color");
+185c185
+<     ((Button)localObject).setText("删除");
+---
+>     ((Button)localObject).setText("Delete");
+193c193
+<     ((Button)localObject).setText("返回");
+---
+>     ((Button)localObject).setText("Cancel");
+diff -r result/APP_46/App_B_46/oms/sdt/first.java result/APP_46/App_M_46/oms/sdt/first.java
+41c41
+<       new AlertDialog.Builder(this).setTitle("关于多彩手电筒").setMessage("版本：V1.1\r\n作者：文白林\r\n MSN:wen_2002@hotmail.com").setPositiveButton("关闭", null).show();
+---
+>       new AlertDialog.Builder(this).setTitle("About").setMessage("Verison：V1.1\nAuthor：wen bai lin\n MSN:wen_2002@hotmail.com").setPositiveButton("Close", null).show();
+diff -r result/APP_46/App_B_46/oms/sdt/light.java result/APP_46/App_M_46/oms/sdt/light.java
+168c168
+<           this.bt2.setText("停止变色");
+---
+>           this.bt2.setText("Stop");
+173c173
+<       this.bt2.setText("自动变色");
+---
+>       this.bt2.setText("Change");
+206c206
+<     this.bt.setText("返回");
+---
+>     this.bt.setText("Cancel");
+209c209
+<     this.bt2.setText("自动变色");
+---
+>     this.bt2.setText("Change");
+212c212
+<     this.bt3.setText("设置");
+---
+>     this.bt3.setText("Setup");
+diff -r result/APP_46/App_B_46/oms/sdt/main.java result/APP_46/App_M_46/oms/sdt/main.java
+6a7
+> import android.util.Log;
+15c16,17
+< import com.casee.adsdk.CaseeAdView;
+---
+> import com.admob.android.ads.AdView;
+> import com.admob.android.ads.SimpleAdListener;
+23c25
+<   CaseeAdView cav = null;
+---
+>   private AdView ad = null;
+53c55
+<     localHashMap.put("ItemText", "粉红色");
+---
+>     localHashMap.put("ItemText", "Pink");
+57c59
+<     localHashMap.put("ItemText", "紫色");
+---
+>     localHashMap.put("ItemText", "Purple");
+61c63
+<     localHashMap.put("ItemText", "红色");
+---
+>     localHashMap.put("ItemText", "Red");
+65c67
+<     localHashMap.put("ItemText", "绿色");
+---
+>     localHashMap.put("ItemText", "Green");
+69c71
+<     localHashMap.put("ItemText", "橙色");
+---
+>     localHashMap.put("ItemText", "Orange");
+73c75
+<     localHashMap.put("ItemText", "黄色");
+---
+>     localHashMap.put("ItemText", "Yellow");
+77c79
+<     localHashMap.put("ItemText", "蓝色");
+---
+>     localHashMap.put("ItemText", "Blue");
+81c83
+<     localHashMap.put("ItemText", "白色");
+---
+>     localHashMap.put("ItemText", "White");
+85c87
+<     localHashMap.put("ItemText", "淡紫色");
+---
+>     localHashMap.put("ItemText", "Lavender");
+89c91,144
+<     this.cav = ((CaseeAdView)findViewById(2131099660));
+---
+>     this.ad = ((AdView)findViewById(2131099660));
+>     this.ad.setAdListener(new LunarLanderListener(null));
+>   }
+>   
+>   public void onFailedToReceiveAd(AdView paramAdView)
+>   {
+>     Log.d("wbltools", "onFailedToReceiveAd");
+>   }
+>   
+>   public void onFailedToReceiveRefreshedAd(AdView paramAdView)
+>   {
+>     Log.d("wbltools", "onFailedToReceiveRefreshedAd");
+>   }
+>   
+>   public void onPause()
+>   {
+>     if (this.ad != null) {
+>       this.ad.setVisibility(4);
+>     }
+>     super.onPause();
+>   }
+>   
+>   public void onReceiveAd(AdView paramAdView)
+>   {
+>     Log.d("wbltools", "onReceiveAd");
+>   }
+>   
+>   public void onReceiveRefreshedAd(AdView paramAdView)
+>   {
+>     Log.d("Lunar", "onReceiveRefreshedAd");
+>   }
+>   
+>   public void onResume()
+>   {
+>     if (this.ad != null) {
+>       this.ad.setVisibility(0);
+>     }
+>     super.onResume();
+>   }
+>   
+>   public void onStart()
+>   {
+>     if (this.ad != null) {
+>       this.ad.setVisibility(0);
+>     }
+>     super.onStart();
+>   }
+>   
+>   public void onStop()
+>   {
+>     if (this.ad != null) {
+>       this.ad.setVisibility(4);
+>     }
+>     super.onStop();
+107a163,188
+>     }
+>   }
+>   
+>   private class LunarLanderListener
+>     extends SimpleAdListener
+>   {
+>     private LunarLanderListener() {}
+>     
+>     public void onFailedToReceiveAd(AdView paramAdView)
+>     {
+>       super.onFailedToReceiveAd(paramAdView);
+>     }
+>     
+>     public void onFailedToReceiveRefreshedAd(AdView paramAdView)
+>     {
+>       super.onFailedToReceiveRefreshedAd(paramAdView);
+>     }
+>     
+>     public void onReceiveAd(AdView paramAdView)
+>     {
+>       super.onReceiveAd(paramAdView);
+>     }
+>     
+>     public void onReceiveRefreshedAd(AdView paramAdView)
+>     {
+>       super.onReceiveRefreshedAd(paramAdView);
+diff -r result/APP_46/App_B_46/oms/sdt/multicolor.java result/APP_46/App_M_46/oms/sdt/multicolor.java
+121c121
+<         this.bt.setText("停止滚动");
+---
+>         this.bt.setText("Stop");
+126c126
+<     this.bt.setText("开始滚动");
+---
+>     this.bt.setText("Scroll");
+143c143
+<     ((Button)localObject).setText("返回");
+---
+>     ((Button)localObject).setText("Cancel");
+152c152
+<     ((Button)localObject).setText("设置");
+---
+>     ((Button)localObject).setText("Setup");
+164c164
+<     this.bt.setText("开始滚动");
+---
+>     this.bt.setText("Scroll");
+diff -r result/APP_46/App_B_46/oms/sdt/R.java result/APP_46/App_M_46/oms/sdt/R.java
+10,14c10,13
+<     public static final int keywords = 2130771970;
+<     public static final int refreshInterval = 2130771971;
+<     public static final int textColor = 2130771969;
+<     public static final int textFontSize = 2130771972;
+<     public static final int vertical = 2130771973;
+---
+>     public static final int keywords = 2130771971;
+>     public static final int primaryTextColor = 2130771969;
+>     public static final int refreshInterval = 2130771972;
+>     public static final int secondaryTextColor = 2130771970;
+76c75
+<     public static final int LinearLayout11 = 2131099659;
+---
+>     public static final int LinearLayout12 = 2131099659;
+91c90
+<     public static final int caseeAdView = 2131099660;
+---
+>     public static final int ad = 2131099660;
+127,133c126,131
+<     public static final int[] com_casee_adsdk_CaseeAdView = { 2130771968, 2130771969, 2130771970, 2130771971, 2130771972, 2130771973 };
+<     public static final int com_casee_adsdk_CaseeAdView_backgroundColor = 0;
+<     public static final int com_casee_adsdk_CaseeAdView_keywords = 2;
+<     public static final int com_casee_adsdk_CaseeAdView_refreshInterval = 3;
+<     public static final int com_casee_adsdk_CaseeAdView_textColor = 1;
+<     public static final int com_casee_adsdk_CaseeAdView_textFontSize = 4;
+<     public static final int com_casee_adsdk_CaseeAdView_vertical = 5;
+---
+>     public static final int[] com_admob_android_ads_AdView = { 2130771968, 2130771969, 2130771970, 2130771971, 2130771972 };
+>     public static final int com_admob_android_ads_AdView_backgroundColor = 0;
+>     public static final int com_admob_android_ads_AdView_keywords = 3;
+>     public static final int com_admob_android_ads_AdView_primaryTextColor = 1;
+>     public static final int com_admob_android_ads_AdView_refreshInterval = 4;
+>     public static final int com_admob_android_ads_AdView_secondaryTextColor = 2;
+diff -r result/APP_46/App_B_46/oms/sdt/settime.java result/APP_46/App_M_46/oms/sdt/settime.java
+94c94
+<       new AlertDialog.Builder(this).setTitle("信息提示！").setMessage("时间间隔设置成功！").setPositiveButton("关闭", null).show();
+---
+>       new AlertDialog.Builder(this).setTitle("Info！").setMessage("Set success！").setPositiveButton("Close", null).show();
+diff -r result/APP_46/App_B_46/oms/sdt/setupcolor.java result/APP_46/App_M_46/oms/sdt/setupcolor.java
+100c100
+<       new AlertDialog.Builder(this).setTitle("信息提示！").setMessage("保存成功！").setPositiveButton("关闭", null).show();
+---
+>       new AlertDialog.Builder(this).setTitle("Info！").setMessage("Save successfully！").setPositiveButton("Close", null).show();
+108c108
+<         new AlertDialog.Builder(this).setTitle("错误提示！").setMessage(localSQLException.getMessage()).setPositiveButton("关闭", null).show();
+---
+>         new AlertDialog.Builder(this).setTitle("Error！").setMessage(localSQLException.getMessage()).setPositiveButton("Close", null).show();
+228c228
+<       new AlertDialog.Builder(this).setTitle("信息提示！").setMessage("名字不能为空！").setPositiveButton("关闭", null).show();
+---
+>       new AlertDialog.Builder(this).setTitle("Info！").setMessage("Name can not be empty！").setPositiveButton("Close", null).show();
+232,234c232,234
+<     paramView.setTitle("信息提示！");
+<     paramView.setMessage("确定要保存吗?");
+<     paramView.setPositiveButton("确认", new DialogInterface.OnClickListener()
+---
+>     paramView.setTitle("Info");
+>     paramView.setMessage("Sure you want to save?");
+>     paramView.setPositiveButton("OK", new DialogInterface.OnClickListener()
+241c241
+<     paramView.setNegativeButton("取消", new DialogInterface.OnClickListener()
+---
+>     paramView.setNegativeButton("Cancel", new DialogInterface.OnClickListener()
+Os arquivos binários result/APP_46/App_B_46/original/AndroidManifest.xml e result/APP_46/App_M_46/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_46/App_B_46/original/META-INF/CERT.RSA e result/APP_46/App_M_46/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_46/App_B_46/original/META-INF/CERT.SF result/APP_46/App_M_46/original/META-INF/CERT.SF
+3,6c3
+< SHA1-Digest-Manifest: cfkHCMcmUJDK7VbnC75jEzcH0OA=
+< 
+< Name: com/casee/adsdk/logo.png
+< SHA1-Digest: et6JsdfKFT7mv8CzAdYvbxdKtaw=
+---
+> SHA1-Digest-Manifest: rT/KiSoNq7guB93wAXjGGYmx3PQ=
+18c15
+< SHA1-Digest: TeuQVrNX50GhVAFfL6DruPMZgFo=
+---
+> SHA1-Digest: taIE9I57elUtNbWLBu0j+ujcEGg=
+24c21
+< SHA1-Digest: kDdXpGR+qMcUaSmqCzG2riiDXeg=
+---
+> SHA1-Digest: r3onYX+AQWdnPAw3a1caQum2yjQ=
+30c27
+< SHA1-Digest: yoZjdLUoUVqzw36C5bY9uhGdAQo=
+---
+> SHA1-Digest: u4YrZTdfYgqhzMzhI5P+GCX+X2g=
+33c30
+< SHA1-Digest: 6UZXNnXbj8M5TUe+hd6z2lSc7yY=
+---
+> SHA1-Digest: 7Q6g/7y3vkpxAoc9Svs11YGZ0Z4=
+36c33
+< SHA1-Digest: g7VA3/XTnfB+58AxwfyqQ0XYZWU=
+---
+> SHA1-Digest: 69cG8D9nXF0fHbGe+q4QjeCAMDg=
+39c36
+< SHA1-Digest: 4ZzKJSqsh1GlKl5On++qL/0Or0U=
+---
+> SHA1-Digest: 6qtuBKKhASpcLF5iFsUV6cgw5YU=
+57c54
+< SHA1-Digest: NTGDV4AKLa0I1ojB84GD0UoMHPs=
+---
+> SHA1-Digest: MxnjQST0JiJBRn10IcN3730nXyg=
+60c57
+< SHA1-Digest: pWTs1JpXrT/lvfg9gsdOCaIcZds=
+---
+> SHA1-Digest: v28pmYQTSlHukPl0TQgkWDuxNTI=
+66c63
+< SHA1-Digest: W2EZvEnLcuvvljWAUJoocHroCwo=
+---
+> SHA1-Digest: ON7ekrLS1e9caTIvEG/BwM8iRs4=
+72c69
+< SHA1-Digest: Kixk5pddN7Zm0GGS4WUmD2y06V0=
+---
+> SHA1-Digest: pL4gI/YbVhwazZfaRbYvNJevMlU=
+77,79d73
+< Name: res/drawable/bt3.png
+< SHA1-Digest: oUw1FSkBrF7Z/cgyx7vVS8VUBzU=
+< 
+81a76,78
+> 
+> Name: res/drawable/bt3.png
+> SHA1-Digest: sQqwTW3HjqeY9ROuQJJGZ0KJQHQ=
+diff -r result/APP_46/App_B_46/original/META-INF/MANIFEST.MF result/APP_46/App_M_46/original/META-INF/MANIFEST.MF
+4,6d3
+< Name: com/casee/adsdk/logo.png
+< SHA1-Digest: SqlJrou3bK4bVIMlrFZj2lzoL0s=
+< 
+17c14
+< SHA1-Digest: PP/Yp88RY9q8F4Q9wJDCshDxrs0=
+---
+> SHA1-Digest: T2fyIgxykp3bFrzJocLoZ78VzpY=
+20c17
+< SHA1-Digest: Q4LVp7h/SMBhG8qDgeknC12z094=
+---
+> SHA1-Digest: /GVcQZoJnD9W+OuF1/T2520Y+cc=
+26c23
+< SHA1-Digest: Of7HWRqJR/M9QnkmlOeVVaeSLkA=
+---
+> SHA1-Digest: LZ4X05/2CnOM/ZMr0q3uul38LAA=
+32c29
+< SHA1-Digest: NlsNpDNljtjQP6pCVb7/IQiTOwU=
+---
+> SHA1-Digest: DyTZGMYGQ9pAW3+Ln2VKwlLFCAo=
+35c32
+< SHA1-Digest: M2Sf05xwABkhnutUjH9s+bblc94=
+---
+> SHA1-Digest: FpzIAnV9ulF3qvAydaSgsKWMLjo=
+38c35
+< SHA1-Digest: vxnCOolR5Trhf69kjulMUqm1h/4=
+---
+> SHA1-Digest: /VLOcm1DHOX6wSUpZwyBEs6iaLI=
+56c53
+< SHA1-Digest: rntgRrVf31cKXZIvR0WbKE2mtXM=
+---
+> SHA1-Digest: x0JUUs7Uo/iuQJ19zcaRu1eu0Y4=
+59c56
+< SHA1-Digest: zyIrkyj16wGuMc6R3bKD1wqiWUg=
+---
+> SHA1-Digest: T7ievNWv13TR9Uu/FiOUUOVnZJk=
+65c62
+< SHA1-Digest: WG7KriXaEkLJL+XGZBqlAmzj3hU=
+---
+> SHA1-Digest: U9B2zaCyxbL7qjvacGOtg03IEgI=
+71c68
+< SHA1-Digest: IZJN8HVFaPoLnqZikl9Qb8932I4=
+---
+> SHA1-Digest: QlkKN2jfKm/MmO5iks1+AT77xSQ=
+80c77
+< SHA1-Digest: u2LO7biFETaxXaYA+GxssaIeEJI=
+---
+> SHA1-Digest: H/aFBsbMzneiwVcJZUIS3S1vwMc=
+Os arquivos binários result/APP_46/App_B_46/res/drawable/bt1.png e result/APP_46/App_M_46/res/drawable/bt1.png são diferentes
+Os arquivos binários result/APP_46/App_B_46/res/drawable/bt2.png e result/APP_46/App_M_46/res/drawable/bt2.png são diferentes
+Os arquivos binários result/APP_46/App_B_46/res/drawable/bt3.png e result/APP_46/App_M_46/res/drawable/bt3.png são diferentes
+Os arquivos binários result/APP_46/App_B_46/res/drawable/bt4.png e result/APP_46/App_M_46/res/drawable/bt4.png são diferentes
+diff -r result/APP_46/App_B_46/res/layout/main.xml result/APP_46/App_M_46/res/layout/main.xml
+3c3
+<   xmlns:app="http://schemas.android.com/apk/res/oms.sdt"
+---
+>   xmlns:myapp="http://schemas.android.com/apk/res/oms.sdt"
+5,6c5,6
+<     <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout11" android:layout_width="fill_parent" android:layout_height="wrap_content">
+<         <com.casee.adsdk.CaseeAdView android:id="@id/caseeAdView" android:layout_width="fill_parent" android:layout_height="48.0px" android:layout_alignParentBottom="false" app:backgroundColor="#00000000" app:textColor="#ff0000ff" app:refreshInterval="10000" app:textFontSize="13.0" app:vertical="false" />
+---
+>     <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout12" android:layout_width="fill_parent" android:layout_height="wrap_content">
+>         <com.admob.android.ads.AdView android:id="@id/ad" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="false" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+8c8
+<     <Button android:id="@id/Button01" android:layout_width="wrap_content" android:layout_height="38.0px" android:text="返回" android:layout_below="@id/LinearLayout11" android:layout_alignParentRight="true" />
+---
+>     <Button android:id="@id/Button01" android:layout_width="wrap_content" android:layout_height="38.0px" android:text="Cancel" android:layout_below="@id/LinearLayout12" android:layout_alignParentRight="true" />
+diff -r result/APP_46/App_B_46/res/layout/settime1.xml result/APP_46/App_M_46/res/layout/settime1.xml
+4,12c4,12
+<     <TextView android:textSize="30.0sp" android:textColor="#ffff0000" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请选择时间间隔" />
+<     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10毫秒" />
+<     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50毫秒" />
+<     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100毫秒" />
+<     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200毫秒" />
+<     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="500毫秒" />
+<     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1秒" />
+<     <Button android:id="@id/Button01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="确定" />
+<     <Button android:id="@id/Button02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="返回" />
+---
+>     <TextView android:textSize="30.0sp" android:textColor="#ffff0000" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Please select the time interval" />
+>     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10ms" />
+>     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50ms" />
+>     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100ms" />
+>     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200ms" />
+>     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="500ms" />
+>     <RadioButton android:textColor="#ff0000ff" android:id="@id/RadioButton06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1s" />
+>     <Button android:id="@id/Button01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="OK" />
+>     <Button android:id="@id/Button02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cancel" />
+diff -r result/APP_46/App_B_46/res/layout/setupcolor.xml result/APP_46/App_M_46/res/layout/setupcolor.xml
+4c4
+<     <TextView android:textSize="20.0sp" android:id="@id/TextView02" android:layout_width="130.0dip" android:layout_height="40.0dip" android:text="红色值(0-255)" />
+---
+>     <TextView android:textSize="20.0sp" android:id="@id/TextView02" android:layout_width="130.0dip" android:layout_height="40.0dip" android:text="Red(0-255)" />
+8c8
+<     <TextView android:textSize="20.0sp" android:id="@id/TextView03" android:layout_width="130.0dip" android:layout_height="40.0dip" android:text="绿色值(0-255)" android:layout_below="@id/EditText01" />
+---
+>     <TextView android:textSize="20.0sp" android:id="@id/TextView03" android:layout_width="130.0dip" android:layout_height="40.0dip" android:text="Green(0-255)" android:layout_below="@id/EditText01" />
+12c12
+<     <TextView android:textSize="20.0sp" android:id="@id/TextView04" android:layout_width="130.0dip" android:layout_height="40.0dip" android:text="蓝色值(0-255)" android:layout_below="@id/EditText02" />
+---
+>     <TextView android:textSize="20.0sp" android:id="@id/TextView04" android:layout_width="130.0dip" android:layout_height="40.0dip" android:text="Blue(0-255)" android:layout_below="@id/EditText02" />
+16c16
+<     <TextView android:textSize="20.0sp" android:id="@id/TextView05" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="效果色" android:layout_below="@id/EditText03" />
+---
+>     <TextView android:textSize="20.0sp" android:id="@id/TextView05" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="Color Effects" android:layout_below="@id/EditText03" />
+18c18
+<     <TextView android:textSize="20.0sp" android:id="@id/TextView07" android:layout_width="80.0dip" android:layout_height="40.0dip" android:text="颜色名字" android:layout_below="@id/TextView06" />
+---
+>     <TextView android:textSize="20.0sp" android:id="@id/TextView07" android:layout_width="80.0dip" android:layout_height="40.0dip" android:text="Name" android:layout_below="@id/TextView06" />
+20,21c20,21
+<     <Button android:id="@id/Btsave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存" android:layout_below="@id/TextView07" android:layout_alignTop="@id/TextView07" android:layout_alignParentRight="true" />
+<     <Button android:id="@id/BtReturn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回" android:layout_below="@id/Btsave" android:layout_centerHorizontal="true" />
+---
+>     <Button android:id="@id/Btsave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save" android:layout_below="@id/TextView07" android:layout_alignTop="@id/TextView07" android:layout_alignParentRight="true" />
+>     <Button android:id="@id/BtReturn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:layout_below="@id/Btsave" android:layout_centerHorizontal="true" />
+Os arquivos binários result/APP_46/App_B_46/res/raw/sdt.db e result/APP_46/App_M_46/res/raw/sdt.db são diferentes
+diff -r result/APP_46/App_B_46/res/values/attrs.xml result/APP_46/App_M_46/res/values/attrs.xml
+4c4,5
+<     <attr name="textColor" format="color" />
+---
+>     <attr name="primaryTextColor" format="color" />
+>     <attr name="secondaryTextColor" format="color" />
+7,8d7
+<     <attr name="textFontSize" format="float" />
+<     <attr name="vertical" format="boolean" />
+diff -r result/APP_46/App_B_46/res/values/ids.xml result/APP_46/App_M_46/res/values/ids.xml
+14,15c14,15
+<     <item type="id" name="LinearLayout11" />
+<     <item type="id" name="caseeAdView" />
+---
+>     <item type="id" name="LinearLayout12" />
+>     <item type="id" name="ad" />
+diff -r result/APP_46/App_B_46/res/values/public.xml result/APP_46/App_M_46/res/values/public.xml
+4,8c4,7
+<     <public type="attr" name="textColor" id="0x7f010001" />
+<     <public type="attr" name="keywords" id="0x7f010002" />
+<     <public type="attr" name="refreshInterval" id="0x7f010003" />
+<     <public type="attr" name="textFontSize" id="0x7f010004" />
+<     <public type="attr" name="vertical" id="0x7f010005" />
+---
+>     <public type="attr" name="primaryTextColor" id="0x7f010001" />
+>     <public type="attr" name="secondaryTextColor" id="0x7f010002" />
+>     <public type="attr" name="keywords" id="0x7f010003" />
+>     <public type="attr" name="refreshInterval" id="0x7f010004" />
+60,61c59,60
+<     <public type="id" name="LinearLayout11" id="0x7f06000b" />
+<     <public type="id" name="caseeAdView" id="0x7f06000c" />
+---
+>     <public type="id" name="LinearLayout12" id="0x7f06000b" />
+>     <public type="id" name="ad" id="0x7f06000c" />
+diff -r result/APP_46/App_B_46/res/values/strings.xml result/APP_46/App_M_46/res/values/strings.xml
+4c4
+<     <string name="app_name">多彩手电筒</string>
+---
+>     <string name="app_name">Colorful flashlight</string>
+Somente em result/APP_46/App_M_46/smali/com: admob
+Somente em result/APP_46/App_B_46/smali/com: casee
+Somente em result/APP_46/App_B_46/smali/oms/sdt: colorlist$AppLayout.smali
+diff -r result/APP_46/App_B_46/smali/oms/sdt/colorlist.smali result/APP_46/App_M_46/smali/oms/sdt/colorlist.smali
+9,16d8
+< # annotations
+< .annotation system Ldalvik/annotation/MemberClasses;
+<     value = {
+<         Loms/sdt/colorlist$AppLayout;
+<     }
+< .end annotation
+< 
+< 
+83c75
+<     .line 37
+---
+>     .line 36
+86c78
+<     .line 38
+---
+>     .line 37
+115c107
+<     .line 39
+---
+>     .line 38
+120c112
+<     .line 41
+---
+>     .line 40
+127c119
+<     .line 42
+---
+>     .line 41
+134c126
+<     .line 43
+---
+>     .line 42
+141c133
+<     .line 46
+---
+>     .line 45
+144c136
+<     .line 47
+---
+>     .line 46
+147c139
+<     .line 50
+---
+>     .line 49
+150c142
+<     .line 52
+---
+>     .line 51
+155c147
+<     .line 53
+---
+>     .line 52
+158c150
+<     .line 54
+---
+>     .line 53
+165c157
+<     .line 37
+---
+>     .line 36
+177c169
+<     .line 182
+---
+>     .line 154
+180c172
+<     .line 184
+---
+>     .line 156
+184c176
+<     .line 185
+---
+>     .line 157
+194c186
+<     .line 186
+---
+>     .line 158
+198c190
+<     .line 187
+---
+>     .line 159
+202c194
+<     .line 188
+---
+>     .line 160
+206c198
+<     .line 189
+---
+>     .line 161
+210c202
+<     .line 190
+---
+>     .line 162
+214c206
+<     .line 191
+---
+>     .line 163
+218c210
+<     .line 192
+---
+>     .line 164
+222c214
+<     .line 193
+---
+>     .line 165
+228c220
+<     .line 194
+---
+>     .line 166
+231c223
+<     .line 195
+---
+>     .line 167
+238c230
+<     .line 200
+---
+>     .line 172
+241c233
+<     .line 201
+---
+>     .line 173
+247c239
+<     .line 229
+---
+>     .line 201
+250c242
+<     .line 197
+---
+>     .line 169
+260c252
+<     .line 195
+---
+>     .line 167
+265c257
+<     .line 205
+---
+>     .line 177
+277c269
+<     .line 206
+---
+>     .line 178
+288c280
+<     .line 207
+---
+>     .line 179
+299c291
+<     .line 208
+---
+>     .line 180
+310c302
+<     .line 209
+---
+>     .line 181
+321c313
+<     .line 210
+---
+>     .line 182
+332c324
+<     .line 211
+---
+>     .line 183
+343c335
+<     .line 212
+---
+>     .line 184
+358c350
+<     .line 213
+---
+>     .line 185
+373c365
+<     .line 214
+---
+>     .line 186
+386c378
+<     .line 215
+---
+>     .line 187
+399c391
+<     .line 216
+---
+>     .line 188
+402c394
+<     .line 218
+---
+>     .line 190
+413c405
+<     .line 219
+---
+>     .line 191
+420c412
+<     .line 222
+---
+>     .line 194
+432c424
+<     .line 223
+---
+>     .line 195
+445c437
+<     .line 226
+---
+>     .line 198
+448c440
+<     .line 201
+---
+>     .line 173
+460c452
+<     .line 236
+---
+>     .line 208
+466c458
+<     .line 237
+---
+>     .line 209
+493c485
+<     .line 239
+---
+>     .line 211
+501c493
+<     .line 240
+---
+>     .line 212
+511c503
+<     .line 241
+---
+>     .line 213
+523c515
+<     .line 243
+---
+>     .line 215
+534c526
+<     .line 244
+---
+>     .line 216
+540c532
+<     .line 245
+---
+>     .line 217
+549c541
+<     .line 246
+---
+>     .line 218
+558c550
+<     .line 250
+---
+>     .line 222
+561c553
+<     .line 251
+---
+>     .line 223
+564c556
+<     .line 253
+---
+>     .line 225
+579c571
+<     .line 261
+---
+>     .line 233
+586c578
+<     .line 248
+---
+>     .line 220
+602c594
+<     .line 257
+---
+>     .line 229
+614c606
+<     .line 261
+---
+>     .line 233
+627c619
+<     .line 266
+---
+>     .line 238
+632c624
+<     .line 273
+---
+>     .line 245
+636c628
+<     .line 336
+---
+>     .line 308
+639c631
+<     .line 337
+---
+>     .line 309
+647c639
+<     .line 338
+---
+>     .line 310
+655c647
+<     .line 340
+---
+>     .line 312
+676c668
+<     .line 341
+---
+>     .line 313
+683c675
+<     .line 348
+---
+>     .line 320
+689c681
+<     .line 349
+---
+>     .line 321
+694c686
+<     const-string v12, "\u591a\u5f69\u989c\u8272\u9009\u62e9:"
+---
+>     const-string v12, "Selected Color:"
+708c700
+<     const-string v12, "\u79cd"
+---
+>     const-string v12, " Types"
+720c712
+<     .line 355
+---
+>     .line 327
+726c718
+<     .line 276
+---
+>     .line 248
+732c724
+<     .line 277
+---
+>     .line 249
+737c729
+<     .line 278
+---
+>     .line 250
+743c735
+<     .line 279
+---
+>     .line 251
+746c738
+<     .line 281
+---
+>     .line 253
+751c743
+<     .line 284
+---
+>     .line 256
+758c750
+<     .line 285
+---
+>     .line 257
+763c755
+<     .line 286
+---
+>     .line 258
+769c761
+<     .line 287
+---
+>     .line 259
+772c764
+<     .line 289
+---
+>     .line 261
+777c769
+<     .line 292
+---
+>     .line 264
+784c776
+<     .line 293
+---
+>     .line 265
+789c781
+<     .line 294
+---
+>     .line 266
+795c787
+<     .line 295
+---
+>     .line 267
+798c790
+<     .line 297
+---
+>     .line 269
+803c795
+<     .line 300
+---
+>     .line 272
+808c800
+<     .line 302
+---
+>     .line 274
+822c814
+<     .line 306
+---
+>     .line 278
+830c822
+<     .line 314
+---
+>     .line 286
+839c831
+<     .line 315
+---
+>     .line 287
+845c837
+<     const-string v11, "\u4fe1\u606f\u63d0\u793a\uff01"
+---
+>     const-string v11, "Info\uff01"
+851c843
+<     const-string v11, "\u8bf7\u9009\u62e9\u5927\u4e8e\u7b49\u4e8e2\u5c0f\u4e8e\u7b49\u4e8e9\u79cd\u989c\u8272\uff01"
+---
+>     const-string v11, "Please select greater than or equal to 2 less than equal to 9 colors\uff01"
+857,858c849,850
+<     .line 316
+<     const-string v11, "\u5173\u95ed"
+---
+>     .line 288
+>     const-string v11, "Close"
+870c862
+<     .line 304
+---
+>     .line 276
+876c868
+<     .line 302
+---
+>     .line 274
+881c873
+<     .line 308
+---
+>     .line 280
+897c889
+<     .line 310
+---
+>     .line 282
+910c902
+<     .line 311
+---
+>     .line 283
+913c905
+<     .line 306
+---
+>     .line 278
+919c911
+<     .line 322
+---
+>     .line 294
+925c917
+<     .line 323
+---
+>     .line 295
+930c922
+<     .line 324
+---
+>     .line 296
+936c928
+<     .line 326
+---
+>     .line 298
+941c933
+<     .line 327
+---
+>     .line 299
+949c941
+<     .line 329
+---
+>     .line 301
+952c944
+<     .line 331
+---
+>     .line 303
+955c947
+<     .line 333
+---
+>     .line 305
+960c952
+<     .line 345
+---
+>     .line 317
+988c980
+<     .line 346
+---
+>     .line 318
+999c991
+<     .line 273
+---
+>     .line 245
+1012c1004
+<     .locals 22
+---
+>     .locals 21
+1016c1008
+<     .line 84
+---
+>     .line 56
+1019c1011
+<     .line 85
+---
+>     .line 57
+1022c1014
+<     move-result-object v17
+---
+>     move-result-object v16
+1024,1026c1016,1018
+<     .line 86
+<     .local v17, "win":Landroid/view/Window;
+<     const/16 v18, 0x400
+---
+>     .line 58
+>     .local v16, "win":Landroid/view/Window;
+>     const/16 v17, 0x400
+1028c1020
+<     const/16 v19, 0x400
+---
+>     const/16 v18, 0x400
+1030c1022
+<     invoke-virtual/range {v17 .. v19}, Landroid/view/Window;->setFlags(II)V
+---
+>     invoke-virtual/range {v16 .. v18}, Landroid/view/Window;->setFlags(II)V
+1032,1033c1024,1025
+<     .line 87
+<     const/16 v18, 0x1
+---
+>     .line 59
+>     const/16 v17, 0x1
+1037c1029
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1041,1042c1033,1034
+<     .line 89
+<     new-instance v18, Landroid/widget/LinearLayout;
+---
+>     .line 61
+>     new-instance v17, Landroid/widget/LinearLayout;
+1044c1036
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1050c1042
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1056c1048
+<     .line 90
+---
+>     .line 62
+1061c1053
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1063c1055
+<     const/16 v19, 0x1
+---
+>     const/16 v18, 0x1
+1065c1057
+<     invoke-virtual/range {v18 .. v19}, Landroid/widget/LinearLayout;->setOrientation(I)V
+---
+>     invoke-virtual/range {v17 .. v18}, Landroid/widget/LinearLayout;->setOrientation(I)V
+1067,1068c1059,1060
+<     .line 92
+<     new-instance v16, Landroid/widget/ScrollView;
+---
+>     .line 64
+>     new-instance v15, Landroid/widget/ScrollView;
+1070c1062
+<     move-object/from16 v0, v16
+---
+>     move-object v0, v15
+1076,1077c1068,1069
+<     .line 93
+<     .local v16, "sv":Landroid/widget/ScrollView;
+---
+>     .line 65
+>     .local v15, "sv":Landroid/widget/ScrollView;
+1082c1074
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1084c1076
+<     move-object/from16 v0, v16
+---
+>     move-object v0, v15
+1086c1078
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1090,1091c1082,1083
+<     .line 96
+<     new-instance v18, Landroid/widget/LinearLayout;
+---
+>     .line 68
+>     new-instance v17, Landroid/widget/LinearLayout;
+1093c1085
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1099c1091
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1105c1097
+<     .line 97
+---
+>     .line 69
+1110c1102
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1112c1104
+<     const/16 v19, 0x1
+---
+>     const/16 v18, 0x1
+1114c1106
+<     invoke-virtual/range {v18 .. v19}, Landroid/widget/LinearLayout;->setOrientation(I)V
+---
+>     invoke-virtual/range {v17 .. v18}, Landroid/widget/LinearLayout;->setOrientation(I)V
+1116,1117c1108,1109
+<     .line 99
+<     new-instance v14, Landroid/widget/RelativeLayout;
+---
+>     .line 71
+>     new-instance v13, Landroid/widget/RelativeLayout;
+1119c1111
+<     move-object v0, v14
+---
+>     move-object v0, v13
+1125,1127c1117,1119
+<     .line 100
+<     .local v14, "relativeLayout1":Landroid/widget/RelativeLayout;
+<     new-instance v18, Landroid/widget/TextView;
+---
+>     .line 72
+>     .local v13, "relativeLayout1":Landroid/widget/RelativeLayout;
+>     new-instance v17, Landroid/widget/TextView;
+1129c1121
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1135c1127
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1141c1133
+<     .line 101
+---
+>     .line 73
+1146c1138
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1148c1140
+<     const/16 v19, 0xa
+---
+>     const/16 v18, 0xa
+1150c1142
+<     invoke-virtual/range {v18 .. v19}, Landroid/widget/TextView;->setId(I)V
+---
+>     invoke-virtual/range {v17 .. v18}, Landroid/widget/TextView;->setId(I)V
+1152c1144
+<     .line 102
+---
+>     .line 74
+1157c1149
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1159c1151
+<     const/high16 v19, 0x41a00000    # 20.0f
+---
+>     const/high16 v18, 0x41a00000    # 20.0f
+1161c1153
+<     invoke-virtual/range {v18 .. v19}, Landroid/widget/TextView;->setTextSize(F)V
+---
+>     invoke-virtual/range {v17 .. v18}, Landroid/widget/TextView;->setTextSize(F)V
+1163c1155
+<     .line 103
+---
+>     .line 75
+1168c1160,1162
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+> 
+>     const/16 v18, 0xff
+1170c1164
+<     const/16 v19, 0xff
+---
+>     const/16 v19, 0x4
+1174c1168
+<     const/16 v21, 0x4
+---
+>     invoke-static/range {v18 .. v20}, Landroid/graphics/Color;->rgb(III)I
+1176c1170
+<     invoke-static/range {v19 .. v21}, Landroid/graphics/Color;->rgb(III)I
+---
+>     move-result v18
+1178c1172
+<     move-result v19
+---
+>     invoke-virtual/range {v17 .. v18}, Landroid/widget/TextView;->setTextColor(I)V
+1180c1174,1175
+<     invoke-virtual/range {v18 .. v19}, Landroid/widget/TextView;->setTextColor(I)V
+---
+>     .line 77
+>     new-instance v12, Landroid/widget/RelativeLayout$LayoutParams;
+1182,1183c1177,1178
+<     .line 105
+<     new-instance v13, Landroid/widget/RelativeLayout$LayoutParams;
+---
+>     .line 78
+>     const/16 v17, -0x2
+1185c1180
+<     .line 106
+---
+>     .line 79
+1188,1192c1183,1184
+<     .line 107
+<     const/16 v19, -0x2
+< 
+<     .line 105
+<     move-object v0, v13
+---
+>     .line 77
+>     move-object v0, v12
+1194c1186
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1196c1188
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1200,1202c1192,1194
+<     .line 108
+<     .local v13, "lptv":Landroid/widget/RelativeLayout$LayoutParams;
+<     const/16 v18, 0xa
+---
+>     .line 80
+>     .local v12, "lptv":Landroid/widget/RelativeLayout$LayoutParams;
+>     const/16 v17, 0xa
+1204c1196
+<     move-object v0, v13
+---
+>     move-object v0, v12
+1206c1198
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1210,1211c1202,1203
+<     .line 109
+<     const/16 v18, 0xe
+---
+>     .line 81
+>     const/16 v17, 0xe
+1213c1205
+<     move-object v0, v13
+---
+>     move-object v0, v12
+1215c1207
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1219c1211
+<     .line 110
+---
+>     .line 82
+1224c1216
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1226c1218
+<     move-object v0, v14
+---
+>     move-object v0, v13
+1228c1220
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1230c1222
+<     move-object v2, v13
+---
+>     move-object v2, v12
+1234,1235c1226,1227
+<     .line 113
+<     new-instance v6, Landroid/widget/Button;
+---
+>     .line 85
+>     new-instance v5, Landroid/widget/Button;
+1237c1229
+<     move-object v0, v6
+---
+>     move-object v0, v5
+1243,1245c1235,1237
+<     .line 114
+<     .local v6, "btadd":Landroid/widget/Button;
+<     const-string v18, "\u589e\u52a0\u989c\u8272"
+---
+>     .line 86
+>     .local v5, "btadd":Landroid/widget/Button;
+>     const-string v17, "Add"
+1247c1239
+<     move-object v0, v6
+---
+>     move-object v0, v5
+1249c1241
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1253,1254c1245,1246
+<     .line 116
+<     const/16 v18, 0x65
+---
+>     .line 88
+>     const/16 v17, 0x65
+1256c1248
+<     move-object v0, v6
+---
+>     move-object v0, v5
+1258c1250
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1262,1263c1254,1255
+<     .line 117
+<     move-object v0, v6
+---
+>     .line 89
+>     move-object v0, v5
+1269,1270c1261,1262
+<     .line 118
+<     new-instance v9, Landroid/widget/RelativeLayout$LayoutParams;
+---
+>     .line 90
+>     new-instance v8, Landroid/widget/RelativeLayout$LayoutParams;
+1272,1273c1264,1265
+<     .line 119
+<     const/16 v18, -0x2
+---
+>     .line 91
+>     const/16 v17, -0x2
+1275,1276c1267,1268
+<     .line 120
+<     const/16 v19, -0x2
+---
+>     .line 92
+>     const/16 v18, -0x2
+1278,1279c1270,1271
+<     .line 118
+<     move-object v0, v9
+---
+>     .line 90
+>     move-object v0, v8
+1281c1273
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1283c1275
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1287,1289c1279,1281
+<     .line 122
+<     .local v9, "lp2":Landroid/widget/RelativeLayout$LayoutParams;
+<     const/16 v18, 0x3
+---
+>     .line 94
+>     .local v8, "lp2":Landroid/widget/RelativeLayout$LayoutParams;
+>     const/16 v17, 0x3
+1291c1283
+<     const/16 v19, 0xa
+---
+>     const/16 v18, 0xa
+1293c1285
+<     move-object v0, v9
+---
+>     move-object v0, v8
+1295c1287
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1297c1289
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1301,1302c1293,1294
+<     .line 123
+<     invoke-virtual {v14, v6, v9}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+---
+>     .line 95
+>     invoke-virtual {v13, v5, v8}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+1304,1305c1296,1297
+<     .line 125
+<     new-instance v7, Landroid/widget/Button;
+---
+>     .line 97
+>     new-instance v6, Landroid/widget/Button;
+1307c1299
+<     move-object v0, v7
+---
+>     move-object v0, v6
+1313,1315c1305,1307
+<     .line 126
+<     .local v7, "btdelete":Landroid/widget/Button;
+<     const-string v18, "\u5220\u9664\u989c\u8272"
+---
+>     .line 98
+>     .local v6, "btdelete":Landroid/widget/Button;
+>     const-string v17, "Delete"
+1317c1309
+<     move-object v0, v7
+---
+>     move-object v0, v6
+1319c1311
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1323,1324c1315,1316
+<     .line 128
+<     const/16 v18, 0x66
+---
+>     .line 100
+>     const/16 v17, 0x66
+1326c1318
+<     move-object v0, v7
+---
+>     move-object v0, v6
+1328c1320
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1332,1333c1324,1325
+<     .line 129
+<     move-object v0, v7
+---
+>     .line 101
+>     move-object v0, v6
+1339,1340c1331,1332
+<     .line 130
+<     new-instance v11, Landroid/widget/RelativeLayout$LayoutParams;
+---
+>     .line 102
+>     new-instance v10, Landroid/widget/RelativeLayout$LayoutParams;
+1342,1343c1334,1335
+<     .line 131
+<     const/16 v18, -0x2
+---
+>     .line 103
+>     const/16 v17, -0x2
+1345,1346c1337,1338
+<     .line 132
+<     const/16 v19, -0x2
+---
+>     .line 104
+>     const/16 v18, -0x2
+1348,1349c1340,1341
+<     .line 130
+<     move-object v0, v11
+---
+>     .line 102
+>     move-object v0, v10
+1351c1343
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1353c1345
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1357,1359c1349,1351
+<     .line 133
+<     .local v11, "lp4":Landroid/widget/RelativeLayout$LayoutParams;
+<     const/16 v18, 0x6
+---
+>     .line 105
+>     .local v10, "lp4":Landroid/widget/RelativeLayout$LayoutParams;
+>     const/16 v17, 0x6
+1361c1353
+<     const/16 v19, 0x65
+---
+>     const/16 v18, 0x65
+1363c1355
+<     move-object v0, v11
+---
+>     move-object v0, v10
+1365c1357
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1367c1359
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1371,1372c1363,1364
+<     .line 134
+<     const/16 v18, 0x1
+---
+>     .line 106
+>     const/16 v17, 0x1
+1374c1366
+<     const/16 v19, 0x65
+---
+>     const/16 v18, 0x65
+1376c1368
+<     move-object v0, v11
+---
+>     move-object v0, v10
+1378c1370
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1380c1372
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1384,1385c1376,1377
+<     .line 135
+<     invoke-virtual {v14, v7, v11}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+---
+>     .line 107
+>     invoke-virtual {v13, v6, v10}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+1387,1388c1379,1380
+<     .line 137
+<     new-instance v5, Landroid/widget/Button;
+---
+>     .line 109
+>     new-instance v4, Landroid/widget/Button;
+1390c1382
+<     move-object v0, v5
+---
+>     move-object v0, v4
+1396,1398c1388,1390
+<     .line 138
+<     .local v5, "bt":Landroid/widget/Button;
+<     const-string v18, "\u786e\u5b9a"
+---
+>     .line 110
+>     .local v4, "bt":Landroid/widget/Button;
+>     const-string v17, "OK"
+1400c1392
+<     move-object v0, v5
+---
+>     move-object v0, v4
+1402c1394
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1406,1407c1398,1399
+<     .line 140
+<     const/16 v18, 0x67
+---
+>     .line 112
+>     const/16 v17, 0x67
+1409c1401
+<     move-object v0, v5
+---
+>     move-object v0, v4
+1411c1403
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1415,1416c1407,1408
+<     .line 141
+<     move-object v0, v5
+---
+>     .line 113
+>     move-object v0, v4
+1422,1423c1414,1415
+<     .line 142
+<     new-instance v10, Landroid/widget/RelativeLayout$LayoutParams;
+---
+>     .line 114
+>     new-instance v9, Landroid/widget/RelativeLayout$LayoutParams;
+1425,1426c1417,1418
+<     .line 143
+<     const/16 v18, -0x2
+---
+>     .line 115
+>     const/16 v17, -0x2
+1428,1429c1420,1421
+<     .line 144
+<     const/16 v19, -0x2
+---
+>     .line 116
+>     const/16 v18, -0x2
+1431,1432c1423,1424
+<     .line 142
+<     move-object v0, v10
+---
+>     .line 114
+>     move-object v0, v9
+1434c1426
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1436c1428
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1440,1442c1432,1434
+<     .line 145
+<     .local v10, "lp3":Landroid/widget/RelativeLayout$LayoutParams;
+<     const/16 v18, 0x6
+---
+>     .line 117
+>     .local v9, "lp3":Landroid/widget/RelativeLayout$LayoutParams;
+>     const/16 v17, 0x6
+1444c1436
+<     const/16 v19, 0x65
+---
+>     const/16 v18, 0x65
+1446c1438
+<     move-object v0, v10
+---
+>     move-object v0, v9
+1448c1440
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1450c1442
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1454,1455c1446,1447
+<     .line 146
+<     const/16 v18, 0x1
+---
+>     .line 118
+>     const/16 v17, 0x1
+1457c1449
+<     const/16 v19, 0x66
+---
+>     const/16 v18, 0x66
+1459c1451
+<     move-object v0, v10
+---
+>     move-object v0, v9
+1461c1453
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1463c1455
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1467,1468c1459,1460
+<     .line 147
+<     invoke-virtual {v14, v5, v10}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+---
+>     .line 119
+>     invoke-virtual {v13, v4, v9}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+1470,1471c1462,1463
+<     .line 149
+<     new-instance v8, Landroid/widget/Button;
+---
+>     .line 121
+>     new-instance v7, Landroid/widget/Button;
+1473c1465
+<     move-object v0, v8
+---
+>     move-object v0, v7
+1479,1481c1471,1473
+<     .line 150
+<     .local v8, "btreturn":Landroid/widget/Button;
+<     const-string v18, "\u8fd4\u56de"
+---
+>     .line 122
+>     .local v7, "btreturn":Landroid/widget/Button;
+>     const-string v17, "Cancel"
+1483c1475
+<     move-object v0, v8
+---
+>     move-object v0, v7
+1485c1477
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1489,1490c1481,1482
+<     .line 152
+<     const/16 v18, 0x64
+---
+>     .line 124
+>     const/16 v17, 0x64
+1492c1484
+<     move-object v0, v8
+---
+>     move-object v0, v7
+1494c1486
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1498,1499c1490,1491
+<     .line 153
+<     move-object v0, v8
+---
+>     .line 125
+>     move-object v0, v7
+1505,1506c1497,1498
+<     .line 154
+<     new-instance v12, Landroid/widget/RelativeLayout$LayoutParams;
+---
+>     .line 126
+>     new-instance v11, Landroid/widget/RelativeLayout$LayoutParams;
+1508,1509c1500,1501
+<     .line 155
+<     const/16 v18, -0x2
+---
+>     .line 127
+>     const/16 v17, -0x2
+1511,1512c1503,1504
+<     .line 156
+<     const/16 v19, -0x2
+---
+>     .line 128
+>     const/16 v18, -0x2
+1514,1515c1506,1507
+<     .line 154
+<     move-object v0, v12
+---
+>     .line 126
+>     move-object v0, v11
+1517c1509
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1519c1511
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1523,1525c1515,1517
+<     .line 157
+<     .local v12, "lp5":Landroid/widget/RelativeLayout$LayoutParams;
+<     const/16 v18, 0x6
+---
+>     .line 129
+>     .local v11, "lp5":Landroid/widget/RelativeLayout$LayoutParams;
+>     const/16 v17, 0x6
+1527c1519
+<     const/16 v19, 0x65
+---
+>     const/16 v18, 0x65
+1529c1521
+<     move-object v0, v12
+---
+>     move-object v0, v11
+1531c1523
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1533c1525
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1537,1538c1529,1530
+<     .line 158
+<     const/16 v18, 0x1
+---
+>     .line 130
+>     const/16 v17, 0x1
+1540c1532
+<     const/16 v19, 0x67
+---
+>     const/16 v18, 0x67
+1542c1534
+<     move-object v0, v12
+---
+>     move-object v0, v11
+1544c1536
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1546c1538
+<     move/from16 v2, v19
+---
+>     move/from16 v2, v18
+1550,1551c1542,1543
+<     .line 159
+<     invoke-virtual {v14, v8, v12}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+---
+>     .line 131
+>     invoke-virtual {v13, v7, v11}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+1553c1545
+<     .line 162
+---
+>     .line 134
+1556c1548
+<     move-result-object v18
+---
+>     move-result-object v17
+1558c1550
+<     invoke-virtual/range {v18 .. v18}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+---
+>     invoke-virtual/range {v17 .. v17}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+1560c1552
+<     move-result-object v15
+---
+>     move-result-object v14
+1562,1564c1554,1556
+<     .line 163
+<     .local v15, "resources":Landroid/content/res/Resources;
+<     const/high16 v18, 0x7f020000
+---
+>     .line 135
+>     .local v14, "resources":Landroid/content/res/Resources;
+>     const/high16 v17, 0x7f020000
+1566c1558
+<     move-object v0, v15
+---
+>     move-object v0, v14
+1568c1560
+<     move/from16 v1, v18
+---
+>     move/from16 v1, v17
+1574c1566
+<     .line 164
+---
+>     .line 136
+1580c1572
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1582c1574
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1588,1626c1580
+<     .line 165
+<     new-instance v4, Loms/sdt/colorlist$AppLayout;
+< 
+<     move-object v0, v4
+< 
+<     move-object/from16 v1, p0
+< 
+<     move-object/from16 v2, p0
+< 
+<     invoke-direct {v0, v1, v2}, Loms/sdt/colorlist$AppLayout;-><init>(Loms/sdt/colorlist;Landroid/content/Context;)V
+< 
+<     .line 166
+<     .local v4, "app":Loms/sdt/colorlist$AppLayout;
+<     invoke-virtual {v4}, Loms/sdt/colorlist$AppLayout;->init()V
+< 
+<     .line 167
+<     move-object/from16 v0, p0
+< 
+<     iget-object v0, v0, Loms/sdt/colorlist;->linearLayoutTop:Landroid/widget/LinearLayout;
+< 
+<     move-object/from16 v18, v0
+< 
+<     new-instance v19, Landroid/widget/LinearLayout$LayoutParams;
+< 
+<     const/16 v20, -0x1
+< 
+<     const/16 v21, -0x2
+< 
+<     invoke-direct/range {v19 .. v21}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+< 
+<     move-object/from16 v0, v18
+< 
+<     move-object v1, v4
+< 
+<     move-object/from16 v2, v19
+< 
+<     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+< 
+<     .line 168
+---
+>     .line 140
+1631c1585
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1633c1587
+<     new-instance v19, Landroid/widget/LinearLayout$LayoutParams;
+---
+>     new-instance v18, Landroid/widget/LinearLayout$LayoutParams;
+1635c1589
+<     const/16 v20, -0x1
+---
+>     const/16 v19, -0x1
+1637c1591
+<     const/16 v21, -0x2
+---
+>     const/16 v20, -0x2
+1639c1593
+<     invoke-direct/range {v19 .. v21}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+---
+>     invoke-direct/range {v18 .. v20}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+1641c1595
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1643c1597
+<     move-object v1, v14
+---
+>     move-object v1, v13
+1645c1599
+<     move-object/from16 v2, v19
+---
+>     move-object/from16 v2, v18
+1649,1650c1603,1604
+<     .line 171
+<     const/16 v18, 0x0
+---
+>     .line 143
+>     const/16 v17, 0x0
+1652c1606
+<     move/from16 v0, v18
+---
+>     move/from16 v0, v17
+1658c1612
+<     .line 172
+---
+>     .line 144
+1661c1615
+<     move-result-object v18
+---
+>     move-result-object v17
+1663c1617
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1669c1623
+<     .line 173
+---
+>     .line 145
+1672c1626
+<     .line 174
+---
+>     .line 146
+1677c1631
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1679c1633
+<     new-instance v19, Ljava/lang/StringBuilder;
+---
+>     new-instance v18, Ljava/lang/StringBuilder;
+1681c1635
+<     const-string v20, "\u591a\u5f69\u989c\u8272\u9009\u62e9:"
+---
+>     const-string v19, "Selected Color:"
+1683c1637
+<     invoke-direct/range {v19 .. v20}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+---
+>     invoke-direct/range {v18 .. v19}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+1689c1643
+<     move/from16 v20, v0
+---
+>     move/from16 v19, v0
+1691c1645
+<     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+---
+>     invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+1693c1647
+<     move-result-object v20
+---
+>     move-result-object v19
+1695c1649
+<     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+1697c1651
+<     move-result-object v19
+---
+>     move-result-object v18
+1699c1653
+<     const-string v20, "\u79cd"
+---
+>     const-string v19, " Types"
+1701c1655
+<     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+---
+>     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+1703c1657
+<     move-result-object v19
+---
+>     move-result-object v18
+1705c1659
+<     invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+---
+>     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+1707c1661
+<     move-result-object v19
+---
+>     move-result-object v18
+1709c1663
+<     invoke-virtual/range {v18 .. v19}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+---
+>     invoke-virtual/range {v17 .. v18}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+1711c1665
+<     .line 175
+---
+>     .line 147
+1716c1670
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1718c1672
+<     move-object/from16 v0, v16
+---
+>     move-object v0, v15
+1720c1674
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1724c1678
+<     .line 176
+---
+>     .line 148
+1729c1683
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1731c1685
+<     new-instance v19, Landroid/widget/LinearLayout$LayoutParams;
+---
+>     new-instance v18, Landroid/widget/LinearLayout$LayoutParams;
+1733c1687
+<     const/16 v20, -0x1
+---
+>     const/16 v19, -0x1
+1735c1689
+<     const/16 v21, -0x2
+---
+>     const/16 v20, -0x2
+1737c1691
+<     invoke-direct/range {v19 .. v21}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+---
+>     invoke-direct/range {v18 .. v20}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+1739c1693
+<     move-object/from16 v0, v18
+---
+>     move-object/from16 v0, v17
+1741c1695
+<     move-object/from16 v1, v16
+---
+>     move-object v1, v15
+1743c1697
+<     move-object/from16 v2, v19
+---
+>     move-object/from16 v2, v18
+1747c1701
+<     .line 177
+---
+>     .line 149
+1752c1706
+<     move-object/from16 v18, v0
+---
+>     move-object/from16 v17, v0
+1756c1710
+<     move-object/from16 v1, v18
+---
+>     move-object/from16 v1, v17
+1760c1714
+<     .line 178
+---
+>     .line 150
+diff -r result/APP_46/App_B_46/smali/oms/sdt/deletecolor.smali result/APP_46/App_M_46/smali/oms/sdt/deletecolor.smali
+124c124
+<     const-string v8, "\u5173\u95ed"
+---
+>     const-string v8, "Close"
+148c148
+<     const-string v5, "\u4fe1\u606f\u63d0\u793a\uff01"
+---
+>     const-string v5, "Info\uff01"
+154c154
+<     const-string v5, "\u5220\u9664\u6210\u529f\uff01"
+---
+>     const-string v5, "Deleted successfully\uff01"
+161c161
+<     const-string v5, "\u5173\u95ed"
+---
+>     const-string v5, "Close"
+262c262
+<     const-string v5, "\u9519\u8bef\u63d0\u793a\uff01"
+---
+>     const-string v5, "Error\uff01"
+277c277
+<     const-string v5, "\u5173\u95ed"
+---
+>     const-string v5, "Close"
+833c833
+<     const-string v9, "\u989c\u8272\u5220\u9664\u754c\u9762"
+---
+>     const-string v9, "Delete Color"
+875c875
+<     const-string v9, "\u5220\u9664"
+---
+>     const-string v9, "Delete"
+922c922
+<     const-string v9, "\u8fd4\u56de"
+---
+>     const-string v9, "Cancel"
+diff -r result/APP_46/App_B_46/smali/oms/sdt/first.smali result/APP_46/App_M_46/smali/oms/sdt/first.smali
+86c86
+<     const-string v3, "\u5173\u4e8e\u591a\u5f69\u624b\u7535\u7b52"
+---
+>     const-string v3, "About"
+92c92
+<     const-string v3, "\u7248\u672c\uff1aV1.1\r\n\u4f5c\u8005\uff1a\u6587\u767d\u6797\r\n MSN:wen_2002@hotmail.com"
+---
+>     const-string v3, "Verison\uff1aV1.1\nAuthor\uff1awen bai lin\n MSN:wen_2002@hotmail.com"
+99c99
+<     const-string v3, "\u5173\u95ed"
+---
+>     const-string v3, "Close"
+diff -r result/APP_46/App_B_46/smali/oms/sdt/light.smali result/APP_46/App_M_46/smali/oms/sdt/light.smali
+501c501
+<     const-string v4, "\u505c\u6b62\u53d8\u8272"
+---
+>     const-string v4, "Stop"
+519c519
+<     const-string v4, "\u81ea\u52a8\u53d8\u8272"
+---
+>     const-string v4, "Change"
+800c800
+<     const-string v4, "\u8fd4\u56de"
+---
+>     const-string v4, "Cancel"
+835c835
+<     const-string v4, "\u81ea\u52a8\u53d8\u8272"
+---
+>     const-string v4, "Change"
+870c870
+<     const-string v4, "\u8bbe\u7f6e"
+---
+>     const-string v4, "Setup"
+diff -r result/APP_46/App_B_46/smali/oms/sdt/main$ItemClickListener.smali result/APP_46/App_M_46/smali/oms/sdt/main$ItemClickListener.smali
+36c36
+<     .line 94
+---
+>     .line 97
+62c62
+<     .line 103
+---
+>     .line 106
+70c70
+<     .line 105
+---
+>     .line 108
+84c84
+<     .line 107
+---
+>     .line 110
+89c89
+<     .line 109
+---
+>     .line 112
+97c97
+<     .line 110
+---
+>     .line 113
+102c102
+<     .line 111
+---
+>     .line 114
+108c108
+<     .line 112
+---
+>     .line 115
+111c111
+<     .line 113
+---
+>     .line 116
+116c116
+<     .line 115
+---
+>     .line 118
+121c121
+<     .line 116
+---
+>     .line 119
+Somente em result/APP_46/App_M_46/smali/oms/sdt: main$LunarLanderListener.smali
+diff -r result/APP_46/App_B_46/smali/oms/sdt/main.smali result/APP_46/App_M_46/smali/oms/sdt/main.smali
+12c12,13
+<         Loms/sdt/main$ItemClickListener;
+---
+>         Loms/sdt/main$ItemClickListener;,
+>         Loms/sdt/main$LunarLanderListener;
+18c19
+< .field cav:Lcom/casee/adsdk/CaseeAdView;
+---
+> .field private ad:Lcom/admob/android/ads/AdView;
+32c33
+<     iput-object v0, p0, Loms/sdt/main;->cav:Lcom/casee/adsdk/CaseeAdView;
+---
+>     iput-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+45c46
+<     .line 121
+---
+>     .line 124
+52c53
+<     .line 131
+---
+>     .line 134
+56c57
+<     .line 124
+---
+>     .line 127
+62c63
+<     .line 125
+---
+>     .line 128
+68c69
+<     .line 126
+---
+>     .line 129
+71c72
+<     .line 128
+---
+>     .line 131
+76c77
+<     .line 121
+---
+>     .line 124
+204c205
+<     const-string v6, "\u7c89\u7ea2\u8272"
+---
+>     const-string v6, "Pink"
+231c232
+<     const-string v6, "\u7d2b\u8272"
+---
+>     const-string v6, "Purple"
+258c259
+<     const-string v6, "\u7ea2\u8272"
+---
+>     const-string v6, "Red"
+285c286
+<     const-string v6, "\u7eff\u8272"
+---
+>     const-string v6, "Green"
+312c313
+<     const-string v6, "\u6a59\u8272"
+---
+>     const-string v6, "Orange"
+345c346
+<     const-string v6, "\u9ec4\u8272"
+---
+>     const-string v6, "Yellow"
+388c389
+<     const-string v6, "\u84dd\u8272"
+---
+>     const-string v6, "Blue"
+431c432
+<     const-string v6, "\u767d\u8272"
+---
+>     const-string v6, "White"
+474c475
+<     const-string v6, "\u6de1\u7d2b\u8272"
+---
+>     const-string v6, "Lavender"
+553c554
+<     check-cast p1, Lcom/casee/adsdk/CaseeAdView;
+---
+>     check-cast p1, Lcom/admob/android/ads/AdView;
+559c560
+<     iput-object v0, v1, Loms/sdt/main;->cav:Lcom/casee/adsdk/CaseeAdView;
+---
+>     iput-object v0, v1, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+561a563,584
+>     move-object/from16 v0, p0
+> 
+>     iget-object v0, v0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     move-object v4, v0
+> 
+>     new-instance v5, Loms/sdt/main$LunarLanderListener;
+> 
+>     .end local v5    # "lstImageItem":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;>;"
+>     const/4 v6, 0x0
+> 
+>     move-object v0, v5
+> 
+>     move-object/from16 v1, p0
+> 
+>     move-object v2, v6
+> 
+>     invoke-direct {v0, v1, v2}, Loms/sdt/main$LunarLanderListener;-><init>(Loms/sdt/main;Loms/sdt/main$LunarLanderListener;)V
+> 
+>     invoke-virtual {v4, v5}, Lcom/admob/android/ads/AdView;->setAdListener(Lcom/admob/android/ads/AdListener;)V
+> 
+>     .line 94
+571a595,754
+> .end method
+> 
+> .method public onFailedToReceiveAd(Lcom/admob/android/ads/AdView;)V
+>     .locals 2
+>     .param p1, "adView"    # Lcom/admob/android/ads/AdView;
+> 
+>     .prologue
+>     .line 197
+>     const-string v0, "wbltools"
+> 
+>     const-string v1, "onFailedToReceiveAd"
+> 
+>     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+> 
+>     .line 198
+>     return-void
+> .end method
+> 
+> .method public onFailedToReceiveRefreshedAd(Lcom/admob/android/ads/AdView;)V
+>     .locals 2
+>     .param p1, "adView"    # Lcom/admob/android/ads/AdView;
+> 
+>     .prologue
+>     .line 201
+>     const-string v0, "wbltools"
+> 
+>     const-string v1, "onFailedToReceiveRefreshedAd"
+> 
+>     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+> 
+>     .line 202
+>     return-void
+> .end method
+> 
+> .method public onPause()V
+>     .locals 2
+> 
+>     .prologue
+>     .line 136
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     if-eqz v0, :cond_0
+> 
+>     .line 138
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     const/4 v1, 0x4
+> 
+>     invoke-virtual {v0, v1}, Lcom/admob/android/ads/AdView;->setVisibility(I)V
+> 
+>     .line 140
+>     :cond_0
+>     invoke-super {p0}, Landroid/app/Activity;->onPause()V
+> 
+>     .line 141
+>     return-void
+> .end method
+> 
+> .method public onReceiveAd(Lcom/admob/android/ads/AdView;)V
+>     .locals 2
+>     .param p1, "adView"    # Lcom/admob/android/ads/AdView;
+> 
+>     .prologue
+>     .line 206
+>     const-string v0, "wbltools"
+> 
+>     const-string v1, "onReceiveAd"
+> 
+>     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+> 
+>     .line 207
+>     return-void
+> .end method
+> 
+> .method public onReceiveRefreshedAd(Lcom/admob/android/ads/AdView;)V
+>     .locals 2
+>     .param p1, "adView"    # Lcom/admob/android/ads/AdView;
+> 
+>     .prologue
+>     .line 210
+>     const-string v0, "Lunar"
+> 
+>     const-string v1, "onReceiveRefreshedAd"
+> 
+>     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+> 
+>     .line 211
+>     return-void
+> .end method
+> 
+> .method public onResume()V
+>     .locals 2
+> 
+>     .prologue
+>     .line 162
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     if-eqz v0, :cond_0
+> 
+>     .line 164
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     const/4 v1, 0x0
+> 
+>     invoke-virtual {v0, v1}, Lcom/admob/android/ads/AdView;->setVisibility(I)V
+> 
+>     .line 166
+>     :cond_0
+>     invoke-super {p0}, Landroid/app/Activity;->onResume()V
+> 
+>     .line 167
+>     return-void
+> .end method
+> 
+> .method public onStart()V
+>     .locals 2
+> 
+>     .prologue
+>     .line 153
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     if-eqz v0, :cond_0
+> 
+>     .line 155
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     const/4 v1, 0x0
+> 
+>     invoke-virtual {v0, v1}, Lcom/admob/android/ads/AdView;->setVisibility(I)V
+> 
+>     .line 157
+>     :cond_0
+>     invoke-super {p0}, Landroid/app/Activity;->onStart()V
+> 
+>     .line 158
+>     return-void
+> .end method
+> 
+> .method public onStop()V
+>     .locals 2
+> 
+>     .prologue
+>     .line 144
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     if-eqz v0, :cond_0
+> 
+>     .line 146
+>     iget-object v0, p0, Loms/sdt/main;->ad:Lcom/admob/android/ads/AdView;
+> 
+>     const/4 v1, 0x4
+> 
+>     invoke-virtual {v0, v1}, Lcom/admob/android/ads/AdView;->setVisibility(I)V
+> 
+>     .line 148
+>     :cond_0
+>     invoke-super {p0}, Landroid/app/Activity;->onStop()V
+> 
+>     .line 149
+>     return-void
+diff -r result/APP_46/App_B_46/smali/oms/sdt/multicolor.smali result/APP_46/App_M_46/smali/oms/sdt/multicolor.smali
+280c280
+<     const-string v4, "\u505c\u6b62\u6eda\u52a8"
+---
+>     const-string v4, "Stop"
+298c298
+<     const-string v4, "\u5f00\u59cb\u6eda\u52a8"
+---
+>     const-string v4, "Scroll"
+448c448
+<     const-string v3, "\u8fd4\u56de"
+---
+>     const-string v3, "Cancel"
+541c541
+<     const-string v3, "\u8bbe\u7f6e"
+---
+>     const-string v3, "Setup"
+653c653
+<     const-string v4, "\u5f00\u59cb\u6eda\u52a8"
+---
+>     const-string v4, "Scroll"
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$attr.smali result/APP_46/App_M_46/smali/oms/sdt/R$attr.smali
+20c20
+< .field public static final keywords:I = 0x7f010002
+---
+> .field public static final keywords:I = 0x7f010003
+22c22
+< .field public static final refreshInterval:I = 0x7f010003
+---
+> .field public static final primaryTextColor:I = 0x7f010001
+24c24
+< .field public static final textColor:I = 0x7f010001
+---
+> .field public static final refreshInterval:I = 0x7f010004
+26,28c26
+< .field public static final textFontSize:I = 0x7f010004
+< 
+< .field public static final vertical:I = 0x7f010005
+---
+> .field public static final secondaryTextColor:I = 0x7f010002
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$drawable.smali result/APP_46/App_M_46/smali/oms/sdt/R$drawable.smali
+82c82
+<     .line 63
+---
+>     .line 56
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$id.smali result/APP_46/App_M_46/smali/oms/sdt/R$id.smali
+58c58
+< .field public static final LinearLayout11:I = 0x7f06000b
+---
+> .field public static final LinearLayout12:I = 0x7f06000b
+88c88
+< .field public static final caseeAdView:I = 0x7f06000c
+---
+> .field public static final ad:I = 0x7f06000c
+96c96
+<     .line 94
+---
+>     .line 87
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$layout.smali result/APP_46/App_M_46/smali/oms/sdt/R$layout.smali
+40c40
+<     .line 132
+---
+>     .line 125
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$raw.smali result/APP_46/App_M_46/smali/oms/sdt/R$raw.smali
+26c26
+<     .line 142
+---
+>     .line 135
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$string.smali result/APP_46/App_M_46/smali/oms/sdt/R$string.smali
+28c28
+<     .line 145
+---
+>     .line 138
+diff -r result/APP_46/App_B_46/smali/oms/sdt/R$styleable.smali result/APP_46/App_M_46/smali/oms/sdt/R$styleable.smali
+18c18
+< .field public static final com_casee_adsdk_CaseeAdView:[I
+---
+> .field public static final com_admob_android_ads_AdView:[I
+20c20
+< .field public static final com_casee_adsdk_CaseeAdView_backgroundColor:I = 0x0
+---
+> .field public static final com_admob_android_ads_AdView_backgroundColor:I = 0x0
+22c22
+< .field public static final com_casee_adsdk_CaseeAdView_keywords:I = 0x2
+---
+> .field public static final com_admob_android_ads_AdView_keywords:I = 0x3
+24c24
+< .field public static final com_casee_adsdk_CaseeAdView_refreshInterval:I = 0x3
+---
+> .field public static final com_admob_android_ads_AdView_primaryTextColor:I = 0x1
+26c26
+< .field public static final com_casee_adsdk_CaseeAdView_textColor:I = 0x1
+---
+> .field public static final com_admob_android_ads_AdView_refreshInterval:I = 0x4
+28,30c28
+< .field public static final com_casee_adsdk_CaseeAdView_textFontSize:I = 0x4
+< 
+< .field public static final com_casee_adsdk_CaseeAdView_vertical:I = 0x5
+---
+> .field public static final com_admob_android_ads_AdView_secondaryTextColor:I = 0x2
+38,39c36,37
+<     .line 170
+<     const/4 v0, 0x6
+---
+>     .line 161
+>     const/4 v0, 0x5
+45c43
+<     sput-object v0, Loms/sdt/R$styleable;->com_casee_adsdk_CaseeAdView:[I
+---
+>     sput-object v0, Loms/sdt/R$styleable;->com_admob_android_ads_AdView:[I
+47c45
+<     .line 149
+---
+>     .line 142
+50c48
+<     .line 170
+---
+>     .line 161
+60d57
+<         0x7f010005
+68c65
+<     .line 149
+---
+>     .line 142
+diff -r result/APP_46/App_B_46/smali/oms/sdt/settime.smali result/APP_46/App_M_46/smali/oms/sdt/settime.smali
+313c313
+<     const-string v5, "\u4fe1\u606f\u63d0\u793a\uff01"
+---
+>     const-string v5, "Info\uff01"
+319c319
+<     const-string v5, "\u65f6\u95f4\u95f4\u9694\u8bbe\u7f6e\u6210\u529f\uff01"
+---
+>     const-string v5, "Set success\uff01"
+326c326
+<     const-string v5, "\u5173\u95ed"
+---
+>     const-string v5, "Close"
+diff -r result/APP_46/App_B_46/smali/oms/sdt/setupcolor.smali result/APP_46/App_M_46/smali/oms/sdt/setupcolor.smali
+148c148
+<     const-string v7, "\u5173\u95ed"
+---
+>     const-string v7, "Close"
+317c317
+<     const-string v4, "\u4fe1\u606f\u63d0\u793a\uff01"
+---
+>     const-string v4, "Info\uff01"
+323c323
+<     const-string v4, "\u4fdd\u5b58\u6210\u529f\uff01"
+---
+>     const-string v4, "Save successfully\uff01"
+330c330
+<     const-string v4, "\u5173\u95ed"
+---
+>     const-string v4, "Close"
+363c363
+<     const-string v4, "\u9519\u8bef\u63d0\u793a\uff01"
+---
+>     const-string v4, "Error\uff01"
+378c378
+<     const-string v4, "\u5173\u95ed"
+---
+>     const-string v4, "Close"
+1203c1203
+<     const-string v3, "\u4fe1\u606f\u63d0\u793a\uff01"
+---
+>     const-string v3, "Info\uff01"
+1209c1209
+<     const-string v3, "\u540d\u5b57\u4e0d\u80fd\u4e3a\u7a7a\uff01"
+---
+>     const-string v3, "Name can not be empty\uff01"
+1216c1216
+<     const-string v3, "\u5173\u95ed"
+---
+>     const-string v3, "Close"
+1236c1236
+<     const-string v2, "\u4fe1\u606f\u63d0\u793a\uff01"
+---
+>     const-string v2, "Info"
+1241c1241
+<     const-string v2, "\u786e\u5b9a\u8981\u4fdd\u5b58\u5417?"
+---
+>     const-string v2, "Sure you want to save?"
+1246c1246
+<     const-string v2, "\u786e\u8ba4"
+---
+>     const-string v2, "OK"
+1255c1255
+<     const-string v2, "\u53d6\u6d88"
+---
+>     const-string v2, "Cancel"
+Somente em result/APP_46/App_B_46/: unknown

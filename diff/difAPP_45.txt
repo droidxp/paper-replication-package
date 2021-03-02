@@ -1,0 +1,116 @@
+diff -r result/APP_45/App_B_45/AndroidManifest.xml result/APP_45/App_M_45/AndroidManifest.xml
+9c9
+<         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14d71e3be5f356"/>
+---
+>         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14caff85a2dd0b"/>
+20a21,23
+>         <meta-data android:name="DOMOB_PID" android:value="56OJyLUouM9vExGpQ+"/>
+>         <meta-data android:name="DOMOB_TEST_MODE" android:value="false"/>
+>         <activity android:name="cn.domob.android.ads.DomobActivity" android:theme="@android:style/Theme.Translucent"/>
+23a27,28
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+24a30
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+diff -r result/APP_45/App_B_45/apktool.yml result/APP_45/App_M_45/apktool.yml
+2c2
+< apkFileName: Bapp45-6B619169A296ED3F388AB1FE0196B40922AE7101A7933B6CECB74949ECBDD6CB.apk
+---
+> apkFileName: Mapp45-9F75AB9C9E77CC78803DA994398D35D62BB0AA884921AE31E0481AB73CAF5FF0.apk
+5d4
+< - resources.arsc
+Somente em result/APP_45/App_M_45/: cn
+Os arquivos binários result/APP_45/App_B_45/original/AndroidManifest.xml e result/APP_45/App_M_45/original/AndroidManifest.xml são diferentes
+Somente em result/APP_45/App_B_45/original/META-INF: ANDROID1.RSA
+Somente em result/APP_45/App_B_45/original/META-INF: ANDROID1.SF
+Somente em result/APP_45/App_M_45/original/META-INF: CERT.RSA
+Somente em result/APP_45/App_M_45/original/META-INF: CERT.SF
+diff -r result/APP_45/App_B_45/original/META-INF/MANIFEST.MF result/APP_45/App_M_45/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+---
+> Created-By: 1.0 (Android SignApk)
+5c5
+< SHA1-Digest: ylR2BbD9QoQrQbwk55fHV4W/PoU=
+---
+> SHA1-Digest: /1NVBu75rlJIO5Ju+Q3nyMnWqx4=
+14c14
+< SHA1-Digest: CnwHRrRkQHVZcQilxlMQeWiCCoI=
+---
+> SHA1-Digest: bHSc+mT2Q88PKXr2/xePHFFeAxI=
+23c23
+< SHA1-Digest: r28zh9gAIOBmtGL72C+HwezMrds=
+---
+> SHA1-Digest: byoVUVMg4X0Tt0njhHDYKQkujN8=
+32c32
+< SHA1-Digest: gnuE3iwl+/tlMKMabkLWiN+HOjg=
+---
+> SHA1-Digest: iQqK2aalExbN+LpgnHCYWhY+zvg=
+diff -r result/APP_45/App_B_45/res/layout/main.xml result/APP_45/App_M_45/res/layout/main.xml
+4c4,5
+<   xmlns:app="http://schemas.android.com/apk/res/com.workpail.basketballthrow">
+---
+>   xmlns:app="http://schemas.android.com/apk/res/com.workpail.basketballthrow"
+>   xmlns:myapp="http://schemas.android.com/apk/res/com.workpail.basketballthrow">
+13,14c14,16
+<             <RelativeLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-50.0dip">
+<                 <Button android:id="@id/btn_back_from_how_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Back" />
+---
+>             <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-50.0dip">
+>                 <Button android:id="@id/btn_back_from_how_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="返回" />
+>                 <cn.domob.android.ads.DomobAdView android:id="@id/domobAd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/btn_back_from_how_to" myapp:keywords="game" myapp:refreshInterval="20" />
+22c24,25
+<                 <Button android:id="@id/btn_back_from_privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Back" />
+---
+>                 <Button android:id="@id/btn_back_from_privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="返回" />
+>                 <cn.domob.android.ads.DomobAdView android:id="@id/domobAd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/btn_back_from_privacy" myapp:keywords="game" myapp:refreshInterval="20" />
+28c31,32
+<                 <com.admob.android.ads.AdView android:id="@id/ad" android:layout_width="fill_parent" android:layout_height="wrap_content" app:backgroundColor="#ff000000" app:primaryTextColor="#ffffffff" app:secondaryTextColor="#ffcccccc" app:keywords="Android Basketball sports Game" />
+---
+>                 <com.admob.android.ads.AdView android:id="@id/ad" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" myapp:keywords="Android Basketball sports Game" />
+>                 <cn.domob.android.ads.DomobAdView android:id="@id/domobAd" android:layout_width="fill_parent" android:layout_height="wrap_content" myapp:keywords="game" myapp:refreshInterval="20" />
+31,33c35,37
+<                 <Button android:id="@id/btn_play_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play Again" />
+<                 <Button android:textColor="#ff77b341" android:id="@id/btn_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rate this app" android:layout_toRightOf="@id/btn_play_again" />
+<                 <Button android:id="@id/btn_home_screen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home Screen" android:layout_toRightOf="@id/btn_rate" />
+---
+>                 <Button android:id="@id/btn_play_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="再来一次" />
+>                 <Button android:textColor="#ff77b341" android:id="@id/btn_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="评价这个游戏" android:layout_toRightOf="@id/btn_play_again" />
+>                 <Button android:id="@id/btn_home_screen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="回到封面" android:layout_toRightOf="@id/btn_rate" />
+40c44,45
+<                 <com.admob.android.ads.AdView android:id="@id/ad2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:backgroundColor="#ff000000" app:primaryTextColor="#ffffffff" app:secondaryTextColor="#ffcccccc" app:keywords="Android Basketball sports Game" />
+---
+>                 <com.admob.android.ads.AdView android:id="@id/ad2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" myapp:keywords="Android Basketball sports Game" />
+>                 <cn.domob.android.ads.DomobAdView android:id="@id/domobAd" android:layout_width="fill_parent" android:layout_height="wrap_content" myapp:keywords="game" myapp:refreshInterval="20" />
+43,45c48,50
+<                 <Button android:id="@id/btn_play" android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Play" />
+<                 <Button android:id="@id/btn_play_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 min set time" android:layout_toRightOf="@id/btn_play" />
+<                 <Button android:id="@id/btn_play_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4 mins set time" android:layout_toRightOf="@id/btn_play_1" />
+---
+>                 <Button android:id="@id/btn_play" android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="开始" />
+>                 <Button android:id="@id/btn_play_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 分钟时间" android:layout_toRightOf="@id/btn_play" />
+>                 <Button android:id="@id/btn_play_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4 分钟时间" android:layout_toRightOf="@id/btn_play_1" />
+47c52
+<             <Button android:id="@id/btn_how_to_play" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="How To Play" />
+---
+>             <Button android:id="@id/btn_how_to_play" android:layout_width="250.0px" android:layout_height="wrap_content" android:text="怎么玩" />
+49a55
+>         <cn.domob.android.ads.DomobAdView android:id="@id/domobAd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" myapp:keywords="game" myapp:refreshInterval="20" />
+diff -r result/APP_45/App_B_45/res/values/attrs.xml result/APP_45/App_M_45/res/values/attrs.xml
+7a8
+>     <attr name="spots" format="string" />
+diff -r result/APP_45/App_B_45/res/values/ids.xml result/APP_45/App_M_45/res/values/ids.xml
+28a29
+>     <item type="id" name="domobAd" />
+diff -r result/APP_45/App_B_45/res/values/public.xml result/APP_45/App_M_45/res/values/public.xml
+7a8
+>     <public type="attr" name="spots" id="0x7f010005" />
+58a60
+>     <public type="id" name="domobAd" id="0x7f05001a" />
+diff -r result/APP_45/App_B_45/res/values/strings.xml result/APP_45/App_M_45/res/values/strings.xml
+30c30
+<     <string name="privacy_link">privacy policy</string>
+---
+>     <string name="privacy_link"><U>privacy policy</U></string>
+Somente em result/APP_45/App_M_45/res: values-zh
+Somente em result/APP_45/App_M_45/smali: cn

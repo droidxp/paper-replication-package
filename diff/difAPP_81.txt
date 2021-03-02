@@ -1,0 +1,1802 @@
+diff -r result/APP_81/App_B_81/apktool.yml result/APP_81/App_M_81/apktool.yml
+2c2
+< apkFileName: Bapp81-B9EB293313E272E7DC8C202D2561CB152A70318FA25768C6DFF2A6D3F300EBA5.apk
+---
+> apkFileName: Mapp81-0783788FD9B100136F336E3026C0126A0FFAA5064C68F020D4CDF7A6462C4ABF.apk
+4,6c4
+< doNotCompress:
+< - resources.arsc
+< - png
+---
+> doNotCompress: null
+diff -r result/APP_81/App_B_81/mobi/infolife/cachepro/ac.java result/APP_81/App_M_81/mobi/infolife/cachepro/ac.java
+28c28
+<     Toast.makeText(this.a, "Cleared All Cache!", 0).show();
+---
+>     Toast.makeText(this.a, "已清除所有缓存！", 0).show();
+diff -r result/APP_81/App_B_81/mobi/infolife/cachepro/ag.java result/APP_81/App_M_81/mobi/infolife/cachepro/ag.java
+31c31
+<       localBuilder.setTitle("License");
+---
+>       localBuilder.setTitle("许可");
+33,34c33,34
+<       localBuilder.setPositiveButton("Agree", new ah(localSharedPreferences, paramActivity));
+<       localBuilder.setNegativeButton("Refuse", new ai(paramActivity));
+---
+>       localBuilder.setPositiveButton("同意", new ah(localSharedPreferences, paramActivity));
+>       localBuilder.setNegativeButton("拒绝", new ai(paramActivity));
+diff -r result/APP_81/App_B_81/mobi/infolife/cachepro/CleanerActivity.java result/APP_81/App_M_81/mobi/infolife/cachepro/CleanerActivity.java
+1049c1049
+<     this.ai = paramMenu.addSubMenu(0, 12, 5, "Menu");
+---
+>     this.ai = paramMenu.addSubMenu(0, 12, 5, "菜单");
+1060c1060
+<     paramMenu.add(0, 13, 2, "Search").setIcon(2130837507).setActionView(this.ae).setOnActionExpandListener(new l(this)).setShowAsAction(10);
+---
+>     paramMenu.add(0, 13, 2, "搜索").setIcon(2130837507).setActionView(this.ae).setOnActionExpandListener(new l(this)).setShowAsAction(10);
+diff -r result/APP_81/App_B_81/mobi/infolife/cachepro/g.java result/APP_81/App_M_81/mobi/infolife/cachepro/g.java
+32c32
+<     Toast.makeText(f.a(this.a), "Swith To " + paramDialogInterface + " failed!", 0).show();
+---
+>     Toast.makeText(f.a(this.a), "无法启动应用“" + paramDialogInterface + "”！", 0).show();
+diff -r result/APP_81/App_B_81/mobi/infolife/cachepro/h.java result/APP_81/App_M_81/mobi/infolife/cachepro/h.java
+30c30
+<     Toast.makeText(f.a(this.a), "Swith To " + paramDialogInterface + " failed!", 0).show();
+---
+>     Toast.makeText(f.a(this.a), "无法启动应用“" + paramDialogInterface + "”！", 0).show();
+Os arquivos binários result/APP_81/App_B_81/original/AndroidManifest.xml e result/APP_81/App_M_81/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_81/App_B_81/original/META-INF/CERT.RSA e result/APP_81/App_M_81/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_81/App_B_81/original/META-INF/CERT.SF result/APP_81/App_M_81/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: BRMJWrLpSqc2uux/k6GOBIP+57A=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: dO3MkYsdijJsle6AFCAeXQ2tcRA=
+9c9
+< SHA1-Digest: Cr+0+TJ38iyrG9fRngo7nZK22WU=
+---
+> SHA1-Digest: 7XYoMtrzk12sauUgXErlb9nc4JM=
+18c18,21
+< SHA1-Digest: mFuWCZbGUt4Su02+yE4oMc9oJfQ=
+---
+> SHA1-Digest: QKAFPd5Z/p4I4TvsKWyiGolwWzU=
+> 
+> Name: res/layout-v14/sherlock_spinner_item.xml
+> SHA1-Digest: 05c+vOPCWTso1tQRcrSZk8tjs8w=
+23,25d25
+< Name: res/layout-v14/sherlock_spinner_item.xml
+< SHA1-Digest: ql55eok+PCzt8roriI/o6DIfF9s=
+< 
+36c36
+< SHA1-Digest: 3DZ2c6KcMbuYKWv2Vi1Fnxfu9jM=
+---
+> SHA1-Digest: zsMCr1RUuPg08mH2DFoqRJB0XYA=
+45c45
+< SHA1-Digest: 9jYd+lExNlq9s5o3mDUnvg18918=
+---
+> SHA1-Digest: qa4hA4JeH5Yn3RQ00D3OaBj5Ow8=
+51c51
+< SHA1-Digest: 00ezllwrqiUuyo7FItG5aPMNrg8=
+---
+> SHA1-Digest: bTbrxZWvjAA0ppT4s93p10MNCBg=
+66c66
+< SHA1-Digest: 6OFkL79KyYF++XrJB+FucNUDVEc=
+---
+> SHA1-Digest: /YskCiz+sVYltrKkkyY6gRPn7YY=
+76a77,79
+> Name: res/xml-zh/setting.xml
+> SHA1-Digest: h3pnVb9jVQUsuNkdCFxdBy3zov8=
+> 
+100,103c103
+< SHA1-Digest: hgjMzdyO5B4etLycpOUfv3GTbLk=
+< 
+< Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png
+< SHA1-Digest: MXzCST6BJQJccxQfpI1YKs9soMA=
+---
+> SHA1-Digest: /TWzDDOCIc2YmFY8iIid9Zqhg48=
+107a108,110
+> Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png
+> SHA1-Digest: MXzCST6BJQJccxQfpI1YKs9soMA=
+> 
+115,117d117
+< Name: res/drawable-hdpi/abs__list_pressed_holo_dark.9.png
+< SHA1-Digest: tyQ5tBsIsMFbB2+EYlw1QOfshGo=
+< 
+121,122c121,122
+< Name: res/drawable/abs__search_dropdown_light.xml
+< SHA1-Digest: R3EDawEdTrc8ZZYB1Zq4EjdM+c4=
+---
+> Name: res/drawable-hdpi/abs__list_pressed_holo_dark.9.png
+> SHA1-Digest: tyQ5tBsIsMFbB2+EYlw1QOfshGo=
+124,125c124,125
+< Name: res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+< SHA1-Digest: lUZ07f/+UGDoTLjAZkTwyDWPzS8=
+---
+> Name: res/drawable/abs__search_dropdown_light.xml
+> SHA1-Digest: cfQuedtjrsvzgccHCB3nPm2sozM=
+129a130,132
+> Name: res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+> SHA1-Digest: lUZ07f/+UGDoTLjAZkTwyDWPzS8=
+> 
+131c134
+< SHA1-Digest: akSbY/Nbebacj2fVgQCqaT9riWo=
+---
+> SHA1-Digest: zcENDJlijLKhdj9e0YxWj/iDe8A=
+140c143
+< SHA1-Digest: yGaGw1QLb/273LNBQVriG96WVUs=
+---
+> SHA1-Digest: aIzPPy0ZqMGfxZD41j6NBd6j8Fw=
+146,150c149
+< SHA1-Digest: iaDW9ULc668xSu5M8Hi/w/iUlZM=
+< 
+< Name: res/drawable/abs__list_selector_background_transition_holo_dark.
+<  xml
+< SHA1-Digest: UZfxwaoEbBChOp+w9LnUl2HQYrA=
+---
+> SHA1-Digest: xZk8W/sl3rayy8jC8qY2RiPaUaQ=
+154a154,157
+> Name: res/drawable/abs__list_selector_background_transition_holo_dark.
+>  xml
+> SHA1-Digest: vD64jkNxKjkFe7G9JDJ+Ji7Tzq8=
+> 
+159c162
+< SHA1-Digest: etgJh+bm1nW/PM+NPd0tAzkIKHw=
+---
+> SHA1-Digest: Al3N9oO3TwZY5aPYDVQ/r10u1i8=
+162c165
+< SHA1-Digest: nGCpM62b21vr2fx48qzseI0Kh2I=
+---
+> SHA1-Digest: qaTb70OJlHurwkYu9zx1nXulPkk=
+172a176,178
+> Name: res/drawable-hdpi/widget_green.xml
+> SHA1-Digest: d9CSFm7WwiCmzV60TfT5SlvXCoo=
+> 
+176,178d181
+< Name: res/drawable-hdpi/widget_green.xml
+< SHA1-Digest: t5Ovk1Aog+J5KaoU+XRLJT/Jvv8=
+< 
+180,183c183
+< SHA1-Digest: NXhpyrdvsxnjMhZNexYVfesmAB8=
+< 
+< Name: res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png
+< SHA1-Digest: pdDmHBXa98nEr/3He9uEXSLFC1o=
+---
+> SHA1-Digest: YfoJydZHBDo2GYC05ElzaTR6Fwk=
+187a188,190
+> Name: res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png
+> SHA1-Digest: pdDmHBXa98nEr/3He9uEXSLFC1o=
+> 
+189c192
+< SHA1-Digest: eeBT2DDH8tfs9EJuIIu/gufh/VU=
+---
+> SHA1-Digest: yZKErUSoO8oubu+Rfi9LUzgVYCw=
+202c205
+< SHA1-Digest: 8DrPL6nrJch1r5jnnAUGfjufqPI=
+---
+> SHA1-Digest: v4pt351R/O9N4W60OLh34gOphLI=
+238a242,244
+> Name: res/drawable/abs__item_background_holo_dark.xml
+> SHA1-Digest: uYtSaqSVSn7kMMCagXj825SofXs=
+> 
+242,243c248,249
+< Name: res/drawable/abs__item_background_holo_dark.xml
+< SHA1-Digest: xgK/6K6LbbNzcVE8p3minL6gXPA=
+---
+> Name: res/drawable-hdpi/spinner.9.png
+> SHA1-Digest: MNohNibEr3l2M1gZw3ORuz4fFhw=
+248,250d253
+< Name: res/drawable-hdpi/spinner.9.png
+< SHA1-Digest: MNohNibEr3l2M1gZw3ORuz4fFhw=
+< 
+254,256d256
+< Name: res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png
+< SHA1-Digest: 7mQl9j8Z+4d8toEFSV4DWOebffU=
+< 
+259a260,262
+> Name: res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png
+> SHA1-Digest: 7mQl9j8Z+4d8toEFSV4DWOebffU=
+> 
+261c264
+< SHA1-Digest: wTXrVwgj2VXeC6ylzzlfjCBDmfE=
+---
+> SHA1-Digest: WD7J8T8zPHU6x0Qe64PUkAIB6RU=
+267c270
+< SHA1-Digest: fzxqJSgLI4sgoKBJ7v7RofpbWJk=
+---
+> SHA1-Digest: PmqjE8mloPCqma+CRVvXkbeHRd0=
+276c279
+< SHA1-Digest: 1cUUR7HCn106iA3nxGAf4gLC+Zs=
+---
+> SHA1-Digest: STcAWT5hiTpJXdAkduzs0dQ/GwU=
+288c291
+< SHA1-Digest: NZJUDlowtyU+4B+SlsGggv08LeY=
+---
+> SHA1-Digest: +pdilSuyz4pPL1KFTZr8WO0ap6U=
+291c294
+< SHA1-Digest: UbWFvLTcPmF0fX/XOJ8qhqFOeuE=
+---
+> SHA1-Digest: TnX1upOKHehWnqAraPlTZSBr/H0=
+300c303
+< SHA1-Digest: 361//XP52/SbO0O363CaNH71FwE=
+---
+> SHA1-Digest: fwIPPQuXeyNuIiUuIafrZMIkSYE=
+306c309
+< SHA1-Digest: j2ApyFQZMBt+76GszojrnEGCZN8=
+---
+> SHA1-Digest: pczRVz1rlzujC303JKkRWmNu+5g=
+344c347
+< SHA1-Digest: SqnoZ4iBUfyV2xWHXjtIk7QN4Ig=
+---
+> SHA1-Digest: BwOn0oB9YoFg7C5Z4Cp2bQFz/lE=
+352,354d354
+< Name: res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png
+< SHA1-Digest: lI9GC0V2P8dv41uhoIPkw4Y6mZo=
+< 
+358,359c358,359
+< Name: res/drawable-mdpi/abs__ic_voice_search_api_holo_light.png
+< SHA1-Digest: 49Mq99v4olptPThmPP6j0nawT5w=
+---
+> Name: res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png
+> SHA1-Digest: lI9GC0V2P8dv41uhoIPkw4Y6mZo=
+363a364,366
+> Name: res/drawable-mdpi/abs__ic_voice_search_api_holo_light.png
+> SHA1-Digest: 49Mq99v4olptPThmPP6j0nawT5w=
+> 
+367,369d369
+< Name: res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png
+< SHA1-Digest: 9ghTrZlcnowNCN7lR28T+hDGtx8=
+< 
+373,374c373,374
+< Name: res/drawable-xhdpi/abs__ic_ab_back_holo_light.png
+< SHA1-Digest: z0ke+ia8F5RJjuMHQV9UdRAL3P4=
+---
+> Name: res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png
+> SHA1-Digest: 9ghTrZlcnowNCN7lR28T+hDGtx8=
+378a379,381
+> Name: res/drawable-xhdpi/abs__ic_ab_back_holo_light.png
+> SHA1-Digest: z0ke+ia8F5RJjuMHQV9UdRAL3P4=
+> 
+383,385d385
+< Name: res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png
+< SHA1-Digest: AJF3Ifc4kOwddl5NuxnGmPnK7OU=
+< 
+388a389,391
+> Name: res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png
+> SHA1-Digest: AJF3Ifc4kOwddl5NuxnGmPnK7OU=
+> 
+393c396
+< SHA1-Digest: /qdf9Vf4toPii65estErawHybNU=
+---
+> SHA1-Digest: IQiR15Fsb46EvdQXn2vuk/5bEm4=
+411c414
+< SHA1-Digest: 0aqpDvoJJJ+P9TpTt7ZeOOjEbmI=
+---
+> SHA1-Digest: tIwm1y3Mhx+j4OzeIPW4TKzW648=
+423c426
+< SHA1-Digest: 4yM8M6LQlEPx2E+FHxwod7YcekM=
+---
+> SHA1-Digest: qjvDzACWv4v4HLzDIhuJuhuRjmM=
+427a431,433
+> Name: AndroidManifest.xml
+> SHA1-Digest: W0cB8gUIlNgY0uGNHyjD4IFIddo=
+> 
+434,435c440,441
+< Name: AndroidManifest.xml
+< SHA1-Digest: 8n1xhHIwUSCqEAZ8ZpQpTHsZgIM=
+---
+> Name: res/layout/vivid_spinner_simple_item.xml
+> SHA1-Digest: Ry2kkdan5KL+A3vAa2ucVs/7XW4=
+440,442d445
+< Name: res/layout/vivid_spinner_simple_item.xml
+< SHA1-Digest: Z6Ucfk+AfieisHofmQrIinlKMJM=
+< 
+447c450
+< SHA1-Digest: w+7s4YfCDkdrD+3Kd2/8Upoj5IA=
+---
+> SHA1-Digest: ik++LT4YdKQup30fAZjlSmuxgVk=
+454a458,460
+> Name: classes.dex
+> SHA1-Digest: UN2HJOpZfzojMGSxpN5i2esHfPo=
+> 
+458,460d463
+< Name: classes.dex
+< SHA1-Digest: JC2hY7rIjrsYfSft37TC4j3Hifo=
+< 
+474c477
+< SHA1-Digest: A7MIR0vPrtL5J9AnNtIEnrB2h58=
+---
+> SHA1-Digest: oKGpFF1IEUfoF3Ug8s3QTPiOm+g=
+477c480
+< SHA1-Digest: N3cOSy8QRTwjEm+T8Vyr7f7m5vM=
+---
+> SHA1-Digest: YNjWsgINpYFi8xbr0I9T1n0E9QU=
+513,515d515
+< Name: res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png
+< SHA1-Digest: ts+1yVv8L3pBUMna7Ynj/ql914g=
+< 
+522,523c522,526
+< Name: res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+< SHA1-Digest: B33L83GqHqw+54XJNHCEERj1J+4=
+---
+> Name: res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png
+> SHA1-Digest: ts+1yVv8L3pBUMna7Ynj/ql914g=
+> 
+> Name: res/layout-large/abs__action_mode_close_item.xml
+> SHA1-Digest: HDtKhAKN0VKEDfNUTwWYlkBdRn0=
+526c529
+< SHA1-Digest: G0qGV3Ej3cWmftOs1sPil15ISPc=
+---
+> SHA1-Digest: EJWMy8xBLOcAlWdzExU1WkZe2iw=
+528,529c531,532
+< Name: res/layout-large/abs__action_mode_close_item.xml
+< SHA1-Digest: Fpvreh8RqsZaupAX541M3lS2nJc=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+> SHA1-Digest: B33L83GqHqw+54XJNHCEERj1J+4=
+534,536d536
+< Name: res/layout/abs__dialog_title_holo.xml
+< SHA1-Digest: fvAYG2/jNVDTJyw0zh2uuqEirgI=
+< 
+539c539,542
+< SHA1-Digest: UCkyGX+sM2eRWpewpr7LeBCcUUQ=
+---
+> SHA1-Digest: iphM4XwChI2d28xA9OPBF9vEmeQ=
+> 
+> Name: res/layout/abs__dialog_title_holo.xml
+> SHA1-Digest: W3UdUhIaPpJqZinf0u7zIJ1Aafc=
+545c548
+< SHA1-Digest: QksIfrJVfC12AUybgmNmStBJM/c=
+---
+> SHA1-Digest: PqxRdZXIAEgBJG57MKwtzZ0TlKk=
+567c570
+< SHA1-Digest: Vu/ZPo0BnFuUfQmsfBWa/ARMd68=
+---
+> SHA1-Digest: CV2aynyttQdO2BpUGQWPmp2HXho=
+585c588
+< SHA1-Digest: oYyotVgm/3xyMexotFiHnVanCEA=
+---
+> SHA1-Digest: xncQQuKEj8VN1qaxXCGet/qS/Pg=
+594c597
+< SHA1-Digest: /Q2Ih6LBZHxw7vz0VtXiwrV0G7s=
+---
+> SHA1-Digest: vK2+K2RE6lJryXbQ/CEBfjTxhMc=
+606c609
+< SHA1-Digest: jinUyqwWj/MQ0RUTHsBLLd/L00w=
+---
+> SHA1-Digest: cHqiV+2HdfTYcE1OadmczMeNavs=
+630,632d632
+< Name: res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png
+< SHA1-Digest: fTxB+O/i4iEBg9WIU38rF2dXunA=
+< 
+636,637c636,637
+< Name: res/layout/abs__action_mode_bar.xml
+< SHA1-Digest: tlL9SCmRn+5lq0o5Z0a0+DhwpkU=
+---
+> Name: res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png
+> SHA1-Digest: fTxB+O/i4iEBg9WIU38rF2dXunA=
+641a642,644
+> Name: res/layout/abs__action_mode_bar.xml
+> SHA1-Digest: Sd7k0UoKFUE/ovoc3hCWwMJQUgk=
+> 
+648,650d650
+< Name: res/drawable-hdpi/ab_ic_addons.png
+< SHA1-Digest: ksPHenRN8MgESTFZGIpt7VWq178=
+< 
+653a654,656
+> Name: res/drawable-hdpi/ab_ic_addons.png
+> SHA1-Digest: ksPHenRN8MgESTFZGIpt7VWq178=
+> 
+658,660d660
+< Name: res/drawable-hdpi/abs__ic_menu_share_holo_light.png
+< SHA1-Digest: qvb0r6mGk80Hbb6FtXQyv/Sv5Uk=
+< 
+663a664,666
+> Name: res/drawable-hdpi/abs__ic_menu_share_holo_light.png
+> SHA1-Digest: qvb0r6mGk80Hbb6FtXQyv/Sv5Uk=
+> 
+665c668
+< SHA1-Digest: b5/Pamx650HKd5U3sy4iCzf13dc=
+---
+> SHA1-Digest: A8xY/8Rf23xIn39YnJh4sv/QbwM=
+668c671
+< SHA1-Digest: xjrsgnu+ZzFMeu7wMcl1bQWgTRI=
+---
+> SHA1-Digest: 5GW6DVcf7H129DJx4lk8zU+sNWI=
+696c699
+< SHA1-Digest: WVfcvoJsILtE0f1oGEpyP6YisyA=
+---
+> SHA1-Digest: aQYwgjpkKbIQR5EaZmJTdJI5MKc=
+701,703d703
+< Name: res/layout/abs__popup_menu_item_layout.xml
+< SHA1-Digest: v3o5lftz9eb9C7gT6rsrrJh9PWg=
+< 
+706a707,709
+> Name: res/layout/abs__popup_menu_item_layout.xml
+> SHA1-Digest: PH5kBvbY1Yym6Vll523WF/eiMIE=
+> 
+708c711
+< SHA1-Digest: BIrHqyGrZ1SQhK757/2ucILwUTY=
+---
+> SHA1-Digest: uPUIV+XQNj8cWGIrv2Ugdclj4uQ=
+732c735
+< SHA1-Digest: tInI78ruYKzZFPwxS79mfk9uyfg=
+---
+> SHA1-Digest: AhwUH3QeICDt/OZPV42qADDcvy8=
+755c758
+< SHA1-Digest: qIFOunmTDNPoxbaXf5Ke+e1Z7/A=
+---
+> SHA1-Digest: KwnkyY8usT1fFqmDl4OPWtn02bY=
+758c761
+< SHA1-Digest: BeSywpsXgW3C4cIWdLAn68jWw0w=
+---
+> SHA1-Digest: /M6vZbzCp1tDZR3WwA1MSy6toKw=
+767c770
+< SHA1-Digest: 3+QVbD58gDSSTchlepS0gA2xUIo=
+---
+> SHA1-Digest: hnypJCqKJ5SyOA88+qWO3LMXjZU=
+782c785
+< SHA1-Digest: FuR7DSg8M1pa3sLIF+NyMwnnd5I=
+---
+> SHA1-Digest: aIxvFiEMerUfREyxt7197tcQjfw=
+792c795
+< SHA1-Digest: JUBlP77V1BDHCc/YKiQzxBYbEC8=
+---
+> SHA1-Digest: aIwgE8thKSSt1ivliI/w1TcxymQ=
+810c813
+< SHA1-Digest: XCMFQIeofMogRa/GisD2OhLdsuo=
+---
+> SHA1-Digest: RcgDC7iZKWpEf0ryvxR8MBZHFwM=
+816c819
+< SHA1-Digest: PacreYYiP+CIXHwaMiz531n7Loc=
+---
+> SHA1-Digest: PJjBuSQUHcoEMgf3LJLywsY2hXM=
+821,823d823
+< Name: res/drawable/abs__progress_medium_holo.xml
+< SHA1-Digest: o2x6EBGtx4sgfBFQKqSF35276y4=
+< 
+825c825,828
+< SHA1-Digest: 4mFxzcRxLp0BMpvTuCaP+Si0XJI=
+---
+> SHA1-Digest: VTbQMTTnt8OJt3YF/JsWShJUjYQ=
+> 
+> Name: res/drawable/abs__progress_medium_holo.xml
+> SHA1-Digest: 5JVBcBQ80NgFVIneEJ9TcbWXZf8=
+831c834
+< SHA1-Digest: Ndlm3XZmkd7Db9ZKJbWeJjSGt+A=
+---
+> SHA1-Digest: EbK2Hz/93kVtMn0yJdpVzQ7umY8=
+837,840c840
+< SHA1-Digest: gxc/DGa4CSQQz6hBB4sl0ZBFUdw=
+< 
+< Name: res/layout/abs__action_menu_item_layout.xml
+< SHA1-Digest: 93CV9NDXHj63/bMPoP4TODrHiNo=
+---
+> SHA1-Digest: skfSko79GOcQPJeb40W7txtlGCE=
+844a845,847
+> Name: res/layout/abs__action_menu_item_layout.xml
+> SHA1-Digest: B4nhLP3aoJJCMXLBpgiJ17Vot9g=
+> 
+855,857d857
+< Name: res/drawable/abs__tab_indicator_ab_holo.xml
+< SHA1-Digest: /JNob3a/Oo/oefOI0zvQkhXJL2M=
+< 
+859c859
+< SHA1-Digest: wEFNWwzKW7c79kWEtTGWqPlbE5Y=
+---
+> SHA1-Digest: PRQa6kNXGeEiGbrHdAc+RIBrawo=
+863a864,866
+> Name: res/drawable/abs__tab_indicator_ab_holo.xml
+> SHA1-Digest: CLvdwNQM7Sl/Q16MnzVzVeZnugE=
+> 
+895c898
+< SHA1-Digest: k0FO0czEa+GEeBnyFzmEmnMapzg=
+---
+> SHA1-Digest: vkFLIDvtg+AOXPfCJd+ObwgFjis=
+904c907
+< SHA1-Digest: SjcRXE7y1bx5L5oUJr+o9EOqSH8=
+---
+> SHA1-Digest: mK5NWWre4wzrvcxx8RIPSPRRC84=
+930c933
+< SHA1-Digest: D/6MKz0WdxdHUY3mQrOf25dDegU=
+---
+> SHA1-Digest: ollzUBt7XlFok6Bu3XZcBxDA/IE=
+939c942
+< SHA1-Digest: 9geAr2WyoUVyLj8BV2Yu+r/k0LE=
+---
+> SHA1-Digest: dXIfo95y6Ybp5nFUpEhUj2YLEt8=
+966c969
+< SHA1-Digest: 49dMVO2gShKVCfUZCrWQAlBy6pc=
+---
+> SHA1-Digest: kRqYX/QzwZXwosn7qoCu1MrL0y8=
+974,976d976
+< Name: res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png
+< SHA1-Digest: cPjnoGeC0yi3ZMj8J8epbvvsY9I=
+< 
+979a980,982
+> Name: res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png
+> SHA1-Digest: cPjnoGeC0yi3ZMj8J8epbvvsY9I=
+> 
+981c984
+< SHA1-Digest: JDBEQ53itxIur9vO2Atn+8yJ7c8=
+---
+> SHA1-Digest: zvmDmypWIBikCPx/itpjd3L5jCk=
+987c990
+< SHA1-Digest: KOw6B26u+VlDanu4AfZKIabUM/U=
+---
+> SHA1-Digest: uQ9KDKubUPLueTrI7rEPFuN8m50=
+990,993c993
+< SHA1-Digest: f1xOa0MBTkGdzsLPLUH+vQ2Is44=
+< 
+< Name: res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png
+< SHA1-Digest: kRe4KL9tEOxTt3bkKH9ClWLAUCE=
+---
+> SHA1-Digest: DRPNgZIz39ck3AReWOeHHakp/LA=
+997a998,1000
+> Name: res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png
+> SHA1-Digest: kRe4KL9tEOxTt3bkKH9ClWLAUCE=
+> 
+999c1002
+< SHA1-Digest: KIjgDpnFzt4z9xUNpIrmsNpoZWQ=
+---
+> SHA1-Digest: flPqdaAsgksZUC5b40qolvKib6g=
+1011c1014
+< SHA1-Digest: uBhWlwqMfFV5g20eLMhrFoCWg18=
+---
+> SHA1-Digest: bn/WopC8Po/rbFIkYuoAbfhDA6M=
+1014c1017
+< SHA1-Digest: oHZjYNqc1iIsuLDIpuRE3FCz4WQ=
+---
+> SHA1-Digest: Yp5P3j2/XATcrXYIGu3gn7rXr+o=
+1017c1020
+< SHA1-Digest: mJKypCro6tPIH9JEh3UY3bEZGEI=
+---
+> SHA1-Digest: tM+0DEUU6dKGJoNWnOHYzvo9O6Q=
+1026c1029
+< SHA1-Digest: xi/7SS4dFtpNDXRM2jsbqgXEltM=
+---
+> SHA1-Digest: FLqkiB5Br8bSX+BmBgUwEuQtQhc=
+1032c1035
+< SHA1-Digest: HNRy/JQD9buWy6OOSUwCvLkOY2E=
+---
+> SHA1-Digest: D9Pup26nV9mx7zyvGrD+uBl0c5Y=
+1041c1044
+< SHA1-Digest: YdjPW96dc/dh7hiPo0SqCP+C/XQ=
+---
+> SHA1-Digest: yZIMQuQp/TLk8j0mnQQQm4U7cq4=
+1056c1059
+< SHA1-Digest: Gr+L4sq3xyW71MRzRzmDm3AoAac=
+---
+> SHA1-Digest: AgGZZO7mdwIiylmZcXvprWFro9k=
+1059c1062
+< SHA1-Digest: MJRck20Dqq9Sc98i1jw2Ky4c8iE=
+---
+> SHA1-Digest: COqu2wSKQk2dY8Xta8kpx4hu0Qc=
+1065c1068
+< SHA1-Digest: TMBEJ/Z81lGmX1DQM1OFwc0XHPM=
+---
+> SHA1-Digest: vBu+x9XWBIhDRPWMOjG3mukvOkg=
+1083c1086
+< SHA1-Digest: KIYReYcyBICFmvLPVImAr7hKrQc=
+---
+> SHA1-Digest: Jwd37+/rsP66+x+LdVDxlxy8yFc=
+1086c1089
+< SHA1-Digest: L4rSLNSmnZnrmxkMEDyoFZ7hTz8=
+---
+> SHA1-Digest: O07gXyrKrKnWWDJD9sCWRDhi/HM=
+1089c1092
+< SHA1-Digest: d5GmQUot2vAs6CSlkqpRfRy7t1Q=
+---
+> SHA1-Digest: SoI4hxdrlHC7pW4O4qJ2NbgPzIY=
+1092c1095
+< SHA1-Digest: W0Lw9VZBNxs2TeBjBFJi/M0VdnM=
+---
+> SHA1-Digest: XPW+nFpP+3PuUwfddtq/dQuq2gs=
+1101c1104
+< SHA1-Digest: 42O74FJKZu7s4qyfFPyEkNjo7wY=
+---
+> SHA1-Digest: BRpfy6NOqdgb868dMwknMKAK2eE=
+1106,1108d1108
+< Name: res/drawable/abs__progress_horizontal_holo_dark.xml
+< SHA1-Digest: r8oXnyuDuec9qVmAHxNpgGzROsk=
+< 
+1110c1110,1113
+< SHA1-Digest: v5SyLUXoE3E+yurcMHfMS1xYYWI=
+---
+> SHA1-Digest: Nkv+uccTE5MAIv/7J3WrkYw/cc8=
+> 
+> Name: res/drawable/abs__progress_horizontal_holo_dark.xml
+> SHA1-Digest: O44qGtijh57yq9F5xhLSgRVcfUQ=
+1119c1122
+< SHA1-Digest: hwhqd7uq6RH+ijxf4Ab+Qk+IYXg=
+---
+> SHA1-Digest: ktRWtH3qBL1Usc9bn8wYQzX6lwU=
+1125c1128
+< SHA1-Digest: YaCFpgbNKnsM9e0fc5kc0S6mzrQ=
+---
+> SHA1-Digest: PxHpNJMhfVHAzxgxFBYHDV5FkFc=
+1145,1147d1147
+< Name: res/drawable-hdpi/abs__ic_menu_share_holo_dark.png
+< SHA1-Digest: zAKWgUZl3wPFGrOGVpY70sUWvy8=
+< 
+1150a1151,1153
+> Name: res/drawable-hdpi/abs__ic_menu_share_holo_dark.png
+> SHA1-Digest: zAKWgUZl3wPFGrOGVpY70sUWvy8=
+> 
+1152c1155
+< SHA1-Digest: nsH9Sh/gsxTPvyOgpCx+sDHCXfM=
+---
+> SHA1-Digest: bXZUKQCpdxBiRXKXzXjjDLh91DI=
+1179,1181d1181
+< Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+< SHA1-Digest: UMvtqC6hnVlluJzlyGv4xoHdabo=
+< 
+1183c1183
+< SHA1-Digest: iP21i9dnXjLFUt5B7R1zKyQv8rU=
+---
+> SHA1-Digest: 2vuXGGayYRXsQvMi1EnDY76ws3I=
+1187a1188,1190
+> Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+> SHA1-Digest: UMvtqC6hnVlluJzlyGv4xoHdabo=
+> 
+1192c1195
+< SHA1-Digest: 4c3vk4DQbdk10VsNTudgLfg+bAs=
+---
+> SHA1-Digest: HnEEaZLZ8uz/mh3KC+d1IgKI46g=
+1195c1198
+< SHA1-Digest: kX6dwp6Y6xT+YeJu7gTVXle4fPE=
+---
+> SHA1-Digest: oyG843MbvDC9W+yyz0r1I+pm1TY=
+1197,1198c1200,1201
+< Name: res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png
+< SHA1-Digest: 8WG4say21Rxg04ifomofY/O/rTM=
+---
+> Name: res/drawable-hdpi/select_all_button.png
+> SHA1-Digest: LAQqYxpYLaQu/1rCGsdKpuqhwuA=
+1203,1204c1206,1207
+< Name: res/drawable-hdpi/select_all_button.png
+< SHA1-Digest: LAQqYxpYLaQu/1rCGsdKpuqhwuA=
+---
+> Name: res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png
+> SHA1-Digest: 8WG4say21Rxg04ifomofY/O/rTM=
+1213c1216
+< SHA1-Digest: GdJi5zsAa7HA7eE7UW+2fmH+0zA=
+---
+> SHA1-Digest: ifTZS/7NJHMwvBRh6URe0wtlVIc=
+1219c1222
+< SHA1-Digest: HVRO2FBI+gYE9X5wemcGtM1oyaY=
+---
+> SHA1-Digest: Zeq4uOy7DCPPHaN3C/wz4gx/VKo=
+1222c1225
+< SHA1-Digest: GGTp7LDnNpUTwNWgZn3DGFQAHdY=
+---
+> SHA1-Digest: JNDQsOuhBXg9oOn9mmyeGjZpEHw=
+1225c1228
+< SHA1-Digest: m2VY8igaO2FldHUbyKLyzG6JiE8=
+---
+> SHA1-Digest: iOViwnNxT6z3h+7enG+pZ7OQ3Fk=
+1230,1231c1233,1234
+< Name: res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png
+< SHA1-Digest: 8H5fbl+EvKr+AasaFM+1NLJ2/8A=
+---
+> Name: res/layout/view_more_list_item.xml
+> SHA1-Digest: /ZT1XUW6fKbFiSSXkYXvrbev30s=
+1236,1237c1239,1240
+< Name: res/layout/view_more_list_item.xml
+< SHA1-Digest: 5IaemWtPsu/eK0RseE9+o+OAwfs=
+---
+> Name: res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png
+> SHA1-Digest: 8H5fbl+EvKr+AasaFM+1NLJ2/8A=
+1240c1243
+< SHA1-Digest: 0heuKJ50dGM08+pzBXy7qx+4hLE=
+---
+> SHA1-Digest: t2UuhYMcPdCincVaHBiSgYNkQVM=
+1246c1249
+< SHA1-Digest: bTMyioCCUTfbzKCkNT2qw0aFo+s=
+---
+> SHA1-Digest: Gdh4jaHru5fRNwX9Evysv6nYOX0=
+1257,1258c1260,1261
+< Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+< SHA1-Digest: RpjH9X9l7RTj4O0/ZHPnjRGjhAs=
+---
+> Name: res/drawable-hdpi/ic_drawer.png
+> SHA1-Digest: 7qQZLYq17a7komswjwjfD+BMpaw=
+1263,1264c1266,1267
+< Name: res/drawable-hdpi/ic_drawer.png
+< SHA1-Digest: 7qQZLYq17a7komswjwjfD+BMpaw=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+> SHA1-Digest: RpjH9X9l7RTj4O0/ZHPnjRGjhAs=
+1270c1273
+< SHA1-Digest: oNmX7j5ocQYs444Uo1Os00DLQUs=
+---
+> SHA1-Digest: ixM9Egx/AlDYECYoR7OJaAsGDLI=
+1276c1279
+< SHA1-Digest: kp6SNocIx2R9JCEDdpWBBqwH8Wo=
+---
+> SHA1-Digest: NXIWdLRIvQIH5bXLDjcg417QMSU=
+1289c1292
+< SHA1-Digest: TsyxUMOCIBf9iqn7roo9cLWBpo4=
+---
+> SHA1-Digest: w6lsnvPRnZklm2OkYGxy0REPxeY=
+diff -r result/APP_81/App_B_81/original/META-INF/MANIFEST.MF result/APP_81/App_M_81/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+8c8
+< SHA1-Digest: s6gG1GZvv7FcNckc66+ez5gayjc=
+---
+> SHA1-Digest: Y7Uw8rvjhad9YzxijC8zgytGjTk=
+17,20c17
+< SHA1-Digest: LdrksJZPxItCSk+6ViZyDZSS9T8=
+< 
+< Name: res/layout-v14/sherlock_spinner_item.xml
+< SHA1-Digest: K23YfR5jtacUW3YnEHuAraoNOfs=
+---
+> SHA1-Digest: h7ehVs0gzRgjWHzGSJP0q6BvhZw=
+24a22,24
+> Name: res/layout-v14/sherlock_spinner_item.xml
+> SHA1-Digest: tgpI9BcvdgryrSyLgPg2yTPVh0g=
+> 
+35c35
+< SHA1-Digest: vaPSJBjQc80ZGZPU0m1aVrwnmQo=
+---
+> SHA1-Digest: e+teSjaG/T0/YWyAffnQKpptk8k=
+44c44
+< SHA1-Digest: Pa/lRznkS4XUZ3IgJEvoQtiJitU=
+---
+> SHA1-Digest: n5TkvYo4JanWO8V0Ey5Fq7yFuSs=
+50c50
+< SHA1-Digest: SUFAI5GkvtNtFXjW/ZAHlbQLCKc=
+---
+> SHA1-Digest: 2g0+FILl/vGZ5FoMonAU98pnJBU=
+65c65
+< SHA1-Digest: 0LH/4TP8IQea2Q1MLrU4RxfgQJg=
+---
+> SHA1-Digest: ehE1SAbSmrzXhnZwYucbdd3Jt6I=
+75a76,78
+> Name: res/xml-zh/setting.xml
+> SHA1-Digest: 9/0RGXEVGQohzuDCzEiW3AoTdN4=
+> 
+99,102c102
+< SHA1-Digest: fLw0EMtnhHjayD6q4imTGcCnHCs=
+< 
+< Name: res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png
+< SHA1-Digest: ac0QFVQasjwqX0dfvdz6H0hbUfE=
+---
+> SHA1-Digest: Zd/Iku5jUoFKUQ8fCAnK6tN2ow4=
+106a107,109
+> Name: res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png
+> SHA1-Digest: ac0QFVQasjwqX0dfvdz6H0hbUfE=
+> 
+114,116d116
+< Name: res/drawable-hdpi/app_manager_selected.png
+< SHA1-Digest: RO0SFVUy94obXELxRgG5paYk7Y0=
+< 
+120,121c120,121
+< Name: res/drawable/abs__search_dropdown_light.xml
+< SHA1-Digest: HqoPZlllFWPjcWfdGm4HMQwClEE=
+---
+> Name: res/drawable-hdpi/app_manager_selected.png
+> SHA1-Digest: RO0SFVUy94obXELxRgG5paYk7Y0=
+123,124c123,124
+< Name: res/drawable-hdpi/abs__dialog_full_holo_dark.9.png
+< SHA1-Digest: j/CZL/FJgfVhrBxR2aOwJ9octLU=
+---
+> Name: res/drawable/abs__search_dropdown_light.xml
+> SHA1-Digest: RthgHUuklOZbgE5PqzN2G79H21k=
+128a129,131
+> Name: res/drawable-hdpi/abs__dialog_full_holo_dark.9.png
+> SHA1-Digest: j/CZL/FJgfVhrBxR2aOwJ9octLU=
+> 
+130c133
+< SHA1-Digest: vp0FbTVIxdQBDIqyLhVAPl1EiGw=
+---
+> SHA1-Digest: LU8EEdrlWcRHlDqKzU9XFuZO+tw=
+139c142
+< SHA1-Digest: 8FFImWuQtXEFayPbD656ZGS/bxw=
+---
+> SHA1-Digest: wnBApjDt9iX2XEk7N3wl7Ta21jM=
+144,147d146
+< Name: res/drawable/abs__list_selector_background_transition_holo_dark.
+<  xml
+< SHA1-Digest: HkWTnAYFh577jfTWNkAfx0UaGOs=
+< 
+149c148
+< SHA1-Digest: ZtJKJRziG1qrvkhlrm7ArWizvzM=
+---
+> SHA1-Digest: CviofGTP11g3X8CDY6fW1aaMSyk=
+153a153,156
+> Name: res/drawable/abs__list_selector_background_transition_holo_dark.
+>  xml
+> SHA1-Digest: cooUck+m8WHFk4qlotZ/96GbQjY=
+> 
+158c161
+< SHA1-Digest: wuv/vOVCHbXuR9waV3kg1qmTi3g=
+---
+> SHA1-Digest: Cpy+3v/rFf8GIN7+9yE/YLPpma0=
+161c164
+< SHA1-Digest: yejU6KnOs958JqnQ55EeX901FkE=
+---
+> SHA1-Digest: 5gX48CpZHFq/IQ1tvLSaOjdg7KA=
+171a175,177
+> Name: res/drawable-hdpi/widget_green.xml
+> SHA1-Digest: xg5edgZd3IG1rmcrq4xnQ3jDguI=
+> 
+175,177d180
+< Name: res/drawable-hdpi/widget_green.xml
+< SHA1-Digest: NXd9OqAWPvaGLRa8oifEv+ozukM=
+< 
+179,182c182
+< SHA1-Digest: 4iujdSpf2N+1B00p9qH57alZutU=
+< 
+< Name: res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png
+< SHA1-Digest: jD9IiETA3GB5TReVJl1DgeY6pT8=
+---
+> SHA1-Digest: tUUQiZlJzXkEbnHg9uvFGr/9CV4=
+186a187,189
+> Name: res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png
+> SHA1-Digest: jD9IiETA3GB5TReVJl1DgeY6pT8=
+> 
+188c191
+< SHA1-Digest: d1LQxsXsUfW5Fl+BojbDGGZN/2g=
+---
+> SHA1-Digest: 1NndjRfvSdGEkVMqAruwZF1IXFs=
+201c204
+< SHA1-Digest: Fyfkr/dViSuIcncakYyptayhFPk=
+---
+> SHA1-Digest: FNHlwCGqBDYGW0fZEBLd2/443U0=
+237a241,243
+> Name: res/drawable/abs__item_background_holo_dark.xml
+> SHA1-Digest: MVWxGzeWarZCwpFtAdJxNyW6W2g=
+> 
+241,242c247,248
+< Name: res/drawable/abs__item_background_holo_dark.xml
+< SHA1-Digest: ejBw9JRergJdigZ0iJUMDxn3YNI=
+---
+> Name: res/drawable-hdpi/spinner.9.png
+> SHA1-Digest: djfH0gVx4sPtZV4kegGgLv/VHDs=
+247,249d252
+< Name: res/drawable-hdpi/spinner.9.png
+< SHA1-Digest: djfH0gVx4sPtZV4kegGgLv/VHDs=
+< 
+253,255d255
+< Name: res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png
+< SHA1-Digest: VZzwLXiFL2J9463y8dx5mUq1viQ=
+< 
+258a259,261
+> Name: res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png
+> SHA1-Digest: VZzwLXiFL2J9463y8dx5mUq1viQ=
+> 
+260c263
+< SHA1-Digest: TbPLQJhAsXtnkNzCPyGYQcvkdG0=
+---
+> SHA1-Digest: 9R1wMquwFCNFWkVa2kKZCIYzwmU=
+266c269
+< SHA1-Digest: Y3hZgQSSxL19pfSLfCMt+obswGk=
+---
+> SHA1-Digest: m8Pj8HIxHTLf+I4mpm5yOUsDvro=
+275c278
+< SHA1-Digest: C/bQNE7AO6MK2Z972qSFHSiU0y8=
+---
+> SHA1-Digest: 20QHxZff7XtOpD1/Au94DLZVuzs=
+287c290
+< SHA1-Digest: m0ZDSLk/11T9IZX4c9tRYPfVnrA=
+---
+> SHA1-Digest: K7QrBJ6NrCOUTf8K7uWV4V3YKIA=
+290,293c293
+< SHA1-Digest: YBbLttt6fJqIjzG3u9O9QSk6GdI=
+< 
+< Name: res/drawable-mdpi/abs__dialog_full_holo_light.9.png
+< SHA1-Digest: gXa3mUWaT62P/lwsD0vBvtz9va4=
+---
+> SHA1-Digest: AhMxHNOALLa1IquhIVzlQ5lYWN8=
+297a298,300
+> Name: res/drawable-mdpi/abs__dialog_full_holo_light.9.png
+> SHA1-Digest: gXa3mUWaT62P/lwsD0vBvtz9va4=
+> 
+302c305
+< SHA1-Digest: CGINqH0+bgG4rp46/F14ZRFmhKg=
+---
+> SHA1-Digest: fjRVKJnYpDFZVU+gUAHE/3IiZT8=
+305c308
+< SHA1-Digest: GlKAXFhiLKVmEMVvXTdJoWWuSEg=
+---
+> SHA1-Digest: k5KbWt4uCQozhElaRO/VNnf4lrU=
+343c346
+< SHA1-Digest: Okbaz+IWuJGsU+z2+eZBwFzVFuI=
+---
+> SHA1-Digest: d+DnbR0lScqzdeOeqsViLnidUJg=
+351,353d353
+< Name: assets/EULA
+< SHA1-Digest: B7FBLvk/62bEmqVZmx/pAk9HeKc=
+< 
+357,358c357,358
+< Name: res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png
+< SHA1-Digest: 7zJocL+RBdbu1NudnJijcfct7to=
+---
+> Name: assets/EULA
+> SHA1-Digest: B7FBLvk/62bEmqVZmx/pAk9HeKc=
+362a363,365
+> Name: res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png
+> SHA1-Digest: 7zJocL+RBdbu1NudnJijcfct7to=
+> 
+366,368d368
+< Name: res/drawable-hdpi/abs__progress_primary_holo_dark.9.png
+< SHA1-Digest: ZACK71V51Ac9fD0UgYgXNZ/6I+U=
+< 
+371a372,374
+> Name: res/drawable-hdpi/abs__progress_primary_holo_dark.9.png
+> SHA1-Digest: ZACK71V51Ac9fD0UgYgXNZ/6I+U=
+> 
+376,378d378
+< Name: res/drawable-hdpi/abs__ic_go.png
+< SHA1-Digest: 5FfaxDmXF8pisl5t0dWDsWzbWCg=
+< 
+382,383c382,383
+< Name: res/drawable-mdpi/abs__ab_transparent_light_holo.9.png
+< SHA1-Digest: XWDzwunfA77b0yNocbomq0jPulo=
+---
+> Name: res/drawable-hdpi/abs__ic_go.png
+> SHA1-Digest: 5FfaxDmXF8pisl5t0dWDsWzbWCg=
+387a388,390
+> Name: res/drawable-mdpi/abs__ab_transparent_light_holo.9.png
+> SHA1-Digest: XWDzwunfA77b0yNocbomq0jPulo=
+> 
+392c395
+< SHA1-Digest: wbuT99BrjtEBytDjfWgHJM6SWdU=
+---
+> SHA1-Digest: RdCgi0CCL/8JG3oHVueDXZbhvzw=
+410c413
+< SHA1-Digest: UHFgzP9EMOGyt8MY64fg2UIK1f4=
+---
+> SHA1-Digest: 74BHF69v6Mjk3Gbc5nBdUsjEVOU=
+422c425
+< SHA1-Digest: NclF+QUx+hhgUxgEooL/XpxKHAA=
+---
+> SHA1-Digest: Xj1qUqVLLA/Gn6b0C3sNiPhUWBs=
+427,429d429
+< Name: AndroidManifest.xml
+< SHA1-Digest: UqMp4T0yG/h2pChaD5r/h7tjvU0=
+< 
+436,437c436,437
+< Name: res/layout/vivid_spinner_simple_item.xml
+< SHA1-Digest: RMIXbeC/8oFsKZLdfBVi8HqwQwk=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: R9/5RoM9mCrNneYvDYrR7XOgWs8=
+441a442,444
+> Name: res/layout/vivid_spinner_simple_item.xml
+> SHA1-Digest: jZse5PXcFBaI0DRPp5PDzKqCLB0=
+> 
+446c449
+< SHA1-Digest: TVKAqcaQnYHjF1f0dqmCNfjHORM=
+---
+> SHA1-Digest: UIrb+JFJFtsVsQo9G4rs/oud31Y=
+454,456d456
+< Name: classes.dex
+< SHA1-Digest: O8ZqusZ0tAcqx+mAnvm5GhZJcJw=
+< 
+459a460,462
+> Name: classes.dex
+> SHA1-Digest: U80BqHEeaIc7jUeW0Kb41tA4Lcs=
+> 
+473c476
+< SHA1-Digest: IS64zOGMEZ981jcKP9+voldmjt8=
+---
+> SHA1-Digest: 1/Up/Y0GzLBp/QglKPNka70ZR74=
+476c479
+< SHA1-Digest: +7xONkdeUOxfeDkYiapOPrlQEOc=
+---
+> SHA1-Digest: BjStYPYtxBU3TXW/VszPiRyG0GY=
+511a515,517
+> Name: res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png
+> SHA1-Digest: j6uHYKKGLed4nqkpTwNtAQn1ii8=
+> 
+518,522c524,525
+< Name: res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png
+< SHA1-Digest: j6uHYKKGLed4nqkpTwNtAQn1ii8=
+< 
+< Name: res/layout-large/abs__action_mode_close_item.xml
+< SHA1-Digest: kMvHRLsdAnscz4HeG5pFO8r+87E=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+> SHA1-Digest: 7cVaONlDvpPZrbfvhhQcqnmYAGo=
+525c528
+< SHA1-Digest: 6dwDc+wAwL2qMxp/RjXPUFzYHDg=
+---
+> SHA1-Digest: Hi/MsfKb6oibsdI++Jp/bUXITGk=
+527,528c530,531
+< Name: res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+< SHA1-Digest: 7cVaONlDvpPZrbfvhhQcqnmYAGo=
+---
+> Name: res/layout-large/abs__action_mode_close_item.xml
+> SHA1-Digest: /1e07RESbGWLWvTssh2LMTUL+Hg=
+532a536,538
+> Name: res/layout/abs__dialog_title_holo.xml
+> SHA1-Digest: GhcSy1k23Ev/Dth+55axRYKtqx4=
+> 
+535,538c541
+< SHA1-Digest: tZEKU3PnZmwFIk70MALjLhXI6VE=
+< 
+< Name: res/layout/abs__dialog_title_holo.xml
+< SHA1-Digest: KFTCEkP0h/4bUG2L+OUbuhZUpDQ=
+---
+> SHA1-Digest: b3heDLkSIZYoHhQirSPtY0nhpWI=
+547c550
+< SHA1-Digest: dq472PyF/gXx88GCav7/SVJqlUU=
+---
+> SHA1-Digest: Cywe0ErTNwcV0u4IBmmJ5caoQds=
+566c569
+< SHA1-Digest: PU19YQNNBT4zb6B/pjNGO29qyXU=
+---
+> SHA1-Digest: TkfaEQ5MpkajDv9VMzM3zuKxtEU=
+584c587
+< SHA1-Digest: wJl/aWVq5neE0IDMdtfBn7zKUaI=
+---
+> SHA1-Digest: EmSZQMrVbVPT2Qq7zcJHy45baoM=
+593c596
+< SHA1-Digest: nD65bkz968VUkwis2fEesU4MXt4=
+---
+> SHA1-Digest: C8zzEvFn1UCgRRaK+BfwMGLRzRM=
+605c608
+< SHA1-Digest: 8FFImWuQtXEFayPbD656ZGS/bxw=
+---
+> SHA1-Digest: wnBApjDt9iX2XEk7N3wl7Ta21jM=
+629,631d631
+< Name: res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png
+< SHA1-Digest: rsWlScRgXqJe76pnUyUvp+TLsXg=
+< 
+635,636c635,636
+< Name: res/layout/abs__action_mode_bar.xml
+< SHA1-Digest: /nkTzcTiksnZ+Qamuh/aBvtehrc=
+---
+> Name: res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png
+> SHA1-Digest: rsWlScRgXqJe76pnUyUvp+TLsXg=
+640a641,643
+> Name: res/layout/abs__action_mode_bar.xml
+> SHA1-Digest: gj/BAY0MIkAgKiDygUjbKrQF1js=
+> 
+647,649d649
+< Name: res/drawable-hdpi/ab_ic_addons.png
+< SHA1-Digest: 5jwpO5nZdGF1UOTsVmr+dKdt4fo=
+< 
+652a653,655
+> Name: res/drawable-hdpi/ab_ic_addons.png
+> SHA1-Digest: 5jwpO5nZdGF1UOTsVmr+dKdt4fo=
+> 
+657,659d659
+< Name: res/drawable-hdpi/abs__ic_menu_share_holo_light.png
+< SHA1-Digest: 0tLlLqR2d/Ih26WbDIDIdyF4Hxg=
+< 
+662a663,665
+> Name: res/drawable-hdpi/abs__ic_menu_share_holo_light.png
+> SHA1-Digest: 0tLlLqR2d/Ih26WbDIDIdyF4Hxg=
+> 
+664c667
+< SHA1-Digest: +H4WXpUrd/gJwiZfK7Fe6hCMiuQ=
+---
+> SHA1-Digest: 3YXlKOfLk7j6Q7tEhQBqfrVdnaw=
+667c670
+< SHA1-Digest: YfCTmGYR4EYNwFMBEsYX9JVcPsM=
+---
+> SHA1-Digest: 4lNv//lOtlTU35gZd/nmC3pl4d4=
+695c698
+< SHA1-Digest: YJyzDmcSryFyxHnD+GZbeZumLZo=
+---
+> SHA1-Digest: hsjPp/xUsGbkEXlzm96ndwZLoeE=
+700,702d702
+< Name: res/layout/abs__popup_menu_item_layout.xml
+< SHA1-Digest: 5/Ktzuj7tns6LG3ugKLGdxa4nD4=
+< 
+705a706,708
+> Name: res/layout/abs__popup_menu_item_layout.xml
+> SHA1-Digest: xWx+inePbyMGwK0/+Qx/CrcNyzk=
+> 
+707c710
+< SHA1-Digest: oh3waiQ3uLc8eJPkbXPc5Uya6dY=
+---
+> SHA1-Digest: 4I1OoZ+16gTIJkgCd508csnwdpU=
+731c734
+< SHA1-Digest: qF7AuhQD0g8U77ZE5QI1Cuo3l8I=
+---
+> SHA1-Digest: hOCJZHKwH8zMmoppvogTOPcU3Vc=
+754c757
+< SHA1-Digest: 68hpjp6vu+L6qYKnhmOI/MO80tE=
+---
+> SHA1-Digest: 74sDRcOExWhDv8whR9hhucJzVIU=
+757c760
+< SHA1-Digest: 4QrnyZAXn3NEOGJ0oXkYNCWg9/w=
+---
+> SHA1-Digest: mumP4kBOQJVwz+WADwl4JaUg2mM=
+766c769
+< SHA1-Digest: HSz5d1O/U/Q470p4M4npACEvD7Y=
+---
+> SHA1-Digest: CzC4Xm5ALv8JflWuXn/mk0Qvi9g=
+781c784
+< SHA1-Digest: QApY+Bh1VaedUkiHj4LWFtDeWeo=
+---
+> SHA1-Digest: aPVpReBseRLlKmFtuz4O2MBUUgg=
+791c794
+< SHA1-Digest: DzjHowS3tveCuiJ0KBJ7gvkPEEc=
+---
+> SHA1-Digest: T79fFdB38HOxbFuWkBFs1ks4PEg=
+809c812
+< SHA1-Digest: Eio/yVoKWFHEtV0vCxmEskKzb3c=
+---
+> SHA1-Digest: DynVBKvy1XhN9XvjCDFLFgw4yHk=
+815c818
+< SHA1-Digest: fwRUJ5OgIvX43tUU7aDdvg6Vz5M=
+---
+> SHA1-Digest: bwxlg+bB64V0YKzm837C1tGAyLo=
+820,822d822
+< Name: res/drawable/abs__progress_medium_holo.xml
+< SHA1-Digest: YShq1Upq1nkJMiXj/rsyYimFEy4=
+< 
+824c824,827
+< SHA1-Digest: feGduJzf1uAJAc7QBBZC/EPFzFs=
+---
+> SHA1-Digest: HU7H9WRIyJh04X6eGjwdHku931k=
+> 
+> Name: res/drawable/abs__progress_medium_holo.xml
+> SHA1-Digest: VvtH2dDjuMK43eCNufbcxuItSsU=
+830c833
+< SHA1-Digest: bD+BcQ6gmsYAoV2hcm5rfkqKwmU=
+---
+> SHA1-Digest: S7M4LlFWZ3t2r6ko5SpImxDiFvo=
+836,839c839
+< SHA1-Digest: WMjwHhpbkjrgTNnZxQjIdCf0hyg=
+< 
+< Name: res/layout/abs__action_menu_item_layout.xml
+< SHA1-Digest: LcRLICaDt7ypkOX0kfIZsjl0z2w=
+---
+> SHA1-Digest: bZxGt90P3erBC+iDMz378DY3aDA=
+843a844,846
+> Name: res/layout/abs__action_menu_item_layout.xml
+> SHA1-Digest: LGE4zT87K1D/UhxHDRKczq3W6o0=
+> 
+854,856d856
+< Name: res/drawable/abs__tab_indicator_ab_holo.xml
+< SHA1-Digest: PiT2p8z5HrnRF6ZrxxsKXSynUV8=
+< 
+858c858
+< SHA1-Digest: WNGj3yNggjByRXx/1IOeUEFgXF0=
+---
+> SHA1-Digest: VzMFoBjUwv4KHL4vjdkNw0+x4E0=
+862a863,865
+> Name: res/drawable/abs__tab_indicator_ab_holo.xml
+> SHA1-Digest: n3Ccp6xK4eWuBzZh7ELuT8Ycidg=
+> 
+894c897
+< SHA1-Digest: xL40bi+abGYnAXa82b0+RZmvfkI=
+---
+> SHA1-Digest: D7UhQz4LTTS8R1iv0mPdMu8k6nY=
+903c906
+< SHA1-Digest: bKMuGMf3onBajj3S2bmo+mmW/HI=
+---
+> SHA1-Digest: /x3ibR3mFyaK4TIVpeg9IDHau3U=
+929c932
+< SHA1-Digest: sZ7GQMNMpH5v791fiquZehkccWQ=
+---
+> SHA1-Digest: vqqbqFTWMd9cSnH/KGxQToIah7Q=
+938c941
+< SHA1-Digest: mTCerUvQFKTKuhh6XbrqLMVMhw0=
+---
+> SHA1-Digest: F9JJesI1RHlScI0tRDuYw7YWUyg=
+965c968
+< SHA1-Digest: XUy41B7vcXdPTydfyJW2PjLbaIM=
+---
+> SHA1-Digest: Qu+IQZGFty9Vj6fZVcUuJ8dhbIw=
+973,975d975
+< Name: res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png
+< SHA1-Digest: ZPrYVnqw/XCnAcgBi982pF02PdM=
+< 
+978a979,981
+> Name: res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png
+> SHA1-Digest: ZPrYVnqw/XCnAcgBi982pF02PdM=
+> 
+980c983
+< SHA1-Digest: UFU7vWTmUVpMVWvGqfzXDKfWNLg=
+---
+> SHA1-Digest: rIbZ9Hc45lZauqjDh+EDV456XOE=
+986c989
+< SHA1-Digest: 7mVuQfElYi7n+6Ut8O7hdwapfiE=
+---
+> SHA1-Digest: PP2+LuEmDMLuTGmQZnydUTgRzHw=
+989,992c992
+< SHA1-Digest: 3HhpjqrtN2BhRTDruVPcwrBwgN0=
+< 
+< Name: res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png
+< SHA1-Digest: AmjEYxvpuVtaYTL71e9rnvkbedE=
+---
+> SHA1-Digest: vItD4RZc4YKabtmNGsnJyD/g5So=
+996a997,999
+> Name: res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png
+> SHA1-Digest: AmjEYxvpuVtaYTL71e9rnvkbedE=
+> 
+998c1001
+< SHA1-Digest: 4vOy80xH+Ns9y8eX5bvUDg+MtMM=
+---
+> SHA1-Digest: cgJ5MWnPoYhM2jhdUkJRz9c6BeA=
+1010c1013
+< SHA1-Digest: KmoKk9mNoIRifbVz2fyoZrYGahM=
+---
+> SHA1-Digest: uVSpJurIBT6eyDwHhakmSn+n+6Q=
+1013c1016
+< SHA1-Digest: z0cryBVXy3jLDjgR7b8JjvYPiDI=
+---
+> SHA1-Digest: CXc23I8qYRDH/1oUoOS+19G2bZo=
+1016c1019
+< SHA1-Digest: rBcsIBVyW4x+d+KKV1nZnB5wNkY=
+---
+> SHA1-Digest: q5GGTpzkrqAX+C7JTWtI0bg6fyo=
+1025c1028
+< SHA1-Digest: 6dEXZShKqEH4x/wTabxcgjB4q9w=
+---
+> SHA1-Digest: RGwccuHSGjoDuFWfl9BWbm2vVsY=
+1031c1034
+< SHA1-Digest: DgwzT2ENLTN44w1XdKoY4t3doFU=
+---
+> SHA1-Digest: 3+mbW4Y1mC0H5ABbseHrVAQxzwU=
+1040c1043
+< SHA1-Digest: 8+WaEkGmWkGcNbnKm6qb5HLtG2w=
+---
+> SHA1-Digest: xBgVw/pOaog9mB/uN2orZF28dmA=
+1055c1058
+< SHA1-Digest: N0doqfPXM31Ve5cYTUbEqBDPsHM=
+---
+> SHA1-Digest: a6RLBYfSRJOBfs2h+ZYPutSqbow=
+1058c1061
+< SHA1-Digest: 5FPo6g/1zfqdOaX35JQqwvXU05g=
+---
+> SHA1-Digest: TZXIxRxV9w4A5BeUXBUAN/h7Ajk=
+1064c1067
+< SHA1-Digest: BWN+8mTBxwqobmCt64Fb97HRt2Y=
+---
+> SHA1-Digest: 1pRJxDSmxKsCI3FyQo8uEuHVIn0=
+1082c1085
+< SHA1-Digest: n2WPHgms5dPG6WBg7Zs3Yiigq/g=
+---
+> SHA1-Digest: mzxpCLz5CYMi9FlGmCmVr8cjj4g=
+1085c1088
+< SHA1-Digest: JUNOEbv3pnkCZ277KG0wF717I04=
+---
+> SHA1-Digest: PkZ962kAjV/4H04Amr/aQmjWkIo=
+1088c1091
+< SHA1-Digest: HdeKZBQPMlaPcyoIFyO1eA6r16Y=
+---
+> SHA1-Digest: yUKJxKUUuYAsR+toWdMGtNHoN8A=
+1091c1094
+< SHA1-Digest: LN7E3LZ01PMdz2CKyFrKCwhJk6s=
+---
+> SHA1-Digest: nnG0hGPzS7Wj1zWyJpUPN0arliU=
+1100c1103
+< SHA1-Digest: 8PFQ9Dei8VUPWBE02b2TGx5bYKI=
+---
+> SHA1-Digest: DebIWis2pqtHokZLKHH+6QsMTzw=
+1105,1107d1107
+< Name: res/drawable/abs__progress_horizontal_holo_dark.xml
+< SHA1-Digest: 44sjfgM42LNqtE//ug0swO6GonA=
+< 
+1109c1109,1112
+< SHA1-Digest: OUHay0l0Pm59vm9yw1EJe/k/5/U=
+---
+> SHA1-Digest: S5nxVejXoayG3qHeBcYE+uAFBJo=
+> 
+> Name: res/drawable/abs__progress_horizontal_holo_dark.xml
+> SHA1-Digest: 35QYVd1zSikPSomwjzYXk0DztG0=
+1118c1121
+< SHA1-Digest: 43pJW/DI2UULWgn9Ny2r4jKvqvU=
+---
+> SHA1-Digest: h+Asn+YJSibHolXDaAcQXYYvRZ8=
+1124c1127
+< SHA1-Digest: L7DIFHBQFfofKq37Cly6IydcKQs=
+---
+> SHA1-Digest: btbIe/5ErCYf1wu71bDejG5Bsx0=
+1144,1146d1146
+< Name: res/drawable-hdpi/abs__ic_menu_share_holo_dark.png
+< SHA1-Digest: SpbWnJMbZ3HRdVLZqaechE5B8lM=
+< 
+1149a1150,1152
+> Name: res/drawable-hdpi/abs__ic_menu_share_holo_dark.png
+> SHA1-Digest: SpbWnJMbZ3HRdVLZqaechE5B8lM=
+> 
+1151c1154
+< SHA1-Digest: c/0BcqVawsLIRUIfZ7+RU5yLEBU=
+---
+> SHA1-Digest: 3Itzt7qfKOzMozvG67vPYcvKBJE=
+1177a1181,1183
+> Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+> SHA1-Digest: a0psDiPv6W6Oe9GsTr40v9t6L4g=
+> 
+1182,1185c1188
+< SHA1-Digest: mXf8vKvswO8nt0da62hM9XlgJI8=
+< 
+< Name: res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+< SHA1-Digest: a0psDiPv6W6Oe9GsTr40v9t6L4g=
+---
+> SHA1-Digest: wg+pn9w+1bpz/vIxSU/KYmteFNA=
+1188c1191
+< SHA1-Digest: 0EPZoMhA/OPo7dU2tE64YBV5rpg=
+---
+> SHA1-Digest: GTQ5TmeKQ823Bg5uBNey/qu2jyM=
+1194c1197
+< SHA1-Digest: BPrYtohFzV3gEQCyip5ViAv0Lpk=
+---
+> SHA1-Digest: toWNh+Pb9454JHHIIijON0y9fG8=
+1196,1197c1199,1200
+< Name: res/drawable-hdpi/select_all_button.png
+< SHA1-Digest: JgRuchdRzaNns5PqEkOaRgniihQ=
+---
+> Name: res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png
+> SHA1-Digest: fa1RuiOfmCR5TUqsvGoHdqDKEMc=
+1202,1203c1205,1206
+< Name: res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png
+< SHA1-Digest: fa1RuiOfmCR5TUqsvGoHdqDKEMc=
+---
+> Name: res/drawable-hdpi/select_all_button.png
+> SHA1-Digest: JgRuchdRzaNns5PqEkOaRgniihQ=
+1212c1215
+< SHA1-Digest: D80NQuWluyFPLH7tTKGm9CtnAbw=
+---
+> SHA1-Digest: gH57aS+jyU6Qm+f6w1OZ6nYFi8E=
+1218c1221
+< SHA1-Digest: Xl/mELUco4xem4YlL3gc5KNhdsw=
+---
+> SHA1-Digest: gGNeJXjk0nfuaOygaUFhIDhNJFA=
+1221c1224
+< SHA1-Digest: x+oIrtilbG8BLKc2dO/o1yRvgjk=
+---
+> SHA1-Digest: n7tUWbrs3WowrPdMwSlpXH/1Fqc=
+1224c1227
+< SHA1-Digest: 2Z2n+NodzVrlehL4GjJX3UztWmE=
+---
+> SHA1-Digest: x5e79PeqmBTKRZ3A0D+pJ8g8F9g=
+1229,1230c1232,1233
+< Name: res/layout/view_more_list_item.xml
+< SHA1-Digest: Fl1SqP6PisRTP50MSaClA6SATSA=
+---
+> Name: res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png
+> SHA1-Digest: YKCakYSOTJrRo5RRzbj2ydASXLE=
+1235,1236c1238,1239
+< Name: res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png
+< SHA1-Digest: YKCakYSOTJrRo5RRzbj2ydASXLE=
+---
+> Name: res/layout/view_more_list_item.xml
+> SHA1-Digest: 3pIywEvkS4Itmp/TAgPhM9N3/5o=
+1239c1242
+< SHA1-Digest: r/gubUP/shMn5EwDw/vkWX8dtIQ=
+---
+> SHA1-Digest: H+Wx1hUJ7fZJpjvsuFHyYQnlKG8=
+1245c1248
+< SHA1-Digest: IArNAyd3Dxy2vfFM5VwhvqPXpUI=
+---
+> SHA1-Digest: DEJKC/3hLJAnrfha7D/s6kfXZXI=
+1256,1257c1259,1260
+< Name: res/drawable-hdpi/ic_drawer.png
+< SHA1-Digest: N1cYKhdG4FxyffOSW19K1zGrDoc=
+---
+> Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+> SHA1-Digest: Z4xMacb4bX2fkIkRjYPviIm0JW8=
+1262,1263c1265,1266
+< Name: res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+< SHA1-Digest: Z4xMacb4bX2fkIkRjYPviIm0JW8=
+---
+> Name: res/drawable-hdpi/ic_drawer.png
+> SHA1-Digest: N1cYKhdG4FxyffOSW19K1zGrDoc=
+1269c1272
+< SHA1-Digest: 34eFtxWPyR1K3fmi/J7+s4Z0QsM=
+---
+> SHA1-Digest: KnbUfDYenp9XP1FPLQpzkafFd70=
+1275c1278
+< SHA1-Digest: MD1hp/ENL9KNwcFm/NtSPIacYBk=
+---
+> SHA1-Digest: XVAJYJWhffAIJOfbm8uc7VDy9Ew=
+1288c1291
+< SHA1-Digest: xH7I9MOjiVO7aru9BWIcL0ot10I=
+---
+> SHA1-Digest: dPHDQ2wcQ8FbuwTfvjMHgBbuB3k=
+Os arquivos binários result/APP_81/App_B_81/res/drawable-hdpi-v4/sms_alarm_bg.9.png e result/APP_81/App_M_81/res/drawable-hdpi-v4/sms_alarm_bg.9.png são diferentes
+Os arquivos binários result/APP_81/App_B_81/res/drawable-hdpi-v4/sms_bg.9.png e result/APP_81/App_M_81/res/drawable-hdpi-v4/sms_bg.9.png são diferentes
+Os arquivos binários result/APP_81/App_B_81/res/drawable-hdpi-v4/status_bar_split_line.9.png e result/APP_81/App_M_81/res/drawable-hdpi-v4/status_bar_split_line.9.png são diferentes
+diff -r result/APP_81/App_B_81/res/values/arrays.xml result/APP_81/App_M_81/res/values/arrays.xml
+6,28d5
+<         <item>ar</item>
+<         <item>ca</item>
+<         <item>cs</item>
+<         <item>da</item>
+<         <item>de</item>
+<         <item>el</item>
+<         <item>es</item>
+<         <item>fr</item>
+<         <item>he</item>
+<         <item>hu</item>
+<         <item>it</item>
+<         <item>ja</item>
+<         <item>ko</item>
+<         <item>pl</item>
+<         <item>pt</item>
+<         <item>pt_BR</item>
+<         <item>ro</item>
+<         <item>ru</item>
+<         <item>sk</item>
+<         <item>sv</item>
+<         <item>tr</item>
+<         <item>uk</item>
+<         <item>vi</item>
+30d6
+<         <item>zh_CN</item>
+35,59c11
+<         <item>العربية</item>
+<         <item>Català</item>
+<         <item>Čeština</item>
+<         <item>Dansk</item>
+<         <item>Deutsch</item>
+<         <item>Ελληνικά</item>
+<         <item>Español</item>
+<         <item>Français</item>
+<         <item>עִברִית</item>
+<         <item>Magyar</item>
+<         <item>Italiano</item>
+<         <item>日本語</item>
+<         <item>한국의</item>
+<         <item>Polski</item>
+<         <item>Português</item>
+<         <item>Português(Brasil)</item>
+<         <item>Român</item>
+<         <item>Pусский</item>
+<         <item>Slovenský</item>
+<         <item>Svensk</item>
+<         <item>Türk</item>
+<         <item>Ukrainian</item>
+<         <item>Việt</item>
+<         <item>中文（繁體）</item>
+<         <item>中文（简体）</item>
+---
+>         <item>中文 (简体)</item>
+Somente em result/APP_81/App_B_81/res: values-ca
+Somente em result/APP_81/App_B_81/res: values-cs
+Somente em result/APP_81/App_B_81/res: values-da
+Somente em result/APP_81/App_B_81/res: values-de
+Somente em result/APP_81/App_B_81/res: values-es
+Somente em result/APP_81/App_B_81/res: values-fr
+Somente em result/APP_81/App_B_81/res: values-he
+Somente em result/APP_81/App_B_81/res: values-hu
+Somente em result/APP_81/App_B_81/res: values-it
+Somente em result/APP_81/App_B_81/res: values-iw
+Somente em result/APP_81/App_B_81/res: values-ja
+Somente em result/APP_81/App_B_81/res: values-ko
+Somente em result/APP_81/App_B_81/res: values-mn
+Somente em result/APP_81/App_B_81/res: values-nb
+Somente em result/APP_81/App_B_81/res: values-nl
+Somente em result/APP_81/App_B_81/res: values-pt-rBR
+Somente em result/APP_81/App_B_81/res: values-ro
+Somente em result/APP_81/App_B_81/res: values-ru
+Somente em result/APP_81/App_B_81/res: values-sk
+Somente em result/APP_81/App_B_81/res: values-sv
+Somente em result/APP_81/App_B_81/res: values-tr
+Somente em result/APP_81/App_B_81/res: values-uk
+diff -r result/APP_81/App_B_81/res/values-zh/arrays.xml result/APP_81/App_M_81/res/values-zh/arrays.xml
+2a3,7
+>     <string-array name="languages">
+>         <item>自动</item>
+>         <item>English</item>
+>         <item>中文 (简体)</item>
+>     </string-array>
+6,7c11,12
+<         <item>按名字升序</item>
+<         <item>按名字降序</item>
+---
+>         <item>按名称升序</item>
+>         <item>按名称降序</item>
+10,14c15,25
+<         <item>卸載</item>
+<         <item>詳細信息</item>
+<         <item>分享</item>
+<         <item>搜尋 Google Market</item>
+<         <item>轉到</item>
+---
+>         <item>卸载应用</item>
+>         <item>应用信息</item>
+>         <item>分享应用</item>
+>         <item>搜索 Play 商店</item>
+>         <item>启动应用</item>
+>     </string-array>
+>     <string-array name="long_click_item_list_amazon">
+>         <item>卸载应用</item>
+>         <item>应用信息</item>
+>         <item>分享应用</item>
+>         <item>启动应用</item>
+17,21c28,32
+<         <item>禁用自動清除</item>
+<         <item>6 分鐘</item>
+<         <item>1 小時</item>
+<         <item>6 小時</item>
+<         <item>12 小時</item>
+---
+>         <item>不自动清除</item>
+>         <item>6 分钟</item>
+>         <item>1 小时</item>
+>         <item>6 小时</item>
+>         <item>12 小时</item>
+24a36,47
+>     </string-array>
+>     <string-array name="menu_spinner_array">
+>         <item>1 天</item>
+>         <item>3 天</item>
+>         <item>1 周</item>
+>         <item>2 周</item>
+>         <item>1 个月</item>
+>         <item>一律不</item>
+>     </string-array>
+>     <string-array name="planets_array">
+>         <item>提醒</item>
+>         <item>社区</item>
+diff -r result/APP_81/App_B_81/res/values-zh/strings.xml result/APP_81/App_M_81/res/values-zh/strings.xml
+3,4c3,20
+<     <string name="app_name">App快取清除器</string>
+<     <string name="try_now">我想試試</string>
+---
+>     <string name="abs__action_bar_home_description">导航首页</string>
+>     <string name="abs__action_bar_up_description">向上导航</string>
+>     <string name="abs__action_menu_overflow_description">更多选项</string>
+>     <string name="abs__action_mode_done">完成</string>
+>     <string name="abs__activity_chooser_view_see_all">查看全部</string>
+>     <string name="abs__activity_chooser_view_dialog_title_default">选择活动</string>
+>     <string name="abs__share_action_provider_share_with">分享对象</string>
+>     <string name="abs__activitychooserview_choose_application">选择应用</string>
+>     <string name="abs__shareactionprovider_share_with">共享对象</string>
+>     <string name="abs__shareactionprovider_share_with_application">与“%s”共享</string>
+>     <string name="abs__searchview_description_search">搜索</string>
+>     <string name="abs__searchview_description_query">搜索查询</string>
+>     <string name="abs__searchview_description_clear">清除查询</string>
+>     <string name="abs__searchview_description_submit">提交查询</string>
+>     <string name="abs__searchview_description_voice">语音搜索</string>
+>     <string name="app_name">应用缓存清除器</string>
+>     <string name="menu_settings">设置</string>
+>     <string name="try_now">立即试用</string>
+6,10c22,27
+<     <string name="recommend_app">推薦程式</string>
+<     <string name="app_name_pro">App快取清除器專業版</string>
+<     <string name="get_pro_title">去掉廣告</string>
+<     <string name="get_pro_desc">購買無廣告的App快取清除器</string>
+<     <string name="total">總共：</string>
+---
+>     <string name="recommend_app">推荐应用</string>
+>     <string name="app_name_pro">应用缓存清除器专业版</string>
+>     <string name="get_pro_title">去除广告</string>
+>     <string name="get_pro_desc">获得没有广告的应用缓存清除器专业版</string>
+>     <string name="widget_name">应用缓存清除器</string>
+>     <string name="total">总共：</string>
+12,15c29,32
+<     <string name="uninstall_selected_apps">清除全部</string>
+<     <string name="wait_title">請稍等</string>
+<     <string name="wait_msg">處理中 ...</string>
+<     <string name="menu_setting">設定</string>
+---
+>     <string name="uninstall_selected_apps">全部清除</string>
+>     <string name="wait_title">请稍候</string>
+>     <string name="wait_msg">正在处理…</string>
+>     <string name="menu_setting">设置</string>
+17,21c34,38
+<     <string name="app_rating">評5星級</string>
+<     <string name="setting_cachecleaner">App快取清除</string>
+<     <string name="setting_system">系統</string>
+<     <string name="setting_title_auto_startup">開機後自動運行</string>
+<     <string name="setting_summary_auto_startup">當您啟動手機的時候，自動運行</string>
+---
+>     <string name="app_rating">评分</string>
+>     <string name="setting_cachecleaner">应用缓存清除器</string>
+>     <string name="setting_system">系统</string>
+>     <string name="setting_title_auto_startup">开机自启动</string>
+>     <string name="setting_summary_auto_startup">开机时自动启动服务</string>
+23,30c40,47
+<     <string name="setting_title_show_notification">通知欄圖標</string>
+<     <string name="setting_summary_show_notification">在通知欄顯示圖標比便於快速切換</string>
+<     <string name="setting_title_clear_all_on_open">清除全部</string>
+<     <string name="setting_summary_clear_all_on_open">當應用程序啟動的時候，自動清除所有快取</string>
+<     <string name="setting_title_exit_after_clear_all">清除後退出</string>
+<     <string name="setting_summary_exit_after_clear_all">當您點擊清除全部的按鈕之後，自動退出程序</string>
+<     <string name="setting_feedback">反饋</string>
+<     <string name="setting_summary_feedback">反饋信息給作者</string>
+---
+>     <string name="setting_title_show_notification">通知栏图标</string>
+>     <string name="setting_summary_show_notification">显示通知栏图标以快速切换</string>
+>     <string name="setting_title_clear_all_on_open">全部清除</string>
+>     <string name="setting_summary_clear_all_on_open">应用启动时自动清除所有缓存文件</string>
+>     <string name="setting_title_exit_after_clear_all">清除后退出</string>
+>     <string name="setting_summary_exit_after_clear_all">触摸“全部清除”按钮后自动退出</string>
+>     <string name="setting_feedback">反馈</string>
+>     <string name="setting_summary_feedback">将反馈发送给开发者</string>
+32,37c49,54
+<     <string name="setting_title_share_to_friends">分享給朋友</string>
+<     <string name="setting_summary_share_to_friends">分享此程序給朋友</string>
+<     <string name="setting_title_view_more">更多程序</string>
+<     <string name="setting_summary_view_more">查看我們更多的優秀程序</string>
+<     <string name="share_send_title">Android的程序推薦</string>
+<     <string name="share_send_msg">"Hi,
+---
+>     <string name="setting_title_share_to_friends">分享给好友</string>
+>     <string name="setting_summary_share_to_friends">将应用缓存清除器分享给您的好友</string>
+>     <string name="setting_title_view_more">更多应用</string>
+>     <string name="setting_summary_view_more">查看更多由 INFOLIFE 开发的优秀应用</string>
+>     <string name="share_send_title">Android 应用推荐！</string>
+>     <string name="share_send_msg">"嗨，
+39c56
+< I found a great app 'App Cache Cleaner' for android phone, and I think you may want to try. Here is the market link:
+---
+> 我发现了一款超棒的名叫“应用缓存清除器”的 Android 应用，我认为您可能也想试试。这里是 Google Play 商店链接：
+42c59
+<     <string name="notification_disable">Menu->Settings to disable this</string>
+---
+>     <string name="notification_disable">触摸可打开主界面。</string>
+44c61
+<     <string name="menu_about">關於</string>
+---
+>     <string name="menu_about">关于</string>
+46c63
+<     <string name="search_tip">按名字搜尋</string>
+---
+>     <string name="search_tip">键入应用名称以搜索</string>
+48,49c65,70
+< Copyright ©2009-2012 INFOLIFE LLC, All rights reserved."</string>
+<     <string name="ok">OK</string>
+---
+> 版权所有 © 2009-2012 INFOLIFE LLC，保留所有权利。
+> 
+> 安智汉化组 小手汉化
+> 主页：http://www.anzhi.com
+> 论坛：http://bbs.anzhi.com"</string>
+>     <string name="ok">确定</string>
+51,59c72,80
+<     <string name="menu_help">幫助</string>
+<     <string name="no_update_txt">目前沒有可用的更新</string>
+<     <string name="setting_title_auto_update">自動更新</string>
+<     <string name="setting_summary_auto_update">自動檢查並提示更新</string>
+<     <string name="notice_update_msg">有新的版本可用，要更新嗎？</string>
+<     <string name="update_later">以後再說</string>
+<     <string name="setting_summary_auto_clear_time">設定自動清除全部快取</string>
+<     <string name="setting_title_auto_clear_time">自動清除間隔</string>
+<     <string name="share_app_msg">"Hi, I recommend to you an Android App. You can download it from the following market link:
+---
+>     <string name="menu_help">帮助</string>
+>     <string name="no_update_txt">当前没有可用的更新</string>
+>     <string name="setting_title_auto_update">自动更新</string>
+>     <string name="setting_summary_auto_update">自动检查和提示更新</string>
+>     <string name="notice_update_msg">检测到可用的新版本，要更新吗？</string>
+>     <string name="update_later">稍后</string>
+>     <string name="setting_summary_auto_clear_time">自动清除所有缓存</string>
+>     <string name="setting_title_auto_clear_time">自动清除间隔</string>
+>     <string name="share_app_msg">"嗨，我想向您推荐一款 Android 应用，您可通过下面的 Google Play 商店链接下载：
+62,64c83,85
+<     <string name="attached">The apk file is attached.</string>
+<     <string name="app_count_before">總共</string>
+<     <string name="app_count_after">Apps</string>
+---
+>     <string name="attached">已附加 APK 文件。</string>
+>     <string name="app_count_before">共有</string>
+>     <string name="app_count_after">个应用</string>
+66,74c87,95
+<     <string name="what_is_new">新特性:</string>
+<     <string name="loading_msg">掃描程序列表:</string>
+<     <string name="toast_total_free">總共釋放</string>
+<     <string name="toast_cache_file">快取</string>
+<     <string name="toast_no_cache_to_free">没有快取需要清除!</string>
+<     <string name="recommend">推薦</string>
+<     <string name="featured_apps">推薦應用</string>
+<     <string name="show_featured_apps_confirm_title">顯示特色應用</string>
+<     <string name="show_featured_apps_confirm_msg">查看更多的特色應用？</string>
+---
+>     <string name="what_is_new">新版特性：</string>
+>     <string name="loading_msg">正在扫描应用：</string>
+>     <string name="toast_total_free">共清除</string>
+>     <string name="toast_cache_file">的缓存文件</string>
+>     <string name="toast_no_cache_to_free">没有可清除的缓存！</string>
+>     <string name="recommend">推荐</string>
+>     <string name="featured_apps">推荐应用</string>
+>     <string name="show_featured_apps_confirm_title">显示推荐应用</string>
+>     <string name="show_featured_apps_confirm_msg">要查看更多由 INFOLIFE 开发的优秀应用吗？</string>
+77,84c98,105
+<     <string name="notification_remeber_saved">不再提示</string>
+<     <string name="notification_clear_desc">您手機中的緩存文件過多，現在就清除嗎?</string>
+<     <string name="notification_clear_cache1">有</string>
+<     <string name="notification_clear_cache2">緩存文件需要被清除</string>
+<     <string name="setting_title_show_notification_bar">自動檢測緩存</string>
+<     <string name="setting_summary_show_notification_bar">當手機緩存過多時候，在通知欄提示</string>
+<     <string name="widget_setting_title">Widget 設置</string>
+<     <string name="widget_setting_one_clear">一鍵清除模式</string>
+---
+>     <string name="notification_remeber_saved">不再显示此信息</string>
+>     <string name="notification_clear_desc">您的设备上有大量的缓存文件，要清除吗？</string>
+>     <string name="notification_clear_cache1">共有</string>
+>     <string name="notification_clear_cache2">的缓存文件需要清除</string>
+>     <string name="setting_title_show_notification_bar">自动检查</string>
+>     <string name="setting_summary_show_notification_bar">有大量缓存文件需要清除时显示通知</string>
+>     <string name="widget_setting_title">小部件设置</string>
+>     <string name="widget_setting_one_clear">触摸一次清除模式</string>
+86,98c107,129
+<     <string name="widget_setting_desc4">清除快取可能會使某些應用的緩存數據丟失，比如Google Map <a href="android.com">詳細的EULA</a>" "</string>
+<     <string name="widget_setting_one_tap_desc">當你點擊widget的時候，所有快取都將被清除</string>
+<     <string name="setting_title_hide_system_min_cache_size">隱藏系統保留大小的快取</string>
+<     <string name="setting_summary_hide_system_min_cache_size">隱藏具有系統保留大小的快取的App</string>
+<     <string name="feedback_confirm">您覺得這個程式如何？</string>
+<     <string name="feedback_confirm_positive">很棒！我想給它 5 顆星！</string>
+<     <string name="feedback_confirm_negative">我有問題和建議！</string>
+<     <string name="clear_cache_hint">"請點擊 '清除快取' 按鈕"</string>
+<     <string name="setting_title_language">語言</string>
+<     <string name="setting_summary_language">改變應用的語言</string>
+<     <string name="auto_select_language">自動選擇</string>
+<     <string name="setting_summary_license">開放原始碼軟體的授權詳細資料</string>
+<     <string name="setting_title_license">開放原始碼授權</string>
+---
+>     <string name="widget_setting_desc4">清除应用缓存可能会删除应用的临时数据，例如 Google 地图的缓存。<a href="android.com">查看最终用户许可协议</a></string>
+>     <string name="widget_setting_one_tap_desc">将会在您触摸小部件时清除所有应用缓存</string>
+>     <string name="setting_title_hide_system_min_cache_size">隐藏最小缓存应用</string>
+>     <string name="setting_summary_hide_system_min_cache_size">隐藏有系统预留的最小缓存文件大小的应用</string>
+>     <string name="feedback_confirm">您觉得这款应用怎么样？</string>
+>     <string name="feedback_confirm_positive">超棒！我要评 5 颗星！</string>
+>     <string name="feedback_confirm_negative">建议</string>
+>     <string name="storage_title">存储空间：</string>
+>     <string name="setting_title_app_of_the_day">优惠码</string>
+>     <string name="setting_summary_app_of_the_day">输入优惠码再重启应用可去除广告</string>
+>     <string name="clear_cache_hint">请触摸“清除缓存”按钮</string>
+>     <string name="setting_title_language">语言</string>
+>     <string name="setting_summary_language">更改应用的语言</string>
+>     <string name="auto_select_language">自动选择</string>
+>     <string name="drawer_open">打开导航抽屉</string>
+>     <string name="drawer_close">关闭导航抽屉</string>
+>     <string name="repetition">提醒频率：</string>
+>     <string name="remind_me_if">缓存提醒条件：</string>
+>     <string name="remind_require_dialog_title">缓存提醒条件</string>
+>     <string name="setting_summary_remind_veryweek">每周提醒我</string>
+>     <string name="setting_title_remind_veryweek">提醒</string>
+>     <string name="setting_summary_license">开放源代码软件的许可信息</string>
+>     <string name="setting_title_license">开放源代码许可</string>
+Somente em result/APP_81/App_B_81/res: values-zh-rCN
+Somente em result/APP_81/App_M_81/res: xml-zh
+diff -r result/APP_81/App_B_81/smali/mobi/infolife/cachepro/ac.smali result/APP_81/App_M_81/smali/mobi/infolife/cachepro/ac.smali
+55c55
+<     const-string v1, "Cleared All Cache!"
+---
+>     const-string v1, "\u5df2\u6e05\u9664\u6240\u6709\u7f13\u5b58\uff01"
+diff -r result/APP_81/App_B_81/smali/mobi/infolife/cachepro/ag.smali result/APP_81/App_M_81/smali/mobi/infolife/cachepro/ag.smali
+70c70
+<     const-string v4, "License"
+---
+>     const-string v4, "\u8bb8\u53ef"
+76c76
+<     const-string v0, "Agree"
+---
+>     const-string v0, "\u540c\u610f"
+84c84
+<     const-string v0, "Refuse"
+---
+>     const-string v0, "\u62d2\u7edd"
+diff -r result/APP_81/App_B_81/smali/mobi/infolife/cachepro/CleanerActivity.smali result/APP_81/App_M_81/smali/mobi/infolife/cachepro/CleanerActivity.smali
+3408c3408
+<     const-string v2, "Menu"
+---
+>     const-string v2, "\u83dc\u5355"
+3471c3471
+<     const-string v1, "Search"
+---
+>     const-string v1, "\u641c\u7d22"
+diff -r result/APP_81/App_B_81/smali/mobi/infolife/cachepro/g.smali result/APP_81/App_M_81/smali/mobi/infolife/cachepro/g.smali
+147c147
+<     const-string v3, "Swith To "
+---
+>     const-string v3, "\u65e0\u6cd5\u542f\u52a8\u5e94\u7528\u201c"
+155c155
+<     const-string v2, " failed!"
+---
+>     const-string v2, "\u201d\uff01"
+diff -r result/APP_81/App_B_81/smali/mobi/infolife/cachepro/h.smali result/APP_81/App_M_81/smali/mobi/infolife/cachepro/h.smali
+136c136
+<     const-string v3, "Swith To "
+---
+>     const-string v3, "\u65e0\u6cd5\u542f\u52a8\u5e94\u7528\u201c"
+144c144
+<     const-string v2, " failed!"
+---
+>     const-string v2, "\u201d\uff01"

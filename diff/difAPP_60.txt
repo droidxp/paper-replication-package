@@ -1,0 +1,70 @@
+diff -r result/APP_60/App_B_60/AndroidManifest.xml result/APP_60/App_M_60/AndroidManifest.xml
+9a10,11
+>         <meta-data android:name="UmAd_APP_SEC" android:value="4f52796f3b47551e"/>
+>         <meta-data android:name="UmAd_APP_ID" android:value="c7aa547a9036f696"/>
+diff -r result/APP_60/App_B_60/apktool.yml result/APP_60/App_M_60/apktool.yml
+2c2
+< apkFileName: Bapp60-893E4CB68E8C2610FCA249111D9F5E5F3C8C67D7F733047E2E2FB4E5754454C5.apk
+---
+> apkFileName: Mapp60-48214F2D1AB1509DB9BF379861C00CD8026E060E4A872C13813C8724262DC4F1.apk
+5d4
+< - resources.arsc
+17c16
+< sparseResources: true
+---
+> sparseResources: false
+Somente em result/APP_60/App_M_60/: net
+Os arquivos binários result/APP_60/App_B_60/original/AndroidManifest.xml e result/APP_60/App_M_60/original/AndroidManifest.xml são diferentes
+Somente em result/APP_60/App_B_60/original/META-INF: CERT.RSA
+Somente em result/APP_60/App_B_60/original/META-INF: CERT.SF
+Somente em result/APP_60/App_M_60/original/META-INF: DJB_KEYS.RSA
+Somente em result/APP_60/App_M_60/original/META-INF: DJB_KEYS.SF
+diff -r result/APP_60/App_B_60/original/META-INF/MANIFEST.MF result/APP_60/App_M_60/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_21 (Sun Microsystems Inc.)
+14c14
+< SHA1-Digest: tpjS/Kw/8LpU1bS1ZVm6L7k+77k=
+---
+> SHA1-Digest: OkiOWAKG9aaSI1FL9EBi84lcWUo=
+29c29
+< SHA1-Digest: 74lw+FU/fPMttTc+8wv705Vd0ys=
+---
+> SHA1-Digest: PTGhRKdQKjAsd2SOw6jmrcp38bM=
+62c62
+< SHA1-Digest: c+TNjst/9WPyfNUTR+RAVD1IsBY=
+---
+> SHA1-Digest: eQVVYM9gKeB43edjKHt5V6bYr7M=
+74c74
+< SHA1-Digest: jgveSiQeZilCYH2FnsMYlty+XcE=
+---
+> SHA1-Digest: CnA8nNef64BeUdF9uys8LS1Ctu0=
+diff -r result/APP_60/App_B_60/res/layout/main.xml result/APP_60/App_M_60/res/layout/main.xml
+3,5c3,7
+<   xmlns:android="http://schemas.android.com/apk/res/android">
+<     <com.google.ads.GoogleAdView android:id="@id/adview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+<     <com.resetgame.volleyball.Vviews android:id="@id/SurfaceView01" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/adview" />
+---
+>   xmlns:android="http://schemas.android.com/apk/res/android"
+>   xmlns:umadsdk="http://schemas.android.com/apk/res/com.resetgame.volleyball">
+>     <net.youmi.android.AdView android:id="@id/ad" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" umadsdk:testing="false" umadsdk:refreshInterval="30" umadsdk:changeAdAnimation="false" umadsdk:backgroundTransparent="0" />
+>     <com.resetgame.volleyball.Vviews android:id="@id/SurfaceView01" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ad" />
+>     <com.google.ads.GoogleAdView android:id="@id/adview" android:layout_width="wrap_content" android:layout_height="0.0dip" />
+Somente em result/APP_60/App_M_60/res/values: attrs.xml
+diff -r result/APP_60/App_B_60/res/values/ids.xml result/APP_60/App_M_60/res/values/ids.xml
+4a5
+>     <item type="id" name="ad" />
+diff -r result/APP_60/App_B_60/res/values/public.xml result/APP_60/App_M_60/res/values/public.xml
+2a3,10
+>     <public type="attr" name="testing" id="0x7f010000" />
+>     <public type="attr" name="backgroundColor" id="0x7f010001" />
+>     <public type="attr" name="textColor" id="0x7f010002" />
+>     <public type="attr" name="keywords" id="0x7f010003" />
+>     <public type="attr" name="refreshInterval" id="0x7f010004" />
+>     <public type="attr" name="isGoneWithoutAd" id="0x7f010005" />
+>     <public type="attr" name="changeAdAnimation" id="0x7f010006" />
+>     <public type="attr" name="backgroundTransparent" id="0x7f010007" />
+29a38
+>     <public type="id" name="ad" id="0x7f060002" />
+Somente em result/APP_60/App_M_60/smali: net

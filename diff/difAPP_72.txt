@@ -1,0 +1,112 @@
+diff -r result/APP_72/App_B_72/apktool.yml result/APP_72/App_M_72/apktool.yml
+2c2
+< apkFileName: Bapp72-A3CF7F4ED9D4BF9BAA0BC24723E655E7B08CADA054BBBDC60DC46D13C6DC6FBD.apk
+---
+> apkFileName: Mapp72-A57AB7B618F0D815D9AABB2688147BC97A73E5DF38CC125738E9A28F286834C3.apk
+diff -r result/APP_72/App_B_72/cn/com/ckStudio/xBulkSMS/Main.java result/APP_72/App_M_72/cn/com/ckStudio/xBulkSMS/Main.java
+26a27
+> import android.view.ViewGroup.LayoutParams;
+37a39,40
+> import net.youmi.android.AdManager;
+> import net.youmi.android.AdView;
+69a73
+>     zadview();
+289a294,303
+>   }
+>   
+>   public void zadview()
+>   {
+>     AdManager.init("1a42daf53f2cdd21", "b19761a42a4d60ca", false);
+>     AdView localAdView = new AdView(this);
+>     localAdView.setRequestInterval(30);
+>     localAdView.setChangeAdAnimtion(true);
+>     localAdView.setBackgroundTransparent(0);
+>     addContentView(localAdView, new ViewGroup.LayoutParams(-1, -2));
+diff -r result/APP_72/App_B_72/cn/com/ckStudio/xBulkSMS/SmsGroup.java result/APP_72/App_M_72/cn/com/ckStudio/xBulkSMS/SmsGroup.java
+29,31c29,30
+<     String[] arrayOfString3 = { "整蛊专家", "俏皮俗语", "有色幽默" };
+<     String[] arrayOfString4 = { "诗词歌赋", "谚语格言", "孔庙卖文", "巧言相对", "经典对白" };
+<     this.typeArr = new String[][] { arrayOfString1, { "MSN签名" }, arrayOfString2, arrayOfString3, arrayOfString4 };
+---
+>     String[] arrayOfString3 = { "诗词歌赋", "谚语格言", "孔庙卖文", "巧言相对", "经典对白" };
+>     this.typeArr = new String[][] { arrayOfString1, { "MSN签名" }, arrayOfString2, { "整蛊专家", "俏皮俗语", "有色幽默" }, arrayOfString3 };
+Somente em result/APP_72/App_M_72/: net
+Os arquivos binários result/APP_72/App_B_72/original/META-INF/CERT.RSA e result/APP_72/App_M_72/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_72/App_B_72/original/META-INF/CERT.SF result/APP_72/App_M_72/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: xQYs16pR7/sIgpjWlHlo0tVv+D4=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: t+d35T0RK6JZg6iyI00Ffxzgxh8=
+66c66
+< SHA1-Digest: tfUlFYLC6yKIbin1zGzoWdq1IVQ=
+---
+> SHA1-Digest: 1dxgnLANQSxRPqLnMBPYVKwAGXg=
+diff -r result/APP_72/App_B_72/original/META-INF/MANIFEST.MF result/APP_72/App_M_72/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+65c65
+< SHA1-Digest: ZPQw0zKGGP/Dn9/XbFUIHlmJYhs=
+---
+> SHA1-Digest: rM3sPTcGPymo5nXvl9d9VRTlrPw=
+diff -r result/APP_72/App_B_72/smali/cn/com/ckStudio/xBulkSMS/Main.smali result/APP_72/App_M_72/smali/cn/com/ckStudio/xBulkSMS/Main.smali
+214a215,217
+>     .line 161
+>     invoke-virtual {p0}, Lcn/com/ckStudio/xBulkSMS/Main;->zadview()V
+> 
+910a914,964
+> .end method
+> 
+> .method public zadview()V
+>     .locals 4
+> 
+>     .prologue
+>     .line 5000
+>     const-string v0, "1a42daf53f2cdd21"
+> 
+>     const-string v1, "b19761a42a4d60ca"
+> 
+>     const/4 v2, 0x0
+> 
+>     invoke-static {v0, v1, v2}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;Z)V
+> 
+>     .line 5001
+>     new-instance v1, Lnet/youmi/android/AdView;
+> 
+>     invoke-direct {v1, p0}, Lnet/youmi/android/AdView;-><init>(Landroid/content/Context;)V
+> 
+>     .line 5002
+>     .local v1, "v":Lnet/youmi/android/AdView;
+>     const/16 v2, 0x1e
+> 
+>     invoke-virtual {v1, v2}, Lnet/youmi/android/AdView;->setRequestInterval(I)V
+> 
+>     .line 5003
+>     const/4 v2, 0x1
+> 
+>     invoke-virtual {v1, v2}, Lnet/youmi/android/AdView;->setChangeAdAnimtion(Z)V
+> 
+>     .line 5004
+>     const/4 v2, 0x0
+> 
+>     invoke-virtual {v1, v2}, Lnet/youmi/android/AdView;->setBackgroundTransparent(I)V
+> 
+>     .line 5005
+>     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+> 
+>     const/4 v2, -0x1
+> 
+>     const/4 v3, -0x2
+> 
+>     invoke-direct {v0, v2, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+> 
+>     .line 5006
+>     .local v0, "p":Landroid/view/ViewGroup$LayoutParams;
+>     invoke-virtual {p0, v1, v0}, Lcn/com/ckStudio/xBulkSMS/Main;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+> 
+>     .line 5007
+>     return-void
+Somente em result/APP_72/App_M_72/smali: net

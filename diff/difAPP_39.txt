@@ -1,0 +1,3934 @@
+diff -r result/APP_39/App_B_39/apktool.yml result/APP_39/App_M_39/apktool.yml
+2c2
+< apkFileName: Bapp39-4B88A4A22C458B4DA7E4E4781847C277D9D58CA08B4D57C0A50B6B51591E5B53.apk
+---
+> apkFileName: Mapp39-7ABDDED877DE061FF5746931EE70FB9118F8A6CE6555C46A99438B601E6C79EC.apk
+4a5
+> - resources.arsc
+15c16,68
+< unknownFiles: {}
+---
+> unknownFiles:
+>   xml_kt_lg/commonPopup.xml: '8'
+>   xml_kt_lg/commonPopupImage.xml: '8'
+>   xml_kt_lg/commonPopupJoin.xml: '8'
+>   xml_kt_lg/commonPopupJoinForm.xml: '8'
+>   xml_kt_lg/commonPopupJoinFormH.xml: '8'
+>   xml_kt_lg/commonPopupJoinFormW.xml: '8'
+>   xml_kt_lg/commonPopupJoinH.xml: '8'
+>   xml_kt_lg/commonPopupJoinW.xml: '8'
+>   xml_kt_lg/commonPopupJoin_h.xml: '8'
+>   xml_kt_lg/commonPopupJoin_w.xml: '8'
+>   xml_kt_lg/commonPopupYesNo.xml: '8'
+>   xml_kt_lg/lgusmsauthpopup_h.xml: '8'
+>   xml_kt_lg/lgusmsauthpopup_w.xml: '8'
+>   xml_kt_lg/pop_Juminnumber_h.xml: '8'
+>   xml_kt_lg/pop_Juminnumber_w.xml: '8'
+>   xml_kt_lg/purchaseH.xml: '8'
+>   xml_kt_lg/purchaseH_Auto.xml: '8'
+>   xml_kt_lg/purchaseH_finalVersion.xml: '8'
+>   xml_kt_lg/purchaseW.xml: '8'
+>   xml_kt_lg/purchaseW_Auto.xml: '8'
+>   xml_kt_lg/purchaseW_finalVersion.xml: '8'
+>   xml_kt_lg/purchase_h.xml: '8'
+>   xml_kt_lg/purchase_w.xml: '8'
+>   xml/commonPopup.xml: '8'
+>   xml/commonPopupAutoPurchaseFormH.xml: '8'
+>   xml/commonPopupAutoPurchaseFormW.xml: '8'
+>   xml/commonPopupImage.xml: '8'
+>   xml/commonPopupJoin_h.xml: '8'
+>   xml/commonPopupJoin_w.xml: '8'
+>   xml/commonPopupYesNo.xml: '8'
+>   xml/culture_login_h.xml: '8'
+>   xml/culture_login_w.xml: '8'
+>   xml/dotori_sms_auth_h.xml: '8'
+>   xml/dotori_sms_auth_w.xml: '8'
+>   xml/foreign_inputmdn_h.xml: '8'
+>   xml/foreign_inputmdn_w.xml: '8'
+>   xml/imeiauthh.xml: '8'
+>   xml/imeiauthw.xml: '8'
+>   xml/ocb_pw_auth.xml: '8'
+>   xml/ocbpopup_h.xml: '8'
+>   xml/ocbpopup_w.xml: '8'
+>   xml/otpCommonPopup.xml: '8'
+>   xml/otpPopup_h.xml: '8'
+>   xml/otpPopup_w.xml: '8'
+>   xml/purchaseH.xml: '8'
+>   xml/purchaseH_Auto.xml: '8'
+>   xml/purchaseH_finalVersion.xml: '8'
+>   xml/purchaseW.xml: '8'
+>   xml/purchaseW_Auto.xml: '8'
+>   xml/purchaseW_finalVersion.xml: '8'
+>   xml/purchase_h.xml: '8'
+>   xml/purchase_w.xml: '8'
+diff -r result/APP_39/App_B_39/com/feelingk/iap/gui/parser/ParserXML.java result/APP_39/App_M_39/com/feelingk/iap/gui/parser/ParserXML.java
+2414c2414
+<     //   278: ifeq +1161 -> 1439
+---
+>     //   278: ifeq +1169 -> 1447
+2428c2428
+<     //   311: ifeq +1099 -> 1410
+---
+>     //   311: ifeq +1107 -> 1418
+2442c2442
+<     //   344: ifeq +1086 -> 1430
+---
+>     //   344: ifeq +1094 -> 1438
+2510c2510
+<     //   502: ifnull +1229 -> 1731
+---
+>     //   502: ifnull +1237 -> 1739
+2520c2520
+<     //   525: ifeq +1216 -> 1741
+---
+>     //   525: ifeq +1224 -> 1749
+2720c2720
+<     //   926: ifeq +449 -> 1375
+---
+>     //   926: ifeq +457 -> 1383
+2750c2750
+<     //   996: ifeq +1895 -> 2891
+---
+>     //   996: ifeq +1903 -> 2899
+2822c2822
+<     //   1167: ifeq +1737 -> 2904
+---
+>     //   1167: ifeq +1745 -> 2912
+2867,2894c2867,2892
+<     //   1273: ifnull +62 -> 1335
+<     //   1276: ldc_w 1715
+<     //   1279: invokestatic 1196	android/graphics/Color:parseColor	(Ljava/lang/String;)I
+<     //   1282: istore_2
+<     //   1283: ldc_w 1717
+<     //   1286: invokestatic 1196	android/graphics/Color:parseColor	(Ljava/lang/String;)I
+<     //   1289: istore_3
+<     //   1290: aload 4
+<     //   1292: new 1719	android/content/res/ColorStateList
+<     //   1295: dup
+<     //   1296: iconst_2
+<     //   1297: anewarray 1721	[I
+<     //   1300: dup
+<     //   1301: iconst_0
+<     //   1302: iconst_1
+<     //   1303: newarray int
+<     //   1305: dup
+<     //   1306: iconst_0
+<     //   1307: ldc_w 1258
+<     //   1310: iastore
+<     //   1311: aastore
+<     //   1312: dup
+<     //   1313: iconst_1
+<     //   1314: iconst_0
+<     //   1315: newarray int
+<     //   1317: aastore
+<     //   1318: iconst_2
+<     //   1319: newarray int
+---
+>     //   1273: ifnull +70 -> 1343
+>     //   1276: iconst_1
+>     //   1277: newarray int
+>     //   1279: dup
+>     //   1280: iconst_0
+>     //   1281: ldc_w 1258
+>     //   1284: iastore
+>     //   1285: astore 6
+>     //   1287: iconst_0
+>     //   1288: newarray int
+>     //   1290: astore 7
+>     //   1292: ldc_w 1715
+>     //   1295: invokestatic 1196	android/graphics/Color:parseColor	(Ljava/lang/String;)I
+>     //   1298: istore_2
+>     //   1299: ldc_w 1717
+>     //   1302: invokestatic 1196	android/graphics/Color:parseColor	(Ljava/lang/String;)I
+>     //   1305: istore_3
+>     //   1306: aload 4
+>     //   1308: new 1719	android/content/res/ColorStateList
+>     //   1311: dup
+>     //   1312: iconst_2
+>     //   1313: anewarray 1721	[I
+>     //   1316: dup
+>     //   1317: iconst_0
+>     //   1318: aload 6
+>     //   1320: aastore
+2896,2911c2894,2911
+<     //   1322: iconst_0
+<     //   1323: iload_2
+<     //   1324: iastore
+<     //   1325: dup
+<     //   1326: iconst_1
+<     //   1327: iload_3
+<     //   1328: iastore
+<     //   1329: invokespecial 1724	android/content/res/ColorStateList:<init>	([[I[I)V
+<     //   1332: invokevirtual 1727	android/widget/EditText:setTextColor	(Landroid/content/res/ColorStateList;)V
+<     //   1335: aload_0
+<     //   1336: getfield 506	com/feelingk/iap/gui/parser/ParserXML:m_DotoriSMSAuthNum	Landroid/widget/EditText;
+<     //   1339: ifnull +18 -> 1357
+<     //   1342: aload_0
+<     //   1343: getfield 506	com/feelingk/iap/gui/parser/ParserXML:m_DotoriSMSAuthNum	Landroid/widget/EditText;
+<     //   1346: new 74	com/feelingk/iap/gui/parser/ParserXML$39
+<     //   1349: dup
+---
+>     //   1322: iconst_1
+>     //   1323: aload 7
+>     //   1325: aastore
+>     //   1326: iconst_2
+>     //   1327: newarray int
+>     //   1329: dup
+>     //   1330: iconst_0
+>     //   1331: iload_2
+>     //   1332: iastore
+>     //   1333: dup
+>     //   1334: iconst_1
+>     //   1335: iload_3
+>     //   1336: iastore
+>     //   1337: invokespecial 1724	android/content/res/ColorStateList:<init>	([[I[I)V
+>     //   1340: invokevirtual 1727	android/widget/EditText:setTextColor	(Landroid/content/res/ColorStateList;)V
+>     //   1343: aload_0
+>     //   1344: getfield 506	com/feelingk/iap/gui/parser/ParserXML:m_DotoriSMSAuthNum	Landroid/widget/EditText;
+>     //   1347: ifnull +18 -> 1365
+2913,2998c2913,2998
+<     //   1351: invokespecial 1728	com/feelingk/iap/gui/parser/ParserXML$39:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;)V
+<     //   1354: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   1357: aload_0
+<     //   1358: getfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+<     //   1361: ifnull +14 -> 1375
+<     //   1364: aload_0
+<     //   1365: getfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+<     //   1368: aload_0
+<     //   1369: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+<     //   1372: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   1375: aload_1
+<     //   1376: astore 4
+<     //   1378: aload_0
+<     //   1379: getfield 390	com/feelingk/iap/gui/parser/ParserXML:layoutStack	Ljava/util/Stack;
+<     //   1382: invokevirtual 1319	java/util/Stack:size	()I
+<     //   1385: ifle -1338 -> 47
+<     //   1388: aload_1
+<     //   1389: aload_0
+<     //   1390: aload 5
+<     //   1392: aload_0
+<     //   1393: getfield 390	com/feelingk/iap/gui/parser/ParserXML:layoutStack	Ljava/util/Stack;
+<     //   1396: invokevirtual 1323	java/util/Stack:peek	()Ljava/lang/Object;
+<     //   1399: checkcast 1325	android/view/ViewGroup
+<     //   1402: invokespecial 1329	com/feelingk/iap/gui/parser/ParserXML:loadLayoutParams	(Landroid/util/AttributeSet;Landroid/view/ViewGroup;)Landroid/view/ViewGroup$LayoutParams;
+<     //   1405: invokevirtual 1333	android/view/View:setLayoutParams	(Landroid/view/ViewGroup$LayoutParams;)V
+<     //   1408: aload_1
+<     //   1409: areturn
+<     //   1410: aload 6
+<     //   1412: ldc_w 1335
+<     //   1415: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   1418: ifeq -1098 -> 320
+<     //   1421: aload 4
+<     //   1423: iconst_1
+<     //   1424: invokevirtual 1648	android/widget/RadioGroup:setOrientation	(I)V
+<     //   1427: goto -1107 -> 320
+<     //   1430: aload 4
+<     //   1432: iconst_5
+<     //   1433: invokevirtual 1649	android/widget/RadioGroup:setGravity	(I)V
+<     //   1436: goto -1082 -> 354
+<     //   1439: aload_1
+<     //   1440: instanceof 921
+<     //   1443: ifeq -1089 -> 354
+<     //   1446: aload_1
+<     //   1447: checkcast 921	android/widget/LinearLayout
+<     //   1450: astore 4
+<     //   1452: aload_0
+<     //   1453: aload 5
+<     //   1455: ldc_w 1102
+<     //   1458: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1461: astore 6
+<     //   1463: aload 6
+<     //   1465: ifnull +27 -> 1492
+<     //   1468: aload 6
+<     //   1470: ldc_w 1730
+<     //   1473: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   1476: ifeq +16 -> 1492
+<     //   1479: aload 4
+<     //   1481: putstatic 354	com/feelingk/iap/gui/parser/ParserXML:mJumiLlView	Landroid/widget/LinearLayout;
+<     //   1484: getstatic 354	com/feelingk/iap/gui/parser/ParserXML:mJumiLlView	Landroid/widget/LinearLayout;
+<     //   1487: bipush 8
+<     //   1489: invokevirtual 1112	android/widget/LinearLayout:setVisibility	(I)V
+<     //   1492: aload_0
+<     //   1493: aload 5
+<     //   1495: ldc_w 1015
+<     //   1498: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1501: astore 6
+<     //   1503: aload 6
+<     //   1505: ifnull +20 -> 1525
+<     //   1508: aload 6
+<     //   1510: ldc_w 1021
+<     //   1513: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   1516: ifeq +186 -> 1702
+<     //   1519: aload 4
+<     //   1521: iconst_0
+<     //   1522: invokevirtual 1024	android/widget/LinearLayout:setOrientation	(I)V
+<     //   1525: aload_0
+<     //   1526: aload 5
+<     //   1528: ldc_w 1026
+<     //   1531: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1534: astore 6
+<     //   1536: aload 6
+<     //   1538: ifnull +57 -> 1595
+<     //   1541: aload_0
+<     //   1542: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+<     //   1545: new 954	java/lang/StringBuilder
+<     //   1548: dup
+---
+>     //   1351: getfield 506	com/feelingk/iap/gui/parser/ParserXML:m_DotoriSMSAuthNum	Landroid/widget/EditText;
+>     //   1354: new 74	com/feelingk/iap/gui/parser/ParserXML$39
+>     //   1357: dup
+>     //   1358: aload_0
+>     //   1359: invokespecial 1728	com/feelingk/iap/gui/parser/ParserXML$39:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;)V
+>     //   1362: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   1365: aload_0
+>     //   1366: getfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+>     //   1369: ifnull +14 -> 1383
+>     //   1372: aload_0
+>     //   1373: getfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+>     //   1376: aload_0
+>     //   1377: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+>     //   1380: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   1383: aload_1
+>     //   1384: astore 4
+>     //   1386: aload_0
+>     //   1387: getfield 390	com/feelingk/iap/gui/parser/ParserXML:layoutStack	Ljava/util/Stack;
+>     //   1390: invokevirtual 1319	java/util/Stack:size	()I
+>     //   1393: ifle -1346 -> 47
+>     //   1396: aload_1
+>     //   1397: aload_0
+>     //   1398: aload 5
+>     //   1400: aload_0
+>     //   1401: getfield 390	com/feelingk/iap/gui/parser/ParserXML:layoutStack	Ljava/util/Stack;
+>     //   1404: invokevirtual 1323	java/util/Stack:peek	()Ljava/lang/Object;
+>     //   1407: checkcast 1325	android/view/ViewGroup
+>     //   1410: invokespecial 1329	com/feelingk/iap/gui/parser/ParserXML:loadLayoutParams	(Landroid/util/AttributeSet;Landroid/view/ViewGroup;)Landroid/view/ViewGroup$LayoutParams;
+>     //   1413: invokevirtual 1333	android/view/View:setLayoutParams	(Landroid/view/ViewGroup$LayoutParams;)V
+>     //   1416: aload_1
+>     //   1417: areturn
+>     //   1418: aload 6
+>     //   1420: ldc_w 1335
+>     //   1423: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   1426: ifeq -1106 -> 320
+>     //   1429: aload 4
+>     //   1431: iconst_1
+>     //   1432: invokevirtual 1648	android/widget/RadioGroup:setOrientation	(I)V
+>     //   1435: goto -1115 -> 320
+>     //   1438: aload 4
+>     //   1440: iconst_5
+>     //   1441: invokevirtual 1649	android/widget/RadioGroup:setGravity	(I)V
+>     //   1444: goto -1090 -> 354
+>     //   1447: aload_1
+>     //   1448: instanceof 921
+>     //   1451: ifeq -1097 -> 354
+>     //   1454: aload_1
+>     //   1455: checkcast 921	android/widget/LinearLayout
+>     //   1458: astore 4
+>     //   1460: aload_0
+>     //   1461: aload 5
+>     //   1463: ldc_w 1102
+>     //   1466: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1469: astore 6
+>     //   1471: aload 6
+>     //   1473: ifnull +27 -> 1500
+>     //   1476: aload 6
+>     //   1478: ldc_w 1730
+>     //   1481: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   1484: ifeq +16 -> 1500
+>     //   1487: aload 4
+>     //   1489: putstatic 354	com/feelingk/iap/gui/parser/ParserXML:mJumiLlView	Landroid/widget/LinearLayout;
+>     //   1492: getstatic 354	com/feelingk/iap/gui/parser/ParserXML:mJumiLlView	Landroid/widget/LinearLayout;
+>     //   1495: bipush 8
+>     //   1497: invokevirtual 1112	android/widget/LinearLayout:setVisibility	(I)V
+>     //   1500: aload_0
+>     //   1501: aload 5
+>     //   1503: ldc_w 1015
+>     //   1506: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1509: astore 6
+>     //   1511: aload 6
+>     //   1513: ifnull +20 -> 1533
+>     //   1516: aload 6
+>     //   1518: ldc_w 1021
+>     //   1521: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   1524: ifeq +186 -> 1710
+>     //   1527: aload 4
+>     //   1529: iconst_0
+>     //   1530: invokevirtual 1024	android/widget/LinearLayout:setOrientation	(I)V
+>     //   1533: aload_0
+>     //   1534: aload 5
+>     //   1536: ldc_w 1026
+>     //   1539: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1542: astore 6
+>     //   1544: aload 6
+>     //   1546: ifnull +57 -> 1603
+3000,3139c3000,3139
+<     //   1550: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+<     //   1553: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   1556: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   1559: aload 6
+<     //   1561: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   1564: ldc_w 1116
+<     //   1567: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   1570: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   1573: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+<     //   1576: astore 7
+<     //   1578: aload 4
+<     //   1580: aload 7
+<     //   1582: aload 6
+<     //   1584: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+<     //   1587: invokevirtual 1061	android/widget/LinearLayout:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   1590: aload 7
+<     //   1592: invokevirtual 719	java/io/InputStream:close	()V
+<     //   1595: aload_0
+<     //   1596: aload 5
+<     //   1598: ldc_w 1063
+<     //   1601: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1604: ifnull +11 -> 1615
+<     //   1607: aload 4
+<     //   1609: ldc_w 1064
+<     //   1612: invokevirtual 1067	android/widget/LinearLayout:setBackgroundColor	(I)V
+<     //   1615: aload_0
+<     //   1616: aload 5
+<     //   1618: ldc_w 1069
+<     //   1621: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1624: astore 6
+<     //   1626: aload 6
+<     //   1628: ifnull +21 -> 1649
+<     //   1631: aload 6
+<     //   1633: ldc_w 1071
+<     //   1636: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   1639: ifeq +83 -> 1722
+<     //   1642: aload 4
+<     //   1644: bipush 17
+<     //   1646: invokevirtual 1074	android/widget/LinearLayout:setGravity	(I)V
+<     //   1649: aload_0
+<     //   1650: aload 5
+<     //   1652: ldc_w 1076
+<     //   1655: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1658: astore 6
+<     //   1660: aload 6
+<     //   1662: ifnull +19 -> 1681
+<     //   1665: aload_0
+<     //   1666: aload 6
+<     //   1668: invokespecial 1080	com/feelingk/iap/gui/parser/ParserXML:readDPSize	(Ljava/lang/String;)I
+<     //   1671: istore_2
+<     //   1672: aload 4
+<     //   1674: iload_2
+<     //   1675: iload_2
+<     //   1676: iload_2
+<     //   1677: iload_2
+<     //   1678: invokevirtual 1084	android/widget/LinearLayout:setPadding	(IIII)V
+<     //   1681: aload_0
+<     //   1682: aload 5
+<     //   1684: ldc_w 1086
+<     //   1687: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1690: ifnull -1336 -> 354
+<     //   1693: aload 4
+<     //   1695: iconst_1
+<     //   1696: invokevirtual 1089	android/widget/LinearLayout:setFocusableInTouchMode	(Z)V
+<     //   1699: goto -1345 -> 354
+<     //   1702: aload 6
+<     //   1704: ldc_w 1335
+<     //   1707: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   1710: ifeq -185 -> 1525
+<     //   1713: aload 4
+<     //   1715: iconst_1
+<     //   1716: invokevirtual 1024	android/widget/LinearLayout:setOrientation	(I)V
+<     //   1719: goto -194 -> 1525
+<     //   1722: aload 4
+<     //   1724: iconst_5
+<     //   1725: invokevirtual 1074	android/widget/LinearLayout:setGravity	(I)V
+<     //   1728: goto -79 -> 1649
+<     //   1731: aload 4
+<     //   1733: bipush 19
+<     //   1735: invokevirtual 1220	android/widget/TextView:setGravity	(I)V
+<     //   1738: goto -1226 -> 512
+<     //   1741: aload_1
+<     //   1742: instanceof 1646
+<     //   1745: ifeq +437 -> 2182
+<     //   1748: aload_1
+<     //   1749: checkcast 1646	android/widget/RadioButton
+<     //   1752: astore 4
+<     //   1754: aload_0
+<     //   1755: aload 5
+<     //   1757: ldc_w 1102
+<     //   1760: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1763: astore 6
+<     //   1765: aload_0
+<     //   1766: aload 5
+<     //   1768: ldc_w 1230
+<     //   1771: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1774: astore 9
+<     //   1776: aload_0
+<     //   1777: aload 5
+<     //   1779: ldc_w 1732
+<     //   1782: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   1785: astore 8
+<     //   1787: aload 6
+<     //   1789: ifnull +51 -> 1840
+<     //   1792: aload 6
+<     //   1794: ldc_w 1734
+<     //   1797: invokevirtual 1355	java/lang/String:indexOf	(Ljava/lang/String;)I
+<     //   1800: iconst_m1
+<     //   1801: if_icmpeq +39 -> 1840
+<     //   1804: aload 6
+<     //   1806: ldc_w 1736
+<     //   1809: invokevirtual 1739	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+<     //   1812: ifeq +324 -> 2136
+<     //   1815: aload_0
+<     //   1816: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+<     //   1819: aload 4
+<     //   1821: invokevirtual 1743	com/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN:setRadioButton1	(Landroid/widget/RadioButton;)V
+<     //   1824: aload 4
+<     //   1826: aload 6
+<     //   1828: invokevirtual 1744	android/widget/RadioButton:setTag	(Ljava/lang/Object;)V
+<     //   1831: aload 4
+<     //   1833: aload_0
+<     //   1834: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+<     //   1837: invokevirtual 1745	android/widget/RadioButton:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+<     //   1840: aload 9
+<     //   1842: ifnull -920 -> 922
+<     //   1845: aload 8
+<     //   1847: ifnull -925 -> 922
+<     //   1850: new 1234	android/graphics/drawable/StateListDrawable
+<     //   1853: dup
+<     //   1854: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+<     //   1857: astore 6
+<     //   1859: new 1234	android/graphics/drawable/StateListDrawable
+<     //   1862: dup
+<     //   1863: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+<     //   1866: astore 7
+<     //   1868: aload_0
+<     //   1869: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+<     //   1872: new 954	java/lang/StringBuilder
+<     //   1875: dup
+---
+>     //   1550: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+>     //   1553: new 954	java/lang/StringBuilder
+>     //   1556: dup
+>     //   1557: aload_0
+>     //   1558: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+>     //   1561: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   1564: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   1567: aload 6
+>     //   1569: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   1572: ldc_w 1116
+>     //   1575: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   1578: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   1581: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+>     //   1584: astore 7
+>     //   1586: aload 4
+>     //   1588: aload 7
+>     //   1590: aload 6
+>     //   1592: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+>     //   1595: invokevirtual 1061	android/widget/LinearLayout:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   1598: aload 7
+>     //   1600: invokevirtual 719	java/io/InputStream:close	()V
+>     //   1603: aload_0
+>     //   1604: aload 5
+>     //   1606: ldc_w 1063
+>     //   1609: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1612: ifnull +11 -> 1623
+>     //   1615: aload 4
+>     //   1617: ldc_w 1064
+>     //   1620: invokevirtual 1067	android/widget/LinearLayout:setBackgroundColor	(I)V
+>     //   1623: aload_0
+>     //   1624: aload 5
+>     //   1626: ldc_w 1069
+>     //   1629: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1632: astore 6
+>     //   1634: aload 6
+>     //   1636: ifnull +21 -> 1657
+>     //   1639: aload 6
+>     //   1641: ldc_w 1071
+>     //   1644: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   1647: ifeq +83 -> 1730
+>     //   1650: aload 4
+>     //   1652: bipush 17
+>     //   1654: invokevirtual 1074	android/widget/LinearLayout:setGravity	(I)V
+>     //   1657: aload_0
+>     //   1658: aload 5
+>     //   1660: ldc_w 1076
+>     //   1663: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1666: astore 6
+>     //   1668: aload 6
+>     //   1670: ifnull +19 -> 1689
+>     //   1673: aload_0
+>     //   1674: aload 6
+>     //   1676: invokespecial 1080	com/feelingk/iap/gui/parser/ParserXML:readDPSize	(Ljava/lang/String;)I
+>     //   1679: istore_2
+>     //   1680: aload 4
+>     //   1682: iload_2
+>     //   1683: iload_2
+>     //   1684: iload_2
+>     //   1685: iload_2
+>     //   1686: invokevirtual 1084	android/widget/LinearLayout:setPadding	(IIII)V
+>     //   1689: aload_0
+>     //   1690: aload 5
+>     //   1692: ldc_w 1086
+>     //   1695: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1698: ifnull -1344 -> 354
+>     //   1701: aload 4
+>     //   1703: iconst_1
+>     //   1704: invokevirtual 1089	android/widget/LinearLayout:setFocusableInTouchMode	(Z)V
+>     //   1707: goto -1353 -> 354
+>     //   1710: aload 6
+>     //   1712: ldc_w 1335
+>     //   1715: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   1718: ifeq -185 -> 1533
+>     //   1721: aload 4
+>     //   1723: iconst_1
+>     //   1724: invokevirtual 1024	android/widget/LinearLayout:setOrientation	(I)V
+>     //   1727: goto -194 -> 1533
+>     //   1730: aload 4
+>     //   1732: iconst_5
+>     //   1733: invokevirtual 1074	android/widget/LinearLayout:setGravity	(I)V
+>     //   1736: goto -79 -> 1657
+>     //   1739: aload 4
+>     //   1741: bipush 19
+>     //   1743: invokevirtual 1220	android/widget/TextView:setGravity	(I)V
+>     //   1746: goto -1234 -> 512
+>     //   1749: aload_1
+>     //   1750: instanceof 1646
+>     //   1753: ifeq +437 -> 2190
+>     //   1756: aload_1
+>     //   1757: checkcast 1646	android/widget/RadioButton
+>     //   1760: astore 4
+>     //   1762: aload_0
+>     //   1763: aload 5
+>     //   1765: ldc_w 1102
+>     //   1768: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1771: astore 6
+>     //   1773: aload_0
+>     //   1774: aload 5
+>     //   1776: ldc_w 1230
+>     //   1779: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1782: astore 9
+>     //   1784: aload_0
+>     //   1785: aload 5
+>     //   1787: ldc_w 1732
+>     //   1790: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   1793: astore 8
+>     //   1795: aload 6
+>     //   1797: ifnull +51 -> 1848
+>     //   1800: aload 6
+>     //   1802: ldc_w 1734
+>     //   1805: invokevirtual 1355	java/lang/String:indexOf	(Ljava/lang/String;)I
+>     //   1808: iconst_m1
+>     //   1809: if_icmpeq +39 -> 1848
+>     //   1812: aload 6
+>     //   1814: ldc_w 1736
+>     //   1817: invokevirtual 1739	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+>     //   1820: ifeq +324 -> 2144
+>     //   1823: aload_0
+>     //   1824: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+>     //   1827: aload 4
+>     //   1829: invokevirtual 1743	com/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN:setRadioButton1	(Landroid/widget/RadioButton;)V
+>     //   1832: aload 4
+>     //   1834: aload 6
+>     //   1836: invokevirtual 1744	android/widget/RadioButton:setTag	(Ljava/lang/Object;)V
+>     //   1839: aload 4
+>     //   1841: aload_0
+>     //   1842: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+>     //   1845: invokevirtual 1745	android/widget/RadioButton:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+>     //   1848: aload 9
+>     //   1850: ifnull -928 -> 922
+>     //   1853: aload 8
+>     //   1855: ifnull -933 -> 922
+>     //   1858: new 1234	android/graphics/drawable/StateListDrawable
+>     //   1861: dup
+>     //   1862: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+>     //   1865: astore 6
+>     //   1867: new 1234	android/graphics/drawable/StateListDrawable
+>     //   1870: dup
+>     //   1871: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+>     //   1874: astore 7
+3141,3160c3141,3160
+<     //   1877: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+<     //   1880: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   1883: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   1886: aload 9
+<     //   1888: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   1891: ldc_w 1116
+<     //   1894: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   1897: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   1900: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+<     //   1903: astore 10
+<     //   1905: aload 10
+<     //   1907: aload 9
+<     //   1909: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+<     //   1912: astore 9
+<     //   1914: aload 10
+<     //   1916: invokevirtual 719	java/io/InputStream:close	()V
+<     //   1919: aload_0
+<     //   1920: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+<     //   1923: new 954	java/lang/StringBuilder
+<     //   1926: dup
+---
+>     //   1877: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+>     //   1880: new 954	java/lang/StringBuilder
+>     //   1883: dup
+>     //   1884: aload_0
+>     //   1885: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+>     //   1888: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   1891: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   1894: aload 9
+>     //   1896: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   1899: ldc_w 1116
+>     //   1902: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   1905: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   1908: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+>     //   1911: astore 10
+>     //   1913: aload 10
+>     //   1915: aload 9
+>     //   1917: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+>     //   1920: astore 9
+>     //   1922: aload 10
+>     //   1924: invokevirtual 719	java/io/InputStream:close	()V
+3162,3275c3162,3276
+<     //   1928: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+<     //   1931: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   1934: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   1937: aload 8
+<     //   1939: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   1942: ldc_w 1116
+<     //   1945: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   1948: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   1951: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+<     //   1954: astore 10
+<     //   1956: aload 10
+<     //   1958: aload 8
+<     //   1960: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+<     //   1963: astore 8
+<     //   1965: aload 10
+<     //   1967: invokevirtual 719	java/io/InputStream:close	()V
+<     //   1970: aload 6
+<     //   1972: iconst_2
+<     //   1973: newarray int
+<     //   1975: dup
+<     //   1976: iconst_0
+<     //   1977: ldc_w 1598
+<     //   1980: iastore
+<     //   1981: dup
+<     //   1982: iconst_1
+<     //   1983: ldc_w 1597
+<     //   1986: iastore
+<     //   1987: aload 9
+<     //   1989: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   1992: aload 6
+<     //   1994: iconst_2
+<     //   1995: newarray int
+<     //   1997: dup
+<     //   1998: iconst_0
+<     //   1999: ldc_w 1599
+<     //   2002: iastore
+<     //   2003: dup
+<     //   2004: iconst_1
+<     //   2005: ldc_w 1597
+<     //   2008: iastore
+<     //   2009: aload 8
+<     //   2011: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2014: aload 7
+<     //   2016: iconst_2
+<     //   2017: newarray int
+<     //   2019: dup
+<     //   2020: iconst_0
+<     //   2021: ldc_w 1596
+<     //   2024: iastore
+<     //   2025: dup
+<     //   2026: iconst_1
+<     //   2027: ldc_w 1597
+<     //   2030: iastore
+<     //   2031: aconst_null
+<     //   2032: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2035: aload 7
+<     //   2037: iconst_2
+<     //   2038: newarray int
+<     //   2040: dup
+<     //   2041: iconst_0
+<     //   2042: ldc_w 1598
+<     //   2045: iastore
+<     //   2046: dup
+<     //   2047: iconst_1
+<     //   2048: ldc_w 1258
+<     //   2051: iastore
+<     //   2052: aconst_null
+<     //   2053: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2056: aload 7
+<     //   2058: iconst_2
+<     //   2059: newarray int
+<     //   2061: dup
+<     //   2062: iconst_0
+<     //   2063: ldc_w 1599
+<     //   2066: iastore
+<     //   2067: dup
+<     //   2068: iconst_1
+<     //   2069: ldc_w 1258
+<     //   2072: iastore
+<     //   2073: aconst_null
+<     //   2074: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2077: aload 7
+<     //   2079: iconst_2
+<     //   2080: newarray int
+<     //   2082: dup
+<     //   2083: iconst_0
+<     //   2084: ldc_w 1598
+<     //   2087: iastore
+<     //   2088: dup
+<     //   2089: iconst_1
+<     //   2090: ldc_w 1597
+<     //   2093: iastore
+<     //   2094: aconst_null
+<     //   2095: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2098: aload 7
+<     //   2100: iconst_2
+<     //   2101: newarray int
+<     //   2103: dup
+<     //   2104: iconst_0
+<     //   2105: ldc_w 1599
+<     //   2108: iastore
+<     //   2109: dup
+<     //   2110: iconst_1
+<     //   2111: ldc_w 1597
+<     //   2114: iastore
+<     //   2115: aconst_null
+<     //   2116: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2119: aload 4
+<     //   2121: aload 7
+<     //   2123: invokevirtual 1746	android/widget/RadioButton:setButtonDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2126: aload 4
+<     //   2128: aload 6
+<     //   2130: invokevirtual 1747	android/widget/RadioButton:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2133: goto -1211 -> 922
+---
+>     //   1928: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+>     //   1931: new 954	java/lang/StringBuilder
+>     //   1934: dup
+>     //   1935: aload_0
+>     //   1936: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+>     //   1939: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   1942: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   1945: aload 8
+>     //   1947: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   1950: ldc_w 1116
+>     //   1953: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   1956: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   1959: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+>     //   1962: astore 10
+>     //   1964: aload 10
+>     //   1966: aload 8
+>     //   1968: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+>     //   1971: astore 8
+>     //   1973: aload 10
+>     //   1975: invokevirtual 719	java/io/InputStream:close	()V
+>     //   1978: aload 6
+>     //   1980: iconst_2
+>     //   1981: newarray int
+>     //   1983: dup
+>     //   1984: iconst_0
+>     //   1985: ldc_w 1598
+>     //   1988: iastore
+>     //   1989: dup
+>     //   1990: iconst_1
+>     //   1991: ldc_w 1597
+>     //   1994: iastore
+>     //   1995: aload 9
+>     //   1997: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2000: aload 6
+>     //   2002: iconst_2
+>     //   2003: newarray int
+>     //   2005: dup
+>     //   2006: iconst_0
+>     //   2007: ldc_w 1599
+>     //   2010: iastore
+>     //   2011: dup
+>     //   2012: iconst_1
+>     //   2013: ldc_w 1597
+>     //   2016: iastore
+>     //   2017: aload 8
+>     //   2019: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2022: aload 7
+>     //   2024: iconst_2
+>     //   2025: newarray int
+>     //   2027: dup
+>     //   2028: iconst_0
+>     //   2029: ldc_w 1596
+>     //   2032: iastore
+>     //   2033: dup
+>     //   2034: iconst_1
+>     //   2035: ldc_w 1597
+>     //   2038: iastore
+>     //   2039: aconst_null
+>     //   2040: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2043: aload 7
+>     //   2045: iconst_2
+>     //   2046: newarray int
+>     //   2048: dup
+>     //   2049: iconst_0
+>     //   2050: ldc_w 1598
+>     //   2053: iastore
+>     //   2054: dup
+>     //   2055: iconst_1
+>     //   2056: ldc_w 1258
+>     //   2059: iastore
+>     //   2060: aconst_null
+>     //   2061: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2064: aload 7
+>     //   2066: iconst_2
+>     //   2067: newarray int
+>     //   2069: dup
+>     //   2070: iconst_0
+>     //   2071: ldc_w 1599
+>     //   2074: iastore
+>     //   2075: dup
+>     //   2076: iconst_1
+>     //   2077: ldc_w 1258
+>     //   2080: iastore
+>     //   2081: aconst_null
+>     //   2082: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2085: aload 7
+>     //   2087: iconst_2
+>     //   2088: newarray int
+>     //   2090: dup
+>     //   2091: iconst_0
+>     //   2092: ldc_w 1598
+>     //   2095: iastore
+>     //   2096: dup
+>     //   2097: iconst_1
+>     //   2098: ldc_w 1597
+>     //   2101: iastore
+>     //   2102: aconst_null
+>     //   2103: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2106: aload 7
+>     //   2108: iconst_2
+>     //   2109: newarray int
+>     //   2111: dup
+>     //   2112: iconst_0
+>     //   2113: ldc_w 1599
+>     //   2116: iastore
+>     //   2117: dup
+>     //   2118: iconst_1
+>     //   2119: ldc_w 1597
+>     //   2122: iastore
+>     //   2123: aconst_null
+>     //   2124: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2127: aload 4
+>     //   2129: aload 7
+>     //   2131: invokevirtual 1746	android/widget/RadioButton:setButtonDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   2134: aload 4
+3277,3318c3278,3318
+<     //   2138: ldc_w 1749
+<     //   2141: invokevirtual 1739	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+<     //   2144: ifeq +15 -> 2159
+<     //   2147: aload_0
+<     //   2148: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+<     //   2151: aload 4
+<     //   2153: invokevirtual 1752	com/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN:setRadioButton2	(Landroid/widget/RadioButton;)V
+<     //   2156: goto -332 -> 1824
+<     //   2159: aload 6
+<     //   2161: ldc_w 1754
+<     //   2164: invokevirtual 1739	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+<     //   2167: ifeq -343 -> 1824
+<     //   2170: aload_0
+<     //   2171: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+<     //   2174: aload 4
+<     //   2176: invokevirtual 1757	com/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN:setRadioButton3	(Landroid/widget/RadioButton;)V
+<     //   2179: goto -355 -> 1824
+<     //   2182: aload_1
+<     //   2183: instanceof 936
+<     //   2186: ifeq -1264 -> 922
+<     //   2189: aload_0
+<     //   2190: aload 5
+<     //   2192: ldc_w 1228
+<     //   2195: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   2198: astore 8
+<     //   2200: aload_0
+<     //   2201: aload 5
+<     //   2203: ldc_w 1230
+<     //   2206: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   2209: astore 4
+<     //   2211: aload_0
+<     //   2212: aload 5
+<     //   2214: ldc_w 1102
+<     //   2217: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   2220: astore 6
+<     //   2222: aload_1
+<     //   2223: checkcast 936	android/widget/Button
+<     //   2226: astore 7
+<     //   2228: aload_0
+<     //   2229: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+<     //   2232: new 954	java/lang/StringBuilder
+<     //   2235: dup
+---
+>     //   2138: invokevirtual 1747	android/widget/RadioButton:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   2141: goto -1219 -> 922
+>     //   2144: aload 6
+>     //   2146: ldc_w 1749
+>     //   2149: invokevirtual 1739	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+>     //   2152: ifeq +15 -> 2167
+>     //   2155: aload_0
+>     //   2156: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+>     //   2159: aload 4
+>     //   2161: invokevirtual 1752	com/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN:setRadioButton2	(Landroid/widget/RadioButton;)V
+>     //   2164: goto -332 -> 1832
+>     //   2167: aload 6
+>     //   2169: ldc_w 1754
+>     //   2172: invokevirtual 1739	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+>     //   2175: ifeq -343 -> 1832
+>     //   2178: aload_0
+>     //   2179: getfield 593	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNClickLisener	Lcom/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN;
+>     //   2182: aload 4
+>     //   2184: invokevirtual 1757	com/feelingk/iap/gui/parser/ParserXML$OnClickForeignInputMDN:setRadioButton3	(Landroid/widget/RadioButton;)V
+>     //   2187: goto -355 -> 1832
+>     //   2190: aload_1
+>     //   2191: instanceof 936
+>     //   2194: ifeq -1272 -> 922
+>     //   2197: aload_0
+>     //   2198: aload 5
+>     //   2200: ldc_w 1228
+>     //   2203: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   2206: astore 8
+>     //   2208: aload_0
+>     //   2209: aload 5
+>     //   2211: ldc_w 1230
+>     //   2214: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   2217: astore 4
+>     //   2219: aload_0
+>     //   2220: aload 5
+>     //   2222: ldc_w 1102
+>     //   2225: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   2228: astore 6
+>     //   2230: aload_1
+>     //   2231: checkcast 936	android/widget/Button
+>     //   2234: astore 7
+3320,3339c3320,3339
+<     //   2237: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+<     //   2240: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   2243: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   2246: aload 8
+<     //   2248: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2251: ldc_w 1116
+<     //   2254: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2257: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   2260: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+<     //   2263: astore 9
+<     //   2265: aload 9
+<     //   2267: aload 8
+<     //   2269: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+<     //   2272: astore 8
+<     //   2274: aload 9
+<     //   2276: invokevirtual 719	java/io/InputStream:close	()V
+<     //   2279: aload_0
+<     //   2280: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+<     //   2283: new 954	java/lang/StringBuilder
+<     //   2286: dup
+---
+>     //   2237: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+>     //   2240: new 954	java/lang/StringBuilder
+>     //   2243: dup
+>     //   2244: aload_0
+>     //   2245: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+>     //   2248: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   2251: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   2254: aload 8
+>     //   2256: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2259: ldc_w 1116
+>     //   2262: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2265: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   2268: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+>     //   2271: astore 9
+>     //   2273: aload 9
+>     //   2275: aload 8
+>     //   2277: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+>     //   2280: astore 8
+>     //   2282: aload 9
+>     //   2284: invokevirtual 719	java/io/InputStream:close	()V
+3341,3358c3341,3358
+<     //   2288: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+<     //   2291: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   2294: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   2297: ldc_w 1759
+<     //   2300: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2303: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   2306: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+<     //   2309: astore 10
+<     //   2311: aload 10
+<     //   2313: ldc_w 1761
+<     //   2316: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+<     //   2319: astore 9
+<     //   2321: aload 10
+<     //   2323: invokevirtual 719	java/io/InputStream:close	()V
+<     //   2326: aload_0
+<     //   2327: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+<     //   2330: new 954	java/lang/StringBuilder
+<     //   2333: dup
+---
+>     //   2288: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+>     //   2291: new 954	java/lang/StringBuilder
+>     //   2294: dup
+>     //   2295: aload_0
+>     //   2296: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+>     //   2299: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   2302: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   2305: ldc_w 1759
+>     //   2308: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2311: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   2314: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+>     //   2317: astore 10
+>     //   2319: aload 10
+>     //   2321: ldc_w 1761
+>     //   2324: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+>     //   2327: astore 9
+>     //   2329: aload 10
+>     //   2331: invokevirtual 719	java/io/InputStream:close	()V
+3360,3510c3360,3510
+<     //   2335: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+<     //   2338: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+<     //   2341: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+<     //   2344: aload 4
+<     //   2346: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2349: ldc_w 1116
+<     //   2352: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+<     //   2355: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+<     //   2358: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+<     //   2361: astore 11
+<     //   2363: aload 11
+<     //   2365: aload 4
+<     //   2367: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+<     //   2370: astore 10
+<     //   2372: aload 11
+<     //   2374: invokevirtual 719	java/io/InputStream:close	()V
+<     //   2377: new 1234	android/graphics/drawable/StateListDrawable
+<     //   2380: dup
+<     //   2381: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+<     //   2384: astore 11
+<     //   2386: aload_0
+<     //   2387: new 1234	android/graphics/drawable/StateListDrawable
+<     //   2390: dup
+<     //   2391: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+<     //   2394: putfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+<     //   2397: aload_0
+<     //   2398: new 1234	android/graphics/drawable/StateListDrawable
+<     //   2401: dup
+<     //   2402: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+<     //   2405: putfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+<     //   2408: aload_0
+<     //   2409: new 1234	android/graphics/drawable/StateListDrawable
+<     //   2412: dup
+<     //   2413: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+<     //   2416: putfield 866	com/feelingk/iap/gui/parser/ParserXML:mActiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+<     //   2419: aload 11
+<     //   2421: iconst_1
+<     //   2422: newarray int
+<     //   2424: dup
+<     //   2425: iconst_0
+<     //   2426: ldc_w 1258
+<     //   2429: iastore
+<     //   2430: aload 10
+<     //   2432: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2435: aload 11
+<     //   2437: iconst_0
+<     //   2438: newarray int
+<     //   2440: aload 8
+<     //   2442: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2445: aload_0
+<     //   2446: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+<     //   2449: iconst_1
+<     //   2450: newarray int
+<     //   2452: dup
+<     //   2453: iconst_0
+<     //   2454: ldc_w 1258
+<     //   2457: iastore
+<     //   2458: aload 9
+<     //   2460: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2463: aload_0
+<     //   2464: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+<     //   2467: iconst_0
+<     //   2468: newarray int
+<     //   2470: aload 9
+<     //   2472: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2475: aload 6
+<     //   2477: ifnull +53 -> 2530
+<     //   2480: aload 6
+<     //   2482: ldc_w 1763
+<     //   2485: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2488: ifne +36 -> 2524
+<     //   2491: aload 6
+<     //   2493: ldc_w 1765
+<     //   2496: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2499: ifne +25 -> 2524
+<     //   2502: aload 6
+<     //   2504: ldc_w 1767
+<     //   2507: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2510: ifne +14 -> 2524
+<     //   2513: aload 6
+<     //   2515: ldc_w 1769
+<     //   2518: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2521: ifeq +9 -> 2530
+<     //   2524: aload_0
+<     //   2525: aload 11
+<     //   2527: putfield 841	com/feelingk/iap/gui/parser/ParserXML:mOkDrawbles	Landroid/graphics/drawable/StateListDrawable;
+<     //   2530: aload 7
+<     //   2532: aload 11
+<     //   2534: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2537: aload_0
+<     //   2538: aload 5
+<     //   2540: ldc_w 1076
+<     //   2543: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+<     //   2546: astore 9
+<     //   2548: aload 9
+<     //   2550: ifnull +19 -> 2569
+<     //   2553: aload_0
+<     //   2554: aload 9
+<     //   2556: invokespecial 1080	com/feelingk/iap/gui/parser/ParserXML:readDPSize	(Ljava/lang/String;)I
+<     //   2559: istore_2
+<     //   2560: aload 7
+<     //   2562: iload_2
+<     //   2563: iload_2
+<     //   2564: iload_2
+<     //   2565: iload_2
+<     //   2566: invokevirtual 1278	android/widget/Button:setPadding	(IIII)V
+<     //   2569: aload 4
+<     //   2571: ldc_w 1771
+<     //   2574: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2577: ifeq +178 -> 2755
+<     //   2580: aload 7
+<     //   2582: aload_0
+<     //   2583: getfield 563	com/feelingk/iap/gui/parser/ParserXML:okAuthBtn	Landroid/view/View$OnClickListener;
+<     //   2586: invokevirtual 1318	android/widget/Button:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+<     //   2589: aload 6
+<     //   2591: ifnull -1669 -> 922
+<     //   2594: aload_0
+<     //   2595: aload 11
+<     //   2597: putfield 866	com/feelingk/iap/gui/parser/ParserXML:mActiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+<     //   2600: aload_0
+<     //   2601: getfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+<     //   2604: iconst_1
+<     //   2605: newarray int
+<     //   2607: dup
+<     //   2608: iconst_0
+<     //   2609: ldc_w 1258
+<     //   2612: iastore
+<     //   2613: aload 8
+<     //   2615: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2618: aload_0
+<     //   2619: getfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+<     //   2622: iconst_0
+<     //   2623: newarray int
+<     //   2625: aload 8
+<     //   2627: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+<     //   2630: aload 6
+<     //   2632: ldc_w 1773
+<     //   2635: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2638: ifeq +152 -> 2790
+<     //   2641: aload_0
+<     //   2642: aload 7
+<     //   2644: putfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+<     //   2647: aload_0
+<     //   2648: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+<     //   2651: aload_0
+<     //   2652: getfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+<     //   2655: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2658: aload_0
+<     //   2659: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+<     //   2662: iconst_0
+<     //   2663: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+---
+>     //   2335: invokevirtual 696	java/lang/Object:getClass	()Ljava/lang/Class;
+>     //   2338: new 954	java/lang/StringBuilder
+>     //   2341: dup
+>     //   2342: aload_0
+>     //   2343: invokespecial 1031	com/feelingk/iap/gui/parser/ParserXML:getResourcePath	()Ljava/lang/String;
+>     //   2346: invokestatic 1034	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
+>     //   2349: invokespecial 958	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+>     //   2352: aload 4
+>     //   2354: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2357: ldc_w 1116
+>     //   2360: invokevirtual 962	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+>     //   2363: invokevirtual 965	java/lang/StringBuilder:toString	()Ljava/lang/String;
+>     //   2366: invokevirtual 702	java/lang/Class:getResourceAsStream	(Ljava/lang/String;)Ljava/io/InputStream;
+>     //   2369: astore 11
+>     //   2371: aload 11
+>     //   2373: aload 4
+>     //   2375: invokestatic 1042	android/graphics/drawable/Drawable:createFromStream	(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+>     //   2378: astore 10
+>     //   2380: aload 11
+>     //   2382: invokevirtual 719	java/io/InputStream:close	()V
+>     //   2385: new 1234	android/graphics/drawable/StateListDrawable
+>     //   2388: dup
+>     //   2389: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+>     //   2392: astore 11
+>     //   2394: aload_0
+>     //   2395: new 1234	android/graphics/drawable/StateListDrawable
+>     //   2398: dup
+>     //   2399: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+>     //   2402: putfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+>     //   2405: aload_0
+>     //   2406: new 1234	android/graphics/drawable/StateListDrawable
+>     //   2409: dup
+>     //   2410: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+>     //   2413: putfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+>     //   2416: aload_0
+>     //   2417: new 1234	android/graphics/drawable/StateListDrawable
+>     //   2420: dup
+>     //   2421: invokespecial 1235	android/graphics/drawable/StateListDrawable:<init>	()V
+>     //   2424: putfield 866	com/feelingk/iap/gui/parser/ParserXML:mActiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+>     //   2427: aload 11
+>     //   2429: iconst_1
+>     //   2430: newarray int
+>     //   2432: dup
+>     //   2433: iconst_0
+>     //   2434: ldc_w 1258
+>     //   2437: iastore
+>     //   2438: aload 10
+>     //   2440: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2443: aload 11
+>     //   2445: iconst_0
+>     //   2446: newarray int
+>     //   2448: aload 8
+>     //   2450: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2453: aload_0
+>     //   2454: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+>     //   2457: iconst_1
+>     //   2458: newarray int
+>     //   2460: dup
+>     //   2461: iconst_0
+>     //   2462: ldc_w 1258
+>     //   2465: iastore
+>     //   2466: aload 9
+>     //   2468: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2471: aload_0
+>     //   2472: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+>     //   2475: iconst_0
+>     //   2476: newarray int
+>     //   2478: aload 9
+>     //   2480: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2483: aload 6
+>     //   2485: ifnull +53 -> 2538
+>     //   2488: aload 6
+>     //   2490: ldc_w 1763
+>     //   2493: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2496: ifne +36 -> 2532
+>     //   2499: aload 6
+>     //   2501: ldc_w 1765
+>     //   2504: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2507: ifne +25 -> 2532
+>     //   2510: aload 6
+>     //   2512: ldc_w 1767
+>     //   2515: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2518: ifne +14 -> 2532
+>     //   2521: aload 6
+>     //   2523: ldc_w 1769
+>     //   2526: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2529: ifeq +9 -> 2538
+>     //   2532: aload_0
+>     //   2533: aload 11
+>     //   2535: putfield 841	com/feelingk/iap/gui/parser/ParserXML:mOkDrawbles	Landroid/graphics/drawable/StateListDrawable;
+>     //   2538: aload 7
+>     //   2540: aload 11
+>     //   2542: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   2545: aload_0
+>     //   2546: aload 5
+>     //   2548: ldc_w 1076
+>     //   2551: invokespecial 1019	com/feelingk/iap/gui/parser/ParserXML:findAttribute	(Landroid/util/AttributeSet;Ljava/lang/String;)Ljava/lang/String;
+>     //   2554: astore 9
+>     //   2556: aload 9
+>     //   2558: ifnull +19 -> 2577
+>     //   2561: aload_0
+>     //   2562: aload 9
+>     //   2564: invokespecial 1080	com/feelingk/iap/gui/parser/ParserXML:readDPSize	(Ljava/lang/String;)I
+>     //   2567: istore_2
+>     //   2568: aload 7
+>     //   2570: iload_2
+>     //   2571: iload_2
+>     //   2572: iload_2
+>     //   2573: iload_2
+>     //   2574: invokevirtual 1278	android/widget/Button:setPadding	(IIII)V
+>     //   2577: aload 4
+>     //   2579: ldc_w 1771
+>     //   2582: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2585: ifeq +178 -> 2763
+>     //   2588: aload 7
+>     //   2590: aload_0
+>     //   2591: getfield 563	com/feelingk/iap/gui/parser/ParserXML:okAuthBtn	Landroid/view/View$OnClickListener;
+>     //   2594: invokevirtual 1318	android/widget/Button:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+>     //   2597: aload 6
+>     //   2599: ifnull -1677 -> 922
+>     //   2602: aload_0
+>     //   2603: aload 11
+>     //   2605: putfield 866	com/feelingk/iap/gui/parser/ParserXML:mActiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+>     //   2608: aload_0
+>     //   2609: getfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+>     //   2612: iconst_1
+>     //   2613: newarray int
+>     //   2615: dup
+>     //   2616: iconst_0
+>     //   2617: ldc_w 1258
+>     //   2620: iastore
+>     //   2621: aload 8
+>     //   2623: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2626: aload_0
+>     //   2627: getfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+>     //   2630: iconst_0
+>     //   2631: newarray int
+>     //   2633: aload 8
+>     //   2635: invokevirtual 1262	android/graphics/drawable/StateListDrawable:addState	([ILandroid/graphics/drawable/Drawable;)V
+>     //   2638: aload 6
+>     //   2640: ldc_w 1773
+>     //   2643: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2646: ifeq +152 -> 2798
+>     //   2649: aload_0
+>     //   2650: aload 7
+>     //   2652: putfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+>     //   2655: aload_0
+>     //   2656: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+>     //   2659: aload_0
+>     //   2660: getfield 869	com/feelingk/iap/gui/parser/ParserXML:mInactiveOCBRegDrawables	Landroid/graphics/drawable/StateListDrawable;
+>     //   2663: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+3513,3641c3513,3641
+<     //   2670: ldc_w 1303
+<     //   2673: invokestatic 1196	android/graphics/Color:parseColor	(Ljava/lang/String;)I
+<     //   2676: invokevirtual 1275	android/widget/Button:setTextColor	(I)V
+<     //   2679: aload_0
+<     //   2680: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+<     //   2683: iconst_0
+<     //   2684: iconst_0
+<     //   2685: iconst_0
+<     //   2686: iconst_0
+<     //   2687: invokevirtual 1278	android/widget/Button:setPadding	(IIII)V
+<     //   2690: aload_0
+<     //   2691: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+<     //   2694: ifnull +11 -> 2705
+<     //   2697: aload_0
+<     //   2698: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+<     //   2701: iconst_0
+<     //   2702: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+<     //   2705: aload 6
+<     //   2707: ldc_w 1763
+<     //   2710: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2713: ifne +14 -> 2727
+<     //   2716: aload 6
+<     //   2718: ldc_w 1765
+<     //   2721: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2724: ifeq -1802 -> 922
+<     //   2727: aload_0
+<     //   2728: aload 7
+<     //   2730: putfield 847	com/feelingk/iap/gui/parser/ParserXML:mOkBtn	Landroid/widget/Button;
+<     //   2733: aload_0
+<     //   2734: getfield 847	com/feelingk/iap/gui/parser/ParserXML:mOkBtn	Landroid/widget/Button;
+<     //   2737: aload_0
+<     //   2738: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+<     //   2741: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2744: aload_0
+<     //   2745: getfield 847	com/feelingk/iap/gui/parser/ParserXML:mOkBtn	Landroid/widget/Button;
+<     //   2748: iconst_0
+<     //   2749: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+<     //   2752: goto -1830 -> 922
+<     //   2755: aload 4
+<     //   2757: ldc_w 1775
+<     //   2760: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2763: ifeq +15 -> 2778
+<     //   2766: aload 7
+<     //   2768: aload_0
+<     //   2769: getfield 569	com/feelingk/iap/gui/parser/ParserXML:commonBtn	Landroid/view/View$OnClickListener;
+<     //   2772: invokevirtual 1318	android/widget/Button:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+<     //   2775: goto -186 -> 2589
+<     //   2778: aload 7
+<     //   2780: aload_0
+<     //   2781: getfield 566	com/feelingk/iap/gui/parser/ParserXML:cancelAuthBtn	Landroid/view/View$OnClickListener;
+<     //   2784: invokevirtual 1318	android/widget/Button:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+<     //   2787: goto -198 -> 2589
+<     //   2790: aload 6
+<     //   2792: ldc_w 1777
+<     //   2795: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2798: ifeq +15 -> 2813
+<     //   2801: aload 7
+<     //   2803: iconst_0
+<     //   2804: iconst_0
+<     //   2805: iconst_0
+<     //   2806: iconst_0
+<     //   2807: invokevirtual 1278	android/widget/Button:setPadding	(IIII)V
+<     //   2810: goto -120 -> 2690
+<     //   2813: aload 6
+<     //   2815: ldc_w 1767
+<     //   2818: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2821: ifeq +31 -> 2852
+<     //   2824: aload_0
+<     //   2825: aload 7
+<     //   2827: putfield 844	com/feelingk/iap/gui/parser/ParserXML:mCultureOKButton	Landroid/widget/Button;
+<     //   2830: aload_0
+<     //   2831: getfield 844	com/feelingk/iap/gui/parser/ParserXML:mCultureOKButton	Landroid/widget/Button;
+<     //   2834: aload_0
+<     //   2835: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+<     //   2838: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2841: aload_0
+<     //   2842: getfield 844	com/feelingk/iap/gui/parser/ParserXML:mCultureOKButton	Landroid/widget/Button;
+<     //   2845: iconst_0
+<     //   2846: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+<     //   2849: goto -159 -> 2690
+<     //   2852: aload 6
+<     //   2854: ldc_w 1769
+<     //   2857: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2860: ifeq -170 -> 2690
+<     //   2863: aload_0
+<     //   2864: aload 7
+<     //   2866: putfield 835	com/feelingk/iap/gui/parser/ParserXML:mOKCashbackOKButton	Landroid/widget/Button;
+<     //   2869: aload_0
+<     //   2870: getfield 835	com/feelingk/iap/gui/parser/ParserXML:mOKCashbackOKButton	Landroid/widget/Button;
+<     //   2873: aload_0
+<     //   2874: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+<     //   2877: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+<     //   2880: aload_0
+<     //   2881: getfield 835	com/feelingk/iap/gui/parser/ParserXML:mOKCashbackOKButton	Landroid/widget/Button;
+<     //   2884: iconst_0
+<     //   2885: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+<     //   2888: goto -198 -> 2690
+<     //   2891: aload 4
+<     //   2893: aload 7
+<     //   2895: invokestatic 1292	java/lang/Integer:parseInt	(Ljava/lang/String;)I
+<     //   2898: invokevirtual 1655	android/widget/EditText:setInputType	(I)V
+<     //   2901: goto -1881 -> 1020
+<     //   2904: aload 6
+<     //   2906: ldc_w 1779
+<     //   2909: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2912: ifeq +30 -> 2942
+<     //   2915: aload_0
+<     //   2916: aload 4
+<     //   2918: putfield 490	com/feelingk/iap/gui/parser/ParserXML:m_JuminText2	Landroid/widget/EditText;
+<     //   2921: aload_0
+<     //   2922: getfield 418	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNResultCallback	Lcom/feelingk/iap/gui/parser/ParserXML$ParserForeignInputMDNResultCallback;
+<     //   2925: ifnull -1731 -> 1194
+<     //   2928: aload_0
+<     //   2929: getfield 490	com/feelingk/iap/gui/parser/ParserXML:m_JuminText2	Landroid/widget/EditText;
+<     //   2932: aload_0
+<     //   2933: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+<     //   2936: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   2939: goto -1745 -> 1194
+<     //   2942: aload 6
+<     //   2944: ldc_w 1781
+<     //   2947: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2950: ifeq +30 -> 2980
+<     //   2953: aload_0
+<     //   2954: aload 4
+<     //   2956: putfield 492	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText1	Landroid/widget/EditText;
+<     //   2959: aload_0
+<     //   2960: getfield 492	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText1	Landroid/widget/EditText;
+<     //   2963: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+<     //   2966: dup
+---
+>     //   2670: iconst_0
+>     //   2671: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+>     //   2674: aload_0
+>     //   2675: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+>     //   2678: ldc_w 1303
+>     //   2681: invokestatic 1196	android/graphics/Color:parseColor	(Ljava/lang/String;)I
+>     //   2684: invokevirtual 1275	android/widget/Button:setTextColor	(I)V
+>     //   2687: aload_0
+>     //   2688: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+>     //   2691: iconst_0
+>     //   2692: iconst_0
+>     //   2693: iconst_0
+>     //   2694: iconst_0
+>     //   2695: invokevirtual 1278	android/widget/Button:setPadding	(IIII)V
+>     //   2698: aload_0
+>     //   2699: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+>     //   2702: ifnull +11 -> 2713
+>     //   2705: aload_0
+>     //   2706: getfield 540	com/feelingk/iap/gui/parser/ParserXML:mOCBRegBtn	Landroid/widget/Button;
+>     //   2709: iconst_0
+>     //   2710: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+>     //   2713: aload 6
+>     //   2715: ldc_w 1763
+>     //   2718: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2721: ifne +14 -> 2735
+>     //   2724: aload 6
+>     //   2726: ldc_w 1765
+>     //   2729: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2732: ifeq -1810 -> 922
+>     //   2735: aload_0
+>     //   2736: aload 7
+>     //   2738: putfield 847	com/feelingk/iap/gui/parser/ParserXML:mOkBtn	Landroid/widget/Button;
+>     //   2741: aload_0
+>     //   2742: getfield 847	com/feelingk/iap/gui/parser/ParserXML:mOkBtn	Landroid/widget/Button;
+>     //   2745: aload_0
+>     //   2746: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+>     //   2749: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   2752: aload_0
+>     //   2753: getfield 847	com/feelingk/iap/gui/parser/ParserXML:mOkBtn	Landroid/widget/Button;
+>     //   2756: iconst_0
+>     //   2757: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+>     //   2760: goto -1838 -> 922
+>     //   2763: aload 4
+>     //   2765: ldc_w 1775
+>     //   2768: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2771: ifeq +15 -> 2786
+>     //   2774: aload 7
+>     //   2776: aload_0
+>     //   2777: getfield 569	com/feelingk/iap/gui/parser/ParserXML:commonBtn	Landroid/view/View$OnClickListener;
+>     //   2780: invokevirtual 1318	android/widget/Button:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+>     //   2783: goto -186 -> 2597
+>     //   2786: aload 7
+>     //   2788: aload_0
+>     //   2789: getfield 566	com/feelingk/iap/gui/parser/ParserXML:cancelAuthBtn	Landroid/view/View$OnClickListener;
+>     //   2792: invokevirtual 1318	android/widget/Button:setOnClickListener	(Landroid/view/View$OnClickListener;)V
+>     //   2795: goto -198 -> 2597
+>     //   2798: aload 6
+>     //   2800: ldc_w 1777
+>     //   2803: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2806: ifeq +15 -> 2821
+>     //   2809: aload 7
+>     //   2811: iconst_0
+>     //   2812: iconst_0
+>     //   2813: iconst_0
+>     //   2814: iconst_0
+>     //   2815: invokevirtual 1278	android/widget/Button:setPadding	(IIII)V
+>     //   2818: goto -120 -> 2698
+>     //   2821: aload 6
+>     //   2823: ldc_w 1767
+>     //   2826: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2829: ifeq +31 -> 2860
+>     //   2832: aload_0
+>     //   2833: aload 7
+>     //   2835: putfield 844	com/feelingk/iap/gui/parser/ParserXML:mCultureOKButton	Landroid/widget/Button;
+>     //   2838: aload_0
+>     //   2839: getfield 844	com/feelingk/iap/gui/parser/ParserXML:mCultureOKButton	Landroid/widget/Button;
+>     //   2842: aload_0
+>     //   2843: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+>     //   2846: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   2849: aload_0
+>     //   2850: getfield 844	com/feelingk/iap/gui/parser/ParserXML:mCultureOKButton	Landroid/widget/Button;
+>     //   2853: iconst_0
+>     //   2854: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+>     //   2857: goto -159 -> 2698
+>     //   2860: aload 6
+>     //   2862: ldc_w 1769
+>     //   2865: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2868: ifeq -170 -> 2698
+>     //   2871: aload_0
+>     //   2872: aload 7
+>     //   2874: putfield 835	com/feelingk/iap/gui/parser/ParserXML:mOKCashbackOKButton	Landroid/widget/Button;
+>     //   2877: aload_0
+>     //   2878: getfield 835	com/feelingk/iap/gui/parser/ParserXML:mOKCashbackOKButton	Landroid/widget/Button;
+>     //   2881: aload_0
+>     //   2882: getfield 838	com/feelingk/iap/gui/parser/ParserXML:dotoriInactive	Landroid/graphics/drawable/StateListDrawable;
+>     //   2885: invokevirtual 1272	android/widget/Button:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+>     //   2888: aload_0
+>     //   2889: getfield 835	com/feelingk/iap/gui/parser/ParserXML:mOKCashbackOKButton	Landroid/widget/Button;
+>     //   2892: iconst_0
+>     //   2893: invokevirtual 1306	android/widget/Button:setClickable	(Z)V
+>     //   2896: goto -198 -> 2698
+>     //   2899: aload 4
+>     //   2901: aload 7
+>     //   2903: invokestatic 1292	java/lang/Integer:parseInt	(Ljava/lang/String;)I
+>     //   2906: invokevirtual 1655	android/widget/EditText:setInputType	(I)V
+>     //   2909: goto -1889 -> 1020
+>     //   2912: aload 6
+>     //   2914: ldc_w 1779
+>     //   2917: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2920: ifeq +30 -> 2950
+>     //   2923: aload_0
+>     //   2924: aload 4
+>     //   2926: putfield 490	com/feelingk/iap/gui/parser/ParserXML:m_JuminText2	Landroid/widget/EditText;
+>     //   2929: aload_0
+>     //   2930: getfield 418	com/feelingk/iap/gui/parser/ParserXML:onForeignInputMDNResultCallback	Lcom/feelingk/iap/gui/parser/ParserXML$ParserForeignInputMDNResultCallback;
+>     //   2933: ifnull -1739 -> 1194
+>     //   2936: aload_0
+>     //   2937: getfield 490	com/feelingk/iap/gui/parser/ParserXML:m_JuminText2	Landroid/widget/EditText;
+>     //   2940: aload_0
+>     //   2941: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+>     //   2944: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   2947: goto -1753 -> 1194
+>     //   2950: aload 6
+>     //   2952: ldc_w 1781
+>     //   2955: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2958: ifeq +30 -> 2988
+>     //   2961: aload_0
+>     //   2962: aload 4
+>     //   2964: putfield 492	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText1	Landroid/widget/EditText;
+3643,3658c3643,3658
+<     //   2968: aload 4
+<     //   2970: aconst_null
+<     //   2971: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+<     //   2974: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   2977: goto -1783 -> 1194
+<     //   2980: aload 6
+<     //   2982: ldc_w 1786
+<     //   2985: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   2988: ifeq +30 -> 3018
+<     //   2991: aload_0
+<     //   2992: aload 4
+<     //   2994: putfield 494	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText2	Landroid/widget/EditText;
+<     //   2997: aload_0
+<     //   2998: getfield 494	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText2	Landroid/widget/EditText;
+<     //   3001: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+<     //   3004: dup
+---
+>     //   2968: getfield 492	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText1	Landroid/widget/EditText;
+>     //   2971: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+>     //   2974: dup
+>     //   2975: aload_0
+>     //   2976: aload 4
+>     //   2978: aconst_null
+>     //   2979: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+>     //   2982: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   2985: goto -1791 -> 1194
+>     //   2988: aload 6
+>     //   2990: ldc_w 1786
+>     //   2993: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   2996: ifeq +30 -> 3026
+>     //   2999: aload_0
+>     //   3000: aload 4
+>     //   3002: putfield 494	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText2	Landroid/widget/EditText;
+3660,3675c3660,3675
+<     //   3006: aload 4
+<     //   3008: aconst_null
+<     //   3009: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+<     //   3012: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3015: goto -1821 -> 1194
+<     //   3018: aload 6
+<     //   3020: ldc_w 1788
+<     //   3023: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3026: ifeq +30 -> 3056
+<     //   3029: aload_0
+<     //   3030: aload 4
+<     //   3032: putfield 496	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText3	Landroid/widget/EditText;
+<     //   3035: aload_0
+<     //   3036: getfield 496	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText3	Landroid/widget/EditText;
+<     //   3039: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+<     //   3042: dup
+---
+>     //   3006: getfield 494	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText2	Landroid/widget/EditText;
+>     //   3009: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+>     //   3012: dup
+>     //   3013: aload_0
+>     //   3014: aload 4
+>     //   3016: aconst_null
+>     //   3017: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+>     //   3020: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3023: goto -1829 -> 1194
+>     //   3026: aload 6
+>     //   3028: ldc_w 1788
+>     //   3031: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3034: ifeq +30 -> 3064
+>     //   3037: aload_0
+>     //   3038: aload 4
+>     //   3040: putfield 496	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText3	Landroid/widget/EditText;
+3677,3700c3677,3700
+<     //   3044: aload 4
+<     //   3046: aconst_null
+<     //   3047: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+<     //   3050: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3053: goto -1859 -> 1194
+<     //   3056: aload 6
+<     //   3058: ldc_w 1790
+<     //   3061: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3064: ifeq +12 -> 3076
+<     //   3067: aload_0
+<     //   3068: aload 4
+<     //   3070: putfield 498	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText4	Landroid/widget/EditText;
+<     //   3073: goto -1879 -> 1194
+<     //   3076: aload 6
+<     //   3078: ldc_w 1792
+<     //   3081: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3084: ifeq +28 -> 3112
+<     //   3087: aload_0
+<     //   3088: aload 4
+<     //   3090: putfield 500	com/feelingk/iap/gui/parser/ParserXML:m_OCBPWText	Landroid/widget/EditText;
+<     //   3093: aload_0
+<     //   3094: getfield 500	com/feelingk/iap/gui/parser/ParserXML:m_OCBPWText	Landroid/widget/EditText;
+<     //   3097: new 103	com/feelingk/iap/gui/parser/ParserXML$OKCashbackTextWatcher
+<     //   3100: dup
+---
+>     //   3044: getfield 496	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText3	Landroid/widget/EditText;
+>     //   3047: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+>     //   3050: dup
+>     //   3051: aload_0
+>     //   3052: aload 4
+>     //   3054: aconst_null
+>     //   3055: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+>     //   3058: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3061: goto -1867 -> 1194
+>     //   3064: aload 6
+>     //   3066: ldc_w 1790
+>     //   3069: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3072: ifeq +12 -> 3084
+>     //   3075: aload_0
+>     //   3076: aload 4
+>     //   3078: putfield 498	com/feelingk/iap/gui/parser/ParserXML:m_OCBRegText4	Landroid/widget/EditText;
+>     //   3081: goto -1887 -> 1194
+>     //   3084: aload 6
+>     //   3086: ldc_w 1792
+>     //   3089: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3092: ifeq +28 -> 3120
+>     //   3095: aload_0
+>     //   3096: aload 4
+>     //   3098: putfield 500	com/feelingk/iap/gui/parser/ParserXML:m_OCBPWText	Landroid/widget/EditText;
+3702,3756c3702,3756
+<     //   3102: aconst_null
+<     //   3103: invokespecial 1795	com/feelingk/iap/gui/parser/ParserXML$OKCashbackTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Lcom/feelingk/iap/gui/parser/ParserXML$OKCashbackTextWatcher;)V
+<     //   3106: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3109: goto -1915 -> 1194
+<     //   3112: aload 6
+<     //   3114: ldc_w 1797
+<     //   3117: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3120: ifeq +39 -> 3159
+<     //   3123: aload_0
+<     //   3124: aload 4
+<     //   3126: putfield 502	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandID	Landroid/widget/EditText;
+<     //   3129: getstatic 378	com/feelingk/iap/gui/parser/ParserXML:mCultureLoginFlag	Z
+<     //   3132: ifeq +13 -> 3145
+<     //   3135: aload_0
+<     //   3136: getfield 502	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandID	Landroid/widget/EditText;
+<     //   3139: getstatic 380	com/feelingk/iap/gui/parser/ParserXML:mCultureLandID	Ljava/lang/String;
+<     //   3142: invokevirtual 1652	android/widget/EditText:setText	(Ljava/lang/CharSequence;)V
+<     //   3145: aload_0
+<     //   3146: getfield 502	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandID	Landroid/widget/EditText;
+<     //   3149: aload_0
+<     //   3150: getfield 553	com/feelingk/iap/gui/parser/ParserXML:mCultureLandTextWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$CultureLandTextWatcher;
+<     //   3153: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3156: goto -1962 -> 1194
+<     //   3159: aload 6
+<     //   3161: ldc_w 1799
+<     //   3164: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3167: ifeq +23 -> 3190
+<     //   3170: aload_0
+<     //   3171: aload 4
+<     //   3173: putfield 504	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandPW	Landroid/widget/EditText;
+<     //   3176: aload_0
+<     //   3177: getfield 504	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandPW	Landroid/widget/EditText;
+<     //   3180: aload_0
+<     //   3181: getfield 553	com/feelingk/iap/gui/parser/ParserXML:mCultureLandTextWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$CultureLandTextWatcher;
+<     //   3184: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3187: goto -1993 -> 1194
+<     //   3190: aload 6
+<     //   3192: ldc_w 1801
+<     //   3195: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3198: ifeq +12 -> 3210
+<     //   3201: aload_0
+<     //   3202: aload 4
+<     //   3204: putfield 506	com/feelingk/iap/gui/parser/ParserXML:m_DotoriSMSAuthNum	Landroid/widget/EditText;
+<     //   3207: goto -2013 -> 1194
+<     //   3210: aload 6
+<     //   3212: ldc_w 1803
+<     //   3215: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3218: ifeq +41 -> 3259
+<     //   3221: aload_0
+<     //   3222: aload 4
+<     //   3224: putfield 508	com/feelingk/iap/gui/parser/ParserXML:m_MDN1	Landroid/widget/EditText;
+<     //   3227: aload_0
+<     //   3228: getfield 508	com/feelingk/iap/gui/parser/ParserXML:m_MDN1	Landroid/widget/EditText;
+<     //   3231: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+<     //   3234: dup
+---
+>     //   3102: getfield 500	com/feelingk/iap/gui/parser/ParserXML:m_OCBPWText	Landroid/widget/EditText;
+>     //   3105: new 103	com/feelingk/iap/gui/parser/ParserXML$OKCashbackTextWatcher
+>     //   3108: dup
+>     //   3109: aload_0
+>     //   3110: aconst_null
+>     //   3111: invokespecial 1795	com/feelingk/iap/gui/parser/ParserXML$OKCashbackTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Lcom/feelingk/iap/gui/parser/ParserXML$OKCashbackTextWatcher;)V
+>     //   3114: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3117: goto -1923 -> 1194
+>     //   3120: aload 6
+>     //   3122: ldc_w 1797
+>     //   3125: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3128: ifeq +39 -> 3167
+>     //   3131: aload_0
+>     //   3132: aload 4
+>     //   3134: putfield 502	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandID	Landroid/widget/EditText;
+>     //   3137: getstatic 378	com/feelingk/iap/gui/parser/ParserXML:mCultureLoginFlag	Z
+>     //   3140: ifeq +13 -> 3153
+>     //   3143: aload_0
+>     //   3144: getfield 502	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandID	Landroid/widget/EditText;
+>     //   3147: getstatic 380	com/feelingk/iap/gui/parser/ParserXML:mCultureLandID	Ljava/lang/String;
+>     //   3150: invokevirtual 1652	android/widget/EditText:setText	(Ljava/lang/CharSequence;)V
+>     //   3153: aload_0
+>     //   3154: getfield 502	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandID	Landroid/widget/EditText;
+>     //   3157: aload_0
+>     //   3158: getfield 553	com/feelingk/iap/gui/parser/ParserXML:mCultureLandTextWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$CultureLandTextWatcher;
+>     //   3161: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3164: goto -1970 -> 1194
+>     //   3167: aload 6
+>     //   3169: ldc_w 1799
+>     //   3172: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3175: ifeq +23 -> 3198
+>     //   3178: aload_0
+>     //   3179: aload 4
+>     //   3181: putfield 504	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandPW	Landroid/widget/EditText;
+>     //   3184: aload_0
+>     //   3185: getfield 504	com/feelingk/iap/gui/parser/ParserXML:m_CultureLandPW	Landroid/widget/EditText;
+>     //   3188: aload_0
+>     //   3189: getfield 553	com/feelingk/iap/gui/parser/ParserXML:mCultureLandTextWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$CultureLandTextWatcher;
+>     //   3192: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3195: goto -2001 -> 1194
+>     //   3198: aload 6
+>     //   3200: ldc_w 1801
+>     //   3203: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3206: ifeq +12 -> 3218
+>     //   3209: aload_0
+>     //   3210: aload 4
+>     //   3212: putfield 506	com/feelingk/iap/gui/parser/ParserXML:m_DotoriSMSAuthNum	Landroid/widget/EditText;
+>     //   3215: goto -2021 -> 1194
+>     //   3218: aload 6
+>     //   3220: ldc_w 1803
+>     //   3223: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3226: ifeq +41 -> 3267
+>     //   3229: aload_0
+>     //   3230: aload 4
+>     //   3232: putfield 508	com/feelingk/iap/gui/parser/ParserXML:m_MDN1	Landroid/widget/EditText;
+3758,3778c3758,3778
+<     //   3236: aload 4
+<     //   3238: aconst_null
+<     //   3239: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+<     //   3242: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3245: aload_0
+<     //   3246: getfield 508	com/feelingk/iap/gui/parser/ParserXML:m_MDN1	Landroid/widget/EditText;
+<     //   3249: aload_0
+<     //   3250: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+<     //   3253: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3256: goto -2062 -> 1194
+<     //   3259: aload 6
+<     //   3261: ldc_w 1805
+<     //   3264: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3267: ifeq +41 -> 3308
+<     //   3270: aload_0
+<     //   3271: aload 4
+<     //   3273: putfield 510	com/feelingk/iap/gui/parser/ParserXML:m_MDN2	Landroid/widget/EditText;
+<     //   3276: aload_0
+<     //   3277: getfield 510	com/feelingk/iap/gui/parser/ParserXML:m_MDN2	Landroid/widget/EditText;
+<     //   3280: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+<     //   3283: dup
+---
+>     //   3236: getfield 508	com/feelingk/iap/gui/parser/ParserXML:m_MDN1	Landroid/widget/EditText;
+>     //   3239: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+>     //   3242: dup
+>     //   3243: aload_0
+>     //   3244: aload 4
+>     //   3246: aconst_null
+>     //   3247: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+>     //   3250: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3253: aload_0
+>     //   3254: getfield 508	com/feelingk/iap/gui/parser/ParserXML:m_MDN1	Landroid/widget/EditText;
+>     //   3257: aload_0
+>     //   3258: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+>     //   3261: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3264: goto -2070 -> 1194
+>     //   3267: aload 6
+>     //   3269: ldc_w 1805
+>     //   3272: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3275: ifeq +41 -> 3316
+>     //   3278: aload_0
+>     //   3279: aload 4
+>     //   3281: putfield 510	com/feelingk/iap/gui/parser/ParserXML:m_MDN2	Landroid/widget/EditText;
+3780,3820c3780,3824
+<     //   3285: aload 4
+<     //   3287: aconst_null
+<     //   3288: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+<     //   3291: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3294: aload_0
+<     //   3295: getfield 510	com/feelingk/iap/gui/parser/ParserXML:m_MDN2	Landroid/widget/EditText;
+<     //   3298: aload_0
+<     //   3299: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+<     //   3302: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3305: goto -2111 -> 1194
+<     //   3308: aload 6
+<     //   3310: ldc_w 1807
+<     //   3313: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+<     //   3316: ifeq -2122 -> 1194
+<     //   3319: aload_0
+<     //   3320: aload 4
+<     //   3322: putfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+<     //   3325: aload_0
+<     //   3326: getfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+<     //   3329: aload_0
+<     //   3330: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+<     //   3333: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+<     //   3336: goto -2142 -> 1194
+<     //   3339: astore 6
+<     //   3341: goto -1746 -> 1595
+<     //   3344: astore 10
+<     //   3346: goto -2685 -> 661
+<     //   3349: astore 11
+<     //   3351: goto -2637 -> 714
+<     //   3354: astore 10
+<     //   3356: goto -1437 -> 1919
+<     //   3359: astore 10
+<     //   3361: goto -1391 -> 1970
+<     //   3364: astore 9
+<     //   3366: goto -1087 -> 2279
+<     //   3369: astore 10
+<     //   3371: goto -1045 -> 2326
+<     //   3374: astore 11
+<     //   3376: goto -999 -> 2377
+<     //   3379: astore 6
+<     //   3381: goto -2117 -> 1264
+---
+>     //   3285: getfield 510	com/feelingk/iap/gui/parser/ParserXML:m_MDN2	Landroid/widget/EditText;
+>     //   3288: new 100	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher
+>     //   3291: dup
+>     //   3292: aload_0
+>     //   3293: aload 4
+>     //   3295: aconst_null
+>     //   3296: invokespecial 1784	com/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher:<init>	(Lcom/feelingk/iap/gui/parser/ParserXML;Landroid/widget/EditText;Lcom/feelingk/iap/gui/parser/ParserXML$NextFocusTextWatcher;)V
+>     //   3299: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3302: aload_0
+>     //   3303: getfield 510	com/feelingk/iap/gui/parser/ParserXML:m_MDN2	Landroid/widget/EditText;
+>     //   3306: aload_0
+>     //   3307: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+>     //   3310: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3313: goto -2119 -> 1194
+>     //   3316: aload 6
+>     //   3318: ldc_w 1807
+>     //   3321: invokevirtual 651	java/lang/String:equals	(Ljava/lang/Object;)Z
+>     //   3324: ifeq -2130 -> 1194
+>     //   3327: aload_0
+>     //   3328: aload 4
+>     //   3330: putfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+>     //   3333: aload_0
+>     //   3334: getfield 512	com/feelingk/iap/gui/parser/ParserXML:m_MDN3	Landroid/widget/EditText;
+>     //   3337: aload_0
+>     //   3338: getfield 558	com/feelingk/iap/gui/parser/ParserXML:mForeignDevelopeTextLengthWatcher	Lcom/feelingk/iap/gui/parser/ParserXML$ForeignDevelopeTextLengthWatcher;
+>     //   3341: invokevirtual 1710	android/widget/EditText:addTextChangedListener	(Landroid/text/TextWatcher;)V
+>     //   3344: goto -2150 -> 1194
+>     //   3347: astore 6
+>     //   3349: goto -1746 -> 1603
+>     //   3352: astore 10
+>     //   3354: goto -2693 -> 661
+>     //   3357: astore 11
+>     //   3359: goto -2645 -> 714
+>     //   3362: astore 10
+>     //   3364: goto -1437 -> 1927
+>     //   3367: astore 10
+>     //   3369: goto -1391 -> 1978
+>     //   3372: astore 9
+>     //   3374: goto -1087 -> 2287
+>     //   3377: astore 10
+>     //   3379: goto -1045 -> 2334
+>     //   3382: astore 11
+>     //   3384: goto -999 -> 2385
+>     //   3387: astore 6
+>     //   3389: goto -2125 -> 1264
+3823,3843c3827,3847
+<     //   0	3384	0	this	ParserXML
+<     //   0	3384	1	paramXmlPullParser	XmlPullParser
+<     //   569	1997	2	i	int
+<     //   1289	39	3	j	int
+<     //   9	3312	4	localObject1	Object
+<     //   15	2524	5	localAttributeSet	AttributeSet
+<     //   6	3303	6	localObject2	Object
+<     //   3339	1	6	localIOException1	IOException
+<     //   3379	1	6	localIOException2	IOException
+<     //   387	2507	7	localObject3	Object
+<     //   398	2228	8	localObject4	Object
+<     //   409	2146	9	localObject5	Object
+<     //   3364	1	9	localIOException3	IOException
+<     //   420	2011	10	localObject6	Object
+<     //   3344	1	10	localIOException4	IOException
+<     //   3354	1	10	localIOException5	IOException
+<     //   3359	1	10	localIOException6	IOException
+<     //   3369	1	10	localIOException7	IOException
+<     //   697	1899	11	localObject7	Object
+<     //   3349	1	11	localIOException8	IOException
+<     //   3374	1	11	localIOException9	IOException
+---
+>     //   0	3392	0	this	ParserXML
+>     //   0	3392	1	paramXmlPullParser	XmlPullParser
+>     //   569	2005	2	i	int
+>     //   1305	31	3	j	int
+>     //   9	3320	4	localObject1	Object
+>     //   15	2532	5	localAttributeSet	AttributeSet
+>     //   6	3311	6	localObject2	Object
+>     //   3347	1	6	localIOException1	IOException
+>     //   3387	1	6	localIOException2	IOException
+>     //   387	2515	7	localObject3	Object
+>     //   398	2236	8	localObject4	Object
+>     //   409	2154	9	localObject5	Object
+>     //   3372	1	9	localIOException3	IOException
+>     //   420	2019	10	localObject6	Object
+>     //   3352	1	10	localIOException4	IOException
+>     //   3362	1	10	localIOException5	IOException
+>     //   3367	1	10	localIOException6	IOException
+>     //   3377	1	10	localIOException7	IOException
+>     //   697	1907	11	localObject7	Object
+>     //   3357	1	11	localIOException8	IOException
+>     //   3382	1	11	localIOException9	IOException
+3846,3854c3850,3858
+<     //   1590	1595	3339	java/io/IOException
+<     //   656	661	3344	java/io/IOException
+<     //   709	714	3349	java/io/IOException
+<     //   1914	1919	3354	java/io/IOException
+<     //   1965	1970	3359	java/io/IOException
+<     //   2274	2279	3364	java/io/IOException
+<     //   2321	2326	3369	java/io/IOException
+<     //   2372	2377	3374	java/io/IOException
+<     //   1259	1264	3379	java/io/IOException
+---
+>     //   1598	1603	3347	java/io/IOException
+>     //   656	661	3352	java/io/IOException
+>     //   709	714	3357	java/io/IOException
+>     //   1922	1927	3362	java/io/IOException
+>     //   1973	1978	3367	java/io/IOException
+>     //   2282	2287	3372	java/io/IOException
+>     //   2329	2334	3377	java/io/IOException
+>     //   2380	2385	3382	java/io/IOException
+>     //   1259	1264	3387	java/io/IOException
+Os arquivos binários result/APP_39/App_B_39/original/AndroidManifest.xml e result/APP_39/App_M_39/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_39/App_B_39/original/META-INF/CERT.RSA e result/APP_39/App_M_39/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_39/App_B_39/original/META-INF/CERT.SF result/APP_39/App_M_39/original/META-INF/CERT.SF
+2,3c2,6
+< Created-By: 1.0 (Android SignApk)
+< SHA1-Digest-Manifest: Bp9TnjQAQkQZ5LZ6sYj170YgDyc=
+---
+> Created-By: 1.0 (Android)
+> SHA1-Digest-Manifest: Gi+GXgY2d5WlAU18F0b+x6BIJeY=
+> 
+> Name: res/bt_01_claim_nor.png
+> SHA1-Digest: DClyHiSJHOzyjrW50w7VjXphbt8=
+8,9c11,12
+< Name: assets/image/GameScene/GameBG_Ice1.png
+< SHA1-Digest: rgBOg/nYcsuiDZcsASaU+EcmX70=
+---
+> Name: xml/commonPopupAutoPurchaseFormW.xml
+> SHA1-Digest: iLembIziJqoyBh16dR/y/RcWnrA=
+11,12c14,21
+< Name: assets/image/GameScene/GameBG_Forest1.png
+< SHA1-Digest: 09Z8LqoiHtVoOFvlIXRMWxaVVuA=
+---
+> Name: res/line_dot_01.png
+> SHA1-Digest: ViYcmzdtI9uT/NWSno+2T5KV+Nc=
+> 
+> Name: res/btn_pad_nor.png
+> SHA1-Digest: 1dpBrP0f5qqgFesOL6TYZwYrAFQ=
+> 
+> Name: res/btn_locking_sel.png
+> SHA1-Digest: qEUmrRBO8H1JJ28h1zENLbLeHOM=
+20,21c29,30
+< Name: assets/Audio/gameover.ogg
+< SHA1-Digest: 5RZ2xKILhV5kVUnHt+R2nvmF/Oc=
+---
+> Name: xml/ocb_pw_auth.xml
+> SHA1-Digest: yp572lxhQGvnZGL6nSv+S5IEC3I=
+26,27c35,39
+< Name: assets/Audio/damageformissile_thunder_normal.ogg
+< SHA1-Digest: OhnCx6cxMiaKoid4+yWZrmL7Nus=
+---
+> Name: res/btn_more_02_nor_e.png
+> SHA1-Digest: 7JhOrhayBa2Lgr6QKc3w0jrNjd8=
+> 
+> Name: res/btn_buy_nor_h.png
+> SHA1-Digest: glgIvJzugA5B2EpLW16Kz/b7q3E=
+31a44,55
+> Name: xml_kt_lg/lgusmsauthpopup_w.xml
+> SHA1-Digest: LCmgDtS3aLlabcEQN2u9aHzMyB8=
+> 
+> Name: res/keypad_num_08.png
+> SHA1-Digest: hTrODH02VxDTs2mRVx2cf5k/tHU=
+> 
+> Name: res/textbox_01_3.png
+> SHA1-Digest: C8RllwWoZV0RAMwqqFDotHuCxAc=
+> 
+> Name: res/bt_01_claim_dim.png
+> SHA1-Digest: 85jeGCYdWQtLqOACA5DZcn8HbGI=
+> 
+35,37d58
+< Name: res/drawable-nodpi/hit.png
+< SHA1-Digest: QrceLg5ZQ1KUjIWBUHfqZR6SBsM=
+< 
+41,43d61
+< Name: res/drawable-nodpi/mainbtn.png
+< SHA1-Digest: NWkNFRpU7sQF4IbhYg601qaCcd8=
+< 
+49a68,85
+> Name: xml/ocbpopup_w.xml
+> SHA1-Digest: Md075SPu4OPBwAnt2a4LTxa8q5s=
+> 
+> Name: res/bt_confirm_dim_e.png
+> SHA1-Digest: ELfPEOU2NJFGSUBbjbgp93fglNo=
+> 
+> Name: res/pop_btn_sel_ok_e.png
+> SHA1-Digest: SHK5Zx386XPF2kgFXJcUAN4vQYg=
+> 
+> Name: res/radio_bt_sel.png
+> SHA1-Digest: IDGJ5kBlazPSgMPeGzavv92VDHc=
+> 
+> Name: res/btn_terms_nor_b2.png
+> SHA1-Digest: wUD9TRJJykFLO5Wp+Erv+gsZX5w=
+> 
+> Name: res/pop_btn_nor_ok.png
+> SHA1-Digest: e+rEQ5n/MQ+ov4uPLVSJunMtMbA=
+> 
+52a89,91
+> Name: res/textbox_01_4.png
+> SHA1-Digest: FRUI06LHSZOXJ2wCNL+DKj2njY0=
+> 
+56,58d94
+< Name: res/drawable-nodpi/mainbg.png
+< SHA1-Digest: t7nsF2NMvAVUI8ldUj0MI8yFpyI=
+< 
+65,66c101,102
+< Name: res/drawable-ja-nodpi/help0.png
+< SHA1-Digest: kGGZMVjqrH+biiFts5HaeWbbbr4=
+---
+> Name: res/icon_bullet.png
+> SHA1-Digest: C4TIqN3E+tNEm9+UhF6mivLDPP0=
+71,72c107,132
+< Name: res/drawable-nodpi/unit.png
+< SHA1-Digest: kIfzNOOFlbzfEGMKbUKiSQmQDIM=
+---
+> Name: res/keypad_num_09.png
+> SHA1-Digest: r8soMKmz1aD1nQ1zmIll0CFNunM=
+> 
+> Name: res/textbox_01_9.png
+> SHA1-Digest: 2GafOkLHhxvO+hYSKBr8sXDM6FQ=
+> 
+> Name: xml/purchaseW_finalVersion.xml
+> SHA1-Digest: YpT7mGQ4IGAVAWNKxoQLsx13gj0=
+> 
+> Name: res/textbox_01.9.png
+> SHA1-Digest: LbPimHScLJr/GiggKnHG/M/oa+k=
+> 
+> Name: res/textbox_01_2.9.png
+> SHA1-Digest: S4c5cpak6za3TAOygfMR3h9qu1A=
+> 
+> Name: res/info_table_02.png
+> SHA1-Digest: 1RQq0+kZikXoi233g9gSg/OLRkU=
+> 
+> Name: res/btn_more_01_nor.png
+> SHA1-Digest: zmY0gNrsMsVozgUW8ptMmgbyc/k=
+> 
+> Name: res/btn_more_01_sel.png
+> SHA1-Digest: 90Diivn76olgQ66b8XRVLbzFVt8=
+> 
+> Name: res/bt_confirm_dim.png
+> SHA1-Digest: 0td+/SAw6dR5+QDwdO/WahzmVuw=
+77,78c137,144
+< Name: res/drawable-ko-nodpi/help9.png
+< SHA1-Digest: ErX6EPHzIrHdy0VrUZc23UGdkLQ=
+---
+> Name: xml/otpPopup_h.xml
+> SHA1-Digest: gCjNxnOIJ7M2knoqfJ+wWhCfFGA=
+> 
+> Name: res/btn_policy_sel_b_e.png
+> SHA1-Digest: pB1ZOaSpQ26k14EpBks+2ZPkgIc=
+> 
+> Name: res/btn_terms_sel_b2_e.png
+> SHA1-Digest: +RWE7ZFQNdHZcka02v4LEI9UDXI=
+83,84c149,150
+< Name: res/drawable-nodpi/shopbg.png
+< SHA1-Digest: GpvkE28SPa2+BBh0LYFiFeNp7og=
+---
+> Name: res/btn_buy_sel_h.png
+> SHA1-Digest: ULbGJrLWxEcoXZurciDJcfLgusk=
+89,90c155,156
+< Name: assets/Audio/damageformissile_normal_critical.ogg
+< SHA1-Digest: 3reFoMk5yfaUJlUIlulrl1LYjUI=
+---
+> Name: xml_kt_lg/commonPopupJoinW.xml
+> SHA1-Digest: nr1+J2ybnqxaaDJoOZD9dcLUrTM=
+95,96c161,162
+< Name: assets/Audio/bgmcloud_2.ogg
+< SHA1-Digest: liXPS885UT8Pm2wHKVEh2WxFWhk=
+---
+> Name: res/btn_check_no_sel.png
+> SHA1-Digest: tcHCQa0w/Mgbxs1rAiF32qQ4HvE=
+98,99c164,165
+< Name: assets/Audio/bgmforest_2.ogg
+< SHA1-Digest: MXj06ZcsTQqShTbmb6vc5HDchSE=
+---
+> Name: xml/purchaseH_finalVersion.xml
+> SHA1-Digest: NJu5LfavTDwUv3XgkX8PXX448YA=
+104,105c170,171
+< Name: resources.arsc
+< SHA1-Digest: OAI71EBOEjJz7nBRF+Q94LE4tCo=
+---
+> Name: assets/Audio/bgmforest_2.ogg
+> SHA1-Digest: MXj06ZcsTQqShTbmb6vc5HDchSE=
+107,108c173,174
+< Name: res/drawable-nodpi/wrdefault.png
+< SHA1-Digest: f4PnVh8pNEZS+XrNkAbL5GB8rYg=
+---
+> Name: res/textbox_01_5.png
+> SHA1-Digest: m2wZXgdw1cYvvEF2/gifLiCruTQ=
+110,111c176,177
+< Name: AndroidManifest.xml
+< SHA1-Digest: KXc4S0PQbZBT/y/mnFgjfyAGEa8=
+---
+> Name: res/textbox_01_2.png
+> SHA1-Digest: GOp5tY8IaGGAgPCknaELX2Kv4Y0=
+113,114c179,180
+< Name: res/drawable-ko-nodpi/wrdefault.png
+< SHA1-Digest: 6G71ph5YCu3PqNp2WZjQxCYeQNw=
+---
+> Name: res/btn_info01_nor.png
+> SHA1-Digest: Tekg3OR0jZhWku1eh+b2cjWXxOI=
+116,117c182,183
+< Name: res/drawable-nodpi/gametutorial.png
+< SHA1-Digest: J/DWKhdbhVidJnfmPbQhoOxzyO0=
+---
+> Name: res/icon_title_01.png
+> SHA1-Digest: Q5WmBm0e00MxSEJmgmtnbaY8bDQ=
+119,120c185,213
+< Name: assets/Audio/shoot_thunder.ogg
+< SHA1-Digest: ufzh8WV17D2NCxjGhKU8tpTCex0=
+---
+> Name: res/btn_policy_sel_b.png
+> SHA1-Digest: JD0ftvnugthdu+Di5eTmfCivyAM=
+> 
+> Name: res/bt_01_claim_nor_e.png
+> SHA1-Digest: ufzrb2V8mYU7j9vAKIATsRLZM/0=
+> 
+> Name: res/textbox_01_1.png
+> SHA1-Digest: 61FKRW2/nGmWAcYVxrebABva6C0=
+> 
+> Name: res/btn_terms_sel_b_e.png
+> SHA1-Digest: 9GTyPygJQC4amL2KHngmamwdbVQ=
+> 
+> Name: res/btn_check_ok_sel.png
+> SHA1-Digest: iRY+oKODrJKyS4nXyOXEriHdqCY=
+> 
+> Name: res/btn_terms_nor_b_e.png
+> SHA1-Digest: csU2QW7vY4rjfQlVS/oC+gReWcw=
+> 
+> Name: xml_kt_lg/purchaseH_finalVersion.xml
+> SHA1-Digest: kyHCLFtGbMIUNLSGDf/YMlok56A=
+> 
+> Name: res/btn_buy_sel_h_e.png
+> SHA1-Digest: Sakz3F0XO0d18PNoQPPu6TSM18U=
+> 
+> Name: res/bottom_bg.png
+> SHA1-Digest: RGStk3PO/mmwmX7HbC42XTvLRNw=
+> 
+> Name: xml/dotori_sms_auth_w.xml
+> SHA1-Digest: MRVF8I16XavOtd1c9GTG65bT10c=
+124a218,223
+> Name: res/checkbox_n.png
+> SHA1-Digest: JR9GHQK1+U/dO4OM04UkBlbHYIg=
+> 
+> Name: res/title_line01.png
+> SHA1-Digest: SUP6N5axAAgh1gxrKc5CLYNC/EY=
+> 
+130a230,232
+> Name: xml/commonPopup.xml
+> SHA1-Digest: HUil0YUZqXNY/H6cP4l198KeeHY=
+> 
+134,136d235
+< Name: classes.dex
+< SHA1-Digest: anuHlo6BrENKZqZyHc9OUGXr9XE=
+< 
+149,150c248,249
+< Name: res/drawable-nodpi/shopunit.png
+< SHA1-Digest: jLlkx/wQNTtHRMeYg/fd3R7TNPA=
+---
+> Name: res/radio_bt_nor.png
+> SHA1-Digest: Qbo21pN1/Wx5XooFq/yJaKMaFXY=
+152,156c251,252
+< Name: assets/image/GameScene/GameBG_Forest2.png
+< SHA1-Digest: FMsEPHJIHTIDCtdwfFdChDa0TGk=
+< 
+< Name: res/drawable-ko-nodpi/help8.png
+< SHA1-Digest: CQUt2DHDRVrBUR6GNsIpVh0X/TU=
+---
+> Name: res/input_box_sel2.9.png
+> SHA1-Digest: PJQzLy/XabYZWIjxCkvI99Jwvoo=
+161,162c257,258
+< Name: assets/Audio/getpointdiamond.ogg
+< SHA1-Digest: meAJlcknsLj0NO8RofXzKlPwC8s=
+---
+> Name: xml_kt_lg/commonPopupJoinForm.xml
+> SHA1-Digest: FjJM5Ke9+689DzJMS3L5nC049oc=
+164,165c260,264
+< Name: assets/Audio/bgmcloud_1.ogg
+< SHA1-Digest: WdddOvLSJ+2vv0dGbpZiqrZRud8=
+---
+> Name: res/btn_info01_sel.png
+> SHA1-Digest: G/7m8scSHFhdFDvmHC3P/K8JzEQ=
+> 
+> Name: res/bt_01_reclaim_nor.png
+> SHA1-Digest: hOv+Kijo+vYlK8UOCudyBRPb0TU=
+173,174c272,273
+< Name: res/drawable-ko-nodpi/help1.png
+< SHA1-Digest: vOqbybOCV+u1y9MZXxBSJFvM968=
+---
+> Name: res/btn_pad_sel.png
+> SHA1-Digest: Mo+vutxNr+YL/PvVELaG5wpP3E0=
+176,180c275,276
+< Name: res/drawable-ko-nodpi/help3.png
+< SHA1-Digest: cAigMYZCPb73yzw80ZJJpZwcFPo=
+< 
+< Name: res/drawable-nodpi/exunit5.png
+< SHA1-Digest: zhEQEQMAOOEUpSTfQ9ZJWcQDYV8=
+---
+> Name: res/btn_buy_resel_h.png
+> SHA1-Digest: WLskX5c+ukPo3Ytb23FAiSYXp4c=
+188,190d283
+< Name: res/drawable-ldpi/icon.png
+< SHA1-Digest: e3bHO2FXMcOVrQnyKRXK2AtB9Ag=
+< 
+194,199d286
+< Name: assets/Audio/warning.ogg
+< SHA1-Digest: iDaWrtzAKYOQ2FmWGacRQ/wBHak=
+< 
+< Name: res/drawable-ko-nodpi/help5.png
+< SHA1-Digest: fjBLJZqbfVsoVpKw7igE+O+1ivE=
+< 
+206,213c293,294
+< Name: res/drawable-nodpi/exunit2.png
+< SHA1-Digest: 4m4tkrGhctc/xLbJHzsMQS/exy4=
+< 
+< Name: res/drawable-ja-nodpi/help6.png
+< SHA1-Digest: bVUxBYP+8bGzqRgAFG5025fR01A=
+< 
+< Name: assets/image/GameScene/GameBG_Ice2.png
+< SHA1-Digest: 5AjfrCd/da5N8I2ugbExvE61lRw=
+---
+> Name: res/keypad_num_03.png
+> SHA1-Digest: dM2VFq6pIz63dIj0ZsLkECJkSmw=
+223a305,310
+> Name: res/pop_btn_nor_ok_e.png
+> SHA1-Digest: 7u+hKAcwJC0OgffDPafSsdEaXYw=
+> 
+> Name: xml_kt_lg/purchaseH.xml
+> SHA1-Digest: Q8u68DxiFz9FbcmYu6twiOn7WtU=
+> 
+226a314,319
+> Name: res/btn_buycancel_nor_e.png
+> SHA1-Digest: PjOR4eKaGffe0qpbBx39oQKojSE=
+> 
+> Name: res/textbox_.9.png
+> SHA1-Digest: 4XG078xf+rdOV2wqCiofDEDpfho=
+> 
+230,231c323,327
+< Name: assets/Audio/damageformissile_fire_critical.ogg
+< SHA1-Digest: 4LzNmwQeyaICD9IJC0GZMEBvJg4=
+---
+> Name: res/keypad_num_02.png
+> SHA1-Digest: ap5nICGz+AnBaprCcHEZvOJJ0A0=
+> 
+> Name: res/btn_cancel_sel_h_e.png
+> SHA1-Digest: EvT8maEVUMI1WA0lswzhlYrzBXg=
+236,237c332,333
+< Name: res/drawable-nodpi/help5.png
+< SHA1-Digest: WErjWxV3Ru3Z6huzZcjqt/N2/hM=
+---
+> Name: xml/culture_login_w.xml
+> SHA1-Digest: fwpVNGQgFZX5/x1Yn5jCAuoZfsY=
+239,240c335,336
+< Name: res/drawable-nodpi/gamebtn.png
+< SHA1-Digest: Ds3IRBUw68Bjln0vGqhYl31zs0Q=
+---
+> Name: res/btn_check_no_nor.png
+> SHA1-Digest: 464y/f1jcUZyOIlDmLqRl8vSccU=
+242,243c338,339
+< Name: res/layout/main.xml
+< SHA1-Digest: sdamfvRUgPjSpBySNuBKd3CCIoQ=
+---
+> Name: res/btn_cancel_sel_h.png
+> SHA1-Digest: PPkXnM5pifa1GUOie/u1zOZFXLE=
+245,246c341,342
+< Name: assets/image/GameScene/GameBG_Fire2.png
+< SHA1-Digest: xY9J/I0nMwvfVKn2++PUUW0fpnc=
+---
+> Name: xml_kt_lg/purchaseH_Auto.xml
+> SHA1-Digest: +/F7AZnxfRCk+Az0v1y8S03SJs8=
+248,249c344,345
+< Name: assets/Audio/shoot_ice.ogg
+< SHA1-Digest: SUQPp1YrRKXJ5/m7f88bN2TLTrE=
+---
+> Name: res/info_table_01.9.png
+> SHA1-Digest: 5SmVTWqLR9ll2smsc4Tvga235kQ=
+251,252c347,348
+< Name: assets/Audio/bgmshop.ogg
+< SHA1-Digest: KBo4Y86IB/6y+Q84MUcvX4NRCb0=
+---
+> Name: res/btn_cancel_nor_h.png
+> SHA1-Digest: ZCCIgNH4YL7YFdVMJBdmhZYQtk0=
+256a353,358
+> Name: res/bt_01_reclaim_nor_e.png
+> SHA1-Digest: MhZ9HLRC7H2RvN/IaG9qID7ektE=
+> 
+> Name: res/btn_policy_nor_b_e.png
+> SHA1-Digest: ZxuTneUBJG/TMHovYuNFeGHJf8w=
+> 
+260,261c362,366
+< Name: res/drawable-ko-nodpi/help4.png
+< SHA1-Digest: ciwTBCIw10ub/h6H/yaT0y1Lm1I=
+---
+> Name: res/keypad_num_06.png
+> SHA1-Digest: sDeBAX9fuDG6ODDglHeTvIp8Qok=
+> 
+> Name: res/keypad_num_00.png
+> SHA1-Digest: tNyN4uP9zJJH/poQPxX75iqZhFQ=
+266,267c371,372
+< Name: res/drawable-nodpi/exunit4.png
+< SHA1-Digest: XtfC5fGsseMWVZMTMcqlSYjVJd0=
+---
+> Name: res/btn_con_nor_e.png
+> SHA1-Digest: Lr+Kzr2URQC48EbEBSUK4sGf+Hg=
+269,270c374,387
+< Name: res/drawable-nodpi/help4.png
+< SHA1-Digest: vywaWZYyR9s0n6xRIYOsvwkye/o=
+---
+> Name: xml_kt_lg/pop_Juminnumber_h.xml
+> SHA1-Digest: 3dSE8zhtJQbdPHgiP+7XdunYjeo=
+> 
+> Name: xml/imeiauthw.xml
+> SHA1-Digest: ZoNgdde9hhi2qErXu+QGA+NkwUU=
+> 
+> Name: res/popup_bg_all_02.9.png
+> SHA1-Digest: PLcQG+29mqE3xyaajmk4hqri/ik=
+> 
+> Name: xml_kt_lg/purchaseW.xml
+> SHA1-Digest: 5PQ+eAqZVuycZiKyP1mOs/HWd+k=
+> 
+> Name: res/info_table_01.png
+> SHA1-Digest: IeYB6diK/8Jrp95klgOt7g5nlXQ=
+274a392,394
+> Name: xml_kt_lg/purchaseW_Auto.xml
+> SHA1-Digest: bEdvJND9vPlznRGO5JQmo58PP7E=
+> 
+284,285c404,405
+< Name: res/drawable-ja-nodpi/help2.png
+< SHA1-Digest: /XTgMvCqYT6fTvihpK2J3UFpVBg=
+---
+> Name: res/bt_01_claim_dim_e.png
+> SHA1-Digest: YM1wo0UTgBbabLRXAf7hbop6bfI=
+287,291c407,408
+< Name: assets/Audio/damageformissile_thunder_critical.ogg
+< SHA1-Digest: n/kgWgBBHBlYS9h5qt5UqYFBE6c=
+< 
+< Name: res/drawable-nodpi/ending.png
+< SHA1-Digest: ABxYHzfbzsUuG+uSV/37Kbcm3Ks=
+---
+> Name: res/bt_sel.9.png
+> SHA1-Digest: gCfhHKqQmQSiN5D1F1qAjrtezRQ=
+295a413,421
+> Name: res/pop_title_e.png
+> SHA1-Digest: Sf01xXTXofoBiyIGGFn7hYngE0w=
+> 
+> Name: res/btn_terms_sel_b.png
+> SHA1-Digest: hRyMPJ9YGmLyQuPQ6cdXNaLRKKw=
+> 
+> Name: res/btn_more_02_sel_e.png
+> SHA1-Digest: XhMaw9eT2QOmJHMy4Oz6Tbz9zOA=
+> 
+299,301d424
+< Name: assets/Audio/bgmice_1.ogg
+< SHA1-Digest: 2mPpxGiNrBMdF0Eu4fB3N8G8IAY=
+< 
+308,309c431,432
+< Name: res/drawable-ja-nodpi/help1.png
+< SHA1-Digest: /a1+eQHFBYC43EL24U6SNUcNNB8=
+---
+> Name: xml/commonPopupYesNo.xml
+> SHA1-Digest: dWpq2jYKr1LzHL6xxTzMfmNEG6Y=
+311,312c434,438
+< Name: res/drawable-ko-nodpi/gametutorial.png
+< SHA1-Digest: 4LcwpA5YyTJlrhC2ELzF0Wk9YmM=
+---
+> Name: res/bt_01_claim_sel.png
+> SHA1-Digest: PRH0PETCml2sab2pFR7ehxGolYw=
+> 
+> Name: res/btn_terms_nor_b2_e.png
+> SHA1-Digest: 0vXh+Ouwyop+B4tlwkRX4j2eaA4=
+319a446,463
+> Name: xml/foreign_inputmdn_w.xml
+> SHA1-Digest: FdgihGHTVF7qZ3w+k9eV53gjrog=
+> 
+> Name: xml/purchaseH.xml
+> SHA1-Digest: OeF0gIpsa8MDqCAW3joGo3psJUU=
+> 
+> Name: res/popup_bg_2.9.png
+> SHA1-Digest: e6eiqN0ZPS3WKfy4p034Gh/Scrk=
+> 
+> Name: res/bottom_shadow_01.png
+> SHA1-Digest: CamsMKR2ESpL2CkoBKtVejC93ig=
+> 
+> Name: res/popup_bg_all.9.png
+> SHA1-Digest: 2eI7Q9LEYKgtL2T11lVQj1DlWGY=
+> 
+> Name: res/btn_more_01_sel_e.png
+> SHA1-Digest: Ypi9Sgm0v78PjKqRFMjgKLGhqAQ=
+> 
+323,324c467,474
+< Name: res/drawable-nodpi/exunit11.png
+< SHA1-Digest: shD9rTRXiz8fum3CtAzAQJ1xZvg=
+---
+> Name: xml_kt_lg/commonPopup.xml
+> SHA1-Digest: gRF+Gq2wfFQ1htKE7Ri9E43ZVSY=
+> 
+> Name: res/info_table_03.9.png
+> SHA1-Digest: /fTeZsylE/m2nlog3orfCcq+q7k=
+> 
+> Name: xml/imeiauthh.xml
+> SHA1-Digest: doJXUbestreMGRMrqXOQIIIXD0A=
+327c477
+< SHA1-Digest: Xbidhw8FCeI3ZZtoaVNPoRxV41Y=
+---
+> SHA1-Digest: pGnaf09YqVekSEugknIOzm2VFgs=
+330c480,483
+< SHA1-Digest: VSLtvG/S+UsBwBYV/1xiJ+V5eBQ=
+---
+> SHA1-Digest: zneADV9tf5zbDHXU/F42W0i5n+E=
+> 
+> Name: xml/ocbpopup_h.xml
+> SHA1-Digest: r8vMpQjSfWf4YXZn8KZ2tmyAjXA=
+334a488,889
+> Name: assets/Audio/damageformine.ogg
+> SHA1-Digest: D0kWUT4Fl2Q3owW+44dgVywVU3Q=
+> 
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: G6Zi93vRktJM4K7TolINTmgVeYQ=
+> 
+> Name: res/drawable-ja-nodpi/help5.png
+> SHA1-Digest: tXgKSkjm69rnINdvRpgSX58dRoM=
+> 
+> Name: res/btn_con_nor.png
+> SHA1-Digest: GxX7RV0M7OuI5EfVx7XxkIIGMeI=
+> 
+> Name: res/keypad_back.png
+> SHA1-Digest: UNtmjJoyFQMaASgfO4UoWbcwcjU=
+> 
+> Name: res/popup_bg_2.png
+> SHA1-Digest: PA3+WZFl7sJTHGwkhw1/L2wX46E=
+> 
+> Name: res/popPwd_bg.png
+> SHA1-Digest: 1yi1gCSOPLlqoyG69IdH/tLmlrs=
+> 
+> Name: assets/image/GameScene/GameBG_Ice1.png
+> SHA1-Digest: rgBOg/nYcsuiDZcsASaU+EcmX70=
+> 
+> Name: assets/image/GameScene/GameBG_Forest1.png
+> SHA1-Digest: 09Z8LqoiHtVoOFvlIXRMWxaVVuA=
+> 
+> Name: res/btn_cancel_nor_h_e.png
+> SHA1-Digest: bmNc2etOeY/rJeujLY15BQ8G+eE=
+> 
+> Name: assets/Audio/gameover.ogg
+> SHA1-Digest: 5RZ2xKILhV5kVUnHt+R2nvmF/Oc=
+> 
+> Name: res/kepad_bg.png
+> SHA1-Digest: mapQUFerjxR4dCBWBw5RBfLWyh8=
+> 
+> Name: xml/commonPopupAutoPurchaseFormH.xml
+> SHA1-Digest: KDsWij5kS8UKTZ5Nf7oLAOpDhEw=
+> 
+> Name: res/btn_buycancel_nor.png
+> SHA1-Digest: bgJ4npwdUdAbzo90G6Y84NWsOs8=
+> 
+> Name: res/btn_buycancel_sel_e.png
+> SHA1-Digest: HjyE2fOSfdg5ExaU7f5Mft2pOE8=
+> 
+> Name: assets/Audio/damageformissile_thunder_normal.ogg
+> SHA1-Digest: OhnCx6cxMiaKoid4+yWZrmL7Nus=
+> 
+> Name: res/image.png
+> SHA1-Digest: V3jPsuYhHaeTXL3jOeHpMNbgzPE=
+> 
+> Name: res/drawable-nodpi/hit.png
+> SHA1-Digest: QrceLg5ZQ1KUjIWBUHfqZR6SBsM=
+> 
+> Name: res/input_box_sel.9.png
+> SHA1-Digest: eIIYZDyecAfRMAR7i7bG8I8TJDo=
+> 
+> Name: res/btn_policy_nor_b.png
+> SHA1-Digest: xu7G9twwf581BdWR6LBquCVOLCk=
+> 
+> Name: res/drawable-nodpi/mainbtn.png
+> SHA1-Digest: NWkNFRpU7sQF4IbhYg601qaCcd8=
+> 
+> Name: xml/otpPopup_w.xml
+> SHA1-Digest: Itp6vDPraZTn94EKbG0x3T15JwU=
+> 
+> Name: res/textbox_01_8.png
+> SHA1-Digest: h257lZKN1aWISQu2h1dWJ3KNXtw=
+> 
+> Name: res/bt_01_sel.9.png
+> SHA1-Digest: Xo6j8vnjt891yqDgZNUxEoTtRDA=
+> 
+> Name: xml/otpCommonPopup.xml
+> SHA1-Digest: KcRVsn4z1OQGnJRBqgBKSkM6gjo=
+> 
+> Name: res/drawable-nodpi/mainbg.png
+> SHA1-Digest: t7nsF2NMvAVUI8ldUj0MI8yFpyI=
+> 
+> Name: res/bg_line.png
+> SHA1-Digest: Nao5rHigN+twbtSc5p29x039eJs=
+> 
+> Name: res/drawable-ja-nodpi/help0.png
+> SHA1-Digest: kGGZMVjqrH+biiFts5HaeWbbbr4=
+> 
+> Name: res/inputbox_pw.png
+> SHA1-Digest: R5xExxS8r+ghh3y+Qn2JFAF8pLA=
+> 
+> Name: res/bt_01_reclaim_sel_e.png
+> SHA1-Digest: MJAHskXu9gk9kRItGyB5DybhVuY=
+> 
+> Name: xml/commonPopupJoin_w.xml
+> SHA1-Digest: L3zhZqP+/AaWoFTmc7WsvX2ea54=
+> 
+> Name: res/btn_locking_sel_e.png
+> SHA1-Digest: TZ+3ZlERlN4HH2PmR/Ae9EThRzM=
+> 
+> Name: res/drawable-nodpi/unit.png
+> SHA1-Digest: kIfzNOOFlbzfEGMKbUKiSQmQDIM=
+> 
+> Name: xml_kt_lg/commonPopupJoin_w.xml
+> SHA1-Digest: 0YYmpxZGSvrJ4l9intrGKfvwQuw=
+> 
+> Name: res/keypad_num_07.png
+> SHA1-Digest: HVvTCdnbRYz+n9aR40hu4hnLXJk=
+> 
+> Name: xml/purchase_w.xml
+> SHA1-Digest: uTdX6ZvXWhNKSdm1BQ6f0hTjUMw=
+> 
+> Name: res/drawable-ko-nodpi/help9.png
+> SHA1-Digest: ErX6EPHzIrHdy0VrUZc23UGdkLQ=
+> 
+> Name: res/drawable-nodpi/shopbg.png
+> SHA1-Digest: GpvkE28SPa2+BBh0LYFiFeNp7og=
+> 
+> Name: assets/Audio/damageformissile_normal_critical.ogg
+> SHA1-Digest: 3reFoMk5yfaUJlUIlulrl1LYjUI=
+> 
+> Name: xml/dotori_sms_auth_h.xml
+> SHA1-Digest: iiy7Zg87vDgB3KLrwdGv6txzUBE=
+> 
+> Name: assets/Audio/bgmcloud_2.ogg
+> SHA1-Digest: liXPS885UT8Pm2wHKVEh2WxFWhk=
+> 
+> Name: res/pop_btn_sel_ok.png
+> SHA1-Digest: c1TiKJsRP3YX7Yn2EK8EYz9aBBA=
+> 
+> Name: res/btn_terms_sel_b2.png
+> SHA1-Digest: 6gLuKRe1j1Htf6vGYpe9JgZXF1Y=
+> 
+> Name: xml_kt_lg/commonPopupYesNo.xml
+> SHA1-Digest: gTVUOsF51DJpYagd6ky8tOcyyJ4=
+> 
+> Name: resources.arsc
+> SHA1-Digest: 5uyZlODNzuoT78p8Nm6AufIQCsk=
+> 
+> Name: res/drawable-nodpi/wrdefault.png
+> SHA1-Digest: f4PnVh8pNEZS+XrNkAbL5GB8rYg=
+> 
+> Name: xml_kt_lg/commonPopupJoinFormH.xml
+> SHA1-Digest: yciNh4TYNVkHjij1tRHrCZTOhu0=
+> 
+> Name: xml_kt_lg/purchase_w.xml
+> SHA1-Digest: nphHzp94NN6RVnDbBQw6pxBupzc=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: mNUQ6Gg4HApYKxIviXxGzliZGIU=
+> 
+> Name: res/drawable-ko-nodpi/wrdefault.png
+> SHA1-Digest: 6G71ph5YCu3PqNp2WZjQxCYeQNw=
+> 
+> Name: res/btn_more_01_nor_e.png
+> SHA1-Digest: pMf/e1gzOnzYTrkg9/rg6rlKr+8=
+> 
+> Name: res/drawable-nodpi/gametutorial.png
+> SHA1-Digest: J/DWKhdbhVidJnfmPbQhoOxzyO0=
+> 
+> Name: assets/Audio/shoot_thunder.ogg
+> SHA1-Digest: ufzh8WV17D2NCxjGhKU8tpTCex0=
+> 
+> Name: res/textbox_01_7.png
+> SHA1-Digest: JkV5rum00iDKJIcJV7iYPMvtNRs=
+> 
+> Name: res/pop_title.png
+> SHA1-Digest: T9+RXe7ON9jCRvbEqqfXB/ortcw=
+> 
+> Name: xml/purchaseW.xml
+> SHA1-Digest: dmyGQjfRVDl4mqKLoO/7zf+o/gs=
+> 
+> Name: res/btn_con_sel_e.png
+> SHA1-Digest: FBiW3evlY6AE/Zf9X85HWHN1KfE=
+> 
+> Name: res/btn_info01_nor_e.png
+> SHA1-Digest: 23C5f2Z9zcl8X/PdWj6wQO5jl/4=
+> 
+> Name: xml/purchaseH_Auto.xml
+> SHA1-Digest: XPgcmpPp57kbtO4e4g9FTFCYtro=
+> 
+> Name: classes.dex
+> SHA1-Digest: A9aUZMLjszEV+3EqyIIV6gbdY4o=
+> 
+> Name: xml/foreign_inputmdn_h.xml
+> SHA1-Digest: GFS+A6iuPfdIliRBhhLC6bQRnvs=
+> 
+> Name: res/input_box_nor2.9.png
+> SHA1-Digest: kyfJtfHprOVJPJ0cX4/l1pz2OCc=
+> 
+> Name: res/drawable-nodpi/shopunit.png
+> SHA1-Digest: jLlkx/wQNTtHRMeYg/fd3R7TNPA=
+> 
+> Name: assets/image/GameScene/GameBG_Forest2.png
+> SHA1-Digest: FMsEPHJIHTIDCtdwfFdChDa0TGk=
+> 
+> Name: res/drawable-ko-nodpi/help8.png
+> SHA1-Digest: CQUt2DHDRVrBUR6GNsIpVh0X/TU=
+> 
+> Name: res/btn_terms_nor_b.png
+> SHA1-Digest: nGQB/R3izVLue4ycak8iQpxNsIE=
+> 
+> Name: res/btn_buy_nor_h_e.png
+> SHA1-Digest: jViiK/Z6d4fmXCp03t2z2ppKoaY=
+> 
+> Name: res/bt_01_reclaim_dim.png
+> SHA1-Digest: 0tlqeUjpFkGJNKs9u4UWh/Y/ivw=
+> 
+> Name: res/info_table_02.9.png
+> SHA1-Digest: hz+SmKDs8hkp5n03YmKETGsGxS0=
+> 
+> Name: assets/Audio/getpointdiamond.ogg
+> SHA1-Digest: meAJlcknsLj0NO8RofXzKlPwC8s=
+> 
+> Name: res/checkbox_y.png
+> SHA1-Digest: 4AJu8h7/kqbToPjUJ5RWtN/Ehnc=
+> 
+> Name: assets/Audio/bgmcloud_1.ogg
+> SHA1-Digest: WdddOvLSJ+2vv0dGbpZiqrZRud8=
+> 
+> Name: res/btn_info01_sel_e.png
+> SHA1-Digest: oenid+PTn6yhYnctAldgobNeUxc=
+> 
+> Name: res/bt_01_claim_sel_e.png
+> SHA1-Digest: LJ9aJyvyHca0C4w4maE49de47cs=
+> 
+> Name: res/drawable-ko-nodpi/help3.png
+> SHA1-Digest: cAigMYZCPb73yzw80ZJJpZwcFPo=
+> 
+> Name: res/drawable-ko-nodpi/help1.png
+> SHA1-Digest: vOqbybOCV+u1y9MZXxBSJFvM968=
+> 
+> Name: xml/culture_login_h.xml
+> SHA1-Digest: 12Jki6Wxf7akjQSlms+1I2wGmy4=
+> 
+> Name: res/drawable-nodpi/exunit5.png
+> SHA1-Digest: zhEQEQMAOOEUpSTfQ9ZJWcQDYV8=
+> 
+> Name: res/inputbox_pw_dot.png
+> SHA1-Digest: wJpcOO0jU4Tl/gaGOggJwr1vVoU=
+> 
+> Name: res/popup_bg.9.png
+> SHA1-Digest: 5PF1974kCU3khSFG7ptX5plW2As=
+> 
+> Name: res/drawable-ldpi/icon.png
+> SHA1-Digest: e3bHO2FXMcOVrQnyKRXK2AtB9Ag=
+> 
+> Name: res/popup_bg_all_2.9.png
+> SHA1-Digest: tl1F7/kSdty+2EJlxvXY3gPzjNk=
+> 
+> Name: res/keypad_num_01.png
+> SHA1-Digest: 0qKXdI+LevqPEjkPYg04s22cw9s=
+> 
+> Name: res/drawable-ko-nodpi/help5.png
+> SHA1-Digest: fjBLJZqbfVsoVpKw7igE+O+1ivE=
+> 
+> Name: assets/Audio/warning.ogg
+> SHA1-Digest: iDaWrtzAKYOQ2FmWGacRQ/wBHak=
+> 
+> Name: res/drawable-nodpi/exunit2.png
+> SHA1-Digest: 4m4tkrGhctc/xLbJHzsMQS/exy4=
+> 
+> Name: res/btn_check_ok_nor.png
+> SHA1-Digest: xAD32ZCn+G3QYSxgQpN4z+zn1IU=
+> 
+> Name: res/drawable-ja-nodpi/help6.png
+> SHA1-Digest: bVUxBYP+8bGzqRgAFG5025fR01A=
+> 
+> Name: assets/image/GameScene/GameBG_Ice2.png
+> SHA1-Digest: 5AjfrCd/da5N8I2ugbExvE61lRw=
+> 
+> Name: res/keypad_bg.9.png
+> SHA1-Digest: hthcC4zAet95IwrA3HpWbPPyz5U=
+> 
+> Name: xml_kt_lg/commonPopupJoinFormW.xml
+> SHA1-Digest: WKHIikK6Uu+oP6UF6KwNd5Zb3XQ=
+> 
+> Name: xml_kt_lg/commonPopupJoinH.xml
+> SHA1-Digest: c9YDLIgbrdWmCBG0JGV4O4lIhPQ=
+> 
+> Name: res/bt_01_nor.9.png
+> SHA1-Digest: wHOpWjYS3Jyi/alYkyR8kaKoEU4=
+> 
+> Name: res/keypad_num_05.png
+> SHA1-Digest: vv62VY9a+P0Mj4Zna4aOvV/weyI=
+> 
+> Name: res/bt_buy_dim_e.png
+> SHA1-Digest: H6Ht+nHx4Fe+9COqV5Y5zdw+cKY=
+> 
+> Name: xml/purchaseW_Auto.xml
+> SHA1-Digest: spFSJG6oz3q0pS1KhGhPvrSfLvQ=
+> 
+> Name: xml_kt_lg/commonPopupJoin_h.xml
+> SHA1-Digest: PkleZkYvrV8FeRv4BYOlnA0sL/Y=
+> 
+> Name: xml_kt_lg/commonPopupJoin.xml
+> SHA1-Digest: ZrO1K7744DRvw+qX4MqckOKlbO0=
+> 
+> Name: xml/commonPopupJoin_h.xml
+> SHA1-Digest: lAW9nClQk6gucIwXG29QB+CPLKA=
+> 
+> Name: assets/Audio/damageformissile_fire_critical.ogg
+> SHA1-Digest: 4LzNmwQeyaICD9IJC0GZMEBvJg4=
+> 
+> Name: res/drawable-nodpi/gamebtn.png
+> SHA1-Digest: Ds3IRBUw68Bjln0vGqhYl31zs0Q=
+> 
+> Name: res/drawable-nodpi/help5.png
+> SHA1-Digest: WErjWxV3Ru3Z6huzZcjqt/N2/hM=
+> 
+> Name: xml_kt_lg/commonPopupImage.xml
+> SHA1-Digest: vlnXAT34sQhTox5VUIM8XFCo3xg=
+> 
+> Name: res/layout/main.xml
+> SHA1-Digest: +ZjsH7p0fsAXGLnI+VdhWFRNjxU=
+> 
+> Name: assets/image/GameScene/GameBG_Fire2.png
+> SHA1-Digest: xY9J/I0nMwvfVKn2++PUUW0fpnc=
+> 
+> Name: assets/Audio/shoot_ice.ogg
+> SHA1-Digest: SUQPp1YrRKXJ5/m7f88bN2TLTrE=
+> 
+> Name: res/info_table_04.9.png
+> SHA1-Digest: 2hQMUiNTRuycN10QbgD2bUNmyAQ=
+> 
+> Name: assets/Audio/bgmshop.ogg
+> SHA1-Digest: KBo4Y86IB/6y+Q84MUcvX4NRCb0=
+> 
+> Name: res/bt_01_reclaim_dim_e.png
+> SHA1-Digest: 1U+icGf7G9rRRyPdL2XpJ54muMo=
+> 
+> Name: xml_kt_lg/purchaseW_finalVersion.xml
+> SHA1-Digest: ZpTCVVCneeAmD6luqVYJk9nQHvU=
+> 
+> Name: xml_kt_lg/lgusmsauthpopup_h.xml
+> SHA1-Digest: IAvfVRowIwQx9K3mKrPZe5D1Gag=
+> 
+> Name: res/drawable-ko-nodpi/help4.png
+> SHA1-Digest: ciwTBCIw10ub/h6H/yaT0y1Lm1I=
+> 
+> Name: res/input_box_nor.9.png
+> SHA1-Digest: eKxmCtEXLILPpWI2+EFR/gsoLpg=
+> 
+> Name: res/drawable-nodpi/exunit4.png
+> SHA1-Digest: XtfC5fGsseMWVZMTMcqlSYjVJd0=
+> 
+> Name: res/btn_check_dim.png
+> SHA1-Digest: Jzsm1bgqj0d39ca9ZMoQz9KEReQ=
+> 
+> Name: xml_kt_lg/pop_Juminnumber_w.xml
+> SHA1-Digest: n+2OqnBRVgZeXCDqlK8BuPXP/Kk=
+> 
+> Name: xml/commonPopupImage.xml
+> SHA1-Digest: sMmhkTa70WxjqA1xnagup2Llri8=
+> 
+> Name: res/drawable-nodpi/help4.png
+> SHA1-Digest: vywaWZYyR9s0n6xRIYOsvwkye/o=
+> 
+> Name: res/drawable-ja-nodpi/help2.png
+> SHA1-Digest: /XTgMvCqYT6fTvihpK2J3UFpVBg=
+> 
+> Name: assets/Audio/damageformissile_thunder_critical.ogg
+> SHA1-Digest: n/kgWgBBHBlYS9h5qt5UqYFBE6c=
+> 
+> Name: res/drawable-nodpi/ending.png
+> SHA1-Digest: ABxYHzfbzsUuG+uSV/37Kbcm3Ks=
+> 
+> Name: assets/Audio/bgmice_1.ogg
+> SHA1-Digest: 2mPpxGiNrBMdF0Eu4fB3N8G8IAY=
+> 
+> Name: res/drawable-ja-nodpi/help1.png
+> SHA1-Digest: /a1+eQHFBYC43EL24U6SNUcNNB8=
+> 
+> Name: res/drawable-ko-nodpi/gametutorial.png
+> SHA1-Digest: 4LcwpA5YyTJlrhC2ELzF0Wk9YmM=
+> 
+> Name: res/btn_buycancel_sel.png
+> SHA1-Digest: VvTsjKc7rCtQUlR6ictDmAxBLlo=
+> 
+> Name: res/btn_buy_renor_h.png
+> SHA1-Digest: jIEWD54u6ZrYe5Fh4r3u5xLkl7w=
+> 
+> Name: res/keypad_num_04.png
+> SHA1-Digest: RyuSn1+kunlP3hgkWfpUMOGszpU=
+> 
+> Name: res/logo_pw.png
+> SHA1-Digest: arWXqyZrWWgT+0uj9wV7lZI9zJ8=
+> 
+> Name: res/bt_01_reclaim_sel.png
+> SHA1-Digest: J/vFW+l1prr/hB6G14v4QlSIfeQ=
+> 
+> Name: res/textbox_01_6.png
+> SHA1-Digest: G+lNhf9oOn3owRSr1eZKmG4tyUM=
+> 
+> Name: xml/purchase_h.xml
+> SHA1-Digest: 6u62qYIQHDmFajEA1aPiYK7f8Eo=
+> 
+> Name: res/bt_buy_dim.png
+> SHA1-Digest: 336TqZ77Hye2IkHoooaes+OMmOQ=
+> 
+> Name: xml_kt_lg/purchase_h.xml
+> SHA1-Digest: zFDmriQUVx2tCRNcFgMKZrbzBbw=
+> 
+> Name: res/drawable-nodpi/exunit11.png
+> SHA1-Digest: shD9rTRXiz8fum3CtAzAQJ1xZvg=
+> 
+337a893,895
+> Name: res/bt_nor.9.png
+> SHA1-Digest: Vdwmcc78ZtlblS4IvLlSkNTMpKw=
+> 
+344,345c902,903
+< Name: assets/Audio/damageformine.ogg
+< SHA1-Digest: D0kWUT4Fl2Q3owW+44dgVywVU3Q=
+---
+> Name: res/btn_locking_nor.png
+> SHA1-Digest: ZggxBTOZQNrh/toGmVhxnUeMjh4=
+347,348c905,906
+< Name: res/drawable-ja-nodpi/help5.png
+< SHA1-Digest: tXgKSkjm69rnINdvRpgSX58dRoM=
+---
+> Name: res/btn_con_sel.png
+> SHA1-Digest: KNuof8t4tGGDT6+d5QOXBpxN5w8=
+350,351c908,909
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: G6Zi93vRktJM4K7TolINTmgVeYQ=
+---
+> Name: res/btn_locking_nor_e.png
+> SHA1-Digest: C6abQSz2nomZUHqf7+s3OFckwAU=
+diff -r result/APP_39/App_B_39/original/META-INF/MANIFEST.MF result/APP_39/App_M_39/original/META-INF/MANIFEST.MF
+2c2,5
+< Created-By: 1.0 (Android SignApk)
+---
+> Created-By: 1.0 (Android)
+> 
+> Name: res/bt_01_claim_nor.png
+> SHA1-Digest: br4DycgQEgipRzEmyjwnX/xb3pQ=
+7,8c10,11
+< Name: assets/image/GameScene/GameBG_Ice1.png
+< SHA1-Digest: nkMh9aUe49aTZgcU+PqBqonj/2M=
+---
+> Name: xml/commonPopupAutoPurchaseFormW.xml
+> SHA1-Digest: bhYeaH1GLhck3+1oPBxPzrwmWag=
+10,11c13,14
+< Name: assets/image/GameScene/GameBG_Forest1.png
+< SHA1-Digest: 8icihKuOxPZ9BlHZJs4XXaSx72s=
+---
+> Name: res/line_dot_01.png
+> SHA1-Digest: DV7kNWh/9S5lvgY4q6EGlIx9W14=
+13,14c16,20
+< Name: assets/image/GameScene/GameBG_Desert1.png
+< SHA1-Digest: BysoDnzGS+HRxjKd42/mfZsQz+I=
+---
+> Name: res/btn_pad_nor.png
+> SHA1-Digest: C36Gm3zYA9CNO+dIb/Yc4RmaRU4=
+> 
+> Name: res/btn_locking_sel.png
+> SHA1-Digest: /D8ePIAajLn8gJHFIoLfP5ttiDw=
+19,20c25,29
+< Name: assets/Audio/gameover.ogg
+< SHA1-Digest: n2/3hF8/lf7oybVRHpSGmXYgo5Y=
+---
+> Name: assets/image/GameScene/GameBG_Desert1.png
+> SHA1-Digest: BysoDnzGS+HRxjKd42/mfZsQz+I=
+> 
+> Name: xml/ocb_pw_auth.xml
+> SHA1-Digest: 0hBP/6JmoUu/kkDXvsE4EZpsp0c=
+25,26c34,35
+< Name: assets/Audio/damageformissile_thunder_normal.ogg
+< SHA1-Digest: VtQHQIn4YWPjyTjRraQPXjKXQMY=
+---
+> Name: res/btn_more_02_nor_e.png
+> SHA1-Digest: S+X1608SPlZDdsY87xJwhqryRws=
+30a40,51
+> Name: xml_kt_lg/lgusmsauthpopup_w.xml
+> SHA1-Digest: OZRfZrupipZRu/VFrVdV9ecHHds=
+> 
+> Name: res/btn_buy_nor_h.png
+> SHA1-Digest: 5T1GjKfVA7jASiSLQOI1aH78XqY=
+> 
+> Name: res/textbox_01_3.png
+> SHA1-Digest: 0zL3byPmwRPCFwC0gKLdWBcUEoA=
+> 
+> Name: res/keypad_num_08.png
+> SHA1-Digest: 1g+hEpOCli899WxRpmySXfyLOqs=
+> 
+34,35c55,56
+< Name: res/drawable-nodpi/hit.png
+< SHA1-Digest: K7MLpXJUYfaylRQAww1fqFRdmG0=
+---
+> Name: res/bt_01_claim_dim.png
+> SHA1-Digest: 0FkkZpegnU4TnM3Mr4D/kbmOwjg=
+40,42d60
+< Name: res/drawable-nodpi/mainbtn.png
+< SHA1-Digest: wqL68dklY4yNfQv/SDCDSJaYMMc=
+< 
+48a67,84
+> Name: xml/ocbpopup_w.xml
+> SHA1-Digest: o3JclDb5l0xdzbRxvabH58nN1B4=
+> 
+> Name: res/bt_confirm_dim_e.png
+> SHA1-Digest: 1/UNT0b12bGfYvkpVK1KXgmPpdI=
+> 
+> Name: res/radio_bt_sel.png
+> SHA1-Digest: tmPUzEkBBJq2yoJBB6JEm/WJVD4=
+> 
+> Name: res/pop_btn_sel_ok_e.png
+> SHA1-Digest: nuSKC0XwJhUdkXdL78LBVAYgdus=
+> 
+> Name: res/btn_terms_nor_b2.png
+> SHA1-Digest: 2lD9hZ+wL0yOAGB5TfarNL/P9lg=
+> 
+> Name: res/pop_btn_nor_ok.png
+> SHA1-Digest: n5HNAQdsV1QncfBDe0a30l0G5ik=
+> 
+51a88,90
+> Name: res/textbox_01_4.png
+> SHA1-Digest: bVu8kFdd/a/K4e3+WPZN82SOgOw=
+> 
+55,57d93
+< Name: res/drawable-nodpi/mainbg.png
+< SHA1-Digest: uBYESFcFDBAqbpLd4PAkeQnlz3E=
+< 
+64,65c100,101
+< Name: res/drawable-ja-nodpi/help0.png
+< SHA1-Digest: 3us/lApuBsp/AqiGwH46/VcQl74=
+---
+> Name: res/icon_bullet.png
+> SHA1-Digest: p7Bb1+BlYTXqvzJtlWL1deib5To=
+70,71c106,131
+< Name: res/drawable-nodpi/unit.png
+< SHA1-Digest: dIWFjNiwQXjrP4EHtucKbrfBrQU=
+---
+> Name: res/keypad_num_09.png
+> SHA1-Digest: S9pvVGvN/mrLFbOMa5l6U65wZcE=
+> 
+> Name: res/textbox_01_9.png
+> SHA1-Digest: Y0GcVibJ9LA5W0nTPDyHoixt+hE=
+> 
+> Name: xml/purchaseW_finalVersion.xml
+> SHA1-Digest: 5a8ZyCMK360EDDD3w9lnEaQR7LM=
+> 
+> Name: res/textbox_01.9.png
+> SHA1-Digest: Vs680N+gAS6UwbCE2hSL4MlDP+M=
+> 
+> Name: res/textbox_01_2.9.png
+> SHA1-Digest: S0yoPmSngqa72T1arhZsdY9HJes=
+> 
+> Name: res/info_table_02.png
+> SHA1-Digest: vGPMmaASU/s3erG7gWyB7THCXG8=
+> 
+> Name: res/btn_more_01_nor.png
+> SHA1-Digest: 8o9WBsBg8cv7ClNherPc0T30TOU=
+> 
+> Name: res/btn_more_01_sel.png
+> SHA1-Digest: OzydUBrNPKoNrMIQLAbCqob7HpY=
+> 
+> Name: res/bt_confirm_dim.png
+> SHA1-Digest: EmehAp4Qndw64Z/1rDktMlIIjAY=
+76,77c136,143
+< Name: res/drawable-nodpi/shopbg.png
+< SHA1-Digest: UOhw/RTDly667G8kkhHIDt/UQiM=
+---
+> Name: xml/otpPopup_h.xml
+> SHA1-Digest: deZs+fodn07ppA34Rbeiu8SFszs=
+> 
+> Name: res/btn_policy_sel_b_e.png
+> SHA1-Digest: vfCRDBA9M0z31Z2UfSH97yO50lo=
+> 
+> Name: res/btn_terms_sel_b2_e.png
+> SHA1-Digest: vfCRDBA9M0z31Z2UfSH97yO50lo=
+82,84d147
+< Name: res/drawable-ko-nodpi/help9.png
+< SHA1-Digest: zrirMTTJ88KjhRaTvNg0NN0Gb8A=
+< 
+87a151,153
+> Name: res/btn_buy_sel_h.png
+> SHA1-Digest: TY3PnzOUHGURnH+fhwSck+mcE1M=
+> 
+91,92c157,158
+< Name: assets/Audio/damageformissile_normal_critical.ogg
+< SHA1-Digest: h29IAfCzRb5i5kecNnord7vhGbQ=
+---
+> Name: xml_kt_lg/commonPopupJoinW.xml
+> SHA1-Digest: AjJx4ZlFr38+w1ssdedPLSlXZvY=
+94,95c160,161
+< Name: assets/Audio/bgmcloud_2.ogg
+< SHA1-Digest: 0yC12Kgy6rNvD2U06b1RwECzqJw=
+---
+> Name: xml/purchaseH_finalVersion.xml
+> SHA1-Digest: AKIEb/9LazOzxzZtYuPFaN2pPSY=
+97,98c163,164
+< Name: assets/Audio/del_slime.ogg
+< SHA1-Digest: SXyspcSp387pdeBVNQ45BJDg0ow=
+---
+> Name: res/btn_check_no_sel.png
+> SHA1-Digest: DSfNRnoG4SrmIPkHQlG7V1piqhI=
+103,104c169,170
+< Name: resources.arsc
+< SHA1-Digest: i4eZlD/1XRAsCKGF12xlwrUuFt0=
+---
+> Name: assets/Audio/del_slime.ogg
+> SHA1-Digest: SXyspcSp387pdeBVNQ45BJDg0ow=
+106,107c172,173
+< Name: res/drawable-nodpi/wrdefault.png
+< SHA1-Digest: 8ALLAvs7GVHDyltLVojuqCJm/qg=
+---
+> Name: res/textbox_01_5.png
+> SHA1-Digest: Cg3x3/kmct8LFUAv0r5EUROV5uY=
+109,110c175,176
+< Name: AndroidManifest.xml
+< SHA1-Digest: uCj2UdNfy8Sb0oEg26WQKA81604=
+---
+> Name: res/textbox_01_2.png
+> SHA1-Digest: Vu0RVFPegq2JLwSfSuEDzvLXSLQ=
+112,113c178,179
+< Name: res/drawable-ko-nodpi/wrdefault.png
+< SHA1-Digest: 1+mWQtWn4qi6LExdHR25fCIldxk=
+---
+> Name: res/icon_title_01.png
+> SHA1-Digest: GodeMQquqkj2yT8lYFs8Ifwfr4I=
+115,116c181,182
+< Name: res/drawable-nodpi/gametutorial.png
+< SHA1-Digest: UgS6oJcqXjbSiMOexrpMe1HKpr4=
+---
+> Name: res/btn_info01_nor.png
+> SHA1-Digest: GNBGFp0f0B4GudxnoDz9fpPoEAY=
+118,119c184,212
+< Name: assets/Audio/shoot_thunder.ogg
+< SHA1-Digest: JL8bYR+CUOlgz2NwHkTmE4atsHw=
+---
+> Name: res/btn_policy_sel_b.png
+> SHA1-Digest: ukU5J269WYVpb3/6x3FHZyJ1qiY=
+> 
+> Name: res/bt_01_claim_nor_e.png
+> SHA1-Digest: MCQ0HJ8TsHdNQhus1e6ffPAbrNY=
+> 
+> Name: res/textbox_01_1.png
+> SHA1-Digest: H6QCIEekntp+x+fzEcBT0/uYASM=
+> 
+> Name: res/btn_terms_sel_b_e.png
+> SHA1-Digest: vfCRDBA9M0z31Z2UfSH97yO50lo=
+> 
+> Name: res/btn_check_ok_sel.png
+> SHA1-Digest: 45EaVwpiuANzmnVZQXNn9343+zw=
+> 
+> Name: res/btn_terms_nor_b_e.png
+> SHA1-Digest: rF7i+yY0o1wO2e8+VFKPtLw105M=
+> 
+> Name: xml_kt_lg/purchaseH_finalVersion.xml
+> SHA1-Digest: BZ1uJMFh+GTRnfUP1/XsqLtRplg=
+> 
+> Name: res/btn_buy_sel_h_e.png
+> SHA1-Digest: uIJqAmqEL9DOPlNgQlGmoOpzRM4=
+> 
+> Name: res/bottom_bg.png
+> SHA1-Digest: pd7BoL9+wo/y4eKnaW/EMX+QznY=
+> 
+> Name: xml/dotori_sms_auth_w.xml
+> SHA1-Digest: mDM9saiAnMBVQBRFua2YvRm6zRs=
+123a217,225
+> Name: res/title_line01.png
+> SHA1-Digest: YWkdM0r6R7mEJGhW48YUGTaE4mE=
+> 
+> Name: res/checkbox_n.png
+> SHA1-Digest: xVkZ3HNz9iPbUp2dpjJMT2Uu00Q=
+> 
+> Name: xml/commonPopup.xml
+> SHA1-Digest: 9yuq30JsE7RZzhfAhrOiu5WvVJY=
+> 
+130,132d231
+< Name: classes.dex
+< SHA1-Digest: 5urlvGVpiNqS2DnXL8Og5kJpXCc=
+< 
+145,147d243
+< Name: res/drawable-nodpi/shopunit.png
+< SHA1-Digest: +e7UbgjssdestDNWrzjcxfGI5b8=
+< 
+151,152c247,248
+< Name: assets/image/GameScene/GameBG_Forest2.png
+< SHA1-Digest: +KRM2rdSb12T4qEZT3xQJcw48/c=
+---
+> Name: res/radio_bt_nor.png
+> SHA1-Digest: iW7mwXjftBhGpXDd7Ec/Ju0oc7k=
+154,155c250,251
+< Name: res/drawable-ko-nodpi/help8.png
+< SHA1-Digest: qkyhOLSx9vt2DJofzIKEfc/vWhU=
+---
+> Name: res/input_box_sel2.9.png
+> SHA1-Digest: VDSnorFmIm7enMigirkhD2iSFNo=
+160,161c256,257
+< Name: assets/Audio/getpointdiamond.ogg
+< SHA1-Digest: ORFc+aWmVjGeJkMl66UyNShe5/Y=
+---
+> Name: xml_kt_lg/commonPopupJoinForm.xml
+> SHA1-Digest: G9UXjbHrHdQbgSEbrGnSVDh1FfE=
+163,164c259,260
+< Name: assets/Audio/bgmcloud_1.ogg
+< SHA1-Digest: VILIWddmGI1fg63xFf/e42aSWRw=
+---
+> Name: res/btn_info01_sel.png
+> SHA1-Digest: MclwNDFZQdhRQmHh7WzzKgcvU/k=
+166,167c262,263
+< Name: assets/Audio/stageselect.ogg
+< SHA1-Digest: E17hp1OFeMokbSGde+6BNcCgRYE=
+---
+> Name: res/bt_01_reclaim_nor.png
+> SHA1-Digest: dNnf82eLNj1EF83qWH9lPq4kSZ0=
+172,176c268,269
+< Name: res/drawable-ko-nodpi/help1.png
+< SHA1-Digest: 0U1CZB4Q7dBpemTuG+yGurfmieE=
+< 
+< Name: res/drawable-ko-nodpi/help3.png
+< SHA1-Digest: Ko+GWbLgSIgXM9iUN4dfdHWLR6I=
+---
+> Name: assets/Audio/stageselect.ogg
+> SHA1-Digest: E17hp1OFeMokbSGde+6BNcCgRYE=
+178,179c271,272
+< Name: res/drawable-nodpi/exunit5.png
+< SHA1-Digest: r7YRh8yaeZy7o22Mu0gKdragy2Y=
+---
+> Name: res/btn_pad_sel.png
+> SHA1-Digest: mT6uGndwxxyA1k88p3lh6uPIkfM=
+183a277,279
+> Name: res/btn_buy_resel_h.png
+> SHA1-Digest: pBvbC5B3Bq3WWO+1VAnhxuLEviY=
+> 
+187,189d282
+< Name: res/drawable-ldpi/icon.png
+< SHA1-Digest: 2dFiXQ+oL5z8E0xw/MU9QSIpe6M=
+< 
+193,198d285
+< Name: assets/Audio/warning.ogg
+< SHA1-Digest: aKWvCu5UQENgUWRuLd8BWUsJWS4=
+< 
+< Name: res/drawable-ko-nodpi/help5.png
+< SHA1-Digest: Nvyf0LeaZS9de8IrOmyLKpIkPms=
+< 
+205,212c292,293
+< Name: res/drawable-nodpi/exunit2.png
+< SHA1-Digest: 60/ciYLSPJe7eKwr0mOlXVWaRBU=
+< 
+< Name: res/drawable-ja-nodpi/help6.png
+< SHA1-Digest: PGXwDtQ2CJ+jqVARiNFPLmIRlkM=
+< 
+< Name: assets/image/GameScene/GameBG_Ice2.png
+< SHA1-Digest: NgJ+v0lnL3gTzKNCJcWLF9qfcO8=
+---
+> Name: res/keypad_num_03.png
+> SHA1-Digest: K2MfGKnn39JKn+GKgyZEtWix1Fg=
+222a304,309
+> Name: res/pop_btn_nor_ok_e.png
+> SHA1-Digest: z2SJnh74hgQv98q6Ji9G+07r3ww=
+> 
+> Name: xml_kt_lg/purchaseH.xml
+> SHA1-Digest: jj0zYW8eIdWuTkYpyNg++lAtG2Y=
+> 
+225a313,318
+> Name: res/btn_buycancel_nor_e.png
+> SHA1-Digest: /+91he315nLKtE3OAsUG+610TLs=
+> 
+> Name: res/textbox_.9.png
+> SHA1-Digest: S0yoPmSngqa72T1arhZsdY9HJes=
+> 
+229,230c322,326
+< Name: assets/Audio/damageformissile_fire_critical.ogg
+< SHA1-Digest: omvad7HvwiYnZ+avorCDTdVqUsM=
+---
+> Name: res/keypad_num_02.png
+> SHA1-Digest: V7nz41XSX9hsIFfYTG0aZzDJa0Q=
+> 
+> Name: res/btn_cancel_sel_h_e.png
+> SHA1-Digest: hgBQ4a5mKrx8bUek8XZNlWwRlpc=
+235,236c331,332
+< Name: res/drawable-nodpi/help5.png
+< SHA1-Digest: YJ5DvS9+/+rygqvdUXSS7TuTyHM=
+---
+> Name: xml/culture_login_w.xml
+> SHA1-Digest: 0Rjs5mWTbpnU5dzGX4rabqcvOmc=
+238,239c334,335
+< Name: res/drawable-nodpi/gamebtn.png
+< SHA1-Digest: tV6t1JwLpIWbHzJ5JjC4a3dh/LQ=
+---
+> Name: res/btn_check_no_nor.png
+> SHA1-Digest: R9ReDLBSeqN2gStQbH8ZNwk3ml4=
+241,242c337,338
+< Name: res/layout/main.xml
+< SHA1-Digest: 85wmqltFe7d/Zalk7zs7Nk79XV4=
+---
+> Name: res/btn_cancel_sel_h.png
+> SHA1-Digest: UhVsk9eJH9UfidsLx+5by7GwYww=
+244,245c340,341
+< Name: assets/image/GameScene/GameBG_Fire2.png
+< SHA1-Digest: LAkF/7etBhHQ/BvJcxnOp1iRFcI=
+---
+> Name: xml_kt_lg/purchaseH_Auto.xml
+> SHA1-Digest: hbW7sCQM28dJBqg5ygItCEMJZ44=
+247,248c343,344
+< Name: assets/Audio/shoot_ice.ogg
+< SHA1-Digest: JtOJ8DC42Dw8p+xZbho6qnalcoY=
+---
+> Name: res/info_table_01.9.png
+> SHA1-Digest: AVKWzJlR4M1kqQpi7LVsqA3NBE0=
+250,251c346,347
+< Name: assets/Audio/bgmshop.ogg
+< SHA1-Digest: 50t1cF0LXs850KYo5jdxHQhVgUU=
+---
+> Name: res/btn_cancel_nor_h.png
+> SHA1-Digest: pa7jF/+t7BNTeEuvlNU2yWmqSaE=
+255a352,357
+> Name: res/bt_01_reclaim_nor_e.png
+> SHA1-Digest: BiUPLLjZZ4Cn/vcMtCfdFbwvoCg=
+> 
+> Name: res/btn_policy_nor_b_e.png
+> SHA1-Digest: rF7i+yY0o1wO2e8+VFKPtLw105M=
+> 
+259,260c361,365
+< Name: res/drawable-ko-nodpi/help4.png
+< SHA1-Digest: GGA3WPxdrsZsUmBo5BuTRxSbCLQ=
+---
+> Name: res/keypad_num_06.png
+> SHA1-Digest: +eNEgx6cqt5/YK6fOcRiE+Lmr7U=
+> 
+> Name: res/keypad_num_00.png
+> SHA1-Digest: 8MEV30494vColDVIgGqd6feOaEI=
+265,266c370,371
+< Name: res/drawable-nodpi/exunit4.png
+< SHA1-Digest: kknC3l6h0aCDdJ0zqz/pEK/JqoM=
+---
+> Name: res/btn_con_nor_e.png
+> SHA1-Digest: xp5Xo7XVetihyEAuaETWJDReqHY=
+268,269c373,386
+< Name: res/drawable-nodpi/help4.png
+< SHA1-Digest: qvTZIV2xCqeIPLSQp0J0jCsBOhQ=
+---
+> Name: xml_kt_lg/pop_Juminnumber_h.xml
+> SHA1-Digest: v228w9/XEdM/ssdGCWCcsuKGMtc=
+> 
+> Name: xml/imeiauthw.xml
+> SHA1-Digest: jfcoZR/vfgI5ZBCR7QzXx2uQNtU=
+> 
+> Name: res/popup_bg_all_02.9.png
+> SHA1-Digest: KvhXu8JBs74d+n3VD9OCj/NaWzo=
+> 
+> Name: xml_kt_lg/purchaseW.xml
+> SHA1-Digest: 4lvu/ZPq9AtlZ8Nyo2RZeH1++Tg=
+> 
+> Name: res/info_table_01.png
+> SHA1-Digest: /bz50zxyIDHnqpx4JOSqtb0XAKs=
+273a391,393
+> Name: xml_kt_lg/purchaseW_Auto.xml
+> SHA1-Digest: WUYC5oIOCzSfEgSFfDFNLsptLdI=
+> 
+283,287c403,404
+< Name: res/drawable-ja-nodpi/help2.png
+< SHA1-Digest: zBe82q6TblMFQhXbtYg4oKlay1w=
+< 
+< Name: assets/Audio/damageformissile_thunder_critical.ogg
+< SHA1-Digest: C4f4xy74nGcAJujK/vLO31k45S0=
+---
+> Name: res/bt_01_claim_dim_e.png
+> SHA1-Digest: aUndw/MC7r1lOrfPTOp6cQK98NY=
+289,290c406,407
+< Name: res/drawable-nodpi/ending.png
+< SHA1-Digest: z0Z7QU1JO8RzxD8bd81VTg2xWlk=
+---
+> Name: res/bt_sel.9.png
+> SHA1-Digest: BphtievYDmqVxsy9kRY+Wg7Ji/M=
+295,296c412,419
+< Name: assets/Audio/bgmice_1.ogg
+< SHA1-Digest: gR9V7U48EPffM1RXTTbjX5hh3y0=
+---
+> Name: res/pop_title_e.png
+> SHA1-Digest: Er1UNOO7y6XXP/WL9leKjyMBvRk=
+> 
+> Name: res/btn_terms_sel_b.png
+> SHA1-Digest: Gm3DRBTLL7UvEQiBMXved9/D5eA=
+> 
+> Name: res/btn_more_02_sel_e.png
+> SHA1-Digest: BuwE0CQQQ8QKTN49Ggz23L0y3yM=
+304,306d426
+< Name: res/drawable-ja-nodpi/help1.png
+< SHA1-Digest: Gz3jAD6wW5aRD0rc6updb2kackU=
+< 
+309a430,438
+> Name: xml/commonPopupYesNo.xml
+> SHA1-Digest: 2i6GmxWDuOD8rI7Bn08EeWhyIIE=
+> 
+> Name: res/bt_01_claim_sel.png
+> SHA1-Digest: L+pWBmekO9l2LAvtK9dXDkdabcE=
+> 
+> Name: res/btn_terms_nor_b2_e.png
+> SHA1-Digest: rF7i+yY0o1wO2e8+VFKPtLw105M=
+> 
+313,315d441
+< Name: res/drawable-ko-nodpi/gametutorial.png
+< SHA1-Digest: ZkOiKD3uQS/eDhGzPWikUgt8y20=
+< 
+318a445,462
+> Name: xml/foreign_inputmdn_w.xml
+> SHA1-Digest: k6RAIowYWR05xx6cZ7K4c40XCzc=
+> 
+> Name: xml/purchaseH.xml
+> SHA1-Digest: 2Wr8g6Zf1Ort+5sqtwcCehcgXR8=
+> 
+> Name: res/popup_bg_2.9.png
+> SHA1-Digest: FSFTWI3mtj5XanSl591huichB+c=
+> 
+> Name: res/bottom_shadow_01.png
+> SHA1-Digest: 0mM7GNJ0U8aopNr4NoDUoymlHaY=
+> 
+> Name: res/popup_bg_all.9.png
+> SHA1-Digest: K9IjDFoPSUJcND09Sfoj7CcaaeU=
+> 
+> Name: res/btn_more_01_sel_e.png
+> SHA1-Digest: XiJF9tnjqT4ukopKg7RcPbcxeJw=
+> 
+322,323c466,473
+< Name: res/drawable-nodpi/exunit11.png
+< SHA1-Digest: cNhXDyHAYOYdJCO6IRATbIrBEg8=
+---
+> Name: xml_kt_lg/commonPopup.xml
+> SHA1-Digest: wnBIynbhrY251GYUHoeucbSKeKA=
+> 
+> Name: res/info_table_03.9.png
+> SHA1-Digest: kJxm3rYDTdBgh1xwOX1kPLv3asY=
+> 
+> Name: xml/imeiauthh.xml
+> SHA1-Digest: PlIvQo0qMJdgDimm4SRkXD8KSLU=
+326c476
+< SHA1-Digest: Skn91i4yQTarDiEwKDBddgpD32I=
+---
+> SHA1-Digest: UltH8+359rzrNk8amz2obibT0a8=
+329c479,482
+< SHA1-Digest: 3+LtuTzc78QGehtklUZXqjrvdtc=
+---
+> SHA1-Digest: a7oY1jJj8m/054GJk0k5xCzO8XY=
+> 
+> Name: xml/ocbpopup_h.xml
+> SHA1-Digest: Szro4q9oFaRwc7DRvDD/sy/UUDQ=
+333a487,888
+> Name: assets/Audio/damageformine.ogg
+> SHA1-Digest: m3b2LIV7pbYt8VtrbnSJQKLZzfY=
+> 
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: gh1RWG9SYZ5T8tdN9oGdgw14Gzk=
+> 
+> Name: res/drawable-ja-nodpi/help5.png
+> SHA1-Digest: hgfcmMrFXdevujXxnO6Jp90Lavw=
+> 
+> Name: res/btn_con_nor.png
+> SHA1-Digest: W5AUFWV3O5lWRz78vVdf7RZ2Z8o=
+> 
+> Name: res/keypad_back.png
+> SHA1-Digest: Tf4n/K3LV9ihRLsfFKIhizhoZlw=
+> 
+> Name: res/popup_bg_2.png
+> SHA1-Digest: TxhlRGsn2mpXkbzySW3ZluzpIpY=
+> 
+> Name: res/popPwd_bg.png
+> SHA1-Digest: z8YhYlNjo5SVfobsaF4X7hyprqw=
+> 
+> Name: assets/image/GameScene/GameBG_Ice1.png
+> SHA1-Digest: nkMh9aUe49aTZgcU+PqBqonj/2M=
+> 
+> Name: assets/image/GameScene/GameBG_Forest1.png
+> SHA1-Digest: 8icihKuOxPZ9BlHZJs4XXaSx72s=
+> 
+> Name: res/btn_cancel_nor_h_e.png
+> SHA1-Digest: /+91he315nLKtE3OAsUG+610TLs=
+> 
+> Name: assets/Audio/gameover.ogg
+> SHA1-Digest: n2/3hF8/lf7oybVRHpSGmXYgo5Y=
+> 
+> Name: res/kepad_bg.png
+> SHA1-Digest: iFufD4iHr39rqphRPJNmTjRvKrA=
+> 
+> Name: xml/commonPopupAutoPurchaseFormH.xml
+> SHA1-Digest: vxecHyJtJot/6EDxWbfI+Uspmv8=
+> 
+> Name: res/btn_buycancel_nor.png
+> SHA1-Digest: XSlJGR+iKJlB+h5lPHXFyPThp4I=
+> 
+> Name: res/btn_buycancel_sel_e.png
+> SHA1-Digest: hgBQ4a5mKrx8bUek8XZNlWwRlpc=
+> 
+> Name: assets/Audio/damageformissile_thunder_normal.ogg
+> SHA1-Digest: VtQHQIn4YWPjyTjRraQPXjKXQMY=
+> 
+> Name: res/image.png
+> SHA1-Digest: nv2dhM3PwVE5pQFLjEXuHsAt6wA=
+> 
+> Name: res/drawable-nodpi/hit.png
+> SHA1-Digest: K7MLpXJUYfaylRQAww1fqFRdmG0=
+> 
+> Name: res/input_box_sel.9.png
+> SHA1-Digest: jze9evBq3JIYAyOTi55Mzjskae4=
+> 
+> Name: res/btn_policy_nor_b.png
+> SHA1-Digest: 0BVNVHFFg8QyqXcjK1ogQIOWN8g=
+> 
+> Name: res/drawable-nodpi/mainbtn.png
+> SHA1-Digest: wqL68dklY4yNfQv/SDCDSJaYMMc=
+> 
+> Name: xml/otpPopup_w.xml
+> SHA1-Digest: 6Buv1HBUxim9JWtw4Cs+6K9Ns0I=
+> 
+> Name: res/textbox_01_8.png
+> SHA1-Digest: bPeczgGcasmrhcVTs3tFAPZHxNQ=
+> 
+> Name: res/bt_01_sel.9.png
+> SHA1-Digest: OQLer3e26+XPbvVKFK5rxWcLBXA=
+> 
+> Name: xml/otpCommonPopup.xml
+> SHA1-Digest: 873whcU7gxlKTy3Bwcw5qORPiiU=
+> 
+> Name: res/drawable-nodpi/mainbg.png
+> SHA1-Digest: uBYESFcFDBAqbpLd4PAkeQnlz3E=
+> 
+> Name: res/bg_line.png
+> SHA1-Digest: qy8gPVwURFf/ge8+GjcdSQoeU44=
+> 
+> Name: res/drawable-ja-nodpi/help0.png
+> SHA1-Digest: 3us/lApuBsp/AqiGwH46/VcQl74=
+> 
+> Name: res/inputbox_pw.png
+> SHA1-Digest: 5k0Q3nNHy/QJFujgLJklipMrulM=
+> 
+> Name: res/bt_01_reclaim_sel_e.png
+> SHA1-Digest: dkyReSULA3+8OjF8iDGTt/heeqI=
+> 
+> Name: xml/commonPopupJoin_w.xml
+> SHA1-Digest: LnGdgsiIUbeEvd9bsRnHlHMcJqg=
+> 
+> Name: res/btn_locking_sel_e.png
+> SHA1-Digest: eVnoZwMmZE03BKum34AuL2rHN7I=
+> 
+> Name: res/drawable-nodpi/unit.png
+> SHA1-Digest: dIWFjNiwQXjrP4EHtucKbrfBrQU=
+> 
+> Name: res/keypad_num_07.png
+> SHA1-Digest: L3fdjwj9BRjEKP8pjhv40cidNJo=
+> 
+> Name: xml_kt_lg/commonPopupJoin_w.xml
+> SHA1-Digest: LnGdgsiIUbeEvd9bsRnHlHMcJqg=
+> 
+> Name: xml/purchase_w.xml
+> SHA1-Digest: cAHR16+42mmRjeCrfIY0qSJq7e8=
+> 
+> Name: res/drawable-nodpi/shopbg.png
+> SHA1-Digest: UOhw/RTDly667G8kkhHIDt/UQiM=
+> 
+> Name: res/drawable-ko-nodpi/help9.png
+> SHA1-Digest: zrirMTTJ88KjhRaTvNg0NN0Gb8A=
+> 
+> Name: assets/Audio/damageformissile_normal_critical.ogg
+> SHA1-Digest: h29IAfCzRb5i5kecNnord7vhGbQ=
+> 
+> Name: xml/dotori_sms_auth_h.xml
+> SHA1-Digest: EzHpJog2q39mB+p1S5JeNjWZAu8=
+> 
+> Name: assets/Audio/bgmcloud_2.ogg
+> SHA1-Digest: 0yC12Kgy6rNvD2U06b1RwECzqJw=
+> 
+> Name: res/pop_btn_sel_ok.png
+> SHA1-Digest: 7hGKawYkdxwMvkfs7DMojcn4srg=
+> 
+> Name: res/btn_terms_sel_b2.png
+> SHA1-Digest: Gm3DRBTLL7UvEQiBMXved9/D5eA=
+> 
+> Name: xml_kt_lg/commonPopupYesNo.xml
+> SHA1-Digest: LozEltDyknfA/ZDdo1W9aBJeXgw=
+> 
+> Name: resources.arsc
+> SHA1-Digest: kVe8HYu+AtGNKwmdG9+fYSg7tVk=
+> 
+> Name: res/drawable-nodpi/wrdefault.png
+> SHA1-Digest: 8ALLAvs7GVHDyltLVojuqCJm/qg=
+> 
+> Name: xml_kt_lg/commonPopupJoinFormH.xml
+> SHA1-Digest: UkKW3UUVwGBW0UZyHeDSeKkfMZ8=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: QTPcoeMAGJVjTnotaWOfmrsiHeY=
+> 
+> Name: xml_kt_lg/purchase_w.xml
+> SHA1-Digest: SeaJUSa7yusLj99RR4RBuV53EK0=
+> 
+> Name: res/drawable-ko-nodpi/wrdefault.png
+> SHA1-Digest: 1+mWQtWn4qi6LExdHR25fCIldxk=
+> 
+> Name: res/btn_more_01_nor_e.png
+> SHA1-Digest: b05ejdT1OwsKFvQwYO1wzIkfj7g=
+> 
+> Name: res/drawable-nodpi/gametutorial.png
+> SHA1-Digest: UgS6oJcqXjbSiMOexrpMe1HKpr4=
+> 
+> Name: res/textbox_01_7.png
+> SHA1-Digest: ui4We9WvHhZnBOuLzcBK4qaLZNQ=
+> 
+> Name: assets/Audio/shoot_thunder.ogg
+> SHA1-Digest: JL8bYR+CUOlgz2NwHkTmE4atsHw=
+> 
+> Name: res/pop_title.png
+> SHA1-Digest: zbYH77eaT4W+n3W1lOsrtJi6nBg=
+> 
+> Name: xml/purchaseW.xml
+> SHA1-Digest: FuzB0ql1NHnQIFk8XPbdWlUI47c=
+> 
+> Name: res/btn_con_sel_e.png
+> SHA1-Digest: +yTNYVZqH0mgpDtp7Xl1rhJgTJM=
+> 
+> Name: res/btn_info01_nor_e.png
+> SHA1-Digest: DCYfiJtnY6/xwo5+Pc8Jbf7CpaM=
+> 
+> Name: xml/purchaseH_Auto.xml
+> SHA1-Digest: sCtzdK0WBkanpfrF1rGBH1eFKZs=
+> 
+> Name: classes.dex
+> SHA1-Digest: U0+bHSD3PNa3myxGDkDRMziwfEQ=
+> 
+> Name: xml/foreign_inputmdn_h.xml
+> SHA1-Digest: LDmGj84g4+noiW7T3cRywtHVbYE=
+> 
+> Name: res/input_box_nor2.9.png
+> SHA1-Digest: OLPgcowmgrEPHDwoqyj+tFdOiLI=
+> 
+> Name: res/drawable-nodpi/shopunit.png
+> SHA1-Digest: +e7UbgjssdestDNWrzjcxfGI5b8=
+> 
+> Name: assets/image/GameScene/GameBG_Forest2.png
+> SHA1-Digest: +KRM2rdSb12T4qEZT3xQJcw48/c=
+> 
+> Name: res/drawable-ko-nodpi/help8.png
+> SHA1-Digest: qkyhOLSx9vt2DJofzIKEfc/vWhU=
+> 
+> Name: res/btn_terms_nor_b.png
+> SHA1-Digest: 2lD9hZ+wL0yOAGB5TfarNL/P9lg=
+> 
+> Name: res/btn_buy_nor_h_e.png
+> SHA1-Digest: 97TMBvfQk5aK9uQG5Xy3lumeC8c=
+> 
+> Name: res/bt_01_reclaim_dim.png
+> SHA1-Digest: 1JNN8m+48jc8SWIgC2tdMeVWID8=
+> 
+> Name: res/info_table_02.9.png
+> SHA1-Digest: 6QWYCxAwcIprdJRoSus7d+CWEBI=
+> 
+> Name: res/checkbox_y.png
+> SHA1-Digest: Ci58pmiAmiBzqB9ahuWjes9nRnA=
+> 
+> Name: assets/Audio/getpointdiamond.ogg
+> SHA1-Digest: ORFc+aWmVjGeJkMl66UyNShe5/Y=
+> 
+> Name: assets/Audio/bgmcloud_1.ogg
+> SHA1-Digest: VILIWddmGI1fg63xFf/e42aSWRw=
+> 
+> Name: res/btn_info01_sel_e.png
+> SHA1-Digest: 1QRbuBr72Gu/rISrwK+6UFfNqho=
+> 
+> Name: res/bt_01_claim_sel_e.png
+> SHA1-Digest: Eq4ZtaESCU592iwPNqcZhIijPfA=
+> 
+> Name: res/drawable-ko-nodpi/help1.png
+> SHA1-Digest: 0U1CZB4Q7dBpemTuG+yGurfmieE=
+> 
+> Name: res/drawable-ko-nodpi/help3.png
+> SHA1-Digest: Ko+GWbLgSIgXM9iUN4dfdHWLR6I=
+> 
+> Name: xml/culture_login_h.xml
+> SHA1-Digest: gLnThNPEom4aJ84i5yVSBO9iVkk=
+> 
+> Name: res/popup_bg.9.png
+> SHA1-Digest: FSFTWI3mtj5XanSl591huichB+c=
+> 
+> Name: res/inputbox_pw_dot.png
+> SHA1-Digest: js3kuyXplwsLbeBKGSoAlvacYEM=
+> 
+> Name: res/drawable-nodpi/exunit5.png
+> SHA1-Digest: r7YRh8yaeZy7o22Mu0gKdragy2Y=
+> 
+> Name: res/drawable-ldpi/icon.png
+> SHA1-Digest: 2dFiXQ+oL5z8E0xw/MU9QSIpe6M=
+> 
+> Name: res/popup_bg_all_2.9.png
+> SHA1-Digest: K9IjDFoPSUJcND09Sfoj7CcaaeU=
+> 
+> Name: res/keypad_num_01.png
+> SHA1-Digest: K3iWTeF9RSYzoZhUO5uS92YrtGQ=
+> 
+> Name: assets/Audio/warning.ogg
+> SHA1-Digest: aKWvCu5UQENgUWRuLd8BWUsJWS4=
+> 
+> Name: res/drawable-ko-nodpi/help5.png
+> SHA1-Digest: Nvyf0LeaZS9de8IrOmyLKpIkPms=
+> 
+> Name: res/drawable-nodpi/exunit2.png
+> SHA1-Digest: 60/ciYLSPJe7eKwr0mOlXVWaRBU=
+> 
+> Name: res/drawable-ja-nodpi/help6.png
+> SHA1-Digest: PGXwDtQ2CJ+jqVARiNFPLmIRlkM=
+> 
+> Name: res/btn_check_ok_nor.png
+> SHA1-Digest: HtCfbYbvBPvmbt/kL5Z6FYvYvig=
+> 
+> Name: res/keypad_bg.9.png
+> SHA1-Digest: Tt3HLr8pYbVjMKODHDXA4y4Vcks=
+> 
+> Name: assets/image/GameScene/GameBG_Ice2.png
+> SHA1-Digest: NgJ+v0lnL3gTzKNCJcWLF9qfcO8=
+> 
+> Name: xml_kt_lg/commonPopupJoinFormW.xml
+> SHA1-Digest: NDOBa7+J3yaOcjvslBjHduxuWUI=
+> 
+> Name: xml_kt_lg/commonPopupJoinH.xml
+> SHA1-Digest: GvV0LjUSWEbU2NAHtFQJ8zUPag4=
+> 
+> Name: res/keypad_num_05.png
+> SHA1-Digest: mW1hkDghAbUEr/vCbHcl58AbPPE=
+> 
+> Name: res/bt_01_nor.9.png
+> SHA1-Digest: nx5TzKQXEtG007mlOsBsT7yt4uY=
+> 
+> Name: xml/purchaseW_Auto.xml
+> SHA1-Digest: 7vIKDxikTJQQ+HeyDWt7ElYpQKE=
+> 
+> Name: res/bt_buy_dim_e.png
+> SHA1-Digest: 8m08efFjKSUh4p5ZQhRcnqyDAwM=
+> 
+> Name: xml/commonPopupJoin_h.xml
+> SHA1-Digest: Atl67ddceo+vrK6TGhx5VQ0c/Vo=
+> 
+> Name: xml_kt_lg/commonPopupJoin.xml
+> SHA1-Digest: 4vJYIxIMwQKXW81ypZgON2k0PZY=
+> 
+> Name: xml_kt_lg/commonPopupJoin_h.xml
+> SHA1-Digest: Atl67ddceo+vrK6TGhx5VQ0c/Vo=
+> 
+> Name: assets/Audio/damageformissile_fire_critical.ogg
+> SHA1-Digest: omvad7HvwiYnZ+avorCDTdVqUsM=
+> 
+> Name: res/drawable-nodpi/help5.png
+> SHA1-Digest: YJ5DvS9+/+rygqvdUXSS7TuTyHM=
+> 
+> Name: res/drawable-nodpi/gamebtn.png
+> SHA1-Digest: tV6t1JwLpIWbHzJ5JjC4a3dh/LQ=
+> 
+> Name: res/info_table_04.9.png
+> SHA1-Digest: rch2ycqYrP2UoHCTFHHPzpAa2ZQ=
+> 
+> Name: assets/Audio/shoot_ice.ogg
+> SHA1-Digest: JtOJ8DC42Dw8p+xZbho6qnalcoY=
+> 
+> Name: assets/image/GameScene/GameBG_Fire2.png
+> SHA1-Digest: LAkF/7etBhHQ/BvJcxnOp1iRFcI=
+> 
+> Name: res/layout/main.xml
+> SHA1-Digest: ZNZvUENUWslLOuE/ZLBZRQFemOc=
+> 
+> Name: xml_kt_lg/commonPopupImage.xml
+> SHA1-Digest: BTtXxBf8imiscthMEmO8TJL8lFc=
+> 
+> Name: assets/Audio/bgmshop.ogg
+> SHA1-Digest: 50t1cF0LXs850KYo5jdxHQhVgUU=
+> 
+> Name: res/bt_01_reclaim_dim_e.png
+> SHA1-Digest: ACPk9cMKpmoS3xFpoQajCzjOb6E=
+> 
+> Name: xml_kt_lg/purchaseW_finalVersion.xml
+> SHA1-Digest: 1zj03s/od51O8+YEOIR0ropxEF4=
+> 
+> Name: xml_kt_lg/lgusmsauthpopup_h.xml
+> SHA1-Digest: K0g3njJOxMy/R4e5tMijRfvskQA=
+> 
+> Name: res/drawable-ko-nodpi/help4.png
+> SHA1-Digest: GGA3WPxdrsZsUmBo5BuTRxSbCLQ=
+> 
+> Name: res/input_box_nor.9.png
+> SHA1-Digest: 6ag7/CMtwX1f/zsQTUm9H1WAru4=
+> 
+> Name: res/drawable-nodpi/exunit4.png
+> SHA1-Digest: kknC3l6h0aCDdJ0zqz/pEK/JqoM=
+> 
+> Name: res/btn_check_dim.png
+> SHA1-Digest: aLI0my3UpoCtX7M0cSM8YJGvSQ4=
+> 
+> Name: xml_kt_lg/pop_Juminnumber_w.xml
+> SHA1-Digest: UzbAx5IFKETF/uuwFPdIb/8h94s=
+> 
+> Name: xml/commonPopupImage.xml
+> SHA1-Digest: YQ+fJg53JyeXfJ/BMsrcnKqUKik=
+> 
+> Name: res/drawable-nodpi/help4.png
+> SHA1-Digest: qvTZIV2xCqeIPLSQp0J0jCsBOhQ=
+> 
+> Name: res/drawable-ja-nodpi/help2.png
+> SHA1-Digest: zBe82q6TblMFQhXbtYg4oKlay1w=
+> 
+> Name: res/drawable-nodpi/ending.png
+> SHA1-Digest: z0Z7QU1JO8RzxD8bd81VTg2xWlk=
+> 
+> Name: assets/Audio/damageformissile_thunder_critical.ogg
+> SHA1-Digest: C4f4xy74nGcAJujK/vLO31k45S0=
+> 
+> Name: assets/Audio/bgmice_1.ogg
+> SHA1-Digest: gR9V7U48EPffM1RXTTbjX5hh3y0=
+> 
+> Name: res/drawable-ja-nodpi/help1.png
+> SHA1-Digest: Gz3jAD6wW5aRD0rc6updb2kackU=
+> 
+> Name: res/drawable-ko-nodpi/gametutorial.png
+> SHA1-Digest: ZkOiKD3uQS/eDhGzPWikUgt8y20=
+> 
+> Name: res/btn_buycancel_sel.png
+> SHA1-Digest: bOBcRqIK/kWO0516j/gEdx3nJIE=
+> 
+> Name: res/logo_pw.png
+> SHA1-Digest: 16NuujqH72CI75iVucOxZ7wPRYc=
+> 
+> Name: res/keypad_num_04.png
+> SHA1-Digest: 18IdQs+hGEsiQvwuprgNbPuAg6A=
+> 
+> Name: res/btn_buy_renor_h.png
+> SHA1-Digest: Zq0GlUIzCdS7P3/80QnoDfKDdDA=
+> 
+> Name: res/textbox_01_6.png
+> SHA1-Digest: s6Qe5uLg0MX+Hqqs67q1w2eZoS8=
+> 
+> Name: res/bt_01_reclaim_sel.png
+> SHA1-Digest: Ha/g/XrBUP0uqzxXQKvvjCmN8YI=
+> 
+> Name: xml/purchase_h.xml
+> SHA1-Digest: Je5cuyL/PxzkSHNmaPqYujaMss8=
+> 
+> Name: res/bt_buy_dim.png
+> SHA1-Digest: DdyEtMS+c+KPsPyDD4IRVdaihgA=
+> 
+> Name: xml_kt_lg/purchase_h.xml
+> SHA1-Digest: Je5cuyL/PxzkSHNmaPqYujaMss8=
+> 
+> Name: res/drawable-nodpi/exunit11.png
+> SHA1-Digest: cNhXDyHAYOYdJCO6IRATbIrBEg8=
+> 
+339a895,897
+> Name: res/bt_nor.9.png
+> SHA1-Digest: ywETrV3lnCSmoSMPEbwTe2zw3ao=
+> 
+343,344c901,902
+< Name: assets/Audio/damageformine.ogg
+< SHA1-Digest: m3b2LIV7pbYt8VtrbnSJQKLZzfY=
+---
+> Name: res/btn_locking_nor.png
+> SHA1-Digest: eTiyhOgT8LycChJn9lNqsIrRNcM=
+346,347c904,905
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: gh1RWG9SYZ5T8tdN9oGdgw14Gzk=
+---
+> Name: res/btn_con_sel.png
+> SHA1-Digest: tbpEGXkaprt1l7IX53iHnMkov8Y=
+349,350c907,908
+< Name: res/drawable-ja-nodpi/help5.png
+< SHA1-Digest: hgfcmMrFXdevujXxnO6Jp90Lavw=
+---
+> Name: res/btn_locking_nor_e.png
+> SHA1-Digest: +P/jwvjWYhzkoNymn6jdUQap1xs=
+Somente em result/APP_39/App_M_39/: unknown

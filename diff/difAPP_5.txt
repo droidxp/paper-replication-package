@@ -1,0 +1,333 @@
+diff -r result/APP_5/App_B_5/apktool.yml result/APP_5/App_M_5/apktool.yml
+2c2
+< apkFileName: Bapp5-083E11AB8280522404D62963B6118DE52D81333D8640C876244687FD1FEC065D.apk
+---
+> apkFileName: Mapp5-C9F77F0849974A41D6A35CB00E2A4274B4D4A3A5435A1A7CEAC645DC32805A03.apk
+diff -r result/APP_5/App_B_5/org/pyload/android/client/module/SeparatedListAdapter.java result/APP_5/App_M_5/org/pyload/android/client/module/SeparatedListAdapter.java
+44,45c44,45
+<       Object localObject = localIterator.next();
+<       Adapter localAdapter = (Adapter)this.a.get(localObject);
+---
+>       String str = (String)localIterator.next();
+>       Adapter localAdapter = (Adapter)this.a.get(str);
+48c48
+<         return localObject;
+---
+>         return str;
+71c71
+<       localObject = localIterator.next();
+---
+>       localObject = (String)localIterator.next();
+93c93
+<       Object localObject = localIterator.next();
+---
+>       Object localObject = (String)localIterator.next();
+diff -r result/APP_5/App_B_5/org/pyload/thrift/ServiceCall.java result/APP_5/App_M_5/org/pyload/thrift/ServiceCall.java
+152c152
+<         break label158;
+---
+>         break label155;
+155c155
+<       label63:
+---
+>       label61:
+161c161
+<           break label170;
+---
+>           break label167;
+178c178
+<       label158:
+---
+>       label155:
+180,181c180,181
+<       break label63;
+<       label170:
+---
+>       break label61;
+>       label167:
+Somente em result/APP_5/App_B_5/original/META-INF: 5584D884.RSA
+Somente em result/APP_5/App_B_5/original/META-INF: 5584D884.SF
+Somente em result/APP_5/App_M_5/original/META-INF: CERT.RSA
+Somente em result/APP_5/App_M_5/original/META-INF: CERT.SF
+diff -r result/APP_5/App_B_5/original/META-INF/MANIFEST.MF result/APP_5/App_M_5/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.7.0_25 (Oracle Corporation)
+---
+> Created-By: 1.0 (Android)
+119c119
+< SHA1-Digest: vxahOIcWqajje3gZzGCSanNZi+A=
+---
+> SHA1-Digest: pUhESzW97srtd61esX9eWAVE6V0=
+154,156d153
+< Name: res/drawable-hdpi/ic_menu_server_settings.png
+< SHA1-Digest: pVNcyNQ/z/tsWYwIXqEnSESMyX4=
+< 
+159a157,159
+> Name: res/drawable-hdpi/ic_menu_server_settings.png
+> SHA1-Digest: pVNcyNQ/z/tsWYwIXqEnSESMyX4=
+> 
+164c164
+< SHA1-Digest: numrpHt83gVT3QQwHkByxyoM9b0=
+---
+> SHA1-Digest: IvdYKLOOyWXHvhmXnrV1be9f2VE=
+172,174d171
+< Name: res/drawable-ldpi-v5/ic_tab_settings_unselected.png
+< SHA1-Digest: /QnQHJel1CJAOrjTMPoSPVqLKPE=
+< 
+179a177,179
+> 
+> Name: res/drawable-ldpi-v5/ic_tab_settings_unselected.png
+> SHA1-Digest: /QnQHJel1CJAOrjTMPoSPVqLKPE=
+diff -r result/APP_5/App_B_5/smali/org/pyload/android/client/dialogs/CaptchaDialog.smali result/APP_5/App_M_5/smali/org/pyload/android/client/dialogs/CaptchaDialog.smali
+204c204
+<     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+---
+>     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+diff -r result/APP_5/App_B_5/smali/org/pyload/android/client/module/SeparatedListAdapter.smali result/APP_5/App_M_5/smali/org/pyload/android/client/module/SeparatedListAdapter.smali
+118c118
+<     move-result-object v1
+---
+>     move-result-object v0
+120c120
+<     iget-object v0, p0, Lorg/pyload/android/client/module/SeparatedListAdapter;->a:Ljava/util/Map;
+---
+>     check-cast v0, Ljava/lang/String;
+122c122
+<     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+---
+>     iget-object v1, p0, Lorg/pyload/android/client/module/SeparatedListAdapter;->a:Ljava/util/Map;
+124c124
+<     move-result-object v0
+---
+>     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+126c126
+<     check-cast v0, Landroid/widget/Adapter;
+---
+>     move-result-object v1
+128c128,130
+<     invoke-interface {v0}, Landroid/widget/Adapter;->getCount()I
+---
+>     check-cast v1, Landroid/widget/Adapter;
+> 
+>     invoke-interface {v1}, Landroid/widget/Adapter;->getCount()I
+136,137d137
+<     move-object v0, v1
+< 
+144c144
+<     add-int/lit8 v1, p1, -0x1
+---
+>     add-int/lit8 v0, p1, -0x1
+146c146
+<     invoke-interface {v0, v1}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+---
+>     invoke-interface {v1, v0}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+198a199,200
+>     check-cast v0, Ljava/lang/String;
+> 
+278a281,282
+> 
+>     check-cast v0, Ljava/lang/String;
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/AccountInfo.smali result/APP_5/App_M_5/smali/org/pyload/thrift/AccountInfo.smali
+987c987
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/ConfigSection.smali result/APP_5/App_M_5/smali/org/pyload/thrift/ConfigSection.smali
+699c699
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/OnlineCheck.smali result/APP_5/App_M_5/smali/org/pyload/thrift/OnlineCheck.smali
+288c288
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/PackageData.smali result/APP_5/App_M_5/smali/org/pyload/thrift/PackageData.smali
+1018c1018
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+1046c1046
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$addFiles_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$addFiles_args.smali
+487c487
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$addPackage_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$addPackage_args.smali
+600c600
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$checkOnlineStatus_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$checkOnlineStatus_args.smali
+354c354
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$checkOnlineStatusContainer_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$checkOnlineStatusContainer_args.smali
+568c568
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$checkURLs_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$checkURLs_args.smali
+354c354
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$checkURLs_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$checkURLs_result.smali
+358c358
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$deleteFiles_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$deleteFiles_args.smali
+360c360
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$deleteFinished_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$deleteFinished_result.smali
+350c350
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$deletePackages_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$deletePackages_args.smali
+360c360
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$generateAndAddPackages_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$generateAndAddPackages_args.smali
+465c465
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$generateAndAddPackages_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$generateAndAddPackages_result.smali
+350c350
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$generatePackages_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$generatePackages_args.smali
+354c354
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$generatePackages_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$generatePackages_result.smali
+356c356
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getAccounts_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getAccounts_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getAccountTypes_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getAccountTypes_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getAllInfo_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getAllInfo_result.smali
+362c362
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getAllUserData_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getAllUserData_result.smali
+354c354
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getCollectorData_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getCollectorData_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getCollector_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getCollector_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getConfig_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getConfig_result.smali
+354c354
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getEvents_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getEvents_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getFileOrder_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getFileOrder_result.smali
+356c356
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getInfoByPlugin_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getInfoByPlugin_result.smali
+352c352
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getLog_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getLog_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getPackageOrder_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getPackageOrder_result.smali
+356c356
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getPluginConfig_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getPluginConfig_result.smali
+354c354
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getQueueData_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getQueueData_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getQueue_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getQueue_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$getServices_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$getServices_result.smali
+362c362
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$moveFiles_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$moveFiles_args.smali
+485c485
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$parseURLs_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$parseURLs_result.smali
+358c358
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$setPackageData_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$setPackageData_args.smali
+495c495
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$statusDownloads_result.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$statusDownloads_result.smali
+348c348
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$stopDownloads_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$stopDownloads_args.smali
+360c360
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/Pyload$updateAccount_args.smali result/APP_5/App_M_5/smali/org/pyload/thrift/Pyload$updateAccount_args.smali
+749c749
+<     invoke-interface {v1, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+diff -r result/APP_5/App_B_5/smali/org/pyload/thrift/ServiceCall.smali result/APP_5/App_M_5/smali/org/pyload/thrift/ServiceCall.smali
+434c434
+<     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+---
+>     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z

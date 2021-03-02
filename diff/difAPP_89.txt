@@ -1,0 +1,104 @@
+diff -r result/APP_89/App_B_89/apktool.yml result/APP_89/App_M_89/apktool.yml
+2c2
+< apkFileName: Bapp89-C8E75DFCEE610FCD1DE3FD81BC897F3266B3C79B0E495835CEE503ADEBF71ABC.apk
+---
+> apkFileName: Mapp89-D0399869E5B3EFF4670D6C1DEE1398ADD411B178E98020A6A95F3FBFB0C3C1E8.apk
+4a5
+> - resources.arsc
+diff -r result/APP_89/App_B_89/com/touchmusicfree/TouchMusic.java result/APP_89/App_M_89/com/touchmusicfree/TouchMusic.java
+81c81
+<       TouchMusic.artist.setText("没有发现媒体\n请往您的SD卡加些音乐,\n");
+---
+>       TouchMusic.artist.setText("No Media Found\nPlease add some music to your SD Card\n");
+Os arquivos binários result/APP_89/App_B_89/original/AndroidManifest.xml e result/APP_89/App_M_89/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_89/App_B_89/original/META-INF/CERT.RSA e result/APP_89/App_M_89/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_89/App_B_89/original/META-INF/CERT.SF result/APP_89/App_M_89/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android SignApk)
+< SHA1-Digest-Manifest: +irhVJNsrUCSoyA2Es/a5d31xsI=
+---
+> Created-By: 1.0 (Android)
+> SHA1-Digest-Manifest: YYB8GqNW3JqgzAL3opbuV+1zdTs=
+6c6
+< SHA1-Digest: 3lN+JEIYJsZdoyOXiPBjjqDrp28=
+---
+> SHA1-Digest: g36VDz0CRHM/DaBpLwOGvXu1/iw=
+9c9
+< SHA1-Digest: Ow6wkSCvg+cDqG818evjTUUyyMQ=
+---
+> SHA1-Digest: 54mXyHA2yAtxz4O4Jd/EkYfRNmw=
+15,18c15
+< SHA1-Digest: O5G6xK1Iv3tuq2pHmPANsgve92w=
+< 
+< Name: res/layout-land/main.xml
+< SHA1-Digest: E+d20PzBClMH2pyx1de1l3q19+o=
+---
+> SHA1-Digest: erjlC43626/4YSCoxr8CIFRF2Ak=
+21c18,21
+< SHA1-Digest: pWpSFKAwPTb3SbzxxDb7PYWKQ9w=
+---
+> SHA1-Digest: sehGZ06QidZAfuxNm1kWtYhbvo4=
+> 
+> Name: res/layout-land/main.xml
+> SHA1-Digest: fLQIC8ugkDSmFR4EG1M8+77sOSY=
+24c24
+< SHA1-Digest: yjT6pfwhhhEYTY4VMnofICeIOAc=
+---
+> SHA1-Digest: KliatrmVIwDDRQDPXZXxMakW/wg=
+diff -r result/APP_89/App_B_89/original/META-INF/MANIFEST.MF result/APP_89/App_M_89/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android SignApk)
+---
+> Created-By: 1.0 (Android)
+5c5
+< SHA1-Digest: StrabqZ0jyG4tG6gWdUc7qMBEwg=
+---
+> SHA1-Digest: 6rBsvW77KJxp4mVGSy0P14pyf8M=
+8c8
+< SHA1-Digest: CqOhbNTosAR6Ho+G0iOakWRWZ6Y=
+---
+> SHA1-Digest: a+EZWyh92rGwtK/9XE6H0BMmKgU=
+14,17c14
+< SHA1-Digest: xjtcBNAV7iIvr4STWG5uAWbveGg=
+< 
+< Name: resources.arsc
+< SHA1-Digest: EO6D4//MMAKoxZs+X0UlL/jcbL8=
+---
+> SHA1-Digest: 4BTo57wJhyBigPO2rdaXzXXPe4U=
+20c17,20
+< SHA1-Digest: Ka80h+Z0iLBM4b5QhAv0/Vh5cUQ=
+---
+> SHA1-Digest: F7BzDMt7dJR6IIL5SP9n1Qa9dQg=
+> 
+> Name: resources.arsc
+> SHA1-Digest: 5aTINTOy5VAIpylHTmmqQPaR5w4=
+23c23
+< SHA1-Digest: /C7IdGFEJ98z1irK23G0KEzvokk=
+---
+> SHA1-Digest: JCaG7LQtJV5h13iqx71QKRvCS/s=
+diff -r result/APP_89/App_B_89/res/values/strings.xml result/APP_89/App_M_89/res/values/strings.xml
+6,14c6,14
+<     <string name="app_name">触摸音乐!</string>
+<     <string name="menu_settings">设置</string>
+<     <string name="menu_quit">退出</string>
+<     <string name="settings_InvVert">垂直翻转</string>
+<     <string name="settings_InvHoriz">水平翻转</string>
+<     <string name="settings_ForceLand">强制全景</string>
+<     <string name="settings_FastForward">快进</string>
+<     <string name="settings_Restart">重放</string>
+<     <string name="menu_save">保存</string>
+---
+>     <string name="app_name">TouchMusic!</string>
+>     <string name="menu_settings">Settings</string>
+>     <string name="menu_quit">Quit</string>
+>     <string name="settings_InvVert">Invert Vertical</string>
+>     <string name="settings_InvHoriz">Invert Horizontal</string>
+>     <string name="settings_ForceLand">Force Landscape</string>
+>     <string name="settings_FastForward">Fast Forward</string>
+>     <string name="settings_Restart">Restart</string>
+>     <string name="menu_save">Save</string>
+diff -r result/APP_89/App_B_89/smali/com/touchmusicfree/TouchMusic$2.smali result/APP_89/App_M_89/smali/com/touchmusicfree/TouchMusic$2.smali
+141c141
+<     const-string v2, "\u6ca1\u6709\u53d1\u73b0\u5a92\u4f53\n\u8bf7\u5f80\u60a8\u7684SD\u5361\u52a0\u4e9b\u97f3\u4e50,\n"
+---
+>     const-string v2, "No Media Found\nPlease add some music to your SD Card\n"

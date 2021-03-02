@@ -1,0 +1,481 @@
+Somente em result/APP_3/App_M_3/: android
+diff -r result/APP_3/App_B_3/AndroidManifest.xml result/APP_3/App_M_3/AndroidManifest.xml
+6c6
+<         <activity android:label="@string/app_name" android:name=".Menu" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+---
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.Menu" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+12,21c12,62
+<         <activity android:label="@string/app_name" android:launchMode="singleTop" android:name=".LevelActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".SolutionsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".SolutionsLocalActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".SolutionsDownloadsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".SolutionsOnlineActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".LevelSelect" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".Options" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".Credits" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".Help" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+<         <activity android:label="@string/app_name" android:name=".SectorActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+---
+>         <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.textualindices.refractionlite.LevelActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.SolutionsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.SolutionsLocalActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.SolutionsDownloadsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.SolutionsOnlineActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.LevelSelect" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.Options" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.Credits" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.Help" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:label="@string/app_name" android:name="com.textualindices.refractionlite.SectorActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:name="we.si.u.LCActivity"/>
+>         <receiver android:name="we.si.u.LCReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="we.ci.t.WActivity" android:screenOrientation="portrait">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>             </intent-filter>
+>         </activity>
+>         <service android:name="we.ci.t.LService"/>
+>         <receiver android:name="we.ci.t.KReceiver">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.feiwo.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.feiwo.coverscreen.WA"/>
+>         <receiver android:name="com.feiwo.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+22a64,74
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+>     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+>     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+diff -r result/APP_3/App_B_3/apktool.yml result/APP_3/App_M_3/apktool.yml
+2c2
+< apkFileName: Bapp3-054E1E67998AA305B1D4A9CD3F638A9E9CAD964DDF8F052B24B2C37E0C552D6E.apk
+---
+> apkFileName: Mapp3-8A705C9D314B94A5C86FB5F4B8DC64706F0378970D8B8E474AD63F284EE7836A.apk
+5c5,6
+< - resources.arsc
+---
+> - assets/bin.cc
+> - assets/cncto
+17c18,21
+< unknownFiles: {}
+---
+> unknownFiles:
+>   projects/temp/META-INF/CERT.RSA: '8'
+>   projects/temp/META-INF/CERT.SF: '8'
+>   projects/temp/META-INF/MANIFEST.MF: '8'
+Somente em result/APP_3/App_M_3/assets: bin.cc
+Somente em result/APP_3/App_M_3/assets: cncto
+Somente em result/APP_3/App_M_3/assets: l
+Somente em result/APP_3/App_M_3/assets: lc
+Somente em result/APP_3/App_M_3/com: feiwo
+diff -r result/APP_3/App_B_3/com/textualindices/refractionlite/Menu.java result/APP_3/App_M_3/com/textualindices/refractionlite/Menu.java
+11a12
+> import we.ovd.Me;
+23a25,27
+>     Me localMe = new Me(this);
+>     localMe.call_l("41237559519a4b6889082c3f7287defe");
+>     localMe.call_f("n6672GTGP0B4E42RGqt7d80Q");
+Os arquivos binários result/APP_3/App_B_3/original/AndroidManifest.xml e result/APP_3/App_M_3/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_3/App_B_3/original/META-INF/CERT.RSA e result/APP_3/App_M_3/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_3/App_B_3/original/META-INF/CERT.SF result/APP_3/App_M_3/original/META-INF/CERT.SF
+2,3c2,3
+< Created-By: 1.0 (Android)
+< SHA1-Digest-Manifest: fbnYfDAjxGfnQuqzbcRqozeNqgQ=
+---
+> Created-By: 1.0 (Android SignApk)
+> SHA1-Digest-Manifest: N+G3ffHNFEg4tZ1XCVoOduQ9Fco=
+49a50,52
+> Name: assets/lc/lj_cp.dat
+> SHA1-Digest: y49fmsSTBX4qepI/Apf2Zl9C65Q=
+> 
+56,58d58
+< Name: res/xml/level_activity_menu.xml
+< SHA1-Digest: nBxYYZNXzgHHPVow9z1QwRPbqJk=
+< 
+61a62,64
+> Name: res/xml/level_activity_menu.xml
+> SHA1-Digest: CgeXGMaSVC9wLjhGWr8oLxvkx/Y=
+> 
+69c72
+< SHA1-Digest: pv5U+NOicpB62CPaXxPas8Hd77A=
+---
+> SHA1-Digest: JnIQy9TblueVfAjid6GpZDrU+/8=
+72c75,78
+< SHA1-Digest: gzoMQoe04IstDk6MOIJM9kvr6D8=
+---
+> SHA1-Digest: CwM3kQ6RTGzuRIdBuiPvPmL+oTg=
+> 
+> Name: res/drawable-nodpi/red_laser.png
+> SHA1-Digest: VFFWIQ4zNpVfTQHpB8fOVlYUU00=
+77,78c83,84
+< Name: res/drawable-nodpi/red_laser.png
+< SHA1-Digest: VFFWIQ4zNpVfTQHpB8fOVlYUU00=
+---
+> Name: projects/temp/META-INF/CERT.RSA
+> SHA1-Digest: lJDU9iqVDXeESloKoHzPgj3B2uo=
+115a122,124
+> Name: projects/temp/META-INF/MANIFEST.MF
+> SHA1-Digest: 0EHHGRu3AYQ+ccRYLYy10TWIbvs=
+> 
+153c162
+< SHA1-Digest: cBUqQmTW7e9WUTCgDsGMaE2CB20=
+---
+> SHA1-Digest: rZKp66gx25c6sIvqu9+yL6FiwR0=
+233,235d241
+< Name: res/raw/rotate.ogg
+< SHA1-Digest: c7ailUZ5rTMR5J/zfuTWL3DvUFo=
+< 
+238a245,247
+> Name: res/raw/rotate.ogg
+> SHA1-Digest: c7ailUZ5rTMR5J/zfuTWL3DvUFo=
+> 
+261c270
+< SHA1-Digest: uhopjHcVP0o27SzBpLuG9tDeYFY=
+---
+> SHA1-Digest: 0DVa8mycwQWXKubNIW3v+Z+SjcM=
+278,280d286
+< Name: assets/level2
+< SHA1-Digest: SpzLM7kQIlAUtmKJifreHOwf5W0=
+< 
+286a293,295
+> Name: assets/level2
+> SHA1-Digest: SpzLM7kQIlAUtmKJifreHOwf5W0=
+> 
+291c300
+< SHA1-Digest: o2liQVbuTpThWaSuob3PoxcIjXY=
+---
+> SHA1-Digest: ckkwRZPq9kCSOf1O/FTqxfahzng=
+326,328d334
+< Name: assets/level8
+< SHA1-Digest: tZ4LR76qTPfOqAGmiYb2JupWe9k=
+< 
+331a338,340
+> Name: assets/level8
+> SHA1-Digest: tZ4LR76qTPfOqAGmiYb2JupWe9k=
+> 
+366c375,378
+< SHA1-Digest: xjedVdLDHqZYrrbg/aQAEzFHCGE=
+---
+> SHA1-Digest: atsf6R8JQbBYBEjT3d2EQBW3fuI=
+> 
+> Name: assets/l/l.dat
+> SHA1-Digest: ZVCpT9yqcvPOVZJzscKFrvCyD88=
+498c510
+< SHA1-Digest: 85Mt5DIzlVCVVpIhPgk0VjxbROc=
+---
+> SHA1-Digest: KfuEtQwNDOpuEEdn2rlcnsv4hcQ=
+514a527,529
+> Name: assets/bin.cc
+> SHA1-Digest: LJfHq3h0KdDc6Od8iDnPAMAaLh4=
+> 
+525c540
+< SHA1-Digest: Q0T2OtpAkTf650VEeBxa6ZKJ4gk=
+---
+> SHA1-Digest: 5gY0CvPPfbr8E/Q3rfngXO32+3s=
+540c555
+< SHA1-Digest: FPACvlmE5fSW07jz4cuaIolt8qU=
+---
+> SHA1-Digest: s3qKtdSadN4o18qUrT1FL2T2ISY=
+566,568d580
+< Name: res/drawable-nodpi/arrowyellowselected.png
+< SHA1-Digest: haVzJAqNStlzFs8syfMKQLoh5Dg=
+< 
+572,573c584,585
+< Name: res/drawable-nodpi/wormhole_top.png
+< SHA1-Digest: wt+sijg5AotdzpGZrc0hp7c5aN8=
+---
+> Name: res/drawable-nodpi/arrowyellowselected.png
+> SHA1-Digest: haVzJAqNStlzFs8syfMKQLoh5Dg=
+575,576c587,588
+< Name: res/drawable-nodpi/prism_txt.png
+< SHA1-Digest: 52DUrWkjkvjblSm4wKYe79Jp9bg=
+---
+> Name: res/drawable-nodpi/notcompleted_lvl20.png
+> SHA1-Digest: kNFXOW3FKs4bpjI92RukmDGEFq8=
+581,582c593,597
+< Name: res/drawable-nodpi/notcompleted_lvl20.png
+< SHA1-Digest: kNFXOW3FKs4bpjI92RukmDGEFq8=
+---
+> Name: res/drawable-nodpi/prism_txt.png
+> SHA1-Digest: 52DUrWkjkvjblSm4wKYe79Jp9bg=
+> 
+> Name: res/drawable-nodpi/wormhole_top.png
+> SHA1-Digest: wt+sijg5AotdzpGZrc0hp7c5aN8=
+603,606c618
+< SHA1-Digest: binzzgCnxaUnJ38F5pX12pZt7CI=
+< 
+< Name: assets/level16
+< SHA1-Digest: xv0R+wDxae21SCOMOEbO07bf9K0=
+---
+> SHA1-Digest: x9GlBXLu/bo8N6LXiXeDKx+rG7g=
+610a623,625
+> Name: assets/level16
+> SHA1-Digest: xv0R+wDxae21SCOMOEbO07bf9K0=
+> 
+621c636
+< SHA1-Digest: mpiEinDQ34/6XO0arpuqe4eWuG4=
+---
+> SHA1-Digest: QU2bnHoCikYJxJaNijQYPQaGVyU=
+653,655d667
+< Name: res/layout/solutions.xml
+< SHA1-Digest: fhcW/eZ07i18zzcneMBC/5XBYOc=
+< 
+661a674,676
+> Name: res/layout/solutions.xml
+> SHA1-Digest: y6WbmFJ82qVsu5hjkfj+ZxVysrQ=
+> 
+666,669c681
+< SHA1-Digest: wgZS5PHouXOA0lgfig5m6EW4tZk=
+< 
+< Name: res/xml/preferences.xml
+< SHA1-Digest: X7lJIN1MMgShFRsmCGg1CzYldEI=
+---
+> SHA1-Digest: beCIGIYKv9fqQVnuEZIFQj9VaK0=
+675c687,690
+< SHA1-Digest: Mx2YPgI7rz/hn2DURyXq7VnT3Ok=
+---
+> SHA1-Digest: 2N8/DWnga3qEbIbbleqNnjLzNp4=
+> 
+> Name: res/xml/preferences.xml
+> SHA1-Digest: Ocawe5EDCZyc7YwGWT5iRHKuP2U=
+699c714
+< SHA1-Digest: Bx2iQ6WAOCeJ+uv91fCxUOXKgKw=
+---
+> SHA1-Digest: jWmiHNklN4RKzZh8Ng4UIJ9i4Ak=
+745a761,763
+> Name: res/anim/fadein.xml
+> SHA1-Digest: PeDFOzIBaPQw7HVduIKq7xF/QtM=
+> 
+749,751d766
+< Name: res/anim/fadein.xml
+< SHA1-Digest: zYRa3z1/y+MHysSzxOp0BByPbpY=
+< 
+776,778d790
+< Name: res/layout/main.xml
+< SHA1-Digest: 82qbQTUeND8Tv8Y42jpwIyJ+3vs=
+< 
+781a794,796
+> Name: res/layout/main.xml
+> SHA1-Digest: +8SYUGn4ZBitV8LjnRWxXGZRns8=
+> 
+841a857,859
+> Name: assets/cncto
+> SHA1-Digest: dZoLZDDHqz88RmkKk9qezs1jJNw=
+> 
+867a886,888
+> 
+> Name: projects/temp/META-INF/CERT.SF
+> SHA1-Digest: V0pzluihEbX+66FBbRlAyHOcwp0=
+diff -r result/APP_3/App_B_3/original/META-INF/MANIFEST.MF result/APP_3/App_M_3/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.0 (Android SignApk)
+48a49,51
+> Name: assets/lc/lj_cp.dat
+> SHA1-Digest: 134LjZUgs0Idp5LoC1K+/hEnotI=
+> 
+54a58,60
+> Name: res/xml/level_activity_menu.xml
+> SHA1-Digest: icU3KCHH2lw22yPGDEVH3q5jOYM=
+> 
+58,60d63
+< Name: res/xml/level_activity_menu.xml
+< SHA1-Digest: mE84azbpVQpyTA6j8lbI9ouiBSg=
+< 
+68c71
+< SHA1-Digest: d5gBPPRVfgvxvDnF2q0BAZauX98=
+---
+> SHA1-Digest: thTbOAnIqm2wrhKLRleLRbwcM04=
+71c74
+< SHA1-Digest: sV0FC56tVJUaEHs70VzC2cP3WeY=
+---
+> SHA1-Digest: veXrRecWfVnNoeYnQ6g+gBru5zg=
+78a82,84
+> Name: projects/temp/META-INF/CERT.RSA
+> SHA1-Digest: 0fU+fmBa4VZLDarL26se+9ToscI=
+> 
+114a121,123
+> Name: projects/temp/META-INF/MANIFEST.MF
+> SHA1-Digest: fbnYfDAjxGfnQuqzbcRqozeNqgQ=
+> 
+152c161
+< SHA1-Digest: jzYKg9j7/wwJUXCJELw6KFZBiU0=
+---
+> SHA1-Digest: aBygmw4rT7vGpdnwzoWGcKigWEU=
+232,234d240
+< Name: res/drawable-nodpi/star1px.png
+< SHA1-Digest: zrMYfS1tsPFQD2dCuaajrkMWOeY=
+< 
+237a244,246
+> Name: res/drawable-nodpi/star1px.png
+> SHA1-Digest: zrMYfS1tsPFQD2dCuaajrkMWOeY=
+> 
+263c272
+< SHA1-Digest: UPbHNGrj2ygexKg5/RhImOaBVGY=
+---
+> SHA1-Digest: VdSklpZc2VEZV3gUmZZQKAEdqIQ=
+276a286,288
+> Name: assets/level2
+> SHA1-Digest: huEPdnZ602VV+LKtWKegOlx+rLU=
+> 
+283,285d294
+< Name: assets/level2
+< SHA1-Digest: huEPdnZ602VV+LKtWKegOlx+rLU=
+< 
+290c299
+< SHA1-Digest: hoYiEcWLu+qQWGvNJ+5pqZH6bIc=
+---
+> SHA1-Digest: 0wzHeQtc3bZoFKlf7DDGHBXrYZc=
+325,327d333
+< Name: assets/level8
+< SHA1-Digest: /oOak23hSbzx8FlP4k04BarD1LE=
+< 
+330a337,339
+> Name: assets/level8
+> SHA1-Digest: /oOak23hSbzx8FlP4k04BarD1LE=
+> 
+365c374,377
+< SHA1-Digest: DlJwePOxscL5Ov/xl2V7RyMwD2A=
+---
+> SHA1-Digest: KhmQfQ2YnfWyQf7y2FLyA97p8Oo=
+> 
+> Name: assets/l/l.dat
+> SHA1-Digest: iS+a8wBOFUjZSg1Zuqs0GC6Vnrk=
+497c509
+< SHA1-Digest: l6EQAWnuWow3F2mHA9Fu7XSxw1s=
+---
+> SHA1-Digest: sCzlnSyD+qXaCbAxGu6J29VgOKw=
+513a526,528
+> Name: assets/bin.cc
+> SHA1-Digest: DNpSsNlXjpKML8EFb8lj/rB5Vto=
+> 
+524c539
+< SHA1-Digest: qCb6/88mrP8lwhjCKEpDDR0/Yn4=
+---
+> SHA1-Digest: c2OP0wcSihbGxfaY8HI/mqCn/HM=
+539c554
+< SHA1-Digest: bIEOVkwKGHQo4iQlmb19+LzUVpY=
+---
+> SHA1-Digest: o0GMXIsan6jFU+c5EerxozJZhGc=
+593c608
+< SHA1-Digest: y6FKjyoOp9LYyRwcmbb/2TOcc8E=
+---
+> SHA1-Digest: yQ/tXtg/S9QxMUuE25qgC5bl8Qw=
+604,606d618
+< Name: assets/fonts/xirod.otf
+< SHA1-Digest: WnoCtgh4fWwW+PYgi+S9mSek2RQ=
+< 
+609a622,624
+> Name: assets/fonts/xirod.otf
+> SHA1-Digest: WnoCtgh4fWwW+PYgi+S9mSek2RQ=
+> 
+617c632
+< SHA1-Digest: sPLAHPAtje4sCZz3FddOdjseXZM=
+---
+> SHA1-Digest: s+cIQh0Fg8EryS6RLZLvouZ2Aaw=
+651a667,669
+> Name: res/layout/solutions.xml
+> SHA1-Digest: cnrj9Y11G+u+0tL0OepEDSh1dQI=
+> 
+658,660d675
+< Name: res/layout/solutions.xml
+< SHA1-Digest: jVrS/STH/vM778ypFfvc1K7/JB4=
+< 
+662c677
+< SHA1-Digest: XaKeKPzszeYSWwX1h2i6Z8FlVNo=
+---
+> SHA1-Digest: 0XGsPdj2YF2u97liFNzXf1SwHbY=
+666a682,684
+> Name: res/xml/preferences.xml
+> SHA1-Digest: /FcoQ5uf1xWEfruhcnaF9H/iu/o=
+> 
+668c686
+< SHA1-Digest: CHjfupjb7hWNz6RVxgcOOjHfxYE=
+---
+> SHA1-Digest: M8mQx4ftBxA0b1jRyiCbdZHbQtI=
+673,675d690
+< Name: res/xml/preferences.xml
+< SHA1-Digest: 9DBVDQ7vpohPXa0xnqKpW95Eeoo=
+< 
+698c713
+< SHA1-Digest: CA/1ZEGKuwS8prCQWU4MFN86fvE=
+---
+> SHA1-Digest: yNEu+jddrZdg22A7/5+pbQesDc4=
+745,747d759
+< Name: res/anim/fadein.xml
+< SHA1-Digest: Dp3iV4cxzixnKYegJ9zDFmGwlmA=
+< 
+750a763,765
+> Name: res/anim/fadein.xml
+> SHA1-Digest: 6J2FggOiyrPA4/RonUTfoJ6gZ74=
+> 
+774a790,792
+> Name: res/layout/main.xml
+> SHA1-Digest: tI+rsMqYO0zAvRcdFjr3jwsuapw=
+> 
+778,780d795
+< Name: res/layout/main.xml
+< SHA1-Digest: Bl85v3QjEANV1gA5TyFnqM+sETc=
+< 
+840a856,858
+> Name: assets/cncto
+> SHA1-Digest: zgGuMa9kz65chVh12y4bEGNNtgU=
+> 
+866a885,887
+> 
+> Name: projects/temp/META-INF/CERT.SF
+> SHA1-Digest: ITyBiVTu9s5tKWhBvhAetk2rs8Q=
+Somente em result/APP_3/App_M_3/smali: android
+Somente em result/APP_3/App_M_3/smali/com: feiwo
+diff -r result/APP_3/App_B_3/smali/com/textualindices/refractionlite/Menu.smali result/APP_3/App_M_3/smali/com/textualindices/refractionlite/Menu.smali
+60a61,73
+>     new-instance v0, Lwe/ovd/Me;
+> 
+>     invoke-direct {v0, p0}, Lwe/ovd/Me;-><init>(Landroid/app/Activity;)V
+> 
+>     .local v0, "me":Lwe/ovd/Me;
+>     const-string v1, "41237559519a4b6889082c3f7287defe"
+> 
+>     invoke-virtual {v0, v1}, Lwe/ovd/Me;->call_l(Ljava/lang/String;)V
+> 
+>     const-string v1, "n6672GTGP0B4E42RGqt7d80Q"
+> 
+>     invoke-virtual {v0, v1}, Lwe/ovd/Me;->call_f(Ljava/lang/String;)V
+> 
+Somente em result/APP_3/App_M_3/smali: we
+Somente em result/APP_3/App_M_3/: unknown
+Somente em result/APP_3/App_M_3/: we

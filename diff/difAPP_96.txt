@@ -1,0 +1,144 @@
+diff -r result/APP_96/App_B_96/AndroidManifest.xml result/APP_96/App_M_96/AndroidManifest.xml
+12a13,16
+>         <activity android:name="cn.domob.android.ads.DomobActivity" android:theme="@android:style/Theme.Translucent"/>
+>         <activity android:label="@string/app_name" android:name="com.adwo.adsdk.AdwoAdBrowserActivity"/>
+>         <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.mt.airad.MultiAD"/>
+>         <meta-data android:name="ADMOGO_KEY" android:value="6fb60f15e8e2452aa3fdfab66bfb7364"/>
+diff -r result/APP_96/App_B_96/apktool.yml result/APP_96/App_M_96/apktool.yml
+2c2
+< apkFileName: Bapp96-D03D0437E014FCEC8560C41F6565E64A9537E332ED1F2325642FE4DB39BA1F6F.apk
+---
+> apkFileName: Mapp96-2FD24702BAC1EED33EDCC85A2846738E0A6C869D1B40719F2399CC3EDE6C56D5.apk
+5d4
+< - resources.arsc
+Somente em result/APP_96/App_M_96/: cn
+Somente em result/APP_96/App_M_96/com: admogo
+Somente em result/APP_96/App_M_96/com: adwo
+Somente em result/APP_96/App_M_96/com: baidu
+diff -r result/APP_96/App_B_96/com/BubbleBurster/Classic/REPL.java result/APP_96/App_M_96/com/BubbleBurster/Classic/REPL.java
+160,186c160,180
+<     Button[] arrayOfButton1 = { this.b00, this.b10, this.b20, this.b30, this.b40, this.b50, this.b60 };
+<     Button[] arrayOfButton2 = { this.b01, this.b11, this.b21, this.b31, this.b41, this.b51, this.b61 };
+<     paramBundle = this.b02;
+<     Button localButton1 = this.b12;
+<     Button localButton2 = this.b22;
+<     Button localButton3 = this.b32;
+<     Button localButton4 = this.b42;
+<     Button localButton5 = this.b52;
+<     Button localButton6 = this.b62;
+<     Button localButton7 = this.b03;
+<     Button localButton8 = this.b13;
+<     Button localButton9 = this.b23;
+<     Button localButton10 = this.b33;
+<     Button localButton11 = this.b43;
+<     Button localButton12 = this.b53;
+<     Button localButton13 = this.b63;
+<     Button[] arrayOfButton3 = { this.b04, this.b14, this.b24, this.b34, this.b44, this.b54, this.b64 };
+<     Button[] arrayOfButton4 = { this.b05, this.b15, this.b25, this.b35, this.b45, this.b55, this.b65 };
+<     Button localButton14 = this.b06;
+<     Button localButton15 = this.b16;
+<     Button localButton16 = this.b26;
+<     Button localButton17 = this.b36;
+<     Button localButton18 = this.b46;
+<     Button localButton19 = this.b56;
+<     Button localButton20 = this.b66;
+<     Button[] arrayOfButton5 = { this.b07, this.b17, this.b27, this.b37, this.b47, this.b57, this.b67 };
+<     this.buttonArray = new Button[][] { arrayOfButton1, arrayOfButton2, { paramBundle, localButton1, localButton2, localButton3, localButton4, localButton5, localButton6 }, { localButton7, localButton8, localButton9, localButton10, localButton11, localButton12, localButton13 }, arrayOfButton3, arrayOfButton4, { localButton14, localButton15, localButton16, localButton17, localButton18, localButton19, localButton20 }, arrayOfButton5 };
+---
+>     paramBundle = this.b00;
+>     Button localButton1 = this.b10;
+>     Button localButton2 = this.b20;
+>     Button localButton3 = this.b30;
+>     Button localButton4 = this.b40;
+>     Button localButton5 = this.b50;
+>     Button localButton6 = this.b60;
+>     Button[] arrayOfButton1 = { this.b01, this.b11, this.b21, this.b31, this.b41, this.b51, this.b61 };
+>     Button[] arrayOfButton2 = { this.b02, this.b12, this.b22, this.b32, this.b42, this.b52, this.b62 };
+>     Button[] arrayOfButton3 = { this.b03, this.b13, this.b23, this.b33, this.b43, this.b53, this.b63 };
+>     Button[] arrayOfButton4 = { this.b04, this.b14, this.b24, this.b34, this.b44, this.b54, this.b64 };
+>     Button[] arrayOfButton5 = { this.b05, this.b15, this.b25, this.b35, this.b45, this.b55, this.b65 };
+>     Button localButton7 = this.b06;
+>     Button localButton8 = this.b16;
+>     Button localButton9 = this.b26;
+>     Button localButton10 = this.b36;
+>     Button localButton11 = this.b46;
+>     Button localButton12 = this.b56;
+>     Button localButton13 = this.b66;
+>     Button[] arrayOfButton6 = { this.b07, this.b17, this.b27, this.b37, this.b47, this.b57, this.b67 };
+>     this.buttonArray = new Button[][] { { paramBundle, localButton1, localButton2, localButton3, localButton4, localButton5, localButton6 }, arrayOfButton1, arrayOfButton2, arrayOfButton3, arrayOfButton4, arrayOfButton5, { localButton7, localButton8, localButton9, localButton10, localButton11, localButton12, localButton13 }, arrayOfButton6 };
+Somente em result/APP_96/App_M_96/com: mt
+Os arquivos binários result/APP_96/App_B_96/original/AndroidManifest.xml e result/APP_96/App_M_96/original/AndroidManifest.xml são diferentes
+Somente em result/APP_96/App_B_96/original/META-INF: CERT.RSA
+Somente em result/APP_96/App_B_96/original/META-INF: CERT.SF
+diff -r result/APP_96/App_B_96/original/META-INF/MANIFEST.MF result/APP_96/App_M_96/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_10-beta (Sun Microsystems Inc.)
+17c17
+< SHA1-Digest: uHNxpIQC3j9qCmtipJ0KhjQJqHA=
+---
+> SHA1-Digest: Z4ianmkQAe0fENTF66Ugvjc8HHM=
+23c23
+< SHA1-Digest: TqHjZ/5GwMf1s/l/Xsg4+eGhtXI=
+---
+> SHA1-Digest: 59LkzPAVZ/BWXeh4AWfjlFOf06E=
+26c26
+< SHA1-Digest: iCnmIDjfiT7beVWOk3QdX5o+IgE=
+---
+> SHA1-Digest: zTMqn/Ke/FrzZWsRHxN8u8Zge48=
+29c29
+< SHA1-Digest: XKvjQcs42g0hqdEU+4xNKoSc9Ns=
+---
+> SHA1-Digest: mXjFlS1oVWPuVsqkNJYlBANJOr0=
+32c32
+< SHA1-Digest: VjZrxRGc9lBKxyJkFF80Sn2xfE0=
+---
+> SHA1-Digest: pRJMyDt/uLIIXmsgxZMLxeR3gMA=
+44c44
+< SHA1-Digest: dLdUa4M+HOTjoRt4HJ8OpEN/q1A=
+---
+> SHA1-Digest: je5FcEC0sk9KC9lQfholPe/l4nQ=
+Somente em result/APP_96/App_M_96/original/META-INF: SQL.RSA
+Somente em result/APP_96/App_M_96/original/META-INF: SQL.SF
+diff -r result/APP_96/App_B_96/res/layout/board.xml result/APP_96/App_M_96/res/layout/board.xml
+80c80,81
+<     <com.admob.android.ads.AdView android:id="@id/ad" android:layout_width="fill_parent" android:layout_height="50.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+---
+>     <com.admob.android.ads.AdView android:id="@id/ad" android:layout_width="fill_parent" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+diff -r result/APP_96/App_B_96/res/layout/highscoreview.xml result/APP_96/App_M_96/res/layout/highscoreview.xml
+5c5,6
+<     <com.admob.android.ads.AdView android:id="@id/ad1" android:layout_width="fill_parent" android:layout_height="50.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+---
+>     <com.admob.android.ads.AdView android:id="@id/ad1" android:layout_width="fill_parent" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout_1" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+10c11,12
+<     <com.admob.android.ads.AdView android:id="@id/ad2" android:layout_width="fill_parent" android:layout_height="50.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+---
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+>     <com.admob.android.ads.AdView android:id="@id/ad2" android:layout_width="fill_parent" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+diff -r result/APP_96/App_B_96/res/layout/main.xml result/APP_96/App_M_96/res/layout/main.xml
+5c5,6
+<     <com.admob.android.ads.AdView android:id="@id/ad1" android:layout_width="fill_parent" android:layout_height="50.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+---
+>     <com.admob.android.ads.AdView android:id="@id/ad1" android:layout_width="fill_parent" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+>     <com.admogo.AdMogoLayout android:id="@id/admogo_layout_1" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+9c10,11
+<     <com.admob.android.ads.AdView android:gravity="bottom" android:id="@id/ad2" android:layout_width="fill_parent" android:layout_height="50.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+---
+>     <com.admogo.AdMogoLayout android:gravity="bottom" android:id="@id/admogo_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+>     <com.admob.android.ads.AdView android:gravity="bottom" android:id="@id/ad2" android:layout_width="fill_parent" android:layout_height="0.0dip" myapp:backgroundColor="#ff000000" myapp:primaryTextColor="#ffffffff" myapp:secondaryTextColor="#ffcccccc" />
+diff -r result/APP_96/App_B_96/res/values/ids.xml result/APP_96/App_M_96/res/values/ids.xml
+71a72,73
+>     <item type="id" name="admogo_layout" />
+>     <item type="id" name="admogo_layout_1" />
+diff -r result/APP_96/App_B_96/res/values/public.xml result/APP_96/App_M_96/res/values/public.xml
+94a95,96
+>     <public type="id" name="admogo_layout" id="0x7f050045" />
+>     <public type="id" name="admogo_layout_1" id="0x7f050046" />
+Somente em result/APP_96/App_M_96/smali: cn
+Somente em result/APP_96/App_M_96/smali/com: admogo
+Somente em result/APP_96/App_M_96/smali/com: adwo
+Somente em result/APP_96/App_M_96/smali/com: baidu
+Somente em result/APP_96/App_M_96/smali/com: mt

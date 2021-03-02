@@ -1,0 +1,1360 @@
+diff -r result/APP_27/App_B_27/android/support/v4/view/PagerTitleStrip.java result/APP_27/App_M_27/android/support/v4/view/PagerTitleStrip.java
+413c413
+<     implements ViewPager.OnAdapterChangeListener, ViewPager.OnPageChangeListener
+---
+>     implements ViewPager.OnPageChangeListener, ViewPager.OnAdapterChangeListener
+diff -r result/APP_27/App_B_27/android/support/v4/widget/CursorAdapter.java result/APP_27/App_M_27/android/support/v4/widget/CursorAdapter.java
+17c17
+<   implements CursorFilter.CursorFilterClient, Filterable
+---
+>   implements Filterable, CursorFilter.CursorFilterClient
+diff -r result/APP_27/App_B_27/AndroidManifest.xml result/APP_27/App_M_27/AndroidManifest.xml
+2a3,4
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+diff -r result/APP_27/App_B_27/apktool.yml result/APP_27/App_M_27/apktool.yml
+2c2
+< apkFileName: Bapp27-34A68DD3A89F62894D45DBE134E403D97BF76360DEFC507BB1BABEDC9B0D120F.apk
+---
+> apkFileName: Mapp27-C7BDA923E483C9498EC16BAF0FB34614C8A06F3390D05A438E1EA632F2DD0515.apk
+7d6
+< - jpg
+8a8
+> - jpg
+diff -r result/APP_27/App_B_27/com/google/ads/AdView.java result/APP_27/App_M_27/com/google/ads/AdView.java
+190c190,195
+<     return !AdUtil.c(paramContext);
+---
+>     if (!AdUtil.c(paramContext))
+>     {
+>       a(paramContext, "You must have AdActivity declared in AndroidManifest.xml with configChanges.", paramAdSize, paramAttributeSet);
+>       return false;
+>     }
+>     return true;
+282c287,292
+<     return !AdUtil.b(paramContext);
+---
+>     if (!AdUtil.b(paramContext))
+>     {
+>       a(paramContext, "You must have INTERNET and ACCESS_NETWORK_STATE permissions in AndroidManifest.xml.", paramAdSize, paramAttributeSet);
+>       return false;
+>     }
+>     return true;
+Os arquivos binários result/APP_27/App_B_27/original/AndroidManifest.xml e result/APP_27/App_M_27/original/AndroidManifest.xml são diferentes
+Os arquivos binários result/APP_27/App_B_27/original/META-INF/CERT.RSA e result/APP_27/App_M_27/original/META-INF/CERT.RSA são diferentes
+diff -r result/APP_27/App_B_27/original/META-INF/CERT.SF result/APP_27/App_M_27/original/META-INF/CERT.SF
+2,3c2,3
+< SHA1-Digest-Manifest: YWOQ/f2nu32V62pdRlvroF8kaTM=
+< Created-By: 1.0 (Android SignApk)
+---
+> Created-By: 1.0 (Android)
+> SHA1-Digest-Manifest: FTplPxGs4oSNqOluimEbXg+WQ/8=
+5,6c5,18
+< Name: res/drawable-nodpi/e_dur.png
+< SHA1-Digest: ItfrJu+NVJCnKxzXFquYCvBwzDA=
+---
+> Name: res/layout/start_activity.xml
+> SHA1-Digest: 4BOJnYkoOT43Ks5SdoAUNQwjH8I=
+> 
+> Name: res/raw/bass_f_1.mp3
+> SHA1-Digest: vNnxoyv23VqB/OxldqsyqFnxNiM=
+> 
+> Name: res/drawable-nodpi/h_mol.png
+> SHA1-Digest: AwNk2QJusClJXcTzwNfLeExlCiI=
+> 
+> Name: res/raw/bass_a_2.mp3
+> SHA1-Digest: Wyv4hEIC0AYmTY252zkP7AwHvcg=
+> 
+> Name: res/anim/grip_off.xml
+> SHA1-Digest: aENsWOuMTOJArAw+cSzVLQqTXns=
+11,12c23,24
+< Name: res/layout/list_item_layout.xml
+< SHA1-Digest: M66/9xQ7CoaIdKbJuElkD9Ebbp0=
+---
+> Name: res/drawable/slap_ikona.png
+> SHA1-Digest: /Wyz+ca46ZKewaWiGHlEmrDbpB0=
+14,15c26,27
+< Name: res/drawable-nodpi/start.jpg
+< SHA1-Digest: VYbBV5MbJzSzhAsoWdIV9POjvD4=
+---
+> Name: res/raw/bass_g2.mp3
+> SHA1-Digest: n0TYynfsLLsZ1StVw6NUUX4tvkQ=
+17,18c29,30
+< Name: res/raw/bass_b2.mp3
+< SHA1-Digest: qJ6YR/68+zUaO9pWMjePQkUmT6Q=
+---
+> Name: res/drawable/metronom_ikona.png
+> SHA1-Digest: ExN1TlOgKiTTyRh7uNQAqs33BmM=
+20,21c32,33
+< Name: res/drawable-nodpi/a_mol.png
+< SHA1-Digest: qJNrKxFIjHwKVrTGyo9YGmlzVvQ=
+---
+> Name: res/drawable-nodpi/as_mol.png
+> SHA1-Digest: +Dgu//vkUQbzP9xYT2xRT1kCa7o=
+23,24c35,36
+< Name: res/drawable-nodpi/fis_mol.png
+< SHA1-Digest: 2Ksdk99oJd4c7mdthva42vuliiA=
+---
+> Name: res/raw/bass_f_3.mp3
+> SHA1-Digest: /EDErbXLU4gHmhZZC1QIskoONdU=
+26,27c38,39
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: nsoCwYQvSoEvPZnRmRn0UzEPvoo=
+---
+> Name: res/raw/bass_f1.mp3
+> SHA1-Digest: UZRQDWA6W166DkIht9UDAo6zhs8=
+29,30c41,42
+< Name: res/raw/bass_g3.mp3
+< SHA1-Digest: BLRAyC9lsA+XkFvQegxap/k+dzU=
+---
+> Name: res/drawable/electric_ikona.png
+> SHA1-Digest: boaxKs49ERc0F3xMN6MqXzy1kFw=
+32,33c44,45
+< Name: res/drawable/classic_ikona.png
+< SHA1-Digest: a5DgtNNIGzlCz5ECclMRc5MBK8Y=
+---
+> Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+> SHA1-Digest: E9F85/qDCNqclUF1swwnG6QZXwg=
+35,36c47,48
+< Name: res/raw/bass_d2.mp3
+< SHA1-Digest: qqAyZIWJPan1792RD9Fa7extoeo=
+---
+> Name: res/raw/bass_e2.mp3
+> SHA1-Digest: ekcJ1y00uJF4rBYFSxGgo0nYiD4=
+38,39c50,51
+< Name: res/raw/bass_a2.mp3
+< SHA1-Digest: iKpaIdWPw3S64hi2xl4jNQTfNdY=
+---
+> Name: res/raw/bass_c_4.mp3
+> SHA1-Digest: 7fGmgbrjUr/OlqpgGdiPfmbhRQc=
+41,42c53,54
+< Name: res/drawable-nodpi/fis_dur.png
+< SHA1-Digest: jFRpLprtqflq3bJhHAypunrKU6A=
+---
+> Name: res/layout/otherapps_layout.xml
+> SHA1-Digest: XJ6YUquIMCXr0rwVJ+p5WhIJ3Ys=
+44,45c56,57
+< Name: res/raw/bass_g_1.mp3
+< SHA1-Digest: LWQfwt1W6XzBbKWfuselxBqBJJk=
+---
+> Name: res/layout/exit.xml
+> SHA1-Digest: CSAOJANygF50F/I6HekINhCJUyk=
+47,48c59,60
+< Name: res/layout/start_activity.xml
+< SHA1-Digest: DO7geMMxkbzJByV/tgBGVMMfxeA=
+---
+> Name: res/raw/bass_guitar_fret_long_dim.txt
+> SHA1-Digest: XdiYUS8QDuu1bQP2GCawKU1Zgzo=
+50,51c62,63
+< Name: res/drawable-nodpi/es_mol.png
+< SHA1-Digest: AlvJDy/BM9IN59KjE6eycQsu2MQ=
+---
+> Name: res/drawable-nodpi/gis_mol.png
+> SHA1-Digest: j5QhxjbLwZx62rdQKf7OJ2mlKAo=
+53,54c65,66
+< Name: res/drawable-nodpi/a_dur.png
+< SHA1-Digest: 8KdEx7qvcmslghyw783c1Rj1VPA=
+---
+> Name: res/drawable-nodpi/fis_mol.png
+> SHA1-Digest: 2Ksdk99oJd4c7mdthva42vuliiA=
+56,57c68,78
+< Name: res/drawable-mdpi/icon.png
+< SHA1-Digest: NG45vQUi+uux1ZGOMHrEHFm57rw=
+---
+> Name: res/drawable-nodpi/d_dur.png
+> SHA1-Digest: TtP8CpkwXhbzi711iLojVVu3EM8=
+> 
+> Name: res/drawable-nodpi/f_dur.png
+> SHA1-Digest: tbve3cvAjNI0Z8b6S5H47sh1+T8=
+> 
+> Name: res/raw/bass_e3.mp3
+> SHA1-Digest: wHC6M5E9e7p5LWeX08c7knv5XI8=
+> 
+> Name: res/raw/bass_a2.mp3
+> SHA1-Digest: iKpaIdWPw3S64hi2xl4jNQTfNdY=
+62,63c83,84
+< Name: res/drawable-ldpi/icon.png
+< SHA1-Digest: hk4jZ9teBCe/vzBd/aGAbdVKWE0=
+---
+> Name: res/drawable-nodpi/start.jpg
+> SHA1-Digest: VYbBV5MbJzSzhAsoWdIV9POjvD4=
+65,66c86,87
+< Name: res/drawable-pl-nodpi/load_b.jpg
+< SHA1-Digest: XgxA4ZziErkiPvQ8IIQcolgtaHI=
+---
+> Name: res/raw/bass_d2.mp3
+> SHA1-Digest: qqAyZIWJPan1792RD9Fa7extoeo=
+68,69c89,90
+< Name: resources.arsc
+< SHA1-Digest: AXW1wzbJNLwzaK53Awqu0OvNyt8=
+---
+> Name: res/drawable-nodpi/banner.png
+> SHA1-Digest: uFJXQvd5HXPCk6SgmLQVnHSRWSE=
+71,72c92,93
+< Name: res/menu/menu.xml
+< SHA1-Digest: EX49+nvKpStHCOVMGLmHlFX2OIs=
+---
+> Name: res/drawable-nodpi/g_mol.png
+> SHA1-Digest: 0Hl2Fhmp7cpNPWF37uH6p56VKF0=
+77,78c98,99
+< Name: res/raw/bass_g1.mp3
+< SHA1-Digest: RnDtnKX0hiIpurUBYytSl6oappo=
+---
+> Name: res/raw/bass_d3.mp3
+> SHA1-Digest: LGEYVOtO1N8wI6E4aIqZVSv+qms=
+80,81c101,102
+< Name: AndroidManifest.xml
+< SHA1-Digest: ZyqEweNfbioCoNDE7VGQjrNujjY=
+---
+> Name: res/drawable-nodpi/e_dur.png
+> SHA1-Digest: ItfrJu+NVJCnKxzXFquYCvBwzDA=
+83,84c104,105
+< Name: res/drawable-nodpi/h_mol.png
+< SHA1-Digest: AwNk2QJusClJXcTzwNfLeExlCiI=
+---
+> Name: res/drawable-nodpi/a_dur.png
+> SHA1-Digest: 8KdEx7qvcmslghyw783c1Rj1VPA=
+86,87c107,108
+< Name: res/raw/bass_e3.mp3
+< SHA1-Digest: wHC6M5E9e7p5LWeX08c7knv5XI8=
+---
+> Name: res/drawable-nodpi/bass_guitar_fret_long.jpg
+> SHA1-Digest: +2uVoqupH5OWh19eyXD7Fw3EHsQ=
+89,90c110,111
+< Name: res/drawable-nodpi/d_dur.png
+< SHA1-Digest: TtP8CpkwXhbzi711iLojVVu3EM8=
+---
+> Name: resources.arsc
+> SHA1-Digest: fdU4tEToV3yTB0+aUr5qyHGT25Y=
+92,93c113,114
+< Name: res/drawable-nodpi/h_dur.png
+< SHA1-Digest: QOf1QwocJ6ybDlKTAjRv6UmTLMc=
+---
+> Name: res/raw/bass_g_2.mp3
+> SHA1-Digest: 7aCHouzKnRXIJ2nePqkF1DPWu/I=
+95,96c116,117
+< Name: res/raw/bass_g_3.mp3
+< SHA1-Digest: t69gZrheAqENzOsr+R5mNWxnDZQ=
+---
+> Name: res/drawable-nodpi/logo.png
+> SHA1-Digest: Z0UfvNQ/yYSIjzhURyUdIvgBjv4=
+98,99c119,132
+< Name: res/drawable/fuzz_ikona.png
+< SHA1-Digest: 0VJqI/iX670lsicoA+G8/XsrT24=
+---
+> Name: res/drawable-pl-ldpi/icon.png
+> SHA1-Digest: UT08wvmnqpSEV1jKrok9HM6uqww=
+> 
+> Name: res/drawable/classic_ikona.png
+> SHA1-Digest: a5DgtNNIGzlCz5ECclMRc5MBK8Y=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: JcKy6QGXcBcWxT3utJM3kPx4+qI=
+> 
+> Name: res/drawable-xxhdpi/icon.png
+> SHA1-Digest: vlbJ+11wRzjtrqnODcsEeHVWe/Q=
+> 
+> Name: res/raw/bass_a3.mp3
+> SHA1-Digest: DHkooTNsI33WgqqSXhZWZBtr48o=
+104,105c137,138
+< Name: res/drawable-nodpi/es_dur.png
+< SHA1-Digest: eUPsbSthab2JlLMWhc+0hstk8gA=
+---
+> Name: res/drawable/piano_ikona.png
+> SHA1-Digest: Pl1f5Np7uWl52ypDCd27si/bPy4=
+107,108c140,141
+< Name: res/xml/preferences.xml
+< SHA1-Digest: 6QfGa0pEze3UVB2/x+/Bl8NuGXw=
+---
+> Name: res/raw/bass_a_1.mp3
+> SHA1-Digest: h5Uyp0+tH1LVxTAy0DUrPChzPBc=
+110,111c143,144
+< Name: res/drawable-xhdpi/icon.png
+< SHA1-Digest: PfmkKEZGK5C2NuKdMfsL8WG8W5U=
+---
+> Name: res/layout/alternative_main.xml
+> SHA1-Digest: Lf1GnZ4tU/UmPHVKGHAlw+hhKro=
+113,114c146,147
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: bZvYLQC0oXqfyWdlznANM8ByONg=
+---
+> Name: res/drawable-nodpi/item_selector.xml
+> SHA1-Digest: c0zo8DuzS8+8pIC13U4WHyZu8kw=
+119,120c152,153
+< Name: res/raw/bass_e1.mp3
+< SHA1-Digest: GBhw+Ucdj8VJkj5Qxkl/uZf8PP4=
+---
+> Name: res/raw/bass_guitar_fret_dim.txt
+> SHA1-Digest: aEoXDVlEe2UWsrHUP0vlhMsKIu0=
+122,123c155,156
+< Name: res/drawable-pl-hdpi/icon.png
+< SHA1-Digest: jXN/Cz6rvSG9UntmxqKXUehaoUc=
+---
+> Name: res/drawable-nodpi/h_dur.png
+> SHA1-Digest: QOf1QwocJ6ybDlKTAjRv6UmTLMc=
+125,126c158,159
+< Name: res/drawable-nodpi/d_mol.png
+< SHA1-Digest: kvjCAYaoHQPLORM1mFerhYfcIhw=
+---
+> Name: res/drawable-nodpi/es_mol.png
+> SHA1-Digest: AlvJDy/BM9IN59KjE6eycQsu2MQ=
+128,129c161,162
+< Name: res/raw/bass_a_1.mp3
+< SHA1-Digest: h5Uyp0+tH1LVxTAy0DUrPChzPBc=
+---
+> Name: classes.dex
+> SHA1-Digest: 1HOm7jJOhjE9uNkFtLMUrXy5OhA=
+131,132c164,165
+< Name: res/raw/bass_d3.mp3
+< SHA1-Digest: LGEYVOtO1N8wI6E4aIqZVSv+qms=
+---
+> Name: res/raw/bass_g_1.mp3
+> SHA1-Digest: LWQfwt1W6XzBbKWfuselxBqBJJk=
+134,135c167,168
+< Name: res/raw/bass_c4.mp3
+< SHA1-Digest: xNJWY9en3xd6nKPBFHmtRA2hUuk=
+---
+> Name: res/drawable-nodpi/as_dur.png
+> SHA1-Digest: 2kpTOSq6Wk8pfuFr6XhcBei+CPY=
+137,138c170,171
+< Name: res/raw/bass_c_4.mp3
+< SHA1-Digest: 7fGmgbrjUr/OlqpgGdiPfmbhRQc=
+---
+> Name: res/drawable-nodpi/es_dur.png
+> SHA1-Digest: eUPsbSthab2JlLMWhc+0hstk8gA=
+140,141c173,174
+< Name: res/drawable-nodpi/minibgryf.jpg
+< SHA1-Digest: FvsbQlowGXi85VAG/5DVenR4xBo=
+---
+> Name: res/raw/bass_b2.mp3
+> SHA1-Digest: qJ6YR/68+zUaO9pWMjePQkUmT6Q=
+143,144c176,177
+< Name: res/anim/fadeout.xml
+< SHA1-Digest: yHzxetb1eym21PAErHamcxUhbxY=
+---
+> Name: res/drawable/fuzz_ikona.png
+> SHA1-Digest: 0VJqI/iX670lsicoA+G8/XsrT24=
+146,147c179,180
+< Name: res/layout/author.xml
+< SHA1-Digest: AXLfg1sJPoZR0gumk1udQB2JQ8Q=
+---
+> Name: res/drawable-pl-nodpi/load_b.jpg
+> SHA1-Digest: XgxA4ZziErkiPvQ8IIQcolgtaHI=
+149,150c182,183
+< Name: res/drawable/metronom_ikona.png
+< SHA1-Digest: ExN1TlOgKiTTyRh7uNQAqs33BmM=
+---
+> Name: res/drawable/bass_ikona.png
+> SHA1-Digest: NVvHmOJKoF0SXhJBVyyB5dlcw5Q=
+152,153c185,186
+< Name: res/drawable-pl-ldpi/icon.png
+< SHA1-Digest: UT08wvmnqpSEV1jKrok9HM6uqww=
+---
+> Name: res/drawable-nodpi/cis_dur.png
+> SHA1-Digest: Ic+bdcR5/fJHLjnyS8/hvhv8kiY=
+155,156c188,189
+< Name: res/drawable-pl-mdpi/icon.png
+< SHA1-Digest: eW1ZZossOMvcfk1ZfefoB4yvFl0=
+---
+> Name: res/xml/preferences.xml
+> SHA1-Digest: b0/qxa4w+RBxslp/BAz+GUfWBS8=
+158,159c191,195
+< Name: res/drawable-nodpi/load_b.jpg
+< SHA1-Digest: tw8qpGOJfZ3NoM4muMK28y7zjX8=
+---
+> Name: res/drawable-nodpi/cis_mol.png
+> SHA1-Digest: jZONFvPr76AQFT9Jwst7L1godKE=
+> 
+> Name: res/drawable-nodpi/b_dur.png
+> SHA1-Digest: /NJ6xAvZ29LSRw0/dStz2FB1+E4=
+163a200,202
+> Name: res/raw/bass_c3.mp3
+> SHA1-Digest: yGQ7lRQ8DHXC5p9rf8XRV1Gs7rA=
+> 
+167,168c206,207
+< Name: res/drawable-nodpi/gis_mol.png
+< SHA1-Digest: j5QhxjbLwZx62rdQKf7OJ2mlKAo=
+---
+> Name: res/drawable-nodpi/load_b.jpg
+> SHA1-Digest: 2i5cb0BCS70YSC9vZqlkKPJvlyo=
+170,171c209,210
+< Name: res/raw/bass_c2.mp3
+< SHA1-Digest: RGtiPEl5RKq0c7ld/C4LNPdy04w=
+---
+> Name: res/drawable-ldpi/icon.png
+> SHA1-Digest: hk4jZ9teBCe/vzBd/aGAbdVKWE0=
+173,174c212,219
+< Name: res/drawable-nodpi/g_mol.png
+< SHA1-Digest: 0Hl2Fhmp7cpNPWF37uH6p56VKF0=
+---
+> Name: res/raw/bass_d4.mp3
+> SHA1-Digest: gPe02OToOT9cGAzyHfpy4lpfUPU=
+> 
+> Name: res/drawable-mdpi/icon.png
+> SHA1-Digest: NG45vQUi+uux1ZGOMHrEHFm57rw=
+> 
+> Name: res/drawable-nodpi/d_mol.png
+> SHA1-Digest: kvjCAYaoHQPLORM1mFerhYfcIhw=
+179,180c224,225
+< Name: res/drawable-pl-nodpi/banner.png
+< SHA1-Digest: bpJo6t9zPsFgck+PWyUkcPvxTBk=
+---
+> Name: res/layout/author.xml
+> SHA1-Digest: VRxBD6QN+577/cVViCtgPgi91R4=
+182,183c227,228
+< Name: res/layout/otherapps_layout.xml
+< SHA1-Digest: lnxC3vhp4hv2R4tVPDw5QoCbH9Y=
+---
+> Name: res/drawable-nodpi/a_mol.png
+> SHA1-Digest: qJNrKxFIjHwKVrTGyo9YGmlzVvQ=
+185,186c230,231
+< Name: res/drawable-nodpi/g_dur.png
+< SHA1-Digest: 6yElfa8qplw5AQvuD9s+qgrJg6g=
+---
+> Name: res/drawable-nodpi/f_mol.png
+> SHA1-Digest: A4ndc2K9rg0zV/or6HYS87kc/ck=
+188,189c233,234
+< Name: res/raw/bass_f_1.mp3
+< SHA1-Digest: vNnxoyv23VqB/OxldqsyqFnxNiM=
+---
+> Name: res/drawable-pl-nodpi/banner.png
+> SHA1-Digest: bpJo6t9zPsFgck+PWyUkcPvxTBk=
+191,192c236,237
+< Name: res/drawable/piano_ikona.png
+< SHA1-Digest: Pl1f5Np7uWl52ypDCd27si/bPy4=
+---
+> Name: res/drawable-pl-mdpi/icon.png
+> SHA1-Digest: eW1ZZossOMvcfk1ZfefoB4yvFl0=
+194,195c239,240
+< Name: res/drawable-xxhdpi/icon.png
+< SHA1-Digest: vlbJ+11wRzjtrqnODcsEeHVWe/Q=
+---
+> Name: res/raw/bass_a1.mp3
+> SHA1-Digest: ZM30GU8HQrFmCu6BLgZ4JrVD3Ak=
+197,198c242,243
+< Name: res/drawable-nodpi/as_dur.png
+< SHA1-Digest: 2kpTOSq6Wk8pfuFr6XhcBei+CPY=
+---
+> Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+> SHA1-Digest: nsoCwYQvSoEvPZnRmRn0UzEPvoo=
+200,201c245,246
+< Name: res/drawable-nodpi/c_dur.png
+< SHA1-Digest: UIPuPur0wAd8AdxbFSEe7NqErPw=
+---
+> Name: res/raw/bass_d_3.mp3
+> SHA1-Digest: gdgE3b9v0CuXrpdoxrIA8UIMnW8=
+203,204c248,249
+< Name: res/layout/about.xml
+< SHA1-Digest: wjjiUfNthUs+eeBsUcYlzmrf7J8=
+---
+> Name: res/drawable-nodpi/g_dur.png
+> SHA1-Digest: 6yElfa8qplw5AQvuD9s+qgrJg6g=
+206,207c251,252
+< Name: res/raw/bass_a3.mp3
+< SHA1-Digest: DHkooTNsI33WgqqSXhZWZBtr48o=
+---
+> Name: res/layout/alternative_scroll_main.xml
+> SHA1-Digest: xevyuVMS0b3H/cDb3WXR8Rr6ki0=
+209,210c254,255
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: E9F85/qDCNqclUF1swwnG6QZXwg=
+---
+> Name: res/drawable-pl-xhdpi/icon.png
+> SHA1-Digest: vso8+EWbQTTSK/AtrGHO6NzfoZE=
+212,213c257,258
+< Name: res/raw/bass_b1.mp3
+< SHA1-Digest: 5jds1D9ESAp2etVIgHP8vRFpHUM=
+---
+> Name: res/layout/about.xml
+> SHA1-Digest: OJEpL5WA0rURGu5TlH0kRPl8STs=
+215,216c260,261
+< Name: res/drawable-nodpi/as_mol.png
+< SHA1-Digest: +Dgu//vkUQbzP9xYT2xRT1kCa7o=
+---
+> Name: res/raw/bass_g1.mp3
+> SHA1-Digest: RnDtnKX0hiIpurUBYytSl6oappo=
+218,219c263,264
+< Name: res/anim/grip_on.xml
+< SHA1-Digest: UrPWjEY+/V1qOY3OwFcsu4uGteM=
+---
+> Name: res/layout/go_pro.xml
+> SHA1-Digest: L6KwSqeYawWFVK1ZyeqpeDfAG7c=
+224,228c269,270
+< Name: res/drawable-nodpi/logo.png
+< SHA1-Digest: Z0UfvNQ/yYSIjzhURyUdIvgBjv4=
+< 
+< Name: res/raw/bass_f_3.mp3
+< SHA1-Digest: /EDErbXLU4gHmhZZC1QIskoONdU=
+---
+> Name: res/raw/bass_c4.mp3
+> SHA1-Digest: xNJWY9en3xd6nKPBFHmtRA2hUuk=
+230,231c272,273
+< Name: res/raw/bass_g2.mp3
+< SHA1-Digest: n0TYynfsLLsZ1StVw6NUUX4tvkQ=
+---
+> Name: res/anim/grip_on.xml
+> SHA1-Digest: T71jdHnK4FfGVUTVJjiqaq/0Qrw=
+233,234c275,276
+< Name: res/drawable/slap_ikona.png
+< SHA1-Digest: /Wyz+ca46ZKewaWiGHlEmrDbpB0=
+---
+> Name: res/layout/list_item_layout.xml
+> SHA1-Digest: 3ySUVjJIuQpZ3OnQ4K6nivWuH+s=
+236,237c278,279
+< Name: res/drawable-pl-xhdpi/icon.png
+< SHA1-Digest: vso8+EWbQTTSK/AtrGHO6NzfoZE=
+---
+> Name: res/drawable-nodpi/c_dur.png
+> SHA1-Digest: UIPuPur0wAd8AdxbFSEe7NqErPw=
+239,240c281,282
+< Name: res/drawable/bass_ikona.png
+< SHA1-Digest: NVvHmOJKoF0SXhJBVyyB5dlcw5Q=
+---
+> Name: res/raw/bass_e1.mp3
+> SHA1-Digest: GBhw+Ucdj8VJkj5Qxkl/uZf8PP4=
+242,243c284,285
+< Name: res/raw/bass_a1.mp3
+< SHA1-Digest: ZM30GU8HQrFmCu6BLgZ4JrVD3Ak=
+---
+> Name: res/raw/bass_f3.mp3
+> SHA1-Digest: slspcVJkLFi4SVrl5flRYekZhfQ=
+245,246c287,288
+< Name: res/drawable-nodpi/item_selector.xml
+< SHA1-Digest: poaUaKu8/ihJnWVEJ/5QPQV+M9I=
+---
+> Name: res/raw/bass_c_3.mp3
+> SHA1-Digest: 3Z77EYX6f4/Yke6RYURZY+SHdWg=
+248,249c290,291
+< Name: res/drawable-nodpi/f_dur.png
+< SHA1-Digest: tbve3cvAjNI0Z8b6S5H47sh1+T8=
+---
+> Name: res/raw/bass_c2.mp3
+> SHA1-Digest: RGtiPEl5RKq0c7ld/C4LNPdy04w=
+251,252c293,294
+< Name: res/raw/bass_f1.mp3
+< SHA1-Digest: UZRQDWA6W166DkIht9UDAo6zhs8=
+---
+> Name: res/drawable-pl-hdpi/icon.png
+> SHA1-Digest: jXN/Cz6rvSG9UntmxqKXUehaoUc=
+254,255c296,297
+< Name: res/layout/exit.xml
+< SHA1-Digest: QIcb2g/sWJ0rPFGWLdDsWuJzCB8=
+---
+> Name: res/drawable-nodpi/minibgryf.jpg
+> SHA1-Digest: FvsbQlowGXi85VAG/5DVenR4xBo=
+257,258c299,300
+< Name: res/raw/bass_d4.mp3
+< SHA1-Digest: gPe02OToOT9cGAzyHfpy4lpfUPU=
+---
+> Name: res/anim/fadeout.xml
+> SHA1-Digest: BqlQg8CaTpSbrnT5xm+hUor+aJc=
+263,267c305,306
+< Name: res/raw/bass_guitar_fret_dim.txt
+< SHA1-Digest: aEoXDVlEe2UWsrHUP0vlhMsKIu0=
+< 
+< Name: res/menu/main.xml
+< SHA1-Digest: 0u81kVHTz0Xi26ARuvu1pAp0dfE=
+---
+> Name: res/menu/menu.xml
+> SHA1-Digest: wgPIvMn0Ic3gBSxGRcfKtnCdoPk=
+269,270c308,309
+< Name: res/drawable-nodpi/f_mol.png
+< SHA1-Digest: A4ndc2K9rg0zV/or6HYS87kc/ck=
+---
+> Name: res/drawable-xhdpi/icon.png
+> SHA1-Digest: PfmkKEZGK5C2NuKdMfsL8WG8W5U=
+272,273c311,312
+< Name: res/raw/bass_c_3.mp3
+< SHA1-Digest: 3Z77EYX6f4/Yke6RYURZY+SHdWg=
+---
+> Name: res/drawable-nodpi/fis_dur.png
+> SHA1-Digest: jFRpLprtqflq3bJhHAypunrKU6A=
+278,282c317,318
+< Name: res/raw/bass_guitar_fret_long_dim.txt
+< SHA1-Digest: XdiYUS8QDuu1bQP2GCawKU1Zgzo=
+< 
+< Name: res/drawable-nodpi/cis_dur.png
+< SHA1-Digest: Ic+bdcR5/fJHLjnyS8/hvhv8kiY=
+---
+> Name: res/raw/bass_g_3.mp3
+> SHA1-Digest: t69gZrheAqENzOsr+R5mNWxnDZQ=
+284,285c320,321
+< Name: res/raw/bass_e2.mp3
+< SHA1-Digest: ekcJ1y00uJF4rBYFSxGgo0nYiD4=
+---
+> Name: res/raw/bass_g3.mp3
+> SHA1-Digest: BLRAyC9lsA+XkFvQegxap/k+dzU=
+287,288c323,324
+< Name: res/raw/bass_g_2.mp3
+< SHA1-Digest: 7aCHouzKnRXIJ2nePqkF1DPWu/I=
+---
+> Name: res/menu/main.xml
+> SHA1-Digest: mUhHbOfPPvlBt0Kbw9LMuALOFOQ=
+290,291c326,327
+< Name: res/drawable-nodpi/banner.png
+< SHA1-Digest: TbB9GqgVOeNBR9y+Ov9rx+ZfC4c=
+---
+> Name: res/raw/bass_b1.mp3
+> SHA1-Digest: 5jds1D9ESAp2etVIgHP8vRFpHUM=
+296,333c332,333
+< Name: res/layout/go_pro.xml
+< SHA1-Digest: f31Ms5bSvgSdjfHkdWbhWqSJ7MY=
+< 
+< Name: res/drawable-nodpi/bass_guitar_fret_long.jpg
+< SHA1-Digest: +2uVoqupH5OWh19eyXD7Fw3EHsQ=
+< 
+< Name: res/drawable-nodpi/cis_mol.png
+< SHA1-Digest: jZONFvPr76AQFT9Jwst7L1godKE=
+< 
+< Name: res/raw/bass_f3.mp3
+< SHA1-Digest: slspcVJkLFi4SVrl5flRYekZhfQ=
+< 
+< Name: res/raw/bass_a_2.mp3
+< SHA1-Digest: Wyv4hEIC0AYmTY252zkP7AwHvcg=
+< 
+< Name: res/anim/grip_off.xml
+< SHA1-Digest: RK5tsGELLp0U7Nhm4B+y+7H/PFU=
+< 
+< Name: res/drawable/electric_ikona.png
+< SHA1-Digest: boaxKs49ERc0F3xMN6MqXzy1kFw=
+< 
+< Name: res/raw/bass_c3.mp3
+< SHA1-Digest: yGQ7lRQ8DHXC5p9rf8XRV1Gs7rA=
+< 
+< Name: res/drawable-nodpi/b_dur.png
+< SHA1-Digest: /NJ6xAvZ29LSRw0/dStz2FB1+E4=
+< 
+< Name: res/layout/alternative_main.xml
+< SHA1-Digest: SBanvTbBQTQmaEYjZlBCt5uMVNI=
+< 
+< Name: res/raw/bass_d_3.mp3
+< SHA1-Digest: gdgE3b9v0CuXrpdoxrIA8UIMnW8=
+< 
+< Name: res/layout/alternative_scroll_main.xml
+< SHA1-Digest: b69A3IDW960OiiK71WuGfIg2aOo=
+< 
+< Name: classes.dex
+< SHA1-Digest: nrQMLuwJGBQVBJJPoTIWu8ghwj8=
+---
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: bZvYLQC0oXqfyWdlznANM8ByONg=
+diff -r result/APP_27/App_B_27/original/META-INF/MANIFEST.MF result/APP_27/App_M_27/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android SignApk)
+---
+> Created-By: 1.0 (Android)
+4,5c4,17
+< Name: res/drawable-nodpi/e_dur.png
+< SHA1-Digest: ghFim4dlI5Sx9daRUi8S6HJUuZI=
+---
+> Name: res/layout/start_activity.xml
+> SHA1-Digest: Jq4weHMT10dXa1PgoIQ2TRrnWTs=
+> 
+> Name: res/raw/bass_f_1.mp3
+> SHA1-Digest: NhlNB8a5J23MxY0RqCX+u2tn4GQ=
+> 
+> Name: res/raw/bass_a_2.mp3
+> SHA1-Digest: yeln4uS66Aj8l93KLeGTz4AHe+Y=
+> 
+> Name: res/drawable-nodpi/h_mol.png
+> SHA1-Digest: lKNUnQWOtKWNbPjgQOjF/Cm62AE=
+> 
+> Name: res/anim/grip_off.xml
+> SHA1-Digest: 7r4nNUoTYxwR4Ay8DevtdJkaAFs=
+10,11c22,23
+< Name: res/layout/list_item_layout.xml
+< SHA1-Digest: cKA4yHXgA8pGg52mYeKBscGR7lw=
+---
+> Name: res/drawable/slap_ikona.png
+> SHA1-Digest: ixcwL9qulqt1zvLgLXeT2YC8LFI=
+13,14c25,26
+< Name: res/drawable-nodpi/start.jpg
+< SHA1-Digest: w9b980oLMjdIU0+zQIMQJHugnDg=
+---
+> Name: res/raw/bass_g2.mp3
+> SHA1-Digest: 3CeEybvq516B4+AcNAI6uJBKlq8=
+16,17c28,29
+< Name: res/raw/bass_b2.mp3
+< SHA1-Digest: tJksILB4OSiKo9mgxoo9v0ygomY=
+---
+> Name: res/drawable/metronom_ikona.png
+> SHA1-Digest: YwdnnI5C0L+EJTaphmARGbp5XsA=
+19,20c31,32
+< Name: res/drawable-nodpi/a_mol.png
+< SHA1-Digest: Hu9PCzIvA6mBK2RvRQcDeeWIkbQ=
+---
+> Name: res/drawable-nodpi/as_mol.png
+> SHA1-Digest: kh16Ezua0W0vBULGXZ6OA8hXsJk=
+22,23c34,35
+< Name: res/drawable-nodpi/fis_mol.png
+< SHA1-Digest: QwDcl8Ne9FNIo+sk6ga0Xl4tdx4=
+---
+> Name: res/raw/bass_f_3.mp3
+> SHA1-Digest: 42jurWevH8xP9Ww7J56YIVX0j/8=
+25,26c37,38
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+---
+> Name: res/raw/bass_f1.mp3
+> SHA1-Digest: y0S4/1VaIi7Gn6dNvgZVmNXd7nI=
+28,29c40,41
+< Name: res/raw/bass_g3.mp3
+< SHA1-Digest: 3k/rkb6YLjxyLgLK/Q2x8XWdmHc=
+---
+> Name: res/drawable/electric_ikona.png
+> SHA1-Digest: Tei7BVW8gM3iZ8LzvJ9b2mImqzo=
+31,32c43,44
+< Name: res/drawable/classic_ikona.png
+< SHA1-Digest: Gfz2BMaMk+JuxexZN2FSKmZIZeY=
+---
+> Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+> SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+34,35c46,47
+< Name: res/raw/bass_d2.mp3
+< SHA1-Digest: 3sTMMKQxnv8fp4S/Y4w/dh4o8gI=
+---
+> Name: res/raw/bass_e2.mp3
+> SHA1-Digest: 8MY7g4w+rvX0y6JUIvcVDB1HljI=
+37,38c49,50
+< Name: res/raw/bass_a2.mp3
+< SHA1-Digest: x76I/E3ovq/2/nxEBAyv6Q8fn90=
+---
+> Name: res/raw/bass_c_4.mp3
+> SHA1-Digest: /koywO33q3MwR6DEmg5V8awyS/k=
+40,41c52,53
+< Name: res/drawable-nodpi/fis_dur.png
+< SHA1-Digest: aEZxPe66wxXb9NyaoTWZsHQgNG8=
+---
+> Name: res/layout/otherapps_layout.xml
+> SHA1-Digest: 8EjF865M4H87oyz79akaDgtfyZc=
+43,44c55,56
+< Name: res/raw/bass_g_1.mp3
+< SHA1-Digest: pzJRffAyYEsl35PlulMB5n/zn2s=
+---
+> Name: res/layout/exit.xml
+> SHA1-Digest: ejJPLaFfc5g6IfykminhWRXvWPY=
+46,47c58,59
+< Name: res/layout/start_activity.xml
+< SHA1-Digest: T+TMGwN8sKO0zdegn5MJeBusay0=
+---
+> Name: res/raw/bass_guitar_fret_long_dim.txt
+> SHA1-Digest: k64ybVXJAEXzB5Ro4oloBpICelI=
+49,50c61,62
+< Name: res/drawable-nodpi/es_mol.png
+< SHA1-Digest: 6/MvujhYaW3kahjCpH/yICd9LnQ=
+---
+> Name: res/drawable-nodpi/gis_mol.png
+> SHA1-Digest: kh16Ezua0W0vBULGXZ6OA8hXsJk=
+52,53c64,65
+< Name: res/drawable-nodpi/a_dur.png
+< SHA1-Digest: BBW96nU2/e7LprmccWLaaYLulvM=
+---
+> Name: res/drawable-nodpi/fis_mol.png
+> SHA1-Digest: QwDcl8Ne9FNIo+sk6ga0Xl4tdx4=
+55,56c67,77
+< Name: res/drawable-mdpi/icon.png
+< SHA1-Digest: fCCSUhFOFSI3Hr1NFbtNmIdbxos=
+---
+> Name: res/drawable-nodpi/d_dur.png
+> SHA1-Digest: 8wsvHW72nSmPTDVXixjHCx50Pqo=
+> 
+> Name: res/drawable-nodpi/f_dur.png
+> SHA1-Digest: CYK5/8ozKq+kmUf7oMs0gtfMqCk=
+> 
+> Name: res/raw/bass_e3.mp3
+> SHA1-Digest: Ct+WSs7X7iTmCnbTv4ams+0QpdM=
+> 
+> Name: res/raw/bass_a2.mp3
+> SHA1-Digest: x76I/E3ovq/2/nxEBAyv6Q8fn90=
+61,62c82,83
+< Name: res/drawable-ldpi/icon.png
+< SHA1-Digest: ddICTg0naIbqcKvlMRlPcMJBIgg=
+---
+> Name: res/drawable-nodpi/start.jpg
+> SHA1-Digest: w9b980oLMjdIU0+zQIMQJHugnDg=
+64,65c85,86
+< Name: res/drawable-pl-nodpi/load_b.jpg
+< SHA1-Digest: /ycel0q4hhLNGoMxm16/qVYoyw4=
+---
+> Name: res/raw/bass_d2.mp3
+> SHA1-Digest: 3sTMMKQxnv8fp4S/Y4w/dh4o8gI=
+67,68c88,89
+< Name: resources.arsc
+< SHA1-Digest: BnUQ3h+LEP1hPTYmSrTgJXUvfmo=
+---
+> Name: res/drawable-nodpi/banner.png
+> SHA1-Digest: AL/Hyb8eDi6D/H78gaFio13NUTA=
+70,71c91,92
+< Name: res/menu/menu.xml
+< SHA1-Digest: XGd01Jho9RgsLcLu0eHTxp9aCaw=
+---
+> Name: res/drawable-nodpi/g_mol.png
+> SHA1-Digest: sFiNVWUv+mao9WDNDdtqJHB2V9o=
+76,77c97,98
+< Name: res/raw/bass_g1.mp3
+< SHA1-Digest: Gn74RDBu4b3QD0B7855SliGbBIs=
+---
+> Name: res/raw/bass_d3.mp3
+> SHA1-Digest: tscZNYvrhxinb2v/O4WTCBIKFVA=
+79,80c100,101
+< Name: AndroidManifest.xml
+< SHA1-Digest: UZzf5IPDUK5Kxbevishd36msk2Q=
+---
+> Name: res/drawable-nodpi/a_dur.png
+> SHA1-Digest: BBW96nU2/e7LprmccWLaaYLulvM=
+82,83c103,104
+< Name: res/drawable-nodpi/h_mol.png
+< SHA1-Digest: lKNUnQWOtKWNbPjgQOjF/Cm62AE=
+---
+> Name: res/drawable-nodpi/e_dur.png
+> SHA1-Digest: ghFim4dlI5Sx9daRUi8S6HJUuZI=
+85,86c106,107
+< Name: res/raw/bass_e3.mp3
+< SHA1-Digest: Ct+WSs7X7iTmCnbTv4ams+0QpdM=
+---
+> Name: res/drawable-nodpi/bass_guitar_fret_long.jpg
+> SHA1-Digest: /RXpwTc6ogsoTWDQMmd62fS8ZMI=
+88,89c109,110
+< Name: res/drawable-nodpi/d_dur.png
+< SHA1-Digest: 8wsvHW72nSmPTDVXixjHCx50Pqo=
+---
+> Name: res/raw/bass_g_2.mp3
+> SHA1-Digest: roSrHFjmQNrkm1AXO3rHqhzA1io=
+91,92c112,113
+< Name: res/drawable-nodpi/h_dur.png
+< SHA1-Digest: UQP69lQTTIr5jGeIFlacIzl09Ds=
+---
+> Name: resources.arsc
+> SHA1-Digest: ud5MzuHKn+BxZi/xkblFl3JZnZI=
+94,95c115,116
+< Name: res/raw/bass_g_3.mp3
+< SHA1-Digest: U6KOeSyq1F5JjqdpbqboUyywzSs=
+---
+> Name: res/drawable-nodpi/logo.png
+> SHA1-Digest: xuVajmIJnAIVKg1LWCFP4uqGtU4=
+97,98c118,131
+< Name: res/drawable/fuzz_ikona.png
+< SHA1-Digest: QbOQ37Wb1g/0x/5TR6Ey/V20i1Q=
+---
+> Name: res/drawable-pl-ldpi/icon.png
+> SHA1-Digest: 7h7XoaLGIHchVYrWwviPrvWJR6Y=
+> 
+> Name: res/drawable/classic_ikona.png
+> SHA1-Digest: Gfz2BMaMk+JuxexZN2FSKmZIZeY=
+> 
+> Name: AndroidManifest.xml
+> SHA1-Digest: pcJSKXVMjw7OyK1UXXQ/geLFbIU=
+> 
+> Name: res/drawable-xxhdpi/icon.png
+> SHA1-Digest: 1ATmUzHKawr3mWIb0SAcDY2gcig=
+> 
+> Name: res/raw/bass_a3.mp3
+> SHA1-Digest: edeb57bFia2s/H0CF7zgTEWutbw=
+103,104c136,137
+< Name: res/drawable-nodpi/es_dur.png
+< SHA1-Digest: ycSs7LEFtCpTCnRgDFQuZ3HUckg=
+---
+> Name: res/raw/bass_a_1.mp3
+> SHA1-Digest: uWrUujF0Qz2I5zSdrw2X1kb0S1U=
+106,107c139,140
+< Name: res/xml/preferences.xml
+< SHA1-Digest: vVtESrfTo/vrcbA2HVDTwTUslLU=
+---
+> Name: res/drawable/piano_ikona.png
+> SHA1-Digest: 2x6fYdT5aTJNzkw1j1+OGRLFOC8=
+109,110c142,143
+< Name: res/drawable-xhdpi/icon.png
+< SHA1-Digest: pvJPUr5vDVVugbpJwF7UBIOi/2c=
+---
+> Name: res/layout/alternative_main.xml
+> SHA1-Digest: sLa3GcLoYp5Dg3vPrUMpNtGg88c=
+112,113c145,146
+< Name: res/drawable-hdpi/icon.png
+< SHA1-Digest: If1wPYJudwrTe4P4eMNr/OL8hSc=
+---
+> Name: res/drawable-nodpi/item_selector.xml
+> SHA1-Digest: fkv7ptgNUEbwqrwNB4gMc49+nJQ=
+118,119c151,152
+< Name: res/raw/bass_e1.mp3
+< SHA1-Digest: LfEYTYZ6/8K55DRVYoarH4UvrOc=
+---
+> Name: res/raw/bass_guitar_fret_dim.txt
+> SHA1-Digest: l1eRphUMUUrteQh5w79ZR7OFtL8=
+121,122c154,155
+< Name: res/drawable-pl-hdpi/icon.png
+< SHA1-Digest: f7imQauuOb+mY6onudxLCKnucxQ=
+---
+> Name: res/drawable-nodpi/h_dur.png
+> SHA1-Digest: UQP69lQTTIr5jGeIFlacIzl09Ds=
+124,125c157,158
+< Name: res/drawable-nodpi/d_mol.png
+< SHA1-Digest: ZoiqGOxwySWzcs3DR5VSCKcVSXk=
+---
+> Name: res/drawable-nodpi/es_mol.png
+> SHA1-Digest: 6/MvujhYaW3kahjCpH/yICd9LnQ=
+127,128c160,161
+< Name: res/raw/bass_a_1.mp3
+< SHA1-Digest: uWrUujF0Qz2I5zSdrw2X1kb0S1U=
+---
+> Name: classes.dex
+> SHA1-Digest: 4Nwzz0FlLwBrUN1byRfWP6bRLkY=
+130,131c163,164
+< Name: res/raw/bass_d3.mp3
+< SHA1-Digest: tscZNYvrhxinb2v/O4WTCBIKFVA=
+---
+> Name: res/raw/bass_g_1.mp3
+> SHA1-Digest: pzJRffAyYEsl35PlulMB5n/zn2s=
+133,134c166,167
+< Name: res/raw/bass_c4.mp3
+< SHA1-Digest: N5zhaTnZPdsnAv7a0VOfH2+DP4Q=
+---
+> Name: res/drawable-nodpi/as_dur.png
+> SHA1-Digest: DdZi58wKnARoguJLWrGjOx9Jpbg=
+136,137c169,170
+< Name: res/raw/bass_c_4.mp3
+< SHA1-Digest: /koywO33q3MwR6DEmg5V8awyS/k=
+---
+> Name: res/drawable-nodpi/es_dur.png
+> SHA1-Digest: ycSs7LEFtCpTCnRgDFQuZ3HUckg=
+139,140c172,173
+< Name: res/drawable-nodpi/minibgryf.jpg
+< SHA1-Digest: Iv4rxlC6WMvHxNkH/FGjQj8mDxk=
+---
+> Name: res/raw/bass_b2.mp3
+> SHA1-Digest: tJksILB4OSiKo9mgxoo9v0ygomY=
+142,143c175,176
+< Name: res/anim/fadeout.xml
+< SHA1-Digest: PgCXXSF4Phq9huFLSqyeGOYR7IA=
+---
+> Name: res/drawable/fuzz_ikona.png
+> SHA1-Digest: QbOQ37Wb1g/0x/5TR6Ey/V20i1Q=
+145,146c178,179
+< Name: res/layout/author.xml
+< SHA1-Digest: bFVDAhAW0iC60P0RJo0xGM7snxk=
+---
+> Name: res/drawable-pl-nodpi/load_b.jpg
+> SHA1-Digest: /ycel0q4hhLNGoMxm16/qVYoyw4=
+148,149c181,182
+< Name: res/drawable/metronom_ikona.png
+< SHA1-Digest: YwdnnI5C0L+EJTaphmARGbp5XsA=
+---
+> Name: res/drawable/bass_ikona.png
+> SHA1-Digest: pvJPUr5vDVVugbpJwF7UBIOi/2c=
+151,152c184,185
+< Name: res/drawable-pl-ldpi/icon.png
+< SHA1-Digest: 7h7XoaLGIHchVYrWwviPrvWJR6Y=
+---
+> Name: res/drawable-nodpi/cis_dur.png
+> SHA1-Digest: J69RIB85wiQUfze+NwoPrIU2Vmg=
+154,155c187,188
+< Name: res/drawable-pl-mdpi/icon.png
+< SHA1-Digest: cAjsMXgd0jxSjE4j6NVYbbhT9f0=
+---
+> Name: res/xml/preferences.xml
+> SHA1-Digest: dwvD4XyDZovUjPGcTLPvBUTrbc8=
+157,158c190,194
+< Name: res/drawable-nodpi/load_b.jpg
+< SHA1-Digest: s8CnX81hs4uvgQMjMRGZBG0ugJ4=
+---
+> Name: res/drawable-nodpi/cis_mol.png
+> SHA1-Digest: SVLV9IqldlV29Rxso3/d9flUpo0=
+> 
+> Name: res/drawable-nodpi/b_dur.png
+> SHA1-Digest: kizWf3tPtk1mdoYkB4nUzyubV/8=
+162a199,201
+> Name: res/raw/bass_c3.mp3
+> SHA1-Digest: nBLSAid8pid0XYg8ACWo+F7IzzY=
+> 
+166,167c205,206
+< Name: res/drawable-nodpi/gis_mol.png
+< SHA1-Digest: kh16Ezua0W0vBULGXZ6OA8hXsJk=
+---
+> Name: res/drawable-nodpi/load_b.jpg
+> SHA1-Digest: CxCPS6dF3FidEBvslLGhEY8IyUw=
+169,170c208,209
+< Name: res/raw/bass_c2.mp3
+< SHA1-Digest: lmJtxVWfLR4+L3tY6w5DzQsThw8=
+---
+> Name: res/drawable-ldpi/icon.png
+> SHA1-Digest: ddICTg0naIbqcKvlMRlPcMJBIgg=
+172,173c211,218
+< Name: res/drawable-nodpi/g_mol.png
+< SHA1-Digest: sFiNVWUv+mao9WDNDdtqJHB2V9o=
+---
+> Name: res/raw/bass_d4.mp3
+> SHA1-Digest: sgZoFtRtNKDYvlXJ/59EWfDX0FI=
+> 
+> Name: res/drawable-mdpi/icon.png
+> SHA1-Digest: fCCSUhFOFSI3Hr1NFbtNmIdbxos=
+> 
+> Name: res/drawable-nodpi/d_mol.png
+> SHA1-Digest: ZoiqGOxwySWzcs3DR5VSCKcVSXk=
+178,179c223,224
+< Name: res/drawable-pl-nodpi/banner.png
+< SHA1-Digest: INcUOGLWQ5ZnliXbm9xCe368bPA=
+---
+> Name: res/layout/author.xml
+> SHA1-Digest: Nmt3MtBPNzi5wa5WmH4OXeP6tjc=
+181,182c226,227
+< Name: res/layout/otherapps_layout.xml
+< SHA1-Digest: 1a22N4w4M5nEcPktcVGHd1PcUjw=
+---
+> Name: res/drawable-nodpi/a_mol.png
+> SHA1-Digest: Hu9PCzIvA6mBK2RvRQcDeeWIkbQ=
+184,185c229,230
+< Name: res/drawable-nodpi/g_dur.png
+< SHA1-Digest: 0GMBLYcDjHJjBMdQMTUwy6tbzHc=
+---
+> Name: res/drawable-nodpi/f_mol.png
+> SHA1-Digest: yKGxVRn8LvfIzf6tCraaN7VxBUo=
+187,188c232,233
+< Name: res/raw/bass_f_1.mp3
+< SHA1-Digest: NhlNB8a5J23MxY0RqCX+u2tn4GQ=
+---
+> Name: res/drawable-pl-nodpi/banner.png
+> SHA1-Digest: INcUOGLWQ5ZnliXbm9xCe368bPA=
+190,191c235,236
+< Name: res/drawable/piano_ikona.png
+< SHA1-Digest: 2x6fYdT5aTJNzkw1j1+OGRLFOC8=
+---
+> Name: res/drawable-pl-mdpi/icon.png
+> SHA1-Digest: cAjsMXgd0jxSjE4j6NVYbbhT9f0=
+193,194c238,239
+< Name: res/drawable-xxhdpi/icon.png
+< SHA1-Digest: 1ATmUzHKawr3mWIb0SAcDY2gcig=
+---
+> Name: res/raw/bass_a1.mp3
+> SHA1-Digest: wqQzUdic0r8MzUcw8KSTXmXtDmk=
+196,197c241,242
+< Name: res/drawable-nodpi/as_dur.png
+< SHA1-Digest: DdZi58wKnARoguJLWrGjOx9Jpbg=
+---
+> Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+> SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+199,200c244,245
+< Name: res/drawable-nodpi/c_dur.png
+< SHA1-Digest: oYyGAqebJaR4vrlnA19+ahpYf0c=
+---
+> Name: res/raw/bass_d_3.mp3
+> SHA1-Digest: zH9LnhCwV3Sm/snE1BtP7WQciJ4=
+202,203c247,248
+< Name: res/layout/about.xml
+< SHA1-Digest: n9tmm/Sc/n/8SKmBVuN0GljBHL0=
+---
+> Name: res/drawable-nodpi/g_dur.png
+> SHA1-Digest: 0GMBLYcDjHJjBMdQMTUwy6tbzHc=
+205,206c250,251
+< Name: res/raw/bass_a3.mp3
+< SHA1-Digest: edeb57bFia2s/H0CF7zgTEWutbw=
+---
+> Name: res/layout/alternative_scroll_main.xml
+> SHA1-Digest: ZjIyRFOIOjKDxNyTDuBSJt33X2A=
+208,209c253,254
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+---
+> Name: res/drawable-pl-xhdpi/icon.png
+> SHA1-Digest: M6HuLR0QPcb9seYLuHees9j/y5o=
+211,212c256,257
+< Name: res/raw/bass_b1.mp3
+< SHA1-Digest: l/LcS8ylcxupkAfP+t8X/II/NDE=
+---
+> Name: res/layout/about.xml
+> SHA1-Digest: 0gYwFYTAd2axCWlLYrAGKBjqVZ4=
+214,215c259,260
+< Name: res/drawable-nodpi/as_mol.png
+< SHA1-Digest: kh16Ezua0W0vBULGXZ6OA8hXsJk=
+---
+> Name: res/raw/bass_g1.mp3
+> SHA1-Digest: Gn74RDBu4b3QD0B7855SliGbBIs=
+217,218c262,263
+< Name: res/anim/grip_on.xml
+< SHA1-Digest: of5Yax2NDPWkAXcM31pf7BX01To=
+---
+> Name: res/layout/go_pro.xml
+> SHA1-Digest: 4wGve0z3WjC/c6ZzR9wbf72Q3xY=
+223,227c268,269
+< Name: res/drawable-nodpi/logo.png
+< SHA1-Digest: xuVajmIJnAIVKg1LWCFP4uqGtU4=
+< 
+< Name: res/raw/bass_f_3.mp3
+< SHA1-Digest: 42jurWevH8xP9Ww7J56YIVX0j/8=
+---
+> Name: res/raw/bass_c4.mp3
+> SHA1-Digest: N5zhaTnZPdsnAv7a0VOfH2+DP4Q=
+229,230c271,272
+< Name: res/raw/bass_g2.mp3
+< SHA1-Digest: 3CeEybvq516B4+AcNAI6uJBKlq8=
+---
+> Name: res/anim/grip_on.xml
+> SHA1-Digest: SRTFZfAvlcVpeRsjLGt3Qw2ppGg=
+232,233c274,275
+< Name: res/drawable/slap_ikona.png
+< SHA1-Digest: ixcwL9qulqt1zvLgLXeT2YC8LFI=
+---
+> Name: res/layout/list_item_layout.xml
+> SHA1-Digest: 0qhA7rwmq7eUl//zguTAQHytsV4=
+235,236c277,278
+< Name: res/drawable-pl-xhdpi/icon.png
+< SHA1-Digest: M6HuLR0QPcb9seYLuHees9j/y5o=
+---
+> Name: res/drawable-nodpi/c_dur.png
+> SHA1-Digest: oYyGAqebJaR4vrlnA19+ahpYf0c=
+238,239c280,281
+< Name: res/drawable/bass_ikona.png
+< SHA1-Digest: pvJPUr5vDVVugbpJwF7UBIOi/2c=
+---
+> Name: res/raw/bass_e1.mp3
+> SHA1-Digest: LfEYTYZ6/8K55DRVYoarH4UvrOc=
+241,242c283,284
+< Name: res/raw/bass_a1.mp3
+< SHA1-Digest: wqQzUdic0r8MzUcw8KSTXmXtDmk=
+---
+> Name: res/raw/bass_f3.mp3
+> SHA1-Digest: 8iBtShJFfMEv9wp24NvCGc1z03o=
+244,245c286,287
+< Name: res/drawable-nodpi/item_selector.xml
+< SHA1-Digest: scHr9wIdDgIXloYInJ1G4jGtjvs=
+---
+> Name: res/raw/bass_c_3.mp3
+> SHA1-Digest: Nw5chzS9zukZEGK887sV6ptK64M=
+247,248c289,290
+< Name: res/drawable-nodpi/f_dur.png
+< SHA1-Digest: CYK5/8ozKq+kmUf7oMs0gtfMqCk=
+---
+> Name: res/raw/bass_c2.mp3
+> SHA1-Digest: lmJtxVWfLR4+L3tY6w5DzQsThw8=
+250,251c292,293
+< Name: res/raw/bass_f1.mp3
+< SHA1-Digest: y0S4/1VaIi7Gn6dNvgZVmNXd7nI=
+---
+> Name: res/drawable-pl-hdpi/icon.png
+> SHA1-Digest: f7imQauuOb+mY6onudxLCKnucxQ=
+253,254c295,296
+< Name: res/layout/exit.xml
+< SHA1-Digest: VvyT5845EX9Mgg7w3Qj5PxVWwhU=
+---
+> Name: res/drawable-nodpi/minibgryf.jpg
+> SHA1-Digest: Iv4rxlC6WMvHxNkH/FGjQj8mDxk=
+256,257c298,299
+< Name: res/raw/bass_d4.mp3
+< SHA1-Digest: sgZoFtRtNKDYvlXJ/59EWfDX0FI=
+---
+> Name: res/anim/fadeout.xml
+> SHA1-Digest: TqpAEaz7tjT4ILosRyNfQfTPepA=
+262,266c304,305
+< Name: res/raw/bass_guitar_fret_dim.txt
+< SHA1-Digest: l1eRphUMUUrteQh5w79ZR7OFtL8=
+< 
+< Name: res/menu/main.xml
+< SHA1-Digest: 3amjcw+cg3NqUKfX6Uw1w/ZEFvM=
+---
+> Name: res/drawable-xhdpi/icon.png
+> SHA1-Digest: pvJPUr5vDVVugbpJwF7UBIOi/2c=
+268,269c307,308
+< Name: res/drawable-nodpi/f_mol.png
+< SHA1-Digest: yKGxVRn8LvfIzf6tCraaN7VxBUo=
+---
+> Name: res/menu/menu.xml
+> SHA1-Digest: QwdlSEXoEEV9E5nwxfxZDDuHM9I=
+271,272c310,311
+< Name: res/raw/bass_c_3.mp3
+< SHA1-Digest: Nw5chzS9zukZEGK887sV6ptK64M=
+---
+> Name: res/drawable-nodpi/fis_dur.png
+> SHA1-Digest: aEZxPe66wxXb9NyaoTWZsHQgNG8=
+277,281c316,317
+< Name: res/raw/bass_guitar_fret_long_dim.txt
+< SHA1-Digest: k64ybVXJAEXzB5Ro4oloBpICelI=
+< 
+< Name: res/drawable-nodpi/cis_dur.png
+< SHA1-Digest: J69RIB85wiQUfze+NwoPrIU2Vmg=
+---
+> Name: res/raw/bass_g_3.mp3
+> SHA1-Digest: U6KOeSyq1F5JjqdpbqboUyywzSs=
+283,284c319,320
+< Name: res/raw/bass_e2.mp3
+< SHA1-Digest: 8MY7g4w+rvX0y6JUIvcVDB1HljI=
+---
+> Name: res/menu/main.xml
+> SHA1-Digest: 8c3VCh0xR0NhdZXy9kClI3hTdLo=
+286,287c322,323
+< Name: res/raw/bass_g_2.mp3
+< SHA1-Digest: roSrHFjmQNrkm1AXO3rHqhzA1io=
+---
+> Name: res/raw/bass_g3.mp3
+> SHA1-Digest: 3k/rkb6YLjxyLgLK/Q2x8XWdmHc=
+289,290c325,326
+< Name: res/drawable-nodpi/banner.png
+< SHA1-Digest: Nd+XDnAZS8nL3wJoL86ET/8BZlU=
+---
+> Name: res/raw/bass_b1.mp3
+> SHA1-Digest: l/LcS8ylcxupkAfP+t8X/II/NDE=
+295,332c331,332
+< Name: res/layout/go_pro.xml
+< SHA1-Digest: h4N+SRfJP2+Hu3BY7R/paokKTg8=
+< 
+< Name: res/drawable-nodpi/bass_guitar_fret_long.jpg
+< SHA1-Digest: /RXpwTc6ogsoTWDQMmd62fS8ZMI=
+< 
+< Name: res/drawable-nodpi/cis_mol.png
+< SHA1-Digest: SVLV9IqldlV29Rxso3/d9flUpo0=
+< 
+< Name: res/raw/bass_f3.mp3
+< SHA1-Digest: 8iBtShJFfMEv9wp24NvCGc1z03o=
+< 
+< Name: res/raw/bass_a_2.mp3
+< SHA1-Digest: yeln4uS66Aj8l93KLeGTz4AHe+Y=
+< 
+< Name: res/anim/grip_off.xml
+< SHA1-Digest: HDt5OindDaRv0gvb3Rr8QZoES5M=
+< 
+< Name: res/drawable/electric_ikona.png
+< SHA1-Digest: Tei7BVW8gM3iZ8LzvJ9b2mImqzo=
+< 
+< Name: res/raw/bass_c3.mp3
+< SHA1-Digest: nBLSAid8pid0XYg8ACWo+F7IzzY=
+< 
+< Name: res/drawable-nodpi/b_dur.png
+< SHA1-Digest: kizWf3tPtk1mdoYkB4nUzyubV/8=
+< 
+< Name: res/layout/alternative_main.xml
+< SHA1-Digest: ZcfqmKTeX0yDr3uD4gtidbzkLTM=
+< 
+< Name: res/raw/bass_d_3.mp3
+< SHA1-Digest: zH9LnhCwV3Sm/snE1BtP7WQciJ4=
+< 
+< Name: res/layout/alternative_scroll_main.xml
+< SHA1-Digest: inzP6iJHj+QfvZbAgHumMGCwYbk=
+< 
+< Name: classes.dex
+< SHA1-Digest: 2ZkDkBUm5YIrhAKYv5tXV8tlE4g=
+---
+> Name: res/drawable-hdpi/icon.png
+> SHA1-Digest: If1wPYJudwrTe4P4eMNr/OL8hSc=
+diff -r result/APP_27/App_B_27/pl/netigen/bestbassguitarfree/BassFretboardActivity.java result/APP_27/App_M_27/pl/netigen/bestbassguitarfree/BassFretboardActivity.java
+35c35,37
+<     this.sounds = new int[][] { { 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099658, 2131099661, 2131099664, 2131099667, 2131099670, 2131099673, 2131099676, 2131099679, 2131099682, 2131099650, 2131099653, 2131099656, 2131099659, 2131099662, 2131099665, 2131099678 }, { 2131099663, 2131099666, 2131099669, 2131099672, 2131099675, 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099658, 2131099661, 2131099664, 2131099667, 2131099670, 2131099673, 2131099676, 2131099679, 2131099682, 2131099650, 2131099663 }, { 2131099648, 2131099651, 2131099654, 2131099657, 2131099660, 2131099663, 2131099666, 2131099669, 2131099672, 2131099675, 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099658, 2131099661, 2131099664, 2131099667, 2131099670, 2131099648 }, { 2131099668, 2131099671, 2131099674, 2131099677, 2131099680, 2131099648, 2131099651, 2131099654, 2131099657, 2131099660, 2131099663, 2131099666, 2131099669, 2131099672, 2131099675, 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099668 } };
+---
+>     int[] arrayOfInt1 = { 2131099648, 2131099651, 2131099654, 2131099657, 2131099660, 2131099663, 2131099666, 2131099669, 2131099672, 2131099675, 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099658, 2131099661, 2131099664, 2131099667, 2131099670, 2131099648 };
+>     int[] arrayOfInt2 = { 2131099668, 2131099671, 2131099674, 2131099677, 2131099680, 2131099648, 2131099651, 2131099654, 2131099657, 2131099660, 2131099663, 2131099666, 2131099669, 2131099672, 2131099675, 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099668 };
+>     this.sounds = new int[][] { { 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099658, 2131099661, 2131099664, 2131099667, 2131099670, 2131099673, 2131099676, 2131099679, 2131099682, 2131099650, 2131099653, 2131099656, 2131099659, 2131099662, 2131099665, 2131099678 }, { 2131099663, 2131099666, 2131099669, 2131099672, 2131099675, 2131099678, 2131099681, 2131099649, 2131099652, 2131099655, 2131099658, 2131099661, 2131099664, 2131099667, 2131099670, 2131099673, 2131099676, 2131099679, 2131099682, 2131099650, 2131099663 }, arrayOfInt1, arrayOfInt2 };
+diff -r result/APP_27/App_B_27/pl/netigen/bestbassguitarfree/FretActivity.java result/APP_27/App_M_27/pl/netigen/bestbassguitarfree/FretActivity.java
+290c290
+<       localBuilder.setPositiveButton("确定", new DialogInterface.OnClickListener()
+---
+>       localBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener()
+Os arquivos binários result/APP_27/App_B_27/res/drawable-nodpi-v4/banner.png e result/APP_27/App_M_27/res/drawable-nodpi-v4/banner.png são diferentes
+Os arquivos binários result/APP_27/App_B_27/res/drawable-nodpi-v4/load_b.jpg e result/APP_27/App_M_27/res/drawable-nodpi-v4/load_b.jpg são diferentes
+diff -r result/APP_27/App_B_27/res/values/strings.xml result/APP_27/App_M_27/res/values/strings.xml
+4,7c4,7
+<     <string name="app_name">贝斯</string>
+<     <string name="app_fret_view">贝斯</string>
+<     <string name="chords_button"><b>更改和弦</b></string>
+<     <string name="author">作者</string>
+---
+>     <string name="app_name">Best Bass Guitar</string>
+>     <string name="app_fret_view">Best Guitar</string>
+>     <string name="chords_button"><b>Change Chords</b></string>
+>     <string name="author">Author</string>
+9,10c9,10
+<     <string name="view">更新日志</string>
+<     <string name="about">关于</string>
+---
+>     <string name="view">Change View</string>
+>     <string name="about">About</string>
+16c16
+< 请发送建议或反馈至:
+---
+> Please, send comments, feature requests or report bugs to:
+20c20
+< 是否退出？
+---
+> Do you want to exit?
+26c26
+<     <string name="action_settings">设置</string>
+---
+>     <string name="action_settings">Settings</string>
+28,29c28,29
+<     <string name="yes">是</string>
+<     <string name="no">否</string>
+---
+>     <string name="yes">Yes</string>
+>     <string name="no">No</string>
+31c31
+<     <string name="exit">退出</string>
+---
+>     <string name="exit">Exit</string>
+40,46c40,46
+<     <string name="pref_vib_summ">开启振动反馈</string>
+<     <string name="pref_vib_title">振动反馈</string>
+<     <string name="pref_mode_summ">设置弹奏模式</string>
+<     <string name="pref_mode_title">弹奏模式</string>
+<     <string name="pref_mode_down">拨弦弹奏</string>
+<     <string name="pref_mode_up">释放弦弹奏</string>
+<     <string name="preferences">设置</string>
+---
+>     <string name="pref_vib_summ">Turn vibration?</string>
+>     <string name="pref_vib_title">Vibes</string>
+>     <string name="pref_mode_summ">Choose playing mode</string>
+>     <string name="pref_mode_title">Playing mode</string>
+>     <string name="pref_mode_down">Play on string tap</string>
+>     <string name="pref_mode_up">Play on string release</string>
+>     <string name="preferences">Settings</string>
+51,55c51,55
+<     <string name="msg_browsernotfound">未安装市场</string>
+<     <string name="our_applications">更多应用</string>
+<     <string name="menu_exit">退出</string>
+<     <string name="msg_exittitle">退出</string>
+<     <string name="msg_exit">确认退出？</string>
+---
+>     <string name="msg_browsernotfound">Market not found!</string>
+>     <string name="our_applications">Our applications</string>
+>     <string name="menu_exit">Exit</string>
+>     <string name="msg_exittitle">Quit</string>
+>     <string name="msg_exit">Are you sure you want to quit?</string>
+diff -r result/APP_27/App_B_27/res/xml/preferences.xml result/APP_27/App_M_27/res/xml/preferences.xml
+8,11d7
+<     <PreferenceCategory android:title="汉化信息" />
+<     <Preference android:title="安智汉化" android:summary="更多精彩 尽在安智 bbs.anzhi.com">
+<         <intent android:action="android.intent.action.VIEW" android:data="http://bbs.anzhi.com" />
+<     </Preference>
+diff -r result/APP_27/App_B_27/smali/android/support/v4/view/PagerTitleStrip$PageListener.smali result/APP_27/App_M_27/smali/android/support/v4/view/PagerTitleStrip$PageListener.smali
+6d5
+< .implements Landroid/support/v4/view/ViewPager$OnAdapterChangeListener;
+7a7
+> .implements Landroid/support/v4/view/ViewPager$OnAdapterChangeListener;
+diff -r result/APP_27/App_B_27/smali/android/support/v4/widget/CursorAdapter.smali result/APP_27/App_M_27/smali/android/support/v4/widget/CursorAdapter.smali
+6d5
+< .implements Landroid/support/v4/widget/CursorFilter$CursorFilterClient;
+7a7
+> .implements Landroid/support/v4/widget/CursorFilter$CursorFilterClient;
+diff -r result/APP_27/App_B_27/smali/com/google/ads/AdView.smali result/APP_27/App_M_27/smali/com/google/ads/AdView.smali
+664c664
+<     if-eqz v0, :cond_0
+---
+>     if-nez v0, :cond_0
+666a667,670
+>     const-string v0, "You must have AdActivity declared in AndroidManifest.xml with configChanges."
+> 
+>     invoke-direct {p0, p1, v0, p2, p3}, Lcom/google/ads/AdView;->a(Landroid/content/Context;Ljava/lang/String;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)V
+> 
+1180c1184
+<     if-eqz v0, :cond_0
+---
+>     if-nez v0, :cond_0
+1182a1187,1190
+>     const-string v0, "You must have INTERNET and ACCESS_NETWORK_STATE permissions in AndroidManifest.xml."
+> 
+>     invoke-direct {p0, p1, v0, p2, p3}, Lcom/google/ads/AdView;->a(Landroid/content/Context;Ljava/lang/String;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)V
+> 
+diff -r result/APP_27/App_B_27/smali/com/google/analytics/tracking/android/GAServiceProxy.smali result/APP_27/App_M_27/smali/com/google/analytics/tracking/android/GAServiceProxy.smali
+5a6
+> .implements Lcom/google/analytics/tracking/android/ServiceProxy;
+8d8
+< .implements Lcom/google/analytics/tracking/android/ServiceProxy;
+diff -r result/APP_27/App_B_27/smali/pl/netigen/bestbassguitarfree/FretActivity.smali result/APP_27/App_M_27/smali/pl/netigen/bestbassguitarfree/FretActivity.smali
+997c997
+<     const-string v5, "\u786e\u5b9a"
+---
+>     const-string v5, "OK"

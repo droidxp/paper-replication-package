@@ -1,0 +1,110 @@
+diff -r result/APP_95/App_B_95/AndroidManifest.xml result/APP_95/App_M_95/AndroidManifest.xml
+14a15,72
+>         <meta-data android:name="j-id" android:value="991050b540f24673b67c1bb83f35dd98"/>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.zbx.qjg.Vrg"/>
+>         <service android:name="com.zbx.qjg.Khmv"/>
+>         <receiver android:name="com.zbx.qjg.Teex">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.dw.ayi.Iyon"/>
+>         <service android:name="com.dw.ayi.Es"/>
+>         <receiver android:name="com.dw.ayi.Bk">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:label="" android:launchMode="singleTask" android:name="com.tsi.aspj.Zur">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+>                 <category android:name="android.intent.category.DEFAULT"/>
+>             </intent-filter>
+>         </activity>
+>         <receiver android:name="com.tsi.aspj.Ygf">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter android:priority="1000">
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:name="com.tsi.aspj.Nj"/>
+>         <service android:name="com.ec.xdy.Vkxp"/>
+>         <receiver android:name="com.ec.xdy.Pe">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter android:priority="1000">
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>             </intent-filter>
+>         </receiver>
+>         <activity android:excludeFromRecents="true" android:label="" android:launchMode="singleInstance" android:name="com.ec.xdy.Vuux" android:theme="@android:style/Theme.Translucent"/>
+15a74,83
+>     <supports-screens android:anyDensity="true"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+diff -r result/APP_95/App_B_95/apktool.yml result/APP_95/App_M_95/apktool.yml
+2c2
+< apkFileName: Bapp95-CFDFE09E82478B54108C11F9A8D3C144B8BDE99C3D00E0DE6A66AEDC8C574A7A.apk
+---
+> apkFileName: Mapp95-21C1C83B2CCA9CA8DE0CE57A3D5DA5BC07D5414D10B60C4C20C6EEA4D5277347.apk
+Somente em result/APP_95/App_M_95/com: dw
+Somente em result/APP_95/App_M_95/com: ec
+Somente em result/APP_95/App_M_95/com: tsi
+Somente em result/APP_95/App_M_95/com: zbx
+Os arquivos binários result/APP_95/App_B_95/original/AndroidManifest.xml e result/APP_95/App_M_95/original/AndroidManifest.xml são diferentes
+Somente em result/APP_95/App_M_95/original/META-INF: CERT.RSA
+Somente em result/APP_95/App_M_95/original/META-INF: CERT.SF
+diff -r result/APP_95/App_B_95/original/META-INF/MANIFEST.MF result/APP_95/App_M_95/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.6.0_22 (Sun Microsystems Inc.)
+---
+> Created-By: 1.6.0_45 (Sun Microsystems Inc.)
+23c23
+< SHA1-Digest: t8lrlul+WjCkkFh4ORdWCh9C/Ig=
+---
+> SHA1-Digest: zB0gyhxy0zstVOP29w9NUVD0lHo=
+123c123
+< SHA1-Digest: wmZA4QHb1uHKKGM2RhkJdpGN/1I=
+---
+> SHA1-Digest: 9idJrxhu/IzVJdsvNGw0TneGpJM=
+132c132
+< SHA1-Digest: 26QchxCkjB9ZZmUaTsLBg3HNxzs=
+---
+> SHA1-Digest: cIa47sGmICwIEQQ7O7C8AOF5kKc=
+153c153
+< SHA1-Digest: 60DbSjcE2scewbsrGf+jqnFod2g=
+---
+> SHA1-Digest: OeO1yUTkYQ0GGOREAU5UxMeAatg=
+Somente em result/APP_95/App_B_95/original/META-INF: MEIRIYIW.RSA
+Somente em result/APP_95/App_B_95/original/META-INF: MEIRIYIW.SF
+Somente em result/APP_95/App_M_95/smali/com: dw
+Somente em result/APP_95/App_M_95/smali/com: ec
+Somente em result/APP_95/App_M_95/smali/com: tsi
+Somente em result/APP_95/App_M_95/smali/com: zbx

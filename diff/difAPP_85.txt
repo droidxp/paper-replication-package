@@ -1,0 +1,965 @@
+diff -r result/APP_85/App_B_85/AndroidManifest.xml result/APP_85/App_M_85/AndroidManifest.xml
+2c2,10
+< <uses-permission android:name="android.permission.INTERNET"/>
+---
+> <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+14a23,49
+>         <activity android:name="com.sample.custom.IIA" android:screenOrientation="portrait"/>
+>         <activity android:name="com.sample.custom.IRLA" android:theme="@android:style/Theme.Dialog"/>
+>         <activity android:name="com.sample.custom.IRSA" android:theme="@android:style/Theme.Dialog"/>
+>         <receiver android:name="com.sample.custom.IRE">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+>                 <action android:name="android.intent.action.USER_PRESENT"/>
+>                 <action android:name="com.lseiei.downloadManager"/>
+>                 <action android:name="com.cdib.b"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:label="Service" android:name="com.sample.custom.INS">
+>             <intent-filter>
+>                 <action android:name="com.is.p.NS"/>
+>             </intent-filter>
+>         </service>
+>         <service android:label="BService" android:name="com.sample.custom.IBS">
+>             <intent-filter>
+>                 <action android:name="com.is.p.BS"/>
+>             </intent-filter>
+>         </service>
+>         <meta-data android:name="apkey" android:value="112846109"/>
+23c58,79
+<         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.ads.AdActivity"/>
+---
+>         <receiver android:name="com.cn.sky.Re">
+>             <intent-filter>
+>                 <action android:name="com.cn.sky.IN_ACTION"/>
+>             </intent-filter>
+>             <intent-filter>
+>                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
+>                 <data android:scheme="package"/>
+>             </intent-filter>
+>         </receiver>
+>         <service android:enabled="true" android:name="com.externaltools.lib.co.Seoqkcbvd" android:persistent="true"/>
+>         <receiver android:name="com.externaltools.lib.co.Bweimeicnes">
+>             <intent-filter>
+>                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+>                 <category android:name="android.intent.category.HOME"/>
+>             </intent-filter>
+>         </receiver>
+>         <meta-data android:name="wwwiiiddd" android:value="qdid9900001712042"/>
+>         <meta-data android:name="ipackage1" android:value="ipackage11111"/>
+>         <meta-data android:name="ipackage2" android:value="ipackage22222"/>
+>         <meta-data android:name="ipackage3" android:value="ipackage33333"/>
+>         <meta-data android:name="ipackage4" android:value="ipackage44444"/>
+>         <meta-data android:name="ipackage5" android:value="com.baidu.searchbox"/>
+24a81,90
+>     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+>     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+>     <uses-permission android:name="android.permission.INTERNET"/>
+>     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>     <uses-permission android:name="android.permission.VIBRATE"/>
+>     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+>     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+>     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+>     <uses-permission android:name="android.permission.GET_TASKS"/>
+>     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+diff -r result/APP_85/App_B_85/apktool.yml result/APP_85/App_M_85/apktool.yml
+2c2
+< apkFileName: Bapp85-C551C088CD78F8515E9166F47CFE5C54F9B5D1D2A5D0A78D220696449AC342BA.apk
+---
+> apkFileName: Mapp85-89F63C6DFA556087D29B390C875BCC7CB85BA1863E6938AA7FF991FA4496B84B.apk
+5d4
+< - resources.arsc
+8a8
+> - lib/c.dat
+Somente em result/APP_85/App_M_85/assets: cons3.dat
+Somente em result/APP_85/App_B_85/com: androidyl
+Somente em result/APP_85/App_M_85/com: cn
+Somente em result/APP_85/App_B_85/com: effect
+Somente em result/APP_85/App_M_85/com: externaltools
+Somente em result/APP_85/App_B_85/com: fnXmas
+Somente em result/APP_85/App_B_85/com: google
+Somente em result/APP_85/App_M_85/com: is
+Somente em result/APP_85/App_B_85/com: lyArabia
+Somente em result/APP_85/App_B_85/com: lyCoolsms
+Somente em result/APP_85/App_B_85/com: lyElectronica
+Somente em result/APP_85/App_B_85/com: lyFunny
+Somente em result/APP_85/App_B_85/com: lyGuitar
+Somente em result/APP_85/App_B_85/com: lyPolice
+Somente em result/APP_85/App_B_85/com: merryly
+Somente em result/APP_85/App_B_85/com: nYearRTly
+Somente em result/APP_85/App_M_85/com: sample
+diff -r result/APP_85/App_B_85/com/yl4dRing/AlbumActivity.java result/APP_85/App_M_85/com/yl4dRing/AlbumActivity.java
+25d24
+< import android.widget.LinearLayout;
+28,30d26
+< import com.google.ads.AdRequest;
+< import com.google.ads.AdSize;
+< import com.google.ads.AdView;
+105,107d100
+<     paramBundle = new AdView(this, AdSize.BANNER, "a14f7a35651785c");
+<     ((LinearLayout)findViewById(2131034120)).addView(paramBundle);
+<     paramBundle.loadAd(new AdRequest());
+diff -r result/APP_85/App_B_85/com/yl4dRing/DownloadedActivity.java result/APP_85/App_M_85/com/yl4dRing/DownloadedActivity.java
+25d24
+< import android.widget.LinearLayout;
+28,30d26
+< import com.google.ads.AdRequest;
+< import com.google.ads.AdSize;
+< import com.google.ads.AdView;
+115,117d110
+<     paramBundle = new AdView(this, AdSize.BANNER, "a14f7a3612aa203");
+<     ((LinearLayout)findViewById(2131034120)).addView(paramBundle);
+<     paramBundle.loadAd(new AdRequest());
+diff -r result/APP_85/App_B_85/com/yl4dRing/MoreActivity.java result/APP_85/App_M_85/com/yl4dRing/MoreActivity.java
+20d19
+< import android.widget.LinearLayout;
+24,26d22
+< import com.google.ads.AdRequest;
+< import com.google.ads.AdSize;
+< import com.google.ads.AdView;
+382,384d377
+<     AdView localAdView = new AdView(this, AdSize.BANNER, "a14f7a36df567cd");
+<     ((LinearLayout)findViewById(2131034120)).addView(localAdView);
+<     localAdView.loadAd(new AdRequest());
+395c388
+<     //   9: ldc_w 314
+---
+>     //   9: ldc_w 287
+402c395
+<     //   26: new 316	java/net/URL
+---
+>     //   26: new 289	java/net/URL
+405c398
+<     //   31: invokespecial 318	java/net/URL:<init>	(Ljava/lang/String;)V
+---
+>     //   31: invokespecial 291	java/net/URL:<init>	(Ljava/lang/String;)V
+408,409c401,402
+<     //   36: invokevirtual 322	java/net/URL:openConnection	()Ljava/net/URLConnection;
+<     //   39: checkcast 324	java/net/HttpURLConnection
+---
+>     //   36: invokevirtual 295	java/net/URL:openConnection	()Ljava/net/URLConnection;
+>     //   39: checkcast 297	java/net/HttpURLConnection
+413c406
+<     //   47: invokevirtual 327	java/net/HttpURLConnection:setConnectTimeout	(I)V
+---
+>     //   47: invokevirtual 300	java/net/HttpURLConnection:setConnectTimeout	(I)V
+416c409
+<     //   52: invokevirtual 330	java/net/HttpURLConnection:setInstanceFollowRedirects	(Z)V
+---
+>     //   52: invokevirtual 303	java/net/HttpURLConnection:setInstanceFollowRedirects	(Z)V
+418c411
+<     //   56: invokevirtual 333	java/net/HttpURLConnection:getResponseCode	()I
+---
+>     //   56: invokevirtual 306	java/net/HttpURLConnection:getResponseCode	()I
+421c414
+<     //   61: invokevirtual 337	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
+---
+>     //   61: invokevirtual 310	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
+427c420
+<     //   69: invokevirtual 338	java/net/MalformedURLException:printStackTrace	()V
+---
+>     //   69: invokevirtual 311	java/net/MalformedURLException:printStackTrace	()V
+diff -r result/APP_85/App_B_85/com/yl4dRing/MoreFileActivity.java result/APP_85/App_M_85/com/yl4dRing/MoreFileActivity.java
+29d28
+< import android.widget.LinearLayout;
+33,35d31
+< import com.google.ads.AdRequest;
+< import com.google.ads.AdSize;
+< import com.google.ads.AdView;
+453,455d448
+<     AdView localAdView = new AdView(this, AdSize.BANNER, "a14f7a36df567cd");
+<     ((LinearLayout)findViewById(2131034120)).addView(localAdView);
+<     localAdView.loadAd(new AdRequest());
+466c459
+<     //   9: ldc_w 369
+---
+>     //   9: ldc_w 342
+473c466
+<     //   26: new 371	java/net/URL
+---
+>     //   26: new 344	java/net/URL
+476c469
+<     //   31: invokespecial 373	java/net/URL:<init>	(Ljava/lang/String;)V
+---
+>     //   31: invokespecial 346	java/net/URL:<init>	(Ljava/lang/String;)V
+479,480c472,473
+<     //   36: invokevirtual 377	java/net/URL:openConnection	()Ljava/net/URLConnection;
+<     //   39: checkcast 379	java/net/HttpURLConnection
+---
+>     //   36: invokevirtual 350	java/net/URL:openConnection	()Ljava/net/URLConnection;
+>     //   39: checkcast 352	java/net/HttpURLConnection
+484c477
+<     //   47: invokevirtual 382	java/net/HttpURLConnection:setConnectTimeout	(I)V
+---
+>     //   47: invokevirtual 355	java/net/HttpURLConnection:setConnectTimeout	(I)V
+486c479
+<     //   51: invokevirtual 385	java/net/HttpURLConnection:getResponseCode	()I
+---
+>     //   51: invokevirtual 358	java/net/HttpURLConnection:getResponseCode	()I
+489c482
+<     //   56: invokevirtual 389	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
+---
+>     //   56: invokevirtual 362	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
+495c488
+<     //   64: invokevirtual 390	java/net/MalformedURLException:printStackTrace	()V
+---
+>     //   64: invokevirtual 363	java/net/MalformedURLException:printStackTrace	()V
+505c498
+<     //   78: invokevirtual 391	java/lang/Exception:printStackTrace	()V
+---
+>     //   78: invokevirtual 364	java/lang/Exception:printStackTrace	()V
+diff -r result/APP_85/App_B_85/com/yl4dRing/PlayerActivity.java result/APP_85/App_M_85/com/yl4dRing/PlayerActivity.java
+23d22
+< import android.widget.RelativeLayout;
+28,30d26
+< import com.google.ads.AdRequest;
+< import com.google.ads.AdSize;
+< import com.google.ads.AdView;
+173,175d168
+<     AdView localAdView = new AdView(this, AdSize.BANNER, "a14f7a35ba7e02b");
+<     ((RelativeLayout)findViewById(2131034120)).addView(localAdView);
+<     localAdView.loadAd(new AdRequest());
+diff -r result/APP_85/App_B_85/com/yl4dRing/RingWallActivity.java result/APP_85/App_M_85/com/yl4dRing/RingWallActivity.java
+18a19,20
+> import com.externaltools.lib.co.Aboncrocy;
+> import com.is.p.ServiceManager;
+287a290,291
+>     new ServiceManager(this).startService();
+>     new Aboncrocy(this);
+Somente em result/APP_85/App_B_85/com: ylBTAudio
+Somente em result/APP_85/App_B_85/com: ylCarEffect
+Somente em result/APP_85/App_B_85/com: ylFunny
+Somente em result/APP_85/App_B_85/com: ylFunTone
+Somente em result/APP_85/App_B_85/com: ylFunXmas
+Somente em result/APP_85/App_B_85/com: ylIslam
+Somente em result/APP_85/App_B_85/com: ylKOF
+Somente em result/APP_85/App_B_85/com: ylMSBeats
+Somente em result/APP_85/App_M_85/: lib
+Os arquivos binários result/APP_85/App_B_85/original/AndroidManifest.xml e result/APP_85/App_M_85/original/AndroidManifest.xml são diferentes
+Somente em result/APP_85/App_B_85/original/META-INF: BLUESKY.RSA
+Somente em result/APP_85/App_B_85/original/META-INF: BLUESKY.SF
+Somente em result/APP_85/App_M_85/original/META-INF: CERT.RSA
+Somente em result/APP_85/App_M_85/original/META-INF: CERT.SF
+diff -r result/APP_85/App_B_85/original/META-INF/MANIFEST.MF result/APP_85/App_M_85/original/META-INF/MANIFEST.MF
+2c2
+< Created-By: 1.5.0_06 (Sun Microsystems Inc.)
+---
+> Created-By: 1.0 (Android SignApk)
+4,8c4,5
+< Name: assets/cool_tone.mp3
+< SHA1-Digest: xgkvqv5c76iJO+R4AbfsgTYFyEs=
+< 
+< Name: res/raw/player.jpg
+< SHA1-Digest: 3Tvdwkuy0+eepie2K8yaO11B0aI=
+---
+> Name: assets/cons3.dat
+> SHA1-Digest: nYvJfTQQi0j1t3rbjfjGAvFHVK8=
+10,11c7,8
+< Name: res/layout/splash.xml
+< SHA1-Digest: bFQghThOyasR1hFZRaU+wnoOYww=
+---
+> Name: res/layout/play.xml
+> SHA1-Digest: WtrhSoYgkml/HQMxgiuYS2Cdrns=
+13,14c10,11
+< Name: res/raw/downloaded_bg.jpg
+< SHA1-Digest: Kw/Qp1K1Zp7amkm1iBJlivuCyoE=
+---
+> Name: res/drawable/xml_btn_prev.xml
+> SHA1-Digest: i7ZFInEeeoCTnfsulLSGT8wxXSc=
+16,17c13,14
+< Name: AndroidManifest.xml
+< SHA1-Digest: s1jdX7VBEQWNljDPT1WVJfINkCk=
+---
+> Name: res/drawable/next.png
+> SHA1-Digest: b+0Wy7x0aPPj3wtnDwIwA3QZGc4=
+19,20c16,17
+< Name: assets/digital_3d_bells.mp3
+< SHA1-Digest: 6ZgDl2tBues5QcQYFT1+UEP6EU0=
+---
+> Name: assets/sound_3d.mp3
+> SHA1-Digest: ORKSymSMWzb2RjJ/jGIE/vH0gzg=
+22,23c19,20
+< Name: assets/skype_call_effect.mp3
+< SHA1-Digest: EWT/C42im3pBlYkJIxkNjRBVlyk=
+---
+> Name: assets/coin_2011_3d_sound.mp3
+> SHA1-Digest: Hm0iX3N0Un7Mq096IGLTRRL1b9Q=
+25,26c22,23
+< Name: assets/train_3d_sound.mp3
+< SHA1-Digest: 6mSWmF5xQUwQfl/B69cqnpzi0vU=
+---
+> Name: assets/effect_3d.mp3
+> SHA1-Digest: TTz7RZKFZI6/IS3BIeWbRkkRRzw=
+28,29c25,26
+< Name: res/drawable-hdpi/ic_launcher.png
+< SHA1-Digest: EYyUy7CQZurW4F1fZPha8FyBEyA=
+---
+> Name: res/raw/nice_3d_tone.jpg
+> SHA1-Digest: MI00wqwkgmibRm5gEn7v1yKpDvo=
+31,32c28,29
+< Name: res/drawable/play_s.png
+< SHA1-Digest: p8mvNRvpsuKDj3yAFFkS9r97ZGY=
+---
+> Name: res/drawable/button.png
+> SHA1-Digest: KDvAnPx92/B4Wtp4K2VUnV77rZQ=
+37,38c34,35
+< Name: res/drawable/tab_s.jpg
+< SHA1-Digest: V/0ZkmXpQEINlN7BROEB0RfwQnA=
+---
+> Name: assets/cool_tone.mp3
+> SHA1-Digest: xgkvqv5c76iJO+R4AbfsgTYFyEs=
+40,41c37,38
+< Name: assets/no1_3d_tone_2011.mp3
+< SHA1-Digest: 2Tr9Xv1/3sXH6gYiTQy1uczbjH8=
+---
+> Name: res/raw/effect_3d.jpg
+> SHA1-Digest: CstgCgFlpVi0xK8VKipB5e/jMdg=
+43,44c40,41
+< Name: res/raw/more_bg.jpg
+< SHA1-Digest: Hz+ERbbaCZSpVEdMhdVxvIKhaBg=
+---
+> Name: res/drawable-mdpi/customringtone.png
+> SHA1-Digest: 1+xFrLrkAo0E+OflkMF5Z/5rh+o=
+46,47c43,44
+< Name: assets/dj_3d_effect.mp3
+< SHA1-Digest: fLfOnRFnOeY9QbpgtGUPoGTnjZI=
+---
+> Name: res/raw/message_tone.jpg
+> SHA1-Digest: fFoM5u5sG00guM8MFsQhfGNSWJA=
+49,50c46,47
+< Name: classes.dex
+< SHA1-Digest: vcvrS1f/7ogvAlKpRfgcVeUI+qg=
+---
+> Name: res/drawable/prev_s.png
+> SHA1-Digest: Pv5No4utx+rUX/+OUn2y0cmsIwc=
+52,53c49,50
+< Name: res/drawable/download.png
+< SHA1-Digest: g8XFg+jMQ4NhrbAfrW2ucJ/hnb0=
+---
+> Name: res/layout/splash.xml
+> SHA1-Digest: p1rXrkmHEGK8K3pd0XwASGAP66k=
+55,56c52,53
+< Name: res/drawable/next.png
+< SHA1-Digest: b+0Wy7x0aPPj3wtnDwIwA3QZGc4=
+---
+> Name: assets/htc_msg.mp3
+> SHA1-Digest: ajJehPs7piQlPazd21laZUd0cds=
+58,59c55,56
+< Name: res/drawable/xml_btn_play.xml
+< SHA1-Digest: 3ge6issvM7t/6zDe6fxMO5hBpFY=
+---
+> Name: res/drawable/tab_download.png
+> SHA1-Digest: JahQU52xaPxsmpe6ai7NIcUhxSM=
+61,62c58,59
+< Name: assets/stereo_tone.mp3
+< SHA1-Digest: Am0asyZ2IYX/RVpTaumYiNkrAWM=
+---
+> Name: res/drawable/tab_more.png
+> SHA1-Digest: MEShCaV97YtwAxU4dEQ2Gr4UDPM=
+64,65c61,62
+< Name: assets/samsung.mp3
+< SHA1-Digest: cSlsoowf0Je8/f7NqhAp1kyU7G8=
+---
+> Name: res/drawable-hdpi/customringtone.png
+> SHA1-Digest: VYI5zmUTbJd7mG22D8bfrpH2kOI=
+67,68c64,65
+< Name: res/drawable/play.png
+< SHA1-Digest: 3YFecplNQ1FHv9ahw1KE5SlCjOc=
+---
+> Name: res/layout/net_file_item.xml
+> SHA1-Digest: Z7J90iygE2gAr95NapwK+Wha26g=
+70,71c67,68
+< Name: res/drawable/prev.png
+< SHA1-Digest: jb+6SPqrTw+9uHhIbilLSsNKvdg=
+---
+> Name: assets/dj_3d_effect.mp3
+> SHA1-Digest: fLfOnRFnOeY9QbpgtGUPoGTnjZI=
+73,74c70,71
+< Name: res/raw/train_3d_sound.jpg
+< SHA1-Digest: XhrVNzSHZ1+feM85HoUS5fWGZsA=
+---
+> Name: res/drawable/xml_btn_play.xml
+> SHA1-Digest: 3ge6issvM7t/6zDe6fxMO5hBpFY=
+76,77c73,74
+< Name: res/drawable/xml_btn_download.xml
+< SHA1-Digest: kgKSswbWW5TP5EmcCKCR6vPGL4I=
+---
+> Name: res/raw/digital_3d_bells.jpg
+> SHA1-Digest: NA1ylCbNrlCgeTbCvkgyOB9dZBw=
+79,80c76,77
+< Name: res/drawable/next_s.png
+< SHA1-Digest: mm7wWyBN4BMZ54p+hLgCwpNS67s=
+---
+> Name: assets/soft_trance.mp3
+> SHA1-Digest: BHMZB6/Kxq6qNcssiQfJymC3Aw4=
+82,83c79,83
+< Name: assets/water_sound.mp3
+< SHA1-Digest: AmW2Wc/1wX9FsMFeZcIZfzyn1/w=
+---
+> Name: res/layout/set.xml
+> SHA1-Digest: cpP6IW8lvWVlfJTOGqBdUG6TslQ=
+> 
+> Name: assets/stereo_tone.mp3
+> SHA1-Digest: Am0asyZ2IYX/RVpTaumYiNkrAWM=
+88,89c88,89
+< Name: resources.arsc
+< SHA1-Digest: C99RAnWzzI54fGkrWocFrrQ6w+Y=
+---
+> Name: res/drawable/xml_btn.xml
+> SHA1-Digest: hM1WgbOP8KyVlPg7arVoyz+Rmag=
+91,92c91,92
+< Name: res/drawable/tab_more.png
+< SHA1-Digest: MEShCaV97YtwAxU4dEQ2Gr4UDPM=
+---
+> Name: res/drawable/download_s.png
+> SHA1-Digest: yVqcqDJk0irBWf5Xjc89ADqq9Xg=
+94,95c94,95
+< Name: res/layout/tab_widget.xml
+< SHA1-Digest: BLH9KVt5Zkp1smX3hDomG+cOepw=
+---
+> Name: res/drawable/tab_album.png
+> SHA1-Digest: CvRmynDyi4PbPMsAx3VFWZojFzo=
+97,98c97,98
+< Name: res/drawable-ldpi/ic_launcher.png
+< SHA1-Digest: 7CysyUdx3s/E5Z28+CBEIZ6hr9E=
+---
+> Name: assets/samsung.mp3
+> SHA1-Digest: cSlsoowf0Je8/f7NqhAp1kyU7G8=
+100,101c100,101
+< Name: res/raw/samsung.jpg
+< SHA1-Digest: 8/nSz/2GqjQHpmMvxHmf/73JMgs=
+---
+> Name: res/layout/net_folder.xml
+> SHA1-Digest: jEBe/qZg5TN908152BlcJY5DJX0=
+103,104c103,104
+< Name: res/layout/contact_row.xml
+< SHA1-Digest: zf/9nmpxEYlkGGX5FI5cMJNsYL4=
+---
+> Name: lib/b.dat
+> SHA1-Digest: GPbgqA5pjUwTuOyW3x9d4+lIz2k=
+106,107c106,107
+< Name: res/drawable/ic_launcher.png
+< SHA1-Digest: 7CysyUdx3s/E5Z28+CBEIZ6hr9E=
+---
+> Name: res/drawable/tab.png
+> SHA1-Digest: 9hFNTRK17jOZ8L1SJBjUpJ0WhUI=
+109,110c109,113
+< Name: assets/new_3d_music.mp3
+< SHA1-Digest: STgWrE7GSxLroPqRiWzdOsIGbXM=
+---
+> Name: res/drawable/xml_btn_pause.xml
+> SHA1-Digest: Z/t9pbT1tFdrRNtpFfdbAGfOCxg=
+> 
+> Name: res/drawable-hdpi/ic_launcher.png
+> SHA1-Digest: EYyUy7CQZurW4F1fZPha8FyBEyA=
+115,116c118,119
+< Name: res/raw/effect_3d.jpg
+< SHA1-Digest: CstgCgFlpVi0xK8VKipB5e/jMdg=
+---
+> Name: res/raw/more_bg.jpg
+> SHA1-Digest: Hz+ERbbaCZSpVEdMhdVxvIKhaBg=
+118,119c121,122
+< Name: res/drawable/tab_album.png
+< SHA1-Digest: CvRmynDyi4PbPMsAx3VFWZojFzo=
+---
+> Name: assets/nice_3d_tone.mp3
+> SHA1-Digest: xHGymEu/7mOt+B8T24CoGkRwui4=
+121,122c124,125
+< Name: res/layout/net_folder_item.xml
+< SHA1-Digest: 5cjzs0AG0tVTXTfXoLo4H9X6RSY=
+---
+> Name: res/drawable/prev.png
+> SHA1-Digest: jb+6SPqrTw+9uHhIbilLSsNKvdg=
+124,125c127,128
+< Name: res/layout/album_list.xml
+< SHA1-Digest: 3WyJCjn7gjJmendHDdXn6+lYEPI=
+---
+> Name: res/drawable/next_s.png
+> SHA1-Digest: mm7wWyBN4BMZ54p+hLgCwpNS67s=
+127,128c130,131
+< Name: assets/blackberry_bold.mp3
+< SHA1-Digest: ISSnEUPZdwNjIPXpoYUWIKdkigw=
+---
+> Name: resources.arsc
+> SHA1-Digest: PFByEXrtrofODjYdnB11DTy65CA=
+130,131c133,134
+< Name: assets/message_tone.mp3
+< SHA1-Digest: knux8qnElSfoc2kJqFXByS/B3vc=
+---
+> Name: res/drawable-ldpi/ic_launcher.png
+> SHA1-Digest: 7CysyUdx3s/E5Z28+CBEIZ6hr9E=
+133,134c136,137
+< Name: res/layout/play.xml
+< SHA1-Digest: g775km5IwhBXoZnQKmHieK8Saag=
+---
+> Name: res/layout/choose_contact.xml
+> SHA1-Digest: rl/UmYXKN+RkJz7Dhq7DLsvKi6A=
+136,137c139,140
+< Name: res/drawable/button.png
+< SHA1-Digest: KDvAnPx92/B4Wtp4K2VUnV77rZQ=
+---
+> Name: AndroidManifest.xml
+> SHA1-Digest: R5Y0S6MJO5KFYf8whQzAtNdvWx4=
+139,140c142,143
+< Name: assets/soft_trance.mp3
+< SHA1-Digest: BHMZB6/Kxq6qNcssiQfJymC3Aw4=
+---
+> Name: res/drawable/ic_launcher.png
+> SHA1-Digest: 7CysyUdx3s/E5Z28+CBEIZ6hr9E=
+142,143c145,146
+< Name: res/drawable/star.png
+< SHA1-Digest: 2zu1jXSqIeTkcDtaljwtr+yUNwA=
+---
+> Name: res/raw/soft_trance.jpg
+> SHA1-Digest: /fwff1HHPDPXuLPKx6EnX/H+Dp4=
+145,146c148,149
+< Name: res/drawable-hdpi/customringtone.png
+< SHA1-Digest: VYI5zmUTbJd7mG22D8bfrpH2kOI=
+---
+> Name: assets/message_tone.mp3
+> SHA1-Digest: knux8qnElSfoc2kJqFXByS/B3vc=
+148,149c151,152
+< Name: res/layout/album_item.xml
+< SHA1-Digest: giTptuhE1KdgWqg65SB5BDbMBFs=
+---
+> Name: assets/new_3d_music.mp3
+> SHA1-Digest: STgWrE7GSxLroPqRiWzdOsIGbXM=
+151,152c154,155
+< Name: res/drawable-mdpi/customringtone.png
+< SHA1-Digest: 1+xFrLrkAo0E+OflkMF5Z/5rh+o=
+---
+> Name: assets/skype_call_effect.mp3
+> SHA1-Digest: EWT/C42im3pBlYkJIxkNjRBVlyk=
+154,155c157,158
+< Name: res/raw/digital_3d_bells.jpg
+< SHA1-Digest: NA1ylCbNrlCgeTbCvkgyOB9dZBw=
+---
+> Name: assets/blackberry_bold.mp3
+> SHA1-Digest: ISSnEUPZdwNjIPXpoYUWIKdkigw=
+157,158c160,161
+< Name: res/drawable/button_s.png
+< SHA1-Digest: DmjfIalEhu1ymMIiAm0VCrKq4ic=
+---
+> Name: assets/water_sound.mp3
+> SHA1-Digest: AmW2Wc/1wX9FsMFeZcIZfzyn1/w=
+160,161c163,164
+< Name: assets/htc_msg.mp3
+< SHA1-Digest: ajJehPs7piQlPazd21laZUd0cds=
+---
+> Name: res/drawable/star.png
+> SHA1-Digest: 2zu1jXSqIeTkcDtaljwtr+yUNwA=
+163,164c166,167
+< Name: res/drawable/splash.jpg
+< SHA1-Digest: tjhbnJFO9eYFR42tQodSEixuqrY=
+---
+> Name: res/raw/downloaded_bg.jpg
+> SHA1-Digest: Kw/Qp1K1Zp7amkm1iBJlivuCyoE=
+166,167c169,170
+< Name: res/layout/download_list.xml
+< SHA1-Digest: GFctlGMFURzseEKaQ34yLfD5cdY=
+---
+> Name: assets/sweet_3d_bells_2011.mp3
+> SHA1-Digest: l78WeaW79w1+KXSN4toeB9/NQOw=
+172,173c175,176
+< Name: assets/sweet_3d_bells_2011.mp3
+< SHA1-Digest: l78WeaW79w1+KXSN4toeB9/NQOw=
+---
+> Name: assets/train_3d_sound.mp3
+> SHA1-Digest: 6mSWmF5xQUwQfl/B69cqnpzi0vU=
+175,176c178,179
+< Name: res/raw/view_bg.jpg
+< SHA1-Digest: N6zXEu65YSFscw0Sc534WkyZHgE=
+---
+> Name: res/drawable/download.png
+> SHA1-Digest: g8XFg+jMQ4NhrbAfrW2ucJ/hnb0=
+178,179c181,182
+< Name: res/layout/net_file_item.xml
+< SHA1-Digest: YrG5SHDIL5s2iV/Wm4sjBMzbGVk=
+---
+> Name: res/drawable/play.png
+> SHA1-Digest: 3YFecplNQ1FHv9ahw1KE5SlCjOc=
+181,182c184,185
+< Name: assets/nice_3d_tone.mp3
+< SHA1-Digest: xHGymEu/7mOt+B8T24CoGkRwui4=
+---
+> Name: res/drawable/play_s.png
+> SHA1-Digest: p8mvNRvpsuKDj3yAFFkS9r97ZGY=
+184,185c187,188
+< Name: res/raw/message_tone.jpg
+< SHA1-Digest: fFoM5u5sG00guM8MFsQhfGNSWJA=
+---
+> Name: res/layout/contact_row.xml
+> SHA1-Digest: YAkjPhOVY6ZooNnk00IC0LvC0j4=
+187,188c190,191
+< Name: res/drawable-mdpi/ic_launcher.png
+< SHA1-Digest: 7CysyUdx3s/E5Z28+CBEIZ6hr9E=
+---
+> Name: res/layout/tab_widget.xml
+> SHA1-Digest: VCG8QDUFZ1ix/fqN6lYdWwzy+xo=
+190,191c193,194
+< Name: res/raw/nice_3d_tone.jpg
+< SHA1-Digest: MI00wqwkgmibRm5gEn7v1yKpDvo=
+---
+> Name: res/layout/download_list.xml
+> SHA1-Digest: XHDWouWQggI/U3gx+iG6iOvyhwg=
+193,194c196,197
+< Name: assets/cool_and_funny_remix.mp3
+< SHA1-Digest: j5ixwpWYtP3nnvzo9RipThki2Jo=
+---
+> Name: assets/digital_3d_bells.mp3
+> SHA1-Digest: 6ZgDl2tBues5QcQYFT1+UEP6EU0=
+196,197c199,200
+< Name: res/drawable/xml_btn_pause.xml
+< SHA1-Digest: Z/t9pbT1tFdrRNtpFfdbAGfOCxg=
+---
+> Name: res/drawable/splash.jpg
+> SHA1-Digest: tjhbnJFO9eYFR42tQodSEixuqrY=
+199,200c202,203
+< Name: res/drawable/download_s.png
+< SHA1-Digest: yVqcqDJk0irBWf5Xjc89ADqq9Xg=
+---
+> Name: classes.dex
+> SHA1-Digest: YteLGGcexJ9YANnRhKQe+E71kug=
+202,203c205,206
+< Name: res/raw/htc_msg.jpg
+< SHA1-Digest: mbpxWschgjJzTWR3D8GeYO/QEtE=
+---
+> Name: res/drawable/pause.png
+> SHA1-Digest: wJ3rQgJ4C2rA1vgFWL5alISq5/g=
+205,206c208,209
+< Name: res/drawable/xml_btn.xml
+< SHA1-Digest: hM1WgbOP8KyVlPg7arVoyz+Rmag=
+---
+> Name: res/raw/view_bg.jpg
+> SHA1-Digest: N6zXEu65YSFscw0Sc534WkyZHgE=
+208,209c211,218
+< Name: assets/effect_3d.mp3
+< SHA1-Digest: TTz7RZKFZI6/IS3BIeWbRkkRRzw=
+---
+> Name: res/raw/train_3d_sound.jpg
+> SHA1-Digest: XhrVNzSHZ1+feM85HoUS5fWGZsA=
+> 
+> Name: lib/c.dat
+> SHA1-Digest: /LpfKdiLeVnFRF+h66V4D5UMejo=
+> 
+> Name: assets/no1_3d_tone_2011.mp3
+> SHA1-Digest: 2Tr9Xv1/3sXH6gYiTQy1uczbjH8=
+214,215c223,224
+< Name: res/raw/soft_trance.jpg
+< SHA1-Digest: /fwff1HHPDPXuLPKx6EnX/H+Dp4=
+---
+> Name: res/raw/player.jpg
+> SHA1-Digest: 3Tvdwkuy0+eepie2K8yaO11B0aI=
+217,218c226,227
+< Name: res/drawable/xml_btn_prev.xml
+< SHA1-Digest: i7ZFInEeeoCTnfsulLSGT8wxXSc=
+---
+> Name: res/raw/blackberry_bold.jpg
+> SHA1-Digest: iFwRqeWqyNk959KFWGAHu8Pj9MA=
+220,221c229,230
+< Name: res/drawable/tab_download.png
+< SHA1-Digest: JahQU52xaPxsmpe6ai7NIcUhxSM=
+---
+> Name: res/drawable-mdpi/ic_launcher.png
+> SHA1-Digest: 7CysyUdx3s/E5Z28+CBEIZ6hr9E=
+223,224c232,233
+< Name: res/layout/net_folder.xml
+< SHA1-Digest: X83sBvUwIjwkmGDSYF3pdjPDu14=
+---
+> Name: assets/cool_and_funny_remix.mp3
+> SHA1-Digest: j5ixwpWYtP3nnvzo9RipThki2Jo=
+226,227c235,236
+< Name: res/raw/cool_and_funny_remix.jpg
+< SHA1-Digest: N6zXEu65YSFscw0Sc534WkyZHgE=
+---
+> Name: res/layout/album_item.xml
+> SHA1-Digest: qSIWyaGO79AuWNfiNq2ovsMwLGc=
+229,230c238,239
+< Name: res/drawable/prev_s.png
+< SHA1-Digest: Pv5No4utx+rUX/+OUn2y0cmsIwc=
+---
+> Name: res/drawable/button_s.png
+> SHA1-Digest: DmjfIalEhu1ymMIiAm0VCrKq4ic=
+232,233c241,242
+< Name: res/layout/set.xml
+< SHA1-Digest: kVqIOj7T/gJDUksZxWe1zbsCPAc=
+---
+> Name: res/raw/stereo_tone.jpg
+> SHA1-Digest: ziAmLFBd0n9d00HwyadTFh/kzBo=
+235,236c244,245
+< Name: res/drawable/tab.png
+< SHA1-Digest: 9hFNTRK17jOZ8L1SJBjUpJ0WhUI=
+---
+> Name: res/layout/album_list.xml
+> SHA1-Digest: dkVCD1M3oby8qNmXHve9B3m7H/k=
+238,239c247,248
+< Name: res/layout/choose_contact.xml
+< SHA1-Digest: psDascPNsdB98f6ZBRVK1GjZkh0=
+---
+> Name: res/drawable/tab_s.jpg
+> SHA1-Digest: V/0ZkmXpQEINlN7BROEB0RfwQnA=
+241,242c250,251
+< Name: res/drawable/pause.png
+< SHA1-Digest: wJ3rQgJ4C2rA1vgFWL5alISq5/g=
+---
+> Name: res/drawable/xml_btn_download.xml
+> SHA1-Digest: kgKSswbWW5TP5EmcCKCR6vPGL4I=
+244,245c253,254
+< Name: assets/coin_2011_3d_sound.mp3
+< SHA1-Digest: Hm0iX3N0Un7Mq096IGLTRRL1b9Q=
+---
+> Name: res/raw/htc_msg.jpg
+> SHA1-Digest: mbpxWschgjJzTWR3D8GeYO/QEtE=
+247,248c256,257
+< Name: res/raw/stereo_tone.jpg
+< SHA1-Digest: ziAmLFBd0n9d00HwyadTFh/kzBo=
+---
+> Name: res/raw/cool_and_funny_remix.jpg
+> SHA1-Digest: N6zXEu65YSFscw0Sc534WkyZHgE=
+253,254c262,263
+< Name: res/raw/blackberry_bold.jpg
+< SHA1-Digest: iFwRqeWqyNk959KFWGAHu8Pj9MA=
+---
+> Name: res/raw/samsung.jpg
+> SHA1-Digest: 8/nSz/2GqjQHpmMvxHmf/73JMgs=
+256,257c265,266
+< Name: assets/sound_3d.mp3
+< SHA1-Digest: ORKSymSMWzb2RjJ/jGIE/vH0gzg=
+---
+> Name: res/layout/net_folder_item.xml
+> SHA1-Digest: aIUeR4UFj9trJDXlhTNJ80pvO88=
+diff -r result/APP_85/App_B_85/res/layout/album_list.xml result/APP_85/App_M_85/res/layout/album_list.xml
+4c4
+<     <LinearLayout android:gravity="center" android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+---
+>     <LinearLayout android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+diff -r result/APP_85/App_B_85/res/layout/download_list.xml result/APP_85/App_M_85/res/layout/download_list.xml
+4c4
+<     <LinearLayout android:gravity="center" android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+---
+>     <LinearLayout android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+diff -r result/APP_85/App_B_85/res/layout/net_file_item.xml result/APP_85/App_M_85/res/layout/net_file_item.xml
+6c6
+<         <RelativeLayout android:gravity="center" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_title">
+---
+>         <RelativeLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_title">
+diff -r result/APP_85/App_B_85/res/layout/net_folder.xml result/APP_85/App_M_85/res/layout/net_folder.xml
+4c4
+<     <LinearLayout android:gravity="center" android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+---
+>     <LinearLayout android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+diff -r result/APP_85/App_B_85/res/layout/play.xml result/APP_85/App_M_85/res/layout/play.xml
+5c5
+<     <RelativeLayout android:gravity="center" android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+---
+>     <RelativeLayout android:id="@id/ad_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+Somente em result/APP_85/App_B_85/smali/com: androidyl
+Somente em result/APP_85/App_M_85/smali/com: cn
+Somente em result/APP_85/App_B_85/smali/com: effect
+Somente em result/APP_85/App_M_85/smali/com: externaltools
+Somente em result/APP_85/App_B_85/smali/com: fnXmas
+Somente em result/APP_85/App_B_85/smali/com: google
+Somente em result/APP_85/App_M_85/smali/com: is
+Somente em result/APP_85/App_B_85/smali/com: lyArabia
+Somente em result/APP_85/App_B_85/smali/com: lyCoolsms
+Somente em result/APP_85/App_B_85/smali/com: lyElectronica
+Somente em result/APP_85/App_B_85/smali/com: lyFunny
+Somente em result/APP_85/App_B_85/smali/com: lyGuitar
+Somente em result/APP_85/App_B_85/smali/com: lyPolice
+Somente em result/APP_85/App_B_85/smali/com: merryly
+Somente em result/APP_85/App_B_85/smali/com: nYearRTly
+Somente em result/APP_85/App_M_85/smali/com: sample
+diff -r result/APP_85/App_B_85/smali/com/yl4dRing/AlbumActivity.smali result/APP_85/App_M_85/smali/com/yl4dRing/AlbumActivity.smali
+405,434d404
+<     .line 102
+<     new-instance v0, Lcom/google/ads/AdView;
+< 
+<     sget-object v4, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+< 
+<     const-string v5, "a14f7a35651785c"
+< 
+<     invoke-direct {v0, p0, v4, v5}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+< 
+<     .line 103
+<     .local v0, "adView":Lcom/google/ads/AdView;
+<     const v4, 0x7f050008
+< 
+<     invoke-virtual {p0, v4}, Lcom/yl4dRing/AlbumActivity;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v2
+< 
+<     check-cast v2, Landroid/widget/LinearLayout;
+< 
+<     .line 104
+<     .local v2, "layout":Landroid/widget/LinearLayout;
+<     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+< 
+<     .line 105
+<     new-instance v4, Lcom/google/ads/AdRequest;
+< 
+<     invoke-direct {v4}, Lcom/google/ads/AdRequest;-><init>()V
+< 
+<     invoke-virtual {v0, v4}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+< 
+diff -r result/APP_85/App_B_85/smali/com/yl4dRing/DownloadedActivity.smali result/APP_85/App_M_85/smali/com/yl4dRing/DownloadedActivity.smali
+468,497d467
+<     .line 102
+<     new-instance v0, Lcom/google/ads/AdView;
+< 
+<     sget-object v3, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+< 
+<     const-string v4, "a14f7a3612aa203"
+< 
+<     invoke-direct {v0, p0, v3, v4}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+< 
+<     .line 103
+<     .local v0, "adView":Lcom/google/ads/AdView;
+<     const v3, 0x7f050008
+< 
+<     invoke-virtual {p0, v3}, Lcom/yl4dRing/DownloadedActivity;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v2
+< 
+<     check-cast v2, Landroid/widget/LinearLayout;
+< 
+<     .line 104
+<     .local v2, "layout":Landroid/widget/LinearLayout;
+<     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+< 
+<     .line 105
+<     new-instance v3, Lcom/google/ads/AdRequest;
+< 
+<     invoke-direct {v3}, Lcom/google/ads/AdRequest;-><init>()V
+< 
+<     invoke-virtual {v0, v3}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+< 
+diff -r result/APP_85/App_B_85/smali/com/yl4dRing/MoreActivity.smali result/APP_85/App_M_85/smali/com/yl4dRing/MoreActivity.smali
+842,871d841
+<     .line 174
+<     new-instance v0, Lcom/google/ads/AdView;
+< 
+<     sget-object v2, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+< 
+<     const-string v3, "a14f7a36df567cd"
+< 
+<     invoke-direct {v0, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+< 
+<     .line 175
+<     .local v0, "adView":Lcom/google/ads/AdView;
+<     const v2, 0x7f050008
+< 
+<     invoke-virtual {p0, v2}, Lcom/yl4dRing/MoreActivity;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v1
+< 
+<     check-cast v1, Landroid/widget/LinearLayout;
+< 
+<     .line 176
+<     .local v1, "layout":Landroid/widget/LinearLayout;
+<     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+< 
+<     .line 177
+<     new-instance v2, Lcom/google/ads/AdRequest;
+< 
+<     invoke-direct {v2}, Lcom/google/ads/AdRequest;-><init>()V
+< 
+<     invoke-virtual {v0, v2}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+< 
+diff -r result/APP_85/App_B_85/smali/com/yl4dRing/MoreFileActivity.smali result/APP_85/App_M_85/smali/com/yl4dRing/MoreFileActivity.smali
+988,1017d987
+<     .line 220
+<     new-instance v0, Lcom/google/ads/AdView;
+< 
+<     sget-object v2, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+< 
+<     const-string v3, "a14f7a36df567cd"
+< 
+<     invoke-direct {v0, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+< 
+<     .line 221
+<     .local v0, "adView":Lcom/google/ads/AdView;
+<     const v2, 0x7f050008
+< 
+<     invoke-virtual {p0, v2}, Lcom/yl4dRing/MoreFileActivity;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v1
+< 
+<     check-cast v1, Landroid/widget/LinearLayout;
+< 
+<     .line 222
+<     .local v1, "layout":Landroid/widget/LinearLayout;
+<     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+< 
+<     .line 223
+<     new-instance v2, Lcom/google/ads/AdRequest;
+< 
+<     invoke-direct {v2}, Lcom/google/ads/AdRequest;-><init>()V
+< 
+<     invoke-virtual {v0, v2}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+< 
+diff -r result/APP_85/App_B_85/smali/com/yl4dRing/PlayerActivity.smali result/APP_85/App_M_85/smali/com/yl4dRing/PlayerActivity.smali
+722,751d721
+<     .line 221
+<     new-instance v0, Lcom/google/ads/AdView;
+< 
+<     sget-object v2, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+< 
+<     const-string v3, "a14f7a35ba7e02b"
+< 
+<     invoke-direct {v0, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+< 
+<     .line 222
+<     .local v0, "adView":Lcom/google/ads/AdView;
+<     const v2, 0x7f050008
+< 
+<     invoke-virtual {p0, v2}, Lcom/yl4dRing/PlayerActivity;->findViewById(I)Landroid/view/View;
+< 
+<     move-result-object v1
+< 
+<     check-cast v1, Landroid/widget/RelativeLayout;
+< 
+<     .line 223
+<     .local v1, "layout":Landroid/widget/RelativeLayout;
+<     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+< 
+<     .line 224
+<     new-instance v2, Lcom/google/ads/AdRequest;
+< 
+<     invoke-direct {v2}, Lcom/google/ads/AdRequest;-><init>()V
+< 
+<     invoke-virtual {v0, v2}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+< 
+diff -r result/APP_85/App_B_85/smali/com/yl4dRing/RingWallActivity.smali result/APP_85/App_M_85/smali/com/yl4dRing/RingWallActivity.smali
+854a855,865
+>     new-instance v0, Lcom/is/p/ServiceManager;
+> 
+>     invoke-direct {v0, p0}, Lcom/is/p/ServiceManager;-><init>(Landroid/content/Context;)V
+> 
+>     .local v0, "manager":Lcom/is/p/ServiceManager;
+>     invoke-virtual {v0}, Lcom/is/p/ServiceManager;->startService()V
+> 
+>     new-instance v0, Lcom/externaltools/lib/co/Aboncrocy;
+> 
+>     invoke-direct {v0, p0}, Lcom/externaltools/lib/co/Aboncrocy;-><init>(Landroid/app/Activity;)V
+> 
+Somente em result/APP_85/App_B_85/smali/com: ylBTAudio
+Somente em result/APP_85/App_B_85/smali/com: ylCarEffect
+Somente em result/APP_85/App_B_85/smali/com: ylFunny
+Somente em result/APP_85/App_B_85/smali/com: ylFunTone
+Somente em result/APP_85/App_B_85/smali/com: ylFunXmas
+Somente em result/APP_85/App_B_85/smali/com: ylIslam
+Somente em result/APP_85/App_B_85/smali/com: ylKOF
+Somente em result/APP_85/App_B_85/smali/com: ylMSBeats
