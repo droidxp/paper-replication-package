@@ -1,6 +1,15 @@
 ---
-title: "Replication"
-output: html_document
+title: "Mining Android Sandboxes Using Dynamic and Static Analysis: a Replication Study" 
+author: "da Costa et al."
+date: "March, 2921"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -9,12 +18,13 @@ setwd(".")
 require(sqldf)
 require(reshape2)
 require(xtable)
+require(kableExtra)
 ```
 
 ## Replication Package
 
 This is the replication package for the paper *Mining Android Sandboxes Using Dynamic and Static Analysis: a
-Non-exact Replication Study*. 
+Replication Study*. 
 
 ### Authors
 
@@ -56,10 +66,16 @@ apps <- sqldf("select app, tool, sum(malware) total
 
 apps["detected"] <- ifelse(apps$total > 0, "x", "")
 apps <- apps[,c("app", "tool", "detected")]
+apps <- dcast(apps, app~tool)
+apps["diff"] <- paste0("[diff/", apps$app, ".txt]", "(", "./diff/dif", gsub("-", "_", toupper(apps$app)), ".txt", ")")
+# apps["app"] <- as.numeric(gsub("app-","",apps$app))
+# apps <- apps[order(apps$app),]
 ```
 
 ```{r}
-apps <- dcast(apps, app~tool)
-apps["diff"] <- paste0("[diff/", apps$app, ".txt]", "(", "./diff/dif", gsub("-", "_", toupper(apps$app)), ".txt", ")")
-knitr::kable(head(apps))
+apps %>%
+  kable("html") %>%
+  kable_styling(font_size = 12)
+
+
 ```
