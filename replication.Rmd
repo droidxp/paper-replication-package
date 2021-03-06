@@ -60,6 +60,7 @@ sandboxes, with a performance similar to that reached by dynamic analysis tools.
 
 ```{r echo=FALSE}
 ds <- read.csv("results.csv", head=T, sep=",")
+
 apps <- sqldf("select app, tool, sum(malware) total
                from ds 
                group by app, tool")
@@ -70,12 +71,18 @@ apps <- dcast(apps, app~tool)
 apps["diff"] <- paste0("[diff/", apps$app, ".txt]", "(", "./diff/dif", gsub("-", "_", toupper(apps$app)), ".txt", ")")
 # apps["app"] <- as.numeric(gsub("app-","",apps$app))
 # apps <- apps[order(apps$app),]
+
+
+info <- read.csv("allInfoApps.csv", head=T, sep=",")
+colnames(info)
+info <- info[, c("id", "pkg_name", "hash")]
+colnames(info) <- c("app", "name")
+apps <- merge(apps, info)
 ```
 
 ```{r}
 apps %>%
   kable("html") %>%
-  kable_styling(font_size = 12)
-
+  kable_styling(font_size = 12)  %>% kable_styling("striped") %>% scroll_box(width = "100%")
 
 ```
