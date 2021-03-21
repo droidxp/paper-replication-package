@@ -1,21 +1,53 @@
-diff -r result/APP_38/App_B_38/apktool.yml result/APP_38/App_M_38/apktool.yml
-2c2
-< apkFileName: Bapp38-4AC10BE63196250A0EC9F75185177731A5DD9FAC972B9A1E42103B4C314F64DC.apk
----
-> apkFileName: Mapp38-C96BDB5942413D50FC40FDB7100E94A2C8EF4A6CB6A855B80BC7F7F6868CDEF7.apk
-Os arquivos binários result/APP_38/App_B_38/original/META-INF/CODESIGN.RSA e result/APP_38/App_M_38/original/META-INF/CODESIGN.RSA são diferentes
-diff -r result/APP_38/App_B_38/original/META-INF/CODESIGN.SF result/APP_38/App_M_38/original/META-INF/CODESIGN.SF
-2564c2564
-< SHA1-Digest: valGPadU6tGPZ5lUF7LVWEGP7Qo=
----
-> SHA1-Digest: BdKE8lu7x95Hc2yKo1RxAr0TOyk=
-diff -r result/APP_38/App_B_38/original/META-INF/MANIFEST.MF result/APP_38/App_M_38/original/META-INF/MANIFEST.MF
-2566c2566
-< SHA1-Digest: 2tFNJVYqba1YttkhvkTWKqZL2r0=
----
-> SHA1-Digest: 9sBM3tz6zUnVybikFewlB7AnEnM=
-diff -r result/APP_38/App_B_38/res/values/strings.xml result/APP_38/App_M_38/res/values/strings.xml
-11c11
-<     <string name="channelId">14</string>
----
->     <string name="channelId">4</string>
+diff --git a/result/APP_38/App_B_38/apktool.yml b/result/APP_38/App_M_38/apktool.yml
+index 2d90082..a003448 100755
+--- a/result/APP_38/App_B_38/apktool.yml
++++ b/result/APP_38/App_M_38/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp38-4AC10BE63196250A0EC9F75185177731A5DD9FAC972B9A1E42103B4C314F64DC.apk
++apkFileName: Mapp38-C96BDB5942413D50FC40FDB7100E94A2C8EF4A6CB6A855B80BC7F7F6868CDEF7.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+diff --git a/result/APP_38/App_B_38/original/META-INF/CODESIGN.RSA b/result/APP_38/App_M_38/original/META-INF/CODESIGN.RSA
+index 76d5645..2f5804d 100755
+Binary files a/result/APP_38/App_B_38/original/META-INF/CODESIGN.RSA and b/result/APP_38/App_M_38/original/META-INF/CODESIGN.RSA differ
+diff --git a/result/APP_38/App_B_38/original/META-INF/CODESIGN.SF b/result/APP_38/App_M_38/original/META-INF/CODESIGN.SF
+index 58cdf2d..715ec23 100755
+--- a/result/APP_38/App_B_38/original/META-INF/CODESIGN.SF
++++ b/result/APP_38/App_M_38/original/META-INF/CODESIGN.SF
+@@ -2561,7 +2561,7 @@ Name: res/drawable-hdpi/card_shell_qq_card_unselect.png
+ SHA1-Digest: Le92URYFlL7WhlNWbWIIeEPJBwA=
+ 
+ Name: resources.arsc
+-SHA1-Digest: valGPadU6tGPZ5lUF7LVWEGP7Qo=
++SHA1-Digest: BdKE8lu7x95Hc2yKo1RxAr0TOyk=
+ 
+ Name: res/drawable-xhdpi/withdraw_step2.png
+ SHA1-Digest: l0ZSXTg51K0rR4KTCzOZQtacjsE=
+diff --git a/result/APP_38/App_B_38/original/META-INF/MANIFEST.MF b/result/APP_38/App_M_38/original/META-INF/MANIFEST.MF
+index bd2f10b..617719b 100755
+--- a/result/APP_38/App_B_38/original/META-INF/MANIFEST.MF
++++ b/result/APP_38/App_M_38/original/META-INF/MANIFEST.MF
+@@ -2563,7 +2563,7 @@ Name: res/drawable-xhdpi/withdraw_step2.png
+ SHA1-Digest: A89Yn4SkEEGqmZSr/QdqKcqnWZ8=
+ 
+ Name: resources.arsc
+-SHA1-Digest: 2tFNJVYqba1YttkhvkTWKqZL2r0=
++SHA1-Digest: 9sBM3tz6zUnVybikFewlB7AnEnM=
+ 
+ Name: res/drawable/select_btn_im_cancle.xml
+ SHA1-Digest: jJZuAuQ8kBrpwCkGmREPJSn4A/A=
+diff --git a/result/APP_38/App_B_38/res/values/strings.xml b/result/APP_38/App_M_38/res/values/strings.xml
+index 452d7ca..8794c0b 100755
+--- a/result/APP_38/App_B_38/res/values/strings.xml
++++ b/result/APP_38/App_M_38/res/values/strings.xml
+@@ -8,7 +8,7 @@
+     <string name="ptr_release_to_refresh">Release to refresh</string>
+     <string name="ptr_refreshing">Refreshing</string>
+     <string name="ptr_last_updated">Updated: %1$s</string>
+-    <string name="channelId">14</string>
++    <string name="channelId">4</string>
+     <string name="admin_login_layout">账号：</string>
+     <string name="password_login_layout">密码：</string>
+     <string name="admin_hint_login_layout">邮箱/手机号/登录名</string>

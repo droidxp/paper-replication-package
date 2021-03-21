@@ -1,55 +1,139 @@
-diff -r result/APP_48/App_B_48/AndroidManifest.xml result/APP_48/App_M_48/AndroidManifest.xml
-78c78
-<         <meta-data android:name="BaiduMobAd_CHANNEL" android:value="appchinaMarket"/>
----
->         <meta-data android:name="BaiduMobAd_CHANNEL" android:value="anzhiMarket"/>
-diff -r result/APP_48/App_B_48/apktool.yml result/APP_48/App_M_48/apktool.yml
-2c2
-< apkFileName: Bapp48-733D4B44E103D8865CF6FEF37D98A184A5252E1142BAB81CC93B698E1F08C070.apk
----
-> apkFileName: Mapp48-1F43FBB007383059EF236A5E6A5793FDD656130009F7A880A4E420F9EFA14AE7.apk
-diff -r result/APP_48/App_B_48/com/zqgame/mbm/util/Utils.java result/APP_48/App_M_48/com/zqgame/mbm/util/Utils.java
-223c223
-<       String str = MbmApplication.getInstance().getPackageManager().getPackageInfo(MbmApplication.getInstance().getPackageName(), 0).versionName + ".2.102";
----
->       String str = MbmApplication.getInstance().getPackageManager().getPackageInfo(MbmApplication.getInstance().getPackageName(), 0).versionName + ".2.104";
-Os arquivos binários result/APP_48/App_B_48/original/AndroidManifest.xml e result/APP_48/App_M_48/original/AndroidManifest.xml são diferentes
-Os arquivos binários result/APP_48/App_B_48/original/META-INF/CERT.RSA e result/APP_48/App_M_48/original/META-INF/CERT.RSA são diferentes
-diff -r result/APP_48/App_B_48/original/META-INF/CERT.SF result/APP_48/App_M_48/original/META-INF/CERT.SF
-3c3
-< SHA1-Digest-Manifest: 5GYpmDhiaDPF1iyDgeykqaToWPw=
----
-> SHA1-Digest-Manifest: EHofaC0QUf57Zicby1e1XgvGJoQ=
-1566c1566
-< SHA1-Digest: Dvr18NJucdsA66iA4nEXdPssFSk=
----
-> SHA1-Digest: hpfeQqxk+3W8bTm13NqpHYj1cl8=
-3907c3907
-< SHA1-Digest: cVBNBUt/8ul+5VPOQH/CIRYnEx8=
----
-> SHA1-Digest: gxuHcxk1c2Alui1mvmPeeRlRAYs=
-diff -r result/APP_48/App_B_48/original/META-INF/MANIFEST.MF result/APP_48/App_M_48/original/META-INF/MANIFEST.MF
-1562c1562
-< SHA1-Digest: ugUGae4uEkkM4aGUmeIIYKq/0Xw=
----
-> SHA1-Digest: KQz/4V0STZNG+km1QECwawREfRo=
-3906c3906
-< SHA1-Digest: xYoETzy0AaRMYPMn3ndnGA4cYIs=
----
-> SHA1-Digest: Q97U7G1DhAUdfuWUGZwQepo6XKE=
-diff -r result/APP_48/App_B_48/smali/com/zqgame/mbm/util/AnimHelper.smali result/APP_48/App_M_48/smali/com/zqgame/mbm/util/AnimHelper.smali
-13,14c13
-<     .line 12
-<     .line 13
----
->     .line 1
-diff -r result/APP_48/App_B_48/smali/com/zqgame/mbm/util/LogUtil.smali result/APP_48/App_M_48/smali/com/zqgame/mbm/util/LogUtil.smali
-158d157
-<     .line 58
-162a162
->     .line 58
-diff -r result/APP_48/App_B_48/smali/com/zqgame/mbm/util/Utils.smali result/APP_48/App_M_48/smali/com/zqgame/mbm/util/Utils.smali
-861c861
-<     const-string v4, ".2.102"
----
->     const-string v4, ".2.104"
+diff --git a/result/APP_48/App_B_48/AndroidManifest.xml b/result/APP_48/App_M_48/AndroidManifest.xml
+index 05480f5..e84e8e0 100755
+--- a/result/APP_48/App_B_48/AndroidManifest.xml
++++ b/result/APP_48/App_M_48/AndroidManifest.xml
+@@ -75,7 +75,7 @@
+                 <data android:scheme="file"/>
+             </intent-filter>
+         </receiver>
+-        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="appchinaMarket"/>
++        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="anzhiMarket"/>
+         <meta-data android:name="BaiduMobAd_STAT_ID" android:value="539f36cbf9"/>
+         <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true"/>
+         <meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START"/>
+diff --git a/result/APP_48/App_B_48/apktool.yml b/result/APP_48/App_M_48/apktool.yml
+index e11b6ff..3b96ed7 100755
+--- a/result/APP_48/App_B_48/apktool.yml
++++ b/result/APP_48/App_M_48/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp48-733D4B44E103D8865CF6FEF37D98A184A5252E1142BAB81CC93B698E1F08C070.apk
++apkFileName: Mapp48-1F43FBB007383059EF236A5E6A5793FDD656130009F7A880A4E420F9EFA14AE7.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+diff --git a/result/APP_48/App_B_48/com/zqgame/mbm/util/Utils.java b/result/APP_48/App_M_48/com/zqgame/mbm/util/Utils.java
+index 54eb0d7..2af11fc 100755
+--- a/result/APP_48/App_B_48/com/zqgame/mbm/util/Utils.java
++++ b/result/APP_48/App_M_48/com/zqgame/mbm/util/Utils.java
+@@ -220,7 +220,7 @@ public class Utils
+     Object localObject = "1.0.2.100";
+     try
+     {
+-      String str = MbmApplication.getInstance().getPackageManager().getPackageInfo(MbmApplication.getInstance().getPackageName(), 0).versionName + ".2.102";
++      String str = MbmApplication.getInstance().getPackageManager().getPackageInfo(MbmApplication.getInstance().getPackageName(), 0).versionName + ".2.104";
+       localObject = str;
+       MbmApplication.versionName = str;
+       localObject = str;
+diff --git a/result/APP_48/App_B_48/original/AndroidManifest.xml b/result/APP_48/App_M_48/original/AndroidManifest.xml
+index d7432f0..3a8b1c9 100755
+Binary files a/result/APP_48/App_B_48/original/AndroidManifest.xml and b/result/APP_48/App_M_48/original/AndroidManifest.xml differ
+diff --git a/result/APP_48/App_B_48/original/META-INF/CERT.RSA b/result/APP_48/App_M_48/original/META-INF/CERT.RSA
+index 7a46d12..5dc7fd4 100755
+Binary files a/result/APP_48/App_B_48/original/META-INF/CERT.RSA and b/result/APP_48/App_M_48/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_48/App_B_48/original/META-INF/CERT.SF b/result/APP_48/App_M_48/original/META-INF/CERT.SF
+index 8152678..0850e9b 100755
+--- a/result/APP_48/App_B_48/original/META-INF/CERT.SF
++++ b/result/APP_48/App_M_48/original/META-INF/CERT.SF
+@@ -1,6 +1,6 @@
+ Signature-Version: 1.0
+ Created-By: 1.0 (Android)
+-SHA1-Digest-Manifest: 5GYpmDhiaDPF1iyDgeykqaToWPw=
++SHA1-Digest-Manifest: EHofaC0QUf57Zicby1e1XgvGJoQ=
+ 
+ Name: res/drawable-hdpi/limit_time_icon.png
+ SHA1-Digest: oIX8B1o1FEw4peEnT0GsJ8nl19U=
+@@ -1563,7 +1563,7 @@ Name: res/drawable-hdpi/modify.png
+ SHA1-Digest: gkVwEVQIIOklPhEvPkgv1WYbpxs=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: Dvr18NJucdsA66iA4nEXdPssFSk=
++SHA1-Digest: hpfeQqxk+3W8bTm13NqpHYj1cl8=
+ 
+ Name: res/drawable/emoji_1f531.png
+ SHA1-Digest: 7cCipkEsMHoOCHAfcJ/0DXSoqlE=
+@@ -3904,7 +3904,7 @@ Name: res/drawable/emoji_2708.png
+ SHA1-Digest: L70KQaA6qd/BX1ubOKJ1Ap+jyGQ=
+ 
+ Name: classes.dex
+-SHA1-Digest: cVBNBUt/8ul+5VPOQH/CIRYnEx8=
++SHA1-Digest: gxuHcxk1c2Alui1mvmPeeRlRAYs=
+ 
+ Name: res/drawable/emoji_1f349.png
+ SHA1-Digest: cytJgnaSgBcIF8TD4TjHIeANKL8=
+diff --git a/result/APP_48/App_B_48/original/META-INF/MANIFEST.MF b/result/APP_48/App_M_48/original/META-INF/MANIFEST.MF
+index 2b98ec7..988aef2 100755
+--- a/result/APP_48/App_B_48/original/META-INF/MANIFEST.MF
++++ b/result/APP_48/App_M_48/original/META-INF/MANIFEST.MF
+@@ -1559,7 +1559,7 @@ Name: res/anim/popwindowmessage.xml
+ SHA1-Digest: NNrLv3l9JMj3c5N1uIpkjxCX2S0=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: ugUGae4uEkkM4aGUmeIIYKq/0Xw=
++SHA1-Digest: KQz/4V0STZNG+km1QECwawREfRo=
+ 
+ Name: res/drawable-hdpi/modify.png
+ SHA1-Digest: ZKioS/i53ml0OrjAKjsm1TWEWcE=
+@@ -3903,7 +3903,7 @@ Name: res/drawable/emoji_2708.png
+ SHA1-Digest: 91MqAEmqCe07OeWm5wyWFpA8R70=
+ 
+ Name: classes.dex
+-SHA1-Digest: xYoETzy0AaRMYPMn3ndnGA4cYIs=
++SHA1-Digest: Q97U7G1DhAUdfuWUGZwQepo6XKE=
+ 
+ Name: res/drawable/emoji_1f349.png
+ SHA1-Digest: o3Bmws3NEqb6zuK8Mbt8+Fo7Euw=
+diff --git a/result/APP_48/App_B_48/smali/com/zqgame/mbm/util/AnimHelper.smali b/result/APP_48/App_M_48/smali/com/zqgame/mbm/util/AnimHelper.smali
+index ef480e2..517b4b4 100755
+--- a/result/APP_48/App_B_48/smali/com/zqgame/mbm/util/AnimHelper.smali
++++ b/result/APP_48/App_M_48/smali/com/zqgame/mbm/util/AnimHelper.smali
+@@ -10,8 +10,7 @@
+     .param p1, "paramView"    # Landroid/view/View;
+ 
+     .prologue
+-    .line 12
+-    .line 13
++    .line 1
+     const v1, 0x7f040004
+ 
+     .line 12
+diff --git a/result/APP_48/App_B_48/smali/com/zqgame/mbm/util/LogUtil.smali b/result/APP_48/App_M_48/smali/com/zqgame/mbm/util/LogUtil.smali
+index b4547aa..2b2ba81 100755
+--- a/result/APP_48/App_B_48/smali/com/zqgame/mbm/util/LogUtil.smali
++++ b/result/APP_48/App_M_48/smali/com/zqgame/mbm/util/LogUtil.smali
+@@ -155,11 +155,11 @@
+ 
+     if-eqz v0, :cond_0
+ 
+-    .line 58
+     invoke-static {}, Lcom/zqgame/mbm/util/LogUtil;->$SWITCH_TABLE$com$zqgame$mbm$util$LogUtil$LOG_ENUM()[I
+ 
+     move-result-object v0
+ 
++    .line 58
+     invoke-virtual {p0}, Lcom/zqgame/mbm/util/LogUtil$LOG_ENUM;->ordinal()I
+ 
+     move-result v1
+diff --git a/result/APP_48/App_B_48/smali/com/zqgame/mbm/util/Utils.smali b/result/APP_48/App_M_48/smali/com/zqgame/mbm/util/Utils.smali
+index 1f3c02b..09f101e 100755
+--- a/result/APP_48/App_B_48/smali/com/zqgame/mbm/util/Utils.smali
++++ b/result/APP_48/App_M_48/smali/com/zqgame/mbm/util/Utils.smali
+@@ -858,7 +858,7 @@
+ 
+     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+ 
+-    const-string v4, ".2.102"
++    const-string v4, ".2.104"
+ 
+     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 

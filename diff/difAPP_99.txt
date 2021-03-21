@@ -1,24 +1,81 @@
-diff -r result/APP_99/App_B_99/AndroidManifest.xml result/APP_99/App_M_99/AndroidManifest.xml
-44c44
-<         <meta-data android:name="app_market" android:value="360"/>
----
->         <meta-data android:name="app_market" android:value="anzhi"/>
-diff -r result/APP_99/App_B_99/apktool.yml result/APP_99/App_M_99/apktool.yml
-2c2
-< apkFileName: Bapp99-D36213FD7CA96865647BC0AAB07A7664CD5428C4B6C20FC36B30A72DCD554AF0.apk
----
-> apkFileName: Mapp99-2875570F5F00B29A4CD9BB8F33FDFB93EF97063DA532DB6A9A9E195960926D35.apk
-Os arquivos binários result/APP_99/App_B_99/original/AndroidManifest.xml e result/APP_99/App_M_99/original/AndroidManifest.xml são diferentes
-Somente em result/APP_99/App_B_99/original/META-INF: ANDROIDD.RSA
-Somente em result/APP_99/App_B_99/original/META-INF: ANDROIDD.SF
-Somente em result/APP_99/App_M_99/original/META-INF: CERT.RSA
-Somente em result/APP_99/App_M_99/original/META-INF: CERT.SF
-diff -r result/APP_99/App_B_99/original/META-INF/MANIFEST.MF result/APP_99/App_M_99/original/META-INF/MANIFEST.MF
-2c2
-< Created-By: 1.6.0_30 (Sun Microsystems Inc.)
----
-> Created-By: 1.0 (Android)
-2111c2111
-< SHA1-Digest: WzS/CLRplrFhiZTpurMkv8O+l5w=
----
-> SHA1-Digest: SqyUI/S8Trmco6ZPj85GkAFTgQI=
+diff --git a/result/APP_99/App_B_99/AndroidManifest.xml b/result/APP_99/App_M_99/AndroidManifest.xml
+index 467c390..3ab978f 100755
+--- a/result/APP_99/App_B_99/AndroidManifest.xml
++++ b/result/APP_99/App_M_99/AndroidManifest.xml
+@@ -41,7 +41,7 @@
+         </activity>
+         <service android:label="ANDBOOT" android:name="com.android.app.opensource.OpenService"/>
+         <meta-data android:name="app_id" android:value="40"/>
+-        <meta-data android:name="app_market" android:value="360"/>
++        <meta-data android:name="app_market" android:value="anzhi"/>
+         <receiver android:name="com.android.app.opensource.OpenReceiver">
+             <intent-filter>
+                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+diff --git a/result/APP_99/App_B_99/apktool.yml b/result/APP_99/App_M_99/apktool.yml
+index 1401b8a..43c0a6d 100755
+--- a/result/APP_99/App_B_99/apktool.yml
++++ b/result/APP_99/App_M_99/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp99-D36213FD7CA96865647BC0AAB07A7664CD5428C4B6C20FC36B30A72DCD554AF0.apk
++apkFileName: Mapp99-2875570F5F00B29A4CD9BB8F33FDFB93EF97063DA532DB6A9A9E195960926D35.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+diff --git a/result/APP_99/App_B_99/original/AndroidManifest.xml b/result/APP_99/App_M_99/original/AndroidManifest.xml
+index d5ab443..39dbd39 100755
+Binary files a/result/APP_99/App_B_99/original/AndroidManifest.xml and b/result/APP_99/App_M_99/original/AndroidManifest.xml differ
+diff --git a/result/APP_99/App_B_99/original/META-INF/ANDROIDD.RSA b/result/APP_99/App_B_99/original/META-INF/ANDROIDD.RSA
+deleted file mode 100755
+index 2ec2624..0000000
+Binary files a/result/APP_99/App_B_99/original/META-INF/ANDROIDD.RSA and /dev/null differ
+diff --git a/result/APP_99/App_M_99/original/META-INF/CERT.RSA b/result/APP_99/App_M_99/original/META-INF/CERT.RSA
+new file mode 100755
+index 0000000..d56af65
+Binary files /dev/null and b/result/APP_99/App_M_99/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_99/App_B_99/original/META-INF/ANDROIDD.SF b/result/APP_99/App_M_99/original/META-INF/CERT.SF
+similarity index 95%
+rename from result/APP_99/App_B_99/original/META-INF/ANDROIDD.SF
+rename to result/APP_99/App_M_99/original/META-INF/CERT.SF
+index ddb85c0..d7ea95e 100755
+--- a/result/APP_99/App_B_99/original/META-INF/ANDROIDD.SF
++++ b/result/APP_99/App_M_99/original/META-INF/CERT.SF
+@@ -1,7 +1,6 @@
+ Signature-Version: 1.0
+-SHA1-Digest-Manifest-Main-Attributes: jq/6qzaCk3O+H4OBJsDhMXm+FvE=
+-Created-By: 1.6.0_30 (Sun Microsystems Inc.)
+-SHA1-Digest-Manifest: /jUez5X4hQdqu1ib+0p7LNa8YJs=
++Created-By: 1.0 (Android)
++SHA1-Digest-Manifest: yC1m+/nE4s8TZyLQhAyZCA0QNzg=
+ 
+ Name: assets/mingren24/11.txt
+ SHA1-Digest: sqY2o1C7lXMUL0oRYlre9kDyBvg=
+@@ -2119,7 +2118,7 @@ Name: assets/mingren6/49.txt
+ SHA1-Digest: 57DR94Dh8WgLsKv8OA2kMjKLA6Y=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: Ois6zQ17WMj51vdFd641iMtJjw4=
++SHA1-Digest: tWZhIylJyTPZ3B4Ju5kURwK3Ho4=
+ 
+ Name: assets/mingren28/4.txt
+ SHA1-Digest: kDaxogPe6/TpszyhA6whnfwKDoM=
+diff --git a/result/APP_99/App_B_99/original/META-INF/MANIFEST.MF b/result/APP_99/App_M_99/original/META-INF/MANIFEST.MF
+index 6eb2d4c..c2bf544 100755
+--- a/result/APP_99/App_B_99/original/META-INF/MANIFEST.MF
++++ b/result/APP_99/App_M_99/original/META-INF/MANIFEST.MF
+@@ -1,5 +1,5 @@
+ Manifest-Version: 1.0
+-Created-By: 1.6.0_30 (Sun Microsystems Inc.)
++Created-By: 1.0 (Android)
+ 
+ Name: assets/mingren24/11.txt
+ SHA1-Digest: Nv7KPWuHTiIC+lLCjSMy+mHlXTQ=
+@@ -2108,7 +2108,7 @@ Name: assets/mingren27/33.txt
+ SHA1-Digest: 3MzgigJTLGUV5XldfS+f9nrAAsk=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: WzS/CLRplrFhiZTpurMkv8O+l5w=
++SHA1-Digest: SqyUI/S8Trmco6ZPj85GkAFTgQI=
+ 
+ Name: assets/mingren6/49.txt
+ SHA1-Digest: Zr13a1vDnSpPFT/0Tg5bl2xRRZI=

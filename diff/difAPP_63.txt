@@ -1,6 +1,14 @@
-diff -r result/APP_63/App_B_63/apktool.yml result/APP_63/App_M_63/apktool.yml
-2c2
-< apkFileName: Bapp63-8DCA4433C10BD0EC6884864B6BDF06C40E225C9D33D6B45E70685303927225CF.apk
----
-> apkFileName: Mapp63-43BEA394D0C1926023D552D296FEBAF61B32B66115CCC3574DF3648A3C2747F4.apk
-Os arquivos binários result/APP_63/App_B_63/original/META-INF/CERT.RSA e result/APP_63/App_M_63/original/META-INF/CERT.RSA são diferentes
+diff --git a/result/APP_63/App_B_63/apktool.yml b/result/APP_63/App_M_63/apktool.yml
+index eeb0a80..cff3f12 100755
+--- a/result/APP_63/App_B_63/apktool.yml
++++ b/result/APP_63/App_M_63/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp63-8DCA4433C10BD0EC6884864B6BDF06C40E225C9D33D6B45E70685303927225CF.apk
++apkFileName: Mapp63-43BEA394D0C1926023D552D296FEBAF61B32B66115CCC3574DF3648A3C2747F4.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+diff --git a/result/APP_63/App_B_63/original/META-INF/CERT.RSA b/result/APP_63/App_M_63/original/META-INF/CERT.RSA
+index 424ec46..39985fc 100755
+Binary files a/result/APP_63/App_B_63/original/META-INF/CERT.RSA and b/result/APP_63/App_M_63/original/META-INF/CERT.RSA differ

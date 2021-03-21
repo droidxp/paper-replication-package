@@ -1,336 +1,643 @@
-diff -r result/APP_31/App_B_31/apktool.yml result/APP_31/App_M_31/apktool.yml
-2c2
-< apkFileName: Bapp31-3FCA7AC2ED1C542BAA476A4071DEA24E5AED3FA5C1D18D9CACF5337F3F10386C.apk
----
-> apkFileName: Mapp31-B8510B58474093BDCC8DB1ECADFF7373CA9B024ABB2529FA308760A7AB3A1487.apk
-5d4
-< - resources.arsc
-diff -r result/APP_31/App_B_31/ix/com/android/VirtualRecorder/VirtualRecorder.java result/APP_31/App_M_31/ix/com/android/VirtualRecorder/VirtualRecorder.java
-380,383c380,383
-<     VR_PRIORITY = mConfig.getInt("Priority", VR_PRIORITY);
-<     mLoopMode = mConfig.getBoolean("LoopMode", mLoopMode);
-<     mAutoLimiter = mConfig.getBoolean("AutoLimiter", mAutoLimiter);
-<     mBoost = mConfig.getBoolean("Boost", mBoost);
----
->     VR_PRIORITY = mConfig.getInt("优先级", VR_PRIORITY);
->     mLoopMode = mConfig.getBoolean("循环模式", mLoopMode);
->     mAutoLimiter = mConfig.getBoolean("自动限幅", mAutoLimiter);
->     mBoost = mConfig.getBoolean("提高", mBoost);
-632c632
-<       mPitchText.setText("Pitch -100%");
----
->       mPitchText.setText("音高 -100%");
-643c643
-<         mPitchText.setText("Pitch 100%");
----
->         mPitchText.setText("音高 100%");
-793c793
-<                   mPitchText.setText("Pitch " + paramView + "%");
----
->                   mPitchText.setText("音高 " + paramView + "%");
-817c817
-<                   mPitchText.setText("Pitch " + paramView + "%");
----
->                   mPitchText.setText("音高 " + paramView + "%");
-886c886
-<       paramMenu.add(0, 1, 0, "Disable Loop").setIcon(2130837521);
----
->       paramMenu.add(0, 1, 0, "不允许循环").setIcon(2130837521);
-890c890
-<       paramMenu.add(0, 4, 0, "Disable Boost").setIcon(2130837515);
----
->       paramMenu.add(0, 4, 0, "不允许提高").setIcon(2130837515);
-895c895
-<       paramMenu.add(0, 3, 0, "Disable Limiter").setIcon(2130837519);
----
->       paramMenu.add(0, 3, 0, "不允许限幅").setIcon(2130837519);
-899,901c899,901
-<       paramMenu.add(0, 6, 0, "About").setIcon(2130837513);
-<       paramMenu.add(0, 5, 0, "Options").setIcon(2130837522);
-<       paramMenu.add(0, 2, 0, "Exit").setIcon(2130837517);
----
->       paramMenu.add(0, 6, 0, "关于").setIcon(2130837513);
->       paramMenu.add(0, 5, 0, "设置").setIcon(2130837522);
->       paramMenu.add(0, 2, 0, "退出").setIcon(2130837517);
-903c903
-<       paramMenu.add(0, 1, 0, "Enable Loop").setIcon(2130837520);
----
->       paramMenu.add(0, 1, 0, "允许循环").setIcon(2130837520);
-906c906
-<       paramMenu.add(0, 4, 0, "Enable Boost").setIcon(2130837514);
----
->       paramMenu.add(0, 4, 0, "允许提高").setIcon(2130837514);
-909c909
-<       paramMenu.add(0, 3, 0, "Enable Limiter").setIcon(2130837518);
----
->       paramMenu.add(0, 3, 0, "允许限幅").setIcon(2130837518);
-973c973
-<       mPitchText.setText("Pitch " + (paramInt - 200) + "%");
----
->       mPitchText.setText("音高 " + (paramInt - 200) + "%");
-1077c1077
-<       localAlertDialog.setTitle("About");
----
->       localAlertDialog.setTitle("关于");
-1079,1081c1079,1081
-<       localAlertDialog.setButton(-3, "Show FAQ", local9);
-<       localAlertDialog.setButton(-2, "Buy adfree", local10);
-<       localAlertDialog.setButton(-1, "Close", local8);
----
->       localAlertDialog.setButton(-3, "常见问题", local9);
->       localAlertDialog.setButton(-2, "买免费广告", local10);
->       localAlertDialog.setButton(-1, "关闭", local8);
-Os arquivos binários result/APP_31/App_B_31/original/AndroidManifest.xml e result/APP_31/App_M_31/original/AndroidManifest.xml são diferentes
-Os arquivos binários result/APP_31/App_B_31/original/META-INF/CERT.RSA e result/APP_31/App_M_31/original/META-INF/CERT.RSA são diferentes
-diff -r result/APP_31/App_B_31/original/META-INF/CERT.SF result/APP_31/App_M_31/original/META-INF/CERT.SF
-2,3c2,3
-< Created-By: 1.0 (Android)
-< SHA1-Digest-Manifest: w/CTudH95zgYRoe615WrYDq79HY=
----
-> Created-By: 1.0 (Android SignApk)
-> SHA1-Digest-Manifest: cXKCJCYTY5TNs83l0KDXAb6MucY=
-9c9
-< SHA1-Digest: G3DYrn1hoyyqAxg3XFKDx89KRjg=
----
-> SHA1-Digest: iisZmSkevg059e+CJcJpy7C60Jo=
-15c15
-< SHA1-Digest: 4xJKCI88myD1PzVb1PjwlqyyE9g=
----
-> SHA1-Digest: B/prK1TosfYL2AsdN/HBM/InBAM=
-27c27
-< SHA1-Digest: Wnw5046OedKIvRte0HRMYRkEWvU=
----
-> SHA1-Digest: Y+okxY4QYhnQSRRy8uKhMbSifCk=
-38,40d37
-< Name: AndroidManifest.xml
-< SHA1-Digest: G/c5Xgr+Sq+cl9ghuYVGsHozwxk=
-< 
-43a41,43
-> Name: AndroidManifest.xml
-> SHA1-Digest: yXdyy1+FJCNP+Ex6xJ8yX7POkBg=
-> 
-51c51
-< SHA1-Digest: y1mxNWdFmjAs/vX9RUiRKbc2e8g=
----
-> SHA1-Digest: MGD7T9t5b5uOACSyPTh+aPbn4LI=
-81c81
-< SHA1-Digest: Jx5Eq2Z8h4BZyK3zL72ntVohWlU=
----
-> SHA1-Digest: h4s48DUcOoAj8vqpmPeWFSdqPD0=
-87c87
-< SHA1-Digest: LZFrKhFaY4FjwQVzbQ0t9DkpVHY=
----
-> SHA1-Digest: S+gBxxMZmAGAaJznr/K82eCCjTE=
-102c102
-< SHA1-Digest: 3LT3UBD5ixbR0aRPHge1Q9Yb6kY=
----
-> SHA1-Digest: EVzoIFVnQ9JR1qFPSgZHJNmyaUY=
-diff -r result/APP_31/App_B_31/original/META-INF/MANIFEST.MF result/APP_31/App_M_31/original/META-INF/MANIFEST.MF
-2c2
-< Created-By: 1.0 (Android)
----
-> Created-By: 1.0 (Android SignApk)
-8c8
-< SHA1-Digest: 1nCwLb7oeQnYrURSlkbZ5JmPl90=
----
-> SHA1-Digest: sPxxt0f5IE829RIj1b6LzxHbEPM=
-11c11
-< SHA1-Digest: He/DbHp38iCkATYK8bCSeO8NdaU=
----
-> SHA1-Digest: J4DGRLJJM3FZdcmqtYU1cZnwpIw=
-17c17
-< SHA1-Digest: 0wBI19VXIXFnW2fn1i9gRvo1R74=
----
-> SHA1-Digest: 6K5SvzHmsf93PA54a36KBpUs3Ic=
-36a37,39
-> Name: AndroidManifest.xml
-> SHA1-Digest: BKMymoffrwNuJ5BjA8CVczB5zzc=
-> 
-40,42d42
-< Name: AndroidManifest.xml
-< SHA1-Digest: zzPadVz8nYhWspgv97m6qCF4FlA=
-< 
-50c50
-< SHA1-Digest: vhzZnYzRYHfsv8hY+QD+IhNfJUI=
----
-> SHA1-Digest: f1hqmFwQxhb5tAv1P/jXD072HBM=
-77c77
-< SHA1-Digest: ztpX0xpsc3HPSrG6oTSmH6Yvlao=
----
-> SHA1-Digest: B2f/g0vzn4T8FL0TkJrg+n5qMss=
-86c86
-< SHA1-Digest: l5I7ljdPjumEfmfKp8wVpAnHjy4=
----
-> SHA1-Digest: t+f9MXmiv0f9uZROJlUFNm6TDyg=
-101c101
-< SHA1-Digest: 7bg8yjqdSERCipqr4mZ2ZJeE08s=
----
-> SHA1-Digest: ecVMHULfdJ7xWv59Dd8xCvZalqs=
-diff -r result/APP_31/App_B_31/res/layout/filelistrow.xml result/APP_31/App_M_31/res/layout/filelistrow.xml
-9c9
-<             <TextView android:textSize="16.0dip" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="filename" android:lines="1" />
----
->             <TextView android:textSize="16.0dip" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件名" android:lines="1" />
-12c12
-<             <TextView android:textSize="12.0dip" android:textColor="@color/blue_verylight" android:id="@id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DATE SIZE" android:lines="1" />
----
->             <TextView android:textSize="12.0dip" android:textColor="@color/blue_verylight" android:id="@id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日期大小" android:lines="1" />
-diff -r result/APP_31/App_B_31/res/layout/main.xml result/APP_31/App_M_31/res/layout/main.xml
-18c18
-<             <TextView android:textColor="@color/blue_verylight" android:gravity="center_horizontal" android:id="@id/PitchText" android:background="@drawable/display_bg" android:paddingTop="2.0dip" android:layout_width="50.0dip" android:layout_height="40.0dip" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:text="Pitch 100%" android:lines="2" />
----
->             <TextView android:textColor="@color/blue_verylight" android:gravity="center_horizontal" android:id="@id/PitchText" android:background="@drawable/display_bg" android:paddingTop="2.0dip" android:layout_width="50.0dip" android:layout_height="40.0dip" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:text="音高 100%" android:lines="2" />
-30,31c30,31
-<             <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonMic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="Mic" />
-<             <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="Call" />
----
->             <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonMic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="麦克风" />
->             <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="呼叫" />
-45,46c45,46
-<         <TextView android:textSize="10.0dip" android:textColor="@color/red" android:layout_gravity="left" android:id="@id/PreAmpText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="135.0dip" android:text="Digital Mic PreAmp" />
-<         <TextView android:textSize="10.0dip" android:id="@id/TextViewTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Test" />
----
->         <TextView android:textSize="10.0dip" android:textColor="@color/red" android:layout_gravity="left" android:id="@id/PreAmpText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="135.0dip" android:text="数字麦克风放大" />
->         <TextView android:textSize="10.0dip" android:id="@id/TextViewTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="测试" />
-diff -r result/APP_31/App_B_31/res/layout/options.xml result/APP_31/App_M_31/res/layout/options.xml
-7c7
-<                 <TextView android:id="@id/TextView06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Process Priority (should not be changed)" />
----
->                 <TextView android:id="@id/TextView06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="进程优先级 (不能改变)" />
-17c17
-<                 <TextView android:id="@id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buffer Size (only increase if audio is skipping)" />
----
->                 <TextView android:id="@id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="缓冲区范围(音频发生跳跃时会增加)" />
-27c27
-<                 <CheckBox android:id="@id/CheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="popup rename dialog after recording" />
----
->                 <CheckBox android:id="@id/CheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录制之后弹出重命名对话框" />
-31c31
-<                 <CheckBox android:id="@id/CheckBox02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="show cassette background" />
----
->                 <CheckBox android:id="@id/CheckBox02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="显示录音背景" />
-43c43
-<                 <TextView android:id="@id/TextView04" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(changes will get active on next track)" />
----
->                 <TextView android:id="@id/TextView04" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(下一轨道会激活改变)" />
-46,47c46,47
-<                 <Button android:id="@id/Button02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="OK" />
-<                 <Button android:id="@id/Button01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="Cancel" />
----
->                 <Button android:id="@id/Button02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="确定" />
->                 <Button android:id="@id/Button01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="取消" />
-diff -r result/APP_31/App_B_31/res/values/strings.xml result/APP_31/App_M_31/res/values/strings.xml
-5c5,6
-<  by andro iX
----
->  by andro iX txl
-> （安极汉话）
-7,16c8,15
-<  Press the yellow button to open the recording browser.
-<  Short click on a recording to open and play.
-<  Long click on a recording for context menu to delete/send/export.
-<  
-<  Enable loop for endless playback.
-<  Enable boost for extra pre-playback amplification on silent tracks.
-<  Enable the Limiter to let the phone reduce the preamp slider when clipping is detected while recording.
-<  Raw recordings are saved to /sdcard/VirtualRecorder.
-<  Exported ringtones are saved to /sdcard/media/audio/ringtones.
-<  
----
->  按黄色按钮打开录音文件浏览。
->  快速点击录音文件可以打开播放。
->  长按录音文件产生菜单选项：删除/发送/导出。
->  循环播放。
->  可以增强额外的预回放放大在无声轨迹。
-> 当录音时检测到裁剪文件，允许限幅器使手机减少放大器滑动。
->  未加工的录音文件保存到：SD卡/VirtualRecorder。
->  导出作为铃声保存到：SD卡/media/audio/ringtones。
-diff -r result/APP_31/App_B_31/smali/ix/com/android/VirtualRecorder/VirtualRecorder.smali result/APP_31/App_M_31/smali/ix/com/android/VirtualRecorder/VirtualRecorder.smali
-1546c1546
-<     const-string v1, "Priority"
----
->     const-string v1, "\u4f18\u5148\u7ea7"
-1559c1559
-<     const-string v1, "LoopMode"
----
->     const-string v1, "\u5faa\u73af\u6a21\u5f0f"
-1572c1572
-<     const-string v1, "AutoLimiter"
----
->     const-string v1, "\u81ea\u52a8\u9650\u5e45"
-1585c1585
-<     const-string v1, "Boost"
----
->     const-string v1, "\u63d0\u9ad8"
-2841c2841
-<     const-string v1, "Pitch -100%"
----
->     const-string v1, "\u97f3\u9ad8 -100%"
-2883c2883
-<     const-string v1, "Pitch 100%"
----
->     const-string v1, "\u97f3\u9ad8 100%"
-3560c3560
-<     const-string v2, "Pitch "
----
->     const-string v2, "\u97f3\u9ad8 "
-3696c3696
-<     const-string v2, "Pitch "
----
->     const-string v2, "\u97f3\u9ad8 "
-3948c3948
-<     const-string v6, "Disable Loop"
----
->     const-string v6, "\u4e0d\u5141\u8bb8\u5faa\u73af"
-3967c3967
-<     const-string v6, "Disable Boost"
----
->     const-string v6, "\u4e0d\u5141\u8bb8\u63d0\u9ad8"
-3986c3986
-<     const-string v6, "Disable Limiter"
----
->     const-string v6, "\u4e0d\u5141\u8bb8\u9650\u5e45"
-4002c4002
-<     const-string v7, "About"
----
->     const-string v7, "\u5173\u4e8e"
-4017c4017
-<     const-string v7, "Options"
----
->     const-string v7, "\u8bbe\u7f6e"
-4032c4032
-<     const-string v7, "Exit"
----
->     const-string v7, "\u9000\u51fa"
-4055c4055
-<     const-string v6, "Enable Loop"
----
->     const-string v6, "\u5141\u8bb8\u5faa\u73af"
-4071c4071
-<     const-string v6, "Enable Boost"
----
->     const-string v6, "\u5141\u8bb8\u63d0\u9ad8"
-4087c4087
-<     const-string v6, "Enable Limiter"
----
->     const-string v6, "\u5141\u8bb8\u9650\u5e45"
-4328c4328
-<     const-string v2, "Pitch "
----
->     const-string v2, "\u97f3\u9ad8 "
-4704c4704
-<     const-string v7, "About"
----
->     const-string v7, "\u5173\u4e8e"
-4714c4714
-<     const-string v8, "Show FAQ"
----
->     const-string v8, "\u5e38\u89c1\u95ee\u9898"
-4721c4721
-<     const-string v8, "Buy adfree"
----
->     const-string v8, "\u4e70\u514d\u8d39\u5e7f\u544a"
-4728c4728
-<     const-string v8, "Close"
----
->     const-string v8, "\u5173\u95ed"
+diff --git a/result/APP_31/App_B_31/apktool.yml b/result/APP_31/App_M_31/apktool.yml
+index 7640194..f79e9ef 100755
+--- a/result/APP_31/App_B_31/apktool.yml
++++ b/result/APP_31/App_M_31/apktool.yml
+@@ -1,8 +1,7 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp31-3FCA7AC2ED1C542BAA476A4071DEA24E5AED3FA5C1D18D9CACF5337F3F10386C.apk
++apkFileName: Mapp31-B8510B58474093BDCC8DB1ECADFF7373CA9B024ABB2529FA308760A7AB3A1487.apk
+ compressionType: false
+ doNotCompress:
+-- resources.arsc
+ - png
+ - jpg
+ isFrameworkApk: false
+diff --git a/result/APP_31/App_B_31/ix/com/android/VirtualRecorder/VirtualRecorder.java b/result/APP_31/App_M_31/ix/com/android/VirtualRecorder/VirtualRecorder.java
+index 7bd3777..7c7dfda 100755
+--- a/result/APP_31/App_B_31/ix/com/android/VirtualRecorder/VirtualRecorder.java
++++ b/result/APP_31/App_M_31/ix/com/android/VirtualRecorder/VirtualRecorder.java
+@@ -377,10 +377,10 @@ public final class VirtualRecorder
+   
+   private void readConfig()
+   {
+-    VR_PRIORITY = mConfig.getInt("Priority", VR_PRIORITY);
+-    mLoopMode = mConfig.getBoolean("LoopMode", mLoopMode);
+-    mAutoLimiter = mConfig.getBoolean("AutoLimiter", mAutoLimiter);
+-    mBoost = mConfig.getBoolean("Boost", mBoost);
++    VR_PRIORITY = mConfig.getInt("优先级", VR_PRIORITY);
++    mLoopMode = mConfig.getBoolean("循环模式", mLoopMode);
++    mAutoLimiter = mConfig.getBoolean("自动限幅", mAutoLimiter);
++    mBoost = mConfig.getBoolean("提高", mBoost);
+     mAutoRename = mConfig.getBoolean("mAutoRename", mAutoRename);
+     mBufferSizeMultiplicator = mConfig.getInt("mBufferSizeMultiplicator", mBufferSizeMultiplicator);
+     mShowCassetteBackground = mConfig.getBoolean("mShowCassetteBackground", mShowCassetteBackground);
+@@ -629,7 +629,7 @@ public final class VirtualRecorder
+         player.setPitch(-100);
+       }
+       mPitchSeekBar.setProgress(100);
+-      mPitchText.setText("Pitch -100%");
++      mPitchText.setText("音高 -100%");
+     }
+     for (;;)
+     {
+@@ -640,7 +640,7 @@ public final class VirtualRecorder
+           player.setPitch(100);
+         }
+         mPitchSeekBar.setProgress(300);
+-        mPitchText.setText("Pitch 100%");
++        mPitchText.setText("音高 100%");
+         return;
+       }
+       if (paramView.getId() == 2131099675)
+@@ -790,7 +790,7 @@ public final class VirtualRecorder
+                 for (;;)
+                 {
+                   mPitchSeekBar.setProgress(paramView.intValue() + 200);
+-                  mPitchText.setText("Pitch " + paramView + "%");
++                  mPitchText.setText("音高 " + paramView + "%");
+                   return;
+                   localInteger = Integer.valueOf(mPitchSeekBar.getProgress() - 200);
+                   paramView = localInteger;
+@@ -814,7 +814,7 @@ public final class VirtualRecorder
+                 for (;;)
+                 {
+                   mPitchSeekBar.setProgress(paramView.intValue() + 200);
+-                  mPitchText.setText("Pitch " + paramView + "%");
++                  mPitchText.setText("音高 " + paramView + "%");
+                   initControls();
+                   return;
+                   localInteger = Integer.valueOf(mPitchSeekBar.getProgress() - 200);
+@@ -883,30 +883,30 @@ public final class VirtualRecorder
+     super.onCreateOptionsMenu(paramMenu);
+     if (mLoopMode)
+     {
+-      paramMenu.add(0, 1, 0, "Disable Loop").setIcon(2130837521);
++      paramMenu.add(0, 1, 0, "不允许循环").setIcon(2130837521);
+       if (!mBoost) {
+         break label177;
+       }
+-      paramMenu.add(0, 4, 0, "Disable Boost").setIcon(2130837515);
++      paramMenu.add(0, 4, 0, "不允许提高").setIcon(2130837515);
+       label60:
+       if (!mAutoLimiter) {
+         break label201;
+       }
+-      paramMenu.add(0, 3, 0, "Disable Limiter").setIcon(2130837519);
++      paramMenu.add(0, 3, 0, "不允许限幅").setIcon(2130837519);
+     }
+     for (;;)
+     {
+-      paramMenu.add(0, 6, 0, "About").setIcon(2130837513);
+-      paramMenu.add(0, 5, 0, "Options").setIcon(2130837522);
+-      paramMenu.add(0, 2, 0, "Exit").setIcon(2130837517);
++      paramMenu.add(0, 6, 0, "关于").setIcon(2130837513);
++      paramMenu.add(0, 5, 0, "设置").setIcon(2130837522);
++      paramMenu.add(0, 2, 0, "退出").setIcon(2130837517);
+       return true;
+-      paramMenu.add(0, 1, 0, "Enable Loop").setIcon(2130837520);
++      paramMenu.add(0, 1, 0, "允许循环").setIcon(2130837520);
+       break;
+       label177:
+-      paramMenu.add(0, 4, 0, "Enable Boost").setIcon(2130837514);
++      paramMenu.add(0, 4, 0, "允许提高").setIcon(2130837514);
+       break label60;
+       label201:
+-      paramMenu.add(0, 3, 0, "Enable Limiter").setIcon(2130837518);
++      paramMenu.add(0, 3, 0, "允许限幅").setIcon(2130837518);
+     }
+   }
+   
+@@ -970,7 +970,7 @@ public final class VirtualRecorder
+       if ((player != null) && (paramBoolean)) {
+         player.setPitch(paramInt - 200);
+       }
+-      mPitchText.setText("Pitch " + (paramInt - 200) + "%");
++      mPitchText.setText("音高 " + (paramInt - 200) + "%");
+       mPitchSeekBarProgress = paramInt;
+     }
+     label297:
+@@ -1074,11 +1074,11 @@ public final class VirtualRecorder
+       };
+       Spanned localSpanned = Html.fromHtml((String)Html.toHtml((Spanned)getResources().getText(2131034113)));
+       AlertDialog localAlertDialog = new AlertDialog.Builder(this).create();
+-      localAlertDialog.setTitle("About");
++      localAlertDialog.setTitle("关于");
+       localAlertDialog.setMessage(localSpanned);
+-      localAlertDialog.setButton(-3, "Show FAQ", local9);
+-      localAlertDialog.setButton(-2, "Buy adfree", local10);
+-      localAlertDialog.setButton(-1, "Close", local8);
++      localAlertDialog.setButton(-3, "常见问题", local9);
++      localAlertDialog.setButton(-2, "买免费广告", local10);
++      localAlertDialog.setButton(-1, "关闭", local8);
+       localAlertDialog.show();
+       return;
+     }
+diff --git a/result/APP_31/App_B_31/original/AndroidManifest.xml b/result/APP_31/App_M_31/original/AndroidManifest.xml
+index e5cd899..f6fe73b 100755
+Binary files a/result/APP_31/App_B_31/original/AndroidManifest.xml and b/result/APP_31/App_M_31/original/AndroidManifest.xml differ
+diff --git a/result/APP_31/App_B_31/original/META-INF/CERT.RSA b/result/APP_31/App_M_31/original/META-INF/CERT.RSA
+index 08f8204..8806dc6 100755
+Binary files a/result/APP_31/App_B_31/original/META-INF/CERT.RSA and b/result/APP_31/App_M_31/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_31/App_B_31/original/META-INF/CERT.SF b/result/APP_31/App_M_31/original/META-INF/CERT.SF
+index 381529a..c62e8ca 100755
+--- a/result/APP_31/App_B_31/original/META-INF/CERT.SF
++++ b/result/APP_31/App_M_31/original/META-INF/CERT.SF
+@@ -1,18 +1,18 @@
+ Signature-Version: 1.0
+-Created-By: 1.0 (Android)
+-SHA1-Digest-Manifest: w/CTudH95zgYRoe615WrYDq79HY=
++Created-By: 1.0 (Android SignApk)
++SHA1-Digest-Manifest: cXKCJCYTY5TNs83l0KDXAb6MucY=
+ 
+ Name: res/drawable/miexit.png
+ SHA1-Digest: ELbW+4Z19I0LK3kuOPCZ4P2IQnc=
+ 
+ Name: res/layout/filelistrow.xml
+-SHA1-Digest: G3DYrn1hoyyqAxg3XFKDx89KRjg=
++SHA1-Digest: iisZmSkevg059e+CJcJpy7C60Jo=
+ 
+ Name: res/drawable/miloop_green.png
+ SHA1-Digest: maO47qarwLkC5jebJOfYqA0FtfU=
+ 
+ Name: res/layout/filelist.xml
+-SHA1-Digest: 4xJKCI88myD1PzVb1PjwlqyyE9g=
++SHA1-Digest: B/prK1TosfYL2AsdN/HBM/InBAM=
+ 
+ Name: res/drawable/amp.png
+ SHA1-Digest: e6xd5Na01BC+3WGRhuLuNiHWSWo=
+@@ -24,7 +24,7 @@ Name: res/drawable/filelistfilemic.png
+ SHA1-Digest: pv2+CBE4WxLlp585o/Qsiom7v7I=
+ 
+ Name: resources.arsc
+-SHA1-Digest: Wnw5046OedKIvRte0HRMYRkEWvU=
++SHA1-Digest: Y+okxY4QYhnQSRRy8uKhMbSifCk=
+ 
+ Name: res/drawable/milimiter_green.png
+ SHA1-Digest: UnicyR5If4kLXGxcDNkrRIbhPSY=
+@@ -35,12 +35,12 @@ SHA1-Digest: zHP1Y7YevLUMADYZQOrDnc6zKkc=
+ Name: res/drawable/milimiter.png
+ SHA1-Digest: Buf+MV3L7S0a5z1uGlMAgSStO/I=
+ 
+-Name: AndroidManifest.xml
+-SHA1-Digest: G/c5Xgr+Sq+cl9ghuYVGsHozwxk=
+-
+ Name: res/drawable-ldpi/icon.png
+ SHA1-Digest: nH61GmMj1cAr1siqLZbmA+wVjgA=
+ 
++Name: AndroidManifest.xml
++SHA1-Digest: yXdyy1+FJCNP+Ex6xJ8yX7POkBg=
++
+ Name: res/drawable-mdpi/icon.png
+ SHA1-Digest: Ws1OG94RG1qyy38dyMH7jHnj7Ps=
+ 
+@@ -48,7 +48,7 @@ Name: res/drawable/filelistfileaudio.png
+ SHA1-Digest: vb8Mqlz95GlqGbxWa98S+M6Kn/Y=
+ 
+ Name: res/layout/options.xml
+-SHA1-Digest: y1mxNWdFmjAs/vX9RUiRKbc2e8g=
++SHA1-Digest: MGD7T9t5b5uOACSyPTh+aPbn4LI=
+ 
+ Name: res/drawable/cassette.jpg
+ SHA1-Digest: 0E9gdvT0nFxOxjXkje1uO6yr+aA=
+@@ -78,13 +78,13 @@ Name: res/drawable/stop.png
+ SHA1-Digest: 2twzVfq9+3XttMUOdetYXYGlsVU=
+ 
+ Name: classes.dex
+-SHA1-Digest: Jx5Eq2Z8h4BZyK3zL72ntVohWlU=
++SHA1-Digest: h4s48DUcOoAj8vqpmPeWFSdqPD0=
+ 
+ Name: res/drawable/pause.png
+ SHA1-Digest: Us+ev4pSqTUrsl7VoW8+a//JRs8=
+ 
+ Name: res/layout/main.xml
+-SHA1-Digest: LZFrKhFaY4FjwQVzbQ0t9DkpVHY=
++SHA1-Digest: S+gBxxMZmAGAaJznr/K82eCCjTE=
+ 
+ Name: res/drawable/miboost.png
+ SHA1-Digest: SqIKcXmyFnBANvm4qwHHBq7gJzA=
+@@ -99,7 +99,7 @@ Name: res/drawable/transparent.png
+ SHA1-Digest: CQkjuPw5REpQDdio6Xsrrlw9/f4=
+ 
+ Name: res/layout/contextmenu.xml
+-SHA1-Digest: 3LT3UBD5ixbR0aRPHge1Q9Yb6kY=
++SHA1-Digest: EVzoIFVnQ9JR1qFPSgZHJNmyaUY=
+ 
+ Name: res/drawable/record.png
+ SHA1-Digest: owB6Z3yYKbF92K/cCpyI551QVqk=
+diff --git a/result/APP_31/App_B_31/original/META-INF/MANIFEST.MF b/result/APP_31/App_M_31/original/META-INF/MANIFEST.MF
+index c82cb70..a29222f 100755
+--- a/result/APP_31/App_B_31/original/META-INF/MANIFEST.MF
++++ b/result/APP_31/App_M_31/original/META-INF/MANIFEST.MF
+@@ -1,20 +1,20 @@
+ Manifest-Version: 1.0
+-Created-By: 1.0 (Android)
++Created-By: 1.0 (Android SignApk)
+ 
+ Name: res/drawable/miexit.png
+ SHA1-Digest: 1wA1NnELnmDdpvvD3NdRIgkLKc4=
+ 
+ Name: res/layout/filelistrow.xml
+-SHA1-Digest: 1nCwLb7oeQnYrURSlkbZ5JmPl90=
++SHA1-Digest: sPxxt0f5IE829RIj1b6LzxHbEPM=
+ 
+ Name: res/layout/filelist.xml
+-SHA1-Digest: He/DbHp38iCkATYK8bCSeO8NdaU=
++SHA1-Digest: J4DGRLJJM3FZdcmqtYU1cZnwpIw=
+ 
+ Name: res/drawable/miloop_green.png
+ SHA1-Digest: U3oQTA9zSOcEJHActyU1+S2tpI0=
+ 
+ Name: resources.arsc
+-SHA1-Digest: 0wBI19VXIXFnW2fn1i9gRvo1R74=
++SHA1-Digest: 6K5SvzHmsf93PA54a36KBpUs3Ic=
+ 
+ Name: res/drawable/filelistfilemic.png
+ SHA1-Digest: GpMpMAqmKt7PKk+rGckHZ1eDtU8=
+@@ -34,12 +34,12 @@ SHA1-Digest: 12Vw5oYmi4HWgC9ll0Wkgumrhlg=
+ Name: res/drawable/milimiter.png
+ SHA1-Digest: kV7k5qWWLeAkXJN3YGFfWEbHALw=
+ 
++Name: AndroidManifest.xml
++SHA1-Digest: BKMymoffrwNuJ5BjA8CVczB5zzc=
++
+ Name: res/drawable-ldpi/icon.png
+ SHA1-Digest: dAoSYgZDW4J5h3QHMCpq7FRuw0g=
+ 
+-Name: AndroidManifest.xml
+-SHA1-Digest: zzPadVz8nYhWspgv97m6qCF4FlA=
+-
+ Name: res/drawable-mdpi/icon.png
+ SHA1-Digest: AFGT+F85O0zYNFMUoQVNbxhR9S0=
+ 
+@@ -47,7 +47,7 @@ Name: res/drawable/filelistfileaudio.png
+ SHA1-Digest: UV+MWaL/oifpvgx2RBUZeQdYUAQ=
+ 
+ Name: res/layout/options.xml
+-SHA1-Digest: vhzZnYzRYHfsv8hY+QD+IhNfJUI=
++SHA1-Digest: f1hqmFwQxhb5tAv1P/jXD072HBM=
+ 
+ Name: res/drawable/cassette.jpg
+ SHA1-Digest: BCKQYmiBThuYnEYk12+up3NF04s=
+@@ -74,7 +74,7 @@ Name: res/drawable/open.png
+ SHA1-Digest: oCTeyD2do1Mna17yb3Cc8TkSGkc=
+ 
+ Name: classes.dex
+-SHA1-Digest: ztpX0xpsc3HPSrG6oTSmH6Yvlao=
++SHA1-Digest: B2f/g0vzn4T8FL0TkJrg+n5qMss=
+ 
+ Name: res/drawable/stop.png
+ SHA1-Digest: pAT4W19fSsh8dgmRyzbTWjNXqjk=
+@@ -83,7 +83,7 @@ Name: res/drawable/pause.png
+ SHA1-Digest: BaotuexKpPUpB7rKYNL9tQicYhc=
+ 
+ Name: res/layout/main.xml
+-SHA1-Digest: l5I7ljdPjumEfmfKp8wVpAnHjy4=
++SHA1-Digest: t+f9MXmiv0f9uZROJlUFNm6TDyg=
+ 
+ Name: res/drawable/miboost.png
+ SHA1-Digest: PnRPgKF63Z+i+6p52+Pog/HEALw=
+@@ -98,7 +98,7 @@ Name: res/drawable/miboost_green.png
+ SHA1-Digest: ynPTjOpMe7GA6WlLBYVbNSnITN8=
+ 
+ Name: res/layout/contextmenu.xml
+-SHA1-Digest: 7bg8yjqdSERCipqr4mZ2ZJeE08s=
++SHA1-Digest: ecVMHULfdJ7xWv59Dd8xCvZalqs=
+ 
+ Name: res/drawable/record.png
+ SHA1-Digest: PF5CdmDUc4yZ1T3mjvujgfr+ynM=
+diff --git a/result/APP_31/App_B_31/res/layout/filelistrow.xml b/result/APP_31/App_M_31/res/layout/filelistrow.xml
+index 458b877..aefceed 100755
+--- a/result/APP_31/App_B_31/res/layout/filelistrow.xml
++++ b/result/APP_31/App_M_31/res/layout/filelistrow.xml
+@@ -6,10 +6,10 @@
+     </LinearLayout>
+     <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout03" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+         <LinearLayout android:id="@id/LinearLayout04" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-            <TextView android:textSize="16.0dip" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="filename" android:lines="1" />
++            <TextView android:textSize="16.0dip" android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件名" android:lines="1" />
+         </LinearLayout>
+         <LinearLayout android:id="@id/LinearLayout05" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-            <TextView android:textSize="12.0dip" android:textColor="@color/blue_verylight" android:id="@id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DATE SIZE" android:lines="1" />
++            <TextView android:textSize="12.0dip" android:textColor="@color/blue_verylight" android:id="@id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日期大小" android:lines="1" />
+         </LinearLayout>
+     </LinearLayout>
+ </LinearLayout>
+\ No newline at end of file
+diff --git a/result/APP_31/App_B_31/res/layout/main.xml b/result/APP_31/App_M_31/res/layout/main.xml
+index 4dabef8..4113237 100755
+--- a/result/APP_31/App_B_31/res/layout/main.xml
++++ b/result/APP_31/App_M_31/res/layout/main.xml
+@@ -15,7 +15,7 @@
+         </LinearLayout>
+         <Button android:id="@id/ButtonMinus100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:minHeight="50.0dip" android:drawableTop="@drawable/left" />
+         <LinearLayout android:id="@id/LinearLayout05" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-            <TextView android:textColor="@color/blue_verylight" android:gravity="center_horizontal" android:id="@id/PitchText" android:background="@drawable/display_bg" android:paddingTop="2.0dip" android:layout_width="50.0dip" android:layout_height="40.0dip" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:text="Pitch 100%" android:lines="2" />
++            <TextView android:textColor="@color/blue_verylight" android:gravity="center_horizontal" android:id="@id/PitchText" android:background="@drawable/display_bg" android:paddingTop="2.0dip" android:layout_width="50.0dip" android:layout_height="40.0dip" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:text="音高 100%" android:lines="2" />
+         </LinearLayout>
+         <Button android:id="@id/ButtonPlus100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:minHeight="50.0dip" android:drawableTop="@drawable/right" />
+         <LinearLayout android:id="@id/LinearLayout06" android:layout_width="wrap_content" android:layout_height="wrap_content">
+@@ -27,8 +27,8 @@
+     </LinearLayout>
+     <LinearLayout android:id="@id/LinearLayout02" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+         <LinearLayout android:id="@id/LinearLayout08" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-            <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonMic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="Mic" />
+-            <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="Call" />
++            <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonMic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="麦克风" />
++            <RadioButton android:textSize="10.0dip" android:id="@id/RadioButtonCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="60.0dip" android:maxHeight="50.0dip" android:text="呼叫" />
+         </LinearLayout>
+         <Button android:id="@id/ButtonRecord" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:minHeight="50.0dip" android:drawableTop="@drawable/record" />
+         <Button android:id="@id/ButtonLoad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="50.0dip" android:maxHeight="50.0dip" android:minWidth="50.0dip" android:minHeight="50.0dip" android:drawableTop="@drawable/open" />
+@@ -42,8 +42,8 @@
+         <TextView android:gravity="center_horizontal" android:id="@id/TextViewStatus" android:background="@drawable/display_bg" android:visibility="visible" android:layout_width="150.0dip" android:layout_height="20.0dip" android:text="0 : 00" android:maxLines="1" />
+     </LinearLayout>
+     <LinearLayout android:orientation="horizontal" android:id="@id/LinearLayout11" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-        <TextView android:textSize="10.0dip" android:textColor="@color/red" android:layout_gravity="left" android:id="@id/PreAmpText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="135.0dip" android:text="Digital Mic PreAmp" />
+-        <TextView android:textSize="10.0dip" android:id="@id/TextViewTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Test" />
++        <TextView android:textSize="10.0dip" android:textColor="@color/red" android:layout_gravity="left" android:id="@id/PreAmpText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="135.0dip" android:text="数字麦克风放大" />
++        <TextView android:textSize="10.0dip" android:id="@id/TextViewTest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="测试" />
+     </LinearLayout>
+     <LinearLayout android:id="@id/LinearLayout12" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+         <SeekBar android:layout_gravity="bottom|center" android:id="@id/SeekBar03" android:background="@drawable/amp" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="10.0dip" android:max="1000" android:progress="0" />
+diff --git a/result/APP_31/App_B_31/res/layout/options.xml b/result/APP_31/App_M_31/res/layout/options.xml
+index 3823eb7..7cb45c2 100755
+--- a/result/APP_31/App_B_31/res/layout/options.xml
++++ b/result/APP_31/App_M_31/res/layout/options.xml
+@@ -4,7 +4,7 @@
+     <ScrollView android:id="@id/ScrollView01" android:layout_width="fill_parent" android:layout_height="wrap_content">
+         <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/LinearLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent">
+             <LinearLayout android:id="@id/LinearLayout05" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-                <TextView android:id="@id/TextView06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Process Priority (should not be changed)" />
++                <TextView android:id="@id/TextView06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="进程优先级 (不能改变)" />
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout02" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                 <SeekBar android:id="@id/SeekBar01" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="2" android:progress="0" android:progressDrawable="@color/grey_light" />
+@@ -14,7 +14,7 @@
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout08" android:background="@color/grey_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+             <LinearLayout android:id="@id/LinearLayout11" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-                <TextView android:id="@id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buffer Size (only increase if audio is skipping)" />
++                <TextView android:id="@id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="缓冲区范围(音频发生跳跃时会增加)" />
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout13" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                 <SeekBar android:id="@id/SeekBar02" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="2" android:progress="0" android:progressDrawable="@color/grey_light" />
+@@ -24,11 +24,11 @@
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout14" android:background="@color/grey_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+             <LinearLayout android:id="@id/LinearLayout07" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-                <CheckBox android:id="@id/CheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="popup rename dialog after recording" />
++                <CheckBox android:id="@id/CheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录制之后弹出重命名对话框" />
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout09" android:background="@color/grey_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+             <LinearLayout android:id="@id/LinearLayout17" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-                <CheckBox android:id="@id/CheckBox02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="show cassette background" />
++                <CheckBox android:id="@id/CheckBox02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="显示录音背景" />
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout16" android:background="@color/grey_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+             <LinearLayout android:id="@id/LinearLayout12" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+@@ -40,11 +40,11 @@
+             </LinearLayout>
+             <LinearLayout android:id="@id/LinearLayout10" android:background="@color/grey_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+             <LinearLayout android:id="@id/LinearLayout06" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-                <TextView android:id="@id/TextView04" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(changes will get active on next track)" />
++                <TextView android:id="@id/TextView04" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(下一轨道会激活改变)" />
+             </LinearLayout>
+             <LinearLayout android:orientation="horizontal" android:id="@id/LinearLayout04" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-                <Button android:id="@id/Button02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="OK" />
+-                <Button android:id="@id/Button01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="Cancel" />
++                <Button android:id="@id/Button02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="确定" />
++                <Button android:id="@id/Button01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100.0dip" android:text="取消" />
+             </LinearLayout>
+         </LinearLayout>
+     </ScrollView>
+diff --git a/result/APP_31/App_B_31/res/values/strings.xml b/result/APP_31/App_M_31/res/values/strings.xml
+index 4b22a35..720f2e0 100755
+--- a/result/APP_31/App_B_31/res/values/strings.xml
++++ b/result/APP_31/App_M_31/res/values/strings.xml
+@@ -2,17 +2,16 @@
+ <resources>
+     <string name="app_name">VirtualRecorder</string>
+     <string name="about">" "<b>Virtual Recorder</b>"
+- by andro iX
++ by andro iX txl
++（安极汉话）
+ 
+- Press the yellow button to open the recording browser.
+- Short click on a recording to open and play.
+- Long click on a recording for context menu to delete/send/export.
+- 
+- Enable loop for endless playback.
+- Enable boost for extra pre-playback amplification on silent tracks.
+- Enable the Limiter to let the phone reduce the preamp slider when clipping is detected while recording.
+- Raw recordings are saved to /sdcard/VirtualRecorder.
+- Exported ringtones are saved to /sdcard/media/audio/ringtones.
+- 
++ 按黄色按钮打开录音文件浏览。
++ 快速点击录音文件可以打开播放。
++ 长按录音文件产生菜单选项：删除/发送/导出。
++ 循环播放。
++ 可以增强额外的预回放放大在无声轨迹。
++当录音时检测到裁剪文件，允许限幅器使手机减少放大器滑动。
++ 未加工的录音文件保存到：SD卡/VirtualRecorder。
++ 导出作为铃声保存到：SD卡/media/audio/ringtones。
+  "</string>
+ </resources>
+diff --git a/result/APP_31/App_B_31/smali/ix/com/android/VirtualRecorder/VirtualRecorder.smali b/result/APP_31/App_M_31/smali/ix/com/android/VirtualRecorder/VirtualRecorder.smali
+index 91812b9..20193e1 100755
+--- a/result/APP_31/App_B_31/smali/ix/com/android/VirtualRecorder/VirtualRecorder.smali
++++ b/result/APP_31/App_M_31/smali/ix/com/android/VirtualRecorder/VirtualRecorder.smali
+@@ -1543,7 +1543,7 @@
+     .line 374
+     sget-object v0, Lix/com/android/VirtualRecorder/VirtualRecorder;->mConfig:Landroid/content/SharedPreferences;
+ 
+-    const-string v1, "Priority"
++    const-string v1, "\u4f18\u5148\u7ea7"
+ 
+     sget v2, Lix/com/android/VirtualRecorder/VirtualRecorder;->VR_PRIORITY:I
+ 
+@@ -1556,7 +1556,7 @@
+     .line 375
+     sget-object v0, Lix/com/android/VirtualRecorder/VirtualRecorder;->mConfig:Landroid/content/SharedPreferences;
+ 
+-    const-string v1, "LoopMode"
++    const-string v1, "\u5faa\u73af\u6a21\u5f0f"
+ 
+     sget-boolean v2, Lix/com/android/VirtualRecorder/VirtualRecorder;->mLoopMode:Z
+ 
+@@ -1569,7 +1569,7 @@
+     .line 376
+     sget-object v0, Lix/com/android/VirtualRecorder/VirtualRecorder;->mConfig:Landroid/content/SharedPreferences;
+ 
+-    const-string v1, "AutoLimiter"
++    const-string v1, "\u81ea\u52a8\u9650\u5e45"
+ 
+     sget-boolean v2, Lix/com/android/VirtualRecorder/VirtualRecorder;->mAutoLimiter:Z
+ 
+@@ -1582,7 +1582,7 @@
+     .line 377
+     sget-object v0, Lix/com/android/VirtualRecorder/VirtualRecorder;->mConfig:Landroid/content/SharedPreferences;
+ 
+-    const-string v1, "Boost"
++    const-string v1, "\u63d0\u9ad8"
+ 
+     sget-boolean v2, Lix/com/android/VirtualRecorder/VirtualRecorder;->mBoost:Z
+ 
+@@ -2838,7 +2838,7 @@
+     .line 881
+     sget-object v0, Lix/com/android/VirtualRecorder/VirtualRecorder;->mPitchText:Landroid/widget/TextView;
+ 
+-    const-string v1, "Pitch -100%"
++    const-string v1, "\u97f3\u9ad8 -100%"
+ 
+     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+ 
+@@ -2880,7 +2880,7 @@
+     .line 891
+     sget-object v0, Lix/com/android/VirtualRecorder/VirtualRecorder;->mPitchText:Landroid/widget/TextView;
+ 
+-    const-string v1, "Pitch 100%"
++    const-string v1, "\u97f3\u9ad8 100%"
+ 
+     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+ 
+@@ -3557,7 +3557,7 @@
+ 
+     new-instance v1, Ljava/lang/StringBuilder;
+ 
+-    const-string v2, "Pitch "
++    const-string v2, "\u97f3\u9ad8 "
+ 
+     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+ 
+@@ -3693,7 +3693,7 @@
+ 
+     new-instance v1, Ljava/lang/StringBuilder;
+ 
+-    const-string v2, "Pitch "
++    const-string v2, "\u97f3\u9ad8 "
+ 
+     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+ 
+@@ -3945,7 +3945,7 @@
+     if-eqz v6, :cond_0
+ 
+     .line 303
+-    const-string v6, "Disable Loop"
++    const-string v6, "\u4e0d\u5141\u8bb8\u5faa\u73af"
+ 
+     invoke-interface {p1, v8, v9, v8, v6}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -3964,7 +3964,7 @@
+     if-eqz v6, :cond_1
+ 
+     .line 314
+-    const-string v6, "Disable Boost"
++    const-string v6, "\u4e0d\u5141\u8bb8\u63d0\u9ad8"
+ 
+     invoke-interface {p1, v8, v10, v8, v6}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -3983,7 +3983,7 @@
+     if-eqz v6, :cond_2
+ 
+     .line 325
+-    const-string v6, "Disable Limiter"
++    const-string v6, "\u4e0d\u5141\u8bb8\u9650\u5e45"
+ 
+     invoke-interface {p1, v8, v7, v8, v6}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -3999,7 +3999,7 @@
+     :goto_2
+     const/4 v6, 0x6
+ 
+-    const-string v7, "About"
++    const-string v7, "\u5173\u4e8e"
+ 
+     invoke-interface {p1, v8, v6, v8, v7}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -4014,7 +4014,7 @@
+     .line 339
+     const/4 v6, 0x5
+ 
+-    const-string v7, "Options"
++    const-string v7, "\u8bbe\u7f6e"
+ 
+     invoke-interface {p1, v8, v6, v8, v7}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -4029,7 +4029,7 @@
+     .line 345
+     const/4 v6, 0x2
+ 
+-    const-string v7, "Exit"
++    const-string v7, "\u9000\u51fa"
+ 
+     invoke-interface {p1, v8, v6, v8, v7}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -4052,7 +4052,7 @@
+     .end local v4    # "miloop":Landroid/view/MenuItem;
+     .end local v5    # "mioptions":Landroid/view/MenuItem;
+     :cond_0
+-    const-string v6, "Enable Loop"
++    const-string v6, "\u5141\u8bb8\u5faa\u73af"
+ 
+     invoke-interface {p1, v8, v9, v8, v6}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -4068,7 +4068,7 @@
+ 
+     .line 319
+     :cond_1
+-    const-string v6, "Enable Boost"
++    const-string v6, "\u5141\u8bb8\u63d0\u9ad8"
+ 
+     invoke-interface {p1, v8, v10, v8, v6}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -4084,7 +4084,7 @@
+ 
+     .line 330
+     :cond_2
+-    const-string v6, "Enable Limiter"
++    const-string v6, "\u5141\u8bb8\u9650\u5e45"
+ 
+     invoke-interface {p1, v8, v7, v8, v6}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+ 
+@@ -4325,7 +4325,7 @@
+ 
+     new-instance v1, Ljava/lang/StringBuilder;
+ 
+-    const-string v2, "Pitch "
++    const-string v2, "\u97f3\u9ad8 "
+ 
+     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+ 
+@@ -4701,7 +4701,7 @@
+ 
+     .line 1898
+     .local v3, "infoDialog":Landroid/app/AlertDialog;
+-    const-string v7, "About"
++    const-string v7, "\u5173\u4e8e"
+ 
+     invoke-virtual {v3, v7}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
+ 
+@@ -4711,21 +4711,21 @@
+     .line 1905
+     const/4 v7, -0x3
+ 
+-    const-string v8, "Show FAQ"
++    const-string v8, "\u5e38\u89c1\u95ee\u9898"
+ 
+     invoke-virtual {v3, v7, v8, v2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+ 
+     .line 1907
+     const/4 v7, -0x2
+ 
+-    const-string v8, "Buy adfree"
++    const-string v8, "\u4e70\u514d\u8d39\u5e7f\u544a"
+ 
+     invoke-virtual {v3, v7, v8, v0}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+ 
+     .line 1909
+     const/4 v7, -0x1
+ 
+-    const-string v8, "Close"
++    const-string v8, "\u5173\u95ed"
+ 
+     invoke-virtual {v3, v7, v8, v4}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+ 

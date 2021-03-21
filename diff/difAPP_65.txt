@@ -1,46 +1,95 @@
-diff -r result/APP_65/App_B_65/AndroidManifest.xml result/APP_65/App_M_65/AndroidManifest.xml
-22c22
-<         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14cf7346295891"/>
----
->         <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14f099bfbf3c61"/>
-diff -r result/APP_65/App_B_65/apktool.yml result/APP_65/App_M_65/apktool.yml
-2c2
-< apkFileName: Bapp65-8EBB4258C50DA7F8737F7DDB725E4F062D48D7607AB313EEB096F91EA72A74DE.apk
----
-> apkFileName: Mapp65-D0590B2F405A44B4252FA128FEAC026BAF94BF8DCB4D1B3A77E6BEA8FC7A2729.apk
-5d4
-< - resources.arsc
-Os arquivos binários result/APP_65/App_B_65/original/AndroidManifest.xml e result/APP_65/App_M_65/original/AndroidManifest.xml são diferentes
-Os arquivos binários result/APP_65/App_B_65/original/META-INF/CERT.RSA e result/APP_65/App_M_65/original/META-INF/CERT.RSA são diferentes
-diff -r result/APP_65/App_B_65/original/META-INF/CERT.SF result/APP_65/App_M_65/original/META-INF/CERT.SF
-2,6c2,4
-< Created-By: 1.0 (Android)
-< SHA1-Digest-Manifest: ueKVhKdFDUvB32JA2drjIHhHmyE=
-< 
-< Name: res/layout/dialog_recommend.xml
-< SHA1-Digest: EOpe8rL3nU3lYiBkbhkinpccZJw=
----
-> SHA1-Digest-Manifest-Main-Attributes: ZKXxNW/3Rg7JA1r0+RlbJIP6IMA=
-> Created-By: 1.6.0_25 (Sun Microsystems Inc.)
-> SHA1-Digest-Manifest: JB+Bb+sSY6sSCLMXyiuAWHtt5xY=
-10a9,11
-> Name: res/layout/dialog_recommend.xml
-> SHA1-Digest: EOpe8rL3nU3lYiBkbhkinpccZJw=
-> 
-21c22
-< SHA1-Digest: aFId4nv94dfl7VOZ6Rn7Rgfu6Sg=
----
-> SHA1-Digest: +qz1o1mar7mzGdWFKb0TBx7tsIs=
-diff -r result/APP_65/App_B_65/original/META-INF/MANIFEST.MF result/APP_65/App_M_65/original/META-INF/MANIFEST.MF
-4,6d3
-< Name: res/drawable/bg_more_dialog.xml
-< SHA1-Digest: wrjrttKanUYqoE3bs4V+DGnP29A=
-< 
-9a7,9
-> Name: res/drawable/bg_more_dialog.xml
-> SHA1-Digest: wrjrttKanUYqoE3bs4V+DGnP29A=
-> 
-20c20
-< SHA1-Digest: 7uggj8JQBpeTmfqdDNp25A6LDgw=
----
-> SHA1-Digest: hTyQJqrLVGU5WmDPq5tuatJETFU=
+diff --git a/result/APP_65/App_B_65/AndroidManifest.xml b/result/APP_65/App_M_65/AndroidManifest.xml
+index d3ba477..5f9eccc 100755
+--- a/result/APP_65/App_B_65/AndroidManifest.xml
++++ b/result/APP_65/App_M_65/AndroidManifest.xml
+@@ -19,6 +19,6 @@
+                 <action android:name="com.android.vending.INSTALL_REFERRER"/>
+             </intent-filter>
+         </receiver>
+-        <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14cf7346295891"/>
++        <meta-data android:name="ADMOB_PUBLISHER_ID" android:value="a14f099bfbf3c61"/>
+     </application>
+ </manifest>
+\ No newline at end of file
+diff --git a/result/APP_65/App_B_65/apktool.yml b/result/APP_65/App_M_65/apktool.yml
+index 722cc37..dcfd5a0 100755
+--- a/result/APP_65/App_B_65/apktool.yml
++++ b/result/APP_65/App_M_65/apktool.yml
+@@ -1,8 +1,7 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp65-8EBB4258C50DA7F8737F7DDB725E4F062D48D7607AB313EEB096F91EA72A74DE.apk
++apkFileName: Mapp65-D0590B2F405A44B4252FA128FEAC026BAF94BF8DCB4D1B3A77E6BEA8FC7A2729.apk
+ compressionType: false
+ doNotCompress:
+-- resources.arsc
+ - ogg
+ - png
+ isFrameworkApk: false
+diff --git a/result/APP_65/App_B_65/original/AndroidManifest.xml b/result/APP_65/App_M_65/original/AndroidManifest.xml
+index 4c26d42..97cfcc4 100755
+Binary files a/result/APP_65/App_B_65/original/AndroidManifest.xml and b/result/APP_65/App_M_65/original/AndroidManifest.xml differ
+diff --git a/result/APP_65/App_B_65/original/META-INF/CERT.RSA b/result/APP_65/App_M_65/original/META-INF/CERT.RSA
+index d93f919..24419a1 100755
+Binary files a/result/APP_65/App_B_65/original/META-INF/CERT.RSA and b/result/APP_65/App_M_65/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_65/App_B_65/original/META-INF/CERT.SF b/result/APP_65/App_M_65/original/META-INF/CERT.SF
+index 0bdbb0f..57cd112 100755
+--- a/result/APP_65/App_B_65/original/META-INF/CERT.SF
++++ b/result/APP_65/App_M_65/original/META-INF/CERT.SF
+@@ -1,13 +1,14 @@
+ Signature-Version: 1.0
+-Created-By: 1.0 (Android)
+-SHA1-Digest-Manifest: ueKVhKdFDUvB32JA2drjIHhHmyE=
+-
+-Name: res/layout/dialog_recommend.xml
+-SHA1-Digest: EOpe8rL3nU3lYiBkbhkinpccZJw=
++SHA1-Digest-Manifest-Main-Attributes: ZKXxNW/3Rg7JA1r0+RlbJIP6IMA=
++Created-By: 1.6.0_25 (Sun Microsystems Inc.)
++SHA1-Digest-Manifest: JB+Bb+sSY6sSCLMXyiuAWHtt5xY=
+ 
+ Name: res/drawable/bg_more_dialog.xml
+ SHA1-Digest: r6EPOQnDR6qn9nIlalomJuGrgss=
+ 
++Name: res/layout/dialog_recommend.xml
++SHA1-Digest: EOpe8rL3nU3lYiBkbhkinpccZJw=
++
+ Name: resources.arsc
+ SHA1-Digest: s6Owi5T2zMFO1Vu0vbzfolemIu4=
+ 
+@@ -18,7 +19,7 @@ Name: res/drawable/more_first.png
+ SHA1-Digest: txpNkkki4XaQmWKeAf7+PO3YX2Y=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: aFId4nv94dfl7VOZ6Rn7Rgfu6Sg=
++SHA1-Digest: +qz1o1mar7mzGdWFKb0TBx7tsIs=
+ 
+ Name: res/drawable/recommend_close.png
+ SHA1-Digest: HwO8dgSB8IEDbzZSWRjkBsxKPvg=
+diff --git a/result/APP_65/App_B_65/original/META-INF/MANIFEST.MF b/result/APP_65/App_M_65/original/META-INF/MANIFEST.MF
+index e1d8d5d..68acce6 100755
+--- a/result/APP_65/App_B_65/original/META-INF/MANIFEST.MF
++++ b/result/APP_65/App_M_65/original/META-INF/MANIFEST.MF
+@@ -1,12 +1,12 @@
+ Manifest-Version: 1.0
+ Created-By: 1.0 (Android)
+ 
+-Name: res/drawable/bg_more_dialog.xml
+-SHA1-Digest: wrjrttKanUYqoE3bs4V+DGnP29A=
+-
+ Name: res/layout/dialog_recommend.xml
+ SHA1-Digest: kMnpDH0uu4NOvUj8wcIi/wJT4zo=
+ 
++Name: res/drawable/bg_more_dialog.xml
++SHA1-Digest: wrjrttKanUYqoE3bs4V+DGnP29A=
++
+ Name: resources.arsc
+ SHA1-Digest: ljHovnbLJZ+DcSlwwN6kF3hRQ1o=
+ 
+@@ -17,7 +17,7 @@ Name: res/drawable/more_first.png
+ SHA1-Digest: YMMjAtrfMPQMnRR+WKT6FUZBqws=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: 7uggj8JQBpeTmfqdDNp25A6LDgw=
++SHA1-Digest: hTyQJqrLVGU5WmDPq5tuatJETFU=
+ 
+ Name: res/drawable/recommend_close.png
+ SHA1-Digest: 8h9ZM7DoRcuJO0u2/1yhaGwNVu8=

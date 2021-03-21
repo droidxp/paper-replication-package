@@ -1,39 +1,83 @@
-diff -r result/APP_73/App_B_73/apktool.yml result/APP_73/App_M_73/apktool.yml
-2c2
-< apkFileName: Bapp73-A4700D4E61E4F2D8035BFB616A668B3993A1C3638239065D9368D6E7DA746F12.apk
----
-> apkFileName: Mapp73-9B8010FF3755C2C008FBFE2304E7E4B5D39AB9788A3E4EE345A1C111265F42E9.apk
-6a7
-> - gif
-Os arquivos binários result/APP_73/App_B_73/original/META-INF/CERT.RSA e result/APP_73/App_M_73/original/META-INF/CERT.RSA são diferentes
-diff -r result/APP_73/App_B_73/original/META-INF/CERT.SF result/APP_73/App_M_73/original/META-INF/CERT.SF
-3c3,6
-< SHA1-Digest-Manifest: lKaj99YCbtyVS3EWh+qar2u0YCI=
----
-> SHA1-Digest-Manifest: zvEpNszrNm+PR/qiUC6hhUlFCrg=
-> 
-> Name: res/drawable/icon.gif
-> SHA1-Digest: TsL8PbY9Jfi+U2HXIiF8uxPcokc=
-6c9
-< SHA1-Digest: c7+0Jf5Tvh/B3j/RuFBmI9hhltA=
----
-> SHA1-Digest: cilOcFaBHx6+DRxNPlxXWtIg40w=
-31,33d33
-< 
-< Name: res/drawable/icon.png
-< SHA1-Digest: 4OYQkFbO1YVX3V7JDFDUyFjNhMs=
-diff -r result/APP_73/App_B_73/original/META-INF/MANIFEST.MF result/APP_73/App_M_73/original/META-INF/MANIFEST.MF
-3a4,6
-> Name: res/drawable/icon.gif
-> SHA1-Digest: DgdhfKj6i1NSStrMLSJye+7gZJ0=
-> 
-5c8
-< SHA1-Digest: rkzTTsbLW1heW9TPkSGLUwtp5pY=
----
-> SHA1-Digest: 5kXLk4SUWVqBVgoz/YgjnV9wOOI=
-30,32d32
-< 
-< Name: res/drawable/icon.png
-< SHA1-Digest: 1rvVFbfFO4RHwQlAVRYhKrC59Lk=
-Somente em result/APP_73/App_M_73/res/drawable: icon.gif
-Somente em result/APP_73/App_B_73/res/drawable: icon.png
+diff --git a/result/APP_73/App_B_73/apktool.yml b/result/APP_73/App_M_73/apktool.yml
+index 4795813..c26e51c 100755
+--- a/result/APP_73/App_B_73/apktool.yml
++++ b/result/APP_73/App_M_73/apktool.yml
+@@ -1,9 +1,10 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp73-A4700D4E61E4F2D8035BFB616A668B3993A1C3638239065D9368D6E7DA746F12.apk
++apkFileName: Mapp73-9B8010FF3755C2C008FBFE2304E7E4B5D39AB9788A3E4EE345A1C111265F42E9.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+ - jpg
++- gif
+ - png
+ isFrameworkApk: false
+ packageInfo:
+diff --git a/result/APP_73/App_B_73/original/META-INF/CERT.RSA b/result/APP_73/App_M_73/original/META-INF/CERT.RSA
+index 6fb041c..ba2688b 100755
+Binary files a/result/APP_73/App_B_73/original/META-INF/CERT.RSA and b/result/APP_73/App_M_73/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_73/App_B_73/original/META-INF/CERT.SF b/result/APP_73/App_M_73/original/META-INF/CERT.SF
+index 3a49435..b723119 100755
+--- a/result/APP_73/App_B_73/original/META-INF/CERT.SF
++++ b/result/APP_73/App_M_73/original/META-INF/CERT.SF
+@@ -1,9 +1,12 @@
+ Signature-Version: 1.0
+ Created-By: 1.0 (Android)
+-SHA1-Digest-Manifest: lKaj99YCbtyVS3EWh+qar2u0YCI=
++SHA1-Digest-Manifest: zvEpNszrNm+PR/qiUC6hhUlFCrg=
++
++Name: res/drawable/icon.gif
++SHA1-Digest: TsL8PbY9Jfi+U2HXIiF8uxPcokc=
+ 
+ Name: resources.arsc
+-SHA1-Digest: c7+0Jf5Tvh/B3j/RuFBmI9hhltA=
++SHA1-Digest: cilOcFaBHx6+DRxNPlxXWtIg40w=
+ 
+ Name: res/layout-800x480/catalogitem.xml
+ SHA1-Digest: XiKstg8YHv8ViyC3C//9XEuRNJU=
+@@ -29,9 +32,6 @@ SHA1-Digest: hnv9YXhmpbN+mL9PN1SAmCbGaVs=
+ Name: AndroidManifest.xml
+ SHA1-Digest: bvEYlfb2P8UvrqcMTk9/aBvXO6o=
+ 
+-Name: res/drawable/icon.png
+-SHA1-Digest: 4OYQkFbO1YVX3V7JDFDUyFjNhMs=
+-
+ Name: res/layout/context.xml
+ SHA1-Digest: OBhzo8rVvQPFH2eJQjnsHq6JUA0=
+ 
+diff --git a/result/APP_73/App_B_73/original/META-INF/MANIFEST.MF b/result/APP_73/App_M_73/original/META-INF/MANIFEST.MF
+index e873c68..eb86778 100755
+--- a/result/APP_73/App_B_73/original/META-INF/MANIFEST.MF
++++ b/result/APP_73/App_M_73/original/META-INF/MANIFEST.MF
+@@ -1,8 +1,11 @@
+ Manifest-Version: 1.0
+ Created-By: 1.0 (Android)
+ 
++Name: res/drawable/icon.gif
++SHA1-Digest: DgdhfKj6i1NSStrMLSJye+7gZJ0=
++
+ Name: resources.arsc
+-SHA1-Digest: rkzTTsbLW1heW9TPkSGLUwtp5pY=
++SHA1-Digest: 5kXLk4SUWVqBVgoz/YgjnV9wOOI=
+ 
+ Name: res/layout-800x480/catalogitem.xml
+ SHA1-Digest: 43/jNM4NaFbrrTIv4YoUwOE9DjA=
+@@ -28,9 +31,6 @@ SHA1-Digest: 04An/5X+3GG8C18U03dYxcOnyBQ=
+ Name: AndroidManifest.xml
+ SHA1-Digest: WzWQIb3gjV3Vcs+mZr4bEXgfRIM=
+ 
+-Name: res/drawable/icon.png
+-SHA1-Digest: 1rvVFbfFO4RHwQlAVRYhKrC59Lk=
+-
+ Name: res/layout/context.xml
+ SHA1-Digest: lxSQiAet7oer9DcG92WFeK5AFSk=
+ 
+diff --git a/result/APP_73/App_M_73/res/drawable/icon.gif b/result/APP_73/App_M_73/res/drawable/icon.gif
+new file mode 100755
+index 0000000..e632acb
+Binary files /dev/null and b/result/APP_73/App_M_73/res/drawable/icon.gif differ
+diff --git a/result/APP_73/App_B_73/res/drawable/icon.png b/result/APP_73/App_B_73/res/drawable/icon.png
+deleted file mode 100755
+index 5f0a1b8..0000000
+Binary files a/result/APP_73/App_B_73/res/drawable/icon.png and /dev/null differ
