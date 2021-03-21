@@ -4,7 +4,7 @@ author: "da Costa et al."
 date: "March, 2021"
 output:
   prettydoc::html_pretty:
-    theme: cayman
+    theme: architect
     highlight: github
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -19,6 +19,9 @@ require(sqldf)
 require(reshape2)
 require(xtable)
 require(kableExtra)
+require(ggplot2)
+require(VennDiagram)
+require(ggvenn)
 ```
 
 ## Replication Package
@@ -56,11 +59,101 @@ the dataset of the Bao et al. work, leading to an overestimation of the performa
 tools. The results of the second study show that (static) taint analysis is also practical for mining Android
 sandboxes, with a performance similar to that reached by dynamic analysis tools.
 
+### Data Analysis
+
+#### Load the Datasets
+
+```{r}
+ds <- read.csv("results.csv", head=T, sep=",")
+```
+
+
+#### Summary of the Results (**Table 1**)
+
+````{r}
+staticAnalysis <- sqldf("select tool, count(distinct app) totalWith
+                        from ds 
+                        where malware = 1 and static = 1 and tool != 'flowdroid'
+                        group by tool")
+
+withoutStaticAnalysis <-  sqldf("select tool, count(distinct app) totalWithout
+                                  from ds 
+                                  where malware = 1 and static = 0
+                                  group by tool")
+
+res <- merge(staticAnalysis, withoutStaticAnalysis, all.x=T)
+
+res[is.na(res)] <- 0
+res["Improvement"] = (res$totalWith  - res$totalWithout) * 100 / res$totalWith 
+
+res <- res[order(-res$totalWith),]
+
+colnames(res) <- c("Tool", "Using Static Analysis",	"Without Using Static Analysis", "Improvement")
+res %>% kable("html") 
+```
+
+
+#### Compare the performance of the different tools (with static analysis)
+
+```{r, venn-plot-s1}
+sets <- sqldf("select tool, app, count(*) total 
+                  from ds 
+                  where malware = 1 and static = 1
+                  group by tool, app")
+
+monkey = sets[sets$tool=="monkey", c("app")]
+humanoid = sets[sets$tool=="humanoid", c("app")]
+droidmate = sets[sets$tool=="droidmate", c("app")]
+droidbot = sets[sets$tool=="droidbot", c("app")]
+joker = sets[sets$tool=="joke", c("app")]
+
+x <- list(
+  Monkey = monkey,
+  Humanoid = humanoid, 
+  DroidMate = droidmate,
+  DroidBot = droidbot
+)
+
+ggvenn(
+ x,
+ fill_color = c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF","#CD534CAA"),
+   stroke_size = 0.5, set_name_size = 4, text_size=2
+)
+```
+
+
+#### Compare the performance of FlowDroid and DroidFax (Joker tool)
+
+```{r, venn-plot-s2}
+sets <- sqldf("select tool, app 
+                  from ds 
+                  where malware = 1 
+                    and (tool='flowdroid' or tool = 'joke')")
+
+notDetected <- sqldf("select distinct app from ds where 
+                      app not in (select app from sets)")
+
+
+flowdroid = sets[sets$tool=="flowdroid", c("app")]
+droidfax = sets[sets$tool=="joke", c("app")]
+notDetected = sets[, c("app")]
+
+x <- list(
+  FlowDroid = flowdroid,
+  DroidFax = droidfax
+)
+
+ggvenn(
+ x,
+ fill_color = c("#0073C2FF", "#EFC000FF"),
+   stroke_size = 0.5, set_name_size = 4, text_size=2.5
+)
+
+```
+
 ### Malware dataset
 
 ```{r echo=FALSE}
-ds <- read.csv("results.csv", head=T, sep=",")
-
 apps <- sqldf("select app, tool, sum(malware) total
                from ds 
                group by app, tool")
@@ -69,20 +162,22 @@ apps["detected"] <- ifelse(apps$total > 0, "x", "")
 apps <- apps[,c("app", "tool", "detected")]
 apps <- dcast(apps, app~tool)
 apps["diff"] <- paste0("[diff/", apps$app, ".txt]", "(", "./diff/dif", gsub("-", "_", toupper(apps$app)), ".txt", ")")
-# apps["app"] <- as.numeric(gsub("app-","",apps$app))
-# apps <- apps[order(apps$app),]
 
 
 info <- read.csv("allInfoApps.csv", head=T, sep=",")
-colnames(info)
+
 info <- info[, c("id", "pkg_name", "hash")]
 colnames(info) <- c("app", "name")
 apps <- merge(apps, info)
 ```
 
-```{r}
+
+
+```{r echo = FALSE}
 apps %>%
   kable("html") %>%
-  kable_styling(font_size = 12)  %>% kable_styling("striped") %>% scroll_box(width = "100%")
+  kable_styling(font_size = 12)  %>% 
+  kable_styling("striped") %>% 
+  scroll_box(width = "100%")
 
 ```
