@@ -291,7 +291,7 @@ apps %>%
    flow <- read.csv("flowDroidResult.csv", head=T, sep=",")
    colnames(flow) <- c("app", "Detected", "Source-Sink (Benign)", "Source-Sink (Malicious)", "Total Runtime")
 
-   flow["report"] <- paste0("[diff/", flow$app, ".txt]", "(", "./diff/dif", gsub("-", "_", toupper(apps$app)), ".txt", ")")
+   flow["report"] <- paste0("[dataFlowDroid/", flow$app, ".txt]", "(", "./dataFlowDroid/", flow$app, ".txt", ")")
   
 ```
 
