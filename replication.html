@@ -420,8 +420,8 @@ code span.ot { color: #007020; }
 <p><b>Step 3</b> - Run DroidXP</p>
 <p>To run our experiment disabling static analysis, for 3 minutes (120 seconds), for 3 times, with 4 pre-configured test generator tools, we execute the follow command:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" data-line-number="1">python3 main.py <span class="op">-</span>tools monkey droidbot droidmate humanoid <span class="op">-</span>t <span class="dv">120</span> <span class="op">-</span>r <span class="dv">3</span> <span class="op">--</span>disable<span class="op">-</span>static</a></code></pre></div>
-<p>To run fake tool joker, for 3 minutes (120 seconds), for 3 times, using static analysis component (DroidFax)</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" data-line-number="1">python3 main.py <span class="op">-</span>tools joker <span class="op">-</span>t <span class="dv">120</span> <span class="op">-</span>r <span class="dv">3</span></a></code></pre></div>
+<p>To run fake tool , for 3 minutes (120 seconds), for 3 times, using static analysis component (DroidFax)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" data-line-number="1">python3 main.py <span class="op">-</span>tools joke <span class="op">-</span>t <span class="dv">120</span> <span class="op">-</span>r <span class="dv">3</span></a></code></pre></div>
 <p>The results will be at: <code>benchmark/results/&lt;timestamp&gt;/report/</code> folder.</p>
 <p>Example: benchmark/results/20210220212608/report/</p>
 <p><b>Step 4</b> - Generate results at csv file</p>
@@ -575,7 +575,7 @@ joke
 <a class="sourceLine" id="cb13-7" data-line-number="7">humanoid =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;humanoid&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
 <a class="sourceLine" id="cb13-8" data-line-number="8">droidmate =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;droidmate&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
 <a class="sourceLine" id="cb13-9" data-line-number="9">droidbot =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;droidbot&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
-<a class="sourceLine" id="cb13-10" data-line-number="10">joker =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;joke&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
+<a class="sourceLine" id="cb13-10" data-line-number="10">joke =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;joke&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
 <a class="sourceLine" id="cb13-11" data-line-number="11"></a>
 <a class="sourceLine" id="cb13-12" data-line-number="12">x &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
 <a class="sourceLine" id="cb13-13" data-line-number="13">  <span class="dt">Monkey =</span> monkey,</a>
@@ -615,8 +615,8 @@ joke
 <a class="sourceLine" id="cb15-6" data-line-number="6">notDetected &lt;-<span class="st"> </span><span class="kw">sqldf</span>(<span class="st">&quot;select distinct app from ds where </span></a>
 <a class="sourceLine" id="cb15-7" data-line-number="7"><span class="st">                      app not in (select app from sets)&quot;</span>)</a></code></pre></div>
 </div>
-<div id="compare-the-performance-of-flowdroid-and-droidfax-joker-tool" class="section level4">
-<h4>Compare the performance of FlowDroid and DroidFax (Joker tool)</h4>
+<div id="compare-the-performance-of-flowdroid-and-droidfax-joke-tool" class="section level4">
+<h4>Compare the performance of FlowDroid and DroidFax (Joke tool)</h4>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">flowdroid =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;flowdroid&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
 <a class="sourceLine" id="cb16-2" data-line-number="2">droidfax =<span class="st"> </span>sets[sets<span class="op">$</span>tool<span class="op">==</span><span class="st">&quot;joke&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
 <a class="sourceLine" id="cb16-3" data-line-number="3">notDetected =<span class="st"> </span>sets[, <span class="kw">c</span>(<span class="st">&quot;app&quot;</span>)]</a>
