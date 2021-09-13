@@ -1,643 +1,1140 @@
-diff -r result/APP_10/App_B_10/AndroidManifest.xml result/APP_10/App_M_10/AndroidManifest.xml
-2c2
-<     <application android:debuggable="true" android:icon="@drawable/ico" android:label="@string/app_name">
----
->     <application android:icon="@drawable/ico" android:label="@string/app_name">
-diff -r result/APP_10/App_B_10/apktool.yml result/APP_10/App_M_10/apktool.yml
-2c2
-< apkFileName: Bapp10-1B104A74097BB885FD18695BBAAA7FD2896E077392C88009BDBB89059C1F2392.apk
----
-> apkFileName: Mapp10-46923DF62CF5B08670EC2E2AA979ECC23D66476E131D4C2F1BBF53C18E86EEC6.apk
-Os arquivos binários result/APP_10/App_B_10/original/AndroidManifest.xml e result/APP_10/App_M_10/original/AndroidManifest.xml são diferentes
-Os arquivos binários result/APP_10/App_B_10/original/META-INF/CERT.RSA e result/APP_10/App_M_10/original/META-INF/CERT.RSA são diferentes
-diff -r result/APP_10/App_B_10/original/META-INF/CERT.SF result/APP_10/App_M_10/original/META-INF/CERT.SF
-3c3
-< SHA1-Digest-Manifest: xBh+bDdTK9yYiW3TG6eCcqZti6Y=
----
-> SHA1-Digest-Manifest: GVSQltxyi8RowAWCEl3bdOeN0UU=
-48c48
-< SHA1-Digest: WPGUxAN9G/bHyORaqkcJ6Mjd3sg=
----
-> SHA1-Digest: WH7/7c6O4cyyuB9FOcWRtTqG+5I=
-96c96
-< SHA1-Digest: MmhhFmJTyOOGD0ayl5vgrW2KwG8=
----
-> SHA1-Digest: XTotv5FtKXpZlATBcipUM4jsmAc=
-diff -r result/APP_10/App_B_10/original/META-INF/MANIFEST.MF result/APP_10/App_M_10/original/META-INF/MANIFEST.MF
-47c47
-< SHA1-Digest: 0eWnkiRx/DWngcuYlmPK75Sb8+0=
----
-> SHA1-Digest: LTxsHkaioGN52asInmHMvUUVj/4=
-95c95
-< SHA1-Digest: IDTHdVFquocBDLZMz9osCCTsc4k=
----
-> SHA1-Digest: mzq+yuHpRqmNsewY11yacncEZEo=
-diff -r result/APP_10/App_B_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali result/APP_10/App_M_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali
-47c47
-<     .line 23
----
->     .line 25
-50c50
-<     .line 30
----
->     .line 32
-57c57
-<     .line 31
----
->     .line 33
-66c66
-<     .line 32
----
->     .line 34
-69c69
-<     .line 33
----
->     .line 35
-72c72
-<     .line 34
----
->     .line 36
-75c75
-<     .line 35
----
->     .line 37
-78c78
-<     .line 36
----
->     .line 38
-81c81
-<     .line 37
----
->     .line 39
-84c84
-<     .line 38
----
->     .line 40
-87c87
-<     .line 39
----
->     .line 41
-90c90
-<     .line 40
----
->     .line 42
-93c93
-<     .line 41
----
->     .line 43
-96c96
-<     .line 42
----
->     .line 44
-99c99
-<     .line 43
----
->     .line 45
-102c102
-<     .line 23
----
->     .line 25
-110c110
-<     .line 192
----
->     .line 194
-124c124
-<     .line 193
----
->     .line 195
-132c132
-<     .line 197
----
->     .line 199
-137c137
-<     .line 194
----
->     .line 196
-141c141
-<     .line 195
----
->     .line 197
-161c161
-<     .line 127
----
->     .line 129
-170c170
-<     .line 128
----
->     .line 130
-173c173
-<     .line 129
----
->     .line 131
-181c181
-<     .line 184
----
->     .line 186
-185c185
-<     .line 185
----
->     .line 187
-188c188
-<     .line 187
----
->     .line 189
-192c192
-<     .line 127
----
->     .line 129
-203c203
-<     .line 131
----
->     .line 133
-210c210
-<     .line 132
----
->     .line 134
-217c217
-<     .line 133
----
->     .line 135
-220c220
-<     .line 134
----
->     .line 136
-223c223
-<     .line 136
----
->     .line 138
-229c229
-<     .line 137
----
->     .line 139
-236c236
-<     .line 138
----
->     .line 140
-239c239
-<     .line 139
----
->     .line 141
-242c242
-<     .line 141
----
->     .line 143
-248c248
-<     .line 142
----
->     .line 144
-255c255
-<     .line 143
----
->     .line 145
-258c258
-<     .line 144
----
->     .line 146
-261c261
-<     .line 146
----
->     .line 148
-267c267
-<     .line 147
----
->     .line 149
-274c274
-<     .line 148
----
->     .line 150
-277c277
-<     .line 149
----
->     .line 151
-280c280
-<     .line 151
----
->     .line 153
-286c286
-<     .line 152
----
->     .line 154
-293c293
-<     .line 153
----
->     .line 155
-296c296
-<     .line 154
----
->     .line 156
-299c299
-<     .line 156
----
->     .line 158
-305c305
-<     .line 157
----
->     .line 159
-312c312
-<     .line 158
----
->     .line 160
-315c315
-<     .line 159
----
->     .line 161
-318c318
-<     .line 161
----
->     .line 163
-328c328
-<     .line 164
----
->     .line 166
-335c335
-<     .line 165
----
->     .line 167
-339c339
-<     .line 166
----
->     .line 168
-344c344
-<     .line 167
----
->     .line 169
-347c347
-<     .line 168
----
->     .line 170
-356c356
-<     .line 172
----
->     .line 174
-363c363
-<     .line 173
----
->     .line 175
-372c372
-<     .line 177
----
->     .line 179
-378c378
-<     .line 178
----
->     .line 180
-385c385
-<     .line 179
----
->     .line 181
-392c392
-<     .line 180
----
->     .line 182
-398c398
-<     .line 181
----
->     .line 183
-405c405
-<     .line 129
----
->     .line 131
-424c424
-<     .line 47
----
->     .line 49
-427c427
-<     .line 48
----
->     .line 50
-432c432
-<     .line 49
----
->     .line 51
-439c439
-<     .line 51
----
->     .line 53
-450c450
-<     .line 52
----
->     .line 54
-455c455
-<     .line 54
----
->     .line 56
-466c466
-<     .line 55
----
->     .line 57
-471c471
-<     .line 56
----
->     .line 58
-482c482
-<     .line 57
----
->     .line 59
-487c487
-<     .line 59
----
->     .line 61
-496c496
-<     .line 229
----
->     .line 231
-503c503
-<     .line 230
----
->     .line 232
-523c523
-<     .line 239
----
->     .line 241
-540c540
-<     .line 240
----
->     .line 242
-545c545
-<     .line 241
----
->     .line 243
-552c552
-<     .line 242
----
->     .line 244
-555c555
-<     .line 249
----
->     .line 251
-563c563
-<     .line 250
----
->     .line 252
-566c566
-<     .line 244
----
->     .line 246
-572c572
-<     .line 245
----
->     .line 247
-579c579
-<     .line 246
----
->     .line 248
-597c597
-<     .line 66
----
->     .line 68
-602c602
-<     .line 68
----
->     .line 70
-611c611
-<     .line 70
----
->     .line 72
-618c618
-<     .line 71
----
->     .line 73
-624c624
-<     .line 72
----
->     .line 74
-631c631
-<     .line 73
----
->     .line 75
-634c634
-<     .line 74
----
->     .line 76
-641c641
-<     .line 85
----
->     .line 87
-649c649
-<     .line 87
----
->     .line 89
-658c658
-<     .line 89
----
->     .line 91
-663c663
-<     .line 90
----
->     .line 92
-670c670
-<     .line 91
----
->     .line 93
-675c675
-<     .line 92
----
->     .line 94
-681c681
-<     .line 93
----
->     .line 95
-686c686
-<     .line 100
----
->     .line 102
-692c692
-<     .line 78
----
->     .line 80
-698c698
-<     .line 79
----
->     .line 81
-705c705
-<     .line 80
----
->     .line 82
-710c710
-<     .line 81
----
->     .line 83
-716c716
-<     .line 82
----
->     .line 84
-723c723
-<     .line 97
----
->     .line 99
-736c736
-<     .line 255
----
->     .line 257
-743c743
-<     .line 256
----
->     .line 258
-751c751
-<     .line 211
----
->     .line 213
-754c754
-<     .line 213
----
->     .line 215
-760c760
-<     .line 214
----
->     .line 216
-769c769
-<     .line 215
----
->     .line 217
-778c778
-<     .line 216
----
->     .line 218
-787c787
-<     .line 221
----
->     .line 223
-792c792
-<     .line 218
----
->     .line 220
-796c796
-<     .line 219
----
->     .line 221
-817c817
-<     .line 265
----
->     .line 267
-822c822
-<     .line 266
----
->     .line 268
-829c829
-<     .line 267
----
->     .line 269
-838c838
-<     .line 268
----
->     .line 270
-848c848
-<     .line 269
----
->     .line 271
-854c854
-<     .line 270
----
->     .line 272
-861c861
-<     .line 272
----
->     .line 274
-875c875
-<     .line 273
----
->     .line 275
-883c883
-<     .line 277
----
->     .line 279
-892c892
-<     .line 274
----
->     .line 276
-896c896
-<     .line 275
----
->     .line 277
-908c908
-<     .line 282
----
->     .line 284
-915c915
-<     .line 283
----
->     .line 285
-926c926
-<     .line 288
----
->     .line 290
-933c933
-<     .line 289
----
->     .line 291
-936c936
-<     .line 291
----
->     .line 293
-943c943
-<     .line 292
----
->     .line 294
-952c952
-<     .line 205
----
->     .line 207
-968c968
-<     .line 107
----
->     .line 109
-977c977
-<     .line 108
----
->     .line 110
-987c987
-<     .line 109
----
->     .line 111
-995c995
-<     .line 110
----
->     .line 112
-1006c1006
-<     .line 111
----
->     .line 113
-1017c1017
-<     .line 112
----
->     .line 114
-1028c1028
-<     .line 113
----
->     .line 115
-1039c1039
-<     .line 114
----
->     .line 116
-1050c1050
-<     .line 115
----
->     .line 117
-1055c1055
-<     .line 116
----
->     .line 118
-1062c1062
-<     .line 117
----
->     .line 119
-1079c1079
-<     .line 118
----
->     .line 120
-1084c1084
-<     .line 119
----
->     .line 121
-1089c1089
-<     .line 120
----
->     .line 122
-1094c1094
-<     .line 121
----
->     .line 123
-1099c1099
-<     .line 122
----
->     .line 124
+diff --git a/result/APP_10/App_B_10/AndroidManifest.xml b/result/APP_10/App_M_10/AndroidManifest.xml
+index 1fde098..a551003 100755
+--- a/result/APP_10/App_B_10/AndroidManifest.xml
++++ b/result/APP_10/App_M_10/AndroidManifest.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.remotecontrolppt">
+-    <application android:debuggable="true" android:icon="@drawable/ico" android:label="@string/app_name">
++    <application android:icon="@drawable/ico" android:label="@string/app_name">
+         <activity android:name=".welcomeActivity" android:theme="@android:style/Theme.NoTitleBar">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN"/>
+diff --git a/result/APP_10/App_B_10/apktool.yml b/result/APP_10/App_M_10/apktool.yml
+index dc64f88..c7a2394 100755
+--- a/result/APP_10/App_B_10/apktool.yml
++++ b/result/APP_10/App_M_10/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp10-1B104A74097BB885FD18695BBAAA7FD2896E077392C88009BDBB89059C1F2392.apk
++apkFileName: Mapp10-46923DF62CF5B08670EC2E2AA979ECC23D66476E131D4C2F1BBF53C18E86EEC6.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+diff --git a/result/APP_10/App_B_10/original/AndroidManifest.xml b/result/APP_10/App_M_10/original/AndroidManifest.xml
+index 825748b..f58f9d9 100755
+Binary files a/result/APP_10/App_B_10/original/AndroidManifest.xml and b/result/APP_10/App_M_10/original/AndroidManifest.xml differ
+diff --git a/result/APP_10/App_B_10/original/META-INF/CERT.RSA b/result/APP_10/App_M_10/original/META-INF/CERT.RSA
+index b5bca1c..e4bbb9c 100755
+Binary files a/result/APP_10/App_B_10/original/META-INF/CERT.RSA and b/result/APP_10/App_M_10/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_10/App_B_10/original/META-INF/CERT.SF b/result/APP_10/App_M_10/original/META-INF/CERT.SF
+index 982ce03..815905b 100755
+--- a/result/APP_10/App_B_10/original/META-INF/CERT.SF
++++ b/result/APP_10/App_M_10/original/META-INF/CERT.SF
+@@ -1,6 +1,6 @@
+ Signature-Version: 1.0
+ Created-By: 1.0 (Android)
+-SHA1-Digest-Manifest: xBh+bDdTK9yYiW3TG6eCcqZti6Y=
++SHA1-Digest-Manifest: GVSQltxyi8RowAWCEl3bdOeN0UU=
+ 
+ Name: res/anim/openremotemouseanim.xml
+ SHA1-Digest: Sf5uv6xqEmefrbNaK94v4j8UJzo=
+@@ -45,7 +45,7 @@ Name: res/drawable-ldpi/icon.png
+ SHA1-Digest: Z/yxmMxGRNbFUkjqWONvJQH5rQw=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: WPGUxAN9G/bHyORaqkcJ6Mjd3sg=
++SHA1-Digest: WH7/7c6O4cyyuB9FOcWRtTqG+5I=
+ 
+ Name: res/layout/ysoffdialoglayout.xml
+ SHA1-Digest: E172+A1QvHjPy7NMp1XfQg4S7Fg=
+@@ -93,7 +93,7 @@ Name: res/drawable-hdpi/pptconbtn.9.png
+ SHA1-Digest: ifKiqQ0Nz9OZ+g1HfM6V/1jC9fc=
+ 
+ Name: classes.dex
+-SHA1-Digest: MmhhFmJTyOOGD0ayl5vgrW2KwG8=
++SHA1-Digest: XTotv5FtKXpZlATBcipUM4jsmAc=
+ 
+ Name: res/drawable/mouserightshape.xml
+ SHA1-Digest: uKGsHnAwnowi5jXu5tixaUM96ck=
+diff --git a/result/APP_10/App_B_10/original/META-INF/MANIFEST.MF b/result/APP_10/App_M_10/original/META-INF/MANIFEST.MF
+index 23d039f..db0dabc 100755
+--- a/result/APP_10/App_B_10/original/META-INF/MANIFEST.MF
++++ b/result/APP_10/App_M_10/original/META-INF/MANIFEST.MF
+@@ -44,7 +44,7 @@ Name: res/drawable-ldpi/icon.png
+ SHA1-Digest: i7vxaosoiS+9HzKB7ZgIsXMYRLY=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: 0eWnkiRx/DWngcuYlmPK75Sb8+0=
++SHA1-Digest: LTxsHkaioGN52asInmHMvUUVj/4=
+ 
+ Name: res/layout/ysoffdialoglayout.xml
+ SHA1-Digest: KRX4WPVbIRiZe91/mC9PwoeeFlY=
+@@ -92,7 +92,7 @@ Name: res/drawable-hdpi/pptconbtn.9.png
+ SHA1-Digest: HkiwqC4/lSaKa4U4tZJ5VVvGAmk=
+ 
+ Name: classes.dex
+-SHA1-Digest: IDTHdVFquocBDLZMz9osCCTsc4k=
++SHA1-Digest: mzq+yuHpRqmNsewY11yacncEZEo=
+ 
+ Name: res/drawable/mainlayoutbg.xml
+ SHA1-Digest: l+Wry5LM4IoeVp0NmHb4if2n7tg=
+diff --git a/result/APP_10/App_B_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali b/result/APP_10/App_M_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali
+index 1475353..a935442 100755
+--- a/result/APP_10/App_B_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali
++++ b/result/APP_10/App_M_10/smali/com/android/remotecontrolppt/RemoteControlPPTActivity.smali
+@@ -44,17 +44,17 @@
+     .prologue
+     const/4 v1, 0x0
+ 
+-    .line 23
++    .line 25
+     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+ 
+-    .line 30
++    .line 32
+     const/16 v0, 0xc
+ 
+     new-array v0, v0, [B
+ 
+     iput-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+-    .line 31
++    .line 33
+     const/4 v0, 0x0
+ 
+     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+@@ -63,43 +63,43 @@
+ 
+     iput-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+-    .line 32
++    .line 34
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+-    .line 33
++    .line 35
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->start:Landroid/widget/Button;
+ 
+-    .line 34
++    .line 36
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->stop:Landroid/widget/Button;
+ 
+-    .line 35
++    .line 37
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mouse_left:Landroid/widget/Button;
+ 
+-    .line 36
++    .line 38
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mouse_right:Landroid/widget/Button;
+ 
+-    .line 37
++    .line 39
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->previous:Landroid/widget/Button;
+ 
+-    .line 38
++    .line 40
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->next:Landroid/widget/Button;
+ 
+-    .line 39
++    .line 41
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+-    .line 40
++    .line 42
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->closepptbtn:Landroid/widget/Button;
+ 
+-    .line 41
++    .line 43
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->multicastSocket:Ljava/net/MulticastSocket;
+ 
+-    .line 42
++    .line 44
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->remoteInetAddress:Ljava/net/InetAddress;
+ 
+-    .line 43
++    .line 45
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mGestureDetector:Landroid/view/GestureDetector;
+ 
+-    .line 23
++    .line 25
+     return-void
+ .end method
+ 
+@@ -107,7 +107,7 @@
+     .locals 6
+ 
+     .prologue
+-    .line 192
++    .line 194
+     :try_start_0
+     new-instance v1, Ljava/net/DatagramPacket;
+ 
+@@ -121,7 +121,7 @@
+ 
+     invoke-direct {v1, v2, v3, v4, v5}, Ljava/net/DatagramPacket;-><init>([BILjava/net/InetAddress;I)V
+ 
+-    .line 193
++    .line 195
+     .local v1, "sdp":Ljava/net/DatagramPacket;
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->multicastSocket:Ljava/net/MulticastSocket;
+ 
+@@ -129,16 +129,16 @@
+     :try_end_0
+     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+ 
+-    .line 197
++    .line 199
+     .end local v1    # "sdp":Ljava/net/DatagramPacket;
+     :goto_0
+     return-void
+ 
+-    .line 194
++    .line 196
+     :catch_0
+     move-exception v0
+ 
+-    .line 195
++    .line 197
+     .local v0, "e":Ljava/lang/Exception;
+     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+ 
+@@ -158,7 +158,7 @@
+ 
+     const/4 v4, 0x0
+ 
+-    .line 127
++    .line 129
+     const/4 v1, 0x0
+ 
+     .local v1, "i":I
+@@ -167,10 +167,10 @@
+ 
+     if-lt v1, v3, :cond_1
+ 
+-    .line 128
++    .line 130
+     const/4 v2, 0x0
+ 
+-    .line 129
++    .line 131
+     .local v2, "opr":Z
+     invoke-virtual {p1}, Landroid/view/View;->getId()I
+ 
+@@ -178,18 +178,18 @@
+ 
+     sparse-switch v3, :sswitch_data_0
+ 
+-    .line 184
++    .line 186
+     :goto_1
+     if-eqz v2, :cond_0
+ 
+-    .line 185
++    .line 187
+     invoke-direct {p0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->sendCMD()V
+ 
+-    .line 187
++    .line 189
+     :cond_0
+     return-void
+ 
+-    .line 127
++    .line 129
+     .end local v2    # "opr":Z
+     :cond_1
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+@@ -200,122 +200,122 @@
+ 
+     goto :goto_0
+ 
+-    .line 131
++    .line 133
+     .restart local v2    # "opr":Z
+     :sswitch_0
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v6, v3, v4
+ 
+-    .line 132
++    .line 134
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v4, 0x74
+ 
+     aput-byte v4, v3, v5
+ 
+-    .line 133
++    .line 135
+     const/4 v2, 0x1
+ 
+-    .line 134
++    .line 136
+     goto :goto_1
+ 
+-    .line 136
++    .line 138
+     :sswitch_1
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v6, v3, v4
+ 
+-    .line 137
++    .line 139
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v4, 0x1b
+ 
+     aput-byte v4, v3, v5
+ 
+-    .line 138
++    .line 140
+     const/4 v2, 0x1
+ 
+-    .line 139
++    .line 141
+     goto :goto_1
+ 
+-    .line 141
++    .line 143
+     :sswitch_2
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v5, v3, v4
+ 
+-    .line 142
++    .line 144
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v4, 0x11
+ 
+     aput-byte v4, v3, v5
+ 
+-    .line 143
++    .line 145
+     const/4 v2, 0x1
+ 
+-    .line 144
++    .line 146
+     goto :goto_1
+ 
+-    .line 146
++    .line 148
+     :sswitch_3
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v5, v3, v4
+ 
+-    .line 147
++    .line 149
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v4, 0x22
+ 
+     aput-byte v4, v3, v5
+ 
+-    .line 148
++    .line 150
+     const/4 v2, 0x1
+ 
+-    .line 149
++    .line 151
+     goto :goto_1
+ 
+-    .line 151
++    .line 153
+     :sswitch_4
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v6, v3, v4
+ 
+-    .line 152
++    .line 154
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v4, 0x25
+ 
+     aput-byte v4, v3, v5
+ 
+-    .line 153
++    .line 155
+     const/4 v2, 0x1
+ 
+-    .line 154
++    .line 156
+     goto :goto_1
+ 
+-    .line 156
++    .line 158
+     :sswitch_5
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v6, v3, v4
+ 
+-    .line 157
++    .line 159
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v4, 0x27
+ 
+     aput-byte v4, v3, v5
+ 
+-    .line 158
++    .line 160
+     const/4 v2, 0x1
+ 
+-    .line 159
++    .line 161
+     goto :goto_1
+ 
+-    .line 161
++    .line 163
+     :sswitch_6
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+@@ -325,26 +325,26 @@
+ 
+     if-nez v3, :cond_2
+ 
+-    .line 164
++    .line 166
+     const v3, 0x7f040003
+ 
+     invoke-static {p0, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+ 
+     move-result-object v0
+ 
+-    .line 165
++    .line 167
+     .local v0, "anim":Landroid/view/animation/Animation;
+     invoke-virtual {p1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+ 
+-    .line 166
++    .line 168
+     const/16 v3, 0x8
+ 
+     invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
+ 
+-    .line 167
++    .line 169
+     invoke-virtual {p0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->showpptpopwin()V
+ 
+-    .line 168
++    .line 170
+     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v3
+@@ -353,14 +353,14 @@
+ 
+     goto :goto_1
+ 
+-    .line 172
++    .line 174
+     .end local v0    # "anim":Landroid/view/animation/Animation;
+     :cond_2
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+     invoke-virtual {v3}, Landroid/widget/PopupWindow;->dismiss()V
+ 
+-    .line 173
++    .line 175
+     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v3
+@@ -369,40 +369,40 @@
+ 
+     goto/16 :goto_1
+ 
+-    .line 177
++    .line 179
+     :sswitch_7
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+     invoke-virtual {v3}, Landroid/widget/PopupWindow;->dismiss()V
+ 
+-    .line 178
++    .line 180
+     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v3
+ 
+     iput-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+-    .line 179
++    .line 181
+     const v3, 0x7f040002
+ 
+     invoke-static {p0, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+ 
+     move-result-object v0
+ 
+-    .line 180
++    .line 182
+     .restart local v0    # "anim":Landroid/view/animation/Animation;
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v3, v0}, Landroid/widget/Button;->startAnimation(Landroid/view/animation/Animation;)V
+ 
+-    .line 181
++    .line 183
+     iget-object v3, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v3, v4}, Landroid/widget/Button;->setVisibility(I)V
+ 
+     goto/16 :goto_1
+ 
+-    .line 129
++    .line 131
+     :sswitch_data_0
+     .sparse-switch
+         0x7f070011 -> :sswitch_2
+@@ -421,22 +421,22 @@
+     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
+ 
+     .prologue
+-    .line 47
++    .line 49
+     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+ 
+-    .line 48
++    .line 50
+     const v0, 0x7f030002
+ 
+     invoke-virtual {p0, v0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->setContentView(I)V
+ 
+-    .line 49
++    .line 51
+     new-instance v0, Landroid/view/GestureDetector;
+ 
+     invoke-direct {v0, p0}, Landroid/view/GestureDetector;-><init>(Landroid/view/GestureDetector$OnGestureListener;)V
+ 
+     iput-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mGestureDetector:Landroid/view/GestureDetector;
+ 
+-    .line 51
++    .line 53
+     const v0, 0x7f070011
+ 
+     invoke-virtual {p0, v0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->findViewById(I)Landroid/view/View;
+@@ -447,12 +447,12 @@
+ 
+     iput-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mouse_left:Landroid/widget/Button;
+ 
+-    .line 52
++    .line 54
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mouse_left:Landroid/widget/Button;
+ 
+     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 54
++    .line 56
+     const v0, 0x7f070013
+ 
+     invoke-virtual {p0, v0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->findViewById(I)Landroid/view/View;
+@@ -463,12 +463,12 @@
+ 
+     iput-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mouse_right:Landroid/widget/Button;
+ 
+-    .line 55
++    .line 57
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mouse_right:Landroid/widget/Button;
+ 
+     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 56
++    .line 58
+     const v0, 0x7f070014
+ 
+     invoke-virtual {p0, v0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->findViewById(I)Landroid/view/View;
+@@ -479,12 +479,12 @@
+ 
+     iput-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+-    .line 57
++    .line 59
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 59
++    .line 61
+     return-void
+ .end method
+ 
+@@ -493,14 +493,14 @@
+     .param p1, "event"    # Landroid/view/MotionEvent;
+ 
+     .prologue
+-    .line 229
++    .line 231
+     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+ 
+     const-string v1, "onDown..."
+ 
+     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+ 
+-    .line 230
++    .line 232
+     const/4 v0, 0x0
+ 
+     return v0
+@@ -520,7 +520,7 @@
+ 
+     const/4 v2, 0x1
+ 
+-    .line 239
++    .line 241
+     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+ 
+     move-result v0
+@@ -537,22 +537,22 @@
+ 
+     if-lez v0, :cond_0
+ 
+-    .line 240
++    .line 242
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v4, v0, v3
+ 
+-    .line 241
++    .line 243
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v1, 0x25
+ 
+     aput-byte v1, v0, v2
+ 
+-    .line 242
++    .line 244
+     invoke-direct {p0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->sendCMD()V
+ 
+-    .line 249
++    .line 251
+     :goto_0
+     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+ 
+@@ -560,23 +560,23 @@
+ 
+     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+ 
+-    .line 250
++    .line 252
+     return v2
+ 
+-    .line 244
++    .line 246
+     :cond_0
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v4, v0, v3
+ 
+-    .line 245
++    .line 247
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v1, 0x27
+ 
+     aput-byte v1, v0, v2
+ 
+-    .line 246
++    .line 248
+     invoke-direct {p0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->sendCMD()V
+ 
+     goto :goto_0
+@@ -594,12 +594,12 @@
+ 
+     const/4 v3, 0x0
+ 
+-    .line 66
++    .line 68
+     const/16 v1, 0x52
+ 
+     if-ne p1, v1, :cond_0
+ 
+-    .line 68
++    .line 70
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+@@ -608,37 +608,37 @@
+ 
+     if-nez v1, :cond_2
+ 
+-    .line 70
++    .line 72
+     const v1, 0x7f040003
+ 
+     invoke-static {p0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+ 
+     move-result-object v0
+ 
+-    .line 71
++    .line 73
+     .local v0, "anim":Landroid/view/animation/Animation;
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v1, v0}, Landroid/widget/Button;->startAnimation(Landroid/view/animation/Animation;)V
+ 
+-    .line 72
++    .line 74
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     const/16 v2, 0x8
+ 
+     invoke-virtual {v1, v2}, Landroid/widget/Button;->setVisibility(I)V
+ 
+-    .line 73
++    .line 75
+     invoke-virtual {p0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->showpptpopwin()V
+ 
+-    .line 74
++    .line 76
+     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v1
+ 
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+-    .line 85
++    .line 87
+     .end local v0    # "anim":Landroid/view/animation/Animation;
+     :cond_0
+     :goto_0
+@@ -646,7 +646,7 @@
+ 
+     if-ne p1, v1, :cond_1
+ 
+-    .line 87
++    .line 89
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+@@ -655,72 +655,72 @@
+ 
+     if-eqz v1, :cond_3
+ 
+-    .line 89
++    .line 91
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+     invoke-virtual {v1}, Landroid/widget/PopupWindow;->dismiss()V
+ 
+-    .line 90
++    .line 92
+     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v1
+ 
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+-    .line 91
++    .line 93
+     invoke-static {p0, v5}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+ 
+     move-result-object v0
+ 
+-    .line 92
++    .line 94
+     .restart local v0    # "anim":Landroid/view/animation/Animation;
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v1, v0}, Landroid/widget/Button;->startAnimation(Landroid/view/animation/Animation;)V
+ 
+-    .line 93
++    .line 95
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v1, v3}, Landroid/widget/Button;->setVisibility(I)V
+ 
+-    .line 100
++    .line 102
+     .end local v0    # "anim":Landroid/view/animation/Animation;
+     :cond_1
+     :goto_1
+     return v4
+ 
+-    .line 78
++    .line 80
+     :cond_2
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+     invoke-virtual {v1}, Landroid/widget/PopupWindow;->dismiss()V
+ 
+-    .line 79
++    .line 81
+     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+ 
+     move-result-object v1
+ 
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwinshow:Ljava/lang/Boolean;
+ 
+-    .line 80
++    .line 82
+     invoke-static {p0, v5}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+ 
+     move-result-object v0
+ 
+-    .line 81
++    .line 83
+     .restart local v0    # "anim":Landroid/view/animation/Animation;
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v1, v0}, Landroid/widget/Button;->startAnimation(Landroid/view/animation/Animation;)V
+ 
+-    .line 82
++    .line 84
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->openpptpop:Landroid/widget/Button;
+ 
+     invoke-virtual {v1, v3}, Landroid/widget/Button;->setVisibility(I)V
+ 
+     goto :goto_0
+ 
+-    .line 97
++    .line 99
+     .end local v0    # "anim":Landroid/view/animation/Animation;
+     :cond_3
+     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+@@ -733,14 +733,14 @@
+     .param p1, "event"    # Landroid/view/MotionEvent;
+ 
+     .prologue
+-    .line 255
++    .line 257
+     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+ 
+     const-string v1, "onLongPress..."
+ 
+     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+ 
+-    .line 256
++    .line 258
+     return-void
+ .end method
+ 
+@@ -748,16 +748,16 @@
+     .locals 3
+ 
+     .prologue
+-    .line 211
++    .line 213
+     invoke-super {p0}, Landroid/app/Activity;->onResume()V
+ 
+-    .line 213
++    .line 215
+     :try_start_0
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->multicastSocket:Ljava/net/MulticastSocket;
+ 
+     if-nez v1, :cond_0
+ 
+-    .line 214
++    .line 216
+     sget-object v1, Lcom/android/remotecontrolppt/Constant;->multicastIp:Ljava/lang/String;
+ 
+     invoke-static {v1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+@@ -766,7 +766,7 @@
+ 
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->remoteInetAddress:Ljava/net/InetAddress;
+ 
+-    .line 215
++    .line 217
+     new-instance v1, Ljava/net/MulticastSocket;
+ 
+     sget v2, Lcom/android/remotecontrolppt/Constant;->commPort:I
+@@ -775,7 +775,7 @@
+ 
+     iput-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->multicastSocket:Ljava/net/MulticastSocket;
+ 
+-    .line 216
++    .line 218
+     iget-object v1, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->multicastSocket:Ljava/net/MulticastSocket;
+ 
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->remoteInetAddress:Ljava/net/InetAddress;
+@@ -784,16 +784,16 @@
+     :try_end_0
+     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+ 
+-    .line 221
++    .line 223
+     :cond_0
+     :goto_0
+     return-void
+ 
+-    .line 218
++    .line 220
+     :catch_0
+     move-exception v0
+ 
+-    .line 219
++    .line 221
+     .local v0, "e":Ljava/io/IOException;
+     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+ 
+@@ -814,19 +814,19 @@
+ 
+     const/4 v6, 0x0
+ 
+-    .line 265
++    .line 267
+     iget-object v4, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     aput-byte v8, v4, v6
+ 
+-    .line 266
++    .line 268
+     iget-object v4, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v5, 0x43
+ 
+     aput-byte v5, v4, v8
+ 
+-    .line 267
++    .line 269
+     neg-float v4, p3
+ 
+     float-to-int v4, v4
+@@ -835,7 +835,7 @@
+ 
+     move-result-object v2
+ 
+-    .line 268
++    .line 270
+     .local v2, "xValue":[B
+     neg-float v4, p4
+ 
+@@ -845,20 +845,20 @@
+ 
+     move-result-object v3
+ 
+-    .line 269
++    .line 271
+     .local v3, "yValue":[B
+     iget-object v4, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     invoke-static {v2, v6, v4, v7, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+ 
+-    .line 270
++    .line 272
+     iget-object v4, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v5, 0x8
+ 
+     invoke-static {v3, v6, v4, v5, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+ 
+-    .line 272
++    .line 274
+     :try_start_0
+     new-instance v1, Ljava/net/DatagramPacket;
+ 
+@@ -872,7 +872,7 @@
+ 
+     invoke-direct {v1, v4, v5, v6, v7}, Ljava/net/DatagramPacket;-><init>([BILjava/net/InetAddress;I)V
+ 
+-    .line 273
++    .line 275
+     .local v1, "sdp":Ljava/net/DatagramPacket;
+     iget-object v4, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->multicastSocket:Ljava/net/MulticastSocket;
+ 
+@@ -880,7 +880,7 @@
+     :try_end_0
+     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+ 
+-    .line 277
++    .line 279
+     .end local v1    # "sdp":Ljava/net/DatagramPacket;
+     :goto_0
+     invoke-super {p0, p1}, Landroid/app/Activity;->onTouchEvent(Landroid/view/MotionEvent;)Z
+@@ -889,11 +889,11 @@
+ 
+     return v4
+ 
+-    .line 274
++    .line 276
+     :catch_0
+     move-exception v0
+ 
+-    .line 275
++    .line 277
+     .local v0, "e":Ljava/lang/Exception;
+     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+ 
+@@ -905,14 +905,14 @@
+     .param p1, "event"    # Landroid/view/MotionEvent;
+ 
+     .prologue
+-    .line 282
++    .line 284
+     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+ 
+     const-string v1, "onShowPress..."
+ 
+     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+ 
+-    .line 283
++    .line 285
+     return-void
+ .end method
+ 
+@@ -923,24 +923,24 @@
+     .prologue
+     const/4 v2, 0x1
+ 
+-    .line 288
++    .line 290
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->cmdBuffer:[B
+ 
+     const/16 v1, 0x11
+ 
+     aput-byte v1, v0, v2
+ 
+-    .line 289
++    .line 291
+     invoke-direct {p0}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->sendCMD()V
+ 
+-    .line 291
++    .line 293
+     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+ 
+     const-string v1, "onSingleTapUp..."
+ 
+     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+ 
+-    .line 292
++    .line 294
+     return v2
+ .end method
+ 
+@@ -949,7 +949,7 @@
+     .param p1, "event"    # Landroid/view/MotionEvent;
+ 
+     .prologue
+-    .line 205
++    .line 207
+     iget-object v0, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->mGestureDetector:Landroid/view/GestureDetector;
+ 
+     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+@@ -965,7 +965,7 @@
+     .prologue
+     const/4 v4, -0x2
+ 
+-    .line 107
++    .line 109
+     const-string v2, "layout_inflater"
+ 
+     invoke-virtual {p0, v2}, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+@@ -974,7 +974,7 @@
+ 
+     check-cast v0, Landroid/view/LayoutInflater;
+ 
+-    .line 108
++    .line 110
+     .local v0, "inflater":Landroid/view/LayoutInflater;
+     const v2, 0x7f030003
+ 
+@@ -984,7 +984,7 @@
+ 
+     move-result-object v1
+ 
+-    .line 109
++    .line 111
+     .local v1, "pptpopwinview":Landroid/view/View;
+     new-instance v2, Landroid/widget/PopupWindow;
+ 
+@@ -992,7 +992,7 @@
+ 
+     iput-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+-    .line 110
++    .line 112
+     const v2, 0x7f070018
+ 
+     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+@@ -1003,7 +1003,7 @@
+ 
+     iput-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->start:Landroid/widget/Button;
+ 
+-    .line 111
++    .line 113
+     const v2, 0x7f07001c
+ 
+     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+@@ -1014,7 +1014,7 @@
+ 
+     iput-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->stop:Landroid/widget/Button;
+ 
+-    .line 112
++    .line 114
+     const v2, 0x7f070020
+ 
+     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+@@ -1025,7 +1025,7 @@
+ 
+     iput-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->previous:Landroid/widget/Button;
+ 
+-    .line 113
++    .line 115
+     const v2, 0x7f070024
+ 
+     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+@@ -1036,7 +1036,7 @@
+ 
+     iput-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->next:Landroid/widget/Button;
+ 
+-    .line 114
++    .line 116
+     const v2, 0x7f070027
+ 
+     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+@@ -1047,19 +1047,19 @@
+ 
+     iput-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->closepptbtn:Landroid/widget/Button;
+ 
+-    .line 115
++    .line 117
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->closepptbtn:Landroid/widget/Button;
+ 
+     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 116
++    .line 118
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+     const/high16 v3, 0x7f050000
+ 
+     invoke-virtual {v2, v3}, Landroid/widget/PopupWindow;->setAnimationStyle(I)V
+ 
+-    .line 117
++    .line 119
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->pptpopwin:Landroid/widget/PopupWindow;
+ 
+     const v3, 0x7f07000d
+@@ -1076,26 +1076,26 @@
+ 
+     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
+ 
+-    .line 118
++    .line 120
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->start:Landroid/widget/Button;
+ 
+     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 119
++    .line 121
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->stop:Landroid/widget/Button;
+ 
+     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 120
++    .line 122
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->previous:Landroid/widget/Button;
+ 
+     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 121
++    .line 123
+     iget-object v2, p0, Lcom/android/remotecontrolppt/RemoteControlPPTActivity;->next:Landroid/widget/Button;
+ 
+     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+ 
+-    .line 122
++    .line 124
+     return-void
+ .end method

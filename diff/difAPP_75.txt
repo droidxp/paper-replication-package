@@ -1,223 +1,1054 @@
-diff -r result/APP_75/App_B_75/apktool.yml result/APP_75/App_M_75/apktool.yml
-2c2
-< apkFileName: Bapp75-AB2F74DCE4D133C8AB7D63DFB085E136A3EECD8BE02D037DFDA4662D43C5735C.apk
----
-> apkFileName: Mapp75-9206DB87EB97A43429E181A1CA5FD568AE2211255682A2D959CBE460882AFB37.apk
-diff -r result/APP_75/App_B_75/com/anddoes/notifier/az.java result/APP_75/App_M_75/com/anddoes/notifier/az.java
-6d5
-< import android.content.pm.PackageManager.NameNotFoundException;
-48,55c47
-<     paramContext = paramContext.getPackageManager();
-<     try
-<     {
-<       paramContext.getPackageInfo(paramString, 0);
-<       return true;
-<     }
-<     catch (PackageManager.NameNotFoundException paramContext) {}
-<     return false;
----
->     return true;
-Os arquivos binários result/APP_75/App_B_75/original/AndroidManifest.xml e result/APP_75/App_M_75/original/AndroidManifest.xml são diferentes
-Os arquivos binários result/APP_75/App_B_75/original/META-INF/CERT.RSA e result/APP_75/App_M_75/original/META-INF/CERT.RSA são diferentes
-diff -r result/APP_75/App_B_75/original/META-INF/CERT.SF result/APP_75/App_M_75/original/META-INF/CERT.SF
-2,6c2,3
-< Created-By: 1.0 (Android)
-< SHA1-Digest-Manifest: 7eHlHm/69EAzLBqG1hSFFXoLlFU=
-< 
-< Name: res/layout-v17/preference_header_switch_item.xml
-< SHA1-Digest: B2PSyfYXFWZN/B+07y/bcBZiJGc=
----
-> Created-By: 1.0 (Android SignApk)
-> SHA1-Digest-Manifest: iawZgWiV5bhKBWA/HX8yszyFqHo=
-10a8,10
-> Name: res/layout-v17/preference_header_switch_item.xml
-> SHA1-Digest: EHRfxlwS9kqWeh/O5Sd/NjcjgAY=
-> 
-12c12
-< SHA1-Digest: Jeei7B8Fsi42mp1wAq1Yt8TwHDk=
----
-> SHA1-Digest: ou8WYutx8sCmxdw8PL0wmUpuYrQ=
-21c21
-< SHA1-Digest: Bb1Q9ljWTim0VJwnxUZ053unKQI=
----
-> SHA1-Digest: Ibq4/KFdcNxTUlXLrFyJ58NT3tQ=
-30c30,33
-< SHA1-Digest: Tii/zv7fv0CXHEtGL/RGGxznLm8=
----
-> SHA1-Digest: oK17V2ALUYomcXyKwOSYK6dyLAc=
-> 
-> Name: res/xml-zh-CN/preferences.xml
-> SHA1-Digest: jEQo/D5p2mY3lttC+e09cXsiTVw=
-35,37d37
-< Name: res/layout/dialog_about.xml
-< SHA1-Digest: 1p5ery6E5N1ir0je/oeoPpBNNho=
-< 
-39c39,42
-< SHA1-Digest: 5pnGl6MsljQftU2pquY/1nsRP2U=
----
-> SHA1-Digest: 8WEjvlPNIIpb3mSN++Gcwv5DgHc=
-> 
-> Name: res/layout/dialog_about.xml
-> SHA1-Digest: 6XEwa3/FyDsRxud6Sl3ga7BFzZU=
-43a47,49
-> Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
-> SHA1-Digest: e4nKkxQ9Rg0ti/neY2OXnQvkEQQ=
-> 
-47,48c53,54
-< Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
-< SHA1-Digest: e4nKkxQ9Rg0ti/neY2OXnQvkEQQ=
----
-> Name: res/xml-zh-TW/preferences.xml
-> SHA1-Digest: RxregI0selg1z2ERVrVAK9hjom0=
-58a65,67
-> Name: res/layout/number_picker_preference.xml
-> SHA1-Digest: wo2lxtbCq7VBWpGfK3YPSdDt4bg=
-> 
-62,64d70
-< Name: res/layout/number_picker_preference.xml
-< SHA1-Digest: ZCAstH8Vz7s765gnRDQF1IgwONg=
-< 
-66c72
-< SHA1-Digest: f+ny9VsYcsLaJ3xjNMCsB/980/M=
----
-> SHA1-Digest: iE7x7PQthNqO7X0w0wEbKntIC2g=
-69c75
-< SHA1-Digest: IVKbyvkhhCMBkl6LYS/f3lpUAI4=
----
-> SHA1-Digest: mbSiuaC8y5fY0AAB1ko6uhG+sbQ=
-93c99
-< SHA1-Digest: NV0LfRdjRLvxvVyxr7J9xPxD63o=
----
-> SHA1-Digest: tzmXS0AWSxM2E4SB2i8FyUSDvpw=
-104,106d109
-< Name: res/menu/main.xml
-< SHA1-Digest: LRut47CS9JWglE4/OZPw4u2fm74=
-< 
-108c111,114
-< SHA1-Digest: me1LqDQMK5luUdTgGwsYSESTTNE=
----
-> SHA1-Digest: fB1pjtReSmq5/535gvkwhlRkrdg=
-> 
-> Name: res/menu/main.xml
-> SHA1-Digest: dqE2svtvaIpKRqiZuvqn056oBDQ=
-116,118d121
-< Name: res/xml/preferences_empty.xml
-< SHA1-Digest: G7ffkp1aWfYKfDErWYk8ytZ5IgQ=
-< 
-121a125,127
-> Name: res/xml/preferences_empty.xml
-> SHA1-Digest: Vlpti7mmvCIvkje87evNhOSmfF0=
-> 
-129c135
-< SHA1-Digest: +lyrDRolHbjcnqhtIMSCeG/Prx8=
----
-> SHA1-Digest: JXIcCs8ZwTb//kIaS3jOTBIPr2s=
-141c147
-< SHA1-Digest: yNQ8T7pcKWcgxYql5GnfCzLauYs=
----
-> SHA1-Digest: W7joOLaY3m/c72WW0iGTQ0/cF4M=
-diff -r result/APP_75/App_B_75/original/META-INF/MANIFEST.MF result/APP_75/App_M_75/original/META-INF/MANIFEST.MF
-2c2,5
-< Created-By: 1.0 (Android)
----
-> Created-By: 1.0 (Android SignApk)
-> 
-> Name: res/layout-v17/preference_header_switch_item.xml
-> SHA1-Digest: 1quQO3wHwbZv1gw3W6OpdHELvs0=
-7,9d9
-< Name: res/layout-v17/preference_header_switch_item.xml
-< SHA1-Digest: nqb03UKAQhR9+pYbc7W2pZGHyzs=
-< 
-11c11
-< SHA1-Digest: dfOCNsSoXekpVw7A7sx8TFYxm3A=
----
-> SHA1-Digest: wLM8s2dyk2SrlzTgHLaSrC6J5UE=
-20c20
-< SHA1-Digest: 8Q8kDhzyEFntJqHxu6k/bCGIZq4=
----
-> SHA1-Digest: w73vtZGEbogsZU5m/kHa0+av4Ac=
-27a28,30
-> Name: res/xml-zh-CN/preferences.xml
-> SHA1-Digest: a/HI1xVyPUq5JpQYwZlTp1O6hgk=
-> 
-29c32
-< SHA1-Digest: Wq7JYWJ+bl/cAWH3BuF3sMORx7I=
----
-> SHA1-Digest: TgLclukWTXsdpbOne8BmuTCLq5g=
-35c38
-< SHA1-Digest: c10DBD5GGVLD4jE6b3ekFc7Z/Yo=
----
-> SHA1-Digest: jtdXEZrZ8NbWDYH3LpLffQf/hx8=
-38c41
-< SHA1-Digest: Hko+xGbGmwrQemEC6OElJk/adDs=
----
-> SHA1-Digest: 1m/09YEXgDKElV9Z+2cDl6/aUB0=
-42a46,48
-> Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
-> SHA1-Digest: jSdN5hjQoweAWVz3QpOxJsL/dbE=
-> 
-46,47c52,53
-< Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
-< SHA1-Digest: jSdN5hjQoweAWVz3QpOxJsL/dbE=
----
-> Name: res/xml-zh-TW/preferences.xml
-> SHA1-Digest: ZCTH1BWj9NaZovUbrijLYtTPHNg=
-57a64,66
-> Name: res/layout/number_picker_preference.xml
-> SHA1-Digest: Lr59te2i7tkWsdZ2rXLFxzZeSpg=
-> 
-61,63d69
-< Name: res/layout/number_picker_preference.xml
-< SHA1-Digest: 1cBgI3+eztciEbdM0lJunpl5NFI=
-< 
-65c71
-< SHA1-Digest: V/iirB04YrMkKu4oQZwf5ij6x78=
----
-> SHA1-Digest: /iL3nkVwn9F29SYFaMPOfripjcw=
-68c74
-< SHA1-Digest: bebejGgYxI+//DheNwArNpVHzEc=
----
-> SHA1-Digest: RMpj7laJFJE9yVCRCOSd7Wj2nbM=
-89c95
-< SHA1-Digest: dedrWfcYkNnnSEmkRRPVuDglGSU=
----
-> SHA1-Digest: l8t9OZvz0emdYGeHiG7RPfjDLk4=
-100,102d105
-< Name: res/layout-v17/list_item_calendar.xml
-< SHA1-Digest: 3bKvD7vbtcS4ioeAtQOaLuqaDm4=
-< 
-104c107,110
-< SHA1-Digest: JLqqAYXe3CToipGOY0XaLCdZnQ4=
----
-> SHA1-Digest: pkhr2eDJ+CZ5h3W8ybYYcnacblQ=
-> 
-> Name: res/layout-v17/list_item_calendar.xml
-> SHA1-Digest: Whai3R+ZzZilPKXA/gOF7SdoaMk=
-114a121,123
-> Name: res/xml/preferences_empty.xml
-> SHA1-Digest: RRG4p4oGaGX411nU57FXVYG6QS8=
-> 
-118,120d126
-< Name: res/xml/preferences_empty.xml
-< SHA1-Digest: DaX45DjFoolKyfGULnqdLvUBNf4=
-< 
-125c131
-< SHA1-Digest: MisnIiOg0igHX77tQ7zIK0Ff2qU=
----
-> SHA1-Digest: 5V3pHTgYi70XOiPxu0iaTpLJ8og=
-140c146
-< SHA1-Digest: omIz8No7ncFwAPmUxL7JFAxRgcE=
----
-> SHA1-Digest: 6xwVPA9jxmYEfux+HsuFp5USJ+I=
-Somente em result/APP_75/App_B_75/res: values-it
-Somente em result/APP_75/App_M_75/res: values-zh-rCN
-Somente em result/APP_75/App_M_75/res: values-zh-rTW
-Somente em result/APP_75/App_M_75/res: xml-zh-rCN
-Somente em result/APP_75/App_M_75/res: xml-zh-rTW
-diff -r result/APP_75/App_B_75/smali/com/anddoes/notifier/az.smali result/APP_75/App_M_75/smali/com/anddoes/notifier/az.smali
-104c104,106
-<     const/4 v0, 0x0
----
->     const/4 v0, 0x1
-> 
->     return v0
+diff --git a/result/APP_75/App_B_75/apktool.yml b/result/APP_75/App_M_75/apktool.yml
+index bc47821..dd7b124 100755
+--- a/result/APP_75/App_B_75/apktool.yml
++++ b/result/APP_75/App_M_75/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.meta.MetaInfo
+-apkFileName: Bapp75-AB2F74DCE4D133C8AB7D63DFB085E136A3EECD8BE02D037DFDA4662D43C5735C.apk
++apkFileName: Mapp75-9206DB87EB97A43429E181A1CA5FD568AE2211255682A2D959CBE460882AFB37.apk
+ compressionType: false
+ doNotCompress:
+ - resources.arsc
+diff --git a/result/APP_75/App_B_75/com/anddoes/notifier/az.java b/result/APP_75/App_M_75/com/anddoes/notifier/az.java
+index 75dd7ec..4299352 100755
+--- a/result/APP_75/App_B_75/com/anddoes/notifier/az.java
++++ b/result/APP_75/App_M_75/com/anddoes/notifier/az.java
+@@ -3,7 +3,6 @@ package com.anddoes.notifier;
+ import android.content.Context;
+ import android.content.Intent;
+ import android.content.pm.PackageManager;
+-import android.content.pm.PackageManager.NameNotFoundException;
+ import android.net.Uri;
+ import android.os.Build.VERSION;
+ import android.support.v4.a.c;
+@@ -45,14 +44,7 @@ public final class az
+   
+   public static boolean a(Context paramContext, String paramString)
+   {
+-    paramContext = paramContext.getPackageManager();
+-    try
+-    {
+-      paramContext.getPackageInfo(paramString, 0);
+-      return true;
+-    }
+-    catch (PackageManager.NameNotFoundException paramContext) {}
+-    return false;
++    return true;
+   }
+   
+   public static String b(Object paramObject)
+diff --git a/result/APP_75/App_B_75/original/AndroidManifest.xml b/result/APP_75/App_M_75/original/AndroidManifest.xml
+index 7e9f393..0d50c3b 100755
+Binary files a/result/APP_75/App_B_75/original/AndroidManifest.xml and b/result/APP_75/App_M_75/original/AndroidManifest.xml differ
+diff --git a/result/APP_75/App_B_75/original/META-INF/CERT.RSA b/result/APP_75/App_M_75/original/META-INF/CERT.RSA
+index af8da2f..6bbcc82 100755
+Binary files a/result/APP_75/App_B_75/original/META-INF/CERT.RSA and b/result/APP_75/App_M_75/original/META-INF/CERT.RSA differ
+diff --git a/result/APP_75/App_B_75/original/META-INF/CERT.SF b/result/APP_75/App_M_75/original/META-INF/CERT.SF
+index ab8beb4..7a411b7 100755
+--- a/result/APP_75/App_B_75/original/META-INF/CERT.SF
++++ b/result/APP_75/App_M_75/original/META-INF/CERT.SF
+@@ -1,15 +1,15 @@
+ Signature-Version: 1.0
+-Created-By: 1.0 (Android)
+-SHA1-Digest-Manifest: 7eHlHm/69EAzLBqG1hSFFXoLlFU=
+-
+-Name: res/layout-v17/preference_header_switch_item.xml
+-SHA1-Digest: B2PSyfYXFWZN/B+07y/bcBZiJGc=
++Created-By: 1.0 (Android SignApk)
++SHA1-Digest-Manifest: iawZgWiV5bhKBWA/HX8yszyFqHo=
+ 
+ Name: res/drawable-xhdpi/ic_launcher.png
+ SHA1-Digest: 9oH7bXY3OwcfSXtpcU14+cm6Pag=
+ 
++Name: res/layout-v17/preference_header_switch_item.xml
++SHA1-Digest: EHRfxlwS9kqWeh/O5Sd/NjcjgAY=
++
+ Name: res/xml/preferences.xml
+-SHA1-Digest: Jeei7B8Fsi42mp1wAq1Yt8TwHDk=
++SHA1-Digest: ou8WYutx8sCmxdw8PL0wmUpuYrQ=
+ 
+ Name: res/drawable-xhdpi/ic_extension_google_talk.png
+ SHA1-Digest: ZlTTBw9dmLAwp7ErWOOK+XzDXXs=
+@@ -18,7 +18,7 @@ Name: res/drawable-hdpi/ic_launcher.png
+ SHA1-Digest: 2A/8mcsKDKaw/khU764Bu+vIwF4=
+ 
+ Name: resources.arsc
+-SHA1-Digest: Bb1Q9ljWTim0VJwnxUZ053unKQI=
++SHA1-Digest: Ibq4/KFdcNxTUlXLrFyJ58NT3tQ=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_57.png
+ SHA1-Digest: AYvnH53ulrOKYsIyamK9KdtKYcU=
+@@ -27,25 +27,31 @@ Name: res/drawable-xhdpi/large_icon.png
+ SHA1-Digest: Q3LDHsOCKNmqyzKnzQqMc3HMjGE=
+ 
+ Name: res/layout/preference_header_switch_item.xml
+-SHA1-Digest: Tii/zv7fv0CXHEtGL/RGGxznLm8=
++SHA1-Digest: oK17V2ALUYomcXyKwOSYK6dyLAc=
++
++Name: res/xml-zh-CN/preferences.xml
++SHA1-Digest: jEQo/D5p2mY3lttC+e09cXsiTVw=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_43.png
+ SHA1-Digest: xq4MfVDm0F8dtUABHIFTDZSx1Hg=
+ 
+-Name: res/layout/dialog_about.xml
+-SHA1-Digest: 1p5ery6E5N1ir0je/oeoPpBNNho=
+-
+ Name: AndroidManifest.xml
+-SHA1-Digest: 5pnGl6MsljQftU2pquY/1nsRP2U=
++SHA1-Digest: 8WEjvlPNIIpb3mSN++Gcwv5DgHc=
++
++Name: res/layout/dialog_about.xml
++SHA1-Digest: 6XEwa3/FyDsRxud6Sl3ga7BFzZU=
+ 
+ Name: res/drawable-xhdpi/ic_extension_google_voice.png
+ SHA1-Digest: tclAKv1I+uXF5eyeA0eAhyy0c5U=
+ 
++Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
++SHA1-Digest: e4nKkxQ9Rg0ti/neY2OXnQvkEQQ=
++
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_28.png
+ SHA1-Digest: ujCQ3R8B9KM5ezBzsbToQI6J4Yg=
+ 
+-Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
+-SHA1-Digest: e4nKkxQ9Rg0ti/neY2OXnQvkEQQ=
++Name: res/xml-zh-TW/preferences.xml
++SHA1-Digest: RxregI0selg1z2ERVrVAK9hjom0=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_0.png
+ SHA1-Digest: fEbrOAZ3y1d7tft21hMKoJB0o3c=
+@@ -56,17 +62,17 @@ SHA1-Digest: AVcQdFaOZOK+h//SNh4xwS9Ms20=
+ Name: res/drawable-xhdpi/ic_extension_k9_mail.png
+ SHA1-Digest: YBGqkDpTOt7jxdHxDHl/ys2vTJ0=
+ 
++Name: res/layout/number_picker_preference.xml
++SHA1-Digest: wo2lxtbCq7VBWpGfK3YPSdDt4bg=
++
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_71.png
+ SHA1-Digest: 1bEYkP4zBTyev3wFkNuJhDz/Ztc=
+ 
+-Name: res/layout/number_picker_preference.xml
+-SHA1-Digest: ZCAstH8Vz7s765gnRDQF1IgwONg=
+-
+ Name: res/xml/preferences_calendar.xml
+-SHA1-Digest: f+ny9VsYcsLaJ3xjNMCsB/980/M=
++SHA1-Digest: iE7x7PQthNqO7X0w0wEbKntIC2g=
+ 
+ Name: res/layout/list_item_calendar.xml
+-SHA1-Digest: IVKbyvkhhCMBkl6LYS/f3lpUAI4=
++SHA1-Digest: mbSiuaC8y5fY0AAB1ko6uhG+sbQ=
+ 
+ Name: res/drawable-xhdpi/ic_extension_missed_calls.png
+ SHA1-Digest: aFctHIpJEggBeVbUat3TFx+HwX4=
+@@ -90,7 +96,7 @@ Name: res/drawable-xhdpi/ic_extension_htc_mail.png
+ SHA1-Digest: f9jAqFps7ajLz4Ops2FIZ0k7nXs=
+ 
+ Name: classes.dex
+-SHA1-Digest: NV0LfRdjRLvxvVyxr7J9xPxD63o=
++SHA1-Digest: tzmXS0AWSxM2E4SB2i8FyUSDvpw=
+ 
+ Name: res/drawable-xxhdpi/ic_launcher.png
+ SHA1-Digest: b4ZfLj8OANJLz+9zHRjB72PjiBA=
+@@ -101,11 +107,11 @@ SHA1-Digest: K+LnPhb6GlrSV5aIaWenSkZpA5o=
+ Name: res/drawable-xhdpi/ic_extension_battery_28.png
+ SHA1-Digest: 4djcwTmiztKyt1wUG78Hm4oqF/4=
+ 
+-Name: res/menu/main.xml
+-SHA1-Digest: LRut47CS9JWglE4/OZPw4u2fm74=
+-
+ Name: res/layout-v17/list_item_calendar.xml
+-SHA1-Digest: me1LqDQMK5luUdTgGwsYSESTTNE=
++SHA1-Digest: fB1pjtReSmq5/535gvkwhlRkrdg=
++
++Name: res/menu/main.xml
++SHA1-Digest: dqE2svtvaIpKRqiZuvqn056oBDQ=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_15.png
+ SHA1-Digest: 62LQlVmelyYBUYHYRbTYH3cKk90=
+@@ -113,12 +119,12 @@ SHA1-Digest: 62LQlVmelyYBUYHYRbTYH3cKk90=
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_0.png
+ SHA1-Digest: C0dFWnpQbEX+Qo3o2AwGMx70ZfA=
+ 
+-Name: res/xml/preferences_empty.xml
+-SHA1-Digest: G7ffkp1aWfYKfDErWYk8ytZ5IgQ=
+-
+ Name: res/drawable-xhdpi/ic_extension_calendar.png
+ SHA1-Digest: bWbWUH14JoBgMGK2uioOLpcrHHo=
+ 
++Name: res/xml/preferences_empty.xml
++SHA1-Digest: Vlpti7mmvCIvkje87evNhOSmfF0=
++
+ Name: res/drawable-xhdpi/ic_extension_battery_85.png
+ SHA1-Digest: s46c6i5WmWgzXzVhHYPfsh+wgn8=
+ 
+@@ -126,7 +132,7 @@ Name: res/drawable-xhdpi/ic_extension_battery_100.png
+ SHA1-Digest: pDrN4pCZbsnhNsswEiof3t7gsG8=
+ 
+ Name: res/layout-sw600dp/dialog_about.xml
+-SHA1-Digest: +lyrDRolHbjcnqhtIMSCeG/Prx8=
++SHA1-Digest: JXIcCs8ZwTb//kIaS3jOTBIPr2s=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_43.png
+ SHA1-Digest: HHW60L2nrUknzbhskxhtcE0jHLg=
+@@ -138,5 +144,5 @@ Name: res/drawable-xhdpi/ic_extension_gmail.png
+ SHA1-Digest: aq17tafGkob70K2xlwWfdyI74Qs=
+ 
+ Name: res/xml/preferences_battery.xml
+-SHA1-Digest: yNQ8T7pcKWcgxYql5GnfCzLauYs=
++SHA1-Digest: W7joOLaY3m/c72WW0iGTQ0/cF4M=
+ 
+diff --git a/result/APP_75/App_B_75/original/META-INF/MANIFEST.MF b/result/APP_75/App_M_75/original/META-INF/MANIFEST.MF
+index 7db0688..bf2a359 100755
+--- a/result/APP_75/App_B_75/original/META-INF/MANIFEST.MF
++++ b/result/APP_75/App_M_75/original/META-INF/MANIFEST.MF
+@@ -1,14 +1,14 @@
+ Manifest-Version: 1.0
+-Created-By: 1.0 (Android)
++Created-By: 1.0 (Android SignApk)
++
++Name: res/layout-v17/preference_header_switch_item.xml
++SHA1-Digest: 1quQO3wHwbZv1gw3W6OpdHELvs0=
+ 
+ Name: res/drawable-xhdpi/ic_launcher.png
+ SHA1-Digest: 2ZOnMRH+vd2sM7vQ2kTJ5C3ICrY=
+ 
+-Name: res/layout-v17/preference_header_switch_item.xml
+-SHA1-Digest: nqb03UKAQhR9+pYbc7W2pZGHyzs=
+-
+ Name: res/xml/preferences.xml
+-SHA1-Digest: dfOCNsSoXekpVw7A7sx8TFYxm3A=
++SHA1-Digest: wLM8s2dyk2SrlzTgHLaSrC6J5UE=
+ 
+ Name: res/drawable-xhdpi/ic_extension_google_talk.png
+ SHA1-Digest: V8rHIYeyDfXe/v6cfNkl36aSPeM=
+@@ -17,7 +17,7 @@ Name: res/drawable-hdpi/ic_launcher.png
+ SHA1-Digest: lN/8MFn70ZKJeB4Q4u/T/bA/+ts=
+ 
+ Name: resources.arsc
+-SHA1-Digest: 8Q8kDhzyEFntJqHxu6k/bCGIZq4=
++SHA1-Digest: w73vtZGEbogsZU5m/kHa0+av4Ac=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_57.png
+ SHA1-Digest: zKRcXm+50P7YHEoGuIkIzLoQKPo=
+@@ -25,26 +25,32 @@ SHA1-Digest: zKRcXm+50P7YHEoGuIkIzLoQKPo=
+ Name: res/drawable-xhdpi/large_icon.png
+ SHA1-Digest: cH5n9ya/uO5Poz6iu5lKteKMQt0=
+ 
++Name: res/xml-zh-CN/preferences.xml
++SHA1-Digest: a/HI1xVyPUq5JpQYwZlTp1O6hgk=
++
+ Name: res/layout/preference_header_switch_item.xml
+-SHA1-Digest: Wq7JYWJ+bl/cAWH3BuF3sMORx7I=
++SHA1-Digest: TgLclukWTXsdpbOne8BmuTCLq5g=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_43.png
+ SHA1-Digest: BCi0VoA/adjV5idsXtAz8EmZlK8=
+ 
+ Name: AndroidManifest.xml
+-SHA1-Digest: c10DBD5GGVLD4jE6b3ekFc7Z/Yo=
++SHA1-Digest: jtdXEZrZ8NbWDYH3LpLffQf/hx8=
+ 
+ Name: res/layout/dialog_about.xml
+-SHA1-Digest: Hko+xGbGmwrQemEC6OElJk/adDs=
++SHA1-Digest: 1m/09YEXgDKElV9Z+2cDl6/aUB0=
+ 
+ Name: res/drawable-xhdpi/ic_extension_google_voice.png
+ SHA1-Digest: iuW8P28PyHfvsNjYxmnDZTNeW/k=
+ 
++Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
++SHA1-Digest: jSdN5hjQoweAWVz3QpOxJsL/dbE=
++
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_28.png
+ SHA1-Digest: /S6rZR/3OnnwyudaBXkVob29Zco=
+ 
+-Name: res/drawable-xhdpi/ic_extension_battery_charge_15.png
+-SHA1-Digest: jSdN5hjQoweAWVz3QpOxJsL/dbE=
++Name: res/xml-zh-TW/preferences.xml
++SHA1-Digest: ZCTH1BWj9NaZovUbrijLYtTPHNg=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_0.png
+ SHA1-Digest: TI8Fgn5L5+c62VrfSG88aiLmtis=
+@@ -55,17 +61,17 @@ SHA1-Digest: fGkYbgXLAUmUzIXBO6uamYP3ewA=
+ Name: res/drawable-xhdpi/ic_extension_k9_mail.png
+ SHA1-Digest: SxAcDIXayEBAC5ja3Mc8jNenH9g=
+ 
++Name: res/layout/number_picker_preference.xml
++SHA1-Digest: Lr59te2i7tkWsdZ2rXLFxzZeSpg=
++
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_71.png
+ SHA1-Digest: 48fpwz6tdYOvy56/qkGO2BosoGg=
+ 
+-Name: res/layout/number_picker_preference.xml
+-SHA1-Digest: 1cBgI3+eztciEbdM0lJunpl5NFI=
+-
+ Name: res/xml/preferences_calendar.xml
+-SHA1-Digest: V/iirB04YrMkKu4oQZwf5ij6x78=
++SHA1-Digest: /iL3nkVwn9F29SYFaMPOfripjcw=
+ 
+ Name: res/layout/list_item_calendar.xml
+-SHA1-Digest: bebejGgYxI+//DheNwArNpVHzEc=
++SHA1-Digest: RMpj7laJFJE9yVCRCOSd7Wj2nbM=
+ 
+ Name: res/drawable-xhdpi/ic_extension_missed_calls.png
+ SHA1-Digest: E0VCN9URNM5j6WLK4Fyo1/iyF5w=
+@@ -86,7 +92,7 @@ Name: res/drawable-xhdpi/ic_extension_battery_charge_100.png
+ SHA1-Digest: 9mOTq7IyZ9ktAKQI+G15xe3g8wQ=
+ 
+ Name: classes.dex
+-SHA1-Digest: dedrWfcYkNnnSEmkRRPVuDglGSU=
++SHA1-Digest: l8t9OZvz0emdYGeHiG7RPfjDLk4=
+ 
+ Name: res/drawable-xhdpi/ic_extension_htc_mail.png
+ SHA1-Digest: aDslspSJzf+j32ksOzMODIdP6vY=
+@@ -97,11 +103,11 @@ SHA1-Digest: K2fiPArcjAE9a1b9W3OvQ+bfQ84=
+ Name: res/drawable-xhdpi/ic_extension_battery_57.png
+ SHA1-Digest: j+wzw9FZJcBL/rKsDkQKmwgp9KY=
+ 
+-Name: res/layout-v17/list_item_calendar.xml
+-SHA1-Digest: 3bKvD7vbtcS4ioeAtQOaLuqaDm4=
+-
+ Name: res/menu/main.xml
+-SHA1-Digest: JLqqAYXe3CToipGOY0XaLCdZnQ4=
++SHA1-Digest: pkhr2eDJ+CZ5h3W8ybYYcnacblQ=
++
++Name: res/layout-v17/list_item_calendar.xml
++SHA1-Digest: Whai3R+ZzZilPKXA/gOF7SdoaMk=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_28.png
+ SHA1-Digest: E7+cCBaDC9HQPYw7z1uYqT6/T/M=
+@@ -112,17 +118,17 @@ SHA1-Digest: u6yVe3Dz4qy/oPL9s8N+C/47/Ww=
+ Name: res/drawable-xhdpi/ic_extension_battery_charge_0.png
+ SHA1-Digest: bSBuyMRKbV3MSzV7TBpGC0Prsfs=
+ 
++Name: res/xml/preferences_empty.xml
++SHA1-Digest: RRG4p4oGaGX411nU57FXVYG6QS8=
++
+ Name: res/drawable-xhdpi/ic_extension_calendar.png
+ SHA1-Digest: rqmyc4oWwi65AXhxXc0+NbldLZQ=
+ 
+-Name: res/xml/preferences_empty.xml
+-SHA1-Digest: DaX45DjFoolKyfGULnqdLvUBNf4=
+-
+ Name: res/drawable-xhdpi/ic_extension_battery_85.png
+ SHA1-Digest: kM4gfRdIXJdANvR0bSn4DZ5RRW8=
+ 
+ Name: res/layout-sw600dp/dialog_about.xml
+-SHA1-Digest: MisnIiOg0igHX77tQ7zIK0Ff2qU=
++SHA1-Digest: 5V3pHTgYi70XOiPxu0iaTpLJ8og=
+ 
+ Name: res/drawable-xhdpi/ic_extension_battery_100.png
+ SHA1-Digest: fWAGN/FaHUVy3KehnRBzy/vBJ20=
+@@ -137,5 +143,5 @@ Name: res/drawable-xhdpi/ic_extension_gmail.png
+ SHA1-Digest: HjTGwqg+yOTV7pdOMi0N7f4b0Zk=
+ 
+ Name: res/xml/preferences_battery.xml
+-SHA1-Digest: omIz8No7ncFwAPmUxL7JFAxRgcE=
++SHA1-Digest: 6xwVPA9jxmYEfux+HsuFp5USJ+I=
+ 
+diff --git a/result/APP_75/App_B_75/res/values-it/plurals.xml b/result/APP_75/App_B_75/res/values-it/plurals.xml
+deleted file mode 100755
+index 55343f0..0000000
+--- a/result/APP_75/App_B_75/res/values-it/plurals.xml
++++ /dev/null
+@@ -1,55 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <plurals name="missed_calls_title_template">
+-        <item quantity="other">%1$s chiamate perse</item>
+-        <item quantity="one">%1$s chiamata persa</item>
+-    </plurals>
+-    <plurals name="sms_title_template">
+-        <item quantity="other">%1$s messaggi non letti</item>
+-        <item quantity="one">%1$s messaggio non letto</item>
+-    </plurals>
+-    <plurals name="calendar_summary_template">
+-        <item quantity="other">%1$d calendari selezionati</item>
+-        <item quantity="one">%1$d calendario selezionato</item>
+-    </plurals>
+-    <plurals name="calendar_selected_summary_template">
+-        <item quantity="other">%1$d di %2$d calendari selezionati</item>
+-        <item quantity="one">%1$d di %2$d calendario selezionato</item>
+-    </plurals>
+-    <plurals name="template_days">
+-        <item quantity="other">%1$s giorni</item>
+-        <item quantity="one">%1$s giorno</item>
+-    </plurals>
+-    <plurals name="template_hours">
+-        <item quantity="other">%1$s ore</item>
+-        <item quantity="one">%1$s ora</item>
+-    </plurals>
+-    <plurals name="template_minutes">
+-        <item quantity="other">%1$s minuti</item>
+-        <item quantity="one">%1$s minuto</item>
+-    </plurals>
+-    <plurals name="template_seconds">
+-        <item quantity="other">%1$s secondi</item>
+-        <item quantity="one">%1$s secondo</item>
+-    </plurals>
+-    <plurals name="accounts_summary_template">
+-        <item quantity="other">%1$d account selezionati</item>
+-        <item quantity="one">%1$d account selezionato</item>
+-    </plurals>
+-    <plurals name="accounts_selected_summary_template">
+-        <item quantity="other">%1$d di %2$d account selezionati</item>
+-        <item quantity="one">%1$d di %2$d account selezionato</item>
+-    </plurals>
+-    <plurals name="labels_summary_template">
+-        <item quantity="other">%1$d etichette selezionate</item>
+-        <item quantity="one">%1$d etichetta selezionata</item>
+-    </plurals>
+-    <plurals name="unread_title_template">
+-        <item quantity="other">%1$d non lette</item>
+-        <item quantity="one">%1$d non letta</item>
+-    </plurals>
+-    <plurals name="stars_title_template">
+-        <item quantity="other">%1$d stelle</item>
+-        <item quantity="one">%1$d stella</item>
+-    </plurals>
+-</resources>
+diff --git a/result/APP_75/App_B_75/res/values-it/strings.xml b/result/APP_75/App_B_75/res/values-it/strings.xml
+deleted file mode 100755
+index 0eee40b..0000000
+--- a/result/APP_75/App_B_75/res/values-it/strings.xml
++++ /dev/null
+@@ -1,135 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <string name="app_name">Apex Notifier</string>
+-    <string name="extension_title">Apex Notifier</string>
+-    <string name="extension1_title">Apex Notifier 1</string>
+-    <string name="extension2_title">Apex Notifier 2</string>
+-    <string name="extension3_title">Apex Notifier 3</string>
+-    <string name="extension_description">Mostra un contatore di notifiche non lette per i vari servizi.</string>
+-    <string name="general_settings_title">Impostazioni generali</string>
+-    <string name="extension_settings_title">"Impostazioni dell'estensione per DashClock"</string>
+-    <string name="general_title">Generale</string>
+-    <string name="labs_title">Labs</string>
+-    <string name="get_apex_launcher">Ottieni Apex Launcher</string>
+-    <string name="get_apex_launcher_pro">Acquista Apex Launcher Pro</string>
+-    <string name="get_dashclock">Ottieni DashClock Widget</string>
+-    <string name="rate">Vota</string>
+-    <string name="help">Aiuto</string>
+-    <string name="about">Informazioni</string>
+-    <string name="ok">OK</string>
+-    <string name="cancel">Annulla</string>
+-    <string name="close">Chiudi</string>
+-    <string name="none">Nessuno</string>
+-    <string name="enabled">Attivato</string>
+-    <string name="disabled">Disattivato</string>
+-    <string name="please_wait">Si prega di attendere…</string>
+-    <string name="loading">Caricamento…</string>
+-    <string name="google_play">Google Play</string>
+-    <string name="update">Aggiorna</string>
+-    <string name="uninstall">Disinstalla</string>
+-    <string name="error">Errore</string>
+-    <string name="update_gmail_message">"Questa funzione richiede la versione 4.0.5 o successiva di Gmail. Si prega di aggiornare all'ultima versione.
+-
+-Potrebbe anche essere necessario reinstallare Apex Notifier dopo l'aggiornamento di Gmail."</string>
+-    <string name="permission_error_title">Permesso negato</string>
+-    <string name="permission_error_message">"Il sistema ha negato ad Apex Notifier il permesso di accedere a questa funzione.
+-
+-Si prega di rimuovere e reinstallare Apex Notifier per risolvere questo problema."</string>
+-    <string name="install_dashclock_message">"Le impostazioni delle estensioni controllano quali informazioni vengono mostrate sui widget DashClock.
+-
+-Vuoi installare DashClock Widget dal Google Play?"</string>
+-    <string name="install_app_message">"L'applicazione \"%1$s\" non è installata, o l'attuale versione di \"%2$s\" non è supportata.
+-
+-Vuoi installare l'ultima versione dal Google Play?"</string>
+-    <string name="feature_error_message">"Hai un'estensione di DashClock attiva impostata per \"%1$s\". Si prega di modificare le impostazioni dell'estensione prima di disattivare questa funzione."</string>
+-    <string name="bind_widget_message">Per attivare questa funzione, Apex Notifier deve creare e accedere al widget \"%1$s\".</string>
+-    <string name="select_widget_message">"Si prega di selezionare \"%1$s\" dall'elenco dei widget nel prossimo passaggio."</string>
+-    <string name="continue_message">Vuoi continuare?</string>
+-    <string name="email_error_message">Spiacenti, la tua applicazione email non è supportata.</string>
+-    <string name="widget_error_message">Sembra che non hai selezionato il widget corretto.</string>
+-    <string name="extension_conflict_message">"Hai già impostato un'altra estensione per \"%1$s\"."</string>
+-    <string name="extension_error_message">"La funzione \"%1$s\" è attualmente disattivata. Si prega di attivarla prima di configurare l'estensione."</string>
+-    <string name="action_error_message">Questa azione non può essere eseguita.</string>
+-    <string name="about_body">Copyright &amp;copy; 2013 Android Does&lt;br>&lt;br> Grazie mille a questi progetti open source:&lt;br>&lt;br> &lt;b>&lt;a href=http://source.android.com/>Android Open Source Project&lt;/a>&lt;/b>&lt;br> &lt;i>gestito da &lt;a href=http://www.google.com/>Google&lt;/a>&lt;/i>&lt;br>&lt;br> &lt;b>&lt;a href=https://code.google.com/p/dashclock/>DashClock&lt;/a>&lt;/b>&lt;br> &lt;i>di &lt;a href=http://roman.nurik.net/>Roman Nurik&lt;/a>&lt;/i></string>
+-    <string name="help_body">"Apex Notifier è un'applicazione estensione per &lt;b>&lt;a href=https://play.google.com/store/apps/details?id=com.anddoes.launcher.pro>Apex Launcher Pro&lt;/a>&lt;/b> e &lt;b>&lt;a href=https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock>DashClock Widget&lt;/a>&lt;/b> (Android 4.2+). Non fa nulla da sola.&lt;br>&lt;br> Quando viene utilizzata con Apex Launcher Pro, il contatore di notifiche non lette viene mostrato sui simboli delle icone delle applicazioni. Si prega di attivare Apex Notifier in &lt;i>Impostazioni di Apex > Impostazioni notifica&lt;/i>.&lt;br>&lt;br> Quando viene utilizzata con DashClock Widget, Apex Notifier mostra informazioni utili da varie fonti. Si prega di attivare Apex Notifier in &lt;i>Estensioni di DashClock > Aggiungi un'altra estensione > Apex Notifier&lt;/i>.&lt;br>&lt;br> Nota: Le funzioni elencate sotto Labs sono sperimentali e potrebbero non funzionare in futuro."</string>
+-    <string name="missed_calls_title">Chiamate perse</string>
+-    <string name="from_body_template">Da: %1$s</string>
+-    <string name="unknown">Sconosciuto</string>
+-    <string name="unread_sms_title">SMS non letti</string>
+-    <string name="sms_body_template">Da: %1$s</string>
+-    <string name="sms_body_all_participants_template">Con: %1$s</string>
+-    <string name="calendar_title">Calendario</string>
+-    <string name="calendar_settings_title">Impostazioni del calendario</string>
+-    <string name="calendar_look_ahead_hours_title">Mostra gli appuntamenti nelle prossime</string>
+-    <string name="three_hours">3 ore</string>
+-    <string name="six_hours">6 ore</string>
+-    <string name="twelve_hours">12 ore</string>
+-    <string name="twenty_four_hours">24 ore</string>
+-    <string name="two_days">2 giorni</string>
+-    <string name="week">settimana</string>
+-    <string name="calendar_selected_title">Seleziona i calendari da mostrare</string>
+-    <string name="calendar_custom_visibility_title">Visibilità del calendario personalizzata</string>
+-    <string name="calendar_custom_visibility_description">"Se non selezionata, mostra tutti i calendari visibili nell'applicazione calendario"</string>
+-    <string name="calendar_show_all_day_title">Mostra gli eventi Tutto il giorno</string>
+-    <string name="calendar_show_all_day_description">Include gli eventi Tutto il giorno come i compleanni</string>
+-    <string name="today">Oggi</string>
+-    <string name="now">Ora</string>
+-    <string name="gmail_title">Gmail</string>
+-    <string name="gmail_accounts">Account di Gmail</string>
+-    <string name="no_accounts_message">Nessun account trovato.</string>
+-    <string name="no_labels_message">Nessuna etichetta trovata.</string>
+-    <string name="htc_mail_title">HTC Mail</string>
+-    <string name="samsung_email_title">Samsung Email</string>
+-    <string name="last_update_time">Ultimo aggiornamento</string>
+-    <string name="k9_kaiten_mail_title">K-9/Kaiten Mail</string>
+-    <string name="k9_mail_title">K-9 Mail</string>
+-    <string name="k9_mail_accounts">Account di K-9 Mail</string>
+-    <string name="kaiten_mail_title">Kaiten Mail</string>
+-    <string name="kaiten_mail_free_title">Kaiten Mail Free</string>
+-    <string name="kaiten_mail_accounts">Account di Kaiten Mail</string>
+-    <string name="battery_title">Batteria</string>
+-    <string name="battery_settings_title">Impostazioni della batteria</string>
+-    <string name="battery_show_always_title">Mostra sempre il livello della batteria</string>
+-    <string name="battery_show_always_summary">Mostra il livello della batteria in ogni momento</string>
+-    <string name="battery_show_not_charging_title">Mostra quando non in carica</string>
+-    <string name="battery_show_not_charging_summary">Mostra il livello della batteria solo se non in carica</string>
+-    <string name="battery_show_below_title">Mostra quando il livello scende al di sotto</string>
+-    <string name="battery_show_duration_title">Mostra il tempo sulla batteria</string>
+-    <string name="battery_show_duration_summary">Mostra la quantità di tempo che il dispositivo è in esecuzione sulla batteria.</string>
+-    <string name="battery_show_details_title">Mostra i dettagli della batteria</string>
+-    <string name="battery_health">Salute</string>
+-    <string name="battery_temperature">Temperatura</string>
+-    <string name="battery_voltage">Tensione</string>
+-    <string name="battery_technology">Tecnologia</string>
+-    <string name="temperature_units_title">Unità di misura della temperatura</string>
+-    <string name="temperature_celsius_units">° C</string>
+-    <string name="temperature_fahrenheit_units">° F</string>
+-    <string name="battery_info_voltage_units">mV</string>
+-    <string name="battery_info_status_unknown">Sconosciuta</string>
+-    <string name="battery_info_status_charging">In carica</string>
+-    <string name="battery_info_status_charging_ac">(CA)</string>
+-    <string name="battery_info_status_charging_usb">(USB)</string>
+-    <string name="battery_info_status_charging_wireless">(wireless)</string>
+-    <string name="battery_info_status_discharging">Non in carica</string>
+-    <string name="battery_info_status_not_charging">Non in carica</string>
+-    <string name="battery_info_status_full">Carica</string>
+-    <string name="battery_info_health_unknown">Sconosciuta</string>
+-    <string name="battery_info_health_good">Buona</string>
+-    <string name="battery_info_health_overheat">Surriscaldata</string>
+-    <string name="battery_info_health_dead">Morta</string>
+-    <string name="battery_info_health_over_voltage">Sovratensione</string>
+-    <string name="battery_info_health_unspecified_failure">Errore sconosciuto</string>
+-    <string name="battery_info_health_cold">Fredda</string>
+-    <string name="battery_stats_on_battery">%1$s sulla batteria</string>
+-    <string name="email_title">Email</string>
+-    <string name="google_talk_title">Google Talk</string>
+-    <string name="google_talk_accounts">Account di Google Talk</string>
+-    <string name="google_voice_title">Google Voice</string>
+-    <string name="starbucks_title">Starbucks</string>
+-    <string name="starbucks_summary">Mostra il numero delle stelle di ricompensa.</string>
+-    <string name="starbucks_rewards">Ricompense di Starbucks</string>
+-    <string name="dashclock_title">DashClock</string>
+-    <string name="dashclock_extension1_title">Estensione di DashClock 1</string>
+-    <string name="dashclock_extension2_title">Estensione di DashClock 2</string>
+-    <string name="dashclock_extension3_title">Estensione di DashClock 3</string>
+-</resources>
+diff --git a/result/APP_75/App_M_75/res/values-zh-rCN/plurals.xml b/result/APP_75/App_M_75/res/values-zh-rCN/plurals.xml
+new file mode 100755
+index 0000000..bbd9d1f
+--- /dev/null
++++ b/result/APP_75/App_M_75/res/values-zh-rCN/plurals.xml
+@@ -0,0 +1,54 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <plurals name="missed_calls_title_template">
++        <item quantity="other">%1$s 个未接电话</item>
++        <item quantity="one">%1$s 个未接电话</item>
++    </plurals>
++    <plurals name="sms_title_template">
++        <item quantity="other">%1$s 条未读信息</item>
++        <item quantity="one">%1$s 条未读信息</item>
++    </plurals>
++    <plurals name="calendar_summary_template">
++        <item quantity="other">选中了 %1$d 个日历</item>
++        <item quantity="one">选中了 %1$d 个日历</item>
++    </plurals>
++    <plurals name="calendar_selected_summary_template">
++        <item quantity="other">选中了 %1$d 个日历，共 %2$d 个</item>
++        <item quantity="one">选中了 %1$d 个日历，共 %2$d 个</item>
++    </plurals>
++    <plurals name="template_days">
++        <item quantity="other">%1$s 天</item>
++        <item quantity="one">%1$s 天</item>
++    </plurals>
++    <plurals name="template_hours">
++        <item quantity="other">%1$s 小时</item>
++        <item quantity="one">%1$s 小时</item>
++    </plurals>
++    <plurals name="template_minutes">
++        <item quantity="other">%1$s 分钟</item>
++        <item quantity="one">%1$s 分钟</item>
++    </plurals>
++    <plurals name="template_seconds">
++        <item quantity="other">%1$s 秒</item>
++        <item quantity="one">%1$s 秒</item>
++    </plurals>
++    <plurals name="accounts_summary_template">
++        <item quantity="other">选中了 %1$d 个帐户</item>
++        <item quantity="one">选中了 %1$d 个帐户</item>
++    </plurals>
++    <plurals name="accounts_selected_summary_template">
++        <item quantity="other">选中了 %1$d 个帐户，共 %2$d 个</item>
++        <item quantity="one">选中了 %1$d 个帐户，共 %2$d 个</item>
++    </plurals>
++    <plurals name="labels_summary_template">
++        <item quantity="other">选中了 %1$d 个标签</item>
++        <item quantity="one">选中了 %1$d 个标签</item>
++    </plurals>
++    <plurals name="unread_title_template">
++        <item quantity="other">%1$d 封未读邮件</item>
++    </plurals>
++    <plurals name="stars_title_template">
++        <item quantity="other">%1$d 封星标邮件</item>
++        <item quantity="one">%1$d 封星标邮件</item>
++    </plurals>
++</resources>
+diff --git a/result/APP_75/App_M_75/res/values-zh-rCN/strings.xml b/result/APP_75/App_M_75/res/values-zh-rCN/strings.xml
+new file mode 100755
+index 0000000..b4d7114
+--- /dev/null
++++ b/result/APP_75/App_M_75/res/values-zh-rCN/strings.xml
+@@ -0,0 +1,138 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="app_name">Apex 通知器</string>
++    <string name="extension_title">Apex 通知器</string>
++    <string name="extension1_title">Apex 通知器 1</string>
++    <string name="extension2_title">Apex 通知器 2</string>
++    <string name="extension3_title">Apex 通知器 3</string>
++    <string name="extension_description">显示多种服务的未读计数。</string>
++    <string name="general_settings_title">常规设置</string>
++    <string name="extension_settings_title">锁屏时钟扩展设置</string>
++    <string name="general_title">常规</string>
++    <string name="labs_title">实验室</string>
++    <string name="get_apex_launcher">获得 Apex 启动器</string>
++    <string name="get_apex_launcher_pro">获得 Apex 启动器专业版</string>
++    <string name="get_dashclock">获得锁屏时钟小部件</string>
++    <string name="rate">评分</string>
++    <string name="help">帮助</string>
++    <string name="about">关于</string>
++    <string name="ok">确定</string>
++    <string name="cancel">取消</string>
++    <string name="close">关闭</string>
++    <string name="none">无</string>
++    <string name="enabled">已启用</string>
++    <string name="disabled">已停用</string>
++    <string name="please_wait">请稍候…</string>
++    <string name="loading">正在加载…</string>
++    <string name="google_play">Google Play</string>
++    <string name="update">更新</string>
++    <string name="uninstall">卸载</string>
++    <string name="error">错误</string>
++    <string name="update_gmail_message">"此功能需要 4.0.5 及以上版本的 Gmali。请更新到最新版本。
++
++更新 Gmali 后可能也需要重新安装 Apex 通知器。"</string>
++    <string name="permission_error_title">权限被拒绝</string>
++    <string name="permission_error_message">"系统拒绝了 Apex 通知器访问此功能的权限。
++
++请卸载并重新安装 Apex 通知器以修复此问题。"</string>
++    <string name="install_dashclock_message">"扩展设置可控制要在锁屏时钟小部件上显示的信息。
++
++要前往 Google Play 商店安装锁屏时钟小部件吗？"</string>
++    <string name="install_app_message">"未安装“%1$s”应用，或不支持您当前的“%1$s”版本。
++
++要前往 Google Play 商店安装最新版本吗？"</string>
++    <string name="feature_error_message">您已将锁屏时钟扩展设置为“%1$s”。停用此功能前请先更改您的扩展设置。</string>
++    <string name="bind_widget_message">要启用此功能，Apex 通知器需要创建并访问“%1$s”小部件。</string>
++    <string name="select_widget_message">请从下一步中的小部件列表中选择“%1$s”。</string>
++    <string name="continue_message">要继续吗？</string>
++    <string name="email_error_message">抱歉，不支持您的电子邮件客户端。</string>
++    <string name="widget_error_message">未选择正确的小部件。</string>
++    <string name="extension_conflict_message">您已将其他扩展设置为“%1$s”。</string>
++    <string name="extension_error_message">“%1$s”功能当前已被停用。设置扩展前请先将其打开。</string>
++    <string name="action_error_message">无法执行此操作。</string>
++    <string name="app_name_and_version">&lt;b>Apex 通知器&lt;/b>&amp;nbsp;&lt;font color=#888888>v%1$s&lt;/font></string>
++    <string name="about_body">版权所有 &amp;copy; 2013 Android Does&lt;br>&lt;br>非常感谢以下开放源代码项目：&lt;br>&lt;br>&lt;b>&lt;a href=http://source.android.com/>Android 开放源代码项目&lt;/a>&lt;/b>&lt;br>&lt;i>由 &lt;a href=http://www.google.com/>Google&lt;/a> 开发&lt;/i>&lt;br>&lt;br>&lt;b>&lt;a href=https://code.google.com/p/dashclock/>DashClock&lt;/a>&lt;/b>&lt;br>&lt;i>由 &lt;a href=http://roman.nurik.net/>Roman Nurik&lt;/a> 开发&lt;/i></string>
++    <string name="help_body">Apex 通知器是 &lt;b>&lt;a href=https://play.google.com/store/apps/details?id=com.anddoes.launcher.pro>Apex 启动器专业版&lt;/a>&lt;/b> 和 &lt;b>&lt;a href=https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock>锁屏时钟小部件&lt;/a>&lt;/b> (Android 4.2+) 的扩展应用。自身没有任何作用。&lt;br>&lt;br>与 Apex 启动器专业版配合使用时，Apex 通知器将会在应用图标上显示未读计数。请在“&lt;i>Apex 设置 > 通知设置&lt;/i>”中启用 Apex 通知器。&lt;br>&lt;br>与锁屏时钟小部件配合使用时，Apex 通知器将会显示来自多种服务的信息。请在“&lt;i>锁屏时钟扩展 > 添加其他扩展 > Apex 通知器&lt;/i>”中启用 Apex 通知器。&lt;br>&lt;br>注意：“实验室”下列出的功能仍在测试阶段，可能会在将来的版本中停止工作。</string>
++    <string name="missed_calls_title">未接电话</string>
++    <string name="from_body_template">来自：%1$s</string>
++    <string name="unknown">未知</string>
++    <string name="unread_sms_title">未读信息</string>
++    <string name="sms_body_template">来自：%1$s</string>
++    <string name="sms_body_all_participants_template">接收者：%1$s</string>
++    <string name="calendar_title">日历</string>
++    <string name="calendar_settings_title">日历设置</string>
++    <string name="calendar_look_ahead_hours_title">显示最近的活动</string>
++    <string name="three_hours">3 小时</string>
++    <string name="six_hours">6 小时</string>
++    <string name="twelve_hours">12 小时</string>
++    <string name="twenty_four_hours">24 小时</string>
++    <string name="two_days">2 天</string>
++    <string name="week">1 周</string>
++    <string name="calendar_selected_title">选择要显示的日历</string>
++    <string name="calendar_custom_visibility_title">自定义日历可见性</string>
++    <string name="calendar_custom_visibility_description">取消选中可显示日历应用中所有可见的日历</string>
++    <string name="calendar_show_all_day_title">显示全天活动</string>
++    <string name="calendar_show_all_day_description">显示全天活动（例如生日）</string>
++    <string name="calendar_with_location_template">%1$s — %2$s</string>
++    <string name="today">今天</string>
++    <string name="now">现在</string>
++    <string name="gmail_title">Gmail</string>
++    <string name="gmail_accounts">Gmail 帐户</string>
++    <string name="no_accounts_message">未找到帐户。</string>
++    <string name="no_labels_message">未找到标签。</string>
++    <string name="htc_mail_title">HTC 邮件</string>
++    <string name="samsung_email_title">三星邮件</string>
++    <string name="last_update_time">最近更新</string>
++    <string name="k9_kaiten_mail_title">K-9/Kaiten 邮件</string>
++    <string name="k9_mail_title">K-9 邮件</string>
++    <string name="k9_mail_accounts">K-9 邮件帐户</string>
++    <string name="kaiten_mail_title">Kaiten 邮件</string>
++    <string name="kaiten_mail_free_title">Kaiten 邮件免费版</string>
++    <string name="kaiten_mail_accounts">Kaiten 邮件帐户</string>
++    <string name="battery_title">电池</string>
++    <string name="battery_settings_title">电池设置</string>
++    <string name="battery_show_always_title">始终显示</string>
++    <string name="battery_show_always_summary">始终显示电池电量</string>
++    <string name="battery_show_not_charging_title">未在充电时显示</string>
++    <string name="battery_show_not_charging_summary">未在充电时显示电池电量</string>
++    <string name="battery_show_below_title">电量降到指定百分数时显示</string>
++    <string name="battery_show_duration_title">显示电池时间</string>
++    <string name="battery_show_duration_summary">显示设备使用电池的时间长度</string>
++    <string name="battery_show_details_title">显示电池信息</string>
++    <string name="battery_health">运行状况</string>
++    <string name="battery_temperature">温度</string>
++    <string name="battery_voltage">电压</string>
++    <string name="battery_technology">技术</string>
++    <string name="temperature_units_title">温度单位</string>
++    <string name="temperature_celsius_units">° C</string>
++    <string name="temperature_fahrenheit_units">° F</string>
++    <string name="battery_info_voltage_units">mV</string>
++    <string name="battery_info_status_unknown">未知</string>
++    <string name="battery_info_status_charging">正在充电</string>
++    <string name="battery_info_status_charging_ac">(交流电)</string>
++    <string name="battery_info_status_charging_usb">(USB)</string>
++    <string name="battery_info_status_charging_wireless">(无线)</string>
++    <string name="battery_info_status_discharging">正在耗电</string>
++    <string name="battery_info_status_not_charging">未在充电</string>
++    <string name="battery_info_status_full">电量充足</string>
++    <string name="battery_info_health_unknown">未知</string>
++    <string name="battery_info_health_good">正常</string>
++    <string name="battery_info_health_overheat">过热</string>
++    <string name="battery_info_health_dead">没电</string>
++    <string name="battery_info_health_over_voltage">过电压</string>
++    <string name="battery_info_health_unspecified_failure">未知错误</string>
++    <string name="battery_info_health_cold">电量低</string>
++    <string name="battery_info_expanded_title">%1$s — %2$s</string>
++    <string name="battery_stats_on_battery">电池已使用 %1$s</string>
++    <string name="email_title">电子邮件</string>
++    <string name="google_talk_title">Google Talk</string>
++    <string name="google_talk_accounts">Google Talk 帐户</string>
++    <string name="google_voice_title">Google Voice</string>
++    <string name="starbucks_title">星巴克</string>
++    <string name="starbucks_summary">显示星巴克星享卡的星星数量</string>
++    <string name="starbucks_rewards">星巴克星享卡</string>
++    <string name="dashclock_title">锁屏时钟</string>
++    <string name="dashclock_extension1_title">锁屏时钟扩展 1</string>
++    <string name="dashclock_extension2_title">锁屏时钟扩展 2</string>
++    <string name="dashclock_extension3_title">锁屏时钟扩展 3</string>
++</resources>
+diff --git a/result/APP_75/App_M_75/res/values-zh-rTW/plurals.xml b/result/APP_75/App_M_75/res/values-zh-rTW/plurals.xml
+new file mode 100755
+index 0000000..93618d4
+--- /dev/null
++++ b/result/APP_75/App_M_75/res/values-zh-rTW/plurals.xml
+@@ -0,0 +1,54 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <plurals name="missed_calls_title_template">
++        <item quantity="other">%1$s 個未接來電</item>
++        <item quantity="one">%1$s 個未接來電</item>
++    </plurals>
++    <plurals name="sms_title_template">
++        <item quantity="other">%1$s 條未讀簡訊</item>
++        <item quantity="one">%1$s 條未讀簡訊</item>
++    </plurals>
++    <plurals name="calendar_summary_template">
++        <item quantity="other">已選取 %1$d 個日曆</item>
++        <item quantity="one">已選取 %1$d 個日曆</item>
++    </plurals>
++    <plurals name="calendar_selected_summary_template">
++        <item quantity="other">已選取 %1$d 個日曆，共 %2$d 個</item>
++        <item quantity="one">已選取 %1$d 個日曆，共 %2$d 個</item>
++    </plurals>
++    <plurals name="template_days">
++        <item quantity="other">%1$s 天</item>
++        <item quantity="one">%1$s 天</item>
++    </plurals>
++    <plurals name="template_hours">
++        <item quantity="other">%1$s 小時</item>
++        <item quantity="one">%1$s 小時</item>
++    </plurals>
++    <plurals name="template_minutes">
++        <item quantity="other">%1$s 分鐘</item>
++        <item quantity="one">%1$s 分鐘</item>
++    </plurals>
++    <plurals name="template_seconds">
++        <item quantity="other">%1$s 秒</item>
++        <item quantity="one">%1$s 秒</item>
++    </plurals>
++    <plurals name="accounts_summary_template">
++        <item quantity="other">已選取 %1$d 個帳戶</item>
++        <item quantity="one">已選取 %1$d 個帳戶</item>
++    </plurals>
++    <plurals name="accounts_selected_summary_template">
++        <item quantity="other">已選取 %1$d 個帳戶，共 %2$d 個</item>
++        <item quantity="one">已選取 %1$d 個帳戶，共 %2$d 個</item>
++    </plurals>
++    <plurals name="labels_summary_template">
++        <item quantity="other">已選取 %1$d 個標籤</item>
++        <item quantity="one">已選取 %1$d 個標籤</item>
++    </plurals>
++    <plurals name="unread_title_template">
++        <item quantity="other">%1$d 封未讀郵件</item>
++    </plurals>
++    <plurals name="stars_title_template">
++        <item quantity="other">%1$d 封星標郵件</item>
++        <item quantity="one">%1$d 封星標郵件</item>
++    </plurals>
++</resources>
+diff --git a/result/APP_75/App_M_75/res/values-zh-rTW/strings.xml b/result/APP_75/App_M_75/res/values-zh-rTW/strings.xml
+new file mode 100755
+index 0000000..730fb8e
+--- /dev/null
++++ b/result/APP_75/App_M_75/res/values-zh-rTW/strings.xml
+@@ -0,0 +1,138 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="app_name">Apex 通知器</string>
++    <string name="extension_title">Apex 通知器</string>
++    <string name="extension1_title">Apex 通知器 1</string>
++    <string name="extension2_title">Apex 通知器 2</string>
++    <string name="extension3_title">Apex 通知器 3</string>
++    <string name="extension_description">顯示多種服務的未讀計數。</string>
++    <string name="general_settings_title">常規設定</string>
++    <string name="extension_settings_title">鎖屏時鐘擴展設定</string>
++    <string name="general_title">常規</string>
++    <string name="labs_title">實驗室</string>
++    <string name="get_apex_launcher">獲得 Apex 啟動器</string>
++    <string name="get_apex_launcher_pro">獲得 Apex 啟動器專業版</string>
++    <string name="get_dashclock">獲得鎖屏時鐘小工具</string>
++    <string name="rate">評分</string>
++    <string name="help">幫助</string>
++    <string name="about">關於</string>
++    <string name="ok">確定</string>
++    <string name="cancel">取消</string>
++    <string name="close">關閉</string>
++    <string name="none">無</string>
++    <string name="enabled">已啟用</string>
++    <string name="disabled">已停用</string>
++    <string name="please_wait">請稍候…</string>
++    <string name="loading">正在載入…</string>
++    <string name="google_play">Google Play</string>
++    <string name="update">更新</string>
++    <string name="uninstall">解除安裝</string>
++    <string name="error">錯誤</string>
++    <string name="update_gmail_message">"此功能需要 4.0.5 及以上版本的 Gmali。請更新至最新版本。
++
++更新 Gmali 後可能也需要重新安裝 Apex 通知器。"</string>
++    <string name="permission_error_title">權限被拒絕</string>
++    <string name="permission_error_message">"系統拒絕了 Apex 通知器訪問此功能的權限。
++
++請解除安裝並重新安裝 Apex 通知器以修復此問題。"</string>
++    <string name="install_dashclock_message">"擴展設定可控制要在鎖屏時鐘小工具上顯示的資訊。
++
++要前往 Google Play 商店安裝鎖屏時鐘小工具嗎？"</string>
++    <string name="install_app_message">"未安裝「%1$s」應用程式，或不支援您當前的「%1$s」版本。
++
++要前往 Google Play 商店安裝最新版本嗎？"</string>
++    <string name="feature_error_message">您已將鎖屏時鐘擴展設定為「%1$s」。停用此功能前請先變更您的擴展設定。</string>
++    <string name="bind_widget_message">如要啟用此功能，Apex 通知器需要建立並訪問「%1$s」小工具。</string>
++    <string name="select_widget_message">請從下一步中的小工具清單中選擇「%1$s」。</string>
++    <string name="continue_message">要繼續嗎？</string>
++    <string name="email_error_message">抱歉，不支援您的電子郵件用戶端。</string>
++    <string name="widget_error_message">未選擇正確的小工具。</string>
++    <string name="extension_conflict_message">您已將其他擴展設定為「%1$s」。</string>
++    <string name="extension_error_message">「%1$s」功能當前已被停用。設定擴展前請先將其開啟。</string>
++    <string name="action_error_message">無法執行此操作。</string>
++    <string name="app_name_and_version">&lt;b>Apex 通知器&lt;/b>&amp;nbsp;&lt;font color=#888888>v%1$s&lt;/font></string>
++    <string name="about_body">版權所有 &amp;copy; 2013 Android Does&lt;br>&lt;br>非常感謝以下開放原始碼項目：&lt;br>&lt;br>&lt;b>&lt;a href=http://source.android.com/>Android 開放原始碼項目&lt;/a>&lt;/b>&lt;br>&lt;i>由 &lt;a href=http://www.google.com/>Google&lt;/a> 開發&lt;/i>&lt;br>&lt;br>&lt;b>&lt;a href=https://code.google.com/p/dashclock/>DashClock&lt;/a>&lt;/b>&lt;br>&lt;i>由 &lt;a href=http://roman.nurik.net/>Roman Nurik&lt;/a> 開發&lt;/i></string>
++    <string name="help_body">Apex 通知器是 &lt;b>&lt;a href=https://play.google.com/store/apps/details?id=com.anddoes.launcher.pro>Apex 啟動器專業版&lt;/a>&lt;/b> 和 &lt;b>&lt;a href=https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock>鎖屏時鐘小工具&lt;/a>&lt;/b> (Android 4.2+) 的擴展應用程式。自身沒有任何作用。&lt;br>&lt;br>與 Apex 啟動器專業版配合使用時，Apex 通知器將會在應用程式圖示上顯示未讀計數。請在「&lt;i>Apex 設定 > 通知設定&lt;/i>」中啟用 Apex 通知器。&lt;br>&lt;br>與鎖屏時鐘小工具配合使用時，Apex 通知器將會顯示來自多種服務的資訊。請在「&lt;i>鎖屏時鐘擴展 > 新增其他擴展 > Apex 通知器&lt;/i>」中啟用 Apex 通知器。&lt;br>&lt;br>注意：「實驗室」下列出的功能仍在測試階段，可能會在將來的版本中停止工作。</string>
++    <string name="missed_calls_title">未接來電</string>
++    <string name="from_body_template">來自：%1$s</string>
++    <string name="unknown">未知</string>
++    <string name="unread_sms_title">未讀簡訊</string>
++    <string name="sms_body_template">來自：%1$s</string>
++    <string name="sms_body_all_participants_template">接收者：%1$s</string>
++    <string name="calendar_title">日曆</string>
++    <string name="calendar_settings_title">日曆設定</string>
++    <string name="calendar_look_ahead_hours_title">顯示最近的活動</string>
++    <string name="three_hours">3 小時</string>
++    <string name="six_hours">6 小時</string>
++    <string name="twelve_hours">12 小時</string>
++    <string name="twenty_four_hours">24 小時</string>
++    <string name="two_days">2 天</string>
++    <string name="week">1 週</string>
++    <string name="calendar_selected_title">選擇要顯示的日曆</string>
++    <string name="calendar_custom_visibility_title">自訂日曆可見性</string>
++    <string name="calendar_custom_visibility_description">取消選取即可顯示日曆應用程式中所有可見的日曆</string>
++    <string name="calendar_show_all_day_title">顯示全天活動</string>
++    <string name="calendar_show_all_day_description">顯示全天活動 (例如生日)</string>
++    <string name="calendar_with_location_template">%1$s — %2$s</string>
++    <string name="today">今天</string>
++    <string name="now">現在</string>
++    <string name="gmail_title">Gmail</string>
++    <string name="gmail_accounts">Gmail 帳戶</string>
++    <string name="no_accounts_message">找不到帳戶。</string>
++    <string name="no_labels_message">找不到標籤。</string>
++    <string name="htc_mail_title">HTC 郵件</string>
++    <string name="samsung_email_title">Samsung 郵件</string>
++    <string name="last_update_time">最近更新</string>
++    <string name="k9_kaiten_mail_title">K-9/Kaiten 郵件</string>
++    <string name="k9_mail_title">K-9 郵件</string>
++    <string name="k9_mail_accounts">K-9 郵件帳戶</string>
++    <string name="kaiten_mail_title">Kaiten 郵件</string>
++    <string name="kaiten_mail_free_title">Kaiten 郵件免費版</string>
++    <string name="kaiten_mail_accounts">Kaiten 郵件帳戶</string>
++    <string name="battery_title">電池</string>
++    <string name="battery_settings_title">電池設定</string>
++    <string name="battery_show_always_title">永遠顯示</string>
++    <string name="battery_show_always_summary">永遠顯示電池電力</string>
++    <string name="battery_show_not_charging_title">未在充電時顯示</string>
++    <string name="battery_show_not_charging_summary">未在充電時顯示電池電力</string>
++    <string name="battery_show_below_title">電力降至指定百分數時顯示</string>
++    <string name="battery_show_duration_title">顯示電池時間</string>
++    <string name="battery_show_duration_summary">顯示裝置使用電池的時間長度</string>
++    <string name="battery_show_details_title">顯示電池資訊</string>
++    <string name="battery_health">運行狀況</string>
++    <string name="battery_temperature">溫度</string>
++    <string name="battery_voltage">電壓</string>
++    <string name="battery_technology">技術</string>
++    <string name="temperature_units_title">溫度單位</string>
++    <string name="temperature_celsius_units">° C</string>
++    <string name="temperature_fahrenheit_units">° F</string>
++    <string name="battery_info_voltage_units">mV</string>
++    <string name="battery_info_status_unknown">未知</string>
++    <string name="battery_info_status_charging">正在充電</string>
++    <string name="battery_info_status_charging_ac">(交流電)</string>
++    <string name="battery_info_status_charging_usb">(USB)</string>
++    <string name="battery_info_status_charging_wireless">(無線)</string>
++    <string name="battery_info_status_discharging">正在耗電</string>
++    <string name="battery_info_status_not_charging">未在充電</string>
++    <string name="battery_info_status_full">電力充足</string>
++    <string name="battery_info_health_unknown">未知</string>
++    <string name="battery_info_health_good">正常</string>
++    <string name="battery_info_health_overheat">過熱</string>
++    <string name="battery_info_health_dead">沒電</string>
++    <string name="battery_info_health_over_voltage">過電壓</string>
++    <string name="battery_info_health_unspecified_failure">未知錯誤</string>
++    <string name="battery_info_health_cold">電力低</string>
++    <string name="battery_info_expanded_title">%1$s — %2$s</string>
++    <string name="battery_stats_on_battery">電池已使用 %1$s</string>
++    <string name="email_title">電子郵件</string>
++    <string name="google_talk_title">Google Talk</string>
++    <string name="google_talk_accounts">Google Talk 帳戶</string>
++    <string name="google_voice_title">Google Voice</string>
++    <string name="starbucks_title">星巴克</string>
++    <string name="starbucks_summary">顯示星巴克星享卡的星星數量</string>
++    <string name="starbucks_rewards">星巴剋星享卡</string>
++    <string name="dashclock_title">鎖屏時鐘</string>
++    <string name="dashclock_extension1_title">鎖屏時鐘擴展 1</string>
++    <string name="dashclock_extension2_title">鎖屏時鐘擴展 2</string>
++    <string name="dashclock_extension3_title">鎖屏時鐘擴展 3</string>
++</resources>
+diff --git a/result/APP_75/App_M_75/res/xml-zh-rCN/preferences.xml b/result/APP_75/App_M_75/res/xml-zh-rCN/preferences.xml
+new file mode 100755
+index 0000000..58f5394
+--- /dev/null
++++ b/result/APP_75/App_M_75/res/xml-zh-rCN/preferences.xml
+@@ -0,0 +1,34 @@
++<?xml version="1.0" encoding="utf-8"?>
++<PreferenceScreen
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <PreferenceCategory android:title="@string/general_title">
++        <CheckBoxPreference android:title="@string/missed_calls_title" android:key="@string/pref_missed_calls_key" android:defaultValue="@bool/pref_missed_calls_default" />
++        <CheckBoxPreference android:title="@string/unread_sms_title" android:key="@string/pref_unread_sms_key" android:defaultValue="@bool/pref_unread_sms_default" />
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/calendar_title" android:key="@string/pref_calendar_key" android:defaultValue="@bool/pref_calendar_default" />
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/gmail_title" android:key="@string/pref_gmail_key" android:defaultValue="@bool/pref_gmail_default" />
++        <CheckBoxPreference android:title="@string/htc_mail_title" android:key="@string/pref_htc_key" android:defaultValue="@bool/pref_htc_default" />
++        <CheckBoxPreference android:title="@string/samsung_email_title" android:key="@string/pref_samsung_key" android:defaultValue="@bool/pref_samsung_default" />
++        <PreferenceScreen android:title="@string/k9_kaiten_mail_title">
++            <com.anddoes.notifier.MySwitchPreference android:title="@string/k9_mail_title" android:key="@string/pref_k9_mail_key" android:defaultValue="@bool/pref_k9_mail_default" />
++            <com.anddoes.notifier.MySwitchPreference android:title="@string/kaiten_mail_title" android:key="@string/pref_kaiten_mail_key" android:defaultValue="@bool/pref_kaiten_mail_default" />
++            <com.anddoes.notifier.MySwitchPreference android:title="@string/kaiten_mail_free_title" android:key="@string/pref_kaiten_mail_free_key" android:defaultValue="@bool/pref_kaiten_mail_free_default" />
++        </PreferenceScreen>
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/battery_title" android:key="@string/pref_battery_key" android:defaultValue="@bool/pref_battery_default" />
++    </PreferenceCategory>
++    <PreferenceCategory android:title="@string/labs_title">
++        <CheckBoxPreference android:persistent="false" android:title="@string/email_title" android:key="@string/pref_email_key" android:defaultValue="@bool/pref_email_default" />
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/google_talk_title" android:key="@string/pref_google_talk_key" android:defaultValue="@bool/pref_google_talk_default" />
++        <CheckBoxPreference android:persistent="false" android:title="@string/google_voice_title" android:key="@string/pref_google_voice_key" android:defaultValue="@bool/pref_google_voice_default" />
++        <CheckBoxPreference android:persistent="false" android:title="@string/starbucks_title" android:key="@string/pref_starbucks_key" android:summary="@string/starbucks_summary" android:defaultValue="@bool/pref_starbucks_default" />
++    </PreferenceCategory>
++    <PreferenceCategory android:title="@string/dashclock_title">
++        <ListPreference android:entries="@array/dashclock_extension_entries" android:title="@string/dashclock_extension1_title" android:key="@string/pref_dashclock_extension1_key" android:defaultValue="@string/pref_dashclock_extension1_default" android:entryValues="@array/dashclock_extension_values" />
++        <ListPreference android:entries="@array/dashclock_extension_entries" android:title="@string/dashclock_extension2_title" android:key="@string/pref_dashclock_extension2_key" android:defaultValue="@string/pref_dashclock_extension2_default" android:entryValues="@array/dashclock_extension_values" />
++        <ListPreference android:entries="@array/dashclock_extension_entries" android:title="@string/dashclock_extension3_title" android:key="@string/pref_dashclock_extension3_key" android:defaultValue="@string/pref_dashclock_extension3_default" android:entryValues="@array/dashclock_extension_values" />
++    </PreferenceCategory>
++    <PreferenceCategory android:title="汉化信息">
++        <Preference android:title="安智汉化组 小手汉化" android:summary="主页：http://www.anzhi.com\n论坛：http://bbs.anzhi.com">
++            <intent android:action="android.intent.action.VIEW" android:data="http://bbs.anzhi.com" />
++        </Preference>
++    </PreferenceCategory>
++</PreferenceScreen>
+\ No newline at end of file
+diff --git a/result/APP_75/App_M_75/res/xml-zh-rTW/preferences.xml b/result/APP_75/App_M_75/res/xml-zh-rTW/preferences.xml
+new file mode 100755
+index 0000000..0f5e3be
+--- /dev/null
++++ b/result/APP_75/App_M_75/res/xml-zh-rTW/preferences.xml
+@@ -0,0 +1,34 @@
++<?xml version="1.0" encoding="utf-8"?>
++<PreferenceScreen
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <PreferenceCategory android:title="@string/general_title">
++        <CheckBoxPreference android:title="@string/missed_calls_title" android:key="@string/pref_missed_calls_key" android:defaultValue="@bool/pref_missed_calls_default" />
++        <CheckBoxPreference android:title="@string/unread_sms_title" android:key="@string/pref_unread_sms_key" android:defaultValue="@bool/pref_unread_sms_default" />
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/calendar_title" android:key="@string/pref_calendar_key" android:defaultValue="@bool/pref_calendar_default" />
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/gmail_title" android:key="@string/pref_gmail_key" android:defaultValue="@bool/pref_gmail_default" />
++        <CheckBoxPreference android:title="@string/htc_mail_title" android:key="@string/pref_htc_key" android:defaultValue="@bool/pref_htc_default" />
++        <CheckBoxPreference android:title="@string/samsung_email_title" android:key="@string/pref_samsung_key" android:defaultValue="@bool/pref_samsung_default" />
++        <PreferenceScreen android:title="@string/k9_kaiten_mail_title">
++            <com.anddoes.notifier.MySwitchPreference android:title="@string/k9_mail_title" android:key="@string/pref_k9_mail_key" android:defaultValue="@bool/pref_k9_mail_default" />
++            <com.anddoes.notifier.MySwitchPreference android:title="@string/kaiten_mail_title" android:key="@string/pref_kaiten_mail_key" android:defaultValue="@bool/pref_kaiten_mail_default" />
++            <com.anddoes.notifier.MySwitchPreference android:title="@string/kaiten_mail_free_title" android:key="@string/pref_kaiten_mail_free_key" android:defaultValue="@bool/pref_kaiten_mail_free_default" />
++        </PreferenceScreen>
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/battery_title" android:key="@string/pref_battery_key" android:defaultValue="@bool/pref_battery_default" />
++    </PreferenceCategory>
++    <PreferenceCategory android:title="@string/labs_title">
++        <CheckBoxPreference android:persistent="false" android:title="@string/email_title" android:key="@string/pref_email_key" android:defaultValue="@bool/pref_email_default" />
++        <com.anddoes.notifier.MySwitchPreference android:title="@string/google_talk_title" android:key="@string/pref_google_talk_key" android:defaultValue="@bool/pref_google_talk_default" />
++        <CheckBoxPreference android:persistent="false" android:title="@string/google_voice_title" android:key="@string/pref_google_voice_key" android:defaultValue="@bool/pref_google_voice_default" />
++        <CheckBoxPreference android:persistent="false" android:title="@string/starbucks_title" android:key="@string/pref_starbucks_key" android:summary="@string/starbucks_summary" android:defaultValue="@bool/pref_starbucks_default" />
++    </PreferenceCategory>
++    <PreferenceCategory android:title="@string/dashclock_title">
++        <ListPreference android:entries="@array/dashclock_extension_entries" android:title="@string/dashclock_extension1_title" android:key="@string/pref_dashclock_extension1_key" android:defaultValue="@string/pref_dashclock_extension1_default" android:entryValues="@array/dashclock_extension_values" />
++        <ListPreference android:entries="@array/dashclock_extension_entries" android:title="@string/dashclock_extension2_title" android:key="@string/pref_dashclock_extension2_key" android:defaultValue="@string/pref_dashclock_extension2_default" android:entryValues="@array/dashclock_extension_values" />
++        <ListPreference android:entries="@array/dashclock_extension_entries" android:title="@string/dashclock_extension3_title" android:key="@string/pref_dashclock_extension3_key" android:defaultValue="@string/pref_dashclock_extension3_default" android:entryValues="@array/dashclock_extension_values" />
++    </PreferenceCategory>
++    <PreferenceCategory android:title="漢化資訊">
++        <Preference android:title="安智漢化組 小手繁化" android:summary="首頁：http://www.anzhi.com\n論壇：http://bbs.anzhi.com">
++            <intent android:action="android.intent.action.VIEW" android:data="http://bbs.anzhi.com" />
++        </Preference>
++    </PreferenceCategory>
++</PreferenceScreen>
+\ No newline at end of file
+diff --git a/result/APP_75/App_B_75/smali/com/anddoes/notifier/az.smali b/result/APP_75/App_M_75/smali/com/anddoes/notifier/az.smali
+index 33181e3..29b20a6 100755
+--- a/result/APP_75/App_B_75/smali/com/anddoes/notifier/az.smali
++++ b/result/APP_75/App_M_75/smali/com/anddoes/notifier/az.smali
+@@ -101,7 +101,9 @@
+     .locals 3
+ 
+     .prologue
+-    const/4 v0, 0x0
++    const/4 v0, 0x1
++
++    return v0
+ 
+     .line 15
+     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;

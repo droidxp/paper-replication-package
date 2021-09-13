@@ -1,5 +1,5 @@
 ---
-title: "Mining Android Sandboxes Using Dynamic and Static Analysis: a Replication Study" 
+title: "Understanding the Role of Dynamic and Static Analysis for Mining Android Sandboxes" 
 author: "da Costa et al."
 date: "March, 2021"
 output:
@@ -39,28 +39,107 @@ Replication Study*.
    * Ingrid Lorraine da Silva
    * Rodrigo Bonifácio
    * Krishna Narasimhanb
+   * Márcio Ribeiro
   
 ### Abstract
 
-The use of sandboxes is an effective technique for malware analysis. However, although the use of dynamic
-analysis for mining Android sandboxes has been investigated before, little is known about the potential
-benefits of combining static and dynamic analysis for mining Android sandboxes. Accordingly, in this paper
-we present the results of two studies that investigate whether or not static analysis might complement and
-increase the performance of dynamic analysis tools for mining Android sandboxes. In the first study we
-conduct a non-exact replication of the Bao et al. study, a previous work that compares the performance
-of test case generation tools for mining Android sandboxes. Differently from the original work, here we
-isolate the effect of the static analysis tool (DroidFax) they used to instrument the Android apps in their
-experiments. This decision was motivated by the fact that DroidFax could have influenced the efficacy of
-the dynamic analyses positively—through the execution of specific static analysis algorithms. In our second
-study, we carried out a new experiment to investigate the efficacy of tainted analysis algorithms for mining
-Android sandboxes. To this end, we executed the FlowDroid tool to mine the source-sink flows from the
-benign/malign pairs of Android apps used in the Bao et al. study. Our study brings several findings. For
-instance, the first study reveals that DroidFax alone (static analysis) can detect 43.75% of the malwares in
-the dataset of the Bao et al. work, leading to an overestimation of the performance of the dynamic analysis
-tools. The results of the second study show that (static) taint analysis is also practical for mining Android
-sandboxes, with a performance similar to that reached by dynamic analysis tools.
+The popularization of the Android platform and the growing number of Android applications (apps) that manage sensitive data turned the Android ecosystem into an attractive target for malicious software. For this reason, researchers and practitioners have investigated new approaches to address Android's security issues, including techniques that leverage dynamic analysis to mine Android sandboxes. The mining sandbox approach consists in running dynamic analysis tools on a benign version of an Android app. This exploratory phase records all calls to sensitive APIs. Later, we can use this information to (a) prevent calls to other sensitive APIs (those not recorded in the exploratory phase) or (b) run the dynamic analysis tools again in a different version of the app. During this second execution of the fuzzing tools, a warning of possible malicious behavior is raised whenever the new version of the app calls a sensitive API not recorded in the exploratory phase.
 
-### Data Analysis
+The use of a mining sandbox approach is an effective technique for Android malware analysis, as previous research works revealed. Particularly, existing reports present an accuracy of almost 70% in the identification of malicious behavior using dynamic analysis tools to mine android sandboxes. However, although the use of dynamic analysis for mining Android sandboxes has been investigated before, little is known about the potential benefits of combining static
+analysis with a mining sandbox approach for identifying malicious behavior.
+Accordingly, in this paper we present the results of two studies that investigate the impact of using static analysis to complement the performance of existing dynamic analysis tools tailored for mining Android sandboxes, in the task of identifying malicious behavior.
+
+In the first study we conduct a non-exact replication of a previous study (hereafter BLL-Study) that compares the performance of test case generation tools for mining Android sandboxes. Differently from the original work, here we isolate the effect of an independent  static analysis component (DroidFax) they used to instrument the Android apps in their experiments. This decision was motivated by the fact that DroidFax could have influenced the efficacy of the dynamic analyses tools positively---through the execution of specific static analysis algorithms DroidFax also implements. In our second study, we carried out a new experiment to investigate the efficacy of taint analysis algorithms to complement the mining sandbox approach previously used to identify malicious behavior. To this end, we executed the FlowDroid tool to mine the source-sink flows from benign/malign pairs of Android apps used in a previous research work.
+
+Our study brings several findings. For instance, the first study reveals that DroidFax alone (static analysis) can detect 43.75% of the malwares in the BLL-Study dataset, contributing substantially in the the performance of the dynamic analysis tools in the BLL-Study. The results of the second study show that taint analysis is also practical to complement the mining sandboxes approach, with a performance similar to that reached by dynamic analysis tools.
+
+## First Study
+
+To replicate our first study we used our benchmark tool (DroidXP). For the process its necessary proceed with the steps below
+
+<b>Step 1</b>
+
+Clone DroidXP Repository and install DroidXP:
+```
+git clone https://github.com/droidxp/benchmark
+```
+Clone repository to configure benchmark
+```
+https://github.com/droidxp/benchmark-vm
+```
+
+
+After clone the repositories, create a folder called 'script' at home directory,
+and copy the 3 file from benchmark-vm/ubuntu_20.04_python3_x86/ <b>to</b> ~/script folder and execute. 
+```
+./config.sh
+```
+After these steps, DroiXP it installed and configured correctly with all tools used at first study.
+
+
+<b>Step 2</b> - Download pair apps (Malign/Benign) for analysis
+
+All apps used in this research are listed in [LargeI.csv](https://github.com/droidxp/benchmark/blob/develop/data/input/LargeI.csv)
+and [SmallE.csv](https://github.com/droidxp/benchmark/blob/develop/data/input/SmallE.csv) files. They can be downloaded using the Python script
+[getApps.py](https://github.com/droidxp/benchmark/blob/develop/data/input/getApps.py). At our experiments (First and Second), we used pairs apps from the file [LargeI.csv](https://github.com/droidxp/benchmark/blob/develop/data/input/LargeI.csv), except for the following apps: app-25, app-32, app-36, app-41, app-88 and app-93 (96 pairs of Android apps)
+
+These apps come from the [Androzoo](https://androzoo.uni.lu/) repository, so it is necessary
+to acquire an access key and configure it in the Python script:
+
+```py
+key="Insert here your key"
+```
+
+To change Apps set to download, just configure the Python script.
+
+```py
+with open('LargeI.csv') as csvfile:
+```
+or 
+```py
+with open('SmallE.csv') as csvfile:
+```
+
+
+These apps MUST be stored in the `benchmark/data/input/` folder.
+
+> We recommend using the script to download the apps because it formats the name of the
+> files to organize in malign and benign apps.
+
+<b>Step 3</b> - Run DroidXP
+
+To run our experiment disabling static analysis, for 3 minutes (120 seconds), for 3 times, with 4 pre-configured test generator tools, we execute the follow command:
+
+```py
+python3 main.py -tools monkey droidbot droidmate humanoid -t 120 -r 3 --disable-static
+```
+To run fake tool joker, for 3 minutes (120 seconds), for 3 times, using static analysis component (DroidFax)
+
+```py
+python3 main.py -tools joker -t 120 -r 3
+```
+
+The results will be at: `benchmark/results/<timestamp>/report/` folder.
+
+Example: benchmark/results/20210220212608/report/
+
+
+<b>Step 4</b> - Generate results at csv file
+
+To generate the results at csv format, we must execute the follow command:
+
+```py
+python3 main.py --generate-output <timestamp> --output csv
+```
+
+Where `<timestamp>` is the folder where the data to generate csv file are.
+Example:
+```py
+python3 main.py --generate-output 20210220212608 --output csv
+```
+
+
+### Data Analysis (First Study)
 
 #### Load the Datasets
 
@@ -123,9 +202,25 @@ ggvenn(
 ```
 
 
-#### Compare the performance of FlowDroid and DroidFax (Joker tool)
+## Second Study
 
-```{r, venn-plot-s2}
+To replicate our second study we used FlowDroid version 2.8 which can be got in [secure-software-engineering/FlowDroid](https://github.com/secure-software-engineering/FlowDroid/releases/tag/v2.8) repository at GitHub. We recommend using the `soot-infoflow-cmd-jar-with-dependencies.jar` file because already have all FlowDroid dependencies, and is easy to configure with Maven using the command below. For more details access the [git repository](https://github.com/joao-victor-silva/droidxp-taint-analysis-tests).
+
+```
+mvn install:install-file -Dfile=<path-to-soot-infoflow-cmd-with-dependencies.jar> \
+  -DgroupId=de.tud.sse \
+  -DartifactId=soot-infoflow-cmd \
+  -Dversion=2.8 \
+  -Dpackaging=jar
+
+```
+
+To replicate this study, you will need the same pairs apps used in the first study. Check step 2 from the first study to get information of how download the pairs apps.
+
+### Data Analysis (Second Study)
+
+#### Load the Datasets
+```{r}
 sets <- sqldf("select tool, app 
                   from ds 
                   where malware = 1 
@@ -133,8 +228,13 @@ sets <- sqldf("select tool, app
 
 notDetected <- sqldf("select distinct app from ds where 
                       app not in (select app from sets)")
+```
 
 
+#### Compare the performance of FlowDroid and DroidFax (Joker tool)
+
+
+```{r, venn-plot-s2}
 flowdroid = sets[sets$tool=="flowdroid", c("app")]
 droidfax = sets[sets$tool=="joke", c("app")]
 notDetected = sets[, c("app")]
@@ -152,7 +252,7 @@ ggvenn(
 
 ```
 
-### Malware dataset
+## Malware dataset (2 Studies)
 
 ```{r echo=FALSE}
 apps <- sqldf("select app, tool, sum(malware) total
@@ -193,3 +293,28 @@ apps %>%
   scroll_box(width = "100%")
 
 ```
+
+## FlowDroid Source-Sink detected and execution time
+
+
+```{r echo=FALSE}
+   flow <- read.csv("flowDroidResult.csv", head=T, sep=",")
+   colnames(flow) <- c("app", "Detected", "Source-Sink (Benign)", "Source-Sink (Malicious)", "Total Runtime")
+
+   flow["report"] <- paste0("[dataFlowDroid/", flow$app, ".txt]", "(", "./dataFlowDroid/", flow$app, ".txt", ")")
+  
+```
+
+
+```{r echo = FALSE}
+flow %>%
+  kable("html") %>%
+  kable_styling(font_size = 12)  %>% 
+  kable_styling("striped") %>% 
+  scroll_box(width = "100%")
+
+```
+
+
+
+
