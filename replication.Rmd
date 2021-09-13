@@ -14,6 +14,7 @@ vignette: >
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=5, fig.height=5, fig.path='figures/', dev=c('png', 'pdf'))
 setwd(".")
 require(sqldf)
 require(reshape2)
@@ -171,6 +172,17 @@ colnames(info) <- c("app", "name")
 apps <- merge(apps, info)
 ```
 
+```{r flowDroidTime}
+ts <- read.csv("flowDroidResult.csv", head=T, sep=",")
+ts.hist <- hist(ts$time)
+plot(ts.hist, breaks=2, xlim=c(0,500), main="", color="gray", ylim=c(0,100), xlab="Time (seconds)")
+
+boxplot((ts$time), ylab="Time in seconds")
+
+summary(ts$time)
+sd(ts$time)
+
+```
 
 
 ```{r echo = FALSE}

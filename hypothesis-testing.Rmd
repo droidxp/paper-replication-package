@@ -1,0 +1,132 @@
+---
+title: "Mining Android Sandboxes Using Dynamic and Static Analysis: a Replication Study" 
+author: "da Costa et al."
+date: "March, 2021"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(".")
+require(sqldf)
+require(reshape2)
+require(xtable)
+require(kableExtra)
+require(ggplot2)
+require(VennDiagram)
+require(ggvenn)
+require(texreg)
+require(stargazer)
+```
+
+## Replication Package
+
+This is the replication package for the paper *Mining Android Sandboxes Using Dynamic and Static Analysis: a
+Replication Study*. 
+
+### Authors
+
+   * Francisco Handrick da Costa
+   * Ismael Medeiros
+   * Thales Menezes
+   * João Victor da Silva
+   * Ingrid Lorraine da Silva
+   * Rodrigo Bonifácio
+   * Krishna Narasimhanb
+  
+### Abstract
+
+The use of sandboxes is an effective technique for malware analysis. However, although the use of dynamic
+analysis for mining Android sandboxes has been investigated before, little is known about the potential
+benefits of combining static and dynamic analysis for mining Android sandboxes. Accordingly, in this paper
+we present the results of two studies that investigate whether or not static analysis might complement and
+increase the performance of dynamic analysis tools for mining Android sandboxes. In the first study we
+conduct a non-exact replication of the Bao et al. study, a previous work that compares the performance
+of test case generation tools for mining Android sandboxes. Differently from the original work, here we
+isolate the effect of the static analysis tool (DroidFax) they used to instrument the Android apps in their
+experiments. This decision was motivated by the fact that DroidFax could have influenced the efficacy of
+the dynamic analyses positively—through the execution of specific static analysis algorithms. In our second
+study, we carried out a new experiment to investigate the efficacy of tainted analysis algorithms for mining
+Android sandboxes. To this end, we executed the FlowDroid tool to mine the source-sink flows from the
+benign/malign pairs of Android apps used in the Bao et al. study. Our study brings several findings. For
+instance, the first study reveals that DroidFax alone (static analysis) can detect 43.75% of the malwares in
+the dataset of the Bao et al. work, leading to an overestimation of the performance of the dynamic analysis
+tools. The results of the second study show that (static) taint analysis is also practical for mining Android
+sandboxes, with a performance similar to that reached by dynamic analysis tools.
+
+### Data Analysis
+
+#### Load the Datasets
+
+```{r}
+ds <- read.csv("results.csv", head=T, sep=",")
+colnames(ds)
+head(ds)
+nrow(ds)
+```
+
+
+#### First Hypothesis Testing
+
+##### Remove the FlowDroid observations and Joker observations
+
+````{r}
+ds <- sqldf("select * 
+             from ds
+             where tool <> 'flowdroid' and tool <> 'joke'")
+
+nrow(ds)
+```
+
+##### Run the logistic regression analysis
+
+```{r}
+ds$tool = as.factor(ds$tool)
+
+glm.fit <- glm(malware ~ 0 + tool + static + repetition, data = ds, family=binomial)
+xtable(summary(glm.fit))
+
+texreg(glm.fit, dcolumn = TRUE, booktabs = TRUE)
+
+stargazer(glm.fit, title="Results of the Logist Regression", 
+           dep.var.labels=c("Malware Identified [Yes/No]"), 
+           covariate.labels=c("Tool [DroidBot]","Tool [DroidMate]", 
+                              "Tool [Humanoid]", "Tool [Monkey]", 
+                              "DroidFax static analysis", "Repetition"), 
+          omit.stat=c("LL","ser","f"), ci=TRUE, ci.level=0.90, single.row=TRUE, align=TRUE)
+```
+
+#### Second Hypothesis Testing
+
+```{r}
+ds <- read.csv("results.csv", head=T, sep=",")
+sqldf("select tool, repetition, count(*) 
+       from ds 
+       group by tool, repetition")
+
+ds <- sqldf("select *
+             from ds 
+             where (tool = 'flowdroid' or tool = 'joke')
+               and repetition = 1"
+            )
+
+glm.fit <- glm(malware ~ 0 + tool, data = ds, family=binomial)
+summary(glm.fit)
+
+xtable(summary(glm.fit))
+
+stargazer(glm.fit, title="Results of the Logist Regression", 
+           dep.var.labels=c("Malware Identified [Yes/No]"), 
+           covariate.labels=c("Tool [FlowDroid]","Tool [DroidFax]"), 
+          omit.stat=c("LL","ser","f"), ci=TRUE, ci.level=0.90, single.row=TRUE, align=TRUE)
+
+
+```
+
